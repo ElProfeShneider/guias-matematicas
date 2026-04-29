@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ode><userPreferences><userPreference><key>theme</key><value>base</value></userPreference></userPreferences><odeResources><odeResource><key>odeVersionId</key><value>20260420141422WYAPNW</value></odeResource><odeResource><key>odeId</key><value>20260419154319TFNOOC</value></odeResource><odeResource><key>odeVersionName</key><value>0</value></odeResource><odeResource><key>isDownload</key><value>true</value></odeResource><odeResource><key>eXeVersion</key><value>v3.0.2</value></odeResource></odeResources><odeProperties><odeProperty><key>pp_title</key><value>Movimientos en el plano: traslación y rotación</value></odeProperty><odeProperty><key>pp_subtitle</key><value>Transformaciones geométricas en figuras bidimensionales en el plano cartesiano</value></odeProperty><odeProperty><key>pp_lang</key><value>es</value></odeProperty><odeProperty><key>pp_author</key><value>Shneider Becerra</value></odeProperty><odeProperty><key>license</key><value>creative commons: attribution - share alike 4.0</value></odeProperty><odeProperty><key>pp_description</key><value>Descripción: Guía de aprendizaje orientada al reconocimiento, representación e interpretación de movimientos en el plano, específicamente la traslación y la rotación, en figuras bidimensionales. Se articula con los Estándares Básicos de Competencias y los Derechos Básicos de Aprendizaje del MEN, promoviendo el desarrollo del pensamiento espacial y métrico mediante la observación, el análisis y la aplicación de transformaciones geométricas en el plano cartesiano, en coherencia con el plan de área institucional y la progresión curricular del segundo periodo.</value></odeProperty><odeProperty><key>exportSource</key><value>true</value></odeProperty><odeProperty><key>pp_addExeLink</key><value>true</value></odeProperty><odeProperty><key>pp_addPagination</key><value>false</value></odeProperty><odeProperty><key>pp_addSearchBox</key><value>false</value></odeProperty><odeProperty><key>pp_addAccessibilityToolbar</key><value>false</value></odeProperty><odeProperty><key>pp_extraHeadContent</key><value/></odeProperty><odeProperty><key>footer</key><value/></odeProperty></odeProperties><odeNavStructures><odeNavStructure><odePageId>20260420141423YXRSFA</odePageId><odeParentPageId/><pageName>Página nueva</pageName><odeNavStructureOrder>1</odeNavStructureOrder><odeNavStructureProperties><odeNavStructureProperty><key>titleNode</key><value>Página nueva</value></odeNavStructureProperty><odeNavStructureProperty><key>hidePageTitle</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>titleHtml</key><value/></odeNavStructureProperty><odeNavStructureProperty><key>editableInPage</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>titlePage</key><value>Página nueva</value></odeNavStructureProperty><odeNavStructureProperty><key>visibility</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>highlight</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>description</key><value/></odeNavStructureProperty></odeNavStructureProperties><odePagStructures><odePagStructure><odePageId>20260420141423YXRSFA</odePageId><odeBlockId>20260420141423HHIDRQ</odeBlockId><blockName>7°</blockName><iconName/><odePagStructureOrder>1</odePagStructureOrder><odePagStructureProperties><odePagStructureProperty><key>visibility</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>teacherOnly</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>allowToggle</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>minimized</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>identifier</key><value/></odePagStructureProperty><odePagStructureProperty><key>cssClass</key><value/></odePagStructureProperty></odePagStructureProperties><odeComponents><odeComponent><odePageId>20260420141423YXRSFA</odePageId><odeBlockId>20260420141423HHIDRQ</odeBlockId><odeIdeviceId>20260419104442916T3A</odeIdeviceId><odeIdeviceTypeName>text</odeIdeviceTypeName><htmlView>&lt;div class="exe-text-template"&gt;&lt;div class="textIdeviceContent"&gt;
+            &lt;div class="exe-text-activity"&gt;
+                &lt;div&gt;&lt;p style="text-align: center;"&gt;&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;span style="font-size: 14pt; font-family: 'arial black', sans-serif; color: #236fa1;"&gt;&lt;strong&gt;EXPLORACIÓN&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;Situación 1: Observa y piensa&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Imagina que dibujas un cuadrado en tu cuaderno y luego lo vuelves a dibujar un poco más a la derecha sin cambiar su forma ni su tamaño.&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;★¿Qué cambió en la figura?&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;★¿Qué crees que se mantiene igual?&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;¿Cómo describirías ese cambio con tus palabras?&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;Situación 2: Movimiento en el entorno&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa los siguientes ejemplos de la vida cotidiana:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Un carro que avanza en línea recta.&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Un ascensor que sube o baja.&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Un objeto que se desliza sobre una mesa.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="{{context_path}}/20260419104442916T3A/img1-2.png" title="desplazamiento" width="657" height="358" alt="desplazamiento" style="display: block; margin-left: auto; margin-right: auto;"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Responde:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1. ★¿Qué tienen en común estos movimientos?&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2. ★¿Cambian de forma los objetos cuando se mueven?&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;3. ¿Qué tipo de desplazamiento observas: horizontal, vertical o ambos?&lt;/span&gt;&lt;br&gt;&amp;nbsp;&lt;br&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;Situación 3: En el plano del cuaderno&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Dibuja en tu cuaderno:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Paso 1: Marca un punto A en cualquier lugar.&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Paso 2: Marca otro punto B moviéndote 3 cuadritos a la derecha.&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Paso 3: Marca un punto C moviéndote 3 cuadritos hacia arriba desde A.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Responde:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;★¿Qué diferencias notas entre los movimientos de A a B y de A a C?&amp;nbsp;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;¿Cómo podrías describir cada movimiento?&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p style="text-align: center;"&gt;&lt;span style="font-size: 14pt; font-family: 'arial black', sans-serif; color: #236fa1;"&gt;ANALIZA&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;Situación 4: Compara movimientos&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa dos dibujos de una misma figura:&lt;/span&gt;&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 20px auto; background: #ffffff; border: 1px solid #d9d9d9; overflow: hidden;"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" style="display: block; width: 100%; height: auto;" preserveAspectRatio="xMidYMid meet"&gt; &lt;defs&gt; &lt;pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse"&gt; &lt;path d="M 20 0 L 0 0 0 20" fill="none" stroke="#eeeeee" stroke-width="1"&gt;&lt;/path&gt; &lt;/pattern&gt; &lt;pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"&gt; &lt;rect width="100" height="100" fill="url(#smallGrid)"&gt;&lt;/rect&gt; &lt;path d="M 100 0 L 0 0 0 100" fill="none" stroke="#dddddd" stroke-width="1"&gt;&lt;/path&gt; &lt;/pattern&gt; &lt;marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"&gt; &lt;polygon points="0,0 8,4 0,8" fill="#666666"&gt;&lt;/polygon&gt; &lt;/marker&gt; &lt;/defs&gt; &lt;!-- Fondo --&gt; &lt;rect x="0" y="0" width="800" height="400" fill="url(#grid)"&gt;&lt;/rect&gt; &lt;!-- Separación --&gt; &lt;line x1="400" y1="20" x2="400" y2="380" stroke="#cccccc" stroke-width="2" stroke-dasharray="6,6"&gt;&lt;/line&gt; &lt;!-- TRASLACIÓN --&gt; &lt;polygon points="60,120 140,120 100,60" fill="none" stroke="#1e88e5" stroke-width="3"&gt;&lt;/polygon&gt; &lt;line x1="150" y1="120" x2="230" y2="120" stroke="#666666" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)"&gt;&lt;/line&gt; &lt;polygon points="240,120 320,120 280,60" fill="none" stroke="#1e88e5" stroke-width="3" opacity="0.7"&gt;&lt;/polygon&gt; &lt;!-- ROTACIÓN --&gt; &lt;circle cx="600" cy="240" r="4" fill="#e53935"&gt;&lt;/circle&gt; &lt;polygon points="540,240 580,240 560,180" fill="none" stroke="#1e88e5" stroke-width="3"&gt;&lt;/polygon&gt; &lt;!-- ARCO AJUSTADO (más grande y por fuera de la figura) --&gt; &lt;path d="M 520 260 A 100 100 0 0 1 620 140" fill="none" stroke="#666666" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)"&gt;&lt;/path&gt; &lt;!-- TRIÁNGULO ROTADO --&gt; &lt;polygon points="600,180 600,220 660,200" fill="none" stroke="#43a047" stroke-width="3"&gt;&lt;/polygon&gt; &lt;/svg&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;En el primero, la figura se mueve hacia la derecha.&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;En el segundo, la figura parece girar sobre un punto.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Responde:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1. ★¿En cuál caso la figura cambia su orientación?&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2. ¿En cuál caso la figura conserva exactamente la misma posición de sus lados?&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;3. ★¿Cómo describirías la diferencia entre ambos movimientos?&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;Situación 5: Piensa y argumenta&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa una figura que se mueve en el plano:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Antes del movimiento&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Después del movimiento&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Responde:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;1.&lt;/strong&gt; ¿Cómo podrías verificar si la figura sigue siendo la misma? ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;2.&lt;/strong&gt; ¿Qué aspectos podrías comparar (forma, tamaño, posición)? ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;3. &lt;/strong&gt;¿Qué crees que puede cambiar y qué no?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;Situación 6: Reflexión inicial&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Completa la siguiente idea con tus propias palabras:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;★“Cuando una figura se mueve en el plano, puedo notar que…”&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;style&gt;
+    /* ESTILOS AISLADOS PARA NO AFECTAR EXEMLEARNING */
+    .exe-geo-block {
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+        color: #333333;
+        line-height: 1.5;
+        background-color: #f4f7f9;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .exe-geo-block * {
+        box-sizing: border-box;
+    }
+    .exe-geo-container {
+        background-color: #ffffff;
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 30px;
+        border: 1px solid #d0e1e9;
+    }
+    .exe-geo-block h1 {
+        font-family: "Arial Black", sans-serif;
+        font-size: 14pt;
+        color: #1a4a75;
+        margin: 0 0 15px 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: normal;
+    }
+    .exe-geo-block h2, .exe-geo-block h3 {
+        font-family: "Arial Black", sans-serif;
+        font-size: 12pt;
+        color: #2c608e;
+        margin: 0 0 10px 0;
+        font-weight: normal;
+    }
+    .exe-geo-block p, .exe-geo-block li {
+        margin: 0 0 10px 0;
+    }
+    .exe-intro-box {
+        background-color: #f0f7fb;
+        border-left: 5px solid #3498db;
+        padding: 15px;
+        margin-bottom: 25px;
+        border-radius: 0 8px 8px 0;
+    }
+    .exe-card {
+        border: 2px solid #e0e9f0;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+    .exe-card-header {
+        background-color: #eaf1f6;
+        padding: 12px 20px;
+        border-bottom: 2px solid #e0e9f0;
+    }
+    .exe-card-content {
+        padding: 20px;
+    }
+    .exe-content-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .exe-text-section {
+        flex: 1;
+        min-width: 300px;
+    }
+    .exe-visual-section {
+        flex: 1;
+        min-width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    .exe-example-box {
+        background-color: #fdfbf7;
+        border: 1px dashed #d4c4a8;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 15px;
+    }
+    .exe-geo-block table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    .exe-geo-block th, .exe-geo-block td {
+        border: 1px solid #d0e1e9;
+        padding: 12px;
+        text-align: center;
+    }
+    .exe-geo-block th {
+        background-color: #eaf1f6;
+        font-family: "Arial Black", sans-serif;
+        font-size: 12pt;
+        color: #1a4a75;
+    }
+    .exe-highlight-no { color: #27ae60; font-weight: bold; }
+    .exe-highlight-si { color: #e74c3c; font-weight: bold; }
+    .exe-closing-box {
+        text-align: center;
+        background-color: #1a4a75;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    .exe-closing-box p { color: white; margin: 0; }
+    
+    /* SVG CLASSES */
+    .svg-grid { stroke: #e0e0e0; stroke-width: 1; }
+    .svg-axis { stroke: #333333; stroke-width: 2; }
+    .svg-orig { fill: rgba(52, 152, 219, 0.3); stroke: #2980b9; stroke-width: 2; }
+    .svg-trans { fill: rgba(46, 204, 113, 0.3); stroke: #27ae60; stroke-width: 2; }
+    .svg-rot { fill: rgba(230, 126, 34, 0.3); stroke: #d35400; stroke-width: 2; }
+    .svg-vector { stroke: #e74c3c; stroke-width: 2; stroke-dasharray: 4,4; fill: none; }
+    .svg-point { fill: #333333; }
+    .svg-center { fill: #c0392b; }
+    .svg-text { font-family: Arial, sans-serif; font-size: 11pt; fill: #333333; }
+    .svg-text-bold { font-family: Arial, sans-serif; font-size: 11pt; font-weight: bold; fill: #333333; }
+
+    @media (max-width: 768px) {
+        .exe-content-grid { flex-direction: column; }
+        .exe-visual-section { min-width: 100%; }
+    }
+&lt;/style&gt;
+&lt;div class="exe-geo-block"&gt;
+&lt;div class="exe-geo-container"&gt;
+&lt;h1&gt;📘 CONOCE ALGO NUEVO: MOVIMIENTOS EN EL PLANO&lt;/h1&gt;
+&lt;div class="exe-intro-box"&gt;
+&lt;p&gt;Una figura geométrica puede moverse en el plano sin dejar de ser la misma figura. Los movimientos que mantienen la forma y el tamaño se llaman &lt;strong&gt;isometrías&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="exe-card"&gt;
+&lt;div class="exe-card-header"&gt;
+&lt;h2&gt;1. TRASLACIÓN&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="exe-card-content"&gt;
+&lt;div class="exe-content-grid"&gt;
+&lt;div class="exe-text-section"&gt;
+&lt;p&gt;Es el desplazamiento de todos los puntos de una figura en una misma dirección, sentido y distancia.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Idea clave:&lt;/strong&gt; La figura cambia de posición, pero conserva su forma, tamaño y orientación.&lt;/p&gt;
+&lt;div class="exe-example-box"&gt;
+&lt;h3&gt;Ejemplo Paso a Paso&lt;/h3&gt;
+&lt;p&gt;Punto inicial: &lt;strong&gt;A(2, 3)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Movimiento: +3 derecha, +2 arriba&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resultado:&lt;/strong&gt; (2+3, 3+2) = &lt;strong&gt;A'(5, 5)&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="exe-visual-section"&gt;&lt;svg width="360" height="280" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg"&gt; &lt;defs&gt; &lt;marker id="arrowHead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"&gt; &lt;path d="M 0 0 L 10 5 L 0 10 z" fill="#e74c3c"&gt;&lt;/path&gt; &lt;/marker&gt; &lt;/defs&gt; &lt;path d="M 30 0 v 280 M 60 0 v 280 M 90 0 v 280 M 120 0 v 280 M 150 0 v 280 M 180 0 v 280 M 210 0 v 280 M 240 0 v 280 M 270 0 v 280 M 300 0 v 280 M 330 0 v 280" class="svg-grid" fill="none"&gt;&lt;/path&gt; &lt;path d="M 0 30 h 360 M 0 60 h 360 M 0 90 h 360 M 0 120 h 360 M 0 150 h 360 M 0 180 h 360 M 0 210 h 360 M 0 240 h 360" class="svg-grid" fill="none"&gt;&lt;/path&gt; &lt;line x1="30" y1="0" x2="30" y2="240" class="svg-axis"&gt;&lt;/line&gt; &lt;line x1="30" y1="240" x2="360" y2="240" class="svg-axis"&gt;&lt;/line&gt; &lt;polygon points="90,150 150,210 60,210" class="svg-orig"&gt;&lt;/polygon&gt; &lt;circle cx="90" cy="150" r="4" class="svg-point"&gt;&lt;/circle&gt; &lt;text x="65" y="145" class="svg-text"&gt;A(2,3)&lt;/text&gt; &lt;polygon points="180,90 240,150 150,150" class="svg-trans"&gt;&lt;/polygon&gt; &lt;circle cx="180" cy="90" r="4" class="svg-point"&gt;&lt;/circle&gt; &lt;text x="185" y="85" class="svg-text-bold"&gt;A'(5,5)&lt;/text&gt; &lt;line x1="90" y1="150" x2="175" y2="95" class="svg-vector" marker-end="url(#arrowHead)"&gt;&lt;/line&gt; &lt;/svg&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="exe-card"&gt;
+&lt;div class="exe-card-header"&gt;
+&lt;h2&gt;2. ROTACIÓN&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="exe-card-content"&gt;
+&lt;div class="exe-content-grid"&gt;
+&lt;div class="exe-text-section"&gt;
+&lt;p&gt;Es el giro de una figura alrededor de un punto fijo llamado &lt;strong&gt;centro de rotación&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Idea clave:&lt;/strong&gt; Mantiene forma y tamaño, pero &lt;strong&gt;cambia la orientación&lt;/strong&gt; de la figura en el espacio.&lt;/p&gt;
+&lt;div class="exe-example-box"&gt;
+&lt;h3&gt;Ejemplo Visual&lt;/h3&gt;
+&lt;p&gt;Rotación de &lt;strong&gt;90°&lt;/strong&gt; en sentido antihorario.&lt;/p&gt;
+&lt;p&gt;Centro: &lt;strong&gt;C(4, 2)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Observa cómo la base de la figura, que inicialmente es horizontal, se vuelve vertical tras el giro exacto.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="exe-visual-section"&gt;&lt;svg width="360" height="280" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg"&gt; &lt;path d="M 30 0 v 280 M 60 0 v 280 M 90 0 v 280 M 120 0 v 280 M 150 0 v 280 M 180 0 v 280 M 210 0 v 280 M 240 0 v 280 M 270 0 v 280 M 300 0 v 280 M 330 0 v 280" class="svg-grid" fill="none"&gt;&lt;/path&gt; &lt;path d="M 0 30 h 360 M 0 60 h 360 M 0 90 h 360 M 0 120 h 360 M 0 150 h 360 M 0 180 h 360 M 0 210 h 360 M 0 240 h 360" class="svg-grid" fill="none"&gt;&lt;/path&gt; &lt;line x1="30" y1="0" x2="30" y2="240" class="svg-axis"&gt;&lt;/line&gt; &lt;line x1="30" y1="240" x2="360" y2="240" class="svg-axis"&gt;&lt;/line&gt; &lt;circle cx="150" cy="180" r="5" class="svg-center"&gt;&lt;/circle&gt; &lt;text x="155" y="195" class="svg-text" fill="#c0392b"&gt;Centro C&lt;/text&gt; &lt;polygon points="150,180 240,180 240,120" class="svg-orig"&gt;&lt;/polygon&gt; &lt;polygon points="150,180 150,90 90,90" class="svg-rot"&gt;&lt;/polygon&gt; &lt;path d="M 190 180 A 40 40 0 0 0 150 140" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowHead)"&gt;&lt;/path&gt; &lt;text x="165" y="160" class="svg-text-bold" fill="#e74c3c"&gt;90°&lt;/text&gt; &lt;/svg&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;TABLA COMPARATIVA&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;¿Cambia la figura en...?&lt;/th&gt;
+&lt;th&gt;Traslación&lt;/th&gt;
+&lt;th&gt;Rotación&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Su forma y tamaño&lt;/td&gt;
+&lt;td class="exe-highlight-no"&gt;NO&lt;/td&gt;
+&lt;td class="exe-highlight-no"&gt;NO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Su posición&lt;/td&gt;
+&lt;td class="exe-highlight-si"&gt;SÍ&lt;/td&gt;
+&lt;td class="exe-highlight-si"&gt;SÍ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Su orientación&lt;/td&gt;
+&lt;td class="exe-highlight-no"&gt;NO&lt;/td&gt;
+&lt;td class="exe-highlight-si"&gt;SÍ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="exe-closing-box"&gt;
+&lt;p&gt;&lt;strong&gt;Idea Clave:&lt;/strong&gt; En ambos movimientos, la figura resultante es &lt;strong&gt;congruente&lt;/strong&gt; a la original; es decir, mantienen exactamente las mismas medidas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p style="text-align: center;"&gt;&lt;span style="font-family: 'arial black', sans-serif; color: #236fa1;"&gt;&lt;strong&gt;ACTIVIDADES DE APRENDIZAJE&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;1. Traslaciones en el plano cartesiano&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ejercicio 1 (Nivel esencial ★)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Dibuja en tu cuaderno un punto A(2, 3).&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Realiza la siguiente traslación:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;4 unidades a la derecha&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1 unidad hacia arriba&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Paso 1: Calcula la nueva coordenada en x&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Paso 2: Calcula la nueva coordenada en y&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Paso 3: Escribe la nueva posición&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;¿Cuál es la nueva coordenada de A? ★&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Ejercicio 2 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Dibuja el triángulo con los siguientes puntos:&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;A(1,1), B(3,1), C(2,3)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Realiza la traslación:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2 unidades a la derecha&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;3 unidades hacia arriba&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;1.&lt;/strong&gt; Escribe las nuevas coordenadas de cada punto ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;2.&lt;/strong&gt; Dibuja la nueva figura&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;3.&lt;/strong&gt; Compara ambas figuras&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;¿Qué cambia y qué se mantiene igual? ★&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;&amp;nbsp;Ejercicio 3 (Nivel intermedio)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa una figura que se traslada:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Punto inicial: D(4,2)&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Punto final: D′(7,5)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;1.&lt;/strong&gt; ¿Cuántas unidades se movió en horizontal?&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;2.&lt;/strong&gt; ¿Cuántas unidades se movió en vertical?&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;3.&lt;/strong&gt; Describe el movimiento realizado&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;2. Rotaciones en el plano&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Ejercicio 4 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa una figura que gira alrededor de un punto.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Responde:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;1.&lt;/strong&gt; ¿Qué elemento permite identificar el giro? ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;2.&lt;/strong&gt; ¿La figura cambia de tamaño? ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;3. &lt;/strong&gt;¿La figura cambia su orientación? ★&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Ejercicio 5 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Dibuja una flecha apuntando hacia arriba.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ahora realiza un giro de 90° hacia la derecha.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1. Dibuja la nueva posición ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2. Describe con tus palabras qué ocurrió ★&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Ejercicio 6 (Nivel intermedio)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa una figura antes y después de un giro de 180°.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1. ¿Cómo queda la figura después del giro?&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2. ¿Qué dirección tenía antes y cuál después?&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;3. Explica cómo sabes que fue una rotación&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;3. Comparación de movimientos&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Ejercicio 7 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Completa la tabla en tu cuaderno:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;img src="{{context_path}}/20260419104442916T3A/tabla_1-2.png" title="tabla 1" width="943" height="92" alt="tabla 1" style="display: block; margin-left: auto; margin-right: auto;"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: left;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Ejercicio 8 (Nivel intermedio)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa dos situaciones:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Una figura se desplaza en línea recta&lt;/span&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Otra figura gira sobre un punto&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1. ¿Cuál corresponde a una traslación?&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2. ¿Cuál corresponde a una rotación?&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;3. Justifica tu respuesta&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;4. Aplicación en contexto&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Ejercicio 9 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Observa tu entorno (colegio o casa):&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1. Identifica un ejemplo de traslación ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2. Identifica un ejemplo de rotación ★&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;3. Describe cada uno&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span style="font-family: 'arial black', sans-serif;"&gt;&lt;strong&gt;Fuentes bibliográficas&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ministerio de Educación Nacional – MEN. Estándares Básicos de Competencias en Matemáticas. Bogotá, Colombia, 2006.&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ministerio de Educación Nacional – MEN. Derechos Básicos de Aprendizaje (DBA) – Matemáticas, grado séptimo. Bogotá, Colombia, 2016.&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ministerio de Educación Nacional – MEN. Vamos a aprender Matemáticas 7. Bogotá, Colombia.&lt;/span&gt;&lt;br&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Colegio Integrado Simón Bolívar. Plan de asignatura Geometría grado 7°.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
+&lt;style&gt;
+    .rv2-wrap{
+      background:#ffffff;
+      border:1px solid #d9e2f0;
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+    }
+    .rv2-title{
+      font-family: Arial Black, Arial, sans-serif;
+      font-size: 12pt;
+      margin: 0 0 12px 0;
+      color:#1f3b64;
+    }
+    .rv2-note{
+      font-family: Arial, sans-serif;
+      font-size:12pt;
+      margin:10px 0 0 0;
+      color:#334155;
+    }
+    .rv2-svg{
+      width:100%;
+      height:auto;
+      display:block;
+      background:#fff;
+    }
+  &lt;/style&gt;
+&lt;style&gt;
+    .rv2-wrap{
+      background:#f8fafc;
+      border:1px solid #cbd5e1;
+      border-radius:16px;
+      padding:16px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+    .rv2-main-title{
+      font-family: Arial Black, Arial, sans-serif;
+      font-size:14pt;
+      color:#163b75;
+      margin:0 0 14px 0;
+    }
+    .rv2-svg{
+      width:100%;
+      height:auto;
+      display:block;
+      background:transparent;
+    }
+    .rv2-note{
+      font-family: Arial, sans-serif;
+      font-size:12pt;
+      color:#1f2937;
+      margin-top:12px;
+      line-height:1.45;
+    }
+  &lt;/style&gt;
+&lt;style&gt;
+    .rv2-wrap{
+      background:#f8fafc;
+      border:1px solid #cbd5e1;
+      border-radius:16px;
+      padding:16px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+    .rv2-main-title{
+      font-family: Arial Black, Arial, sans-serif;
+      font-size:14pt;
+      color:#163b75;
+      margin:0 0 14px 0;
+    }
+    .rv2-svg{
+      width:100%;
+      height:auto;
+      display:block;
+      background:transparent;
+    }
+    .rv2-note{
+      font-family: Arial, sans-serif;
+      font-size:12pt;
+      color:#1f2937;
+      margin-top:12px;
+      line-height:1.45;
+    }
+  &lt;/style&gt;&lt;p class="clearfix"&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</htmlView><jsonProperties>{"ideviceId":"20260419104442916T3A","textInfoDurationInput":"","textInfoDurationTextInput":"Duración","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Agrupamiento","textTextarea":"&lt;p style=\"text-align: center;\"&gt;&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;&lt;span style=\"font-size: 14pt; font-family: 'arial black', sans-serif; color: #236fa1;\"&gt;&lt;strong&gt;EXPLORACIÓN&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;Situación 1: Observa y piensa&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Imagina que dibujas un cuadrado en tu cuaderno y luego lo vuelves a dibujar un poco más a la derecha sin cambiar su forma ni su tamaño.&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;★¿Qué cambió en la figura? &lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;★¿Qué crees que se mantiene igual? &lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;¿Cómo describirías ese cambio con tus palabras?&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;Situación 2: Movimiento en el entorno&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa los siguientes ejemplos de la vida cotidiana:&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Un carro que avanza en línea recta.&lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Un ascensor que sube o baja.&lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Un objeto que se desliza sobre una mesa.&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=\"{{context_path}}/20260419104442916T3A/img1-2.png\" title=\"desplazamiento\" width=\"657\" height=\"358\" alt=\"desplazamiento\" style=\"display: block; margin-left: auto; margin-right: auto;\" /&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Responde:&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;1. ★¿Qué tienen en común estos movimientos? &lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;2. ★¿Cambian de forma los objetos cuando se mueven? &lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;3. ¿Qué tipo de desplazamiento observas: horizontal, vertical o ambos?&lt;/span&gt;&lt;br /&gt; &lt;br /&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;Situación 3: En el plano del cuaderno&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Dibuja en tu cuaderno:&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Paso 1: Marca un punto A en cualquier lugar.&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Paso 2: Marca otro punto B moviéndote 3 cuadritos a la derecha.&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Paso 3: Marca un punto C moviéndote 3 cuadritos hacia arriba desde A.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Responde:&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;★¿Qué diferencias notas entre los movimientos de A a B y de A a C? &lt;/span&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;¿Cómo podrías describir cada movimiento?&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;hr /&gt;\n&lt;p style=\"text-align: center;\"&gt;&lt;span style=\"font-size: 14pt; font-family: 'arial black', sans-serif; color: #236fa1;\"&gt;ANALIZA&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;Situación 4: Compara movimientos&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa dos dibujos de una misma figura:&lt;/span&gt;&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 20px auto; background: #ffffff; border: 1px solid #d9d9d9; overflow: hidden;\"&gt;&lt;svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 800 400\" style=\"display: block; width: 100%; height: auto;\" preserveaspectratio=\"xMidYMid meet\"&gt; &lt;defs&gt; &lt;pattern id=\"smallGrid\" width=\"20\" height=\"20\" patternunits=\"userSpaceOnUse\"&gt; &lt;path d=\"M 20 0 L 0 0 0 20\" fill=\"none\" stroke=\"#eeeeee\" stroke-width=\"1\"&gt;&lt;/path&gt; &lt;/pattern&gt; &lt;pattern id=\"grid\" width=\"100\" height=\"100\" patternunits=\"userSpaceOnUse\"&gt; &lt;rect width=\"100\" height=\"100\" fill=\"url(#smallGrid)\"&gt;&lt;/rect&gt; &lt;path d=\"M 100 0 L 0 0 0 100\" fill=\"none\" stroke=\"#dddddd\" stroke-width=\"1\"&gt;&lt;/path&gt; &lt;/pattern&gt; &lt;marker id=\"arrowhead\" markerwidth=\"8\" markerheight=\"8\" refx=\"7\" refy=\"4\" orient=\"auto\" markerunits=\"strokeWidth\"&gt; &lt;polygon points=\"0,0 8,4 0,8\" fill=\"#666666\"&gt;&lt;/polygon&gt; &lt;/marker&gt; &lt;/defs&gt; &lt;!-- Fondo --&gt; &lt;rect x=\"0\" y=\"0\" width=\"800\" height=\"400\" fill=\"url(#grid)\"&gt;&lt;/rect&gt; &lt;!-- Separación --&gt; &lt;line x1=\"400\" y1=\"20\" x2=\"400\" y2=\"380\" stroke=\"#cccccc\" stroke-width=\"2\" stroke-dasharray=\"6,6\"&gt;&lt;/line&gt; &lt;!-- TRASLACIÓN --&gt; &lt;polygon points=\"60,120 140,120 100,60\" fill=\"none\" stroke=\"#1e88e5\" stroke-width=\"3\"&gt;&lt;/polygon&gt; &lt;line x1=\"150\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"#666666\" stroke-width=\"2\" stroke-dasharray=\"5,3\" marker-end=\"url(#arrowhead)\"&gt;&lt;/line&gt; &lt;polygon points=\"240,120 320,120 280,60\" fill=\"none\" stroke=\"#1e88e5\" stroke-width=\"3\" opacity=\"0.7\"&gt;&lt;/polygon&gt; &lt;!-- ROTACIÓN --&gt; &lt;circle cx=\"600\" cy=\"240\" r=\"4\" fill=\"#e53935\"&gt;&lt;/circle&gt; &lt;polygon points=\"540,240 580,240 560,180\" fill=\"none\" stroke=\"#1e88e5\" stroke-width=\"3\"&gt;&lt;/polygon&gt; &lt;!-- ARCO AJUSTADO (más grande y por fuera de la figura) --&gt; &lt;path d=\"M 520 260 A 100 100 0 0 1 620 140\" fill=\"none\" stroke=\"#666666\" stroke-width=\"2\" stroke-dasharray=\"5,3\" marker-end=\"url(#arrowhead)\"&gt;&lt;/path&gt; &lt;!-- TRIÁNGULO ROTADO --&gt; &lt;polygon points=\"600,180 600,220 660,200\" fill=\"none\" stroke=\"#43a047\" stroke-width=\"3\"&gt;&lt;/polygon&gt; &lt;/svg&gt;&lt;/div&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;En el primero, la figura se mueve hacia la derecha.&lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;En el segundo, la figura parece girar sobre un punto.&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Responde:&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;1. ★¿En cuál caso la figura cambia su orientación? &lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;2. ¿En cuál caso la figura conserva exactamente la misma posición de sus lados?&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;3. ★¿Cómo describirías la diferencia entre ambos movimientos? &lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt; &lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;Situación 5: Piensa y argumenta&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa una figura que se mueve en el plano:&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Antes del movimiento&lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Después del movimiento&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Responde:&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;1.&lt;/strong&gt; ¿Cómo podrías verificar si la figura sigue siendo la misma? ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;2.&lt;/strong&gt; ¿Qué aspectos podrías comparar (forma, tamaño, posición)? ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;3. &lt;/strong&gt;¿Qué crees que puede cambiar y qué no?&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;Situación 6: Reflexión inicial&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Completa la siguiente idea con tus propias palabras:&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;★“Cuando una figura se mueve en el plano, puedo notar que…” &lt;/span&gt;&lt;/p&gt;\n&lt;hr /&gt;\n&lt;style&gt;\n    /* ESTILOS AISLADOS PARA NO AFECTAR EXEMLEARNING */\n    .exe-geo-block {\n        font-family: Arial, sans-serif;\n        font-size: 12pt;\n        color: #333333;\n        line-height: 1.5;\n        background-color: #f4f7f9;\n        padding: 20px;\n        border-radius: 8px;\n    }\n    .exe-geo-block * {\n        box-sizing: border-box;\n    }\n    .exe-geo-container {\n        background-color: #ffffff;\n        max-width: 900px;\n        margin: 0 auto;\n        border-radius: 8px;\n        box-shadow: 0 4px 10px rgba(0,0,0,0.1);\n        padding: 30px;\n        border: 1px solid #d0e1e9;\n    }\n    .exe-geo-block h1 {\n        font-family: \"Arial Black\", sans-serif;\n        font-size: 14pt;\n        color: #1a4a75;\n        margin: 0 0 15px 0;\n        text-transform: uppercase;\n        text-align: center;\n        font-weight: normal;\n    }\n    .exe-geo-block h2, .exe-geo-block h3 {\n        font-family: \"Arial Black\", sans-serif;\n        font-size: 12pt;\n        color: #2c608e;\n        margin: 0 0 10px 0;\n        font-weight: normal;\n    }\n    .exe-geo-block p, .exe-geo-block li {\n        margin: 0 0 10px 0;\n    }\n    .exe-intro-box {\n        background-color: #f0f7fb;\n        border-left: 5px solid #3498db;\n        padding: 15px;\n        margin-bottom: 25px;\n        border-radius: 0 8px 8px 0;\n    }\n    .exe-card {\n        border: 2px solid #e0e9f0;\n        border-radius: 8px;\n        margin-bottom: 30px;\n        overflow: hidden;\n    }\n    .exe-card-header {\n        background-color: #eaf1f6;\n        padding: 12px 20px;\n        border-bottom: 2px solid #e0e9f0;\n    }\n    .exe-card-content {\n        padding: 20px;\n    }\n    .exe-content-grid {\n        display: flex;\n        flex-wrap: wrap;\n        gap: 20px;\n        align-items: flex-start;\n    }\n    .exe-text-section {\n        flex: 1;\n        min-width: 300px;\n    }\n    .exe-visual-section {\n        flex: 1;\n        min-width: 350px;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        background-color: #fafafa;\n        border-radius: 4px;\n        padding: 10px;\n    }\n    .exe-example-box {\n        background-color: #fdfbf7;\n        border: 1px dashed #d4c4a8;\n        padding: 15px;\n        border-radius: 6px;\n        margin-top: 15px;\n    }\n    .exe-geo-block table {\n        width: 100%;\n        border-collapse: collapse;\n        margin: 20px 0;\n    }\n    .exe-geo-block th, .exe-geo-block td {\n        border: 1px solid #d0e1e9;\n        padding: 12px;\n        text-align: center;\n    }\n    .exe-geo-block th {\n        background-color: #eaf1f6;\n        font-family: \"Arial Black\", sans-serif;\n        font-size: 12pt;\n        color: #1a4a75;\n    }\n    .exe-highlight-no { color: #27ae60; font-weight: bold; }\n    .exe-highlight-si { color: #e74c3c; font-weight: bold; }\n    .exe-closing-box {\n        text-align: center;\n        background-color: #1a4a75;\n        color: white;\n        padding: 15px;\n        border-radius: 8px;\n        margin-top: 20px;\n    }\n    .exe-closing-box p { color: white; margin: 0; }\n    \n    /* SVG CLASSES */\n    .svg-grid { stroke: #e0e0e0; stroke-width: 1; }\n    .svg-axis { stroke: #333333; stroke-width: 2; }\n    .svg-orig { fill: rgba(52, 152, 219, 0.3); stroke: #2980b9; stroke-width: 2; }\n    .svg-trans { fill: rgba(46, 204, 113, 0.3); stroke: #27ae60; stroke-width: 2; }\n    .svg-rot { fill: rgba(230, 126, 34, 0.3); stroke: #d35400; stroke-width: 2; }\n    .svg-vector { stroke: #e74c3c; stroke-width: 2; stroke-dasharray: 4,4; fill: none; }\n    .svg-point { fill: #333333; }\n    .svg-center { fill: #c0392b; }\n    .svg-text { font-family: Arial, sans-serif; font-size: 11pt; fill: #333333; }\n    .svg-text-bold { font-family: Arial, sans-serif; font-size: 11pt; font-weight: bold; fill: #333333; }\n\n    @media (max-width: 768px) {\n        .exe-content-grid { flex-direction: column; }\n        .exe-visual-section { min-width: 100%; }\n    }\n&lt;/style&gt;\n&lt;div class=\"exe-geo-block\"&gt;\n&lt;div class=\"exe-geo-container\"&gt;\n&lt;h1&gt;📘 CONOCE ALGO NUEVO: MOVIMIENTOS EN EL PLANO&lt;/h1&gt;\n&lt;div class=\"exe-intro-box\"&gt;\n&lt;p&gt;Una figura geométrica puede moverse en el plano sin dejar de ser la misma figura. Los movimientos que mantienen la forma y el tamaño se llaman &lt;strong&gt;isometrías&lt;/strong&gt;.&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"exe-card\"&gt;\n&lt;div class=\"exe-card-header\"&gt;\n&lt;h2&gt;1. TRASLACIÓN&lt;/h2&gt;\n&lt;/div&gt;\n&lt;div class=\"exe-card-content\"&gt;\n&lt;div class=\"exe-content-grid\"&gt;\n&lt;div class=\"exe-text-section\"&gt;\n&lt;p&gt;Es el desplazamiento de todos los puntos de una figura en una misma dirección, sentido y distancia.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Idea clave:&lt;/strong&gt; La figura cambia de posición, pero conserva su forma, tamaño y orientación.&lt;/p&gt;\n&lt;div class=\"exe-example-box\"&gt;\n&lt;h3&gt;Ejemplo Paso a Paso&lt;/h3&gt;\n&lt;p&gt;Punto inicial: &lt;strong&gt;A(2, 3)&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Movimiento: +3 derecha, +2 arriba&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Resultado:&lt;/strong&gt; (2+3, 3+2) = &lt;strong&gt;A'(5, 5)&lt;/strong&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"exe-visual-section\"&gt;&lt;svg width=\"360\" height=\"280\" viewbox=\"0 0 360 280\" xmlns=\"http://www.w3.org/2000/svg\"&gt; &lt;defs&gt; &lt;marker id=\"arrowHead\" viewbox=\"0 0 10 10\" refx=\"8\" refy=\"5\" markerwidth=\"6\" markerheight=\"6\" orient=\"auto\"&gt; &lt;path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#e74c3c\"&gt;&lt;/path&gt; &lt;/marker&gt; &lt;/defs&gt; &lt;path d=\"M 30 0 v 280 M 60 0 v 280 M 90 0 v 280 M 120 0 v 280 M 150 0 v 280 M 180 0 v 280 M 210 0 v 280 M 240 0 v 280 M 270 0 v 280 M 300 0 v 280 M 330 0 v 280\" class=\"svg-grid\" fill=\"none\"&gt;&lt;/path&gt; &lt;path d=\"M 0 30 h 360 M 0 60 h 360 M 0 90 h 360 M 0 120 h 360 M 0 150 h 360 M 0 180 h 360 M 0 210 h 360 M 0 240 h 360\" class=\"svg-grid\" fill=\"none\"&gt;&lt;/path&gt; &lt;line x1=\"30\" y1=\"0\" x2=\"30\" y2=\"240\" class=\"svg-axis\"&gt;&lt;/line&gt; &lt;line x1=\"30\" y1=\"240\" x2=\"360\" y2=\"240\" class=\"svg-axis\"&gt;&lt;/line&gt; &lt;polygon points=\"90,150 150,210 60,210\" class=\"svg-orig\"&gt;&lt;/polygon&gt; &lt;circle cx=\"90\" cy=\"150\" r=\"4\" class=\"svg-point\"&gt;&lt;/circle&gt; &lt;text x=\"65\" y=\"145\" class=\"svg-text\"&gt;A(2,3)&lt;/text&gt; &lt;polygon points=\"180,90 240,150 150,150\" class=\"svg-trans\"&gt;&lt;/polygon&gt; &lt;circle cx=\"180\" cy=\"90\" r=\"4\" class=\"svg-point\"&gt;&lt;/circle&gt; &lt;text x=\"185\" y=\"85\" class=\"svg-text-bold\"&gt;A'(5,5)&lt;/text&gt; &lt;line x1=\"90\" y1=\"150\" x2=\"175\" y2=\"95\" class=\"svg-vector\" marker-end=\"url(#arrowHead)\"&gt;&lt;/line&gt; &lt;/svg&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"exe-card\"&gt;\n&lt;div class=\"exe-card-header\"&gt;\n&lt;h2&gt;2. ROTACIÓN&lt;/h2&gt;\n&lt;/div&gt;\n&lt;div class=\"exe-card-content\"&gt;\n&lt;div class=\"exe-content-grid\"&gt;\n&lt;div class=\"exe-text-section\"&gt;\n&lt;p&gt;Es el giro de una figura alrededor de un punto fijo llamado &lt;strong&gt;centro de rotación&lt;/strong&gt;.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Idea clave:&lt;/strong&gt; Mantiene forma y tamaño, pero &lt;strong&gt;cambia la orientación&lt;/strong&gt; de la figura en el espacio.&lt;/p&gt;\n&lt;div class=\"exe-example-box\"&gt;\n&lt;h3&gt;Ejemplo Visual&lt;/h3&gt;\n&lt;p&gt;Rotación de &lt;strong&gt;90°&lt;/strong&gt; en sentido antihorario.&lt;/p&gt;\n&lt;p&gt;Centro: &lt;strong&gt;C(4, 2)&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Observa cómo la base de la figura, que inicialmente es horizontal, se vuelve vertical tras el giro exacto.&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"exe-visual-section\"&gt;&lt;svg width=\"360\" height=\"280\" viewbox=\"0 0 360 280\" xmlns=\"http://www.w3.org/2000/svg\"&gt; &lt;path d=\"M 30 0 v 280 M 60 0 v 280 M 90 0 v 280 M 120 0 v 280 M 150 0 v 280 M 180 0 v 280 M 210 0 v 280 M 240 0 v 280 M 270 0 v 280 M 300 0 v 280 M 330 0 v 280\" class=\"svg-grid\" fill=\"none\"&gt;&lt;/path&gt; &lt;path d=\"M 0 30 h 360 M 0 60 h 360 M 0 90 h 360 M 0 120 h 360 M 0 150 h 360 M 0 180 h 360 M 0 210 h 360 M 0 240 h 360\" class=\"svg-grid\" fill=\"none\"&gt;&lt;/path&gt; &lt;line x1=\"30\" y1=\"0\" x2=\"30\" y2=\"240\" class=\"svg-axis\"&gt;&lt;/line&gt; &lt;line x1=\"30\" y1=\"240\" x2=\"360\" y2=\"240\" class=\"svg-axis\"&gt;&lt;/line&gt; &lt;circle cx=\"150\" cy=\"180\" r=\"5\" class=\"svg-center\"&gt;&lt;/circle&gt; &lt;text x=\"155\" y=\"195\" class=\"svg-text\" fill=\"#c0392b\"&gt;Centro C&lt;/text&gt; &lt;polygon points=\"150,180 240,180 240,120\" class=\"svg-orig\"&gt;&lt;/polygon&gt; &lt;polygon points=\"150,180 150,90 90,90\" class=\"svg-rot\"&gt;&lt;/polygon&gt; &lt;path d=\"M 190 180 A 40 40 0 0 0 150 140\" fill=\"none\" stroke=\"#e74c3c\" stroke-width=\"2\" marker-end=\"url(#arrowHead)\"&gt;&lt;/path&gt; &lt;text x=\"165\" y=\"160\" class=\"svg-text-bold\" fill=\"#e74c3c\"&gt;90°&lt;/text&gt; &lt;/svg&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;h2&gt;TABLA COMPARATIVA&lt;/h2&gt;\n&lt;table&gt;\n&lt;thead&gt;\n&lt;tr&gt;\n&lt;th&gt;¿Cambia la figura en...?&lt;/th&gt;\n&lt;th&gt;Traslación&lt;/th&gt;\n&lt;th&gt;Rotación&lt;/th&gt;\n&lt;/tr&gt;\n&lt;/thead&gt;\n&lt;tbody&gt;\n&lt;tr&gt;\n&lt;td&gt;Su forma y tamaño&lt;/td&gt;\n&lt;td class=\"exe-highlight-no\"&gt;NO&lt;/td&gt;\n&lt;td class=\"exe-highlight-no\"&gt;NO&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;Su posición&lt;/td&gt;\n&lt;td class=\"exe-highlight-si\"&gt;SÍ&lt;/td&gt;\n&lt;td class=\"exe-highlight-si\"&gt;SÍ&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;Su orientación&lt;/td&gt;\n&lt;td class=\"exe-highlight-no\"&gt;NO&lt;/td&gt;\n&lt;td class=\"exe-highlight-si\"&gt;SÍ&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/tbody&gt;\n&lt;/table&gt;\n&lt;div class=\"exe-closing-box\"&gt;\n&lt;p&gt;&lt;strong&gt;Idea Clave:&lt;/strong&gt; En ambos movimientos, la figura resultante es &lt;strong&gt;congruente&lt;/strong&gt; a la original; es decir, mantienen exactamente las mismas medidas.&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;hr /&gt;\n&lt;p style=\"text-align: center;\"&gt;&lt;span style=\"font-family: 'arial black', sans-serif; color: #236fa1;\"&gt;&lt;strong&gt;ACTIVIDADES DE APRENDIZAJE&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;1. Traslaciones en el plano cartesiano&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Ejercicio 1 (Nivel esencial ★)&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Dibuja en tu cuaderno un punto A(2, 3).&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Realiza la siguiente traslación:&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;4 unidades a la derecha&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;/span&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;1 unidad hacia arriba&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Paso 1: Calcula la nueva coordenada en x&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Paso 2: Calcula la nueva coordenada en y&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Paso 3: Escribe la nueva posición&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;¿Cuál es la nueva coordenada de A? ★&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Ejercicio 2 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Dibuja el triángulo con los siguientes puntos:&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;A(1,1), B(3,1), C(2,3)&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Realiza la traslación:&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;2 unidades a la derecha&lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;3 unidades hacia arriba&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;1.&lt;/strong&gt; Escribe las nuevas coordenadas de cada punto ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;2.&lt;/strong&gt; Dibuja la nueva figura&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;3.&lt;/strong&gt; Compara ambas figuras&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;¿Qué cambia y qué se mantiene igual? ★&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt; Ejercicio 3 (Nivel intermedio)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa una figura que se traslada:&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Punto inicial: D(4,2)&lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Punto final: D′(7,5)&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;1.&lt;/strong&gt; ¿Cuántas unidades se movió en horizontal?&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;2.&lt;/strong&gt; ¿Cuántas unidades se movió en vertical?&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;3.&lt;/strong&gt; Describe el movimiento realizado&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;2. Rotaciones en el plano&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Ejercicio 4 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa una figura que gira alrededor de un punto.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Responde:&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;1.&lt;/strong&gt; ¿Qué elemento permite identificar el giro? ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;2.&lt;/strong&gt; ¿La figura cambia de tamaño? ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;3. &lt;/strong&gt;¿La figura cambia su orientación? ★&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Ejercicio 5 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Dibuja una flecha apuntando hacia arriba.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Ahora realiza un giro de 90° hacia la derecha.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;1. Dibuja la nueva posición ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;2. Describe con tus palabras qué ocurrió ★&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Ejercicio 6 (Nivel intermedio)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa una figura antes y después de un giro de 180°.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;1. ¿Cómo queda la figura después del giro?&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;2. ¿Qué dirección tenía antes y cuál después?&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;3. Explica cómo sabes que fue una rotación&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;3. Comparación de movimientos&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Ejercicio 7 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Completa la tabla en tu cuaderno:&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;img src=\"{{context_path}}/20260419104442916T3A/tabla_1-2.png\" title=\"tabla 1\" width=\"943\" height=\"92\" alt=\"tabla 1\" style=\"display: block; margin-left: auto; margin-right: auto;\" /&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p style=\"text-align: left;\"&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt; &lt;/span&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Ejercicio 8 (Nivel intermedio)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa dos situaciones:&lt;/span&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Una figura se desplaza en línea recta&lt;/span&gt;&lt;br /&gt;&lt;/li&gt;\n&lt;li&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Otra figura gira sobre un punto&lt;/span&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;1. ¿Cuál corresponde a una traslación?&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;2. ¿Cuál corresponde a una rotación?&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;3. Justifica tu respuesta&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;4. Aplicación en contexto&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Ejercicio 9 (Nivel esencial ★)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Observa tu entorno (colegio o casa):&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;1. Identifica un ejemplo de traslación ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;2. Identifica un ejemplo de rotación ★&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;3. Describe cada uno&lt;/span&gt;&lt;/p&gt;\n&lt;hr /&gt;\n&lt;p&gt;&lt;span style=\"font-family: 'arial black', sans-serif;\"&gt;&lt;strong&gt;Fuentes bibliográficas&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Ministerio de Educación Nacional – MEN. Estándares Básicos de Competencias en Matemáticas. Bogotá, Colombia, 2006.&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Ministerio de Educación Nacional – MEN. Derechos Básicos de Aprendizaje (DBA) – Matemáticas, grado séptimo. Bogotá, Colombia, 2016.&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Ministerio de Educación Nacional – MEN. Vamos a aprender Matemáticas 7. Bogotá, Colombia.&lt;/span&gt;&lt;br /&gt;&lt;span style=\"font-family: arial, helvetica, sans-serif;\"&gt;Colegio Integrado Simón Bolívar. Plan de asignatura Geometría grado 7°.&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;style&gt;\n    .rv2-wrap{\n      background:#ffffff;\n      border:1px solid #d9e2f0;\n      border-radius:14px;\n      padding:16px;\n      box-shadow:0 2px 8px rgba(0,0,0,0.06);\n    }\n    .rv2-title{\n      font-family: Arial Black, Arial, sans-serif;\n      font-size: 12pt;\n      margin: 0 0 12px 0;\n      color:#1f3b64;\n    }\n    .rv2-note{\n      font-family: Arial, sans-serif;\n      font-size:12pt;\n      margin:10px 0 0 0;\n      color:#334155;\n    }\n    .rv2-svg{\n      width:100%;\n      height:auto;\n      display:block;\n      background:#fff;\n    }\n  &lt;/style&gt;\n&lt;style&gt;\n    .rv2-wrap{\n      background:#f8fafc;\n      border:1px solid #cbd5e1;\n      border-radius:16px;\n      padding:16px;\n      box-shadow:0 2px 8px rgba(0,0,0,0.05);\n    }\n    .rv2-main-title{\n      font-family: Arial Black, Arial, sans-serif;\n      font-size:14pt;\n      color:#163b75;\n      margin:0 0 14px 0;\n    }\n    .rv2-svg{\n      width:100%;\n      height:auto;\n      display:block;\n      background:transparent;\n    }\n    .rv2-note{\n      font-family: Arial, sans-serif;\n      font-size:12pt;\n      color:#1f2937;\n      margin-top:12px;\n      line-height:1.45;\n    }\n  &lt;/style&gt;\n&lt;style&gt;\n    .rv2-wrap{\n      background:#f8fafc;\n      border:1px solid #cbd5e1;\n      border-radius:16px;\n      padding:16px;\n      box-shadow:0 2px 8px rgba(0,0,0,0.05);\n    }\n    .rv2-main-title{\n      font-family: Arial Black, Arial, sans-serif;\n      font-size:14pt;\n      color:#163b75;\n      margin:0 0 14px 0;\n    }\n    .rv2-svg{\n      width:100%;\n      height:auto;\n      display:block;\n      background:transparent;\n    }\n    .rv2-note{\n      font-family: Arial, sans-serif;\n      font-size:12pt;\n      color:#1f2937;\n      margin-top:12px;\n      line-height:1.45;\n    }\n  &lt;/style&gt;","textFeedbackInput":"Mostrar retroalimentación","textFeedbackTextarea":""}</jsonProperties><odeComponentsOrder>1</odeComponentsOrder><odeComponentsProperties><odeComponentsProperty><key>visibility</key><value>true</value></odeComponentsProperty><odeComponentsProperty><key>teacherOnly</key><value>false</value></odeComponentsProperty><odeComponentsProperty><key>identifier</key><value/></odeComponentsProperty><odeComponentsProperty><key>cssClass</key><value/></odeComponentsProperty></odeComponentsProperties></odeComponent></odeComponents></odePagStructure></odePagStructures></odeNavStructure></odeNavStructures></ode>

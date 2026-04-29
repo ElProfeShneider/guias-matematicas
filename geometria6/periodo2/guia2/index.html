@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-index">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v3.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<title>Movimientos en el plano: Rotaciones y Reflexiones</title>
+<meta name="description" content="Guía pedagógica para la asignatura de Geometría, grado sexto. Orientada a predecir, aplicar y comparar los resultados de rotaciones y reflexiones sobre figuras bidimensionales en el plano cartesiano, promoviendo el desarrollo del pensamiento métrico-espacial en articulación con los Estándares Básicos de Competencias y los Derechos Básicos de Aprendizaje.">
+<script>document.querySelector("html").classList.add("js");</script><script src="libs/jquery/jquery.min.js"> </script><script src="libs/common_i18n.js"> </script><script src="libs/common.js"> </script><script src="libs/exe_export.js"> </script><script src="libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+<script src="idevices/text/text.js"> </script><link rel="stylesheet" href="idevices/text/text.css">
+<link rel="stylesheet" href="content/css/base.css">
+<script src="theme/style.js"> </script><link rel="stylesheet" href="theme/style.css">
+<link rel="icon" type="image/x-icon" href="libs/favicon.ico">
+</head>
+<body class="exe-export exe-web-site" lang="es">
+<script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li class="active"> <a href="index.html" class="active main-node no-ch">Página nueva</a>
+</li>
+</ul></nav><main id="20260420150731GUQDVX" class="page"> <header id="header-20260420150731GUQDVX" class="main-header"> <div class="package-header">
+<h1 class="package-title">Movimientos en el plano: Rotaciones y Reflexiones</h1>
+<p class="package-subtitle">Transformaciones rígidas bidimensionales</p>
+</div>
+<div class="page-header"><h2 class="page-title sr-av">Página nueva</h2></div></header><div id="page-content-20260420150731GUQDVX" class="page-content"> <article id="20260420100917672KYQ" class="box"> <header class="box-head no-icon"> <h1 class="box-title">6°</h1>
+<button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button></header><div class="box-content"> <div id="20260420100917670QSK" class="idevice_node text" data-idevice-path="idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p style="text-align: center;"></p>
+<p style="text-align: center;"><span style="font-family: 'arial black', sans-serif; font-size: 14pt;"><strong>EXPLORACIÓN</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Imagina que estás diseñando los movimientos para un personaje o una ficha de un videojuego en un tablero cuadriculado. En el nivel anterior, aprendiste a deslizar la ficha de un lado a otro (hacia arriba, abajo, izquierda o derecha).</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Pero ahora el juego se complica: hay obstáculos y paredes. Para avanzar, la ficha necesita hacer movimientos diferentes. Observa con atención lo que le ocurre a la ficha original en estos dos nuevos casos:</span></p>
+<div style="font-family: Arial, sans-serif; text-align: center; border: 1px solid #ccc; padding: 15px; border-radius: 8px; background-color: #fcfcfc; max-width: 600px; margin: 0 auto;">
+<h4 style="margin-top: 0;">Simulador de Movimientos</h4>
+<p style="font-size: 14px; color: #555;">Haz clic en los botones para ver qué le ocurre a la ficha azul.</p>
+<div style="margin-bottom: 15px;"><button onclick="animarFicha('reset')" style="padding: 8px 12px; cursor: pointer; background: #6c757d; color: white; border: none; border-radius: 4px;">Volver al inicio</button> <button onclick="animarFicha('caso1')" style="padding: 8px 12px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 4px; margin-left: 5px;">Ver Caso 1</button> <button onclick="animarFicha('caso2')" style="padding: 8px 12px; cursor: pointer; background: #dc3545; color: white; border: none; border-radius: 4px; margin-left: 5px;">Ver Caso 2</button></div>
+<svg width="400" height="200" viewBox="0 0 400 200" style="background-color: white; border: 1px solid #ddd; background-size: 20px 20px; background-image: linear-gradient(to right, #eee 1px, transparent 1px), linear-gradient(to bottom, #eee 1px, transparent 1px);"> <line id="ejeReflexion" x1="200" y1="0" x2="200" y2="200" stroke="red" stroke-width="2" stroke-dasharray="5,5" opacity="0" style="transition: opacity 0.5s;"></line> <polygon id="ficha" points="100,80 140,80 140,140 100,140 100,120 120,120 120,100 100,100" fill="#007bff" stroke="#0056b3" stroke-width="2" style="transition: all 1s ease-in-out;"></polygon> <circle id="puntoGiro" cx="140" cy="140" r="4" fill="red" opacity="0" style="transition: opacity 0.5s;"></circle> </svg></div>
+<p>
+<script>
+    function animarFicha(accion) {
+        const ficha = document.getElementById('ficha');
+        const eje = document.getElementById('ejeReflexion');
+        const punto = document.getElementById('puntoGiro');
+        
+        // Restaurar estado base
+        ficha.style.transform = "none";
+        ficha.setAttribute("fill", "#007bff");
+        eje.style.opacity = "0";
+        punto.style.opacity = "0";
+
+        setTimeout(() => {
+            if (accion === 'caso1') {
+                // Rotación de 90 grados sobre la esquina inferior derecha
+                ficha.style.transformOrigin = "140px 140px";
+                punto.style.opacity = "1";
+                ficha.style.transform = "rotate(90deg)";
+                ficha.setAttribute("fill", "#28a745");
+            } else if (accion === 'caso2') {
+                // Reflexión sobre el eje X=200
+                ficha.style.transformOrigin = "200px 100px";
+                eje.style.opacity = "1";
+                ficha.style.transform = "scaleX(-1)";
+                ficha.setAttribute("fill", "#dc3545");
+            }
+        }, 50);
+    }
+</script>
+<br></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Responde las siguientes preguntas en tu cuaderno, basándote únicamente en lo que ves en la imagen:</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">1. (★) Observa el Caso 1. La ficha no se deslizó, sino que dio una vuelta sobre una de sus esquinas, quedando "acostada". Menciona dos objetos de tu vida diaria que hagan este tipo de movimiento circular (dar vueltas sobre un punto fijo).</span><br><span style="font-family: arial, helvetica, sans-serif;">2. (★) Observa el Caso 2. La figura parece haberse volteado por completo, como si se estuviera mirando al espejo. Su lado más largo cambió de dirección. ¿En qué situaciones cotidianas ves este efecto de "reflejo"?</span></p>
+<hr>
+<p style="text-align: center;"><span style="font-size: 14pt; font-family: 'arial black', sans-serif;"><strong>ANALIZA</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Piensa en las características de la ficha después de realizar esos dos nuevos movimientos y contesta:</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">1. (★) Si mides con una regla los lados de la ficha original y luego mides los lados de las fichas en el Caso 1 y Caso 2, ¿crees que las medidas cambiaron al moverse? Explica tu respuesta.</span><br><span style="font-family: arial, helvetica, sans-serif;">2. (★) En el Caso 2 (el efecto espejo), ¿crees que podrías volver a la posición original simplemente "deslizando" la figura sin despegarla de la pantalla? Imagina el movimiento y describe qué pasaría.</span><br><span style="font-family: arial, helvetica, sans-serif;">3. Dibuja en tu cuaderno una flecha sencilla apuntando hacia arriba. Luego, dibuja cómo crees que se vería si da "media vuelta" y cómo se vería si la pones frente a un espejo al lado derecho.</span></p>
+<hr>
+<p style="text-align: center;"><span style="font-size: 14pt; font-family: 'arial black', sans-serif;"><strong>CONOCE ALGO NUEVO</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Las transformaciones que viste en la sección anterior se llaman Movimientos Rígidos. Se llaman así porque, aunque la figura cambie de posición o de orientación, su forma y su tamaño no cambian: los lados miden lo mismo y los ángulos son iguales. La figura original y la imagen final son congruentes.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">A continuación, definiremos los dos movimientos que estudiaremos en esta guía:</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>1. La Rotación (El Giro)</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Es un movimiento en el que todos los puntos de la figura giran alrededor de un punto fijo llamado Centro de Rotación.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Para que una rotación sea exacta, necesitamos tres datos:</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;"><strong>Centro de rotación: </strong>El punto donde se "clava" la figura para girar.</span><br></li>
+<li><span style="font-family: arial, helvetica, sans-serif;"><strong>Ángulo de giro: </strong>Qué tanto gira (por ejemplo, 90° es un cuarto de vuelta).</span><br></li>
+<li><span style="font-family: arial, helvetica, sans-serif;"><strong>Sentido: </strong>Si gira como las manecillas del reloj (horario) o al revés (antihorario).</span></li>
+</ul>
+<div style="font-family: Arial, sans-serif; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; background-color: #fcfcfc; width: 320px; text-align: center;">
+<h4 style="margin-top: 0; color: #333;">La Rotación 🔄</h4>
+<label for="anguloGiro" style="font-size: 14px;">Ángulo de giro: <span id="valorAngulo" style="font-weight: bold;">0°</span></label><br><input type="range" id="anguloGiro" min="0" max="360" value="0" step="15" oninput="actualizarGiro()" style="width: 80%; margin: 10px 0;"> <svg width="280" height="200" viewBox="0 0 280 200" style="background-color: white; border: 1px solid #ddd; background-size: 20px 20px; background-image: linear-gradient(to right, #eee 1px, transparent 1px), linear-gradient(to bottom, #eee 1px, transparent 1px);"> <polygon points="100,60 140,140 60,140" fill="none" stroke="#ccc" stroke-dasharray="4,4"></polygon> <polygon id="figuraGiro" points="100,60 140,140 60,140" fill="#28a745" opacity="0.8"></polygon> <circle cx="140" cy="140" r="4" fill="red"></circle> <text x="148" y="145" font-size="12" fill="red" font-weight="bold">Centro</text> </svg></div>
+<div style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; background-color: #fcfcfc; width: 320px; text-align: center;">
+<h4 style="margin-top: 0; color: #333;">La Reflexión 🪞</h4>
+<button onclick="alternarReflejo()" id="btnReflejo" style="padding: 6px 12px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; margin-bottom: 10px;">Aplicar Reflexión</button> <svg width="280" height="200" viewBox="0 0 280 200" style="background-color: white; border: 1px solid #ddd; background-size: 20px 20px; background-image: linear-gradient(to right, #eee 1px, transparent 1px), linear-gradient(to bottom, #eee 1px, transparent 1px);"> <line x1="140" y1="0" x2="140" y2="200" stroke="red" stroke-width="2" stroke-dasharray="5,5"></line> <text x="145" y="15" font-size="12" fill="red" font-weight="bold">Eje</text> <polygon points="40,80 100,80 100,160 60,160 60,120 40,120" fill="#007bff"></polygon> <polygon id="figuraReflejo" points="40,80 100,80 100,160 60,160 60,120 40,120" fill="#dc3545" opacity="0" style="transition: all 0.8s ease-in-out; transform-origin: 140px 100px;"></polygon> </svg></div>
+</div>
+<p>
+<script>
+    // Control de Rotación
+    function actualizarGiro() {
+        const grados = document.getElementById('anguloGiro').value;
+        document.getElementById('valorAngulo').innerText = grados + "°";
+        // Gira usando el vértice (140, 140) como centro
+        document.getElementById('figuraGiro').setAttribute('transform', `rotate(${grados}, 140, 140)`);
+    }
+
+    // Control de Reflexión
+    let reflejado = false;
+    function alternarReflejo() {
+        const fig = document.getElementById('figuraReflejo');
+        const btn = document.getElementById('btnReflejo');
+        if (!reflejado) {
+            fig.style.opacity = "0.8";
+            fig.style.transform = "scaleX(-1)";
+            btn.innerText = "Quitar Reflexión";
+            btn.style.background = "#6c757d";
+        } else {
+            fig.style.opacity = "0";
+            fig.style.transform = "none";
+            btn.innerText = "Aplicar Reflexión";
+            btn.style.background = "#007bff";
+        }
+        reflejado = !reflejado;
+    }
+</script>
+<br></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>2. La Reflexión (El Espejo)</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Es un movimiento que consiste en "voltear" la figura respecto a una línea recta llamada Eje de Reflexión.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Las características principales son:</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Cada punto de la figura original y su imagen están a la misma distancia del eje de reflexión.</span><br></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">La figura reflejada parece estar invertida (como cuando ves tu mano derecha en el espejo y parece la izquierda).</span></li>
+</ul>
+<p><strong><span style="font-family: arial, helvetica, sans-serif;">Resumen para tu cuaderno (★)</span></strong></p>
+<p><strong><span style="font-family: arial, helvetica, sans-serif;"><img src="content/resources/20260420100917670QSK/tabla_1-2.png" title="tabla 1" width="670" height="299" alt="tabla 1" style="display: block; margin-left: auto; margin-right: auto;"></span></strong></p>
+<hr>
+<p style="text-align: center;"><span style="font-size: 14pt; font-family: 'arial black', sans-serif;"><strong>ACTIVIDADES DE APRENDIZAJE</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>Ruta de trabajo:</strong> Sigue las instrucciones paso a paso. Recuerda que los ejercicios marcados con (★) son tu misión principal y obligatoria de hoy.</span><span style="font-family: arial, helvetica, sans-serif;"></span></p>
+<div style="text-align: center; margin: 20px 0;"><svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ccc; background-color: #fafafa; display: block; margin: 0 auto;"> <defs> <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"> <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e5e5e5" stroke-width="1"></path> </pattern> <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"> <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"></path> </marker> </defs> <rect width="100%" height="100%" fill="url(#grid)"></rect> <text x="30" y="30" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Pareja A</text> <polygon points="40,60 40,140 100,140" fill="#007bff" opacity="0.8" stroke="#0056b3" stroke-width="1.5"></polygon> <polygon points="80,180 80,260 140,260" fill="#28a745" opacity="0.8" stroke="#1e7e34" stroke-width="1.5"></polygon> <line x1="70" y1="100" x2="110" y2="200" stroke="#666" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow)"></line> <text x="230" y="30" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Pareja B</text> <polygon points="260,80 280,80 280,120 300,120 300,140 260,140" fill="#007bff" opacity="0.8" stroke="#0056b3" stroke-width="1.5"></polygon> <polygon points="360,100 360,120 320,120 320,140 300,140 300,100" fill="#28a745" opacity="0.8" stroke="#1e7e34" stroke-width="1.5"></polygon> <circle cx="300" cy="140" r="4" fill="red"></circle> <path d="M 270,140 A 30,30 0 0,1 300,110" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrow)"></path> <text x="430" y="30" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Pareja C</text> <line x1="520" y1="40" x2="520" y2="280" stroke="#ff0000" stroke-width="2" stroke-dasharray="8,4"></line> <polygon points="460,100 500,140 460,200" fill="#007bff" opacity="0.8" stroke="#0056b3" stroke-width="1.5"></polygon> <polygon points="580,100 540,140 580,200" fill="#28a745" opacity="0.8" stroke="#1e7e34" stroke-width="1.5"></polygon> </svg></div>
+<p><span style="font-family: 'arial black', sans-serif;"><strong>Nivel Esencial (★)</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>1. (★) Identificación visual: </strong>Observa la imagen proyectada en el tablero (o en tu guía) donde aparecen tres parejas de figuras (Pareja A, Pareja B y Pareja C). Escribe en tu cuaderno qué tipo de movimiento rígido (Traslación, Rotación o Reflexión) se aplicó en cada caso para pasar de la figura original a la imagen.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>2. (★) Construcción de un reflejo: </strong>Dibuja en tu cuaderno, sobre la cuadrícula, un triángulo rectángulo sencillo. Traza una línea vertical recta a dos cuadritos de distancia de la figura. Esta línea será tu Eje de Reflexión. Ahora, dibuja el reflejo exacto del triángulo al otro lado de la línea. Pista: Cuenta los cuadritos desde cada vértice del triángulo original hasta la línea, y cuenta esa misma cantidad hacia el otro lado.</span></p>
+<p><span style="font-family: 'arial black', sans-serif;"><strong>Nivel Intermedio</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>3. Rotación de 90°: </strong>Dibuja en tu cuadrícula la letra "L" mayúscula (que ocupe 3 cuadritos de alto y 2 de ancho). Marca el vértice inferior izquierdo con un punto rojo (este será el Centro de Rotación). Dibuja cómo quedaría la letra si le aplicas una rotación de 90° en sentido horario (como las manecillas del reloj) apoyándote en ese punto rojo.</span></p>
+<p><strong style="font-family: 'arial black', sans-serif; text-align: center;">Nivel de Profundización&nbsp;</strong></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>4.</strong> Dibuja un cuadrado en tu cuaderno. ¿Es posible aplicar una rotación y una reflexión a ese cuadrado y que el resultado final se vea exactamente igual a la figura original? Explica tu razonamiento por escrito.</span></p>
+<hr>
+<div style="font-family: Arial, sans-serif; max-width: 650px; margin: 20px auto; border: 1px solid #cce5ff; border-radius: 8px; background-color: #f8fbff; padding: 20px;">
+<h3 style="color: #004085; margin-top: 0; text-align: center;">Evaluación Formativa: Movimientos Rígidos</h3>
+<p style="font-size: 14px; color: #555; text-align: center; margin-bottom: 20px;">Selecciona la respuesta correcta para cada pregunta y presiona "Comprobar". ¡Aprende de tus errores!</p>
+<div style="margin-bottom: 30px; background: white; padding: 15px; border-radius: 6px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<p style="font-weight: bold; color: #333; margin-top: 0;">1. Al aplicar un movimiento rígido (como una rotación o una reflexión) a un polígono en el plano cartesiano, es correcto afirmar que:</p>
+<form id="q1Form" style="margin-left: 10px;"><label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q1" value="A"> A. Sus ángulos cambian dependiendo del sentido del giro. </label> <label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q1" value="B"> B. La longitud de sus lados se mantiene exactamente igual. </label> <label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q1" value="C"> C. Su tamaño aumenta si se aleja del eje de reflexión. </label> <label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q1" value="D"> D. La figura resultante ya no es congruente con la original. </label></form><button onclick="checkQ1()" style="background-color: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-weight: bold;">Comprobar Respuesta 1</button>
+<div id="feedbackQ1" style="margin-top: 15px; padding: 10px; border-radius: 4px; display: none; font-size: 14px;"></div>
+</div>
+<div style="margin-bottom: 10px; background: white; padding: 15px; border-radius: 6px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<p style="font-weight: bold; color: #333; margin-top: 0;">2. (Contexto: Educación Vial). Una señal de "Giro a la izquierda" (flecha curva) debe colocarse en el carril contrario indicando "Giro a la derecha". Para diseñar la nueva señal sin cambiar su tamaño, el movimiento matemático exacto que se debe aplicar es:</p>
+<form id="q2Form" style="margin-left: 10px;"><label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q2" value="A"> A. Una traslación hacia la derecha. </label> <label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q2" value="B"> B. Una rotación de 360°. </label> <label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q2" value="C"> C. Una reflexión utilizando un eje vertical. </label> <label style="display: block; margin-bottom: 8px; cursor: pointer;"> <input type="radio" name="q2" value="D"> D. Una reflexión utilizando un eje horizontal. </label></form><button onclick="checkQ2()" style="background-color: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-weight: bold;">Comprobar Respuesta 2</button></div>
+</div>
+<hr>
+<p><span style="font-family: 'arial black', sans-serif;"><strong>REFERENCIAS BIBLIOGRÁFICAS</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Ministerio de Educación Nacional. (2016). Vamos a aprender Matemáticas 6. Bogotá: MEN.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Godino, J. D., Batanero, C., &amp; Font, V. (2003). Fundamentos de la enseñanza y el aprendizaje de las matemáticas. Granada: Universidad de Granada.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Ministerio de Educación Nacional. (2006). Estándares básicos de competencias en matemáticas. Bogotá: MEN.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Ministerio de Educación Nacional. (2016). Derechos básicos de aprendizaje: Matemáticas. Bogotá: MEN.</span></p>
+<p><span style="font-family: 'arial black', sans-serif;"><strong></strong></span><br></p>
+<p>
+<script>
+    function checkQ1() {
+        const options = document.getElementsByName('q1');
+        let selectedValue = null;
+        for (const option of options) { if (option.checked) selectedValue = option.value; }
+        
+        const feedbackDiv = document.getElementById('feedbackQ1');
+        feedbackDiv.style.display = 'block';
+        
+        if (!selectedValue) {
+            feedbackDiv.innerHTML = "⚠️ Por favor, selecciona una opción antes de comprobar.";
+            feedbackDiv.style.backgroundColor = "#fff3cd"; feedbackDiv.style.color = "#856404"; return;
+        }
+
+        switch(selectedValue) {
+            case 'A':
+                feedbackDiv.innerHTML = "❌ <b>Incorrecto.</b> Recuerda que en los movimientos rígidos la forma nunca se deforma, por lo tanto, los ángulos se conservan idénticos.";
+                feedbackDiv.style.backgroundColor = "#f8d7da"; feedbackDiv.style.color = "#721c24"; break;
+            case 'B':
+                feedbackDiv.innerHTML = "✅ <b>¡Correcto!</b> Esta es la clave de la isometría: al trasladar, rotar o reflejar, los lados y los ángulos mantienen su longitud y medida exacta.";
+                feedbackDiv.style.backgroundColor = "#d4edda"; feedbackDiv.style.color = "#155724"; break;
+            case 'C':
+                feedbackDiv.innerHTML = "❌ <b>Incorrecto.</b> Si el tamaño aumenta, estaríamos hablando de una ampliación u homotecia, lo cual no es un movimiento rígido.";
+                feedbackDiv.style.backgroundColor = "#f8d7da"; feedbackDiv.style.color = "#721c24"; break;
+            case 'D':
+                feedbackDiv.innerHTML = "❌ <b>Incorrecto.</b> Las figuras resultantes de un movimiento rígido siempre son congruentes (tienen la misma forma y tamaño) a las originales.";
+                feedbackDiv.style.backgroundColor = "#f8d7da"; feedbackDiv.style.color = "#721c24"; break;
+        }
+    }
+
+    function checkQ2() {
+        const options = document.getElementsByName('q2');
+        let selectedValue = null;
+        for (const option of options) { if (option.checked) selectedValue = option.value; }
+        
+        const feedbackDiv = document.getElementById('feedbackQ2');
+        feedbackDiv.style.display = 'block';
+        
+        if (!selectedValue) {
+            feedbackDiv.innerHTML = "⚠️ Por favor, selecciona una opción antes de comprobar.";
+            feedbackDiv.style.backgroundColor = "#fff3cd"; feedbackDiv.style.color = "#856404"; return;
+        }
+
+        switch(selectedValue) {
+            case 'A':
+                feedbackDiv.innerHTML = "❌ <b>Incorrecto.</b> Si solo la trasladas hacia la derecha, la flecha seguirá apuntando hacia la izquierda. Solo cambió de lugar, no de dirección.";
+                feedbackDiv.style.backgroundColor = "#f8d7da"; feedbackDiv.style.color = "#721c24"; break;
+            case 'B':
+                feedbackDiv.innerHTML = "❌ <b>Incorrecto.</b> Una rotación de 360° es dar una vuelta completa, por lo que la señal quedaría exactamente igual que al principio.";
+                feedbackDiv.style.backgroundColor = "#f8d7da"; feedbackDiv.style.color = "#721c24"; break;
+            case 'C':
+                feedbackDiv.innerHTML = "✅ <b>¡Excelente!</b> Al usar una reflexión con un eje vertical (como un espejo puesto de pie al lado de la señal), la flecha que apuntaba a la izquierda ahora apuntará a la derecha.";
+                feedbackDiv.style.backgroundColor = "#d4edda"; feedbackDiv.style.color = "#155724"; break;
+            case 'D':
+                feedbackDiv.innerHTML = "❌ <b>Incorrecto.</b> Un eje de reflexión horizontal (como un espejo en el suelo) haría que la señal quedara de cabeza, pero seguiría apuntando hacia la misma dirección.";
+                feedbackDiv.style.backgroundColor = "#f8d7da"; feedbackDiv.style.color = "#721c24"; break;
+        }
+    }
+</script>
+</p><p class="clearfix"></p></div>
+            </div></div></div></div>
+</div></article>
+</div></main><div class="nav-buttons"> <span class="nav-button nav-button-left" aria-hidden="true"> <span>Anterior</span></span><span class="nav-button nav-button-right" aria-hidden="true"> <span>Siguiente</span></span>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license">creative commons: attribution - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(nueva ventana)</span></span></a></p>
+</body>
+</html>
