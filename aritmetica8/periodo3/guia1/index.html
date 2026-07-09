@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-index">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v3.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<title>Introducción a la factorización</title>
+<meta name="description" content="Guía de aprendizaje orientada al desarrollo inicial de la factorización en grado octavo, mediante la comprensión de polinomios como productos de factores, el reconocimiento del factor común y la interpretación de expresiones algebraicas equivalentes. El recurso busca fortalecer el uso del lenguaje algebraico, la identificación de estructuras en expresiones polinómicas y la aplicación de procedimientos básicos de factorización en situaciones matemáticas contextualizadas.">
+<script>document.querySelector("html").classList.add("js");</script><script src="libs/jquery/jquery.min.js"> </script><script src="libs/common_i18n.js"> </script><script src="libs/common.js"> </script><script src="libs/exe_export.js"> </script><script src="libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+<script src="idevices/text/text.js"> </script><link rel="stylesheet" href="idevices/text/text.css">
+<link rel="stylesheet" href="content/css/base.css">
+<script src="theme/style.js"> </script><link rel="stylesheet" href="theme/style.css">
+<link rel="icon" type="image/x-icon" href="libs/favicon.ico">
+</head>
+<body class="exe-export exe-web-site" lang="es">
+<script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li class="active"> <a href="index.html" class="active main-node no-ch">Página nueva</a>
+</li>
+</ul></nav><main id="20260630164402SOFXKG" class="page"> <header id="header-20260630164402SOFXKG" class="main-header"> <div class="package-header">
+<h1 class="package-title">Introducción a la factorización</h1>
+<p class="package-subtitle">Reconocimiento de factores y construcción de expresiones algebraicas equivalentes</p>
+</div>
+<div class="page-header"><h2 class="page-title sr-av">Página nueva</h2></div></header><div id="page-content-20260630164402SOFXKG" class="page-content"> <article id="20260630164402NMJLWP" class="box"> <header class="box-head no-icon"> <h1 class="box-title">8°</h1>
+<button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button></header><div class="box-content"> <div id="20260630105657200LAD" class="idevice_node text" data-idevice-path="idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">SITUACIÓN PROBLEMA CENTRAL</h2>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">El mural de la muestra académica</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En el colegio se va a organizar una muestra académica. Para decorar el espacio, un grupo de estudiantes diseña un mural rectangular dividido en dos partes: una parte variable para ubicar trabajos de los estudiantes y una parte fija para escribir el título de la muestra.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">La primera parte tiene un área representada por <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span> y la segunda parte tiene un área de <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span>. Ambas partes tienen la misma altura.</p>
+<div style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center; margin: 18px 0;">
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center; margin-bottom: 8px;"><strong>Representación del mural dividido en dos partes</strong></p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" style="max-width: 760px; width: 100%; height: auto; border: 1px solid #cccccc; background: #ffffff;" role="img" aria-label="Diagrama de un mural rectangular dividido en dos partes con áreas 4x y 12."> <defs> <marker id="flechaInicio1" markerWidth="10" markerHeight="10" refX="3" refY="3" orient="auto"> <path d="M6,0 L0,3 L6,6" fill="none" stroke="#333333" stroke-width="1.5"></path> </marker> <marker id="flechaFin1" markerWidth="10" markerHeight="10" refX="3" refY="3" orient="auto"> <path d="M0,0 L6,3 L0,6" fill="none" stroke="#333333" stroke-width="1.5"></path> </marker> </defs> <text x="380" y="32" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#222222"> Área total del mural </text> <!-- Líneas de dimensión superior --> <line x1="160" y1="64" x2="440" y2="64" stroke="#333333" stroke-width="1.5" marker-start="url(#flechaInicio1)" marker-end="url(#flechaFin1)"></line> <line x1="440" y1="64" x2="580" y2="64" stroke="#333333" stroke-width="1.5" marker-start="url(#flechaInicio1)" marker-end="url(#flechaFin1)"></line> <line x1="160" y1="72" x2="160" y2="88" stroke="#333333" stroke-width="1.2"></line> <line x1="440" y1="72" x2="440" y2="88" stroke="#333333" stroke-width="1.2"></line> <line x1="580" y1="72" x2="580" y2="88" stroke="#333333" stroke-width="1.2"></line> <text x="300" y="55" text-anchor="middle" font-family="Arial" font-size="16" fill="#222222">x</text> <text x="510" y="55" text-anchor="middle" font-family="Arial" font-size="16" fill="#222222">3</text> <!-- Rectángulo principal --> <rect x="160" y="90" width="280" height="150" fill="#d9ecff" stroke="#222222" stroke-width="2"></rect> <rect x="440" y="90" width="140" height="150" fill="#fff1cc" stroke="#222222" stroke-width="2"></rect> <!-- Línea divisoria reforzada --> <line x1="440" y1="90" x2="440" y2="240" stroke="#222222" stroke-width="2"></line> <!-- Etiquetas internas --> <text x="300" y="122" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#222222"> Parte variable </text> <text x="300" y="160" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#222222"> Área = 4x </text> <text x="300" y="198" text-anchor="middle" font-family="Arial" font-size="14" fill="#222222"> ancho x </text> <text x="510" y="122" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#222222"> Parte fija </text> <text x="510" y="160" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#222222"> Área = 12 </text> <text x="510" y="198" text-anchor="middle" font-family="Arial" font-size="14" fill="#222222"> ancho 3 </text> <!-- Altura común --> <line x1="125" y1="90" x2="125" y2="240" stroke="#333333" stroke-width="1.5" marker-start="url(#flechaInicio1)" marker-end="url(#flechaFin1)"></line> <line x1="135" y1="90" x2="158" y2="90" stroke="#333333" stroke-width="1.2"></line> <line x1="135" y1="240" x2="158" y2="240" stroke="#333333" stroke-width="1.2"></line> <text x="75" y="156" text-anchor="middle" font-family="Arial" font-size="15" fill="#222222"> altura </text> <text x="75" y="178" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#222222"> 4 </text> <!-- Ancho total --> <line x1="160" y1="270" x2="580" y2="270" stroke="#333333" stroke-width="1.5" marker-start="url(#flechaInicio1)" marker-end="url(#flechaFin1)"></line> <line x1="160" y1="245" x2="160" y2="278" stroke="#333333" stroke-width="1.2"></line> <line x1="580" y1="245" x2="580" y2="278" stroke="#333333" stroke-width="1.2"></line> <text x="370" y="295" text-anchor="middle" font-family="Arial" font-size="16" fill="#222222"> ancho total: x + 3 </text> <!-- Relación algebraica --> <rect x="130" y="318" width="500" height="58" rx="8" ry="8" fill="#f7f7f7" stroke="#777777" stroke-width="1.5"></rect> <text x="380" y="342" text-anchor="middle" font-family="Arial" font-size="16" fill="#222222"> Área total = área variable + área fija </text> <text x="380" y="366" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#222222"> 4x + 12 = 4(x + 3) </text> </svg>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center; margin-top: 8px;">El mural puede verse como la suma de dos áreas o como un producto que muestra una medida común.</p>
+</div>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">El reto consiste en analizar si el área total del mural puede representarse de más de una forma: como una suma de partes o como una multiplicación que muestre una medida común.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Glosario breve</h3>
+<ul style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li><strong>Producto:</strong> resultado o expresión que se forma mediante una multiplicación.</li>
+<li><strong>Factor:</strong> número o expresión que se multiplica por otro número o expresión.</li>
+<li><strong>Área:</strong> medida de la superficie que ocupa una figura.</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Responde en tu cuaderno durante el desarrollo de la guía. No se trata solo de calcular, sino de observar qué se repite, qué cambia y cómo una misma situación puede escribirse de diferentes maneras.</p>
+<hr>
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">EXPLORACIÓN</h2>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">1. Observo las partes del mural</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Observa la situación del mural y responde en tu cuaderno:</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>¿Qué parte del mural depende de la letra <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span>?</li>
+<li>¿Qué parte del mural tiene una medida fija?</li>
+<li>¿Qué dato parece repetirse en las dos partes del mural?</li>
+<li>Completa la frase: “La expresión <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span> representa el área total porque...”</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">2. Comparo dos formas de escribir una cantidad</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Observa las siguientes expresiones:</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Forma 1</th>
+<th style="border: 1px solid #000; padding: 6px;">Forma 2</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3)</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Sin aplicar todavía una regla formal, responde:</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>¿Qué símbolo aparece en la primera forma: suma, multiplicación o división?</li>
+<li>¿Qué operación indica el número <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> al estar junto al paréntesis en la segunda forma?</li>
+<li>¿Qué número se observa en las dos formas de escritura?</li>
+<li>¿Crees que las dos formas pueden representar la misma área del mural? Responde sí o no y escribe una razón breve.</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">3. Busco una parte común</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Observa cada pareja de términos. Encierra o escribe en tu cuaderno la parte que se repite.</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Pareja de términos</th>
+<th style="border: 1px solid #000; padding: 6px;">Parte que se repite</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span> y <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span></td>
+<td style="border: 1px solid #000; padding: 6px;">Completa en tu cuaderno.</td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">3x</span> y <span style="font-family: Arial, sans-serif; font-size: 12pt;">9</span></td>
+<td style="border: 1px solid #000; padding: 6px;">Completa en tu cuaderno.</td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">5x</span> y <span style="font-family: Arial, sans-serif; font-size: 12pt;">15</span></td>
+<td style="border: 1px solid #000; padding: 6px;">Completa en tu cuaderno.</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Cierre breve de exploración: completa la frase en tu cuaderno.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">“Cuando dos términos tienen una parte común, puedo intentar escribirlos de una forma más...”</p>
+<hr>
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">ANALIZA</h2>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">1. Reviso una descomposición incompleta</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Un estudiante intenta representar la expresión <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span> de otra manera y escribe lo siguiente:</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Expresión inicial</th>
+<th style="border: 1px solid #000; padding: 6px;">Intento de escritura</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(____ + ____)</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Responde en tu cuaderno:</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>Si el número que queda por fuera es <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span>, ¿qué debe acompañar a ese <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> para formar <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span>?</li>
+<li>¿Qué número debe acompañar a <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> para formar <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span>?</li>
+<li>Completa el intento del estudiante.</li>
+<li>Compara la expresión inicial y la expresión completada. ¿Qué cambia en la forma de escribirla?</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">2. Comparo expresiones que parecen parecidas</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Observa estas tres expresiones:</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Expresión A</th>
+<th style="border: 1px solid #000; padding: 6px;">Expresión B</th>
+<th style="border: 1px solid #000; padding: 6px;">Expresión C</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">3x + 9</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">5x + 15</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 7</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Responde:</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>En la expresión A, ¿qué número se puede relacionar con los dos términos?</li>
+<li>En la expresión B, ¿qué número se puede relacionar con los dos términos?</li>
+<li>En la expresión C, ¿se observa una parte numérica común entre <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x</span> y <span style="font-family: Arial, sans-serif; font-size: 12pt;">7</span>? Responde sí o no.</li>
+<li>Completa: “No todas las expresiones se pueden reorganizar de la misma manera porque...”</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">3. Detecto un posible error</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Un estudiante afirma:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; margin-left: 30px;">“Como <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 7</span> tiene dos términos, puedo escribirla como <span style="font-family: Arial, sans-serif; font-size: 12pt;">2(x + 7)</span>.”</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Analiza la afirmación sin usar todavía una regla formal. Para responder, desarrolla estos pasos en tu cuaderno:</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>Multiplica mentalmente <span style="font-family: Arial, sans-serif; font-size: 12pt;">2</span> por <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span>.</li>
+<li>Multiplica mentalmente <span style="font-family: Arial, sans-serif; font-size: 12pt;">2</span> por <span style="font-family: Arial, sans-serif; font-size: 12pt;">7</span>.</li>
+<li>¿El resultado coincide con <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 7</span>? Responde sí o no.</li>
+<li>Completa la frase: “El posible error está en que...”</li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Cierre puente hacia el nuevo concepto: escribe una frase corta usando las palabras <strong>expresión</strong>, <strong>producto</strong> y <strong>parte común</strong>.</p>
+<hr>
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">CONOCE ALGO NUEVO</h2>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">1. ¿Qué significa factorizar?</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En la sección anterior observaste que una misma expresión puede escribirse de más de una forma. Por ejemplo:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">también puede escribirse como:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3)</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Las dos expresiones representan la misma cantidad, pero están escritas de forma diferente.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Factorizar</strong> una expresión algebraica significa escribirla como una multiplicación de factores.</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Forma desarrollada</th>
+<th style="border: 1px solid #000; padding: 6px;">Forma factorizada</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3)</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En la forma desarrollada aparece una suma de términos. En la forma factorizada aparece una multiplicación entre factores.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Completa en tu cuaderno:</strong></p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>Factorizar significa escribir una expresión como una __________________ de factores.</li>
+<li>En <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3)</span>, los factores son <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> y __________________.</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">2. La propiedad distributiva y la factorización</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Para comprender la factorización, primero recordemos la propiedad distributiva. Esta propiedad permite multiplicar un factor por cada término que está dentro de un paréntesis.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">a(b + c) = a · b + a · c</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Ejemplo:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3) = 4 · x + 4 · 3 = 4x + 12</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">La factorización realiza el proceso contrario: parte de una suma o resta de términos y busca escribirla como una multiplicación.</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Proceso</th>
+<th style="border: 1px solid #000; padding: 6px;">Ejemplo</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px;">Desarrollar</td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3) = 4x + 12</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px;">Factorizar</td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12 = 4(x + 3)</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Verifica en tu cuaderno:</strong> multiplica <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> por cada término del paréntesis en <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3)</span> y comprueba que se obtiene <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span>.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">3. Factor común</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Uno de los primeros casos de factorización es el <strong>factor común</strong>.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">El factor común es un número, una letra o una expresión que está contenido como factor en todos los términos de una expresión algebraica.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Cuando sea posible, se elige el mayor factor común para que la factorización quede completa.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Observa:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">El término <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span> puede escribirse como:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x = 4 · x</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">El término <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span> puede escribirse como:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">12 = 4 · 3</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Como el número <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> está contenido como factor en los dos términos, entonces <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> es factor común.</p>
+<div style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center; margin: 18px 0;">
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center; margin-bottom: 8px;"><strong>Identificación del factor común en 4x + 12</strong></p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" style="max-width: 760px; width: 100%; height: auto; border: 1px solid #cccccc; background: #ffffff;" role="img" aria-label="Diagrama que muestra que 4 es factor común en 4x y 12."> <defs> <marker id="flechaFin2b" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"> <path d="M0,0 L6,3 L0,6" fill="none" stroke="#333333" stroke-width="1.5"></path> </marker> </defs> <!-- Título interno --> <text x="380" y="34" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#222222"> ¿Qué tienen en común los términos 4x y 12? </text> <!-- Expresión inicial --> <rect x="235" y="55" width="290" height="56" rx="8" ry="8" fill="#f7f7f7" stroke="#777777" stroke-width="1.5"></rect> <text x="380" y="91" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#222222"> 4x + 12 </text> <!-- Caja izquierda --> <rect x="70" y="145" width="280" height="95" rx="8" ry="8" fill="#d9ecff" stroke="#444444" stroke-width="1.5"></rect> <text x="210" y="178" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#222222"> Primer término </text> <text x="210" y="214" text-anchor="middle" font-family="Arial" font-size="24" fill="#222222"> 4x = 4 · x </text> <!-- Caja derecha --> <rect x="410" y="145" width="280" height="95" rx="8" ry="8" fill="#fff1cc" stroke="#444444" stroke-width="1.5"></rect> <text x="550" y="178" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#222222"> Segundo término </text> <text x="550" y="214" text-anchor="middle" font-family="Arial" font-size="24" fill="#222222"> 12 = 4 · 3 </text> <!-- Textos de apoyo --> <text x="210" y="272" text-anchor="middle" font-family="Arial" font-size="14" fill="#222222"> El 4 multiplica a x </text> <text x="550" y="272" text-anchor="middle" font-family="Arial" font-size="14" fill="#222222"> El 4 multiplica a 3 </text> <!-- Flechas --> <line x1="210" y1="278" x2="325" y2="340" stroke="#333333" stroke-width="1.8" marker-end="url(#flechaFin2b)"></line> <line x1="550" y1="278" x2="435" y2="340" stroke="#333333" stroke-width="1.8" marker-end="url(#flechaFin2b)"></line> <!-- Factor común --> <circle cx="380" cy="368" r="62" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"></circle> <text x="380" y="353" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#222222"> Factor común </text> <text x="380" y="402" text-anchor="middle" font-family="Arial" font-size="34" font-weight="bold" fill="#2e7d32"> 4 </text> <!-- Conclusión --> <rect x="125" y="438" width="510" height="24" rx="8" ry="8" fill="#f7f7f7" stroke="#777777" stroke-width="1.2"></rect> <text x="380" y="455" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#222222"> 4x + 12 = 4(x + 3) </text> </svg>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center; margin-top: 8px;">Como el 4 está contenido como factor en los dos términos, puede escribirse por fuera del paréntesis.</p>
+</div>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Completa en tu cuaderno:</strong></p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>En <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span>, el número <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> está multiplicando a __________________.</li>
+<li>En <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span>, el número <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> está multiplicando a __________________.</li>
+<li>Por eso, el factor común entre <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span> y <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span> es __________________.</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">4. Procedimiento para factorizar por factor común</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Para factorizar una expresión por factor común, puedes seguir estos pasos:</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>Observa o descompón cada término para encontrar el factor común.</li>
+<li>Elige, cuando sea posible, el mayor factor común.</li>
+<li>Escribe ese factor por fuera de un paréntesis.</li>
+<li>Divide cada término de la expresión inicial entre el factor común.</li>
+<li>Escribe dentro del paréntesis los resultados obtenidos.</li>
+<li>Verifica multiplicando nuevamente el factor común por cada término del paréntesis.</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Ejemplo 1: factor común numérico</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Factoriza la expresión:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 18</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 1.</strong> Identificamos un factor común entre <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x</span> y <span style="font-family: Arial, sans-serif; font-size: 12pt;">18</span>.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x = 6 · x</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">18 = 6 · 3</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">El mayor factor común es <span style="font-family: Arial, sans-serif; font-size: 12pt;">6</span>.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 2.</strong> Escribimos el factor común por fuera del paréntesis:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6(____ + ____)</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 3.</strong> Dividimos cada término entre el factor común:</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Término</th>
+<th style="border: 1px solid #000; padding: 6px;">División entre el factor común</th>
+<th style="border: 1px solid #000; padding: 6px;">Resultado</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x ÷ 6</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">18</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">18 ÷ 6</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">3</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 4.</strong> Escribimos la expresión factorizada:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 18 = 6(x + 3)</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 5.</strong> Verificamos:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6(x + 3) = 6x + 18</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Como al multiplicar se recupera la expresión inicial, la factorización es correcta.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Ahora inténtalo en tu cuaderno:</strong> completa la factorización de <span style="font-family: Arial, sans-serif; font-size: 12pt;">3x + 12</span>.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">3x + 12 = 3(____ + ____)</span></p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Ejemplo 2: factor común con número y letra</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En algunas expresiones, el factor común puede tener número y letra.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Factoriza:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> + 12x</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 1.</strong> Observamos cada término:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> = 4x · 2x</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">12x = 4x · 3</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">El mayor factor común es <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span>, porque está contenido como factor en los dos términos.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 2.</strong> Escribimos el factor común por fuera del paréntesis:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x(____ + ____)</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 3.</strong> Dividimos cada término entre el factor común:</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Término</th>
+<th style="border: 1px solid #000; padding: 6px;">División entre el factor común</th>
+<th style="border: 1px solid #000; padding: 6px;">Resultado</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup></span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> ÷ 4x</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">2x</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">12x</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">12x ÷ 4x</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">3</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 4.</strong> Escribimos la expresión factorizada:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> + 12x = 4x(2x + 3)</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Paso 5.</strong> Verificamos multiplicando:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x(2x + 3) = 8x<sup>2</sup> + 12x</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Por lo tanto, la factorización es correcta.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Mini-ejercicio de verificación:</strong> completa en tu cuaderno.</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li>En <span style="font-family: Arial, sans-serif; font-size: 12pt;">10x<sup>2</sup> + 15x</span>, el mayor factor común es __________________.</li>
+<li>Si se saca como factor común <span style="font-family: Arial, sans-serif; font-size: 12pt;">5x</span>, la expresión queda: <span style="font-family: Arial, sans-serif; font-size: 12pt;">5x(____ + ____)</span>.</li>
+</ol>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">5. ¿Cómo saber si la factorización está bien hecha?</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Una forma sencilla de comprobar una factorización es volver a multiplicar. Si al desarrollar la expresión factorizada se obtiene la expresión inicial, entonces la factorización es correcta.</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Expresión inicial</th>
+<th style="border: 1px solid #000; padding: 6px;">Factorización</th>
+<th style="border: 1px solid #000; padding: 6px;">Verificación</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">5x + 20</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">5(x + 4)</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">5(x + 4) = 5x + 20</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">La verificación evita errores como sacar un número que no multiplica correctamente todos los términos.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">6. Error común que debes evitar</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Un error frecuente es sacar un supuesto factor común sin comprobar si realmente multiplica a todos los términos.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Por ejemplo:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 7 ≠ 2(x + 7)</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">¿Por qué no son iguales?</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">2(x + 7) = 2x + 14</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">El resultado es <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 14</span>, no <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 7</span>. Por eso, la escritura <span style="font-family: Arial, sans-serif; font-size: 12pt;">2(x + 7)</span> no corresponde a la expresión inicial <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 7</span>.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Completa en tu cuaderno:</strong></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">“Antes de aceptar una factorización, debo verificar que al __________________ se obtenga la expresión inicial.”</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">7. Conexión con la situación del mural</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En el mural de la muestra académica, el área total se representó inicialmente como:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Al identificar el factor común <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span>, se puede escribir:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12 = 4(x + 3)</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Esto muestra que el área total puede interpretarse como una suma de dos partes o como el producto de una medida común por una expresión que representa la otra dimensión del mural.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Conclusión breve:</strong> factorizar permite reorganizar una expresión algebraica para mostrar los factores que la forman.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Escribe en tu cuaderno una frase usando estas tres palabras:</strong> factor común, producto y expresión.</p>
+<hr>
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">ACTIVIDADES DE APRENDIZAJE</h2>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En estas actividades vas a practicar la factorización por factor común. Debes escribir los procedimientos en tu cuaderno, verificar tus respuestas y explicar algunas decisiones con frases breves.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Recuerda: factorizar no significa hallar el valor de la letra. Factorizar significa escribir una expresión algebraica como un producto de factores.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Actividad 1. Reconozco el factor común</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>★ Nivel esencial.</strong> Empieza observando cada pareja de términos. Primero completa la descomposición de cada término y luego escribe en la última columna el factor común correspondiente.</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Expresión</th>
+<th style="border: 1px solid #000; padding: 6px;">Descomposición del primer término</th>
+<th style="border: 1px solid #000; padding: 6px;">Descomposición del segundo término</th>
+<th style="border: 1px solid #000; padding: 6px;">Factor común</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x = 4 · x</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">12 = 4 · 3</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">__________</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">3x + 9</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">3x = 3 · ____</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">9 = 3 · ____</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">__________</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">5x + 15</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">5x = 5 · ____</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">15 = 5 · ____</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">__________</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">6a + 18</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6a = 6 · ____</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">18 = 6 · ____</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">__________</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Al terminar, escribe una frase en tu cuaderno usando esta estructura: “El factor común es ____ porque está contenido como factor en todos los términos”.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Actividad 2. Factorizo expresiones con factor común numérico</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>★ Nivel esencial.</strong> Primero identifica el factor común indicado. Luego completa el paréntesis. Recuerda que debes dividir cada término de la expresión inicial entre el factor común.</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 8 = 2(____ + ____)</span></li>
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">5x + 15 = 5(____ + ____)</span></li>
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">7x - 21 = 7(____ - ____)</span></li>
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">6a + 12 = 6(____ + ____)</span></li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Verifica dos respuestas:</strong> escoge dos ejercicios anteriores y multiplica el factor común por cada término del paréntesis. Debes recuperar la expresión inicial.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel intermedio.</strong> Factoriza completamente cada expresión. Primero encuentra el mayor factor común.</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;" start="5">
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">9x + 27</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">12m - 18</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">8a + 20</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">15y - 10</span></li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En los ejercicios 5 al 8, escribe debajo de cada respuesta una verificación corta.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel de profundización.</strong> Construye dos expresiones algebraicas que tengan factor común numérico. Luego factorízalas y verifica cada una.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Actividad 3. Factorizo expresiones con número y letra en común</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>★ Nivel esencial.</strong> Observa el factor común que aparece por fuera del paréntesis y completa lo que falta. Para hacerlo, divide cada término de la expresión inicial entre el factor común.</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">3x<sup>2</sup> + 6x = 3x(____ + ____)</span></li>
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">5a<sup>2</sup> - 10a = 5a(____ - ____)</span></li>
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">4m<sup>2</sup> + 12m = 4m(____ + ____)</span></li>
+<li><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">2y<sup>2</sup> - 8y = 2y(____ - ____)</span></li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Recuerda:</strong> si una letra aparece en todos los términos, también puede hacer parte del factor común.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel intermedio.</strong> Factoriza completamente. Luego verifica multiplicando.</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;" start="5">
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x<sup>2</sup> + 9x</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">10a<sup>3</sup> - 15a<sup>2</sup></span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">8m<sup>2</sup> + 16m</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">14y<sup>2</sup> - 21y</span></li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel de profundización.</strong> Explica en dos líneas por qué en <span style="font-family: Arial, sans-serif; font-size: 12pt;">10a<sup>3</sup> - 15a<sup>2</sup></span> el mayor factor común incluye una potencia de <span style="font-family: Arial, sans-serif; font-size: 12pt;">a</span>.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Práctica guiada en el cuaderno</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Resuelve primero en tu cuaderno. Después, algunos ejercicios podrán revisarse en el tablero. En cada caso, escribe la expresión factorizada y verifica si al multiplicar se recupera la expresión inicial.</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 16</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 30</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">8a - 24</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">10m + 25</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">3x<sup>2</sup> + 12x</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">5a<sup>2</sup> - 20a</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">7y<sup>2</sup> + 14y</span></li>
+<li><span style="font-family: Arial, sans-serif; font-size: 12pt;">9m<sup>2</sup> - 27m</span></li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Cuando pases al tablero o revises un ejercicio, no digas solamente el resultado. Explica cuál fue el factor común y cómo verificaste la respuesta.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Actividad 4. Verifico y corrijo errores</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>★ Nivel esencial.</strong> Observa cada factorización. En la tercera columna escribe si es correcta o incorrecta. En la última columna desarrolla la expresión factorizada para verificar tu respuesta.</p>
+<table style="font-family: Arial, sans-serif; font-size: 12pt; border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="border: 1px solid #000; padding: 6px;">Expresión inicial</th>
+<th style="border: 1px solid #000; padding: 6px;">Factorización propuesta</th>
+<th style="border: 1px solid #000; padding: 6px;">¿Correcta o incorrecta?</th>
+<th style="border: 1px solid #000; padding: 6px;">Verificación</th>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x + 20</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(2x + 5)</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">________________</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">______________________________</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 12</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6(x + 12)</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">________________</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">______________________________</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">10x<sup>2</sup> + 15x</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">5x(2x + 3)</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">________________</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">______________________________</span></td>
+</tr>
+<tr>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><strong>★</strong> <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 9</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 9)</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">________________</span></td>
+<td style="border: 1px solid #000; padding: 6px; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">______________________________</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel intermedio.</strong> Corrige las factorizaciones incorrectas si es posible. Si la expresión no tiene factor común distinto de <span style="font-family: Arial, sans-serif; font-size: 12pt;">1</span>, escribe: “No tiene factor común distinto de 1”.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel de profundización.</strong> Escribe un error frecuente que se puede cometer al factorizar por factor común y construye un ejemplo que lo muestre.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Actividad 5. Retomo la situación del mural</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En el mural de la muestra académica, el área total estaba representada por la expresión:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>★ Nivel esencial.</strong> Desarrolla estos pasos en tu cuaderno:</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li><strong>★</strong> Escribe el factor común de <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span> y <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span>.</li>
+<li><strong>★</strong> Completa: <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12 = 4(____ + ____)</span>.</li>
+<li><strong>★</strong> Verifica la factorización multiplicando.</li>
+<li><strong>★</strong> Explica en una frase qué representa el número <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> en la forma factorizada.</li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel intermedio.</strong> Supón que otro mural tiene área total representada por:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 18</span></p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Factoriza la expresión y explica qué podría representar el factor común en el diseño del mural.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;"><strong>Nivel de profundización.</strong> Diseña una expresión algebraica que pueda representar el área de un mural dividido en dos partes y que tenga factor común. Después, factorízala y explica tu diseño.</p>
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Actividad 6. Explico con mis palabras</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Responde en tu cuaderno con frases cortas y claras.</p>
+<ol style="font-family: Arial, sans-serif; font-size: 12pt;">
+<li><strong>★</strong> ¿Qué significa factorizar una expresión algebraica?</li>
+<li><strong>★</strong> ¿Por qué es importante verificar una factorización?</li>
+<li><strong>★</strong> Completa: “Para factorizar por factor común, primero debo...”</li>
+<li>Explica por qué <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x + 7</span> no se puede escribir como <span style="font-family: Arial, sans-serif; font-size: 12pt;">2(x + 7)</span>.</li>
+<li>Escribe una recomendación para un compañero que se equivoca al completar el paréntesis después de sacar el factor común.</li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Al finalizar, revisa que en tu cuaderno aparezcan procedimientos, verificaciones y al menos dos explicaciones escritas.</p>
+<hr>
+<style>
+  .evaluacion-interactiva {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+  }
+
+  .pregunta-interactiva {
+    border: 1px solid #999;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+  }
+
+  .opcion {
+    display: block;
+    border: 1px solid #bbb;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+  }
+
+  .opcion input {
+    margin-right: 8px;
+  }
+
+  .opcion-correcta {
+    border: 2px solid #2e7d32;
+    background-color: #f1f8f4;
+  }
+
+  .opcion-incorrecta {
+    border: 2px solid #c62828;
+    background-color: #fff5f5;
+  }
+
+  .retroalimentacion {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+  }
+
+  .retro-correcta {
+    border-left: 5px solid #2e7d32;
+    background-color: #f1f8f4;
+  }
+
+  .retro-incorrecta {
+    border-left: 5px solid #c62828;
+    background-color: #fff5f5;
+  }
+
+  .resumen-evaluacion {
+    border: 1px solid #666;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+  }
+</style>
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">
+<script>
+  function responderPregunta(numeroPregunta, opcionSeleccionada) {
+    var pregunta = document.getElementById("pregunta" + numeroPregunta);
+
+    if (pregunta.getAttribute("data-respondida") === "true") {
+      return;
+    }
+
+    var respuestaCorrecta = pregunta.getAttribute("data-correcta");
+    var opciones = pregunta.getElementsByTagName("input");
+    var etiquetas = pregunta.getElementsByTagName("label");
+
+    for (var i = 0; i < opciones.length; i++) {
+      if (opciones[i].value === opcionSeleccionada) {
+        opciones[i].checked = true;
+      }
+      opciones[i].disabled = true;
+    }
+
+    for (var j = 0; j < etiquetas.length; j++) {
+      etiquetas[j].style.cursor = "not-allowed";
+      if (etiquetas[j].getAttribute("data-opcion") === opcionSeleccionada) {
+        if (opcionSeleccionada === respuestaCorrecta) {
+          etiquetas[j].className += " opcion-correcta";
+        } else {
+          etiquetas[j].className += " opcion-incorrecta";
+        }
+      }
+    }
+
+    var retroalimentacion = document.getElementById("retro" + numeroPregunta + opcionSeleccionada);
+    if (retroalimentacion) {
+      retroalimentacion.style.display = "block";
+    }
+
+    pregunta.setAttribute("data-respondida", "true");
+    actualizarResumenEvaluacion();
+  }
+
+  function actualizarResumenEvaluacion() {
+    var preguntas = document.getElementsByClassName("pregunta-interactiva");
+    var respondidas = 0;
+    var correctas = 0;
+
+    for (var i = 0; i < preguntas.length; i++) {
+      if (preguntas[i].getAttribute("data-respondida") === "true") {
+        respondidas++;
+
+        var respuestaCorrecta = preguntas[i].getAttribute("data-correcta");
+        var opciones = preguntas[i].getElementsByTagName("input");
+
+        for (var j = 0; j < opciones.length; j++) {
+          if (opciones[j].checked && opciones[j].value === respuestaCorrecta) {
+            correctas++;
+          }
+        }
+      }
+    }
+
+    var resumen = document.getElementById("resumenEvaluacion");
+    if (resumen) {
+      resumen.innerHTML = "<strong>Seguimiento formativo:</strong> Preguntas respondidas: " + respondidas + " de " + preguntas.length + ". Respuestas correctas: " + correctas + ".";
+    }
+  }
+</script>
+</h2>
+<div class="evaluacion-interactiva">
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO</h2>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Lee cada pregunta y selecciona una sola opción. Al hacer clic sobre una respuesta, aparecerá la retroalimentación correspondiente y la pregunta quedará bloqueada para evitar nuevos cambios.</p>
+<div id="resumenEvaluacion" class="resumen-evaluacion"><strong>Seguimiento formativo:</strong> Preguntas respondidas: 0 de 6. Respuestas correctas: 0.</div>
+<div id="pregunta1" class="pregunta-interactiva" data-correcta="B" data-respondida="false">
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Pregunta 1. Concepto de factorización</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">¿Qué significa factorizar una expresión algebraica?</p>
+<label class="opcion" data-opcion="A" onclick="responderPregunta(1,'A')"> <input type="radio" name="pregunta1" value="A"> A. Sumar todos los términos de una expresión. </label> <label class="opcion" data-opcion="B" onclick="responderPregunta(1,'B')"> <input type="radio" name="pregunta1" value="B"> B. Escribir una expresión como un producto de factores. </label> <label class="opcion" data-opcion="C" onclick="responderPregunta(1,'C')"> <input type="radio" name="pregunta1" value="C"> C. Encontrar el valor numérico de la letra. </label> <label class="opcion" data-opcion="D" onclick="responderPregunta(1,'D')"> <input type="radio" name="pregunta1" value="D"> D. Ordenar los términos de mayor a menor exponente. </label>
+<div id="retro1A" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Confundiste factorizar con sumar términos. Factorizar consiste en escribir una expresión como producto de factores. Compara, por ejemplo, la forma desarrollada <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span> con la forma factorizada <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3)</span>.</div>
+<div id="retro1B" class="retroalimentacion retro-correcta"><strong>Respuesta correcta.</strong> Factorizar una expresión algebraica significa escribirla como una multiplicación de factores.</div>
+<div id="retro1C" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Confundiste factorizar con resolver una ecuación. En esta guía no buscamos el valor de la letra, sino una forma equivalente de la expresión.</div>
+<div id="retro1D" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Ordenar términos puede ayudar a observar una expresión, pero no es factorizar. La factorización debe quedar escrita como multiplicación.</div>
+</div>
+<div id="pregunta2" class="pregunta-interactiva" data-correcta="A" data-respondida="false">
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Pregunta 2. Factor común numérico</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">¿Cuál es la factorización correcta de la expresión <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 18</span>?</p>
+<label class="opcion" data-opcion="A" onclick="responderPregunta(2,'A')"> <input type="radio" name="pregunta2" value="A"> A. <span style="font-family: Arial, sans-serif; font-size: 12pt;">6(x + 3)</span> </label> <label class="opcion" data-opcion="B" onclick="responderPregunta(2,'B')"> <input type="radio" name="pregunta2" value="B"> B. <span style="font-family: Arial, sans-serif; font-size: 12pt;">6(x + 18)</span> </label> <label class="opcion" data-opcion="C" onclick="responderPregunta(2,'C')"> <input type="radio" name="pregunta2" value="C"> C. <span style="font-family: Arial, sans-serif; font-size: 12pt;">3(6x + 18)</span> </label> <label class="opcion" data-opcion="D" onclick="responderPregunta(2,'D')"> <input type="radio" name="pregunta2" value="D"> D. <span style="font-family: Arial, sans-serif; font-size: 12pt;">x(6 + 18)</span> </label>
+<div id="retro2A" class="retroalimentacion retro-correcta"><strong>Respuesta correcta.</strong> El factor común es <span style="font-family: Arial, sans-serif; font-size: 12pt;">6</span>. Al dividir <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x ÷ 6</span> queda <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span>, y al dividir <span style="font-family: Arial, sans-serif; font-size: 12pt;">18 ÷ 6</span> queda <span style="font-family: Arial, sans-serif; font-size: 12pt;">3</span>.</div>
+<div id="retro2B" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Dejaste el <span style="font-family: Arial, sans-serif; font-size: 12pt;">18</span> completo dentro del paréntesis. Recuerda que debes dividir cada término entre el factor común. Como <span style="font-family: Arial, sans-serif; font-size: 12pt;">18 ÷ 6 = 3</span>, la respuesta correcta es <span style="font-family: Arial, sans-serif; font-size: 12pt;">6(x + 3)</span>.</div>
+<div id="retro2C" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Aunque escribiste un producto, no dividiste correctamente los términos internos. Si desarrollas <span style="font-family: Arial, sans-serif; font-size: 12pt;">3(6x + 18)</span>, no recuperas la expresión inicial.</div>
+<div id="retro2D" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> La letra <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span> no aparece en el término <span style="font-family: Arial, sans-serif; font-size: 12pt;">18</span>, por eso no puede ser factor común de toda la expresión.</div>
+</div>
+<div id="pregunta3" class="pregunta-interactiva" data-correcta="A" data-respondida="false">
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Pregunta 3. Factor común con número y letra</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">¿Cuál es la factorización completa de <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> + 12x</span> usando el mayor factor común?</p>
+<label class="opcion" data-opcion="A" onclick="responderPregunta(3,'A')"> <input type="radio" name="pregunta3" value="A"> A. <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x(2x + 3)</span> </label> <label class="opcion" data-opcion="B" onclick="responderPregunta(3,'B')"> <input type="radio" name="pregunta3" value="B"> B. <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(2x<sup>2</sup> + 3)</span> </label> <label class="opcion" data-opcion="C" onclick="responderPregunta(3,'C')"> <input type="radio" name="pregunta3" value="C"> C. <span style="font-family: Arial, sans-serif; font-size: 12pt;">x(8x + 12x)</span> </label> <label class="opcion" data-opcion="D" onclick="responderPregunta(3,'D')"> <input type="radio" name="pregunta3" value="D"> D. <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x(x + 12)</span> </label>
+<div id="retro3A" class="retroalimentacion retro-correcta"><strong>Respuesta correcta.</strong> El mayor factor común es <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span>. Al dividir <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> ÷ 4x</span> queda <span style="font-family: Arial, sans-serif; font-size: 12pt;">2x</span>, y al dividir <span style="font-family: Arial, sans-serif; font-size: 12pt;">12x ÷ 4x</span> queda <span style="font-family: Arial, sans-serif; font-size: 12pt;">3</span>.</div>
+<div id="retro3B" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Si desarrollas <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(2x<sup>2</sup> + 3)</span>, obtienes <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> + 12</span>, no <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> + 12x</span>. Además, la letra <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span> también hace parte del factor común.</div>
+<div id="retro3C" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Sacaste <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span>, pero no dividiste correctamente todos los términos. Recuerda que <span style="font-family: Arial, sans-serif; font-size: 12pt;">12x ÷ x = 12</span>, no <span style="font-family: Arial, sans-serif; font-size: 12pt;">12x</span>.</div>
+<div id="retro3D" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Si desarrollas <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x(x + 12)</span>, obtienes <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> + 96x</span>, no <span style="font-family: Arial, sans-serif; font-size: 12pt;">8x<sup>2</sup> + 12x</span>.</div>
+</div>
+<div id="pregunta4" class="pregunta-interactiva" data-correcta="B" data-respondida="false">
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Pregunta 4. Verificación de una factorización</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Un estudiante afirma que <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 12 = 6(x + 12)</span>. ¿Qué se puede decir de esa afirmación?</p>
+<label class="opcion" data-opcion="A" onclick="responderPregunta(4,'A')"> <input type="radio" name="pregunta4" value="A"> A. Es correcta porque el <span style="font-family: Arial, sans-serif; font-size: 12pt;">6</span> aparece en la expresión inicial. </label> <label class="opcion" data-opcion="B" onclick="responderPregunta(4,'B')"> <input type="radio" name="pregunta4" value="B"> B. Es incorrecta porque al desarrollar se obtiene <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 72</span>. </label> <label class="opcion" data-opcion="C" onclick="responderPregunta(4,'C')"> <input type="radio" name="pregunta4" value="C"> C. Es correcta porque tiene paréntesis. </label> <label class="opcion" data-opcion="D" onclick="responderPregunta(4,'D')"> <input type="radio" name="pregunta4" value="D"> D. Es incorrecta porque ninguna expresión con suma se puede factorizar. </label>
+<div id="retro4A" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> No basta con ver el número <span style="font-family: Arial, sans-serif; font-size: 12pt;">6</span>. También debes dividir cada término entre el factor común. En este caso, <span style="font-family: Arial, sans-serif; font-size: 12pt;">12 ÷ 6 = 2</span>, no <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span>.</div>
+<div id="retro4B" class="retroalimentacion retro-correcta"><strong>Respuesta correcta.</strong> Al desarrollar <span style="font-family: Arial, sans-serif; font-size: 12pt;">6(x + 12)</span>, se obtiene <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 72</span>, por eso no corresponde a <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 12</span>. La corrección sería <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 12 = 6(x + 2)</span>.</div>
+<div id="retro4C" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Tener paréntesis no garantiza que la factorización sea correcta. Siempre debes comprobar multiplicando.</div>
+<div id="retro4D" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Muchas expresiones con suma sí se pueden factorizar. Por ejemplo: <span style="font-family: Arial, sans-serif; font-size: 12pt;">6x + 12 = 6(x + 2)</span>.</div>
+</div>
+<div id="pregunta5" class="pregunta-interactiva" data-correcta="A" data-respondida="false">
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Pregunta 5. Situación del mural</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">En la situación del mural, el área total se representó como <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span>. ¿Cuál forma factorizada representa correctamente esa área?</p>
+<label class="opcion" data-opcion="A" onclick="responderPregunta(5,'A')"> <input type="radio" name="pregunta5" value="A"> A. <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 3)</span> </label> <label class="opcion" data-opcion="B" onclick="responderPregunta(5,'B')"> <input type="radio" name="pregunta5" value="B"> B. <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 12)</span> </label> <label class="opcion" data-opcion="C" onclick="responderPregunta(5,'C')"> <input type="radio" name="pregunta5" value="C"> C. <span style="font-family: Arial, sans-serif; font-size: 12pt;">x(4 + 12)</span> </label> <label class="opcion" data-opcion="D" onclick="responderPregunta(5,'D')"> <input type="radio" name="pregunta5" value="D"> D. <span style="font-family: Arial, sans-serif; font-size: 12pt;">12(4x + 1)</span> </label>
+<div id="retro5A" class="retroalimentacion retro-correcta"><strong>Respuesta correcta.</strong> El factor común es <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span>. Al dividir <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span> entre <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> queda <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span>, y al dividir <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span> entre <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> queda <span style="font-family: Arial, sans-serif; font-size: 12pt;">3</span>.</div>
+<div id="retro5B" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Dejaste el <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span> dentro del paréntesis sin dividirlo entre <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span>. Recuerda que <span style="font-family: Arial, sans-serif; font-size: 12pt;">12 ÷ 4 = 3</span>.</div>
+<div id="retro5C" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> La letra <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span> no aparece en el término <span style="font-family: Arial, sans-serif; font-size: 12pt;">12</span>, por eso no puede ser factor común de toda la expresión.</div>
+<div id="retro5D" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Si desarrollas <span style="font-family: Arial, sans-serif; font-size: 12pt;">12(4x + 1)</span>, obtienes <span style="font-family: Arial, sans-serif; font-size: 12pt;">48x + 12</span>, no <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 12</span>.</div>
+</div>
+<div id="pregunta6" class="pregunta-interactiva" data-correcta="B" data-respondida="false">
+<h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt;">Pregunta 6. Análisis de error</h3>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">¿Cuál es el error en escribir <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 9 = 4(x + 9)</span>?</p>
+<label class="opcion" data-opcion="A" onclick="responderPregunta(6,'A')"> <input type="radio" name="pregunta6" value="A"> A. No hay error; la factorización es correcta. </label> <label class="opcion" data-opcion="B" onclick="responderPregunta(6,'B')"> <input type="radio" name="pregunta6" value="B"> B. El <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> no está contenido como factor en todos los términos. </label> <label class="opcion" data-opcion="C" onclick="responderPregunta(6,'C')"> <input type="radio" name="pregunta6" value="C"> C. La letra <span style="font-family: Arial, sans-serif; font-size: 12pt;">x</span> debe desaparecer siempre. </label> <label class="opcion" data-opcion="D" onclick="responderPregunta(6,'D')"> <input type="radio" name="pregunta6" value="D"> D. El <span style="font-family: Arial, sans-serif; font-size: 12pt;">9</span> no puede estar en una expresión algebraica. </label>
+<div id="retro6A" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> Si desarrollas <span style="font-family: Arial, sans-serif; font-size: 12pt;">4(x + 9)</span>, obtienes <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 36</span>, no <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x + 9</span>. Por eso la factorización no es correcta.</div>
+<div id="retro6B" class="retroalimentacion retro-correcta"><strong>Respuesta correcta.</strong> El <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> está contenido en <span style="font-family: Arial, sans-serif; font-size: 12pt;">4x</span>, pero no está contenido como factor en <span style="font-family: Arial, sans-serif; font-size: 12pt;">9</span>.</div>
+<div id="retro6C" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> La letra no debe desaparecer siempre. Depende del factor común que se extraiga y de la división de cada término.</div>
+<div id="retro6D" class="retroalimentacion retro-incorrecta"><strong>Respuesta incorrecta.</strong> El número <span style="font-family: Arial, sans-serif; font-size: 12pt;">9</span> sí puede aparecer en una expresión algebraica. El problema es que no tiene al <span style="font-family: Arial, sans-serif; font-size: 12pt;">4</span> como factor.</div>
+</div>
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">CIERRE REFLEXIVO</h2>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Responde en tu cuaderno:</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">¿Qué error debes evitar cuando factorizas por factor común y cómo puedes comprobar que tu respuesta es correcta?</p>
+<hr>
+<h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;">REFERENCIAS BIBLIOGRÁFICAS</h2>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Ministerio de Educación Nacional. (2006). <em>Estándares básicos de competencias en matemáticas</em>. Bogotá, Colombia: MEN.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Ministerio de Educación Nacional. (2016). <em>Derechos básicos de aprendizaje en matemáticas: Básica secundaria</em>. Bogotá, Colombia: MEN.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Ministerio de Educación Nacional. (2017). <em>Vamos a aprender Matemáticas 8°: Libro del estudiante</em>. Bogotá, Colombia: Ediciones SM.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Colegio Integrado Simón Bolívar. (2026). <em>Plan de área de Aritmética 8°</em>.</p>
+<p style="font-family: Arial, sans-serif; font-size: 12pt;">Licencia del recurso: Creative Commons BY-SA 4.0.</p>
+</div><p class="clearfix"></p></div>
+            </div></div></div></div>
+</div></article>
+</div></main><div class="nav-buttons"> <span class="nav-button nav-button-left" aria-hidden="true"> <span>Anterior</span></span><span class="nav-button nav-button-right" aria-hidden="true"> <span>Siguiente</span></span>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license">creative commons: attribution - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(nueva ventana)</span></span></a></p>
+</body>
+</html>
