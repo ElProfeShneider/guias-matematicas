@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es" data-resource-id="fase1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>El archivo de vistas del museo geométrico</title>
+  <link rel="stylesheet" href="./css/fase1.css">
+</head>
+<body>
+  <main class="app-shell" aria-label="Reto inicial de reconocimiento de cuerpos geométricos">
+    <section class="phase-card">
+      <header class="phase-header">
+        <p class="guiding-question">¿Mismo cuerpo o cuerpos diferentes?</p>
+      </header>
+
+      <section class="brief-instructions" id="instrucciones-fase1" aria-labelledby="instrucciones-titulo">
+        <h2 id="instrucciones-titulo" class="sr-only">Instrucciones</h2>
+        <p><strong>Trabajen un caso a la vez.</strong></p>
+        <ol>
+          <li>Sin girar los modelos, completen «Antes de girar» en F1 de la guía.</li>
+          <li>Seleccionen <strong>«Ya marcamos “Antes de girar”»</strong>. Giren los modelos y completen «Después de girar» y «¿Qué observaron para decidir?».</li>
+          <li>Repitan los mismos pasos en el Caso 2.</li>
+        </ol>
+      </section>
+
+      <section class="case-card" id="caso-1" data-case="1" aria-labelledby="caso-1-titulo">
+        <div class="case-heading">
+          <div>
+            <p class="case-kicker">Caso 1</p>
+            <h2 id="caso-1-titulo">Comparen los dos modelos</h2>
+          </div>
+        </div>
+
+        <div class="viewer-grid">
+          <article class="model-panel">
+            <h3>Modelo A</h3>
+            <div class="viewer" id="c1-a" tabindex="0" role="region"
+                 aria-label="Visor tridimensional del Modelo A del Caso 1"
+                 aria-describedby="instrucciones-fase1 estado-caso-1"
+                 aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown R"
+                 aria-disabled="true"
+                 aria-busy="true">
+              <div class="loading" role="status" aria-live="polite">
+                <span class="loading__dot" aria-hidden="true"></span>
+                Preparando el visor…
+              </div>
+              <div class="fallback" hidden>
+                <svg viewBox="0 0 460 300" role="img" aria-label="Representación estática de un cuerpo geométrico">
+                  <polygon points="120,85 290,55 375,110 205,140" class="fallback__top"/>
+                  <polygon points="120,85 205,140 205,245 120,190" class="fallback__side"/>
+                  <polygon points="205,140 375,110 375,215 205,245" class="fallback__front"/>
+                  <polyline points="120,85 290,55 375,110 375,215 205,245 120,190 120,85 205,140 375,110" class="fallback__edge"/>
+                  <line x1="205" y1="140" x2="205" y2="245" class="fallback__edge"/>
+                </svg>
+                <p>Avísenle al docente y sigan la alternativa de contingencia que les indique.</p>
+              </div>
+              <div class="locked-layer" aria-hidden="true">Giro bloqueado</div>
+            </div>
+          </article>
+
+          <article class="model-panel">
+            <h3>Modelo B</h3>
+            <div class="viewer" id="c1-b" tabindex="0" role="region"
+                 aria-label="Visor tridimensional del Modelo B del Caso 1"
+                 aria-describedby="instrucciones-fase1 estado-caso-1"
+                 aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown R"
+                 aria-disabled="true"
+                 aria-busy="true">
+              <div class="loading" role="status" aria-live="polite">
+                <span class="loading__dot" aria-hidden="true"></span>
+                Preparando el visor…
+              </div>
+              <div class="fallback" hidden>
+                <svg viewBox="0 0 460 300" role="img" aria-label="Representación estática de un cuerpo geométrico">
+                  <polygon points="145,45 285,105 285,250 145,190" class="fallback__side"/>
+                  <polygon points="145,45 220,75 360,45 285,15" class="fallback__top"/>
+                  <polygon points="285,105 360,75 360,220 285,250" class="fallback__front"/>
+                  <polyline points="145,45 220,75 360,45 360,220 285,250 145,190 145,45 285,105 360,75" class="fallback__edge"/>
+                  <line x1="285" y1="105" x2="285" y2="250" class="fallback__edge"/>
+                </svg>
+                <p>Avísenle al docente y sigan la alternativa de contingencia que les indique.</p>
+              </div>
+              <div class="locked-layer" aria-hidden="true">Giro bloqueado</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="case-controls" aria-label="Controles del Caso 1">
+          <button class="button unlock-button" type="button">Ya marcamos «Antes de girar»</button>
+          <button class="button button--secondary reset-button" type="button" disabled>↺ Reiniciar posiciones</button>
+          <span id="estado-caso-1" class="sr-only case-status" aria-live="polite">Giro bloqueado. Primero marquen «Antes de girar» en la guía.</span>
+        </div>
+        <p class="rotation-help" hidden>Arrastren para girar o usen las flechas del teclado.</p>
+      </section>
+
+      <section class="case-card" id="caso-2" data-case="2" aria-labelledby="caso-2-titulo">
+        <div class="case-heading">
+          <div>
+            <p class="case-kicker">Caso 2</p>
+            <h2 id="caso-2-titulo">Comparen los dos modelos</h2>
+          </div>
+        </div>
+
+        <div class="viewer-grid">
+          <article class="model-panel">
+            <h3>Modelo A</h3>
+            <div class="viewer" id="c2-a" tabindex="0" role="region"
+                 aria-label="Visor tridimensional del Modelo A del Caso 2"
+                 aria-describedby="instrucciones-fase1 estado-caso-2"
+                 aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown R"
+                 aria-disabled="true"
+                 aria-busy="true">
+              <div class="loading" role="status" aria-live="polite">
+                <span class="loading__dot" aria-hidden="true"></span>
+                Preparando el visor…
+              </div>
+              <div class="fallback" hidden>
+                <svg viewBox="0 0 460 300" role="img" aria-label="Representación estática de un cuerpo geométrico">
+                  <polygon points="78,150 125,92 205,100 245,165 145,220" class="fallback__front"/>
+                  <polyline points="78,150 125,92 205,100 245,165 145,220 78,150" class="fallback__edge"/>
+                  <line x1="382" y1="150" x2="78" y2="150" class="fallback__edge"/>
+                  <line x1="382" y1="150" x2="125" y2="92" class="fallback__edge"/>
+                  <line x1="382" y1="150" x2="205" y2="100" class="fallback__edge"/>
+                  <line x1="382" y1="150" x2="245" y2="165" class="fallback__edge"/>
+                  <line x1="382" y1="150" x2="145" y2="220" class="fallback__edge"/>
+                </svg>
+                <p>Avísenle al docente y sigan la alternativa de contingencia que les indique.</p>
+              </div>
+              <div class="locked-layer" aria-hidden="true">Giro bloqueado</div>
+            </div>
+          </article>
+
+          <article class="model-panel">
+            <h3>Modelo B</h3>
+            <div class="viewer" id="c2-b" tabindex="0" role="region"
+                 aria-label="Visor tridimensional del Modelo B del Caso 2"
+                 aria-describedby="instrucciones-fase1 estado-caso-2"
+                 aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown R"
+                 aria-disabled="true"
+                 aria-busy="true">
+              <div class="loading" role="status" aria-live="polite">
+                <span class="loading__dot" aria-hidden="true"></span>
+                Preparando el visor…
+              </div>
+              <div class="fallback" hidden>
+                <svg viewBox="0 0 460 300" role="img" aria-label="Representación estática de un cuerpo geométrico">
+                  <ellipse cx="155" cy="185" rx="78" ry="38" class="fallback__front"/>
+                  <path d="M155 147 L370 102 L155 223 Z" class="fallback__side"/>
+                  <path d="M155 147 C110 150 77 164 77 185 C77 206 110 220 155 223" class="fallback__edge"/>
+                  <line x1="155" y1="147" x2="370" y2="102" class="fallback__edge"/>
+                  <line x1="155" y1="223" x2="370" y2="102" class="fallback__edge"/>
+                </svg>
+                <p>Avísenle al docente y sigan la alternativa de contingencia que les indique.</p>
+              </div>
+              <div class="locked-layer" aria-hidden="true">Giro bloqueado</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="case-controls" aria-label="Controles del Caso 2">
+          <button class="button unlock-button" type="button">Ya marcamos «Antes de girar»</button>
+          <button class="button button--secondary reset-button" type="button" disabled>↺ Reiniciar posiciones</button>
+          <span id="estado-caso-2" class="sr-only case-status" aria-live="polite">Giro bloqueado. Primero marquen «Antes de girar» en la guía.</span>
+        </div>
+        <p class="rotation-help" hidden>Arrastren para girar o usen las flechas del teclado.</p>
+      </section>
+
+      <p class="closing-prompt">Completen la tabla del reto en la guía. No modifiquen la respuesta de «Antes de girar».</p>
+
+      <aside id="diagnostics" class="diagnostics" hidden aria-labelledby="diag-title">
+        <h2 id="diag-title">Diagnóstico técnico — PR-1 Fase 1</h2>
+        <dl>
+          <div><dt>Biblioteca</dt><dd id="diag-source">—</dd></div>
+          <div><dt>Tiempo de carga</dt><dd id="diag-load">—</dd></div>
+          <div><dt>WebGL</dt><dd id="diag-webgl">—</dd></div>
+          <div><dt>Visores activos</dt><dd id="diag-viewers">—</dd></div>
+          <div><dt>Llamadas de dibujo</dt><dd id="diag-calls">—</dd></div>
+          <div><dt>Triángulos</dt><dd id="diag-triangles">—</dd></div>
+        </dl>
+        <button id="stress-button" class="button button--secondary" type="button">Ejecutar 10 ciclos</button>
+        <p id="stress-result" class="diagnostics__result" aria-live="polite"></p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    if (location.protocol === 'file:') {
+      document.querySelectorAll('.loading').forEach((loading) => {
+        loading.innerHTML = '<strong>No fue posible cargar el recurso.</strong><br>Avísenle al docente.';
+      });
+      document.querySelectorAll('.viewer').forEach((viewer) => viewer.setAttribute('aria-busy', 'false'));
+    }
+  </script>
+  <script type="module" src="./js/fase1.js"></script>
+  <script src="../bridge.js"></script>
+</body>
+</html>

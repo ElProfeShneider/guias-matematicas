@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es" data-resource-id="fases3_4">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conoce y audita cuerpos geométricos</title>
+  <link rel="stylesheet" href="./css/pr3.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phase-card" aria-label="Construcción conceptual y auditoría">
+      <header class="phase-header">
+        <p id="phase-lead" class="lead">Observen y comparen. Completen la guía solo cuando el recurso digital lo indique.</p>
+      </header>
+
+      <section class="progress-panel" aria-label="Progreso de las fases 3 y 4">
+        <div class="progress-copy">
+          <strong id="progress-label">F3 · Vista y cuerpo</strong>
+          <span id="progress-state">Paso 1 de 11</span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      </section>
+
+      <section id="content" class="content" aria-live="polite"></section>
+
+      <nav class="page-nav" aria-label="Navegación del recurso">
+        <button id="prev" class="button button--secondary" type="button" disabled>← Anterior</button>
+        <button id="next" class="button" type="button">Siguiente →</button>
+      </nav>
+
+      <aside id="diagnostics" class="diagnostics" hidden aria-labelledby="diag-title">
+        <h2 id="diag-title">Diagnóstico técnico — PR-3</h2>
+        <dl>
+          <div><dt>Three.js</dt><dd id="diag-source">—</dd></div>
+          <div><dt>WebGL</dt><dd id="diag-webgl">—</dd></div>
+          <div><dt>Pantalla</dt><dd id="diag-screen">—</dd></div>
+          <div><dt>Visores activos</dt><dd id="diag-viewers">—</dd></div>
+        </dl>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('content').innerHTML = '<section class="message-card"><h2>No fue posible cargar el recurso</h2><p>Avísenle al docente.</p></section>';
+      document.getElementById('next').disabled = true;
+    }
+  </script>
+  <script type="module" src="./js/pr3.js"></script>
+  <script src="../bridge.js"></script>
+</body>
+</html>
