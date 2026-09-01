@@ -1,0 +1,106 @@
+<!doctype html>
+<html data-exe-fallback-height="1000" lang="es" data-resource-id="fase2">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería de modelos M1–M6</title>
+  <link rel="stylesheet" href="./css/fase2.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phase-card" aria-label="Galería de modelos M1–M6">
+      <header class="phase-header">
+        <p id="phase-instruction-f2" class="phase-instruction" aria-live="polite">Giren el modelo y elijan cuál opción muestra el mismo cuerpo. Después, escriban en la tabla de la guía qué observaron.</p>
+      </header>
+
+      <section class="progress-panel" aria-label="Progreso de la Fase 2">
+        <div class="progress-copy">
+          <strong id="progress-label">Parte A · M1</strong>
+          <span id="attempt-label">Intento 1 de 2</span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      </section>
+
+      <section id="gallery-view" class="gallery-view" aria-live="polite">
+        <div class="model-section">
+          <div class="section-heading section-heading--actions">
+            <div class="reset-control">
+              <button id="reset-model" class="button button--secondary" type="button">↺ Restablecer posición</button>
+              <span id="reset-status" class="reset-status" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div id="main-viewer" class="main-viewer" tabindex="0" role="region"
+               aria-label="Visor tridimensional del modelo actual"
+               aria-describedby="main-help"
+               aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown R"
+               aria-busy="true">
+            <div class="loading" role="status" aria-live="polite">Preparando el modelo…</div>
+            <div id="main-fallback" class="fallback" hidden></div>
+          </div>
+          <p id="main-help" class="help">Arrastren para girar o usen las flechas del teclado.</p>
+        </div>
+
+        <section class="options-section" aria-labelledby="options-title">
+          <h2 id="options-title">¿Cuál opción muestra el mismo cuerpo?</h2>
+          <div id="options-grid" class="options-grid"></div>
+          <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+        </section>
+
+        <nav class="gallery-nav" aria-label="Navegación de la galería">
+          <button id="previous-button" class="button button--secondary" type="button" disabled>← Anterior</button>
+          <button id="next-button" class="button" type="button" disabled>Siguiente →</button>
+        </nav>
+      </section>
+
+      <section id="analyze-view" class="analyze-view" hidden aria-labelledby="analyze-title">
+        <header class="subsection-header">
+          <h2 id="analyze-title">Comparen las dos vistas</h2>
+        </header>
+
+        <div class="analyze-images" aria-label="Dos vistas para comparar">
+          <div class="analyze-canvas" id="analyze-a" role="img" aria-label="Primera vista tridimensional para comparar"></div>
+          <div class="analyze-canvas" id="analyze-b" role="img" aria-label="Segunda vista tridimensional para comparar"></div>
+        </div>
+
+        <p class="oral-question">¿Quién explica mejor lo que ocurre?</p>
+        <form id="analyze-form" class="statement-list">
+          <label><input type="radio" name="statement" value="laura"> <span><strong>Laura:</strong> No pueden ser el mismo cuerpo porque una imagen parece circular.</span></label>
+          <label><input type="radio" name="statement" value="diego"> <span><strong>Diego:</strong> Son cuerpos diferentes porque uno está acostado y el otro está de pie.</span></label>
+          <label><input type="radio" name="statement" value="sara"> <span><strong>Sara:</strong> Pueden ser el mismo cuerpo; la vista cambia cuando se observa desde otra posición.</span></label>
+          <button id="check-analyze" class="button" type="submit">Comprobar</button>
+        </form>
+        <div id="analyze-feedback" class="feedback" role="status" aria-live="polite"></div>
+        <button id="to-oral" class="button button--secondary" type="button" disabled>Continuar →</button>
+      </section>
+
+      <section id="oral-view" class="oral-view" hidden aria-labelledby="oral-title">
+        <h2 id="oral-title">¿Tener punta basta para decidir que representan el mismo cuerpo?</h2>
+        <p class="closing-prompt">Antes de continuar, revisen que M1–M6 estén completos en la guía.</p>
+      </section>
+
+      <aside id="diagnostics" class="diagnostics" hidden aria-labelledby="diag-title">
+        <h2 id="diag-title">Diagnóstico técnico — PR-2 Fase 2</h2>
+        <dl>
+          <div><dt>Biblioteca</dt><dd id="diag-source">—</dd></div>
+          <div><dt>Tiempo de carga</dt><dd id="diag-load">—</dd></div>
+          <div><dt>WebGL</dt><dd id="diag-webgl">—</dd></div>
+          <div><dt>Modelo activo</dt><dd id="diag-model">—</dd></div>
+          <div><dt>Intentos</dt><dd id="diag-attempts">—</dd></div>
+        </dl>
+        <button id="stress-button" class="button button--secondary" type="button">Ejecutar 10 ciclos</button>
+        <p id="stress-result" aria-live="polite"></p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    if (location.protocol === 'file:') {
+      document.querySelector('.loading').innerHTML = '<strong>No fue posible cargar el recurso.</strong><br>Avísenle al docente.';
+      document.getElementById('main-viewer').setAttribute('aria-busy', 'false');
+    }
+  </script>
+  <script type="module" src="./js/fase2.js"></script>
+  <script src="../bridge.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+CONFIGURACIÓN RECOMENDADA EN eXeLearning — SESIÓN 1
+
+Regla común para las cuatro páginas:
+- Tipo: iframe
+- Ancho: 100%
+- Limitar las proporciones: DESACTIVADO
+- Scroll interno: no se necesita; bridge.js ajusta el alto automáticamente.
+
+Dimensiones iniciales/de respaldo que se deben escribir en eXeLearning:
+1. Fase 1 · Reto inicial
+   Fuente: r/f1/index.html
+   Dimensiones: 100% × 1200
+
+2. Fase 2 · Galería M1–M6
+   Fuente: r/f2/index.html
+   Dimensiones: 100% × 1000
+
+3. Fases 3–4 · Construcción y auditoría
+   Fuente: r/f34/index.html
+   Dimensiones: 100% × 950
+
+4. Fase 5 · Cierre individual
+   Fuente: r/f5/index.html
+   Dimensiones: 100% × 650
+
+IMPORTANTE
+Los valores de alto son solo el tamaño seguro de arranque. Una vez cargada cada
+lámina, bridge.js mide el contenido visible real y modifica únicamente el alto del
+iframe. Así, una lámina corta se recoge y una lámina larga crece, sin alterar las
+proporciones de los visores 3D y sin crear scroll interno.

@@ -1,0 +1,57 @@
+<!doctype html>
+<html data-exe-fallback-height="650" lang="es" data-resource-id="fase5">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dos vistas, una decisión individual</title>
+  <link rel="stylesheet" href="./css/pr4.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phase-card" aria-label="Cierre individual: comparación de dos vistas">
+      <section class="instruction-card" aria-labelledby="instructions-title">
+        <div class="instruction-title">
+          <h2 id="instructions-title">Trabaja de manera individual</h2>
+        </div>
+        <p>Compara las dos vistas y responde las cinco preguntas solo en tu hoja. No compares tus respuestas con otra persona.</p>
+      </section>
+
+      <section class="views-grid" aria-label="Dos vistas controladas para comparar">
+        <article class="view-card">
+          <div class="viewer" id="view-a-3d" role="img" aria-label="Vista A del modelo geométrico" aria-busy="true">
+            <div class="loading" role="status" aria-live="polite">
+              <span class="loading__dot" aria-hidden="true"></span>
+              Preparando la vista…
+            </div>
+            <div class="fallback" hidden>
+              <img src="./img/vista_a.png" alt="Representación estática de la Vista A del modelo geométrico">
+              <p>Avísale al docente y sigue la alternativa de contingencia que te indique.</p>
+            </div>
+          </div>
+          <div class="view-label"><strong>Vista A</strong></div>
+        </article>
+        <article class="view-card">
+          <div class="viewer" id="view-b-3d" role="img" aria-label="Vista B del modelo geométrico" aria-busy="true">
+            <div class="loading" role="status" aria-live="polite">
+              <span class="loading__dot" aria-hidden="true"></span>
+              Preparando la vista…
+            </div>
+            <div class="fallback" hidden>
+              <img src="./img/vista_b.png" alt="Representación estática de la Vista B del modelo geométrico">
+              <p>Avísale al docente y sigue la alternativa de contingencia que te indique.</p>
+            </div>
+          </div>
+          <div class="view-label"><strong>Vista B</strong></div>
+        </article>
+      </section>
+
+
+      <section class="closing-card" aria-label="Indicaciones de entrega">
+        <p><strong>Antes de entregar tu hoja:</strong> revisa tu código y las cinco respuestas.</p>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="./js/fase5.js"></script>
+  <script src="../bridge.js"></script>
+</body>
+</html>
