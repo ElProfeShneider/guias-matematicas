@@ -384,10 +384,9 @@ function renderQuick() {
 function renderAuditIntro() {
   content.innerHTML = `
     <section class="message-card">
-      <h2>Auditores del museo</h2>
-      <p><strong>M · Mantener:</strong> dejar la etiqueta como está. <strong>C · Corregir:</strong> cambiar el nombre, la familia o ambos.</p>
+      <p><strong>M · Mantener:</strong> la etiqueta es correcta. <strong>C · Corregir:</strong> la etiqueta tiene un error.</p>
       <div class="role-banner"><strong>En cada caso:</strong> completen la guía → marquen aquí M o C → pulsen <strong>«Comprobar»</strong> → indiquen en la guía si mantuvieron o cambiaron su decisión.</div>
-      <p class="prompt-note">No borren lo escrito antes de comprobar.</p>
+      <p class="prompt-note">No borren ni cambien lo escrito antes de comprobar.</p>
     </section>`;
 }
 
@@ -451,8 +450,8 @@ function renderAudit(index) {
     check.disabled = true;
     feedback.className = `feedback ${correct ? 'is-success' : 'is-warning'}`;
     feedback.textContent = correct
-      ? 'La decisión coincide. Comparen el resultado con lo escrito en la guía y marquen «Mantuvimos M/C». No borren lo escrito antes de comprobar.'
-      : 'La decisión no coincide. Comparen el resultado con lo escrito en la guía y marquen «Cambiamos M/C». No borren lo escrito antes de comprobar.';
+      ? 'La decisión coincide. Comparen el resultado con lo escrito en la guía y marquen «Mantuvimos». No borren ni cambien lo escrito antes de comprobar.'
+      : 'La decisión no coincide. Comparen el resultado con lo escrito en la guía y marquen «Cambiamos». No borren ni cambien lo escrito antes de comprobar.';
     finalLabel.hidden = false;
     nextButton.disabled = false;
   });
@@ -463,8 +462,8 @@ function renderAudit(index) {
     finalLabel.hidden = false;
     feedback.className = `feedback ${saved.correct ? 'is-success' : 'is-warning'}`;
     feedback.textContent = saved.correct
-      ? 'La decisión coincide. Comparen el resultado con lo escrito en la guía y marquen «Mantuvimos M/C». No borren lo escrito antes de comprobar.'
-      : 'La decisión no coincide. Comparen el resultado con lo escrito en la guía y marquen «Cambiamos M/C». No borren lo escrito antes de comprobar.';
+      ? 'La decisión coincide. Comparen el resultado con lo escrito en la guía y marquen «Mantuvimos». No borren ni cambien lo escrito antes de comprobar.'
+      : 'La decisión no coincide. Comparen el resultado con lo escrito en la guía y marquen «Cambiamos». No borren ni cambien lo escrito antes de comprobar.';
   } else if (selected) {
     applyDecisionStyles(selected, false);
     check.disabled = false;
@@ -560,10 +559,10 @@ function renderFinish() {
 function setHeader(screen) {
   const instructionByScreen = {
     concept: 'Observen y comparen. No escriban en la guía.',
-    names: 'Completen «Nombre» en la guía. No cambien lo escrito en la Fase 2.',
+    names: 'Completen «Nombre» en la guía. No cambien lo que escribieron en «¿Qué observaron?».',
     families: 'Completen «Familia» en la guía.',
     quick: 'Respondan las tres preguntas y pulsen «Comprobar». No escriban en la guía.',
-    'audit-intro': 'Tengan abierta «F4. AUDITORÍA — REVISIÓN DE ETIQUETAS» en la guía.',
+    'audit-intro': 'Tengan lista la guía.',
     audit: 'Completen este caso en la guía antes de comprobar.',
     verify: 'Elijan M o C aquí. No escriban en la guía.',
     finish: 'Revisen los tres casos de la Fase 4 en la guía.'
@@ -571,7 +570,7 @@ function setHeader(screen) {
   setPhaseInstructionF34(instructionByScreen[screen.id] || 'Sigan las indicaciones de esta pantalla.');
   const phaseScreens = screens.filter((item) => item.phase === screen.phase);
   const phasePosition = phaseScreens.indexOf(screen) + 1;
-  document.getElementById('progress-label').textContent = `Fase ${screen.phase}`;
+  document.getElementById('progress-label').textContent = screen.phase === 3 ? 'Conoce algo nuevo' : 'Aplica lo aprendido';
   document.getElementById('progress-state').textContent = `${phasePosition} de ${phaseScreens.length}`;
   document.getElementById('progress-bar').style.width =
     `${(phasePosition / phaseScreens.length) * 100}%`;
