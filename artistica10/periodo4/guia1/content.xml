@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ode><userPreferences><userPreference><key>theme</key><value>base</value></userPreference></userPreferences><odeResources><odeResource><key>odeVersionId</key><value>20260903164648HZRVZF</value></odeResource><odeResource><key>odeId</key><value>20260903144658FIGYWU</value></odeResource><odeResource><key>odeVersionName</key><value>0</value></odeResource><odeResource><key>isDownload</key><value>true</value></odeResource><odeResource><key>eXeVersion</key><value>v3.0.2</value></odeResource></odeResources><odeProperties><odeProperty><key>pp_title</key><value>Colombia en formas</value></odeProperty><odeProperty><key>pp_subtitle</key><value>Representación gráfica del folclor demosófico, musical y coreográfico de Colombia</value></odeProperty><odeProperty><key>pp_lang</key><value>es</value></odeProperty><odeProperty><key>pp_author</key><value>Shneider Becerra</value></odeProperty><odeProperty><key>license</key><value>creative commons: attribution - share alike 4.0</value></odeProperty><odeProperty><key>pp_description</key><value>Guía de aprendizaje para grado décimo organizada en cinco clases de 55 minutos. Orienta el reconocimiento y la representación gráfica de referentes del folclor demosófico, musical y coreográfico de distintas regiones de Colombia. Integra observación cultural, dibujo guiado y recursos geométricos como forma, proporción, patrón, dirección y organización espacial cuando resultan pertinentes para la representación. La secuencia incluye apoyos visuales suficientes para favorecer el trabajo autónomo del estudiante y culmina con una muestra visual de las producciones realizadas.</value></odeProperty><odeProperty><key>exportSource</key><value>true</value></odeProperty><odeProperty><key>pp_addExeLink</key><value>true</value></odeProperty><odeProperty><key>pp_addPagination</key><value>false</value></odeProperty><odeProperty><key>pp_addSearchBox</key><value>false</value></odeProperty><odeProperty><key>pp_addAccessibilityToolbar</key><value>false</value></odeProperty><odeProperty><key>pp_extraHeadContent</key><value/></odeProperty><odeProperty><key>footer</key><value/></odeProperty></odeProperties><odeNavStructures><odeNavStructure><odePageId>20260903164648TPPZIP</odePageId><odeParentPageId/><pageName>Guía de aprendizaje</pageName><odeNavStructureOrder>1</odeNavStructureOrder><odeNavStructureProperties><odeNavStructureProperty><key>titleNode</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>hidePageTitle</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>titleHtml</key><value/></odeNavStructureProperty><odeNavStructureProperty><key>editableInPage</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>titlePage</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>visibility</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>highlight</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>description</key><value/></odeNavStructureProperty></odeNavStructureProperties><odePagStructures><odePagStructure><odePageId>20260903164648TPPZIP</odePageId><odeBlockId>20260903164648OVYGSC</odeBlockId><blockName>10.°</blockName><iconName/><odePagStructureOrder>1</odePagStructureOrder><odePagStructureProperties><odePagStructureProperty><key>visibility</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>teacherOnly</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>allowToggle</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>minimized</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>identifier</key><value/></odePagStructureProperty><odePagStructureProperty><key>cssClass</key><value/></odePagStructureProperty></odePagStructureProperties><odeComponents><odeComponent><odePageId>20260903164648TPPZIP</odePageId><odeBlockId>20260903164648OVYGSC</odeBlockId><odeIdeviceId>20260903095719045387</odeIdeviceId><odeIdeviceTypeName>text</odeIdeviceTypeName><htmlView>&lt;div class="exe-text-template"&gt;&lt;div class="textIdeviceContent"&gt;
+            &lt;div class="exe-text-activity"&gt;
+                &lt;div&gt;&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;"&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 14px 0;"&gt;CLASE 1 – RECONOZCO MI RUTA REGIONAL&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. IDENTIFICA&lt;/h3&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;En este proyecto trabajarás con tres manifestaciones del folclor colombiano:&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; artesanías, objetos, vivienda y otras manifestaciones de la vida y los saberes tradicionales.&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;strong&gt;Musical:&lt;/strong&gt; músicas, ritmos, cantos e instrumentos tradicionales.&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; danzas, movimientos, posiciones y elementos de vestuario.&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; font-family: Arial,sans-serif; font-size: 12pt;"&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+#folclor-clasifica {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+}
+
+#folclor-clasifica .fc-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100%;
+}
+
+#folclor-clasifica .fc-item {
+    border: 1px solid #888;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+}
+
+#folclor-clasifica .fc-img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    background: #f5f5f5;
+}
+
+#folclor-clasifica .fc-titulo {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+#folclor-clasifica .fc-botones {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+}
+
+#folclor-clasifica button {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+#folclor-clasifica .fc-respuesta {
+    min-height: 20px;
+    margin: 7px 0 0;
+    font-size: 11pt;
+}
+
+#folclor-clasifica .fc-creditos {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid #bbb;
+    font-size: 9pt;
+    line-height: 1.35;
+}
+
+@media (max-width: 760px) {
+    #folclor-clasifica .fc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 520px) {
+    #folclor-clasifica .fc-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+&lt;/style&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;"&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;"&gt;
+&lt;div id="folclor-clasifica" style="width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; font-family: Arial,sans-serif; font-size: 12pt;"&gt;
+&lt;div id="folclor-clasifica"&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;Selecciona la manifestación que representa principalmente cada referente.&lt;/p&gt;
+&lt;div class="fc-grid"&gt;
+&lt;div class="fc-item" data-correcta="D"&gt;&lt;img class="fc-img" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Sombrero_vueltiao.jpg" alt="Sombrero vueltiao del pueblo Zenú"&gt;
+&lt;p class="fc-titulo"&gt;Sombrero vueltiao&lt;/p&gt;
+&lt;div class="fc-botones"&gt;&lt;button type="button" data-opcion="D"&gt;Demosófico&lt;/button&gt; &lt;button type="button" data-opcion="M"&gt;Musical&lt;/button&gt; &lt;button type="button" data-opcion="C"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;
+&lt;p class="fc-respuesta" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="fc-item" data-correcta="D"&gt;&lt;img class="fc-img" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Artesano%2C_R%C3%A1quira.jpg" alt="Cerámica tradicional de Ráquira"&gt;
+&lt;p class="fc-titulo"&gt;Cerámica de Ráquira&lt;/p&gt;
+&lt;div class="fc-botones"&gt;&lt;button type="button" data-opcion="D"&gt;Demosófico&lt;/button&gt; &lt;button type="button" data-opcion="M"&gt;Musical&lt;/button&gt; &lt;button type="button" data-opcion="C"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;
+&lt;p class="fc-respuesta" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="fc-item" data-correcta="M"&gt;&lt;img class="fc-img" src="https://recursos.edu.xunta.gal/sites/default/files/recurso/1639064664/tambor_alegre_2_def.png" alt="Tambor alegre"&gt;
+&lt;p class="fc-titulo"&gt;Tambor alegre&lt;/p&gt;
+&lt;div class="fc-botones"&gt;&lt;button type="button" data-opcion="D"&gt;Demosófico&lt;/button&gt; &lt;button type="button" data-opcion="M"&gt;Musical&lt;/button&gt; &lt;button type="button" data-opcion="C"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;
+&lt;p class="fc-respuesta" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="fc-item" data-correcta="M"&gt;&lt;img class="fc-img" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Joropo_arpa_llanera_%28cropped%29.jpg" alt="Arpa llanera"&gt;
+&lt;p class="fc-titulo"&gt;Arpa llanera&lt;/p&gt;
+&lt;div class="fc-botones"&gt;&lt;button type="button" data-opcion="D"&gt;Demosófico&lt;/button&gt; &lt;button type="button" data-opcion="M"&gt;Musical&lt;/button&gt; &lt;button type="button" data-opcion="C"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;
+&lt;p class="fc-respuesta" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="fc-item" data-correcta="C"&gt;&lt;img class="fc-img" src="https://upload.wikimedia.org/wikipedia/commons/5/57/Baile_de_cumbia_en_Fiestas_de_independencia_de_Colombia%2C_Mompox%2C_Bolivar.jpg" alt="Cumbia tradicional del Caribe colombiano"&gt;
+&lt;p class="fc-titulo"&gt;Cumbia&lt;/p&gt;
+&lt;div class="fc-botones"&gt;&lt;button type="button" data-opcion="D"&gt;Demosófico&lt;/button&gt; &lt;button type="button" data-opcion="M"&gt;Musical&lt;/button&gt; &lt;button type="button" data-opcion="C"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;
+&lt;p class="fc-respuesta" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="fc-item" data-correcta="C"&gt;&lt;img class="fc-img" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Sanjuanero_Dance.jpg" alt="Sanjuanero Huilense"&gt;
+&lt;p class="fc-titulo"&gt;Sanjuanero Huilense&lt;/p&gt;
+&lt;div class="fc-botones"&gt;&lt;button type="button" data-opcion="D"&gt;Demosófico&lt;/button&gt; &lt;button type="button" data-opcion="M"&gt;Musical&lt;/button&gt; &lt;button type="button" data-opcion="C"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;
+&lt;p class="fc-respuesta" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fc-creditos"&gt;&lt;strong&gt;Créditos de imágenes:&lt;/strong&gt; sombrero vueltiao: Jdvillalobos, dominio público; cerámica de Ráquira: Marvin David Del Cid, CC BY-SA 4.0; tambor alegre: Plan Ceibal, CC BY-NC-SA 4.0; arpa llanera: José J. Lugo A., CC BY 3.0; cumbia: NatalyG2, CC BY-SA 4.0; Sanjuanero: Mendezma38, CC BY-SA 4.0.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;
+&lt;script&gt;
+(function () {
+    var raiz = document.getElementById('folclor-clasifica');
+    if (!raiz) return;
+
+    raiz.querySelectorAll('.fc-item button').forEach(function (boton) {
+        boton.addEventListener('click', function () {
+            var item = boton.closest('.fc-item');
+            var salida = item.querySelector('.fc-respuesta');
+            var correcta = item.getAttribute('data-correcta');
+            var elegida = boton.getAttribute('data-opcion');
+
+            if (elegida === correcta) {
+                salida.textContent = 'Correcto.';
+            } else {
+                salida.textContent = 'Intenta de nuevo.';
+            }
+        });
+    });
+})();
+&lt;/script&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;Clasifica cada referente como &lt;strong&gt;demosófico, musical o coreográfico&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. UBICA TU RUTA&lt;/h3&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;Tu docente te asignará una región. Selecciona esa ruta y consulta sus tres referentes.&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+#rutas-colombia {
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    font-size:12pt;
+}
+
+#rutas-colombia .rc-botones {
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:8px;
+    margin-bottom:12px;
+}
+
+#rutas-colombia .rc-botones button {
+    width:100%;
+    padding:9px 6px;
+    font-family:Arial,sans-serif;
+    font-size:11pt;
+    cursor:pointer;
+}
+
+#rutas-colombia .rc-panel {
+    border:1px solid #888;
+    padding:12px;
+    box-sizing:border-box;
+}
+
+#rutas-colombia .rc-panel h3 {
+    font-family:'Arial Black',Arial,sans-serif;
+    font-size:12pt;
+    margin:0 0 10px 0;
+}
+
+#rutas-colombia .rc-panel p {
+    margin:6px 0;
+}
+
+@media (max-width:650px) {
+    #rutas-colombia .rc-botones {
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    }
+}
+
+@media (max-width:420px) {
+    #rutas-colombia .rc-botones {
+        grid-template-columns:1fr !important;
+    }
+}
+&lt;/style&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;"&gt;
+&lt;div id="rutas-colombia"&gt;
+&lt;div class="rc-botones"&gt;&lt;button type="button" data-ruta="caribe"&gt;Caribe&lt;/button&gt; &lt;button type="button" data-ruta="andina"&gt;Andina&lt;/button&gt; &lt;button type="button" data-ruta="pacifica"&gt;Pacífica&lt;/button&gt; &lt;button type="button" data-ruta="orinoquia"&gt;Orinoquía&lt;/button&gt; &lt;button type="button" data-ruta="amazonia"&gt;Amazonía&lt;/button&gt; &lt;button type="button" data-ruta="insular"&gt;Insular&lt;/button&gt;&lt;/div&gt;
+&lt;div class="rc-panel"&gt;
+&lt;h3 id="rc-titulo"&gt;Selecciona una región&lt;/h3&gt;
+&lt;div id="rc-contenido"&gt;
+&lt;p&gt;Aquí aparecerán los tres referentes de tu ruta.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;
+&lt;script&gt;
+(function(){
+
+    var rutas = {
+
+        caribe: {
+            titulo: "REGIÓN CARIBE",
+            contenido:
+                "&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; sombrero vueltiao del pueblo Zenú.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; tambor alegre.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; cumbia tradicional del Caribe colombiano.&lt;/p&gt;"
+        },
+
+        andina: {
+            titulo: "REGIÓN ANDINA",
+            contenido:
+                "&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; cerámica tradicional de Ráquira, Boyacá.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; tiple colombiano.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; Sanjuanero Huilense.&lt;/p&gt;"
+        },
+
+        pacifica: {
+            titulo: "REGIÓN PACÍFICA",
+            contenido:
+                "&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; cestería en werregue del pueblo Wounaan, Chocó.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; marimba de chonta del Pacífico Sur.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; currulao del Pacífico Sur.&lt;/p&gt;"
+        },
+
+        orinoquia: {
+            titulo: "REGIÓN ORINOQUÍA",
+            contenido:
+                "&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; campechana llanera.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; arpa llanera.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; joropo.&lt;/p&gt;"
+        },
+
+        amazonia: {
+            titulo: "REGIÓN AMAZONÍA",
+            contenido:
+                "&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; trabajo tradicional en yanchama.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; manguaré del pueblo murui muina.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; baile del chontaduro del pueblo Yucuna.&lt;/p&gt;" +
+                "&lt;p&gt;Estos referentes corresponden a diferentes pueblos y tradiciones de la región.&lt;/p&gt;"
+        },
+
+        insular: {
+            titulo: "REGIÓN INSULAR",
+            contenido:
+                "&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; arquitectura tradicional raizal.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; tináfono.&lt;/p&gt;" +
+                "&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; jumping polka.&lt;/p&gt;"
+        }
+
+    };
+
+    var recurso = document.getElementById("rutas-colombia");
+    if (!recurso) return;
+
+    var titulo = document.getElementById("rc-titulo");
+    var contenido = document.getElementById("rc-contenido");
+
+    recurso.querySelectorAll("[data-ruta]").forEach(function(boton){
+
+        boton.addEventListener("click",function(){
+
+            var ruta = rutas[boton.getAttribute("data-ruta")];
+
+            titulo.textContent = ruta.titulo;
+            contenido.innerHTML = ruta.contenido;
+
+        });
+
+    });
+
+})();
+&lt;/script&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;Una región reúne diferentes comunidades y tradiciones. Los tres referentes de una ruta no necesariamente pertenecen al mismo pueblo o comunidad.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;3. REGISTRA&lt;/h3&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;strong&gt;✎ ESCRIBE EN TU HOJA DE BLOC:&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;"&gt;COLOMBIA EN FORMAS – MI RUTA REGIONAL&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.8;"&gt;Región: ___________________________________________&lt;br&gt;Referente demosófico: ___________________________________________&lt;br&gt;Referente musical: ___________________________________________&lt;br&gt;Referente coreográfico: ___________________________________________&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;4. REVISA&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;"&gt;Identifiqué correctamente mi región.&lt;/li&gt;
+&lt;li style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;"&gt;Registré los tres referentes de mi ruta.&lt;/li&gt;
+&lt;li style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;"&gt;Escribí los nombres completos y correctamente.&lt;/li&gt;
+&lt;li style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;"&gt;Conservé la hoja de bloc para la próxima clase.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;p class="clearfix"&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</htmlView><jsonProperties>{"ideviceId":"20260903095719045387","textInfoDurationInput":"","textInfoDurationTextInput":"Duración","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Agrupamiento","textTextarea":"&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;\"&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 14px 0;\"&gt;CLASE 1 – RECONOZCO MI RUTA REGIONAL&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. IDENTIFICA&lt;/h3&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;En este proyecto trabajarás con tres manifestaciones del folclor colombiano:&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; artesanías, objetos, vivienda y otras manifestaciones de la vida y los saberes tradicionales.&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;strong&gt;Musical:&lt;/strong&gt; músicas, ritmos, cantos e instrumentos tradicionales.&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; danzas, movimientos, posiciones y elementos de vestuario.&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; font-family: Arial,sans-serif; font-size: 12pt;\"&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n#folclor-clasifica {\n    width: 100%;\n    max-width: 950px;\n    margin: 0 auto;\n    box-sizing: border-box;\n    font-family: Arial, sans-serif;\n    font-size: 12pt;\n}\n\n#folclor-clasifica .fc-grid {\n    display: grid !important;\n    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;\n    gap: 12px !important;\n    width: 100%;\n}\n\n#folclor-clasifica .fc-item {\n    border: 1px solid #888;\n    padding: 10px;\n    box-sizing: border-box;\n    text-align: center;\n    background: #fff;\n}\n\n#folclor-clasifica .fc-img {\n    width: 100% !important;\n    height: 180px !important;\n    object-fit: contain !important;\n    display: block !important;\n    margin: 0 auto !important;\n    background: #f5f5f5;\n}\n\n#folclor-clasifica .fc-titulo {\n    margin: 8px 0;\n    font-weight: bold;\n}\n\n#folclor-clasifica .fc-botones {\n    display: flex !important;\n    flex-wrap: wrap !important;\n    justify-content: center !important;\n    gap: 6px !important;\n}\n\n#folclor-clasifica button {\n    font-family: Arial, sans-serif;\n    font-size: 11pt;\n    padding: 4px 8px;\n    cursor: pointer;\n}\n\n#folclor-clasifica .fc-respuesta {\n    min-height: 20px;\n    margin: 7px 0 0;\n    font-size: 11pt;\n}\n\n#folclor-clasifica .fc-creditos {\n    margin-top: 12px;\n    padding-top: 8px;\n    border-top: 1px solid #bbb;\n    font-size: 9pt;\n    line-height: 1.35;\n}\n\n@media (max-width: 760px) {\n    #folclor-clasifica .fc-grid {\n        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;\n    }\n}\n\n@media (max-width: 520px) {\n    #folclor-clasifica .fc-grid {\n        grid-template-columns: 1fr !important;\n    }\n}\n&lt;/style&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;\"&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;\"&gt;\n&lt;div id=\"folclor-clasifica\" style=\"width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; font-family: Arial,sans-serif; font-size: 12pt;\"&gt;\n&lt;div id=\"folclor-clasifica\"&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;Selecciona la manifestación que representa principalmente cada referente.&lt;/p&gt;\n&lt;div class=\"fc-grid\"&gt;\n&lt;div class=\"fc-item\" data-correcta=\"D\"&gt;&lt;img class=\"fc-img\" src=\"https://upload.wikimedia.org/wikipedia/commons/d/d5/Sombrero_vueltiao.jpg\" alt=\"Sombrero vueltiao del pueblo Zenú\" /&gt;\n&lt;p class=\"fc-titulo\"&gt;Sombrero vueltiao&lt;/p&gt;\n&lt;div class=\"fc-botones\"&gt;&lt;button type=\"button\" data-opcion=\"D\"&gt;Demosófico&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"M\"&gt;Musical&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"C\"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;\n&lt;p class=\"fc-respuesta\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"fc-item\" data-correcta=\"D\"&gt;&lt;img class=\"fc-img\" src=\"https://upload.wikimedia.org/wikipedia/commons/4/43/Artesano%2C_R%C3%A1quira.jpg\" alt=\"Cerámica tradicional de Ráquira\" /&gt;\n&lt;p class=\"fc-titulo\"&gt;Cerámica de Ráquira&lt;/p&gt;\n&lt;div class=\"fc-botones\"&gt;&lt;button type=\"button\" data-opcion=\"D\"&gt;Demosófico&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"M\"&gt;Musical&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"C\"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;\n&lt;p class=\"fc-respuesta\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"fc-item\" data-correcta=\"M\"&gt;&lt;img class=\"fc-img\" src=\"https://recursos.edu.xunta.gal/sites/default/files/recurso/1639064664/tambor_alegre_2_def.png\" alt=\"Tambor alegre\" /&gt;\n&lt;p class=\"fc-titulo\"&gt;Tambor alegre&lt;/p&gt;\n&lt;div class=\"fc-botones\"&gt;&lt;button type=\"button\" data-opcion=\"D\"&gt;Demosófico&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"M\"&gt;Musical&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"C\"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;\n&lt;p class=\"fc-respuesta\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"fc-item\" data-correcta=\"M\"&gt;&lt;img class=\"fc-img\" src=\"https://upload.wikimedia.org/wikipedia/commons/6/65/Joropo_arpa_llanera_%28cropped%29.jpg\" alt=\"Arpa llanera\" /&gt;\n&lt;p class=\"fc-titulo\"&gt;Arpa llanera&lt;/p&gt;\n&lt;div class=\"fc-botones\"&gt;&lt;button type=\"button\" data-opcion=\"D\"&gt;Demosófico&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"M\"&gt;Musical&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"C\"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;\n&lt;p class=\"fc-respuesta\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"fc-item\" data-correcta=\"C\"&gt;&lt;img class=\"fc-img\" src=\"https://upload.wikimedia.org/wikipedia/commons/5/57/Baile_de_cumbia_en_Fiestas_de_independencia_de_Colombia%2C_Mompox%2C_Bolivar.jpg\" alt=\"Cumbia tradicional del Caribe colombiano\" /&gt;\n&lt;p class=\"fc-titulo\"&gt;Cumbia&lt;/p&gt;\n&lt;div class=\"fc-botones\"&gt;&lt;button type=\"button\" data-opcion=\"D\"&gt;Demosófico&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"M\"&gt;Musical&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"C\"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;\n&lt;p class=\"fc-respuesta\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"fc-item\" data-correcta=\"C\"&gt;&lt;img class=\"fc-img\" src=\"https://upload.wikimedia.org/wikipedia/commons/a/ae/Sanjuanero_Dance.jpg\" alt=\"Sanjuanero Huilense\" /&gt;\n&lt;p class=\"fc-titulo\"&gt;Sanjuanero Huilense&lt;/p&gt;\n&lt;div class=\"fc-botones\"&gt;&lt;button type=\"button\" data-opcion=\"D\"&gt;Demosófico&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"M\"&gt;Musical&lt;/button&gt; &lt;button type=\"button\" data-opcion=\"C\"&gt;Coreográfico&lt;/button&gt;&lt;/div&gt;\n&lt;p class=\"fc-respuesta\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"fc-creditos\"&gt;&lt;strong&gt;Créditos de imágenes:&lt;/strong&gt; sombrero vueltiao: Jdvillalobos, dominio público; cerámica de Ráquira: Marvin David Del Cid, CC BY-SA 4.0; tambor alegre: Plan Ceibal, CC BY-NC-SA 4.0; arpa llanera: José J. Lugo A., CC BY 3.0; cumbia: NatalyG2, CC BY-SA 4.0; Sanjuanero: Mendezma38, CC BY-SA 4.0.&lt;/div&gt;\n&lt;/div&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;\n&lt;script&gt;\n(function () {\n    var raiz = document.getElementById('folclor-clasifica');\n    if (!raiz) return;\n\n    raiz.querySelectorAll('.fc-item button').forEach(function (boton) {\n        boton.addEventListener('click', function () {\n            var item = boton.closest('.fc-item');\n            var salida = item.querySelector('.fc-respuesta');\n            var correcta = item.getAttribute('data-correcta');\n            var elegida = boton.getAttribute('data-opcion');\n\n            if (elegida === correcta) {\n                salida.textContent = 'Correcto.';\n            } else {\n                salida.textContent = 'Intenta de nuevo.';\n            }\n        });\n    });\n})();\n&lt;/script&gt;\n&lt;/p&gt;\n&lt;/div&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;Clasifica cada referente como &lt;strong&gt;demosófico, musical o coreográfico&lt;/strong&gt;.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. UBICA TU RUTA&lt;/h3&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;Tu docente te asignará una región. Selecciona esa ruta y consulta sus tres referentes.&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n#rutas-colombia {\n    width:100%;\n    max-width:900px;\n    margin:0 auto;\n    box-sizing:border-box;\n    font-family:Arial,sans-serif;\n    font-size:12pt;\n}\n\n#rutas-colombia .rc-botones {\n    display:grid !important;\n    grid-template-columns:repeat(3,minmax(0,1fr)) !important;\n    gap:8px;\n    margin-bottom:12px;\n}\n\n#rutas-colombia .rc-botones button {\n    width:100%;\n    padding:9px 6px;\n    font-family:Arial,sans-serif;\n    font-size:11pt;\n    cursor:pointer;\n}\n\n#rutas-colombia .rc-panel {\n    border:1px solid #888;\n    padding:12px;\n    box-sizing:border-box;\n}\n\n#rutas-colombia .rc-panel h3 {\n    font-family:'Arial Black',Arial,sans-serif;\n    font-size:12pt;\n    margin:0 0 10px 0;\n}\n\n#rutas-colombia .rc-panel p {\n    margin:6px 0;\n}\n\n@media (max-width:650px) {\n    #rutas-colombia .rc-botones {\n        grid-template-columns:repeat(2,minmax(0,1fr)) !important;\n    }\n}\n\n@media (max-width:420px) {\n    #rutas-colombia .rc-botones {\n        grid-template-columns:1fr !important;\n    }\n}\n&lt;/style&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif;\"&gt;\n&lt;div id=\"rutas-colombia\"&gt;\n&lt;div class=\"rc-botones\"&gt;&lt;button type=\"button\" data-ruta=\"caribe\"&gt;Caribe&lt;/button&gt; &lt;button type=\"button\" data-ruta=\"andina\"&gt;Andina&lt;/button&gt; &lt;button type=\"button\" data-ruta=\"pacifica\"&gt;Pacífica&lt;/button&gt; &lt;button type=\"button\" data-ruta=\"orinoquia\"&gt;Orinoquía&lt;/button&gt; &lt;button type=\"button\" data-ruta=\"amazonia\"&gt;Amazonía&lt;/button&gt; &lt;button type=\"button\" data-ruta=\"insular\"&gt;Insular&lt;/button&gt;&lt;/div&gt;\n&lt;div class=\"rc-panel\"&gt;\n&lt;h3 id=\"rc-titulo\"&gt;Selecciona una región&lt;/h3&gt;\n&lt;div id=\"rc-contenido\"&gt;\n&lt;p&gt;Aquí aparecerán los tres referentes de tu ruta.&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;\n&lt;script&gt;\n(function(){\n\n    var rutas = {\n\n        caribe: {\n            titulo: \"REGIÓN CARIBE\",\n            contenido:\n                \"&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; sombrero vueltiao del pueblo Zenú.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; tambor alegre.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; cumbia tradicional del Caribe colombiano.&lt;/p&gt;\"\n        },\n\n        andina: {\n            titulo: \"REGIÓN ANDINA\",\n            contenido:\n                \"&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; cerámica tradicional de Ráquira, Boyacá.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; tiple colombiano.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; Sanjuanero Huilense.&lt;/p&gt;\"\n        },\n\n        pacifica: {\n            titulo: \"REGIÓN PACÍFICA\",\n            contenido:\n                \"&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; cestería en werregue del pueblo Wounaan, Chocó.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; marimba de chonta del Pacífico Sur.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; currulao del Pacífico Sur.&lt;/p&gt;\"\n        },\n\n        orinoquia: {\n            titulo: \"REGIÓN ORINOQUÍA\",\n            contenido:\n                \"&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; campechana llanera.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; arpa llanera.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; joropo.&lt;/p&gt;\"\n        },\n\n        amazonia: {\n            titulo: \"REGIÓN AMAZONÍA\",\n            contenido:\n                \"&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; trabajo tradicional en yanchama.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; manguaré del pueblo murui muina.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; baile del chontaduro del pueblo Yucuna.&lt;/p&gt;\" +\n                \"&lt;p&gt;Estos referentes corresponden a diferentes pueblos y tradiciones de la región.&lt;/p&gt;\"\n        },\n\n        insular: {\n            titulo: \"REGIÓN INSULAR\",\n            contenido:\n                \"&lt;p&gt;&lt;strong&gt;Demosófico:&lt;/strong&gt; arquitectura tradicional raizal.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Musical:&lt;/strong&gt; tináfono.&lt;/p&gt;\" +\n                \"&lt;p&gt;&lt;strong&gt;Coreográfico:&lt;/strong&gt; jumping polka.&lt;/p&gt;\"\n        }\n\n    };\n\n    var recurso = document.getElementById(\"rutas-colombia\");\n    if (!recurso) return;\n\n    var titulo = document.getElementById(\"rc-titulo\");\n    var contenido = document.getElementById(\"rc-contenido\");\n\n    recurso.querySelectorAll(\"[data-ruta]\").forEach(function(boton){\n\n        boton.addEventListener(\"click\",function(){\n\n            var ruta = rutas[boton.getAttribute(\"data-ruta\")];\n\n            titulo.textContent = ruta.titulo;\n            contenido.innerHTML = ruta.contenido;\n\n        });\n\n    });\n\n})();\n&lt;/script&gt;\n&lt;br /&gt;&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;Una región reúne diferentes comunidades y tradiciones. Los tres referentes de una ruta no necesariamente pertenecen al mismo pueblo o comunidad.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;3. REGISTRA&lt;/h3&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;strong&gt;✎ ESCRIBE EN TU HOJA DE BLOC:&lt;/strong&gt;&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;\"&gt;COLOMBIA EN FORMAS – MI RUTA REGIONAL&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.8;\"&gt;Región: ___________________________________________&lt;br /&gt;Referente demosófico: ___________________________________________&lt;br /&gt;Referente musical: ___________________________________________&lt;br /&gt;Referente coreográfico: ___________________________________________&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;4. REVISA&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;\"&gt;Identifiqué correctamente mi región.&lt;/li&gt;\n&lt;li style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;\"&gt;Registré los tres referentes de mi ruta.&lt;/li&gt;\n&lt;li style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;\"&gt;Escribí los nombres completos y correctamente.&lt;/li&gt;\n&lt;li style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.6;\"&gt;Conservé la hoja de bloc para la próxima clase.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;","textFeedbackInput":"Mostrar retroalimentación","textFeedbackTextarea":""}</jsonProperties><odeComponentsOrder>1</odeComponentsOrder><odeComponentsProperties><odeComponentsProperty><key>visibility</key><value>true</value></odeComponentsProperty><odeComponentsProperty><key>teacherOnly</key><value>false</value></odeComponentsProperty><odeComponentsProperty><key>identifier</key><value/></odeComponentsProperty><odeComponentsProperty><key>cssClass</key><value/></odeComponentsProperty></odeComponentsProperties></odeComponent></odeComponents></odePagStructure></odePagStructures></odeNavStructure></odeNavStructures></ode>
