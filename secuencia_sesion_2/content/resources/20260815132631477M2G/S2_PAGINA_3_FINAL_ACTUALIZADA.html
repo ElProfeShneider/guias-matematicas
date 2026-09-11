@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sesión 2 · Comprueba lo aprendido</title>
+<style>
+:root{
+  --bg:#f5f7f9;--card:#fff;--text:#17212b;--muted:#596774;--line:#cfd8e2;
+  --ink:#273948;--accent:#0f5f9b;--accent2:#7b4a14;--soft:#eaf4fb;--warm:#fff7eb;
+  --ok:#24663b;--danger:#8b3b2e;--radius:14px
+}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.35}
+button{font:inherit}.shell{width:100%;max-width:none;margin:auto;padding:5px 6px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px;margin:6px 0}
+h1,h2,h3,p{margin-top:0}.title{font-size:1.28rem;margin-bottom:4px}.sub{font-size:.91rem;color:var(--muted);margin-bottom:0}.kicker{font-size:.75rem;text-transform:uppercase;font-weight:700;letter-spacing:.03em;color:var(--muted);margin-bottom:4px}
+.role{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem;margin-top:9px}.role strong{color:#0b4268}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:12px}.stage{position:relative;min-height:360px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;touch-action:none;cursor:grab}.stage:active{cursor:grabbing}.stage:focus-visible{outline:3px solid rgba(15,95,155,.24);outline-offset:2px}.stage svg{display:block;width:100%;height:100%;min-height:360px}.hint{position:absolute;left:9px;bottom:8px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.94);padding:4px 7px;font-size:.73rem;color:var(--muted);pointer-events:none}
+.side{display:flex;flex-direction:column;gap:10px}.label{font-size:.73rem;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:5px}.btns{display:grid;gap:6px}.btn{appearance:none;border:1px solid var(--line);background:#fff;color:var(--text);border-radius:10px;padding:8px 10px;min-height:44px;font-weight:700;cursor:pointer;text-align:left}.btn:hover{border-color:var(--accent)}.btn:disabled{opacity:.45;cursor:not-allowed}.btn:focus-visible{outline:3px solid rgba(15,95,155,.24);outline-offset:2px}.btn.sel,.btn[aria-pressed="true"]{border-color:var(--accent);background:var(--soft);color:#0b4268}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;text-align:center}.btn.primary:disabled{background:#d5dde4;border-color:#d5dde4;color:#66727c;cursor:not-allowed}.btn.small{text-align:center;padding:6px;min-height:44px}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.blank{visibility:hidden}.info{border-left:4px solid var(--accent);background:#f6fbfe;border-radius:8px;padding:9px 10px;font-size:.89rem}.info strong{color:#0b4268}.round-info{display:grid;gap:4px;margin-top:6px}.round-info span{font-size:.86rem}.compare2d{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.conceptbox{border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;background:#fff}.conceptbox svg{width:100%;max-height:150px}.conceptbox strong{display:block;color:#0b4268;margin-top:4px}.conceptbox p{margin:2px 0 0;font-size:.85rem;color:var(--muted)}
+.case-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}.badge{font-size:.78rem;font-weight:700;padding:5px 8px;border-radius:999px;border:1px solid var(--line);background:#fafcfd;color:var(--muted)}.statement{border-left:4px solid var(--accent);background:#f7fbfe;border-radius:8px;padding:10px 11px;font-weight:700;margin:9px 0}.decision{display:flex;gap:7px;flex-wrap:wrap}.decision .btn{text-align:center;min-width:118px}.decision.locked .btn:disabled{opacity:.58;cursor:default}.decision.locked .btn.sel:disabled{opacity:1;border-color:var(--accent);background:var(--soft);color:#0b4268}.evidence{margin-top:10px;border:1px solid #b8c6d2;background:#f8fbfd;border-radius:10px;padding:9px 10px;font-size:.87rem}.evidence[hidden]{display:none}.evidence strong{color:#0b4268}.decision-note{margin-top:7px;padding-top:7px;border-top:1px solid #dbe3ea;font-weight:700}.decision-note.match{color:#24663b}.decision-note.review-note{color:#7b4a14}.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.mini-view{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.mini-view .capture-title{background:#fafcfd}.mini-view svg{display:block;width:100%;height:auto}.legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:7px;font-size:.82rem;color:var(--muted)}.legend-item{display:inline-flex;align-items:center;gap:5px}.line-blue{width:24px;height:0;border-top:5px solid #0f5f9b;border-radius:5px}.mark-orange{width:18px;height:18px;border-radius:50%;background:#9a5b17;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700}.guide-strip{background:#f6f9fb;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem;margin-top:8px}.case-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:10px}.capture{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden}.capture svg{display:block;width:100%;height:auto}.capture-title{font-size:.78rem;font-weight:700;color:var(--muted);padding:7px 9px;border-bottom:1px solid var(--line)}
+.review{background:var(--warm);border:1px solid #ead0a3;border-radius:10px;padding:8px 10px;font-size:.9rem}.micro{font-size:.8rem;color:var(--muted)}
+#caseIntro{padding:9px 12px;margin-bottom:3px}#caseIntro .role{margin-top:0}#caseA{margin-top:3px}
+@media(max-width:760px){.layout,.case-layout{grid-template-columns:1fr}.stage,.stage svg{min-height:330px}.side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.info{grid-column:1/-1}.compare2d{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.evidence-grid{grid-template-columns:1fr}.shell{padding:4px}.card{padding:10px}.stage,.stage svg{min-height:300px}.side{grid-template-columns:1fr}.compare2d{grid-template-columns:1fr}}
+
+.flow-nav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px}.flow-status{font-size:.82rem;color:var(--muted)}
+.f4-final{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 11px;font-size:.92rem;margin:0}.f4-final[hidden]{display:none}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main class="shell">
+<section class="card" id="roundConcepts">
+  <h2 class="title">Cuerpos redondos</h2>
+  <p class="sub">Revisen los tres cuerpos y sus partes. Para girar, arrastren el cuerpo o usen las flechas.</p>
+  <div class="layout">
+    <div class="stage" id="roundStage" tabindex="0" role="group" aria-label="Cilindro, cono o esfera manipulable">
+      <svg id="roundSvg" viewBox="0 0 720 450" role="img" aria-label="Cuerpo redondo con una parte resaltada">
+        <defs>
+          <pattern id="rDots" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#0f5f9b" opacity=".73"/></pattern>
+          <linearGradient id="curve" x1="0" x2="1"><stop offset="0" stop-color="#dbe4ea"/><stop offset=".50" stop-color="#f7f9fb"/><stop offset="1" stop-color="#d7e0e7"/></linearGradient>
+          <linearGradient id="curveSel" x1="0" x2="1"><stop offset="0" stop-color="#bdd9eb"/><stop offset=".50" stop-color="#e9f4fb"/><stop offset="1" stop-color="#b9d4e6"/></linearGradient>
+          <radialGradient id="sphere" cx="35%" cy="30%" r="72%"><stop offset="0" stop-color="#fff"/><stop offset=".64" stop-color="#edf2f6"/><stop offset="1" stop-color="#dae4eb"/></radialGradient><radialGradient id="sphereSel" cx="35%" cy="30%" r="72%"><stop offset="0" stop-color="#eef8fd"/><stop offset=".62" stop-color="#d6ebf7"/><stop offset="1" stop-color="#a9cde2"/></radialGradient>
+        </defs>
+        <g data-faces></g><g data-lines></g><g data-hi></g>
+      </svg>
+    </div>
+    <aside class="side">
+      <div><div class="label">Cuerpo</div><div class="btns">
+        <button class="btn" data-rbody="cylinder" aria-pressed="true">Cilindro</button>
+        <button class="btn" data-rbody="cone" aria-pressed="false">Cono</button>
+        <button class="btn" data-rbody="sphere" aria-pressed="false">Esfera</button>
+      </div></div>
+      <div><div class="label">Parte</div><div class="btns" id="roundParts"></div></div>
+      <div id="roundTurnPanel"><div class="label">Girar</div><div class="controls">
+        <span class="blank"></span><button class="btn small" data-rturn="up" aria-label="Girar hacia arriba">↑</button><span class="blank"></span>
+        <button class="btn small" data-rturn="left" aria-label="Girar a la izquierda">←</button><button class="btn small" id="roundReset">Vista inicial</button><button class="btn small" data-rturn="right" aria-label="Girar a la derecha">→</button>
+        <span class="blank"></span><button class="btn small" data-rturn="down" aria-label="Girar hacia abajo">↓</button><span class="blank"></span>
+      </div></div>
+      <div class="info" id="roundInfo" aria-live="polite"></div>
+    </aside>
+  </div>
+
+  <div class="compare2d">
+    <div class="conceptbox">
+      <svg viewBox="0 0 220 145" role="img" aria-label="Círculo como región plana"><circle cx="110" cy="72" r="52" fill="url(#flatDotsInline)" stroke="#0f5f9b" stroke-width="2"/><defs><pattern id="flatDotsInline" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" fill="#0f5f9b" opacity=".64"/></pattern></defs></svg>
+      <strong>Círculo</strong><p>Región plana limitada por una circunferencia.</p>
+    </div>
+    <div class="conceptbox">
+      <svg viewBox="0 0 220 145" role="img" aria-label="Circunferencia como línea que limita el círculo"><circle cx="110" cy="72" r="52" fill="#fff" stroke="#0f5f9b" stroke-width="5"/></svg>
+      <strong>Circunferencia</strong><p>Línea curva cerrada que forma el borde del círculo.</p>
+    </div>
+  </div>
+  <div class="flow-nav"><span class="flow-status" id="roundProgress">Cuerpos revisados: 1 de 3</span><button class="btn primary" id="introNext" disabled>Continuar</button></div>
+</section>
+
+<section class="card" id="caseIntro">
+  <div class="guide-strip"><strong>En cada caso:</strong> completen en la guía la decisión inicial y qué observaron → seleccionen aquí la misma opción → pulsen «Mostrar evidencia» → registren en la guía la decisión final.</div>
+</section>
+
+<section class="card" id="caseA">
+  <div class="case-head"><div><div class="kicker">Caso A</div><h2 class="title">Pirámide pentagonal</h2></div></div>
+  <div class="statement">“La cara triangular resaltada es una cara lateral de esta pirámide.”</div>
+  <div class="case-layout">
+    <div class="stage" id="pyrStage" tabindex="0" role="group" aria-label="Pirámide pentagonal manipulable"><svg id="pyrSvg" viewBox="0 0 720 430" role="img" aria-label="Pirámide pentagonal con una cara triangular resaltada"><defs><pattern id="pDots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" fill="#0f5f9b" opacity=".72"/></pattern><pattern id="pBase" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#7b4a14" stroke-width="1.4" opacity=".72"/></pattern></defs><g data-faces></g><g data-edges></g><g data-hi></g></svg></div>
+    <aside class="side">
+      <div><div class="label">Decisión inicial</div><div class="decision"><button class="btn" data-dec="A" data-value="keep" aria-pressed="false">Mantener</button><button class="btn" data-dec="A" data-value="fix" aria-pressed="false">Corregir</button></div></div>
+      <button class="btn primary" id="evA" aria-controls="evidenceA" aria-expanded="false" disabled>Mostrar evidencia</button>
+      <div class="evidence" id="evidenceA" hidden><strong>Evidencia:</strong> en esta pirámide, la base es pentagonal y la cara triangular resaltada es lateral.<div class="decision-note" id="noteA" role="status" aria-live="polite"></div></div>
+      <div><div class="label">Girar</div><div class="controls"><span class="blank"></span><button class="btn small" data-pturn="up" aria-label="Girar hacia arriba">↑</button><span class="blank"></span><button class="btn small" data-pturn="left" aria-label="Girar a la izquierda">←</button><button class="btn small" id="pyrReset">Vista inicial</button><button class="btn small" data-pturn="right" aria-label="Girar a la derecha">→</button><span class="blank"></span><button class="btn small" data-pturn="down" aria-label="Girar hacia abajo">↓</button><span class="blank"></span></div></div>
+    </aside>
+  </div>
+  <div class="flow-nav"><button class="btn" id="backA">Anterior</button><button class="btn primary" id="nextA" disabled>Siguiente</button></div>
+</section>
+
+<section class="card" id="caseB">
+  <div class="case-head"><div><div class="kicker">Caso B</div><h2 class="title">Cilindro</h2></div></div>
+  <div class="statement">“La línea resaltada en la representación del cilindro es una arista del cuerpo.”</div>
+  <div class="case-layout">
+    <div class="capture">
+      <div class="capture-title">Representación que se está revisando</div>
+      <svg id="cylCapture" viewBox="0 0 720 430" role="img" aria-label="Representación de un cilindro con una línea resaltada"></svg>
+    </div>
+    <aside class="side">
+      <div><div class="label">Decisión inicial</div><div class="decision"><button class="btn" data-dec="B" data-value="keep" aria-pressed="false">Mantener</button><button class="btn" data-dec="B" data-value="fix" aria-pressed="false">Corregir</button></div></div>
+      <button class="btn primary" id="evB" aria-controls="evidenceB" aria-expanded="false" disabled>Mostrar evidencia</button>
+    </aside>
+  </div>
+  <div class="evidence" id="evidenceB" hidden>
+    <div><strong>Compara las dos vistas.</strong></div>
+    <div class="evidence-grid">
+      <div class="mini-view"><div class="capture-title">Vista inicial</div><svg id="cylEvBefore" viewBox="0 0 360 240" role="img" aria-label="Cilindro en vista inicial con contorno azul y marca M"></svg></div>
+      <div class="mini-view"><div class="capture-title">Después de girar</div><svg id="cylEvAfter" viewBox="0 0 360 240" role="img" aria-label="Mismo cilindro después de girar con la marca M en otra posición"></svg></div>
+    </div>
+    <div class="legend"><span class="legend-item"><span class="line-blue"></span> contorno de la vista</span><span class="legend-item"><span class="mark-orange">M</span> marca fija en la superficie</span></div>
+    <div style="margin-top:7px"><strong>Conclusión:</strong> la marca M permanece fija en la superficie, pero el contorno depende de la vista. <strong>Por eso, el contorno resaltado no es una arista.</strong></div>
+    <div class="decision-note" id="noteB" role="status" aria-live="polite"></div>
+  </div>
+  <div class="flow-nav"><button class="btn" id="backB">Anterior</button><button class="btn primary" id="nextB" disabled>Siguiente</button></div>
+</section>
+
+<section class="card" id="caseC">
+  <div class="case-head"><div><div class="kicker">Caso C</div><h2 class="title">Prisma rectangular</h2></div></div>
+  <div class="statement">“X y V señalan el mismo vértice del prisma rectangular.”</div>
+  <div class="case-layout">
+    <div class="stage" id="prismStage" tabindex="0" role="group" aria-label="Prisma rectangular manipulable"><svg id="prismSvg" viewBox="0 0 720 430" role="img" aria-label="Prisma rectangular con el vértice V resaltado"><g data-faces></g><g data-edges></g><g data-hi></g></svg></div>
+    <aside class="side">
+      <div class="capture"><div class="capture-title">Captura 2D</div><svg id="prismCapture" viewBox="0 0 360 235" role="img" aria-label="Captura del prisma rectangular con el punto X"></svg></div>
+      <div id="prismTurnPanel"><div class="label">Girar</div><div class="controls"><span class="blank"></span><button class="btn small" data-bturn="up" aria-label="Girar hacia arriba">↑</button><span class="blank"></span><button class="btn small" data-bturn="left" aria-label="Girar a la izquierda">←</button><button class="btn small" id="prismReset">Vista inicial</button><button class="btn small" data-bturn="right" aria-label="Girar a la derecha">→</button><span class="blank"></span><button class="btn small" data-bturn="down" aria-label="Girar hacia abajo">↓</button><span class="blank"></span></div></div>
+      <div><div class="label">Decisión inicial</div><div class="decision"><button class="btn" data-dec="C" data-value="keep" aria-pressed="false">Mantener</button><button class="btn" data-dec="C" data-value="fix" aria-pressed="false">Corregir</button></div></div>
+      <button class="btn primary" id="evC" aria-controls="evidenceC" aria-expanded="false" disabled>Mostrar evidencia</button>
+      <div class="evidence" id="evidenceC" hidden><strong>Evidencia:</strong> al usar la misma vista, V y X quedan en vértices distintos.<div class="decision-note" id="noteC" role="status" aria-live="polite"></div></div>
+    </aside>
+  </div>
+  <div class="flow-nav"><button class="btn" id="backC">Anterior</button><button class="btn primary" id="nextC" disabled>Siguiente</button></div>
+</section>
+
+<section class="card" id="reviewScreen">
+  <div class="review">Antes de continuar, revisen los casos A, B y C en la guía. Verifiquen que completaron la decisión final y, si corresponde, la corrección de la afirmación. No modifiquen la decisión inicial.</div>
+  <div class="flow-nav"><button class="btn" id="backReview">Anterior</button><button class="btn primary" id="finishF4">Finalizar revisión</button></div>
+</section>
+<div class="f4-final" id="finalF4" hidden><strong>Listo.</strong> Continúen con la siguiente página en el menú.</div>
+</main>
+<script>
+(()=>{'use strict';
+const D=Math.PI/180, clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), avg=a=>a.reduce((s,x)=>s+x,0)/a.length;
+const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+const norm=v=>{const m=Math.hypot(...v)||1;return v.map(x=>x/m)};
+function rot(p,yaw,pitch){let[x,y,z]=p;const cy=Math.cos(yaw),sy=Math.sin(yaw),x1=cy*x+sy*z,z1=-sy*x+cy*z,cp=Math.cos(pitch),sp=Math.sin(pitch);return[x1,cp*y-sp*z1,sp*y+cp*z1]}
+function finalize(model){const c=[avg(model.v.map(p=>p[0])),avg(model.v.map(p=>p[1])),avg(model.v.map(p=>p[2]))];model.f=model.f.map(f=>{let n=norm(cross(sub(model.v[f.i[1]],model.v[f.i[0]]),sub(model.v[f.i[2]],model.v[f.i[0]])));const fc=[avg(f.i.map(i=>model.v[i][0])),avg(f.i.map(i=>model.v[i][1])),avg(f.i.map(i=>model.v[i][2]))];if(dot(n,sub(fc,c))<0)n=n.map(x=>-x);return{...f,n}});const s=new Set();model.f.forEach(f=>f.i.forEach((a,j)=>{const b=f.i[(j+1)%f.i.length],k=a<b?`${a}-${b}`:`${b}-${a}`;s.add(k)}));model.e=[...s].map(k=>k.split('-').map(Number));return model}
+function pyramid(){const v=[],R=1.30,y=-1.12;for(let k=0;k<5;k++){const a=Math.PI/2+2*Math.PI*k/5;v.push([R*Math.cos(a),y,R*Math.sin(a)])}v.push([0,1.55,0]);const f=[{id:'base',i:[4,3,2,1,0]}];for(let k=0;k<5;k++)f.push({id:'lat'+k,i:[k,(k+1)%5,5]});return finalize({v,f})}
+function prism(){const x=1.42,y=1.02,z=.92;return finalize({v:[[-x,-y,-z],[x,-y,-z],[x,y,-z],[-x,y,-z],[-x,-y,z],[x,-y,z],[x,y,z],[-x,y,z]],f:[{id:'front',i:[4,5,6,7]},{id:'back',i:[1,0,3,2]},{id:'left',i:[0,4,7,3]},{id:'right',i:[5,1,2,6]},{id:'top',i:[7,6,2,3]},{id:'bottom',i:[0,1,5,4]}]})}
+const pyr=pyramid(), box=prism();
+class PolyViewer{
+ constructor(svg,model,{yaw=-28,pitch=18,cam=7,focal=565}={}){this.svg=svg;this.model=model;this.yaw=yaw*D;this.pitch=pitch*D;this.cam=cam;this.focal=focal;this.sel=null;this.extra=null;this.extraEdge=null;this.extraVertex=null;this.locked=false;this.drag=null;this.gF=svg.querySelector('[data-faces]');this.gE=svg.querySelector('[data-edges]');this.gH=svg.querySelector('[data-hi]');this.bind();this.draw()}
+ bind(){const st=this.svg.closest('.stage');if(!st)return;st.addEventListener('pointerdown',e=>{st.focus();if(this.locked)return;st.setPointerCapture(e.pointerId);this.drag={x:e.clientX,y:e.clientY,yaw:this.yaw,pitch:this.pitch,id:e.pointerId}});st.addEventListener('pointermove',e=>{if(!this.drag||e.pointerId!==this.drag.id)return;this.yaw=this.drag.yaw+(e.clientX-this.drag.x)*.010;this.pitch=clamp(this.drag.pitch+(e.clientY-this.drag.y)*.008,-62*D,62*D);this.draw()});['pointerup','pointercancel','lostpointercapture'].forEach(ev=>st.addEventListener(ev,()=>this.drag=null));st.addEventListener('keydown',e=>{if(this.locked)return;let used=true;if(e.key==='ArrowLeft')this.turn('left');else if(e.key==='ArrowRight')this.turn('right');else if(e.key==='ArrowUp')this.turn('up');else if(e.key==='ArrowDown')this.turn('down');else used=false;if(used)e.preventDefault();})}
+ turn(d){const s=14*D;if(d==='left')this.yaw-=s;if(d==='right')this.yaw+=s;if(d==='up')this.pitch=clamp(this.pitch-s,-62*D,62*D);if(d==='down')this.pitch=clamp(this.pitch+s,-62*D,62*D);this.draw()}
+ setView(y,p){this.yaw=y*D;this.pitch=p*D;this.draw()}
+ project(p){const z=this.cam-p[2];return[360+this.focal*p[0]/z,215-this.focal*p[1]/z,z]}
+ visibleData(){const V=this.model.v.map(p=>rot(p,this.yaw,this.pitch)),P=V.map(p=>this.project(p)),vis=new Set();const fd=this.model.f.map(f=>{const rn=rot(f.n,this.yaw,this.pitch),c=[avg(f.i.map(i=>V[i][0])),avg(f.i.map(i=>V[i][1])),avg(f.i.map(i=>V[i][2]))],to=[-c[0],-c[1],this.cam-c[2]],visible=dot(rn,to)>1e-8;if(visible)vis.add(f.id);return{f,rn,visible,depth:avg(f.i.map(i=>P[i][2]))}}).sort((a,b)=>b.depth-a.depth);return{V,P,vis,fd}}
+ draw(){const{P,vis,fd}=this.visibleData(),shade=rn=>{const q=dot(rn,[-.36,.54,.76]),b=236+Math.round(11*(q+1)/2);return`rgb(${b},${Math.min(252,b+2)},${Math.min(255,b+5)})`};this.gF.innerHTML=fd.filter(x=>x.visible).map(x=>`<polygon points="${x.f.i.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ')}" fill="${shade(x.rn)}"/>`).join('');const adj={};this.model.f.forEach(f=>f.i.forEach((a,j)=>{const b=f.i[(j+1)%f.i.length],k=a<b?`${a}-${b}`:`${b}-${a}`;(adj[k]||(adj[k]=[])).push(f.id)}));const evis=e=>(adj[e[0]<e[1]?`${e[0]}-${e[1]}`:`${e[1]}-${e[0]}`]||[]).some(id=>vis.has(id));this.gE.innerHTML=this.model.e.filter(evis).map(e=>`<line x1="${P[e[0]][0]}" y1="${P[e[0]][1]}" x2="${P[e[1]][0]}" y2="${P[e[1]][1]}" stroke="#273948" stroke-width="2.2" vector-effect="non-scaling-stroke"/>`).join('');let hi='';if(this.sel?.type==='face'){const f=this.model.f.find(f=>f.id===this.sel.id);if(f&&vis.has(f.id))hi+=`<polygon points="${f.i.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ')}" fill="url(#${this.sel.pattern})" stroke="${this.sel.stroke||'#0f5f9b'}" stroke-width="2.2"/>`}if(this.extra?.type==='face'){const f=this.model.f.find(f=>f.id===this.extra.id);if(f&&vis.has(f.id))hi+=`<polygon points="${f.i.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ')}" fill="url(#${this.extra.pattern})" stroke="${this.extra.stroke||'#7b4a14'}" stroke-width="2.2"/>`}if(this.sel?.type==='vertex'){const i=this.sel.i,faces=this.model.f.filter(f=>f.i.includes(i));if(faces.some(f=>vis.has(f.id)))hi+=`<circle cx="${P[i][0]}" cy="${P[i][1]}" r="8" fill="#0f5f9b" stroke="#fff" stroke-width="3"/><g transform="translate(${P[i][0]+28} ${P[i][1]-22})"><rect x="-17" y="-15" width="34" height="30" rx="15" fill="#0f5f9b"/><text text-anchor="middle" y="5" font-family="Arial" font-weight="700" font-size="14" fill="#fff">V</text></g>`}if(this.extraEdge){const e=this.extraEdge.e;if(evis(e))hi+=`<line x1="${P[e[0]][0]}" y1="${P[e[0]][1]}" x2="${P[e[1]][0]}" y2="${P[e[1]][1]}" stroke="${this.extraEdge.stroke||'#7b4a14'}" stroke-width="7" stroke-linecap="round"/>`}if(this.extraVertex){const i=this.extraVertex.i,faces=this.model.f.filter(f=>f.i.includes(i));if(faces.some(f=>vis.has(f.id)))hi+=`<circle cx="${P[i][0]}" cy="${P[i][1]}" r="8" fill="#9a5b17" stroke="#fff" stroke-width="3"/><g transform="translate(${P[i][0]-28} ${P[i][1]-22})"><rect x="-17" y="-15" width="34" height="30" rx="15" fill="#9a5b17"/><text text-anchor="middle" y="5" font-family="Arial" font-weight="700" font-size="14" fill="#fff">X</text></g>`}this.gH.innerHTML=hi;this.P=P}
+}
+const pv=new PolyViewer(document.getElementById('pyrSvg'),pyr,{yaw:-28,pitch:18});pv.sel={type:'face',id:'lat4',pattern:'pDots'};pv.draw();
+document.querySelectorAll('[data-pturn]').forEach(b=>b.onclick=()=>pv.turn(b.dataset.pturn));document.getElementById('pyrReset').onclick=()=>pv.setView(-28,18);
+const bx=new PolyViewer(document.getElementById('prismSvg'),box,{yaw:-30,pitch:18});bx.sel={type:'vertex',i:6};bx.draw();
+document.querySelectorAll('[data-bturn]').forEach(b=>b.onclick=()=>{if(!bx.locked)bx.turn(b.dataset.bturn)});document.getElementById('prismReset').onclick=()=>{if(!bx.locked)bx.setView(-30,18)};
+
+// Round-body renderer: mathematically controlled smooth surfaces. The mesh is used only to compute visibility; its internal edges are never drawn.
+function roundFinalize(vertices,faces){
+ const c=[avg(vertices.map(v=>v[0])),avg(vertices.map(v=>v[1])),avg(vertices.map(v=>v[2]))];
+ return faces.map(f=>{let n=norm(cross(sub(vertices[f.v[1]],vertices[f.v[0]]),sub(vertices[f.v[2]],vertices[f.v[0]])));const fc=[avg(f.v.map(i=>vertices[i][0])),avg(f.v.map(i=>vertices[i][1])),avg(f.v.map(i=>vertices[i][2]))];if(dot(n,sub(fc,c))<0)n=n.map(x=>-x);return{...f,n}})
+}
+function cylinderModel(n=180,r=1.18,h=3.18){const v=[];for(let i=0;i<n;i++){const a=2*Math.PI*i/n;v.push([r*Math.cos(a),h/2,r*Math.sin(a)])}for(let i=0;i<n;i++){const a=2*Math.PI*i/n;v.push([r*Math.cos(a),-h/2,r*Math.sin(a)])}const f=[{id:'top',type:'flat',v:[...Array(n).keys()]},{id:'bottom',type:'flat',v:[...Array(n).keys()].reverse().map(i=>i+n)}];for(let i=0;i<n;i++){const j=(i+1)%n;f.push({id:'side'+i,type:'curved',v:[i,j,j+n,i+n]})}return{name:'cylinder',vertices:v,faces:roundFinalize(v,f),n,r,h}}
+function coneModel(n=180,r=1.18,h=3.18){const v=[];for(let i=0;i<n;i++){const a=2*Math.PI*i/n;v.push([r*Math.cos(a),-h/2,r*Math.sin(a)])}const apex=n;v.push([0,h/2,0]);const f=[{id:'base',type:'flat',v:[...Array(n).keys()].reverse()}];for(let i=0;i<n;i++){const j=(i+1)%n;f.push({id:'side'+i,type:'curved',v:[i,j,apex]})}return{name:'cone',vertices:v,faces:roundFinalize(v,f),n,r,h,apex}}
+function circularSeq(indices,n){const set=new Set(indices);if(!indices.length)return[];if(indices.length===n)return[...Array(n).keys()];let start=null;for(let i=0;i<n;i++)if(set.has(i)&&!set.has((i-1+n)%n)){start=i;break}if(start===null)start=indices[0];const out=[];let i=start;while(set.has(i)&&out.length<n){out.push(i);i=(i+1)%n}return out}
+function pointInPoly(point,poly){let inside=false;const[x,y]=point;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const[xi,yi]=poly[i],[xj,yj]=poly[j];const hit=((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/((yj-yi)||1e-12)+xi);if(hit)inside=!inside}return inside}
+class RoundViewer{
+ constructor(svg,{body='cylinder',yaw=-28,pitch=18,cam=7,focal=590}={}){this.svg=svg;this.body=body;this.yaw=yaw*D;this.pitch=pitch*D;this.cam=cam;this.focal=focal;this.action='bases';this.drag=null;this.models={cylinder:cylinderModel(),cone:coneModel()};this.sr=1.28;this.gF=svg.querySelector('[data-faces]');this.gL=svg.querySelector('[data-lines]');this.gH=svg.querySelector('[data-hi]');this.bind();this.draw()}
+ bind(){const st=this.svg.closest('.stage');if(!st)return;st.addEventListener('pointerdown',e=>{st.focus();st.setPointerCapture(e.pointerId);this.drag={x:e.clientX,y:e.clientY,yaw:this.yaw,pitch:this.pitch,id:e.pointerId}});st.addEventListener('pointermove',e=>{if(!this.drag||e.pointerId!==this.drag.id)return;this.yaw=this.drag.yaw+(e.clientX-this.drag.x)*.010;this.pitch=clamp(this.drag.pitch+(e.clientY-this.drag.y)*.008,-58*D,58*D);this.draw()});['pointerup','pointercancel','lostpointercapture'].forEach(ev=>st.addEventListener(ev,()=>this.drag=null));st.addEventListener('keydown',e=>{let used=true;if(e.key==='ArrowLeft')this.turn('left');else if(e.key==='ArrowRight')this.turn('right');else if(e.key==='ArrowUp')this.turn('up');else if(e.key==='ArrowDown')this.turn('down');else used=false;if(used)e.preventDefault();})}
+ setBody(b){this.body=b;this.action=b==='sphere'?'surface':(b==='cone'?'base':'bases');this.defaultView();this.draw()}
+ defaultView(){if(this.body==='cylinder'){this.yaw=-28*D;this.pitch=18*D}else if(this.body==='cone'){this.yaw=-26*D;this.pitch=-18*D}else{this.yaw=0;this.pitch=0}}
+ turn(d){const s=14*D;if(d==='left')this.yaw-=s;if(d==='right')this.yaw+=s;if(d==='up')this.pitch=clamp(this.pitch-s,-58*D,58*D);if(d==='down')this.pitch=clamp(this.pitch+s,-58*D,58*D);this.draw()}
+ project(p){const z=this.cam-p[2];return[360+this.focal*p[0]/z,218-this.focal*p[1]/z,z]}
+ faceData(model){const V=model.vertices.map(v=>rot(v,this.yaw,this.pitch)),P=V.map(v=>this.project(v));const data=model.faces.map(f=>{const rn=rot(f.n,this.yaw,this.pitch),c=[avg(f.v.map(i=>V[i][0])),avg(f.v.map(i=>V[i][1])),avg(f.v.map(i=>V[i][2]))],to=[-c[0],-c[1],this.cam-c[2]],score=dot(rn,to);return{f,rn,visible:score>1e-7,score,depth:avg(f.v.map(i=>P[i][2]))}});return{V,P,data}}
+ drawMesh(model){const{P,data}=this.faceData(model),visible=data.filter(x=>x.visible),flats=visible.filter(x=>x.f.type==='flat').sort((a,b)=>b.depth-a.depth),sideIdx=visible.filter(x=>x.f.type==='curved').map(x=>Number(x.f.id.replace('side',''))).filter(Number.isFinite),seq=circularSeq(sideIdx,model.n);let curved='';
+   if(seq.length){const ring=[...seq,(seq[seq.length-1]+1)%model.n];if(model.name==='cylinder'){const pts=[...ring.map(i=>P[i]),...ring.slice().reverse().map(i=>P[i+model.n])];curved=`<polygon points="${pts.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ')}" fill="url(#${this.action==='curve'?'curveSel':'curve'})"/>`}else{const pts=[...ring.map(i=>P[i]),P[model.apex]];curved=`<polygon points="${pts.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ')}" fill="url(#${this.action==='curve'?'curveSel':'curve'})"/>`}}
+   const selectedFlat=flats[0]?.f.id||null,flatHTML=flats.map(x=>`<polygon points="${x.f.v.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ')}" fill="${((this.action==='bases'||this.action==='base')&&x.f.id===selectedFlat)?'url(#rDots)':'#f8fafc'}" stroke="#667684" stroke-width="1.3" vector-effect="non-scaling-stroke"/>`).join('');this.gF.innerHTML=curved+flatHTML;this.gL.innerHTML='';this.gH.innerHTML='';
+   if(model.name==='cone'&&this.action==='vertex'){const ap=P[model.apex],base=flats.find(x=>x.f.id==='base');let hidden=false;if(base){const poly=base.f.v.map(i=>P[i]);hidden=pointInPoly([ap[0],ap[1]],poly.map(q=>[q[0],q[1]]))&&ap[2]>avg(poly.map(q=>q[2]))}if(!hidden)this.gH.innerHTML=`<circle cx="${ap[0]}" cy="${ap[1]}" r="8" fill="#0f5f9b" stroke="#fff" stroke-width="3"/>`}
+ }
+ draw(){if(this.body==='sphere'){const rr=this.focal*this.sr/Math.sqrt(this.cam*this.cam-this.sr*this.sr),fill=this.action==='surface'?'sphereSel':'sphere';const gx=(35+10*Math.sin(this.yaw)).toFixed(1)+'%',gy=(30+8*Math.sin(this.pitch)).toFixed(1)+'%';for(const id of ['sphere','sphereSel']){const g=this.svg.querySelector('#'+id);if(g){g.setAttribute('cx',gx);g.setAttribute('cy',gy)}}this.gF.innerHTML=`<circle cx="360" cy="218" r="${rr.toFixed(2)}" fill="url(#${fill})" stroke="#667684" stroke-width="1.4"/>`;this.gL.innerHTML='';this.gH.innerHTML='';return}this.drawMesh(this.models[this.body])}
+}
+const rv=new RoundViewer(document.getElementById('roundSvg'));
+function roundPartButtons(){const p=document.getElementById('roundParts');let data=[];if(rv.body==='cylinder')data=[['bases','Bases'],['curve','Superficie curva']];if(rv.body==='cone')data=[['base','Base'],['curve','Superficie curva'],['vertex','Vértice']];if(rv.body==='sphere')data=[['surface','Superficie curva']];p.innerHTML=data.map((x,i)=>`<button class="btn" data-rpart="${x[0]}" aria-pressed="${i===0}">${x[1]}</button>`).join('');p.querySelectorAll('[data-rpart]').forEach(b=>b.onclick=()=>{p.querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',String(z===b)));rv.action=b.dataset.rpart;if(rv.body==='cylinder')rv.pitch=(rv.action==='bases'?18:14)*D;if(rv.body==='cone')rv.pitch=(rv.action==='base'?-18:12)*D;rv.draw();updateRoundInfo()});rv.action=data[0][0];rv.draw();updateRoundInfo()}
+function updateRoundInfo(){let h='';if(rv.body==='cylinder')h='<strong>Cilindro</strong><div class="round-info"><span>2 bases circulares</span><span>1 superficie lateral curva</span><span>Sin vértices</span></div>';if(rv.body==='cone')h='<strong>Cono</strong><div class="round-info"><span>1 base circular</span><span>1 superficie lateral curva</span><span>1 vértice</span></div>';if(rv.body==='sphere')h='<strong>Esfera</strong><div class="round-info"><span>1 superficie curva</span><span>Sin bases, aristas ni vértices</span></div>';document.getElementById('roundInfo').innerHTML=h}
+function updateRoundControls(){}
+document.querySelectorAll('[data-rbody]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-rbody]').forEach(z=>z.setAttribute('aria-pressed',String(z===b)));rv.setBody(b.dataset.rbody);roundPartButtons();updateRoundControls()});document.querySelectorAll('[data-rturn]').forEach(b=>b.onclick=()=>rv.turn(b.dataset.rturn));document.getElementById('roundReset').onclick=()=>{rv.defaultView();rv.draw()};roundPartButtons();updateRoundControls();
+
+// El sistema solo muestra la conclusión después de que el equipo toma una decisión.
+const decisions={},correctDecision={A:'keep',B:'fix',C:'fix'};
+for(const key of ['A','B','C'])document.querySelectorAll(`[data-dec="${key}"]`).forEach(b=>b.onclick=()=>{document.querySelectorAll(`[data-dec="${key}"]`).forEach(z=>{z.classList.toggle('sel',z===b);z.setAttribute('aria-pressed',String(z===b))});decisions[key]=b.dataset.value;document.getElementById('ev'+key).disabled=false;const ev=document.getElementById('evidence'+key);if(ev&&!ev.hidden)decisionNote(key,correctDecision[key])});
+function decisionNote(key,correct){const el=document.getElementById('note'+key);if(!el)return;const match=decisions[key]===correct;el.className='decision-note '+(match?'match':'review-note');el.textContent=match?'La decisión inicial coincide con la evidencia. Registren ahora la decisión final en la guía.':'La decisión inicial no coincide con la evidencia. Registren ahora la decisión final en la guía.'}
+function lockDecision(key){const buttons=[...document.querySelectorAll(`[data-dec="${key}"]`)];buttons.forEach(b=>b.disabled=true);const group=buttons[0]?.closest('.decision');if(group)group.classList.add('locked');const ev=document.getElementById('ev'+key);if(ev)ev.setAttribute('aria-expanded','true')}
+document.getElementById('evA').onclick=()=>{pv.setView(-35,-30);pv.extra={type:'face',id:'base',pattern:'pBase',stroke:'#7b4a14'};pv.extraEdge={e:[4,0],stroke:'#7b4a14'};pv.draw();document.getElementById('evidenceA').hidden=false;decisionNote('A','keep')};
+
+// Cylinder case B: the highlighted line is a view-dependent silhouette generator, not a stored edge.
+function cylinderSilhouetteData(yawDeg,pitchDeg,cam=7,focal=590,cx=360,cy=215){const model=cylinderModel(180,1.18,3.18),yaw=yawDeg*D,pitch=pitchDeg*D,V=model.vertices.map(v=>rot(v,yaw,pitch)),P=V.map(p=>{const d=cam-p[2];return[cx+focal*p[0]/d,cy-focal*p[1]/d,d]}),visible=model.faces.map(f=>{const rn=rot(f.n,yaw,pitch),c=[avg(f.v.map(i=>V[i][0])),avg(f.v.map(i=>V[i][1])),avg(f.v.map(i=>V[i][2]))],to=[-c[0],-c[1],cam-c[2]];return{f,visible:dot(rn,to)>1e-7}}).filter(x=>x.visible),seq=circularSeq(visible.filter(x=>x.f.type==='curved').map(x=>Number(x.f.id.replace('side',''))),model.n),ring=[...seq,(seq[seq.length-1]+1)%model.n],sidePts=[...ring.map(i=>P[i]),...ring.slice().reverse().map(i=>P[i+model.n])],bounds=[ring[0],ring[ring.length-1]].map(i=>({i,top:P[i],bottom:P[i+model.n]}));bounds.sort((a,b)=>b.top[0]-a.top[0]);const flats=visible.filter(x=>x.f.type==='flat').map(x=>x.f);return{model,P,sidePts,line:bounds[0],flats}}
+function cylinderSnapshot(svg,yaw=-28,pitch=18){const d=cylinderSilhouetteData(yaw,pitch),ps=p=>p.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ');let h=`<defs><linearGradient id="snapGrad" x1="0" x2="1"><stop offset="0" stop-color="#dbe4ea"/><stop offset=".5" stop-color="#f7f9fb"/><stop offset="1" stop-color="#d7e0e7"/></linearGradient></defs><polygon points="${ps(d.sidePts)}" fill="url(#snapGrad)"/>`;for(const f of d.flats)h+=`<polygon points="${ps(f.v.map(i=>d.P[i]))}" fill="#f8fafc" stroke="#667684" stroke-width="1.4"/>`;const a=d.line.top,b=d.line.bottom;h+=`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#0f5f9b" stroke-width="7" stroke-linecap="round"/>`;svg.innerHTML=h}
+cylinderSnapshot(document.getElementById('cylCapture'));
+function projectRoundPoint(point,yawDeg,pitchDeg,cam=7,focal=295,cx=180,cy=116){const q=rot(point,yawDeg*D,pitchDeg*D),d=cam-q[2];return[cx+focal*q[0]/d,cy-focal*q[1]/d,d]}
+const B_REF={yaw:-28,pitch:18};
+const B_MARKER_INDEX=cylinderSilhouetteData(B_REF.yaw,B_REF.pitch).line.i;
+function cylinderEvidenceSnapshot(svg,yawDeg,pitchDeg){const d=cylinderSilhouetteData(yawDeg,pitchDeg,7,295,180,116),ps=p=>p.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ');let h=`<defs><linearGradient id="evGrad${svg.id}" x1="0" x2="1"><stop offset="0" stop-color="#dbe4ea"/><stop offset=".5" stop-color="#f7f9fb"/><stop offset="1" stop-color="#d7e0e7"/></linearGradient></defs><polygon points="${ps(d.sidePts)}" fill="url(#evGrad${svg.id})"/>`;for(const f of d.flats)h+=`<polygon points="${ps(f.v.map(i=>d.P[i]))}" fill="#f8fafc" stroke="#667684" stroke-width="1.2"/>`;const a=d.line.top,b=d.line.bottom;h+=`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#0f5f9b" stroke-width="5" stroke-linecap="round"/>`;const th=2*Math.PI*B_MARKER_INDEX/180,m=projectRoundPoint([1.18*Math.cos(th),0,1.18*Math.sin(th)],yawDeg,pitchDeg);h+=`<circle cx="${m[0]}" cy="${m[1]}" r="11" fill="#9a5b17" stroke="#fff" stroke-width="2"/><text x="${m[0]}" y="${m[1]+4}" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">M</text>`;svg.innerHTML=h}
+document.getElementById('evB').onclick=()=>{cylinderEvidenceSnapshot(document.getElementById('cylEvBefore'),B_REF.yaw,B_REF.pitch);cylinderEvidenceSnapshot(document.getElementById('cylEvAfter'),B_REF.yaw-75,B_REF.pitch);document.getElementById('evidenceB').hidden=false;decisionNote('B','fix')};
+
+// Prism capture: same geometry and exact reference camera; X deliberately marks adjacent vertex 7, V is vertex 6.
+const REF={yaw:-34,pitch:20};
+function projectModel(model,yaw,pitch,cam=7,focal=285,cx=180,cy=118){const V=model.v.map(p=>rot(p,yaw*D,pitch*D)),P=V.map(p=>{const d=cam-p[2];return[cx+focal*p[0]/d,cy-focal*p[1]/d,d]});return{V,P}}
+function drawPrismCapture(){const svg=document.getElementById('prismCapture'),{V,P}=projectModel(box,REF.yaw,REF.pitch),vis=new Set(),fd=box.f.map(f=>{const rn=rot(f.n,REF.yaw*D,REF.pitch*D),c=[avg(f.i.map(i=>V[i][0])),avg(f.i.map(i=>V[i][1])),avg(f.i.map(i=>V[i][2]))],to=[-c[0],-c[1],7-c[2]],visible=dot(rn,to)>1e-8;if(visible)vis.add(f.id);return{f,visible,depth:avg(f.i.map(i=>P[i][2]))}}).sort((a,b)=>b.depth-a.depth);const adj={};box.f.forEach(f=>f.i.forEach((a,j)=>{const b=f.i[(j+1)%f.i.length],k=a<b?`${a}-${b}`:`${b}-${a}`;(adj[k]||(adj[k]=[])).push(f.id)}));const evis=e=>(adj[e[0]<e[1]?`${e[0]}-${e[1]}`:`${e[1]}-${e[0]}`]||[]).some(id=>vis.has(id));let h=fd.filter(x=>x.visible).map(x=>`<polygon points="${x.f.i.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ')}" fill="#f2f5f7"/>`).join('');h+=box.e.filter(evis).map(e=>`<line x1="${P[e[0]][0]}" y1="${P[e[0]][1]}" x2="${P[e[1]][0]}" y2="${P[e[1]][1]}" stroke="#273948" stroke-width="1.8"/>`).join('');const X=7;h+=`<circle cx="${P[X][0]}" cy="${P[X][1]}" r="9" fill="#fff" stroke="#7b4a14" stroke-width="4"/><g transform="translate(${P[X][0]-25} ${P[X][1]-22})"><rect x="-16" y="-14" width="32" height="28" rx="14" fill="#7b4a14"/><text y="5" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">X</text></g>`;svg.innerHTML=h}drawPrismCapture();document.getElementById('evC').onclick=()=>{bx.setView(REF.yaw,REF.pitch);bx.extraVertex={i:7};bx.locked=true;bx.draw();document.querySelectorAll('[data-bturn],#prismReset').forEach(z=>z.disabled=true);document.getElementById('evidenceC').hidden=false;decisionNote('C','fix')};
+
+
+// ----- Flujo único para eXeLearning -----
+const flowEls={round:document.getElementById('roundConcepts'),intro:document.getElementById('caseIntro'),A:document.getElementById('caseA'),B:document.getElementById('caseB'),C:document.getElementById('caseC'),review:document.getElementById('reviewScreen'),final:document.getElementById('finalF4')};
+const visitedBodies=new Set(['cylinder']);
+let lastHostHeight=0, hostPending=false, hostParentStyle=null, hostFrameSelector='';
+function hostPx(value){const n=Number.parseFloat(value);return Number.isFinite(n)?n:0;}
+function measureHostHeight(){
+  const body=document.body;
+  const root=document.querySelector('.shell')||body.firstElementChild||body;
+  if(!body||!root)return 0;
+  const rr=root.getBoundingClientRect(), br=body.getBoundingClientRect();
+  const rs=getComputedStyle(root), bs=getComputedStyle(body);
+  const visualBottom=rr.bottom-br.top;
+  const naturalBottom=(rr.top-br.top)+Math.max(rr.height,root.scrollHeight||0);
+  return Math.max(180,Math.ceil(Math.max(visualBottom,naturalBottom)+hostPx(rs.marginBottom)+hostPx(bs.paddingBottom)+4));
+}
+function ensureHostParentRule(frame){
+  try{
+    const pd=frame.ownerDocument;
+    if(!pd)return;
+    if(!frame.dataset.s2DynamicFrame)frame.dataset.s2DynamicFrame='s2-'+Math.random().toString(36).slice(2,8);
+    hostFrameSelector=`iframe[data-s2-dynamic-frame="${frame.dataset.s2DynamicFrame}"]`;
+    if(!hostParentStyle||!hostParentStyle.isConnected){
+      hostParentStyle=pd.createElement('style');
+      hostParentStyle.dataset.s2DynamicStyle=frame.dataset.s2DynamicFrame;
+      (pd.head||pd.documentElement).appendChild(hostParentStyle);
+    }
+  }catch(e){hostParentStyle=null;hostFrameSelector='';}
+}
+function applyHostHeight(h){
+  try{
+    const frame=window.frameElement;
+    if(!frame||!h)return;
+    frame.style.setProperty('width','100%','important');
+    frame.style.setProperty('max-width','100%','important');
+    frame.style.setProperty('display','block','important');
+    frame.style.setProperty('border','0','important');
+    frame.style.setProperty('height',h+'px','important');
+    frame.style.setProperty('min-height','0px','important');
+    frame.style.setProperty('overflow','hidden','important');
+    frame.setAttribute('width','100%');
+    frame.setAttribute('height',String(h));
+    frame.setAttribute('scrolling','no');
+    ensureHostParentRule(frame);
+    if(hostParentStyle&&hostFrameSelector){
+      hostParentStyle.textContent=`${hostFrameSelector}{width:100%!important;max-width:100%!important;height:${h}px!important;min-height:0!important;overflow:hidden!important;display:block!important;border:0!important;}`;
+    }
+  }catch(e){}
+}
+function fitHost(){
+  hostPending=false;
+  const h=measureHostHeight();
+  if(!h)return;
+  if(Math.abs(h-lastHostHeight)>=2||lastHostHeight===0)lastHostHeight=h;
+  applyHostHeight(lastHostHeight||h);
+  try{if(window.parent!==window)window.parent.postMessage({type:'S2_RESOURCE_HEIGHT',height:lastHostHeight||h},'*')}catch(e){}
+}
+function scheduleHost(){
+  if(hostPending)return;
+  hostPending=true;
+  requestAnimationFrame(()=>requestAnimationFrame(fitHost));
+}
+function burstHost(){
+  scheduleHost();
+  setTimeout(scheduleHost,50);
+  setTimeout(scheduleHost,140);
+  setTimeout(scheduleHost,300);
+  setTimeout(scheduleHost,650);
+}
+function showFlow(name){for(const [k,el] of Object.entries(flowEls))if(el)el.hidden=true;if(name==='A'){flowEls.intro.hidden=false;flowEls.A.hidden=false}else if(flowEls[name])flowEls[name].hidden=false;window.scrollTo(0,0);burstHost()}
+flowEls.intro.hidden=true;flowEls.A.hidden=true;flowEls.B.hidden=true;flowEls.C.hidden=true;flowEls.review.hidden=true;flowEls.final.hidden=true;
+const progress=document.getElementById('roundProgress'),introNext=document.getElementById('introNext');
+function refreshVisited(){progress.textContent=`Cuerpos revisados: ${visitedBodies.size} de 3`;introNext.disabled=visitedBodies.size<3;}
+document.querySelectorAll('[data-rbody]').forEach(b=>b.addEventListener('click',()=>{visitedBodies.add(b.dataset.rbody);refreshVisited();burstHost()}));refreshVisited();
+introNext.onclick=()=>showFlow('A');
+document.getElementById('backA').onclick=()=>showFlow('round');document.getElementById('nextA').onclick=()=>showFlow('B');
+document.getElementById('backB').onclick=()=>showFlow('A');document.getElementById('nextB').onclick=()=>showFlow('C');
+document.getElementById('backC').onclick=()=>showFlow('B');document.getElementById('nextC').onclick=()=>showFlow('review');
+document.getElementById('backReview').onclick=()=>showFlow('C');document.getElementById('finishF4').onclick=()=>showFlow('final');
+const _evA=document.getElementById('evA').onclick;document.getElementById('evA').onclick=()=>{_evA();lockDecision('A');document.getElementById('nextA').disabled=false;burstHost()};
+const _evB=document.getElementById('evB').onclick;document.getElementById('evB').onclick=()=>{_evB();lockDecision('B');document.getElementById('nextB').disabled=false;burstHost()};
+const _evC=document.getElementById('evC').onclick;document.getElementById('evC').onclick=()=>{_evC();lockDecision('C');document.getElementById('nextC').disabled=false;burstHost()};
+const hostRoot=document.querySelector('.shell')||document.body;
+try{new ResizeObserver(burstHost).observe(hostRoot)}catch(e){}
+try{new MutationObserver(burstHost).observe(hostRoot,{subtree:true,childList:true,attributes:true,characterData:true})}catch(e){}
+window.addEventListener('load',()=>{burstHost();[90,250,600,1200,2200].forEach(d=>setTimeout(burstHost,d));});
+window.addEventListener('resize',burstHost,{passive:true});
+})();
+</script>
+</body></html>

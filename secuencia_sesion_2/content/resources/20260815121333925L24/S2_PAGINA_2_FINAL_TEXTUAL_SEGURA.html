@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sesión 2 · Analiza</title>
+<style>
+:root{--bg:#f5f7f9;--card:#fff;--text:#17212b;--muted:#596675;--line:#cfd8e2;--accent:#0f5f9b;--accent-soft:#eaf4fb;--ok:#27643d;--ok-soft:#eef8f1}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.wrap{width:100%;max-width:none;margin:0 auto;padding:6px}
+.frame{display:block;width:100%;height:720px;border:0;background:var(--bg);overflow:hidden}.frame[hidden]{display:none!important}
+.done{margin:6px 4px 0;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--text)}
+.done strong{color:#0b4268}
+@media(max-width:760px){.frame{height:900px}}
+.p3-help,.rb-help,.hint,.rb-legend{display:none!important}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <iframe id="stage" class="frame" title="Exploración de partes de los cuerpos geométricos" scrolling="no"></iframe>
+  <section id="done" class="done" hidden><strong>Listo.</strong> Esperen la indicación del docente. Cuando indique «REVISIÓN», completen la columna <strong>«Revisión del equipo»</strong> en la guía. No borren ni cambien <strong>«Primera decisión»</strong>. Cuando terminen, seleccionen la siguiente página en el menú.</section>
+</main>
+
+<template id="f2tpl"><!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Explora las partes de los cuerpos</title>
+  <style>
+:root{
+  --bg:#f5f7f9;--card:#fff;--text:#17212b;--muted:#596675;--line:#cfd8e2;
+  --edge:#263746;--accent:#0f5f9b;--accent-soft:#eaf4fb;--ok:#27643d;--ok-soft:#eef8f1;
+  --warn:#7a5412;--warn-soft:#fff8e8;--radius:14px;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.35}
+button,input{font:inherit}
+.s2-shell{width:100%;max-width:none;margin:0 auto;padding:12px}
+.s2-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;margin:10px 0}
+.s2-title{margin:0 0 5px;font-size:1.28rem}.s2-sub{margin:0;color:var(--muted);font-size:.92rem}
+.s2-kicker{font-size:.78rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.s2-step{display:none}.s2-step.active{display:block}
+.s2-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.s2-tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px;font-weight:700;color:var(--muted)}.s2-tab.active{border-color:var(--accent);background:var(--accent-soft);color:#093e65}
+.s2-btn{appearance:none;border:1px solid var(--line);background:#fff;color:var(--text);border-radius:10px;padding:8px 10px;font-weight:700;cursor:pointer;min-height:44px}.s2-btn:hover:not([disabled]){border-color:var(--accent)}.s2-btn:focus-visible{outline:3px solid rgba(15,95,155,.25);outline-offset:2px}.s2-btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.s2-btn[disabled]{opacity:.45;cursor:not-allowed}.s2-btn[aria-pressed='true'],.s2-btn.selected{border-color:var(--accent);background:var(--accent-soft);color:#093e65}
+.s2-actions{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.s2-feedback{border-left:4px solid var(--accent);background:#f7fbfe;padding:8px 10px;border-radius:8px;margin:9px 0;font-size:.9rem}.s2-feedback[hidden]{display:none}.s2-question{margin:12px 0 6px;font-weight:700}.s2-options{display:grid;gap:6px;max-width:620px}.s2-options .s2-btn{text-align:left;font-weight:600}.s2-nav{display:flex;justify-content:space-between;gap:8px;margin-top:12px}.s2-note{font-size:.8rem;color:var(--muted)}
+.s2-instruction{margin:8px 0 10px;padding:9px 11px;border-radius:10px;background:#f7f9fb;border:1px solid var(--line);font-size:.92rem}.s2-instruction strong{color:#0b4268}
+.s2-status{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:.82rem;font-weight:700;color:var(--muted);background:#fff}.s2-status.ok{border-color:#b9dbc4;background:var(--ok-soft);color:var(--ok)}.s2-status .dot{width:9px;height:9px;border-radius:50%;background:#a4adb7}.s2-status.ok .dot{background:var(--ok)}
+.s2-divider{border:0;border-top:1px solid #dce3ea;margin:16px 0}.s2-reveal[hidden]{display:none}
+
+/* poly inspector */
+.p3-layout{display:grid;grid-template-columns:minmax(0,1fr) 245px;gap:12px;align-items:stretch}.p3-stage{position:relative;min-height:390px;border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;touch-action:none;user-select:none;cursor:grab}.p3-stage:active{cursor:grabbing}.p3-stage svg{display:block;width:100%;height:100%;min-height:390px}.p3-help{position:absolute;left:10px;bottom:9px;background:rgba(255,255,255,.95);border:1px solid var(--line);padding:5px 8px;border-radius:8px;font-size:.76rem;color:var(--muted);pointer-events:none}.p3-occluded{position:absolute;left:50%;top:10px;transform:translateX(-50%);max-width:90%;background:rgba(255,255,255,.97);border:1px solid var(--line);padding:6px 9px;border-radius:8px;font-size:.8rem;color:var(--muted);text-align:center}.p3-side{display:flex;flex-direction:column;gap:10px}.p3-label{font-size:.76rem;font-weight:700;color:var(--muted);text-transform:uppercase;margin-bottom:5px}.p3-choice{display:grid;gap:7px}.p3-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.p3-controls .blank{visibility:hidden}.p3-badge{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:24px;border:1px solid var(--line);border-radius:999px;padding:0 7px;font-size:.78rem;background:#fff;margin-right:6px}.p3-btn{appearance:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 9px;font-weight:700;cursor:pointer;min-height:44px;text-align:left}.p3-btn:hover{border-color:var(--accent)}.p3-btn:focus-visible{outline:3px solid rgba(15,95,155,.25);outline-offset:2px}.p3-btn[aria-pressed='true']{border-color:var(--accent);background:var(--accent-soft);color:#093e65}.p3-btn.compact{text-align:center;min-height:42px;padding:6px 7px}.p3-reset{width:100%;margin-top:6px}
+
+/* 2D correspondence */
+.cor-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:12px;align-items:start}.cor-panel{border:1px solid var(--line);border-radius:12px;padding:10px;background:#fff}.cor-panel svg{width:100%;height:auto;display:block}.cor-choices{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.cor-choices .s2-btn{min-width:58px;text-align:center}
+
+/* round bodies: mathematically controlled 3D renderer */
+.rb-layout{display:grid;grid-template-columns:minmax(0,1fr) 255px;gap:12px;align-items:stretch}.rb-stage{position:relative;min-height:390px;border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;touch-action:none;user-select:none;cursor:grab}.rb-stage:active{cursor:grabbing}.rb-stage svg{display:block;width:100%;height:100%;min-height:390px}.rb-help{position:absolute;left:10px;bottom:9px;background:rgba(255,255,255,.96);border:1px solid var(--line);padding:5px 8px;border-radius:8px;font-size:.76rem;color:var(--muted);pointer-events:none}.rb-side{display:flex;flex-direction:column;gap:10px}.rb-selector,.rb-actions{display:grid;gap:6px}.rb-msg{font-size:.88rem;color:var(--muted);min-height:58px;border:1px solid var(--line);border-radius:9px;padding:9px;background:#fafcfd}.rb-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.rb-controls .blank{visibility:hidden}.rb-legend{font-size:.77rem;color:var(--muted);margin-top:4px}.rb-visited{display:flex;gap:5px;flex-wrap:wrap}.rb-chip{font-size:.74rem;border:1px solid var(--line);border-radius:999px;padding:4px 7px;color:var(--muted);background:#fff}.rb-chip.done{border-color:#b9dbc4;background:var(--ok-soft);color:var(--ok);font-weight:700}
+
+@media(max-width:760px){.p3-layout,.rb-layout,.cor-grid{grid-template-columns:1fr}.p3-stage,.p3-stage svg,.rb-stage,.rb-stage svg{min-height:340px}.p3-side,.rb-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.rb-msg{grid-column:1/-1}}
+@media(max-width:480px){.s2-shell{padding:7px}.s2-card{padding:10px}.p3-stage,.p3-stage svg,.rb-stage,.rb-stage svg{min-height:310px}.p3-side,.rb-side{grid-template-columns:1fr}}
+
+.p3-help,.rb-help,.hint,.rb-legend{display:none!important}
+</style>
+</head>
+<body>
+<main class="s2-shell">
+  <section class="s2-card">
+    <p class="s2-sub"><strong>Observen y conversen antes de decidir.</strong> Para girar, arrastren el cuerpo o usen las flechas.</p>
+    <div class="s2-tabs" aria-label="Pasos de la exploración">
+      <span class="s2-tab active" data-tab="0">1 · Cambia la vista</span>
+      <span class="s2-tab" data-tab="1">2 · Superficies</span>
+      <span class="s2-tab" data-tab="2">3 · Compara cuerpos</span>
+    </div>
+  </section>
+
+  <section class="s2-card s2-step active" data-step="0">
+    <h2 class="s2-title">¿Qué pasó con E?</h2>
+    <div class="s2-instruction">Giren el cubo hasta que E deje de verse. Entonces aparecerá una pregunta.</div>
+    <div class="s2-status" id="eStatus" role="status" aria-live="polite"><span class="dot"></span><span>E se ve</span></div>
+    <div id="cubeE"></div>
+    <div class="s2-actions">
+      <button class="s2-btn" id="showHidden" disabled>Comprobar dónde está E</button>
+      <button class="s2-btn" id="helpHide">Ayuda con el giro</button>
+    </div>
+
+    <div id="hiddenChallenge" class="s2-reveal" hidden>
+      <p class="s2-question">Cuando E dejó de verse, el segmento…</p>
+      <div class="s2-options" id="hiddenQ">
+        <button class="s2-btn" data-v="gone" disabled>dejó de pertenecer al cuerpo.</button>
+        <button class="s2-btn" data-v="hidden" disabled>seguía en el cuerpo, pero quedó oculto.</button>
+      </div>
+      <div class="s2-feedback" id="hiddenFb" aria-live="polite" hidden></div>
+    </div>
+
+    <div id="corSection" class="s2-reveal" hidden>
+      <hr class="s2-divider">
+      <h3 style="margin:0 0 6px">Del 3D a una imagen</h3>
+      <p class="s2-question">¿Cuál representa el mismo segmento E?</p>
+      <div class="cor-grid">
+        <div class="cor-panel">
+          <svg id="capture" viewBox="0 0 720 470" role="img" aria-label="Vista de referencia del cubo con tres segmentos marcados X, Y y Z">
+            <g id="capFaces"></g><g id="capEdges"></g><g id="capMarks"></g><g id="capHi"></g>
+          </svg>
+          <div class="cor-choices">
+            <button class="s2-btn" data-cor="X">X</button>
+            <button class="s2-btn" data-cor="Y">Y</button>
+            <button class="s2-btn" data-cor="Z">Z</button>
+          </div>
+        </div>
+        <div>
+          <div class="s2-instruction">Después de elegir, pulsen <strong>Vista de referencia</strong> para comparar.</div>
+          <button class="s2-btn primary" id="reference" disabled>Vista de referencia</button>
+          <div class="s2-feedback" id="corFb" aria-live="polite" hidden></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s2-nav"><span></span><button class="s2-btn primary" id="nextStep1" data-next="1" disabled>Siguiente</button></div>
+  </section>
+
+  <section class="s2-card s2-step" data-step="1">
+    <h2 class="s2-title">Compara dos superficies</h2>
+    <div class="s2-instruction">Seleccionen <strong>P</strong> y <strong>T</strong>, una por una. Giren la pirámide si lo necesitan y observen cada región resaltada.</div>
+    <div id="pyramid"></div>
+
+    <p class="s2-question">P y T corresponden a:</p>
+    <div class="s2-options" id="ptQ">
+      <button class="s2-btn" data-v="points">puntos.</button>
+      <button class="s2-btn" data-v="segments">segmentos.</button>
+      <button class="s2-btn" data-v="surfaces">superficies.</button>
+    </div>
+
+    <p class="s2-question">¿Qué diferencia observas?</p>
+    <div class="s2-options" id="shapeQ">
+      <button class="s2-btn" data-v="different">P tiene forma pentagonal y T tiene forma triangular.</button>
+      <button class="s2-btn" data-v="same">Tienen exactamente la misma forma.</button>
+      <button class="s2-btn" data-v="mixed">Una es un punto y la otra una superficie.</button>
+    </div>
+    <div class="s2-feedback" id="pyrFb" aria-live="polite" hidden></div>
+    <div class="s2-nav"><button class="s2-btn" data-prev="0">Anterior</button><button class="s2-btn primary" id="nextStep2" data-next="2" disabled>Siguiente</button></div>
+  </section>
+
+  <section class="s2-card s2-step" data-step="2">
+    <h2 class="s2-title">Compara cilindro, cono y esfera</h2>
+    <div class="s2-instruction">Prueben <em>Zona plana</em>, <em>Superficie curva</em> y <em>Punta</em> en cada cuerpo. Luego comparen.</div>
+    <div id="round"></div>
+
+    <p class="s2-question">¿Los tres cuerpos presentan las mismas clases de partes?</p>
+    <div class="s2-options" id="roundQ">
+      <button class="s2-btn" data-v="yes">Sí, son las mismas.</button>
+      <button class="s2-btn" data-v="no">No, hay diferencias.</button>
+    </div>
+    <div class="s2-feedback" id="roundFb" aria-live="polite" hidden></div>
+    <div class="s2-nav"><button class="s2-btn" data-prev="1">Anterior</button><button class="s2-btn primary" id="finish" disabled>Continuar</button></div>
+  </section>
+</main>
+
+<script>
+(function(global){'use strict';
+let SEQ=0;
+const d2r=d=>d*Math.PI/180, clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const avg=a=>a.reduce((s,v)=>s+v,0)/a.length;
+const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]];
+const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+const norm=v=>{const m=Math.hypot(...v)||1;return v.map(x=>x/m)};
+const edgeKey=(a,b)=>a<b?`${a}-${b}`:`${b}-${a}`;
+function finalizeModel(model){
+  const center=[avg(model.vertices.map(v=>v[0])),avg(model.vertices.map(v=>v[1])),avg(model.vertices.map(v=>v[2]))];
+  model.faces=model.faces.map(f=>{
+    const p0=model.vertices[f.v[0]],p1=model.vertices[f.v[1]],p2=model.vertices[f.v[2]];
+    let n=norm(cross(sub(p1,p0),sub(p2,p0)));
+    const fc=[avg(f.v.map(i=>model.vertices[i][0])),avg(f.v.map(i=>model.vertices[i][1])),avg(f.v.map(i=>model.vertices[i][2]))];
+    if(dot(n,sub(fc,center))<0)n=n.map(x=>-x);
+    return {...f,n};
+  });
+  const em=new Map();model.faces.forEach(f=>{for(let i=0;i<f.v.length;i++){const a=f.v[i],b=f.v[(i+1)%f.v.length];em.set(edgeKey(a,b),a<b?[a,b]:[b,a]);}});model.edges=[...em.values()];
+  return model;
+}
+function cube(){return finalizeModel({name:'cubo',vertices:[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]],faces:[{id:'back',v:[0,3,2,1]},{id:'front',v:[4,5,6,7]},{id:'bottom',v:[0,1,5,4]},{id:'right',v:[1,2,6,5]},{id:'top',v:[3,7,6,2]},{id:'left',v:[0,4,7,3]}]});}
+function pyramidPentagonal(){
+  const R=1.28,y=-1.05,vs=[];
+  for(let i=0;i<5;i++){const a=d2r(90+i*72);vs.push([R*Math.cos(a),y,R*Math.sin(a)]);}vs.push([0,1.5,0]);
+  const faces=[{id:'base',v:[0,1,2,3,4]}];for(let i=0;i<5;i++)faces.push({id:`side${i}`,v:[i,(i+1)%5,5]});
+  return finalizeModel({name:'pirámide pentagonal',vertices:vs,faces});
+}
+function rot(p,yaw,pitch){let [x,y,z]=p;const cy=Math.cos(yaw),sy=Math.sin(yaw);const x1=cy*x+sy*z,z1=-sy*x+cy*z;const cp=Math.cos(pitch),sp=Math.sin(pitch);return[x1,cp*y-sp*z1,sp*y+cp*z1];}
+class Poly3D{
+  constructor(root,opt={}){this.root=typeof root==='string'?document.querySelector(root):root;this.id='p3-'+(++SEQ);this.model=opt.model||cube();this.yaw=d2r(opt.yaw??-32);this.pitch=d2r(opt.pitch??22);this.initial={yaw:this.yaw,pitch:this.pitch};this.selection=opt.selection||null;this.selections=opt.selections||{};this.choicePrefix=opt.choicePrefix||'';this.fixedSelection=!!opt.fixedSelection;this.showSelectedHidden=false;this.onVisibility=opt.onVisibility||null;this.hideOccludedMessage=!!opt.hideOccludedMessage;this.cameraZ=6.7;this.focal=520;this.drag=null;this.shell(opt);this.bind();this.render();}
+  shell(opt){const dots=this.id+'-dots';this.dots=dots;this.root.innerHTML=`<div class="p3-layout"><div class="p3-stage" data-stage tabindex="0"><svg data-svg viewBox="0 0 720 470" role="img" aria-label="${opt.ariaLabel||'Cuerpo geométrico manipulable'}"><defs><pattern id="${dots}" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#0f5f9b" opacity=".72"/></pattern></defs><g data-faces></g><g data-edges></g><g data-hi></g><g data-lab></g></svg><div class="p3-help">Arrastra o usa las flechas.</div><div class="p3-occluded" data-occ hidden>La señal quedó oculta en esta vista.</div></div><aside class="p3-side">${this.fixedSelection?'':`<div><div class="p3-label">${this.choicePrefix||'Señal'}</div><div class="p3-choice" data-choice></div></div>`}<div><div class="p3-label">Girar</div><div class="p3-controls"><span class="blank"></span><button class="p3-btn compact" data-turn="up" aria-label="Girar hacia arriba">↑</button><span class="blank"></span><button class="p3-btn compact" data-turn="left" aria-label="Girar a la izquierda">←</button><span class="blank"></span><button class="p3-btn compact" data-turn="right" aria-label="Girar a la derecha">→</button><span class="blank"></span><button class="p3-btn compact" data-turn="down" aria-label="Girar hacia abajo">↓</button><span class="blank"></span></div><button class="p3-btn compact p3-reset" data-reset>Vista inicial</button></div><div data-extra></div></aside></div>`;
+    this.stage=this.root.querySelector('[data-stage]');this.svg=this.root.querySelector('[data-svg]');this.gFaces=this.root.querySelector('[data-faces]');this.gEdges=this.root.querySelector('[data-edges]');this.gHi=this.root.querySelector('[data-hi]');this.gLab=this.root.querySelector('[data-lab]');this.occ=this.root.querySelector('[data-occ]');this.extra=this.root.querySelector('[data-extra]');
+    const c=this.root.querySelector('[data-choice]');if(c)c.innerHTML=Object.entries(this.selections).map(([k,s])=>`<button class="p3-btn" data-sel="${k}" aria-pressed="${k===this.selection}"><span class="p3-badge">${s.label||k}</span>${s.buttonText||k}</button>`).join('');
+  }
+  bind(){this.root.querySelectorAll('[data-sel]').forEach(b=>b.addEventListener('click',()=>{this.selection=b.dataset.sel;this.root.querySelectorAll('[data-sel]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.sel===this.selection)));this.showSelectedHidden=false;this.render();}));this.root.querySelectorAll('[data-turn]').forEach(b=>b.addEventListener('click',()=>{const s=d2r(14);if(b.dataset.turn==='left')this.yaw-=s;if(b.dataset.turn==='right')this.yaw+=s;if(b.dataset.turn==='up')this.pitch=clamp(this.pitch-s,d2r(-65),d2r(65));if(b.dataset.turn==='down')this.pitch=clamp(this.pitch+s,d2r(-65),d2r(65));this.render();}));this.root.querySelector('[data-reset]').addEventListener('click',()=>this.setView(this.initial.yaw*180/Math.PI,this.initial.pitch*180/Math.PI));const st=(x,y,id)=>this.drag={x,y,id,yaw:this.yaw,pitch:this.pitch},mv=(x,y,id)=>{if(!this.drag||id!==this.drag.id)return;this.yaw=this.drag.yaw+(x-this.drag.x)*.011;this.pitch=clamp(this.drag.pitch+(y-this.drag.y)*.009,d2r(-65),d2r(65));this.render();};this.stage.addEventListener('pointerdown',e=>{this.stage.setPointerCapture(e.pointerId);st(e.clientX,e.clientY,e.pointerId)});this.stage.addEventListener('pointermove',e=>mv(e.clientX,e.clientY,e.pointerId));['pointerup','pointercancel','lostpointercapture'].forEach(ev=>this.stage.addEventListener(ev,()=>this.drag=null));
+    this.stage.addEventListener('pointerdown',()=>this.stage.focus());
+    this.stage.addEventListener('keydown',e=>{const s=d2r(14);let used=true;if(e.key==='ArrowLeft')this.yaw-=s;else if(e.key==='ArrowRight')this.yaw+=s;else if(e.key==='ArrowUp')this.pitch=clamp(this.pitch-s,d2r(-65),d2r(65));else if(e.key==='ArrowDown')this.pitch=clamp(this.pitch+s,d2r(-65),d2r(65));else used=false;if(used){e.preventDefault();this.render();}});}
+  setView(yaw,pitch){this.yaw=d2r(yaw);this.pitch=d2r(pitch);this.render();}
+  setShowSelectedHidden(v){this.showSelectedHidden=!!v;this.render();}
+  project(p){const depth=this.cameraZ-p[2];return[360+this.focal*p[0]/depth,235-this.focal*p[1]/depth,depth];}
+  render(){const V=this.model.vertices.map(v=>rot(v,this.yaw,this.pitch)),P=V.map(v=>this.project(v)),vis=new Set();const fd=this.model.faces.map(f=>{const rn=rot(f.n,this.yaw,this.pitch),c=[avg(f.v.map(i=>V[i][0])),avg(f.v.map(i=>V[i][1])),avg(f.v.map(i=>V[i][2]))],tc=[-c[0],-c[1],this.cameraZ-c[2]],visible=dot(rn,tc)>1e-9;if(visible)vis.add(f.id);return{f,rn,depth:avg(f.v.map(i=>P[i][2])),visible}}).sort((a,b)=>b.depth-a.depth);
+    const light=rn=>{const L=[-.35,.55,.76],d=Math.max(-1,Math.min(1,dot(rn,L))),t=(d+1)/2,b=235+Math.round(15*t);return`rgb(${b},${Math.min(252,b+2)},${Math.min(255,b+5)})`};this.gFaces.innerHTML=fd.map(({f,rn,visible})=>visible?`<polygon points="${f.v.map(i=>`${P[i][0].toFixed(1)},${P[i][1].toFixed(1)}`).join(' ')}" fill="${light(rn)}"/>`:'').join('');
+    const adj={};this.model.faces.forEach(f=>{for(let i=0;i<f.v.length;i++){const k=edgeKey(f.v[i],f.v[(i+1)%f.v.length]);(adj[k]||(adj[k]=[])).push(f.id)}});const evis=e=>(adj[edgeKey(e[0],e[1])]||[]).some(id=>vis.has(id));this.gEdges.innerHTML=this.model.edges.filter(evis).map(e=>`<line x1="${P[e[0]][0].toFixed(1)}" y1="${P[e[0]][1].toFixed(1)}" x2="${P[e[1]][0].toFixed(1)}" y2="${P[e[1]][1].toFixed(1)}" stroke="#263746" stroke-width="2.4" vector-effect="non-scaling-stroke"/>`).join('');
+    const s=this.selections[this.selection];let selVisible=true,hi='',lab='';if(s){if(s.type==='face')selVisible=vis.has(s.face);if(s.type==='edge')selVisible=evis(s.edge);if(s.type==='vertex'){const fids=this.model.faces.filter(f=>f.v.includes(s.vertex)).map(f=>f.id);selVisible=fids.some(id=>vis.has(id));}
+      const ghost=!selVisible&&this.showSelectedHidden;if(selVisible||ghost){if(s.type==='face'){const f=this.model.faces.find(f=>f.id===s.face),pts=f.v.map(i=>`${P[i][0].toFixed(1)},${P[i][1].toFixed(1)}`).join(' ');hi=`<polygon points="${pts}" fill="url(#${this.dots})" stroke="#0f5f9b" stroke-width="1.8" ${ghost?'stroke-dasharray="6 5" opacity=".55"':''}/>`;const x=avg(f.v.map(i=>P[i][0])),y=avg(f.v.map(i=>P[i][1]));lab=this.label(s.label||this.selection,x,y-18,ghost);}else if(s.type==='edge'){const [a,b]=s.edge;hi=`<line x1="${P[a][0].toFixed(1)}" y1="${P[a][1].toFixed(1)}" x2="${P[b][0].toFixed(1)}" y2="${P[b][1].toFixed(1)}" stroke="#0f5f9b" stroke-width="7" stroke-linecap="round" ${ghost?'stroke-dasharray="9 7" opacity=".6"':''}/>`;lab=this.label(s.label||this.selection,(P[a][0]+P[b][0])/2,(P[a][1]+P[b][1])/2-20,ghost);}else{const p=P[s.vertex];hi=`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="10" fill="#fff" stroke="#0f5f9b" stroke-width="5"/><circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3" fill="#0f5f9b"/>`;lab=this.label(s.label||this.selection,p[0]+23,p[1]-18,ghost);}}
+      this.occ.hidden=selVisible||this.hideOccludedMessage;this.occ.textContent=selVisible?'':'La señal no se ve en esta vista.';if(this.onVisibility)this.onVisibility(selVisible,this);
+    }else this.occ.hidden=true;this.gHi.innerHTML=hi;this.gLab.innerHTML=lab;}
+  label(t,x,y,g){x=clamp(x,22,698);y=clamp(y,22,448);return`<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)})" ${g?'opacity=".6"':''}><circle r="14" fill="#0f5f9b" stroke="#fff" stroke-width="3"/><text y="5" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">${t}</text></g>`;}
+}
+Poly3D.models={cube,pyramidPentagonal,finalizeModel};global.Poly3D=Poly3D;
+})(window);
+
+</script>
+<script>
+(function(global){'use strict';
+let SEQ=0;
+const d2r=d=>d*Math.PI/180, clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const avg=a=>a.reduce((s,v)=>s+v,0)/a.length;
+const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]];
+const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+const norm=v=>{const m=Math.hypot(...v)||1;return v.map(x=>x/m)};
+function rot(p,yaw,pitch){let[x,y,z]=p;const cy=Math.cos(yaw),sy=Math.sin(yaw);const x1=cy*x+sy*z,z1=-sy*x+cy*z;const cp=Math.cos(pitch),sp=Math.sin(pitch);return[x1,cp*y-sp*z1,sp*y+cp*z1];}
+function finalize(vertices,faces){
+  const center=[avg(vertices.map(v=>v[0])),avg(vertices.map(v=>v[1])),avg(vertices.map(v=>v[2]))];
+  return faces.map(f=>{
+    const p0=vertices[f.v[0]],p1=vertices[f.v[1]],p2=vertices[f.v[2]];
+    let n=norm(cross(sub(p1,p0),sub(p2,p0)));
+    const fc=[avg(f.v.map(i=>vertices[i][0])),avg(f.v.map(i=>vertices[i][1])),avg(f.v.map(i=>vertices[i][2]))];
+    if(dot(n,sub(fc,center))<0)n=n.map(x=>-x);
+    return {...f,n};
+  });
+}
+function cylinderModel(n=128,r=1.20,h=3.20){
+  const v=[];for(let i=0;i<n;i++){const a=2*Math.PI*i/n;v.push([r*Math.cos(a),h/2,r*Math.sin(a)]);}for(let i=0;i<n;i++){const a=2*Math.PI*i/n;v.push([r*Math.cos(a),-h/2,r*Math.sin(a)]);}const f=[];
+  f.push({id:'top',type:'flat',v:[...Array(n).keys()]});
+  f.push({id:'bottom',type:'flat',v:[...Array(n).keys()].reverse().map(i=>i+n)});
+  for(let i=0;i<n;i++){const j=(i+1)%n;f.push({id:`side${i}`,type:'curved',v:[i,j,j+n,i+n]});}
+  return{name:'cylinder',vertices:v,faces:finalize(v,f),n,r,h};
+}
+function coneModel(n=128,r=1.20,h=3.20){
+  const v=[];for(let i=0;i<n;i++){const a=2*Math.PI*i/n;v.push([r*Math.cos(a),-h/2,r*Math.sin(a)]);}const apex=n;v.push([0,h/2,0]);const f=[];
+  f.push({id:'base',type:'flat',v:[...Array(n).keys()].reverse()});
+  for(let i=0;i<n;i++){const j=(i+1)%n;f.push({id:`side${i}`,type:'curved',v:[i,j,apex]});}
+  return{name:'cone',vertices:v,faces:finalize(v,f),n,r,h,apex};
+}
+class RoundBodiesExplorer{
+  constructor(root){
+    this.root=typeof root==='string'?document.querySelector(root):root;
+    this.id='rb-'+(++SEQ);this.body='cylinder';this.action=null;
+    this.defaultViews={cylinder:{yaw:-28,pitch:18},cone:{yaw:-26,pitch:10},sphere:{yaw:-18,pitch:10}};this.yaw=0;this.pitch=0;this.setDefaultView();
+    this.cameraZ=7.0;this.focal=590;this.drag=null;
+    this.models={cylinder:cylinderModel(),cone:coneModel()};this.sphereR=1.25;
+    this.visited={cylinder:new Set(),cone:new Set(),sphere:new Set()};
+    this.renderShell();this.bind();this.render();
+  }
+  renderShell(){
+    this.pattern=this.id+'-dots';
+    this.root.innerHTML=`<div class="rb-layout">
+      <div class="rb-stage" data-stage tabindex="0" aria-label="Cuerpo redondo manipulable">
+        <svg viewBox="0 0 720 470" role="img" aria-label="Comparación visual de cilindro, cono y esfera">
+          <defs>
+            <pattern id="${this.pattern}" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#0f5f9b" opacity=".72"/></pattern>
+            <linearGradient id="${this.id}-curve" x1="0" x2="1"><stop offset="0" stop-color="#dce5eb"/><stop offset=".50" stop-color="#f5f8fa"/><stop offset="1" stop-color="#d7e0e7"/></linearGradient>
+            <linearGradient id="${this.id}-curveSel" x1="0" x2="1"><stop offset="0" stop-color="#c9e2f3"/><stop offset=".50" stop-color="#e9f4fb"/><stop offset="1" stop-color="#c3ddec"/></linearGradient>
+            <radialGradient id="${this.id}-sphere" cx="36%" cy="30%" r="72%"><stop offset="0" stop-color="#ffffff"/><stop offset=".64" stop-color="#edf2f6"/><stop offset="1" stop-color="#dce5ec"/></radialGradient>
+          </defs>
+          <g data-faces></g><g data-outline></g><g data-overlay></g>
+        </svg>
+        <div class="rb-help">Arrastra o usa las flechas.</div>
+      </div>
+      <aside class="rb-side">
+        <div><div class="p3-label">1 · Elige un cuerpo</div><div class="rb-selector">
+          <button class="s2-btn" data-body="cylinder">Cilindro</button>
+          <button class="s2-btn" data-body="cone">Cono</button>
+          <button class="s2-btn" data-body="sphere">Esfera</button>
+        </div></div>
+        <div><div class="p3-label">2 · Busca una parte</div><div class="rb-actions">
+          <button class="s2-btn" data-action="flat">Zona plana</button>
+          <button class="s2-btn" data-action="curved">Superficie curva</button>
+          <button class="s2-btn" data-action="tip">Punta</button>
+        </div></div>
+        <div><div class="p3-label">Girar</div><div class="rb-controls">
+          <span class="blank"></span><button class="s2-btn" data-turn="up" aria-label="Girar hacia arriba">↑</button><span class="blank"></span>
+          <button class="s2-btn" data-turn="left" aria-label="Girar a la izquierda">←</button><span class="blank"></span><button class="s2-btn" data-turn="right" aria-label="Girar a la derecha">→</button>
+          <span class="blank"></span><button class="s2-btn" data-turn="down" aria-label="Girar hacia abajo">↓</button><span class="blank"></span>
+        </div><button class="s2-btn" data-reset style="width:100%;margin-top:6px">Vista inicial</button></div>
+        <div class="rb-msg" data-msg role="status" aria-live="polite"></div>
+        <div><div class="p3-label">Cuerpos revisados</div><div class="rb-visited">
+          <span class="rb-chip" data-chip="cylinder">Cilindro</span><span class="rb-chip" data-chip="cone">Cono</span><span class="rb-chip" data-chip="sphere">Esfera</span>
+        </div></div>
+      </aside>
+    </div>`;
+    this.stage=this.root.querySelector('[data-stage]');this.gFaces=this.root.querySelector('[data-faces]');this.gOutline=this.root.querySelector('[data-outline]');this.gOverlay=this.root.querySelector('[data-overlay]');this.msg=this.root.querySelector('[data-msg]');
+  }
+  bind(){
+    this.root.querySelectorAll('[data-body]').forEach(b=>b.addEventListener('click',()=>{this.body=b.dataset.body;this.action=null;this.setDefaultView();this.render();}));
+    this.root.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{this.action=b.dataset.action;this.visited[this.body].add(this.action);this.prepareViewForAction();this.render();if(this.onProgress)this.onProgress(this);}));
+    this.root.querySelectorAll('[data-turn]').forEach(b=>b.addEventListener('click',()=>{const s=d2r(14);if(b.dataset.turn==='left')this.yaw-=s;if(b.dataset.turn==='right')this.yaw+=s;if(b.dataset.turn==='up')this.pitch=clamp(this.pitch-s,d2r(-58),d2r(58));if(b.dataset.turn==='down')this.pitch=clamp(this.pitch+s,d2r(-58),d2r(58));this.render();}));
+    this.root.querySelector('[data-reset]').addEventListener('click',()=>{this.setDefaultView();this.render();});
+    const start=(x,y,id)=>this.drag={x,y,id,yaw:this.yaw,pitch:this.pitch};
+    const move=(x,y,id)=>{if(!this.drag||id!==this.drag.id)return;this.yaw=this.drag.yaw+(x-this.drag.x)*.010;this.pitch=clamp(this.drag.pitch+(y-this.drag.y)*.008,d2r(-58),d2r(58));this.render();};
+    this.stage.addEventListener('pointerdown',e=>{this.stage.setPointerCapture(e.pointerId);start(e.clientX,e.clientY,e.pointerId)});
+    this.stage.addEventListener('pointermove',e=>move(e.clientX,e.clientY,e.pointerId));
+    ['pointerup','pointercancel','lostpointercapture'].forEach(ev=>this.stage.addEventListener(ev,()=>this.drag=null));
+    this.stage.addEventListener('pointerdown',()=>this.stage.focus());
+    this.stage.addEventListener('keydown',e=>{const s=d2r(14);let used=true;if(e.key==='ArrowLeft')this.yaw-=s;else if(e.key==='ArrowRight')this.yaw+=s;else if(e.key==='ArrowUp')this.pitch=clamp(this.pitch-s,d2r(-58),d2r(58));else if(e.key==='ArrowDown')this.pitch=clamp(this.pitch+s,d2r(-58),d2r(58));else used=false;if(used){e.preventDefault();this.render();}});
+  }
+  setDefaultView(){const v=this.defaultViews[this.body];this.yaw=d2r(v.yaw);this.pitch=d2r(v.pitch);this.drag=null;}
+  prepareViewForAction(){
+    if(this.body==='cylinder'&&this.action==='flat')this.pitch=d2r(20);
+    if(this.body==='cylinder'&&this.action==='curved')this.pitch=d2r(16);
+    if(this.body==='cone'&&this.action==='flat')this.pitch=d2r(-20);
+    if(this.body==='cone'&&(this.action==='curved'||this.action==='tip'))this.pitch=d2r(10);
+  }
+  project(p){const d=this.cameraZ-p[2];return[360+this.focal*p[0]/d,235-this.focal*p[1]/d,d];}
+  visibleFace(model,f,V,P){const rn=rot(f.n,this.yaw,this.pitch),c=[avg(f.v.map(i=>V[i][0])),avg(f.v.map(i=>V[i][1])),avg(f.v.map(i=>V[i][2]))],toCam=[-c[0],-c[1],this.cameraZ-c[2]],score=dot(rn,toCam);return{visible:score>1e-7,score,rn,depth:avg(f.v.map(i=>P[i][2]))};}
+  circularSequence(indices,n){
+    const set=new Set(indices);if(!indices.length)return[];if(indices.length===n)return[...Array(n).keys()];
+    let start=null;for(let i=0;i<n;i++){if(set.has(i)&&!set.has((i-1+n)%n)){start=i;break;}}
+    if(start===null)start=indices[0];const out=[];let i=start;while(set.has(i)&&out.length<n){out.push(i);i=(i+1)%n;}return out;
+  }
+  pointInPolygon(point,poly){
+    let inside=false;const [x,y]=point;
+    for(let i=0,j=poly.length-1;i<poly.length;j=i++){const xi=poly[i][0],yi=poly[i][1],xj=poly[j][0],yj=poly[j][1];const hit=((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/((yj-yi)||1e-12)+xi);if(hit)inside=!inside;}
+    return inside;
+  }
+  renderMesh(model){
+    const V=model.vertices.map(v=>rot(v,this.yaw,this.pitch)),P=V.map(v=>this.project(v));
+    const data=model.faces.map(f=>({...this.visibleFace(model,f,V,P),f}));
+    const visible=data.filter(x=>x.visible);
+    const visibleFlats=visible.filter(x=>x.f.type==='flat').sort((a,b)=>b.score-a.score);
+    const selectedFlat=visibleFlats[0]?.f.id||null;
+    const sideIdx=visible.filter(x=>x.f.type==='curved').map(x=>Number(x.f.id.replace('side',''))).filter(Number.isFinite);
+    const seq=this.circularSequence(sideIdx,model.n);
+    let curved='';
+    if(seq.length){
+      if(model.name==='cylinder'){
+        const ring=[...seq, (seq[seq.length-1]+1)%model.n];
+        const pts=[...ring.map(i=>P[i]), ...ring.slice().reverse().map(i=>P[i+model.n])];
+        curved=`<polygon points="${pts.map(q=>`${q[0].toFixed(1)},${q[1].toFixed(1)}`).join(' ')}" fill="url(#${this.action==='curved'?this.id+'-curveSel':this.id+'-curve'})"/>`;
+      }else{
+        const ring=[...seq, (seq[seq.length-1]+1)%model.n];
+        const pts=[...ring.map(i=>P[i]),P[model.apex]];
+        curved=`<polygon points="${pts.map(q=>`${q[0].toFixed(1)},${q[1].toFixed(1)}`).join(' ')}" fill="url(#${this.action==='curved'?this.id+'-curveSel':this.id+'-curve'})"/>`;
+      }
+    }
+    const flatPolys=visibleFlats.sort((a,b)=>b.depth-a.depth).map(x=>{
+      const fill=(this.action==='flat'&&x.f.id===selectedFlat)?`url(#${this.pattern})`:'#f8fafc';
+      const pts=x.f.v.map(i=>`${P[i][0].toFixed(1)},${P[i][1].toFixed(1)}`).join(' ');
+      return`<polygon points="${pts}" fill="${fill}" stroke="#667684" stroke-width="1.25" vector-effect="non-scaling-stroke"/>`;
+    }).join('');
+    this.gFaces.innerHTML=curved+flatPolys;
+    this.gOutline.innerHTML='';this.gOverlay.innerHTML='';this.tipHidden=false;
+    if(this.body==='cone'&&this.action==='tip'){
+      const p=P[model.apex];const base=visibleFlats.find(x=>x.f.id==='base');
+      let hidden=false;
+      if(base){const poly=base.f.v.map(i=>P[i]);const meanDepth=avg(poly.map(q=>q[2]));hidden=this.pointInPolygon([p[0],p[1]],poly.map(q=>[q[0],q[1]]))&&p[2]>meanDepth;}
+      if(!hidden)this.gOverlay.innerHTML=`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="9" fill="#0f5f9b" stroke="#ffffff" stroke-width="3"/>`;
+      else this.tipHidden=true;
+    }
+  }
+  renderSphere(){
+    // La silueta de la esfera no cambia al rotar. El desplazamiento sutil de la luz sirve solo como retroalimentación de interacción.
+    const r=this.focal*this.sphereR/Math.sqrt(this.cameraZ*this.cameraZ-this.sphereR*this.sphereR);
+    const grad=this.root.querySelector(`#${this.id}-sphere`);
+    if(grad){
+      const cx=36+10*Math.sin(this.yaw), cy=30+8*Math.sin(this.pitch);
+      grad.setAttribute('cx',`${cx.toFixed(1)}%`);grad.setAttribute('cy',`${cy.toFixed(1)}%`);
+    }
+    this.gFaces.innerHTML=`<circle cx="360" cy="235" r="${r.toFixed(2)}" fill="url(#${this.id}-sphere)" stroke="#667684" stroke-width="1.25"/>`;
+    this.gOutline.innerHTML='';
+    this.gOverlay.innerHTML=this.action==='curved'?`<circle cx="360" cy="235" r="${(r-2).toFixed(2)}" fill="#0f5f9b" opacity=".10" stroke="#0f5f9b" stroke-width="1.5"/>`:'';
+  }
+  updateMessage(){
+    const b=this.body,a=this.action;
+    if(!a){this.msg.textContent='Elijan una parte para observarla.';return;}
+    if(b==='cylinder'){
+      if(a==='flat')this.msg.textContent='Se resalta una zona plana circular.';
+      if(a==='curved')this.msg.textContent='Se resalta la superficie curva del cilindro.';
+      if(a==='tip')this.msg.textContent='El cilindro no tiene punta.';
+    }
+    if(b==='cone'){
+      if(a==='flat')this.msg.textContent='Se resalta una zona plana circular.';
+      if(a==='curved')this.msg.textContent='Se resalta la superficie curva del cono.';
+      if(a==='tip')this.msg.textContent=this.tipHidden?'La punta no se ve en esta vista. Giren el cono.':'El punto resaltado señala la punta.';
+    }
+    if(b==='sphere'){
+      if(a==='flat')this.msg.textContent='La esfera no tiene zonas planas.';
+      if(a==='curved')this.msg.textContent='Toda la superficie de la esfera es curva.';
+      if(a==='tip')this.msg.textContent='La esfera no tiene punta.';
+    }
+  }
+  updateControls(){
+    this.root.querySelectorAll('[data-body]').forEach(b=>b.classList.toggle('selected',b.dataset.body===this.body));
+    this.root.querySelectorAll('[data-action]').forEach(b=>b.classList.toggle('selected',b.dataset.action===this.action));
+    this.root.querySelectorAll('[data-turn]').forEach(b=>b.disabled=false);
+    this.root.querySelector('[data-reset]').disabled=false;
+    for(const name of ['cylinder','cone','sphere']){const chip=this.root.querySelector(`[data-chip="${name}"]`),done=this.visited[name].size===3;chip.classList.toggle('done',done);chip.textContent=(name==='cylinder'?'Cilindro':name==='cone'?'Cono':'Esfera')+(done?' ✓':'');}
+  }
+  render(){
+    this.updateControls();
+    if(this.body==='sphere')this.renderSphere();else this.renderMesh(this.models[this.body]);
+    this.updateMessage();
+  }
+}
+RoundBodiesExplorer.models={cylinderModel,coneModel};
+global.RoundBodiesExplorer=RoundBodiesExplorer;
+})(window);
+
+</script>
+<script>
+const cube=Poly3D.models.cube();
+const REF_YAW=-32, REF_PITCH=22;
+let seenVisible=false, challengeUnlocked=false, edgeVisible=true, cor=null;
+const status=document.getElementById('eStatus');
+const hiddenChallenge=document.getElementById('hiddenChallenge');
+
+const cubeE=new Poly3D('#cubeE',{
+  model:cube,
+  selection:'E',
+  fixedSelection:true,
+  selections:{E:{type:'edge',edge:[7,6],label:'E'}},
+  yaw:REF_YAW,
+  pitch:REF_PITCH,
+  ariaLabel:'Cubo manipulable con la señal E en un segmento',
+  hideOccludedMessage:true,
+  onVisibility:(v)=>{
+    edgeVisible=v;
+    if(v)seenVisible=true;
+    if(!v && seenVisible)challengeUnlocked=true;
+
+    hiddenChallenge.hidden=!challengeUnlocked;
+    document.querySelectorAll('#hiddenQ .s2-btn').forEach(b=>b.disabled=!challengeUnlocked);
+
+    if(!challengeUnlocked){
+      status.className='s2-status';
+      status.innerHTML='<span class="dot"></span><span>E se ve</span>';
+    }else if(!v){
+      status.className='s2-status ok';
+      status.innerHTML='<span class="dot"></span><span>E ya no se ve ✓</span>';
+    }else{
+      status.className='s2-status ok';
+      status.innerHTML='<span class="dot"></span><span>Paso completado ✓</span>';
+    }
+  }
+});
+
+document.getElementById('showHidden').onclick=()=>cubeE.setShowSelectedHidden(true);
+document.getElementById('helpHide').onclick=()=>{cubeE.setShowSelectedHidden(false);cubeE.setView(140,-30);};
+
+function selectOption(container,button){document.querySelectorAll(`#${container} .s2-btn`).forEach(x=>x.classList.remove('selected'));button.classList.add('selected');}
+
+document.querySelectorAll('#hiddenQ [data-v]').forEach(b=>b.onclick=()=>{
+  selectOption('hiddenQ',b);
+  const fb=document.getElementById('hiddenFb');fb.hidden=false;
+  const ok=b.dataset.v==='hidden';
+  document.getElementById('showHidden').disabled=false;
+  fb.textContent=ok?'Cambió la orientación; E sigue formando parte del cubo.':'Pulsen «Comprobar dónde está E», observen su posición y vuelvan a decidir.';
+  document.getElementById('corSection').hidden=!ok;
+});
+
+// Captura 2D: se calcula con la misma geometría, cámara y orientación del modelo.
+function drawCapture(){
+  const yaw=REF_YAW*Math.PI/180,pitch=REF_PITCH*Math.PI/180,cam=6.7,f=520;
+  const avg=a=>a.reduce((s,v)=>s+v,0)/a.length;
+  const dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+  const rot=p=>{let[x,y,z]=p,cy=Math.cos(yaw),sy=Math.sin(yaw),x1=cy*x+sy*z,z1=-sy*x+cy*z,cp=Math.cos(pitch),sp=Math.sin(pitch);return[x1,cp*y-sp*z1,sp*y+cp*z1]};
+  const proj=p=>{const q=rot(p),d=cam-q[2];return[360+f*q[0]/d,235-f*q[1]/d,d]};
+  const V=cube.vertices.map(rot),P=cube.vertices.map(proj);
+  const visible=new Set();
+  const fd=cube.faces.map(face=>{
+    const rn=rot(face.n),c=[avg(face.v.map(i=>V[i][0])),avg(face.v.map(i=>V[i][1])),avg(face.v.map(i=>V[i][2]))],toCam=[-c[0],-c[1],cam-c[2]],vis=dot(rn,toCam)>1e-9;if(vis)visible.add(face.id);return{face,vis,depth:avg(face.v.map(i=>P[i][2]))};
+  }).filter(x=>x.vis).sort((a,b)=>b.depth-a.depth);
+  document.getElementById('capFaces').innerHTML=fd.map(({face})=>`<polygon points="${face.v.map(i=>`${P[i][0].toFixed(1)},${P[i][1].toFixed(1)}`).join(' ')}" fill="#f0f4f7"/>`).join('');
+  const adj={};cube.faces.forEach(face=>{for(let i=0;i<face.v.length;i++){const a=face.v[i],b=face.v[(i+1)%face.v.length],k=a<b?`${a}-${b}`:`${b}-${a}`;(adj[k]||(adj[k]=[])).push(face.id);}});
+  const isVisible=e=>(adj[e[0]<e[1]?`${e[0]}-${e[1]}`:`${e[1]}-${e[0]}`]||[]).some(id=>visible.has(id));
+  document.getElementById('capEdges').innerHTML=cube.edges.filter(isVisible).map(e=>`<line x1="${P[e[0]][0].toFixed(1)}" y1="${P[e[0]][1].toFixed(1)}" x2="${P[e[1]][0].toFixed(1)}" y2="${P[e[1]][1].toFixed(1)}" stroke="#263746" stroke-width="2.4" vector-effect="non-scaling-stroke"/>`).join('');
+  const marks={X:{e:[4,7],dx:-23,dy:0},Y:{e:[7,6],dx:0,dy:-22},Z:{e:[4,5],dx:0,dy:25}};
+  document.getElementById('capMarks').innerHTML=Object.entries(marks).map(([k,m])=>{const a=P[m.e[0]],b=P[m.e[1]],x=(a[0]+b[0])/2+m.dx,y=(a[1]+b[1])/2+m.dy;return`<g data-mark="${k}"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="14" fill="#fff" stroke="#0f5f9b" stroke-width="2"/><text x="${x.toFixed(1)}" y="${(y+5).toFixed(1)}" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#0f5f9b">${k}</text></g>`}).join('');
+}
+drawCapture();
+
+document.querySelectorAll('[data-cor]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-cor]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');cor=b.dataset.cor;document.getElementById('reference').disabled=false;document.getElementById('nextStep1').disabled=true;document.getElementById('corFb').hidden=true;document.getElementById('capHi').innerHTML='';});
+
+document.getElementById('reference').onclick=()=>{
+  cubeE.setShowSelectedHidden(false);cubeE.setView(REF_YAW,REF_PITCH);
+  const fb=document.getElementById('corFb');fb.hidden=false;
+  if(cor==='Y'){
+    document.getElementById('nextStep1').disabled=false;
+    fb.textContent='Correcto: en esta vista, E y Y representan el mismo segmento.';
+    const yaw=REF_YAW*Math.PI/180,pitch=REF_PITCH*Math.PI/180,cam=6.7,f=520;
+    const rp=p=>{let[x,y,z]=p,cy=Math.cos(yaw),sy=Math.sin(yaw),x1=cy*x+sy*z,z1=-sy*x+cy*z,cp=Math.cos(pitch),sp=Math.sin(pitch),q=[x1,cp*y-sp*z1,sp*y+cp*z1],d=cam-q[2];return[360+f*q[0]/d,235-f*q[1]/d]};
+    const P=cube.vertices.map(rp),a=P[7],b=P[6];document.getElementById('capHi').innerHTML=`<line x1="${a[0].toFixed(1)}" y1="${a[1].toFixed(1)}" x2="${b[0].toFixed(1)}" y2="${b[1].toFixed(1)}" stroke="#0f5f9b" stroke-width="7" stroke-linecap="round"/>`;
+  }else fb.textContent='Comparen de nuevo la posición y orientación de E con X, Y y Z.';
+};
+
+const pyr=Poly3D.models.pyramidPentagonal();
+new Poly3D('#pyramid',{
+  model:pyr,selection:'P',choicePrefix:'Señal',
+  selections:{P:{type:'face',face:'base',label:'P',buttonText:'Región P'},T:{type:'face',face:'side0',label:'T',buttonText:'Región T'}},
+  yaw:-20,pitch:-25,ariaLabel:'Pirámide pentagonal manipulable con regiones P y T'
+});
+let ptAnswer=null,shapeAnswer=null;
+function updatePyrFeedback(){if(!ptAnswer||!shapeAnswer)return;const fb=document.getElementById('pyrFb');fb.hidden=false;const ok=ptAnswer==='surfaces'&&shapeAnswer==='different';document.getElementById('nextStep2').disabled=!ok;if(ok)fb.textContent='Bien: P y T son superficies, pero tienen formas distintas.';else fb.textContent='Vuelvan a seleccionar P y T, una por una, y observen cada región resaltada.';}
+document.querySelectorAll('#ptQ [data-v]').forEach(b=>b.onclick=()=>{selectOption('ptQ',b);ptAnswer=b.dataset.v;updatePyrFeedback();});
+document.querySelectorAll('#shapeQ [data-v]').forEach(b=>b.onclick=()=>{selectOption('shapeQ',b);shapeAnswer=b.dataset.v;updatePyrFeedback();});
+
+const roundExplorer=new RoundBodiesExplorer('#round');
+const roundButtons=[...document.querySelectorAll('#roundQ [data-v]')];roundButtons.forEach(b=>b.disabled=true);
+roundExplorer.onProgress=ex=>{const ready=['cylinder','cone','sphere'].every(name=>ex.visited[name].size===3);roundButtons.forEach(b=>b.disabled=!ready);};
+document.querySelectorAll('#roundQ [data-v]').forEach(b=>b.onclick=()=>{selectOption('roundQ',b);const fb=document.getElementById('roundFb');fb.hidden=false;const ok=b.dataset.v==='no';document.getElementById('finish').disabled=!ok;fb.textContent=ok?'Correcto: al comparar, aparecen diferencias entre los tres cuerpos.':'Comparen las partes que encontraron en los tres cuerpos e intenten otra vez.';});
+
+let f2SizePending=false;
+function f2SizeHeight(){
+  const body=document.body;
+  const root=document.querySelector('.s2-shell')||body.firstElementChild||body;
+  if(!body||!root)return 0;
+  const rr=root.getBoundingClientRect();
+  const br=body.getBoundingClientRect();
+  const rs=getComputedStyle(root);
+  const bs=getComputedStyle(body);
+  const px=v=>{const n=Number.parseFloat(v);return Number.isFinite(n)?n:0;};
+  const visualBottom=rr.bottom-br.top;
+  const naturalBottom=(rr.top-br.top)+Math.max(rr.height,root.scrollHeight||0);
+  return Math.max(180,Math.ceil(Math.max(visualBottom,naturalBottom)+px(rs.marginBottom)+px(bs.paddingBottom)+4));
+}
+function f2SizeReport(){
+  f2SizePending=false;
+  try{window.parent.postMessage({type:'S2_RESIZE',height:f2SizeHeight()},'*')}catch(e){}
+}
+function f2SizeSchedule(){
+  if(f2SizePending)return;
+  f2SizePending=true;
+  requestAnimationFrame(()=>requestAnimationFrame(f2SizeReport));
+}
+function f2SizeBurst(){
+  f2SizeSchedule();
+  setTimeout(f2SizeSchedule,40);
+  setTimeout(f2SizeSchedule,120);
+  setTimeout(f2SizeSchedule,260);
+}
+
+const f2SizeRoot=document.querySelector('.s2-shell')||document.body;
+try{new ResizeObserver(f2SizeBurst).observe(f2SizeRoot)}catch(e){}
+try{new MutationObserver(f2SizeBurst).observe(f2SizeRoot,{subtree:true,childList:true,attributes:true,characterData:true})}catch(e){}
+document.addEventListener('click',f2SizeBurst,true);
+window.addEventListener('resize',f2SizeBurst,{passive:true});
+window.addEventListener('load',f2SizeBurst);
+function go(n){document.querySelectorAll('[data-step]').forEach(s=>s.classList.toggle('active',Number(s.dataset.step)===n));document.querySelectorAll('[data-tab]').forEach(t=>t.classList.toggle('active',Number(t.dataset.tab)===n));window.scrollTo(0,0);f2SizeBurst();}
+document.querySelectorAll('[data-next]').forEach(b=>b.onclick=()=>go(Number(b.dataset.next)));
+document.querySelectorAll('[data-prev]').forEach(b=>b.onclick=()=>go(Number(b.dataset.prev)));
+document.getElementById('finish').onclick=()=>{try{window.parent.postMessage({type:'S2_F2_COMPLETE'},'*');}catch(e){}};
+</script>
+</body>
+</html>
+</template>
+<template id="f3tpl"><!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pon nombre a lo observado</title>
+<style>
+:root{
+  --bg:#f5f7f9;--card:#fff;--text:#17212b;--muted:#5a6673;--line:#cfd8e2;
+  --edge:#263746;--accent:#0f5f9b;--accent-soft:#eaf4fb;--ok:#24663b;--ok-soft:#edf8f0;
+  --bad:#8b3b2e;--bad-soft:#fff3f0;--radius:14px
+}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.35}
+button{font:inherit}.shell{width:100%;max-width:none;margin:auto;padding:10px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;margin:10px 0}
+h1,h2,h3,p{margin-top:0}.title{font-size:1.3rem;margin-bottom:4px}.sub{color:var(--muted);font-size:.92rem;margin-bottom:0}.kicker{font-size:.77rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.stepbar{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.chip{border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fff;font-weight:700;font-size:.84rem;color:var(--muted)}.chip.on{border-color:var(--accent);background:var(--accent-soft);color:#0b4268}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:12px}.stage{position:relative;min-height:360px;border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;touch-action:none;cursor:grab}.stage:active{cursor:grabbing}.stage svg{width:100%;height:100%;min-height:360px;display:block}.hint{position:absolute;left:9px;bottom:8px;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:4px 7px;font-size:.74rem;color:var(--muted);pointer-events:none}
+.side{display:flex;flex-direction:column;gap:10px}.label{font-size:.74rem;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:5px}.btns{display:grid;gap:6px}.btn{appearance:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;min-height:44px;font-weight:700;cursor:pointer;color:var(--text);text-align:left}.btn:hover{border-color:var(--accent)}.btn:focus-visible{outline:3px solid rgba(15,95,155,.25);outline-offset:2px}.btn[aria-pressed="true"],.btn.sel{border-color:var(--accent);background:var(--accent-soft);color:#0b4268}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;text-align:center}.btn.small{text-align:center;padding:6px;min-height:42px}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.blank{visibility:hidden}.definition{border-left:4px solid var(--accent);background:#f6fbfe;border-radius:8px;padding:9px 10px;font-size:.91rem}.term{font-size:1.05rem;font-weight:800;color:#0b4268;margin-bottom:2px}.micro{color:var(--muted);font-size:.82rem}
+.keyline{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.keyline span{border:1px solid var(--line);border-radius:999px;padding:5px 8px;background:#fafcfd;font-size:.82rem;font-weight:700}
+.check-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px}.qbox{border:1px solid var(--line);border-radius:12px;padding:11px;background:#fff}.qnum{font-size:.78rem;color:var(--muted);font-weight:700}.qtext{font-weight:700;margin:4px 0 8px}.opts{display:grid;gap:6px}.feedback{margin-top:8px;border-radius:8px;padding:8px 9px;font-size:.87rem}.feedback.ok{background:var(--ok-soft);color:var(--ok);border:1px solid #badbc4}.feedback.bad{background:var(--bad-soft);color:var(--bad);border:1px solid #ecc8c1}.feedback[hidden]{display:none}.progress{font-size:.82rem;color:var(--muted);margin-top:7px}.callout{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:.9rem;margin:9px 0}.callout strong{color:#0b4268}
+@media(max-width:760px){.layout,.check-layout{grid-template-columns:1fr}.stage,.stage svg{min-height:330px}.side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.definition{grid-column:1/-1}}
+@media(max-width:480px){.shell{padding:6px}.card{padding:10px}.stage,.stage svg{min-height:300px}.side{grid-template-columns:1fr}}
+.f3-step{display:none}.f3-step.active{display:block}.f3-nav{display:flex;justify-content:space-between;gap:8px;margin-top:12px}.f3-nav .spacer{flex:1}
+</style>
+</head>
+<body>
+<main class="shell">
+<section class="card">
+  <h1 class="title">Pon nombre a lo observado</h1>
+  <p class="sub">Ahora usamos nombres geométricos más precisos.</p>
+</section>
+
+<section class="card f3-step active" data-f3step="0">
+  <h2 class="title">1. Cara, arista y vértice</h2>
+  <p class="sub">Seleccionen cada nombre y observen la parte resaltada.</p>
+  <div class="layout">
+    <div class="stage" id="cubeStage" tabindex="0" aria-label="Cubo manipulable"><svg id="cubeSvg" viewBox="0 0 720 450" role="img" aria-label="Cubo con una parte resaltada"><defs><pattern id="dotsCube" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" fill="#0f5f9b" opacity=".75"/></pattern></defs><g data-faces></g><g data-edges></g><g data-hi></g><g data-label></g></svg><div class="hint">Arrastra o usa las flechas.</div></div>
+    <aside class="side">
+      <div><div class="label">Selecciona</div><div class="btns">
+        <button class="btn" data-cube="face" aria-pressed="true">Cara</button>
+        <button class="btn" data-cube="edge" aria-pressed="false">Arista</button>
+        <button class="btn" data-cube="vertex" aria-pressed="false">Vértice</button>
+      </div></div>
+      <div><div class="label">Girar</div><div class="controls"><span class="blank"></span><button class="btn small" data-turn="up" aria-label="Girar hacia arriba">↑</button><span class="blank"></span><button class="btn small" data-turn="left" aria-label="Girar a la izquierda">←</button><button class="btn small" id="cubeReset">Vista inicial</button><button class="btn small" data-turn="right" aria-label="Girar a la derecha">→</button><span class="blank"></span><button class="btn small" data-turn="down" aria-label="Girar hacia abajo">↓</button><span class="blank"></span></div></div>
+      <div class="definition" id="cubeDef"><div class="term">CARA</div><div>Región plana que limita un poliedro.</div></div>
+    </aside>
+  </div>
+  <div class="f3-nav"><span class="spacer"></span><button class="btn primary" type="button" data-f3next="1">Siguiente</button></div>
+</section>
+
+<section class="card f3-step" data-f3step="1">
+  <h2 class="title">2. Base y caras laterales</h2>
+  <div class="layout">
+    <div class="stage" id="pyrStage" tabindex="0" aria-label="Pirámide pentagonal manipulable"><svg id="pyrSvg" viewBox="0 0 720 450" role="img" aria-label="Pirámide pentagonal con caras resaltadas"><defs><pattern id="dotsPyr" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" fill="#0f5f9b" opacity=".75"/></pattern></defs><g data-faces></g><g data-edges></g><g data-hi></g><g data-label></g></svg><div class="hint">Arrastra o usa las flechas.</div></div>
+    <aside class="side">
+      <div><div class="label">Observa</div><div class="btns">
+        <button class="btn" data-pyr="base" aria-pressed="true">Base</button>
+        <button class="btn" data-pyr="lateral" aria-pressed="false">Caras laterales</button>
+      </div></div>
+      <div><div class="label">Girar</div><div class="controls"><span class="blank"></span><button class="btn small" data-pturn="up" aria-label="Girar hacia arriba">↑</button><span class="blank"></span><button class="btn small" data-pturn="left" aria-label="Girar a la izquierda">←</button><button class="btn small" id="pyrReset">Vista inicial</button><button class="btn small" data-pturn="right" aria-label="Girar a la derecha">→</button><span class="blank"></span><button class="btn small" data-pturn="down" aria-label="Girar hacia abajo">↓</button><span class="blank"></span></div></div>
+      <div class="definition" id="pyrDef"><div class="term">BASE</div><div>En esta pirámide, la cara pentagonal es la base.</div></div>
+    </aside>
+  </div>
+  <div class="callout"><strong>Importante:</strong> la forma por sí sola no determina si una cara es base o lateral.</div>
+  <div class="callout">
+    <div><strong>En una pirámide:</strong> hay una base; las caras laterales son triángulos que se encuentran en un vértice común.</div>
+    <div style="margin-top:5px"><strong>En un prisma:</strong> hay dos bases de igual forma y tamaño, paralelas entre sí; las demás caras son laterales.</div>
+  </div>
+  <div class="f3-nav"><button class="btn" type="button" data-f3prev="0">Anterior</button><button class="btn primary" type="button" data-f3next="2">Siguiente</button></div>
+</section>
+
+<section class="card f3-step" data-f3step="2">
+  <h2 class="title">3. Comprobación rápida</h2>
+  <p class="sub">Observen la parte resaltada y elijan el nombre correcto.</p>
+  <div class="check-layout">
+    <div class="stage" id="checkStage"><svg id="checkSvg" viewBox="0 0 720 450" role="img" aria-label="Figura geométrica para la comprobación"><defs><pattern id="dotsCheck" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" fill="#0f5f9b" opacity=".75"/></pattern></defs><g data-faces></g><g data-edges></g><g data-hi></g><g data-label></g></svg></div>
+    <div class="qbox">
+      <div class="qnum" id="qnum">Pregunta 1 de 4</div>
+      <div class="qtext" id="qtext"></div>
+      <div class="opts" id="qopts"></div>
+      <div class="feedback" id="qfb" aria-live="polite" hidden></div>
+      <button class="btn primary" id="nextQ" hidden style="margin-top:8px;width:100%">Siguiente</button>
+      <div class="progress" id="prog"></div>
+    </div>
+  </div>
+  <div class="f3-nav"><button class="btn" type="button" data-f3prev="1">Anterior</button><span class="spacer"></span></div>
+</section>
+</main>
+<script>
+(()=>{'use strict';
+const D=Math.PI/180, clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), avg=a=>a.reduce((s,x)=>s+x,0)/a.length;
+const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+const norm=v=>{const m=Math.hypot(...v)||1;return v.map(x=>x/m)};
+function rot(p,yaw,pitch){let[x,y,z]=p;const cy=Math.cos(yaw),sy=Math.sin(yaw),x1=cy*x+sy*z,z1=-sy*x+cy*z,cp=Math.cos(pitch),sp=Math.sin(pitch);return[x1,cp*y-sp*z1,sp*y+cp*z1]}
+function finish(model){const c=[avg(model.v.map(p=>p[0])),avg(model.v.map(p=>p[1])),avg(model.v.map(p=>p[2]))];model.f=model.f.map(f=>{let n=norm(cross(sub(model.v[f.i[1]],model.v[f.i[0]]),sub(model.v[f.i[2]],model.v[f.i[0]])));const fc=[avg(f.i.map(i=>model.v[i][0])),avg(f.i.map(i=>model.v[i][1])),avg(f.i.map(i=>model.v[i][2]))];if(dot(n,sub(fc,c))<0)n=n.map(x=>-x);return{...f,n}});const set=new Set();model.f.forEach(f=>f.i.forEach((a,j)=>{const b=f.i[(j+1)%f.i.length],k=a<b?`${a}-${b}`:`${b}-${a}`;set.add(k)}));model.e=[...set].map(k=>k.split('-').map(Number));return model}
+const cube=finish({v:[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]],f:[{id:'front',i:[4,5,6,7]},{id:'back',i:[1,0,3,2]},{id:'left',i:[0,4,7,3]},{id:'right',i:[5,1,2,6]},{id:'top',i:[7,6,2,3]},{id:'bottom',i:[0,1,5,4]}]});
+function pyramid(){const v=[],R=1.25,y=-1.15;for(let k=0;k<5;k++){const a=Math.PI/2+2*Math.PI*k/5;v.push([R*Math.cos(a),y,R*Math.sin(a)])}v.push([0,1.45,0]);const f=[{id:'base',i:[4,3,2,1,0]}];for(let k=0;k<5;k++)f.push({id:'lat'+k,i:[k,(k+1)%5,5]});return finish({v,f})}
+const pyr=pyramid();
+class Viewer{
+ constructor(svg,model,pattern){this.svg=svg;this.model=model;this.pattern=pattern;this.yaw=-30*D;this.pitch=18*D;this.cam=7;this.focal=560;this.sel={type:'face',id:'front',label:'CARA'};this.drag=null;this.gF=svg.querySelector('[data-faces]');this.gE=svg.querySelector('[data-edges]');this.gH=svg.querySelector('[data-hi]');this.gL=svg.querySelector('[data-label]');this.bind();this.draw()}
+ bind(){const st=this.svg.closest('.stage');if(!st)return;st.addEventListener('pointerdown',e=>{st.setPointerCapture(e.pointerId);this.drag={x:e.clientX,y:e.clientY,yaw:this.yaw,pitch:this.pitch,id:e.pointerId}});st.addEventListener('pointermove',e=>{if(!this.drag||this.drag.id!==e.pointerId)return;this.yaw=this.drag.yaw+(e.clientX-this.drag.x)*.011;this.pitch=clamp(this.drag.pitch+(e.clientY-this.drag.y)*.009,-65*D,65*D);this.draw()});['pointerup','pointercancel','lostpointercapture'].forEach(ev=>st.addEventListener(ev,()=>this.drag=null));st.addEventListener('pointerdown',()=>st.focus());st.addEventListener('keydown',e=>{let used=true;if(e.key==='ArrowLeft')this.turn('left');else if(e.key==='ArrowRight')this.turn('right');else if(e.key==='ArrowUp')this.turn('up');else if(e.key==='ArrowDown')this.turn('down');else used=false;if(used)e.preventDefault();})}
+ setModel(m){this.model=m;this.draw()} setView(y,p){this.yaw=y*D;this.pitch=p*D;this.draw()} turn(d){if(d==='left')this.yaw-=14*D;if(d==='right')this.yaw+=14*D;if(d==='up')this.pitch=clamp(this.pitch-14*D,-65*D,65*D);if(d==='down')this.pitch=clamp(this.pitch+14*D,-65*D,65*D);this.draw()}
+ project(p){const z=this.cam-p[2];return[360+this.focal*p[0]/z,225-this.focal*p[1]/z,z]}
+ draw(){const V=this.model.v.map(p=>rot(p,this.yaw,this.pitch)),P=V.map(p=>this.project(p)),vis=new Set();const fd=this.model.f.map(f=>{const rn=rot(f.n,this.yaw,this.pitch),c=[avg(f.i.map(i=>V[i][0])),avg(f.i.map(i=>V[i][1])),avg(f.i.map(i=>V[i][2]))],t=[-c[0],-c[1],this.cam-c[2]],visible=dot(rn,t)>1e-8;if(visible)vis.add(f.id);return{f,rn,visible,depth:avg(f.i.map(i=>P[i][2]))}}).sort((a,b)=>b.depth-a.depth);
+ const shade=rn=>{const L=[-.35,.55,.76],q=Math.max(-1,Math.min(1,dot(rn,L))),b=236+Math.round(12*(q+1)/2);return`rgb(${b},${Math.min(252,b+2)},${Math.min(255,b+5)})`};this.gF.innerHTML=fd.filter(x=>x.visible).map(x=>`<polygon points="${x.f.i.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ')}" fill="${shade(x.rn)}"/>`).join('');
+ const adj={};this.model.f.forEach(f=>f.i.forEach((a,j)=>{const b=f.i[(j+1)%f.i.length],k=a<b?`${a}-${b}`:`${b}-${a}`;(adj[k]||(adj[k]=[])).push(f.id)}));const evis=e=>(adj[e[0]<e[1]?`${e[0]}-${e[1]}`:`${e[1]}-${e[0]}`]||[]).some(x=>vis.has(x));this.gE.innerHTML=this.model.e.filter(evis).map(e=>`<line x1="${P[e[0]][0].toFixed(1)}" y1="${P[e[0]][1].toFixed(1)}" x2="${P[e[1]][0].toFixed(1)}" y2="${P[e[1]][1].toFixed(1)}" stroke="#263746" stroke-width="2.3" vector-effect="non-scaling-stroke"/>`).join('');
+ let hi='',lab='';const s=this.sel;if(s){if(s.type==='face'){const f=this.model.f.find(f=>f.id===s.id);if(f&&vis.has(f.id)){const pts=f.i.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ');hi=`<polygon points="${pts}" fill="url(#${this.pattern})" stroke="#0f5f9b" stroke-width="2"/>`;{const lx=avg(f.i.map(i=>P[i][0]))+(s.labelDx||0),ly=avg(f.i.map(i=>P[i][1]))+(s.labelDy===undefined?-18:s.labelDy);lab=this.tag(s.label,lx,ly)}}}else if(s.type==='faces'){for(const id of s.ids){const f=this.model.f.find(f=>f.id===id);if(f&&vis.has(id)){const pts=f.i.map(i=>P[i][0].toFixed(1)+','+P[i][1].toFixed(1)).join(' ');hi+=`<polygon points="${pts}" fill="url(#${this.pattern})" stroke="#0f5f9b" stroke-width="1.8"/>`}}lab=this.tag(s.label,560,55)}else if(s.type==='edge'){const e=s.e;if(evis(e)){hi=`<line x1="${P[e[0]][0]}" y1="${P[e[0]][1]}" x2="${P[e[1]][0]}" y2="${P[e[1]][1]}" stroke="#0f5f9b" stroke-width="7" stroke-linecap="round"/>`;lab=this.tag(s.label,(P[e[0]][0]+P[e[1]][0])/2,(P[e[0]][1]+P[e[1]][1])/2-20)}}else if(s.type==='vertex'){const i=s.i,faces=this.model.f.filter(f=>f.i.includes(i));if(faces.some(f=>vis.has(f.id))){hi=`<circle cx="${P[i][0]}" cy="${P[i][1]}" r="8" fill="#0f5f9b" stroke="#fff" stroke-width="3"/>`;lab=this.tag(s.label,P[i][0]+30,P[i][1]-18)}}}
+ this.gH.innerHTML=hi;this.gL.innerHTML=lab}
+ tag(t,x,y){x=clamp(x,36,680);y=clamp(y,30,420);return`<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><rect x="-42" y="-16" width="84" height="32" rx="16" fill="#0f5f9b"/><text y="5" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">${t}</text></g>`}
+}
+const cv=new Viewer(document.getElementById('cubeSvg'),cube,'dotsCube');cv.sel={type:'face',id:'front',label:'CARA'};cv.draw();
+const defs={face:['CARA','Región plana que limita un poliedro.'],edge:['ARISTA','Segmento común a dos caras de un poliedro.'],vertex:['VÉRTICE','Punto donde se encuentran varias aristas.']};
+document.querySelectorAll('[data-cube]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-cube]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const k=b.dataset.cube;if(k==='face')cv.sel={type:'face',id:'front',label:'CARA'};if(k==='edge')cv.sel={type:'edge',e:[6,7],label:'ARISTA'};if(k==='vertex')cv.sel={type:'vertex',i:6,label:'VÉRTICE'};cv.draw();document.getElementById('cubeDef').innerHTML=`<div class="term">${defs[k][0]}</div><div>${defs[k][1]}</div>`});
+document.querySelectorAll('[data-turn]').forEach(b=>b.onclick=()=>cv.turn(b.dataset.turn));document.getElementById('cubeReset').onclick=()=>cv.setView(-30,18);
+const pv=new Viewer(document.getElementById('pyrSvg'),pyr,'dotsPyr');pv.setView(-18,-30);pv.sel={type:'face',id:'base',label:'BASE',labelDy:2};pv.draw();
+function selectPyr(k){document.querySelectorAll('[data-pyr]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.pyr===k)));if(k==='base'){pv.setView(-18,-30);pv.sel={type:'face',id:'base',label:'BASE',labelDy:2};document.getElementById('pyrDef').innerHTML='<div class="term">BASE</div><div>En esta pirámide, la cara pentagonal es la base.</div>'}else{pv.setView(-28,17);pv.sel={type:'faces',ids:['lat0','lat1','lat2','lat3','lat4'],label:'LATERALES'};document.getElementById('pyrDef').innerHTML='<div class="term">CARAS LATERALES</div><div>En esta pirámide, las caras triangulares unidas a la base son caras laterales.</div>'}pv.draw()}
+document.querySelectorAll('[data-pyr]').forEach(b=>b.onclick=()=>selectPyr(b.dataset.pyr));document.querySelectorAll('[data-pturn]').forEach(b=>b.onclick=()=>pv.turn(b.dataset.pturn));document.getElementById('pyrReset').onclick=()=>{const k=document.querySelector('[data-pyr][aria-pressed="true"]').dataset.pyr;selectPyr(k)};
+// Navegación interna de F3: un solo bloque visible a la vez.
+let f3SizePending=false;
+function f3SizeHeight(){
+  const body=document.body;
+  const root=document.querySelector('.shell')||body.firstElementChild||body;
+  if(!body||!root)return 0;
+  const rr=root.getBoundingClientRect();
+  const br=body.getBoundingClientRect();
+  const rs=getComputedStyle(root);
+  const bs=getComputedStyle(body);
+  const px=v=>{const n=Number.parseFloat(v);return Number.isFinite(n)?n:0;};
+  const visualBottom=rr.bottom-br.top;
+  const naturalBottom=(rr.top-br.top)+Math.max(rr.height,root.scrollHeight||0);
+  return Math.max(180,Math.ceil(Math.max(visualBottom,naturalBottom)+px(rs.marginBottom)+px(bs.paddingBottom)+4));
+}
+function f3SizeReport(){
+  f3SizePending=false;
+  try{window.parent.postMessage({type:'S2_RESIZE',height:f3SizeHeight()},'*')}catch(e){}
+}
+function f3SizeSchedule(){
+  if(f3SizePending)return;
+  f3SizePending=true;
+  requestAnimationFrame(()=>requestAnimationFrame(f3SizeReport));
+}
+function f3SizeBurst(){
+  f3SizeSchedule();
+  setTimeout(f3SizeSchedule,40);
+  setTimeout(f3SizeSchedule,120);
+  setTimeout(f3SizeSchedule,260);
+}
+
+const f3SizeRoot=document.querySelector('.shell')||document.body;
+function showF3Step(n){document.querySelectorAll('[data-f3step]').forEach(el=>el.classList.toggle('active',Number(el.dataset.f3step)===n));window.scrollTo(0,0);f3SizeBurst();}
+document.querySelectorAll('[data-f3next]').forEach(b=>b.addEventListener('click',()=>showF3Step(Number(b.dataset.f3next))));
+document.querySelectorAll('[data-f3prev]').forEach(b=>b.addEventListener('click',()=>showF3Step(Number(b.dataset.f3prev))));
+try{new ResizeObserver(f3SizeBurst).observe(f3SizeRoot)}catch(e){}
+try{new MutationObserver(f3SizeBurst).observe(f3SizeRoot,{subtree:true,childList:true,attributes:true,characterData:true})}catch(e){}
+document.addEventListener('click',f3SizeBurst,true);
+window.addEventListener('resize',f3SizeBurst,{passive:true});
+window.addEventListener('load',f3SizeBurst);
+
+// comprobación
+const q=[
+ {model:'cube',view:[-30,18],sel:{type:'face',id:'front',label:'?'},text:'La región plana resaltada es una…',opts:['cara','arista','vértice'],ans:'cara',ok:'Correcto: es una cara.'},
+ {model:'cube',view:[-30,18],sel:{type:'edge',e:[6,7],label:'?'},text:'El segmento resaltado es una…',opts:['cara','arista','vértice'],ans:'arista',ok:'Correcto: es una arista.'},
+ {model:'pyr',view:[-28,17],sel:{type:'vertex',i:5,label:'?'},text:'El punto resaltado es un…',opts:['cara','arista','vértice'],ans:'vértice',ok:'Correcto: es un vértice.'},
+ {model:'pyr',view:[-28,17],sel:{type:'face',id:'lat1',label:'?'},text:'En esta pirámide, la cara triangular resaltada es…',opts:['base','cara lateral'],ans:'cara lateral',ok:'Correcto: en esta pirámide es una cara lateral.'}
+];let qi=0;const qv=new Viewer(document.getElementById('checkSvg'),cube,'dotsCheck');const qtext=document.getElementById('qtext'),qopts=document.getElementById('qopts'),qfb=document.getElementById('qfb'),qnum=document.getElementById('qnum'),next=document.getElementById('nextQ'),prog=document.getElementById('prog');
+function loadQ(){const x=q[qi];qv.model=x.model==='cube'?cube:pyr;qv.setView(...x.view);qv.sel=x.sel;qv.draw();qnum.textContent=`Pregunta ${qi+1} de ${q.length}`;qtext.textContent=x.text;qopts.innerHTML=x.opts.map(o=>`<button class="btn" data-o="${o}">${o.charAt(0).toUpperCase()+o.slice(1)}</button>`).join('');qfb.hidden=true;next.hidden=true;next.textContent=qi===q.length-1?'Terminar':'Siguiente';prog.textContent=`${qi} de ${q.length} completadas`;qopts.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>{if(b.dataset.o===x.ans){qopts.querySelectorAll('button').forEach(z=>z.disabled=true);qfb.className='feedback ok';qfb.textContent=x.ok;qfb.hidden=false;next.hidden=false;prog.textContent=`${qi+1} de ${q.length} completadas`}else{b.disabled=true;qfb.className='feedback bad';qfb.textContent='Revisen la parte resaltada e intenten otra vez.';qfb.hidden=false;next.hidden=true}})}
+next.onclick=()=>{if(qi<q.length-1){qi++;loadQ()}else{qnum.textContent='';qtext.textContent='Comprobación terminada.';qopts.innerHTML='';qfb.hidden=true;next.hidden=true;prog.textContent='4 de 4 completadas.';try{window.parent.postMessage({type:'S2_F3_COMPLETE'},'*')}catch(e){}}};loadQ();
+})();
+</script>
+</body></html></template>
+<script>
+const stage=document.getElementById('stage');
+const done=document.getElementById('done');
+const f2html=document.getElementById('f2tpl').innerHTML;
+const f3html=document.getElementById('f3tpl').innerHTML;
+let currentPhase='f2';
+
+let lastHostHeight=0, hostPending=false, hostParentStyle=null, hostFrameSelector='';
+function hostPx(value){const n=Number.parseFloat(value);return Number.isFinite(n)?n:0;}
+function measureHostHeight(){
+  const body=document.body;
+  const root=document.querySelector('.wrap')||body.firstElementChild||body;
+  if(!body||!root)return 0;
+  const rr=root.getBoundingClientRect(), br=body.getBoundingClientRect();
+  const rs=getComputedStyle(root), bs=getComputedStyle(body);
+  const visualBottom=rr.bottom-br.top;
+  const naturalBottom=(rr.top-br.top)+Math.max(rr.height,root.scrollHeight||0);
+  return Math.max(180,Math.ceil(Math.max(visualBottom,naturalBottom)+hostPx(rs.marginBottom)+hostPx(bs.paddingBottom)+4));
+}
+function ensureHostParentRule(frame){
+  try{
+    const pd=frame.ownerDocument;
+    if(!pd)return;
+    if(!frame.dataset.s2DynamicFrame)frame.dataset.s2DynamicFrame='s2-'+Math.random().toString(36).slice(2,8);
+    hostFrameSelector=`iframe[data-s2-dynamic-frame="${frame.dataset.s2DynamicFrame}"]`;
+    if(!hostParentStyle||!hostParentStyle.isConnected){
+      hostParentStyle=pd.createElement('style');
+      hostParentStyle.dataset.s2DynamicStyle=frame.dataset.s2DynamicFrame;
+      (pd.head||pd.documentElement).appendChild(hostParentStyle);
+    }
+  }catch(e){hostParentStyle=null;hostFrameSelector='';}
+}
+function applyHostHeight(h){
+  try{
+    const frame=window.frameElement;
+    if(!frame||!h)return;
+    frame.style.setProperty('width','100%','important');
+    frame.style.setProperty('max-width','100%','important');
+    frame.style.setProperty('display','block','important');
+    frame.style.setProperty('border','0','important');
+    frame.style.setProperty('height',h+'px','important');
+    frame.style.setProperty('min-height','0px','important');
+    frame.style.setProperty('overflow','hidden','important');
+    frame.setAttribute('width','100%');
+    frame.setAttribute('height',String(h));
+    frame.setAttribute('scrolling','no');
+    ensureHostParentRule(frame);
+    if(hostParentStyle&&hostFrameSelector){
+      hostParentStyle.textContent=`${hostFrameSelector}{width:100%!important;max-width:100%!important;height:${h}px!important;min-height:0!important;overflow:hidden!important;display:block!important;border:0!important;}`;
+    }
+  }catch(e){}
+}
+function fitHost(){
+  hostPending=false;
+  const h=measureHostHeight();
+  if(!h)return;
+  if(Math.abs(h-lastHostHeight)>=2||lastHostHeight===0)lastHostHeight=h;
+  applyHostHeight(lastHostHeight||h);
+  try{if(window.parent&&window.parent!==window)window.parent.postMessage({type:'S2_RESOURCE_HEIGHT',height:lastHostHeight||h},'*')}catch(e){}
+}
+function scheduleHost(){
+  if(hostPending)return;
+  hostPending=true;
+  requestAnimationFrame(()=>requestAnimationFrame(fitHost));
+}
+function burstHost(){
+  scheduleHost();
+  setTimeout(scheduleHost,50);
+  setTimeout(scheduleHost,140);
+  setTimeout(scheduleHost,300);
+  setTimeout(scheduleHost,650);
+}
+function setStageHeight(h){
+  if(!Number.isFinite(Number(h)))return;
+  stage.style.height=Math.max(180,Math.ceil(Number(h))+4)+'px';
+  burstHost();
+}
+function loadPhase(name){
+  currentPhase=name;
+  done.hidden=true;
+  stage.hidden=false;
+  stage.title=name==='f2'?'Exploración de partes de los cuerpos geométricos':'Nombres de los elementos geométricos';
+  stage.style.height='720px';
+  stage.srcdoc=name==='f2'?f2html:f3html;
+  window.scrollTo(0,0);
+  burstHost();
+}
+function finishSessionBlock(){
+  currentPhase='done';
+  stage.hidden=true;
+  stage.style.height='0px';
+  done.hidden=false;
+  // Evita dejar el alto de la actividad anterior dentro del iframe.
+  requestAnimationFrame(()=>{
+    done.scrollIntoView({block:'nearest'});
+    burstHost();
+  });
+}
+window.addEventListener('message',e=>{
+  if(!e.data||e.source!==stage.contentWindow)return;
+  if(e.data.type==='S2_RESIZE')setStageHeight(e.data.height);
+  if(e.data.type==='S2_F2_COMPLETE')loadPhase('f3');
+  if(e.data.type==='S2_F3_COMPLETE')finishSessionBlock();
+});
+const hostRoot=document.querySelector('.wrap')||document.body;
+try{new ResizeObserver(burstHost).observe(hostRoot)}catch(e){}
+try{new MutationObserver(burstHost).observe(hostRoot,{subtree:true,childList:true,attributes:true,characterData:true})}catch(e){}
+window.addEventListener('resize',burstHost,{passive:true});
+window.addEventListener('load',()=>{loadPhase('f2');burstHost();[90,250,600,1200,2200].forEach(d=>setTimeout(burstHost,d));});
+// Desbloqueo reservado al docente para equipos rezagados.
+document.addEventListener('keydown',e=>{if(e.altKey&&e.shiftKey&&e.key.toLowerCase()==='u')loadPhase('f3');});
+</script>
+</body>
+</html>

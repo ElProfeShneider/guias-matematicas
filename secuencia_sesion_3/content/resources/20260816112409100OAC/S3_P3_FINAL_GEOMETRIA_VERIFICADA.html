@@ -1,0 +1,1406 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sesión 3 · Aplica y comprueba</title>
+<style>
+:root{
+  --grafito:#20262B;
+  --verde:#4B702F;
+  --naranja:#C96E2A;
+  --azul:#0F5F9B;
+  --azul-profundo:#0B4268;
+  --puente:#2B6A72;
+  --geo:#7FBCC5;
+  --geo-claro:#DCEFF2;
+  --fondo:#F5F7F8;
+  --blanco:#FFFFFF;
+  --borde:#D7DDE1;
+  --texto:#20262B;
+  --suave:#EEF2F4;
+  --exito:#2F6B3C;
+  --exito-fondo:#F1F7F2;
+  --alerta:#8A4B18;
+  --alerta-fondo:#FFF8F1;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  min-height:0;
+  background:transparent;
+  color:var(--texto);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+}
+body{padding:8px}
+.app{
+  width:100%;
+  max-width:none;
+  margin:0 auto;
+  background:var(--blanco);
+  border:1px solid var(--borde);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(32,38,43,.08);
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 14px;
+  background:var(--grafito);
+  color:#fff;
+}
+.title{
+  font-family:"Arial Black",Arial,sans-serif;
+  font-size:14pt;
+  line-height:1.2;
+}
+.phase{
+  font-size:11.5pt;
+  font-weight:700;
+  white-space:nowrap;
+}
+.intro{
+  margin:12px 14px;
+  border-left:5px solid var(--verde);
+  background:#F6F8F7;
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:12pt;
+  line-height:1.42;
+}
+.intro ol{
+  margin:7px 0 0 22px;
+  padding:0;
+}
+.intro li{margin:3px 0}
+.start-row{
+  display:flex;
+  justify-content:flex-end;
+  padding:0 14px 14px;
+}
+button{
+  appearance:none;
+  border:1px solid #AEB9C0;
+  background:#fff;
+  color:var(--grafito);
+  min-height:40px;
+  border-radius:8px;
+  padding:7px 11px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11.5pt;
+  font-weight:700;
+  cursor:pointer;
+}
+button:hover{background:var(--suave)}
+button:focus-visible{
+  outline:3px solid rgba(15,95,155,.28);
+  outline-offset:2px;
+}
+.primary{
+  background:var(--verde);
+  border-color:var(--verde);
+  color:#fff;
+}
+.primary:hover{background:var(--verde);filter:brightness(.95)}
+.secondary{
+  border-color:var(--azul);
+  color:var(--azul-profundo);
+}
+.danger{
+  border-color:#AEB9C0;
+  color:#4B5960;
+}
+.hidden{display:none!important}
+
+.workspace{
+  margin:10px 14px 10px;
+  border:1px solid var(--borde);
+  border-radius:12px;
+  overflow:hidden;
+  background:#FBFCFC;
+}
+.toolbar{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  align-items:center;
+  padding:10px 12px;
+  border-bottom:1px solid var(--borde);
+  background:#F5F8F9;
+}
+.prompt{
+  font-size:11.5pt;
+  line-height:1.38;
+}
+.prompt strong{font-weight:700}
+.selection{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  justify-content:flex-end;
+}
+.selection .pill{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:4px 9px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--borde);
+  font-size:10.5pt;
+  font-weight:700;
+}
+.selection .pill.active{
+  border-color:var(--azul);
+  background:#F1F7FA;
+  color:var(--azul-profundo);
+}
+
+.map-wrap{
+  position:relative;
+  min-height:0;
+  padding:14px 14px 12px;
+  overflow:hidden;
+}
+.lines{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+}
+.fixed-line{
+  stroke:#98A7AE;
+  stroke-width:2;
+  fill:none;
+}
+.user-line{
+  stroke:var(--azul-profundo);
+  stroke-width:3;
+  fill:none;
+  stroke-linecap:round;
+}
+.user-line-halo{
+  stroke:#FFFFFF;
+  stroke-width:7;
+  fill:none;
+  stroke-linecap:round;
+}
+.map-content{
+  position:relative;
+  z-index:2;
+  display:grid;
+  gap:14px;
+}
+.level{
+  display:grid;
+  gap:12px;
+  align-items:center;
+}
+.level-1{grid-template-columns:1fr 240px 1fr}
+.level-2{grid-template-columns:1fr 220px 70px 220px 1fr}
+.level-3{grid-template-columns:repeat(6,minmax(120px,1fr))}
+.node{
+  min-height:62px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:8px 9px;
+  border-radius:10px;
+  border:1px solid var(--borde);
+  background:#fff;
+  font-weight:700;
+  line-height:1.25;
+}
+.node.general{
+  grid-column:2;
+  background:var(--grafito);
+  color:#fff;
+  border-color:var(--grafito);
+}
+.node.broad{
+  background:#EEF4F5;
+  border-color:#C7D8DC;
+  color:#24373D;
+}
+.node.family{
+  background:var(--geo-claro);
+  border-color:#9CC8CF;
+  color:#173E46;
+  cursor:pointer;
+}
+.node.family:hover{background:#CEE8EC}
+.node.family.selected{
+  background:#B9DEE4;
+  border-color:var(--azul-profundo);
+  box-shadow:0 0 0 3px rgba(15,95,155,.18);
+}
+.node.family:focus-visible{
+  outline:3px solid rgba(15,95,155,.28);
+  outline-offset:2px;
+}
+.sep{
+  height:1px;
+  background:var(--borde);
+  margin:2px 0;
+}
+.body-heading{
+  position:relative;
+  z-index:4;
+  justify-self:center;
+  width:max-content;
+  max-width:100%;
+  padding:2px 12px;
+  margin-top:2px;
+  border-radius:999px;
+  background:#FBFCFC;
+  font-family:"Arial Black",Arial,sans-serif;
+  font-size:12pt;
+  text-align:center;
+}
+.body-grid{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(120px,1fr));
+  gap:10px;
+}
+.body{
+  min-height:106px;
+  padding:7px 6px 8px;
+  border:1px solid var(--borde);
+  border-radius:10px;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  text-align:center;
+  cursor:pointer;
+  font-weight:700;
+  line-height:1.2;
+}
+.body:hover{background:#F8FAFB}
+.body.selected{
+  border-color:var(--verde);
+  box-shadow:0 0 0 3px rgba(75,112,47,.17);
+  background:#F4F8F1;
+}
+.body svg{
+  width:58px;
+  height:48px;
+  stroke:#28484F;
+  stroke-width:2;
+  fill:#A8D6DC;
+}
+.body svg.prism-icon{
+  width:70px;
+  height:62px;
+}
+.body-name{
+  font-size:10.5pt;
+}
+.action-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  margin-top:2px;
+}
+.create-btn:disabled{
+  cursor:not-allowed;
+  opacity:.48;
+}
+.connections{
+  border-top:1px solid var(--borde);
+  padding:11px 12px 12px;
+  background:#fff;
+}
+.connections-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
+}
+.connections-title strong{
+  font-family:"Arial Black",Arial,sans-serif;
+  font-size:11.5pt;
+}
+.connection-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  min-height:34px;
+  align-items:center;
+}
+.empty{
+  color:#637078;
+  font-size:11pt;
+}
+.relation-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  border:1px solid #BFD3D7;
+  background:#F3F8F9;
+  border-radius:999px;
+  padding:5px 6px 5px 10px;
+  font-size:10.5pt;
+  line-height:1.2;
+}
+.relation-chip button{
+  min-height:28px;
+  padding:2px 7px;
+  border-radius:999px;
+  font-size:10pt;
+}
+.check-zone{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  border-top:1px solid var(--borde);
+  padding:11px 12px;
+  background:#F9FBFB;
+}
+.feedback{
+  flex:1;
+  min-width:260px;
+  min-height:43px;
+  display:flex;
+  align-items:center;
+  padding:8px 10px;
+  border-radius:8px;
+  font-size:11.5pt;
+  line-height:1.35;
+}
+.feedback.neutral{
+  background:#F1F4F5;
+  color:#4B5960;
+}
+.feedback.review{
+  background:var(--alerta-fondo);
+  color:var(--alerta);
+  border:1px solid #E7C9AC;
+}
+.feedback.success{
+  background:var(--exito-fondo);
+  color:var(--exito);
+  border:1px solid #BCD4C1;
+}
+.check-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.footer-note{
+  margin:0 14px 14px;
+  font-size:10.5pt;
+  color:#56636A;
+  line-height:1.35;
+}
+.small{
+  font-size:10.5pt;
+  color:#5B6870;
+}
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+@media(max-width:900px){
+  .map-wrap{min-height:0}
+  .level-3{grid-template-columns:repeat(3,minmax(150px,1fr))}
+  .body-grid{grid-template-columns:repeat(3,minmax(150px,1fr))}
+  .level-1{grid-template-columns:1fr 220px 1fr}
+  .level-2{grid-template-columns:1fr 200px 30px 200px 1fr}
+}
+@media(max-width:620px){
+  body{padding:5px}
+  .toolbar{grid-template-columns:1fr}
+  .selection{justify-content:flex-start}
+  .map-wrap{min-height:0}
+  .level-1{grid-template-columns:1fr}
+  .node.general{grid-column:1}
+  .level-2{grid-template-columns:1fr 1fr}
+  .level-2 .spacer{display:none}
+  .level-3{grid-template-columns:1fr 1fr}
+  .body-grid{grid-template-columns:1fr 1fr}
+}
+
+
+/* ===== Observación de cuerpos antes de completar las matrices ===== */
+.observe-note{
+  margin:0 14px 10px;
+  padding:9px 12px;
+  border-left:5px solid var(--azul);
+  border-radius:8px;
+  background:#F2F7FA;
+  font-size:11.5pt;
+  line-height:1.4;
+}
+.inspect-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin:10px 14px;
+}
+.inspect-body{
+  min-height:44px;
+  text-align:center;
+  background:#fff;
+}
+.inspect-body.selected{
+  border-color:var(--azul);
+  background:#F2F7FA;
+  color:var(--azul-profundo);
+  box-shadow:0 0 0 3px rgba(15,95,155,.14);
+}
+.viewer-panel{
+  width:calc(100% - 28px);
+  max-width:1022px;
+  margin:10px auto 12px;
+  border:1px solid var(--borde);
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+}
+.viewer-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:8px 10px;
+  background:#F2F5F6;
+  border-bottom:1px solid var(--borde);
+  font-weight:700;
+  font-size:11.5pt;
+}
+.viewer{
+  position:relative;
+  width:100%;
+  height:350px;
+  background:linear-gradient(180deg,#F7FAFB 0%,#EAF0F3 100%);
+  outline:none;
+  touch-action:none;
+}
+.viewer:focus{box-shadow:inset 0 0 0 3px rgba(15,95,155,.22)}
+.viewer canvas{display:block;width:100%;height:100%;touch-action:none}
+.viewer-help{
+  position:absolute;
+  left:9px;
+  top:9px;
+  z-index:4;
+  background:rgba(255,255,255,.94);
+  border:1px solid var(--borde);
+  border-radius:7px;
+  padding:6px 8px;
+  font-size:10.5pt;
+  line-height:1.25;
+  pointer-events:none;
+}
+.viewer-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  padding:8px 9px;
+  border-top:1px solid var(--borde);
+  background:#FAFBFB;
+}
+.arrow{
+  width:40px;
+  padding:6px 0;
+  font-size:15pt;
+  line-height:1;
+}
+.reset{
+  border-color:var(--azul);
+  color:var(--azul-profundo);
+}
+.route-row{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  padding:0 14px 14px;
+}
+.route-row .primary{margin-left:auto}
+@media(max-width:700px){
+  .inspect-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .viewer{height:300px}
+}
+
+</style>
+</head>
+<body>
+<main class="app" aria-label="Construcción y comprobación del mapa de familias">
+  <!-- El título del iDevice en eXeLearning será “Construimos el mapa de familias”.
+       El recurso se organiza en tres momentos: observar cuerpos, construir el mapa en la guía y comprobarlo. -->
+  <!-- Ajuste final visual:
+       - el rótulo “Cuerpos para relacionar” tiene fondo propio para que las líneas no interfieran con su lectura;
+       - el prisma hexagonal conserva dos bases hexagonales congruentes y aristas laterales correspondientes. -->
+  <header class="topbar">
+    <div class="title">Mapa de familias</div>
+    <div class="phase" id="phaseLabel">Observación de cuerpos</div>
+  </header>
+
+  <section id="observeScreen">
+    <div class="intro">
+      Observen los cuerpos en el recurso digital mientras completan la Matriz 1 y la Matriz 2 en la guía.
+    </div>
+    <div class="observe-note">
+      Seleccionen un cuerpo y gírenlo cuando necesiten comprobar alguna de las propiedades P1, P2 o P3. Todavía no completen el Mapa de relaciones.
+    </div>
+
+    <div class="inspect-grid" aria-label="Cuerpos para observar">
+      <button class="inspect-body selected" type="button" data-inspect-model="prism6" data-inspect-name="Prisma hexagonal" aria-pressed="true">Prisma hexagonal</button>
+      <button class="inspect-body" type="button" data-inspect-model="pyramid4" data-inspect-name="Pirámide cuadrangular" aria-pressed="false">Pirámide cuadrangular</button>
+      <button class="inspect-body" type="button" data-inspect-model="cube" data-inspect-name="Cubo" aria-pressed="false">Cubo</button>
+      <button class="inspect-body" type="button" data-inspect-model="cylinder" data-inspect-name="Cilindro" aria-pressed="false">Cilindro</button>
+      <button class="inspect-body" type="button" data-inspect-model="cone" data-inspect-name="Cono" aria-pressed="false">Cono</button>
+      <button class="inspect-body" type="button" data-inspect-model="sphere" data-inspect-name="Esfera" aria-pressed="false">Esfera</button>
+    </div>
+
+    <div class="viewer-panel">
+      <div class="viewer-title">
+        <span id="inspectViewerTitle">Prisma hexagonal</span>
+        <span class="small">Giren para comprobar propiedades</span>
+      </div>
+      <div class="viewer" id="inspectViewer" tabindex="0" aria-label="Visor tridimensional del cuerpo seleccionado">
+        <div class="viewer-help">Arrastra o usa las flechas · R: vista inicial</div>
+      </div>
+      <div class="viewer-actions" id="inspectControls"></div>
+    </div>
+
+    <div class="route-row">
+      <button class="primary" id="toMapPrep" type="button">Continuar al mapa</button>
+    </div>
+  </section>
+
+  <section id="startScreen" class="hidden">
+    <div class="intro">
+      Ahora construyan el Mapa de relaciones en la guía usando las propiedades que comprobaron en las matrices.
+      <ol>
+        <li>Todavía no completen «Decisión final» ni «Comparación con la primera decisión» en la guía.</li>
+        <li>Cuando terminen el mapa, esperen la indicación del docente.</li>
+        <li>Después, seleccionen “Abrir comprobación”.</li>
+      </ol>
+    </div>
+    <div class="route-row">
+      <button class="secondary" id="backToObserve" type="button">Volver a observar</button>
+      <button class="primary" id="openMap" type="button">Abrir comprobación</button>
+    </div>
+  </section>
+
+  <section id="mapScreen" class="hidden">
+    <div class="workspace">
+      <div class="toolbar">
+        <div class="prompt" id="prompt" tabindex="-1">
+          <strong>Reproduzcan en el recurso digital las relaciones que trazaron en la guía.</strong><br>
+          1. Seleccionen un cuerpo.<br>
+          2. Seleccionen una familia.<br>
+          3. Pulsen <strong>“Crear relación”</strong>.<br>
+          Repitan hasta registrar todas las relaciones de su mapa.<br>
+          Si un cuerpo pertenece a más de una familia, creen cada relación por separado.
+        </div>
+        <div class="selection" aria-live="polite">
+          <span class="pill" id="bodyPill">Cuerpo: —</span>
+          <span class="pill" id="familyPill">Familia: —</span>
+        </div>
+      </div>
+
+      <div class="map-wrap" id="mapWrap">
+        <p class="sr-only">
+          Jerarquía ya dada: Cuerpos geométricos se relaciona con Poliedros y Cuerpos redondos.
+          Poliedros se relaciona con Prismas, Pirámides y Poliedros regulares.
+          Cuerpos redondos se relaciona con Cilindros, Conos y Esferas.
+        </p>
+        <svg class="lines" id="lineLayer" aria-hidden="true"></svg>
+
+        <div class="map-content">
+          <div class="level level-1">
+            <div class="node general" id="general">Cuerpos geométricos</div>
+          </div>
+
+          <div class="level level-2">
+            <div class="spacer"></div>
+            <div class="node broad" id="polyhedra">Poliedros</div>
+            <div class="spacer"></div>
+            <div class="node broad" id="roundBodies">Cuerpos redondos</div>
+            <div class="spacer"></div>
+          </div>
+
+          <div class="level level-3">
+            <button class="node family" id="fam-prism" data-family="Prismas" type="button">Prismas</button>
+            <button class="node family" id="fam-pyramid" data-family="Pirámides" type="button">Pirámides</button>
+            <button class="node family" id="fam-regular" data-family="Poliedros regulares" type="button">Poliedros regulares</button>
+            <button class="node family" id="fam-cylinder" data-family="Cilindros" type="button">Cilindros</button>
+            <button class="node family" id="fam-cone" data-family="Conos" type="button">Conos</button>
+            <button class="node family" id="fam-sphere" data-family="Esferas" type="button">Esferas</button>
+          </div>
+
+          <div class="sep"></div>
+          <div class="body-heading">Cuerpos para relacionar</div>
+
+          <div class="body-grid">
+            <button class="body" id="body-cylinder" data-body="Cilindro" type="button">
+              <svg viewBox="0 0 64 52" aria-hidden="true">
+                <ellipse cx="32" cy="11" rx="18" ry="7"></ellipse>
+                <path d="M14 11 V39"></path>
+                <path d="M50 11 V39"></path>
+                <path d="M14 39 C14 48 50 48 50 39"></path>
+                <path d="M14 39 C14 30 50 30 50 39" fill="none"></path>
+              </svg>
+              <span class="body-name">Cilindro</span>
+            </button>
+
+            <button class="body" id="body-cube" data-body="Cubo" type="button">
+              <svg viewBox="0 0 64 52" aria-hidden="true">
+                <rect x="11" y="14" width="28" height="28"></rect>
+                <polygon points="24,6 52,6 52,34 39,42 39,14 11,14"></polygon>
+                <line x1="39" y1="14" x2="52" y2="6"></line>
+                <line x1="39" y1="42" x2="52" y2="34"></line>
+              </svg>
+              <span class="body-name">Cubo</span>
+            </button>
+
+            <button class="body" id="body-sphere" data-body="Esfera" type="button">
+              <svg viewBox="0 0 64 52" aria-hidden="true">
+                <circle cx="32" cy="26" r="20"></circle>
+                <path d="M20 16 C24 11 29 9 34 9" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".65"></path>
+              </svg>
+              <span class="body-name">Esfera</span>
+            </button>
+
+            <button class="body" id="body-prism6" data-body="Prisma hexagonal" type="button">
+              <svg class="prism-icon" viewBox="0 0 64 52" aria-hidden="true">
+                <!-- Prisma hexagonal en posición vertical, ampliado para mejorar la lectura visual -->
+                <polygon points="18,6 32,6 39,13 32,20 18,20 11,13"></polygon>
+                <polygon points="18,26 32,26 39,33 32,40 18,40 11,33"></polygon>
+                <!-- Aristas laterales correspondientes -->
+                <line x1="18" y1="6" x2="18" y2="26"></line>
+                <line x1="32" y1="6" x2="32" y2="26"></line>
+                <line x1="39" y1="13" x2="39" y2="33"></line>
+                <line x1="32" y1="20" x2="32" y2="40"></line>
+                <line x1="18" y1="20" x2="18" y2="40"></line>
+                <line x1="11" y1="13" x2="11" y2="33"></line>
+              </svg>
+              <span class="body-name">Prisma hexagonal</span>
+            </button>
+
+            <button class="body" id="body-pyramid4" data-body="Pirámide cuadrangular" type="button">
+              <svg viewBox="0 0 64 52" aria-hidden="true">
+                <polygon points="12,35 32,44 53,34 33,27"></polygon>
+                <line x1="31" y1="6" x2="12" y2="35"></line>
+                <line x1="31" y1="6" x2="32" y2="44"></line>
+                <line x1="31" y1="6" x2="53" y2="34"></line>
+                <line x1="31" y1="6" x2="33" y2="27"></line>
+              </svg>
+              <span class="body-name">Pirámide cuadrangular</span>
+            </button>
+
+            <button class="body" id="body-cone" data-body="Cono" type="button">
+              <svg viewBox="0 0 64 52" aria-hidden="true">
+                <ellipse cx="32" cy="40" rx="18" ry="7"></ellipse>
+                <line x1="32" y1="6" x2="14" y2="40"></line>
+                <line x1="32" y1="6" x2="50" y2="40"></line>
+              </svg>
+              <span class="body-name">Cono</span>
+            </button>
+          </div>
+
+          <div class="action-row">
+            <button class="primary create-btn" id="createRelation" type="button" disabled>Crear relación</button>
+            <button class="secondary" id="clearSelection" type="button">Limpiar selección</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="connections" aria-label="Relaciones construidas">
+        <div class="connections-title">
+          <strong>Relaciones construidas</strong>
+          <span class="small" id="relationCount">0 relaciones</span>
+        </div>
+        <div class="connection-list" id="connectionList">
+          <span class="empty" id="emptyMessage">Todavía no han creado relaciones.</span>
+        </div>
+      </section>
+
+      <section class="check-zone">
+        <div class="feedback neutral" id="feedback" role="status" aria-live="polite">
+          Cuando hayan reproducido todas las relaciones de la guía, pulsen “Comprobar”.
+        </div>
+        <div class="check-actions">
+          <button class="secondary" id="reviewBodies" type="button">Revisar cuerpos</button>
+          <button class="danger" id="resetMap" type="button">Reiniciar mapa</button>
+          <button class="primary" id="checkMap" type="button">Comprobar</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer-note">
+      Cuando el docente lo indique, entreguen la guía.
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+"use strict";
+
+const observeScreen=document.getElementById("observeScreen");
+const toMapPrep=document.getElementById("toMapPrep");
+const backToObserve=document.getElementById("backToObserve");
+const openMap=document.getElementById("openMap");
+const startScreen=document.getElementById("startScreen");
+const mapScreen=document.getElementById("mapScreen");
+const reviewBodies=document.getElementById("reviewBodies");
+const phaseLabel=document.getElementById("phaseLabel");
+const mapWrap=document.getElementById("mapWrap");
+const lineLayer=document.getElementById("lineLayer");
+
+const bodyButtons=[...document.querySelectorAll(".body")];
+const familyButtons=[...document.querySelectorAll(".family")];
+
+const bodyPill=document.getElementById("bodyPill");
+const familyPill=document.getElementById("familyPill");
+const createRelation=document.getElementById("createRelation");
+const clearSelection=document.getElementById("clearSelection");
+const connectionList=document.getElementById("connectionList");
+const relationCount=document.getElementById("relationCount");
+const feedback=document.getElementById("feedback");
+const resetMap=document.getElementById("resetMap");
+const checkMap=document.getElementById("checkMap");
+
+
+/* =========================================================
+   VISOR 3D LOCAL PARA APOYAR LAS MATRICES
+   ========================================================= */
+const initialRotations={
+  cube:{x:0.44,y:-0.62,z:0},
+  prism6:{x:0.61,y:-0.52,z:0},
+  pyramid4:{x:0.35,y:0.79,z:0},
+  cylinder:{x:-0.26,y:-0.52,z:0},
+  cone:{x:-0.35,y:0.52,z:0},
+  sphere:{x:0,y:0,z:0}
+};
+
+function clamp(v,min,max){return Math.max(min,Math.min(max,v));}
+function safeFocus(el){
+  try{el.focus({preventScroll:true});}
+  catch(_){el.focus();}
+}
+
+function createCanvasEngine(container,model){
+  const canvas=document.createElement("canvas");
+  canvas.setAttribute("aria-hidden","true");
+  container.prepend(canvas);
+  const ctx=canvas.getContext("2d");
+  const dpr=Math.min(window.devicePixelRatio||1,1.5);
+
+  let currentModel=model;
+  let rotation={...initialRotations[currentModel]};
+  let dragging=false,lastX=0,lastY=0;
+
+  function rotatePoint(p){
+    let x=p[0],y=p[1],z=p[2];
+    const cx=Math.cos(rotation.x),sx=Math.sin(rotation.x);
+    let y1=y*cx-z*sx,z1=y*sx+z*cx; y=y1; z=z1;
+    const cy=Math.cos(rotation.y),sy=Math.sin(rotation.y);
+    let x2=x*cy+z*sy,z2=-x*sy+z*cy; x=x2; z=z2;
+    const cz=Math.cos(rotation.z),sz=Math.sin(rotation.z);
+    return [x*cz-y*sz,x*sz+y*cz,z];
+  }
+
+  function project(p,w,h){
+    const cameraZ=7.2;
+    const focal=Math.min(w,h)*1.28;
+    const denom=Math.max(1.5,cameraZ-p[2]);
+    const s=focal/denom;
+    return[w/2+p[0]*s,h/2-p[1]*s];
+  }
+
+  function normal(a,b,c){
+    const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]];
+    const v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
+    const n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+    const len=Math.hypot(n[0],n[1],n[2])||1;
+    return[n[0]/len,n[1]/len,n[2]/len];
+  }
+
+  function shade(n){
+    const light=[.45,.70,.75];
+    const ll=Math.hypot(...light);
+    const dot=Math.max(-1,Math.min(1,(n[0]*light[0]+n[1]*light[1]+n[2]*light[2])/ll));
+    const k=.86+.14*Math.max(0,dot);
+    const b=[127,188,197];
+    return"rgb("+Math.round(b[0]*k)+","+Math.round(b[1]*k)+","+Math.round(b[2]*k)+")";
+  }
+
+  function polygon(points,fill,stroke){
+    if(!points.length)return;
+    ctx.beginPath();
+    ctx.moveTo(points[0][0],points[0][1]);
+    for(let i=1;i<points.length;i++)ctx.lineTo(points[i][0],points[i][1]);
+    ctx.closePath();
+    ctx.fillStyle=fill;ctx.fill();
+    if(stroke){
+      ctx.save();
+      ctx.strokeStyle=stroke;ctx.lineWidth=1.7;ctx.lineJoin="round";ctx.lineCap="round";ctx.miterLimit=2;ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  function mesh(vertices,faces,w,h,stroke){
+    const rv=vertices.map(rotatePoint);
+    const center=rv.reduce((acc,p)=>[acc[0]+p[0],acc[1]+p[1],acc[2]+p[2]],[0,0,0]).map(v=>v/rv.length);
+    const cameraZ=7.2;
+    const fs=faces.map(ids=>{
+      const p3=ids.map(i=>rv[i]);
+      const fc=p3.reduce((acc,p)=>[acc[0]+p[0],acc[1]+p[1],acc[2]+p[2]],[0,0,0]).map(v=>v/p3.length);
+      let n=normal(p3[0],p3[1],p3[2]);
+      const outward=[fc[0]-center[0],fc[1]-center[1],fc[2]-center[2]];
+      if(n[0]*outward[0]+n[1]*outward[1]+n[2]*outward[2]<0)n=[-n[0],-n[1],-n[2]];
+      const toCamera=[-fc[0],-fc[1],cameraZ-fc[2]];
+      const visible=n[0]*toCamera[0]+n[1]*toCamera[1]+n[2]*toCamera[2]>1e-7;
+      const depth=p3.reduce((a,p)=>a+p[2],0)/p3.length;
+      return{ids,p3,depth,n,visible};
+    }).filter(f=>f.visible).sort((a,b)=>a.depth-b.depth);
+
+    fs.forEach(f=>{
+      const outline=(stroke||f.ids.length>4)?"rgba(32,38,43,.82)":null;
+      polygon(f.p3.map(p=>project(p,w,h)),shade(f.n),outline);
+    });
+  }
+
+  function regularPrism(n,r,h,w,hh,stroke=true){
+    const v=[],faces=[];
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2+Math.PI/n;
+      v.push([Math.cos(a)*r,-h/2,Math.sin(a)*r]);
+    }
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2+Math.PI/n;
+      v.push([Math.cos(a)*r,h/2,Math.sin(a)*r]);
+    }
+    faces.push([...Array(n).keys()].reverse());
+    faces.push([...Array(n).keys()].map(i=>i+n));
+    for(let i=0;i<n;i++){
+      const j=(i+1)%n;
+      faces.push([i,j,j+n,i+n]);
+    }
+    mesh(v,faces,w,hh,stroke);
+  }
+
+  function pyramid(n,r,h,w,hh){
+    const v=[],faces=[];
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2+Math.PI/n;
+      v.push([Math.cos(a)*r,-h/2,Math.sin(a)*r]);
+    }
+    v.push([0,h/2,0]);
+    const apex=n;
+    faces.push([...Array(n).keys()].reverse());
+    for(let i=0;i<n;i++)faces.push([i,(i+1)%n,apex]);
+    mesh(v,faces,w,hh,true);
+  }
+
+  function coneOrCylinder(kind,w,h){
+    const n=48,r=1.15,yb=-1.35,yt=1.35;
+    const v=[],faces=[];
+    if(kind==="cylinder"){
+      for(let i=0;i<n;i++){
+        const a=(i/n)*Math.PI*2;
+        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
+      }
+      for(let i=0;i<n;i++){
+        const a=(i/n)*Math.PI*2;
+        v.push([Math.cos(a)*r,yt,Math.sin(a)*r]);
+      }
+      faces.push([...Array(n).keys()].reverse());
+      faces.push([...Array(n).keys()].map(i=>i+n));
+      for(let i=0;i<n;i++){
+        const j=(i+1)%n;
+        faces.push([i,j,j+n,i+n]);
+      }
+    }else{
+      for(let i=0;i<n;i++){
+        const a=(i/n)*Math.PI*2;
+        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
+      }
+      v.push([0,yt,0]);
+      const apex=n;
+      faces.push([...Array(n).keys()].reverse());
+      for(let i=0;i<n;i++)faces.push([i,(i+1)%n,apex]);
+    }
+    mesh(v,faces,w,h,false);
+  }
+
+  function sphere(w,h){
+    const cx=w/2,cy=h/2;
+    const r=Math.min(w,h)*.26;
+    const g=ctx.createRadialGradient(cx-r*.32,cy-r*.35,r*.08,cx,cy,r);
+    g.addColorStop(0,"#B5DEE2");
+    g.addColorStop(.55,"#7FBCC5");
+    g.addColorStop(1,"#5B8D95");
+    ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
+  }
+
+  function render(){
+    const rect=container.getBoundingClientRect();
+    const cw=Math.max(240,rect.width);
+    const ch=Math.max(220,rect.height);
+    const tw=Math.round(cw*dpr),th=Math.round(ch*dpr);
+    if(canvas.width!==tw||canvas.height!==th){
+      canvas.width=tw;canvas.height=th;canvas.style.width=cw+"px";canvas.style.height=ch+"px";
+    }
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,cw,ch);
+    const g=ctx.createLinearGradient(0,0,0,ch);
+    g.addColorStop(0,"#FBFDFD");g.addColorStop(1,"#EEF5F6");ctx.fillStyle=g;ctx.fillRect(0,0,cw,ch);
+
+    if(currentModel==="cube"){
+      const s=1.25;
+      mesh([[-s,-s,-s],[s,-s,-s],[s,s,-s],[-s,s,-s],[-s,-s,s],[s,-s,s],[s,s,s],[-s,s,s]],
+           [[0,1,2,3],[4,7,6,5],[0,4,5,1],[3,2,6,7],[1,5,6,2],[0,3,7,4]],cw,ch,true);
+    }else if(currentModel==="prism6")regularPrism(6,1.22,2.75,cw,ch,true);
+    else if(currentModel==="pyramid4")pyramid(4,1.40,2.75,cw,ch);
+    else if(currentModel==="cylinder")coneOrCylinder("cylinder",cw,ch);
+    else if(currentModel==="cone")coneOrCylinder("cone",cw,ch);
+    else if(currentModel==="sphere")sphere(cw,ch);
+  }
+
+  function rotate(dx,dy){rotation.y+=dx;rotation.x=clamp(rotation.x+dy,-Math.PI*.49,Math.PI*.49);render();}
+  function reset(){rotation={...initialRotations[currentModel]};render();}
+  function setModel(kind){currentModel=kind;rotation={...initialRotations[kind]};render();}
+
+  function pd(e){
+    dragging=true;lastX=e.clientX;lastY=e.clientY;
+    if(canvas.setPointerCapture){try{canvas.setPointerCapture(e.pointerId);}catch(_){}}
+    safeFocus(container);
+  }
+  function pm(e){
+    if(!dragging)return;
+    const dx=e.clientX-lastX,dy=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;rotate(dx*.010,dy*.010);
+  }
+  function pu(e){
+    dragging=false;
+    if(e&&canvas.releasePointerCapture){try{canvas.releasePointerCapture(e.pointerId);}catch(_){}}
+  }
+  canvas.addEventListener("pointerdown",pd);
+  canvas.addEventListener("pointermove",pm);
+  canvas.addEventListener("pointerup",pu);
+  canvas.addEventListener("pointercancel",pu);
+
+  const keyHandler=function(e){
+    let used=true;
+    switch(e.key){
+      case"ArrowLeft":rotate(-.12,0);break;
+      case"ArrowRight":rotate(.12,0);break;
+      case"ArrowUp":rotate(0,-.12);break;
+      case"ArrowDown":rotate(0,.12);break;
+      case"r":case"R":reset();break;
+      default:used=false;
+    }
+    if(used)e.preventDefault();
+  };
+  container.addEventListener("keydown",keyHandler);
+
+  let ro=null;
+  if("ResizeObserver" in window){ro=new ResizeObserver(render);ro.observe(container);}
+  setModel(currentModel);
+
+  return{setModel,rotate,reset,resize:render,destroy:function(){if(ro)ro.disconnect();}};
+}
+
+function attachInspectControls(engine){
+  const bar=document.getElementById("inspectControls");
+  bar.innerHTML=
+    '<button class="arrow" type="button" data-dir="left" aria-label="Girar a la izquierda">←</button>'+ 
+    '<button class="arrow" type="button" data-dir="right" aria-label="Girar a la derecha">→</button>'+ 
+    '<button class="arrow" type="button" data-dir="up" aria-label="Girar hacia arriba">↑</button>'+ 
+    '<button class="arrow" type="button" data-dir="down" aria-label="Girar hacia abajo">↓</button>'+ 
+    '<button class="reset" type="button" data-reset>Vista inicial</button>';
+  bar.querySelector('[data-dir="left"]').onclick=()=>engine.rotate(-.14,0);
+  bar.querySelector('[data-dir="right"]').onclick=()=>engine.rotate(.14,0);
+  bar.querySelector('[data-dir="up"]').onclick=()=>engine.rotate(0,-.14);
+  bar.querySelector('[data-dir="down"]').onclick=()=>engine.rotate(0,.14);
+  bar.querySelector('[data-reset]').onclick=()=>engine.reset();
+}
+
+const inspectViewer=document.getElementById("inspectViewer");
+const inspectEngine=createCanvasEngine(inspectViewer,"prism6");
+attachInspectControls(inspectEngine);
+const inspectTitle=document.getElementById("inspectViewerTitle");
+const inspectButtons=[...document.querySelectorAll(".inspect-body")];
+inspectButtons.forEach(btn=>{
+  btn.addEventListener("click",function(){
+    inspectButtons.forEach(b=>{b.classList.remove("selected");b.setAttribute("aria-pressed","false");});
+    btn.classList.add("selected");btn.setAttribute("aria-pressed","true");
+    inspectTitle.textContent=btn.dataset.inspectName;
+    inspectEngine.setModel(btn.dataset.inspectModel);
+    reportHeight();
+  });
+});
+
+function showStage(stage){
+  observeScreen.classList.toggle("hidden",stage!=="observe");
+  startScreen.classList.toggle("hidden",stage!=="prep");
+  mapScreen.classList.toggle("hidden",stage!=="map");
+  if(stage==="observe"){
+    phaseLabel.textContent="Observación de cuerpos";
+    setTimeout(()=>{inspectEngine.resize();reportHeight();},0);
+  }else if(stage==="prep"){
+    phaseLabel.textContent="Mapa en la guía";
+    setTimeout(reportHeight,0);
+  }else{
+    phaseLabel.textContent="Comprobación del mapa";
+    setTimeout(()=>{drawLines();document.getElementById("prompt").focus();reportHeight();},0);
+  }
+  window.scrollTo({top:0,behavior:"auto"});
+}
+
+let observeMode="initial";
+
+function openObserve(mode){
+  observeMode=mode;
+  toMapPrep.textContent=mode==="review" ? "Volver a la comprobación" : "Continuar al mapa";
+  showStage("observe");
+}
+
+toMapPrep.addEventListener("click",function(){
+  if(observeMode==="review"){
+    showStage("map");
+  }else{
+    showStage("prep");
+  }
+});
+backToObserve.addEventListener("click",()=>openObserve("initial"));
+reviewBodies.addEventListener("click",()=>openObserve("review"));
+
+let selectedBody=null;
+let selectedFamily=null;
+let relations=[];
+
+const bodyIdByName={
+  "Prisma hexagonal":"body-prism6",
+  "Pirámide cuadrangular":"body-pyramid4",
+  "Cubo":"body-cube",
+  "Cilindro":"body-cylinder",
+  "Cono":"body-cone",
+  "Esfera":"body-sphere"
+};
+
+const familyIdByName={
+  "Prismas":"fam-prism",
+  "Pirámides":"fam-pyramid",
+  "Poliedros regulares":"fam-regular",
+  "Cilindros":"fam-cylinder",
+  "Conos":"fam-cone",
+  "Esferas":"fam-sphere"
+};
+
+/* La posición de las tarjetas no comunica la respuesta: los cuerpos están deliberadamente desordenados. */
+const expected=new Set([
+  "Prisma hexagonal|Prismas",
+  "Pirámide cuadrangular|Pirámides",
+  "Cubo|Prismas",
+  "Cubo|Poliedros regulares",
+  "Cilindro|Cilindros",
+  "Cono|Conos",
+  "Esfera|Esferas"
+]);
+
+function relationKey(body,family){
+  return body+"|"+family;
+}
+
+function updateSelectionUI(){
+  bodyButtons.forEach(btn=>{
+    btn.classList.toggle("selected",btn.dataset.body===selectedBody);
+    btn.setAttribute("aria-pressed",btn.dataset.body===selectedBody?"true":"false");
+  });
+  familyButtons.forEach(btn=>{
+    btn.classList.toggle("selected",btn.dataset.family===selectedFamily);
+    btn.setAttribute("aria-pressed",btn.dataset.family===selectedFamily?"true":"false");
+  });
+
+  bodyPill.textContent="Cuerpo: "+(selectedBody||"—");
+  familyPill.textContent="Familia: "+(selectedFamily||"—");
+  bodyPill.classList.toggle("active",!!selectedBody);
+  familyPill.classList.toggle("active",!!selectedFamily);
+
+  createRelation.disabled=!(selectedBody&&selectedFamily);
+}
+
+function clearCurrentSelection(){
+  selectedBody=null;
+  selectedFamily=null;
+  updateSelectionUI();
+}
+
+bodyButtons.forEach(btn=>{
+  btn.setAttribute("aria-pressed","false");
+  btn.addEventListener("click",function(){
+    selectedBody=btn.dataset.body;
+    updateSelectionUI();
+  });
+});
+
+familyButtons.forEach(btn=>{
+  btn.setAttribute("aria-pressed","false");
+  btn.addEventListener("click",function(){
+    selectedFamily=btn.dataset.family;
+    updateSelectionUI();
+  });
+});
+
+clearSelection.addEventListener("click",clearCurrentSelection);
+
+createRelation.addEventListener("click",function(){
+  if(!selectedBody||!selectedFamily)return;
+
+  const key=relationKey(selectedBody,selectedFamily);
+  if(relations.some(r=>relationKey(r.body,r.family)===key)){
+    setFeedback("Esa relación ya está en el mapa.","neutral");
+    return;
+  }
+
+  relations.push({body:selectedBody,family:selectedFamily});
+  renderRelations();
+  clearCurrentSelection();
+  setFeedback("Relación creada. Continúen con la siguiente relación.","neutral");
+});
+
+function removeRelation(index){
+  relations.splice(index,1);
+  renderRelations();
+  setFeedback("Relación eliminada. Pueden seguir ajustando el mapa.","neutral");
+}
+
+function renderRelations(){
+  connectionList.innerHTML="";
+
+  if(relations.length===0){
+    const span=document.createElement("span");
+    span.className="empty";
+    span.textContent="Todavía no han creado relaciones.";
+    connectionList.appendChild(span);
+  }else{
+    relations.forEach((r,index)=>{
+      const chip=document.createElement("span");
+      chip.className="relation-chip";
+
+      const label=document.createElement("span");
+      label.textContent=r.body+" → "+r.family;
+      label.setAttribute("aria-label",r.body+" se relaciona con "+r.family);
+
+      const remove=document.createElement("button");
+      remove.type="button";
+      remove.textContent="×";
+      remove.setAttribute("aria-label","Eliminar relación "+r.body+" con "+r.family);
+      remove.addEventListener("click",()=>removeRelation(index));
+
+      chip.appendChild(label);
+      chip.appendChild(remove);
+      connectionList.appendChild(chip);
+    });
+  }
+
+  relationCount.textContent=
+    relations.length+" "+(relations.length===1?"relación":"relaciones");
+
+  drawLines();
+  reportHeight();
+}
+
+function edgePoint(id,side){
+  const el=document.getElementById(id);
+  const root=mapWrap.getBoundingClientRect();
+  const rect=el.getBoundingClientRect();
+  return{
+    x:rect.left-root.left+rect.width/2,
+    y:side==="top"?rect.top-root.top:rect.bottom-root.top
+  };
+}
+
+function svgPath(x1,y1,x2,y2,curve){
+  const mid=(y1+y2)/2;
+  if(curve){
+    return `M ${x1} ${y1} C ${x1} ${mid}, ${x2} ${mid}, ${x2} ${y2}`;
+  }
+  return `M ${x1} ${y1} L ${x2} ${y2}`;
+}
+
+function addPath(d,className){
+  const p=document.createElementNS("http://www.w3.org/2000/svg","path");
+  p.setAttribute("d",d);
+  p.setAttribute("class",className);
+  lineLayer.appendChild(p);
+}
+
+function fixedLink(from,to){
+  const a=edgePoint(from,"bottom");
+  const b=edgePoint(to,"top");
+  addPath(svgPath(a.x,a.y,b.x,b.y,true),"fixed-line");
+}
+
+function drawLines(){
+  lineLayer.innerHTML="";
+  const rect=mapWrap.getBoundingClientRect();
+  lineLayer.setAttribute("viewBox",`0 0 ${rect.width} ${rect.height}`);
+
+  fixedLink("general","polyhedra");
+  fixedLink("general","roundBodies");
+
+  ["fam-prism","fam-pyramid","fam-regular"].forEach(id=>fixedLink("polyhedra",id));
+  ["fam-cylinder","fam-cone","fam-sphere"].forEach(id=>fixedLink("roundBodies",id));
+
+  relations.forEach(r=>{
+    const bodyId=bodyIdByName[r.body];
+    const famId=familyIdByName[r.family];
+    const a=edgePoint(bodyId,"top");
+    const b=edgePoint(famId,"bottom");
+    const d=svgPath(a.x,a.y,b.x,b.y,true);
+    addPath(d,"user-line-halo");
+    addPath(d,"user-line");
+  });
+}
+
+function setFeedback(message,type){
+  feedback.textContent=message;
+  feedback.className="feedback "+type;
+  reportHeight();
+}
+
+checkMap.addEventListener("click",function(){
+  if(relations.length===0){
+    setFeedback("Reproduzcan primero las relaciones que trazaron en la guía.","neutral");
+    return;
+  }
+
+  const current=new Set(relations.map(r=>relationKey(r.body,r.family)));
+  const wrong=[...current].filter(key=>!expected.has(key));
+  const missing=[...expected].filter(key=>!current.has(key));
+
+  const isExact=wrong.length===0 && missing.length===0;
+
+  if(isExact){
+    setFeedback(
+      "El mapa es correcto. Completen ahora «Decisión final» y «Comparación con la primera decisión» en la guía.",
+      "success"
+    );
+  }else if(wrong.length===0 && missing.length>0){
+    setFeedback(
+      "Las relaciones que construyeron son válidas, pero el mapa está incompleto. Revisen si algún cuerpo puede pertenecer a más de una familia.",
+      "review"
+    );
+  }else{
+    setFeedback(
+      "Hay relaciones por revisar. Revisen las propiedades P1–P3 de las matrices, ajusten las relaciones en el recurso digital y vuelvan a comprobar.",
+      "review"
+    );
+  }
+});
+
+resetMap.addEventListener("click",function(){
+  if(relations.length===0){
+    setFeedback("El mapa todavía no tiene relaciones para borrar.","neutral");
+    return;
+  }
+
+  const confirmReset=window.confirm(
+    "¿Quieren borrar todas las relaciones creadas en el recurso digital?"
+  );
+  if(!confirmReset)return;
+
+  relations=[];
+  clearCurrentSelection();
+  renderRelations();
+  setFeedback("Mapa reiniciado. Reproduzcan nuevamente las relaciones de la guía.","neutral");
+});
+
+function reportHeight(){
+  try{
+    const app=document.querySelector(".app");
+    const bodyRect=document.body.getBoundingClientRect();
+    const appRect=app ? app.getBoundingClientRect() : null;
+
+    /* Altura real del recurso para evitar espacio vacío sobrante. */
+    const contentHeight=Math.max(
+      1,
+      Math.ceil(
+        appRect
+          ? (appRect.bottom - bodyRect.top + 8)
+          : (document.documentElement.scrollHeight||0)
+      )
+    );
+
+    const frame=window.frameElement;
+    if(frame){
+      frame.style.width="100%";
+      frame.style.maxWidth="none";
+      frame.style.display="block";
+      frame.style.border="0";
+      frame.setAttribute("width","100%");
+      frame.setAttribute("scrolling","no");
+      frame.style.height=contentHeight+"px";
+      frame.style.minHeight="0";
+      frame.setAttribute("height",String(contentHeight));
+    }
+
+    if(window.parent && window.parent!==window){
+      window.parent.postMessage(
+        {type:"S3_RESOURCE_HEIGHT",height:contentHeight},
+        "*"
+      );
+    }
+  }catch(_){}
+}
+
+openMap.addEventListener("click",function(){
+  showStage("map");
+});
+
+if("ResizeObserver" in window){
+  const ro=new ResizeObserver(function(){
+    drawLines();
+    reportHeight();
+  });
+  ro.observe(mapWrap);
+
+  const appObserver=new ResizeObserver(function(){
+    requestAnimationFrame(reportHeight);
+  });
+  appObserver.observe(document.querySelector(".app"));
+}else{
+  window.addEventListener("resize",function(){
+    drawLines();
+    reportHeight();
+  });
+}
+
+renderRelations();
+updateSelectionUI();
+openObserve("initial");
+setTimeout(reportHeight,100);
+setTimeout(reportHeight,500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1336 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sesión 3 · Analiza</title>
+<style>
+:root{
+  --grafito:#20262B;
+  --verde:#4B702F;
+  --naranja:#C96E2A;
+  --azul:#0F5F9B;
+  --azul-profundo:#0B4268;
+  --puente:#2B6A72;
+  --geo:#7FBCC5;
+  --geo-claro:#A8D6DC;
+  --geo-borde:#28484F;
+  --fondo:#F5F7F8;
+  --blanco:#FFFFFF;
+  --borde:#D7DDE1;
+  --texto:#20262B;
+  --suave:#EEF2F4;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  min-height:0;
+  background:transparent;
+  color:var(--texto);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+}
+body{padding:8px}
+.app{
+  width:100%;
+  max-width:none;
+  margin:0 auto;
+  background:var(--blanco);
+  border:1px solid var(--borde);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(32,38,43,.08);
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 14px;
+  background:var(--grafito);
+  color:#fff;
+}
+.stage{
+  font-family:"Arial Black",Arial,sans-serif;
+  font-size:14pt;
+  line-height:1.2;
+}
+.counter{
+  font-size:12pt;
+  font-weight:700;
+  white-space:nowrap;
+}
+.screen{display:none}
+.screen.active{display:block}
+.instruction{
+  margin:12px 14px 0;
+  border-left:5px solid var(--verde);
+  background:#F6F8F7;
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:12pt;
+  line-height:1.42;
+}
+.note{
+  margin:10px 14px 0;
+  border-left:5px solid var(--azul);
+  background:#F2F7FA;
+  padding:9px 12px;
+  border-radius:8px;
+  font-size:11.5pt;
+  line-height:1.4;
+}
+.howto{
+  margin:8px 14px 0;
+  padding:7px 10px;
+  border:1px solid var(--borde);
+  border-radius:8px;
+  background:#FAFBFB;
+  color:#4B5961;
+  font-size:10.8pt;
+  line-height:1.35;
+}
+.grid-six{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:12px 14px;
+}
+.body-card{
+  border:1px solid var(--borde);
+  background:#fff;
+  border-radius:10px;
+  padding:8px;
+  cursor:pointer;
+  text-align:center;
+}
+.body-card:hover{background:#F8FAFB}
+.body-card.selected{
+  border-color:var(--azul);
+  box-shadow:0 0 0 3px rgba(15,95,155,.15);
+}
+.body-card:focus-visible{
+  outline:3px solid rgba(15,95,155,.28);
+  outline-offset:2px;
+}
+.thumb{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:5 / 3!important;
+  display:block;
+  background:linear-gradient(180deg,#FBFDFD 0%,#EEF5F6 100%);
+  border:1px solid #E1EAEC;
+  border-radius:8px;
+}
+.body-code{
+  display:inline-block;
+  margin-top:6px;
+  min-width:28px;
+  border-radius:999px;
+  padding:4px 8px;
+  background:var(--grafito);
+  color:#fff;
+  font-weight:700;
+  font-size:11pt;
+}
+.viewer-panel{
+  margin:12px 14px;
+  border:1px solid var(--borde);
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+}
+.viewer-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:8px 10px;
+  background:#F2F5F6;
+  border-bottom:1px solid var(--borde);
+  font-weight:700;
+  font-size:11.5pt;
+}
+.viewer{
+  position:relative;
+  width:100%;
+  height:330px;
+  background:linear-gradient(180deg,#F7FAFB 0%,#EAF0F3 100%);
+  outline:none;
+  touch-action:none;
+}
+.viewer:focus{
+  box-shadow:inset 0 0 0 3px rgba(15,95,155,.22);
+}
+.viewer canvas{
+  display:block;
+  width:100%;
+  height:100%;
+  touch-action:none;
+}
+.viewer-help{
+  position:absolute;
+  left:9px;
+  top:9px;
+  z-index:4;
+  background:rgba(255,255,255,.94);
+  border:1px solid var(--borde);
+  border-radius:7px;
+  padding:6px 8px;
+  font-size:10.5pt;
+  line-height:1.25;
+  pointer-events:none;
+}
+.pair{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:12px 14px;
+}
+.pair .viewer-panel{margin:0}
+.pair .viewer{height:300px}
+.viewer-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  padding:8px 9px;
+  border-top:1px solid var(--borde);
+  background:#FAFBFB;
+}
+button{
+  appearance:none;
+  border:1px solid #AEB9C0;
+  background:#fff;
+  color:var(--grafito);
+  min-height:40px;
+  border-radius:8px;
+  padding:7px 11px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11.5pt;
+  font-weight:700;
+  cursor:pointer;
+}
+button:hover{background:var(--suave)}
+button:focus-visible{
+  outline:3px solid rgba(15,95,155,.28);
+  outline-offset:2px;
+}
+.arrow{
+  width:40px;
+  padding:6px 0;
+  font-size:15pt;
+  line-height:1;
+}
+.reset{
+  border-color:var(--azul);
+  color:var(--azul-profundo);
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:4px 14px 10px;
+}
+.prev{border-color:var(--puente);color:var(--puente)}
+.next{
+  margin-left:auto;
+  background:var(--verde);
+  border-color:var(--verde);
+  color:#fff;
+}
+.next:hover{background:var(--verde);filter:brightness(.94)}
+.question-list{
+  margin:10px 14px 12px;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:7px;
+}
+.question-list li{
+  border:1px solid var(--borde);
+  border-radius:8px;
+  padding:8px 10px;
+  font-size:11.5pt;
+  line-height:1.35;
+}
+.small{
+  font-size:10.5pt;
+  color:#526069;
+}
+.formal-grid{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:12px;
+  margin:12px 14px;
+}
+.concept-list{
+  display:grid;
+  gap:7px;
+  align-content:start;
+}
+.concept-btn{
+  text-align:left;
+  min-height:42px;
+}
+.concept-btn.active{
+  background:var(--azul-profundo);
+  border-color:var(--azul-profundo);
+  color:#fff;
+}
+.concept-panel{
+  border:1px solid var(--borde);
+  border-radius:12px;
+  overflow:hidden;
+}
+.concept-copy{
+  padding:11px 12px;
+  border-bottom:1px solid var(--borde);
+  background:#fff;
+}
+.concept-name{
+  font-family:"Arial Black",Arial,sans-serif;
+  font-size:13pt;
+  margin:0 0 6px;
+}
+.concept-text{
+  font-size:11.5pt;
+  line-height:1.42;
+  margin:0;
+}
+.cube-note{
+  margin:10px 14px;
+  padding:10px 12px;
+  border:1px solid #BFD0B4;
+  background:#F4F8F1;
+  border-radius:9px;
+  font-size:11.5pt;
+  line-height:1.4;
+}
+.digital-check{
+  margin:10px 14px 14px;
+  padding:11px 12px;
+  border-left:5px solid var(--verde);
+  background:#F6F8F7;
+  border-radius:8px;
+  font-size:11.5pt;
+  line-height:1.4;
+}
+.check-title{
+  font-family:"Arial Black",Arial,sans-serif;
+  font-size:12.5pt;
+  margin:0 0 4px;
+}
+.check-intro{
+  margin:0 0 10px;
+}
+.check-row{
+  display:grid;
+  grid-template-columns:minmax(260px,.9fr) minmax(320px,1.5fr);
+  gap:10px;
+  align-items:center;
+  padding:8px 0;
+  border-top:1px solid #DDE3E6;
+}
+.check-row:first-of-type{
+  border-top:0;
+}
+.check-row label{
+  line-height:1.35;
+}
+.check-row select{
+  width:100%;
+  min-height:42px;
+  padding:7px 34px 7px 9px;
+  border:1px solid #AEB9C0;
+  border-radius:7px;
+  background:#FFFFFF;
+  color:var(--grafito);
+  font:11pt Arial,Helvetica,sans-serif;
+}
+.check-row select:focus{
+  outline:3px solid rgba(15,95,155,.22);
+  outline-offset:1px;
+}
+.check-row select[aria-invalid="true"]{
+  border:2px solid var(--azul);
+}
+.check-actions{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:8px;
+}
+.check-button{
+  border-color:var(--verde);
+  background:var(--verde);
+  color:#FFFFFF;
+}
+.check-button:hover{
+  background:var(--verde);
+  filter:brightness(.95);
+}
+.check-feedback{
+  margin-top:9px;
+  padding:9px 11px;
+  border-radius:7px;
+  background:#F2F7FA;
+  border-left:4px solid var(--azul);
+  line-height:1.4;
+}
+.check-feedback.success{
+  background:#F4F8F1;
+  border-left-color:var(--verde);
+}
+@media(max-width:760px){
+  .check-row{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+}
+.hidden{display:none!important}
+
+/* Protección de calidad visual:
+   el recurso exterior puede ocupar todo el ancho disponible,
+   pero los bloques con canvas conservan el ancho útil máximo original. */
+.grid-six,
+.viewer-panel,
+.pair,
+.formal-grid{
+  width:calc(100% - 28px);
+  max-width:1022px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Dentro de .pair y .formal-grid se conserva la estructura interna original. */
+.pair .viewer-panel{
+  width:100%;
+  max-width:none;
+  margin:0;
+}
+
+.formal-grid .concept-panel{
+  min-width:0;
+}
+
+@media(max-width:800px){
+  .grid-six{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pair{grid-template-columns:1fr}
+  .formal-grid{grid-template-columns:1fr}
+  .viewer{height:300px}
+}
+@media(max-width:520px){
+  body{padding:5px}
+  .grid-six{grid-template-columns:1fr 1fr}
+  .viewer{height:270px}
+  .stage{font-size:12.5pt}
+}
+</style>
+
+<!-- Recurso autocontenido: motor Canvas local, sin dependencias externas. -->
+</head>
+
+<body>
+<main class="app" aria-label="Comparación y organización de propiedades geométricas">
+  <!-- El título del iDevice en eXeLearning será “Compara y organiza las propiedades”; no se repite dentro del HTML. -->
+  <!-- Auditoría final P2:
+       - F2 compara propiedades sin clasificar todavía.
+       - F3 formaliza con mediación del docente.
+       - El octaedro es un ejemplo guiado, no una clasificación autónoma.
+       - El iframe intenta ajustarse a la altura real de cada pantalla.
+       - La antigua escritura en cuaderno se reemplaza por una comprobación digital formativa y breve. -->
+  <header class="topbar">
+    <div class="stage" id="stageTitle">Primer filtro</div>
+    <div class="counter" id="screenCounter">1 de 5</div>
+  </header>
+
+  <!-- PANTALLA 1 -->
+  <section class="screen active" data-screen="0">
+    <div class="instruction">
+      Revisen los seis cuerpos. Completen «1. Primer filtro» en la guía. Después, seleccionen “Siguiente: compara A y B”.
+    </div>
+    <div class="note">
+      <strong>Fíjense en:</strong> superficies curvas · bases · vértices.
+    </div>
+    <div class="howto">
+      Selecciona un cuerpo. Arrástralo o usa las flechas. Vista inicial: posición de inicio.
+    </div>
+
+    <div class="grid-six" id="bodyGrid">
+      <button class="body-card selected" type="button" data-model="cube" data-code="A" aria-pressed="true" aria-label="Observar cuerpo A">
+        <canvas class="thumb" data-thumb="cube" aria-hidden="true"></canvas>
+        <span class="body-code">A</span>
+      </button>
+      <button class="body-card" type="button" data-model="prism6" data-code="B" aria-pressed="false" aria-label="Observar cuerpo B">
+        <canvas class="thumb" data-thumb="prism6" aria-hidden="true"></canvas>
+        <span class="body-code">B</span>
+      </button>
+      <button class="body-card" type="button" data-model="pyramid4" data-code="C" aria-pressed="false" aria-label="Observar cuerpo C">
+        <canvas class="thumb" data-thumb="pyramid4" aria-hidden="true"></canvas>
+        <span class="body-code">C</span>
+      </button>
+      <button class="body-card" type="button" data-model="cylinder" data-code="D" aria-pressed="false" aria-label="Observar cuerpo D">
+        <canvas class="thumb" data-thumb="cylinder" aria-hidden="true"></canvas>
+        <span class="body-code">D</span>
+      </button>
+      <button class="body-card" type="button" data-model="cone" data-code="E" aria-pressed="false" aria-label="Observar cuerpo E">
+        <canvas class="thumb" data-thumb="cone" aria-hidden="true"></canvas>
+        <span class="body-code">E</span>
+      </button>
+      <button class="body-card" type="button" data-model="sphere" data-code="F" aria-pressed="false" aria-label="Observar cuerpo F">
+        <canvas class="thumb" data-thumb="sphere" aria-hidden="true"></canvas>
+        <span class="body-code">F</span>
+      </button>
+    </div>
+
+    <div class="viewer-panel">
+      <div class="viewer-title">
+        <span id="singleViewerTitle">Cuerpo A</span>
+        <span class="small">Gira para comprobar</span>
+      </div>
+      <div class="viewer" id="singleViewer" tabindex="0"
+           aria-label="Visor tridimensional del cuerpo seleccionado"></div>
+      <div class="viewer-actions" data-controls-for="singleViewer"></div>
+    </div>
+
+    <div class="nav">
+      <button class="next" type="button" data-next>Siguiente: compara A y B</button>
+    </div>
+  </section>
+
+  <!-- PANTALLA 2 -->
+  <section class="screen" data-screen="1">
+    <div class="instruction">
+      Giren los cuerpos A y B. Completen «2. Compara A y B» en la guía. Después, seleccionen “Siguiente: compara B y D”.
+    </div>
+    <div class="note">
+      <strong>Fíjense en:</strong> superficies planas · caras opuestas · forma de las caras. Todavía no clasifiquen los cuerpos.
+    </div>
+    <div class="howto">
+      Arrastra cada cuerpo o usa las flechas. Vista inicial: posición de inicio.
+    </div>
+
+    <div class="pair">
+      <div class="viewer-panel">
+        <div class="viewer-title"><span>Cuerpo A</span><span class="small">Gira y compara</span></div>
+        <div class="viewer" id="viewerA2" tabindex="0" data-model="cube"
+             aria-label="Visor tridimensional del cuerpo A"></div>
+        <div class="viewer-actions" data-controls-for="viewerA2"></div>
+      </div>
+      <div class="viewer-panel">
+        <div class="viewer-title"><span>Cuerpo B</span><span class="small">Gira y compara</span></div>
+        <div class="viewer" id="viewerB2" tabindex="0" data-model="prism6"
+             aria-label="Visor tridimensional del cuerpo B"></div>
+        <div class="viewer-actions" data-controls-for="viewerB2"></div>
+      </div>
+    </div>
+
+
+    <div class="nav">
+      <button class="prev" type="button" data-prev>Anterior</button>
+      <button class="next" type="button" data-next>Siguiente: compara B y D</button>
+    </div>
+  </section>
+
+  <!-- PANTALLA 3 -->
+  <section class="screen" data-screen="2">
+    <div class="instruction">
+      Giren los cuerpos B y D. Completen «3. Compara B y D» en la guía. Después, seleccionen “Siguiente: compara C y E”.
+    </div>
+    <div class="note">
+      <strong>Fíjense en:</strong> bases · forma de las bases · parte lateral.
+    </div>
+    <div class="howto">
+      Arrastra cada cuerpo o usa las flechas. Vista inicial: posición de inicio.
+    </div>
+
+    <div class="pair">
+      <div class="viewer-panel">
+        <div class="viewer-title"><span>Cuerpo B</span><span class="small">Gira y compara</span></div>
+        <div class="viewer" id="viewerB3" tabindex="0" data-model="prism6"
+             aria-label="Visor tridimensional del cuerpo B"></div>
+        <div class="viewer-actions" data-controls-for="viewerB3"></div>
+      </div>
+      <div class="viewer-panel">
+        <div class="viewer-title"><span>Cuerpo D</span><span class="small">Gira y compara</span></div>
+        <div class="viewer" id="viewerD3" tabindex="0" data-model="cylinder"
+             aria-label="Visor tridimensional del cuerpo D"></div>
+        <div class="viewer-actions" data-controls-for="viewerD3"></div>
+      </div>
+    </div>
+
+
+    <div class="nav">
+      <button class="prev" type="button" data-prev>Anterior</button>
+      <button class="next" type="button" data-next>Siguiente: compara C y E</button>
+    </div>
+  </section>
+
+  <!-- PANTALLA 4 -->
+  <section class="screen" data-screen="3">
+    <div class="instruction">
+      Giren los cuerpos C y E. Completen «4. Compara C y E» en la guía.
+    </div>
+    <div class="note">
+      <strong>Fíjense en:</strong> número de bases · vértice · parte lateral.
+    </div>
+    <div class="howto">
+      Arrastra cada cuerpo o usa las flechas. Vista inicial: posición de inicio.
+    </div>
+
+    <div class="pair">
+      <div class="viewer-panel">
+        <div class="viewer-title"><span>Cuerpo C</span><span class="small">Gira y compara</span></div>
+        <div class="viewer" id="viewerC4" tabindex="0" data-model="pyramid4"
+             aria-label="Visor tridimensional del cuerpo C"></div>
+        <div class="viewer-actions" data-controls-for="viewerC4"></div>
+      </div>
+      <div class="viewer-panel">
+        <div class="viewer-title"><span>Cuerpo E</span><span class="small">Gira y compara</span></div>
+        <div class="viewer" id="viewerE4" tabindex="0" data-model="cone"
+             aria-label="Visor tridimensional del cuerpo E"></div>
+        <div class="viewer-actions" data-controls-for="viewerE4"></div>
+      </div>
+    </div>
+
+    <div class="note">
+      Al terminar, piensen: ¿qué propiedades sirven para diferenciar unas familias de otras? No escriban.
+    </div>
+    <div class="note">
+      Esperen la indicación del docente antes de seleccionar «Continuar».
+    </div>
+
+    <div class="nav">
+      <button class="prev" type="button" data-prev>Anterior</button>
+      <button class="next" type="button" data-next>Continuar</button>
+    </div>
+  </section>
+
+  <!-- PANTALLA 5 -->
+  <section class="screen" data-screen="4">
+    <div class="instruction">
+      Esperen la indicación del docente. Compartan una o dos propiedades que encontraron y sigan su explicación.
+    </div>
+    <div class="note">
+      No se adelanten. Seleccionen solo el concepto que el docente indique. En esta parte no escriban en la guía.
+    </div>
+    <div class="howto">
+      El modelo cambia según el concepto seleccionado. Arrástralo o usa las flechas para girarlo.
+    </div>
+
+    <div class="formal-grid">
+      <div class="concept-list" id="conceptList">
+        <button class="concept-btn active" type="button" data-concept="polyhedron" aria-pressed="true">Poliedro</button>
+        <button class="concept-btn" type="button" aria-pressed="false" data-concept="prism">Prisma</button>
+        <button class="concept-btn" type="button" aria-pressed="false" data-concept="pyramid">Pirámide</button>
+        <button class="concept-btn" type="button" aria-pressed="false" data-concept="cylinder">Cilindro</button>
+        <button class="concept-btn" type="button" aria-pressed="false" data-concept="cone">Cono</button>
+        <button class="concept-btn" type="button" aria-pressed="false" data-concept="sphere">Esfera</button>
+        <button class="concept-btn" type="button" aria-pressed="false" data-concept="regular">Poliedro regular</button>
+        <button class="concept-btn" type="button" aria-pressed="false" data-concept="octahedron">Octaedro · ejemplo guiado</button>
+      </div>
+
+      <div class="concept-panel">
+        <div class="concept-copy">
+          <h2 class="concept-name" id="conceptName">Poliedro</h2>
+          <p class="concept-text" id="conceptText">
+            Cuerpo geométrico formado solo por caras planas que son polígonos.
+          </p>
+        </div>
+        <div class="viewer" id="formalViewer" tabindex="0"
+             aria-label="Visor tridimensional de apoyo a la formalización"></div>
+        <div class="viewer-actions" data-controls-for="formalViewer"></div>
+      </div>
+    </div>
+
+    <div class="cube-note">
+      <strong>Cubo:</strong> cumple las propiedades de un prisma y también las de un poliedro regular.
+      Una base no depende de estar “abajo”: en el cubo pueden elegirse distintos pares de caras opuestas como bases.
+    </div>
+
+    <div class="note">
+      Cuando el docente lo indique, seleccionen la propiedad que justifica mejor cada clasificación del cubo y comprueben sus respuestas.
+    </div>
+
+    <section class="digital-check" aria-labelledby="cubeCheckTitle">
+      <div class="check-title" id="cubeCheckTitle">Completa y comprueba</div>
+      <p class="check-intro">
+        Selecciona la propiedad que justifica mejor cada clasificación del cubo.
+      </p>
+
+      <div class="check-row">
+        <label for="prismReason"><strong>1. El cubo es un prisma porque:</strong></label>
+        <select id="prismReason">
+          <option value="">Selecciona una opción</option>
+          <option value="faces">Todas sus caras son cuadrados del mismo tamaño.</option>
+          <option value="prism-ok">Puede elegir dos caras opuestas, poligonales, del mismo tamaño y paralelas como bases.</option>
+          <option value="vertices">En cada vértice se unen tres caras.</option>
+        </select>
+      </div>
+
+      <div class="check-row">
+        <label for="regularReason"><strong>2. El cubo es un poliedro regular porque:</strong></label>
+        <select id="regularReason">
+          <option value="">Selecciona una opción</option>
+          <option value="prism">Puede elegir dos caras opuestas, poligonales, del mismo tamaño y paralelas como bases.</option>
+          <option value="counts">Tiene seis caras y ocho vértices.</option>
+          <option value="regular-ok">Todas sus caras son cuadrados del mismo tamaño y en cada vértice se unen tres caras.</option>
+        </select>
+      </div>
+
+      <div class="check-actions">
+        <button class="check-button" id="checkCubeReasons" type="button">Comprobar respuestas</button>
+      </div>
+
+      <div class="check-feedback hidden" id="cubeCheckFeedback" role="status" aria-live="polite"></div>
+    </section>
+
+    <div class="note">
+      Cuando el docente lo indique, abran «Aplica y comprueba» en el menú del recurso digital.
+    </div>
+
+    <div class="nav">
+      <button class="prev" type="button" data-prev>Volver a la comparación</button>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+"use strict";
+
+/* =========================================================
+   ESTADO Y NAVEGACIÓN
+   ========================================================= */
+const screens=[...document.querySelectorAll(".screen")];
+const stageTitle=document.getElementById("stageTitle");
+const screenCounter=document.getElementById("screenCounter");
+let currentScreen=0;
+let activeViewers=[];
+
+const stageNames=[
+  "Primer filtro",
+  "Compara A y B",
+  "Compara B y D",
+  "Compara C y E",
+  "De las propiedades a las familias"
+];
+
+function showScreen(index){
+  activeViewers.forEach(v=>v.destroy && v.destroy());
+  activeViewers=[];
+
+  currentScreen=Math.max(0,Math.min(index,screens.length-1));
+  screens.forEach((s,i)=>s.classList.toggle("active",i===currentScreen));
+  stageTitle.textContent=stageNames[currentScreen];
+  screenCounter.textContent=(currentScreen+1)+" de "+screens.length;
+
+  initCurrentScreen();
+  window.scrollTo({top:0,behavior:"auto"});
+  setTimeout(reportHeight,0);
+}
+
+document.addEventListener("click",function(e){
+  const next=e.target.closest("[data-next]");
+  const prev=e.target.closest("[data-prev]");
+  if(next) showScreen(currentScreen+1);
+  if(prev) showScreen(currentScreen-1);
+});
+
+/* =========================================================
+   GEOMETRÍA COMÚN
+   ========================================================= */
+const initialRotations={
+  cube:{x:0.44,y:-0.62,z:0},
+  prism6:{x:0.61,y:-0.52,z:0},
+  pyramid4:{x:0.35,y:0.79,z:0},
+  cylinder:{x:-0.26,y:-0.52,z:0},
+  cone:{x:-0.35,y:0.52,z:0},
+  sphere:{x:0,y:0,z:0},
+  octahedron:{x:0.44,y:-0.62,z:0}
+};
+
+function clamp(v,min,max){return Math.max(min,Math.min(max,v));}
+
+function safeFocus(el){
+  try{el.focus({preventScroll:true});}
+  catch(_){el.focus();}
+}
+
+/* =========================================================
+   MOTOR CANVAS LOCAL DE RESPALDO
+   ========================================================= */
+function createCanvasEngine(container,model){
+  const canvas=document.createElement("canvas");
+  canvas.setAttribute("aria-hidden","true");
+  container.prepend(canvas);
+  const ctx=canvas.getContext("2d");
+  const dpr=Math.min(window.devicePixelRatio||1,1.5);
+
+  let currentModel=model;
+  let rotation={...initialRotations[currentModel]};
+  let dragging=false,lastX=0,lastY=0;
+
+  function rotatePoint(p){
+    let x=p[0],y=p[1],z=p[2];
+
+    const cx=Math.cos(rotation.x),sx=Math.sin(rotation.x);
+    let y1=y*cx-z*sx,z1=y*sx+z*cx;
+    y=y1;z=z1;
+
+    const cy=Math.cos(rotation.y),sy=Math.sin(rotation.y);
+    let x2=x*cy+z*sy,z2=-x*sy+z*cy;
+    x=x2;z=z2;
+
+    const cz=Math.cos(rotation.z),sz=Math.sin(rotation.z);
+    return [x*cz-y*sz,x*sz+y*cz,z];
+  }
+
+  function project(p,w,h){
+    const cameraZ=7.2;
+    const focal=Math.min(w,h)*1.28;
+    const denom=Math.max(1.5,cameraZ-p[2]);
+    const s=focal/denom;
+    return[w/2+p[0]*s,h/2-p[1]*s];
+  }
+
+  function normal(a,b,c){
+    const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]];
+    const v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
+    const n=[
+      u[1]*v[2]-u[2]*v[1],
+      u[2]*v[0]-u[0]*v[2],
+      u[0]*v[1]-u[1]*v[0]
+    ];
+    const len=Math.hypot(n[0],n[1],n[2])||1;
+    return[n[0]/len,n[1]/len,n[2]/len];
+  }
+
+  function shade(n){
+    const light=[.45,.70,.75];
+    const ll=Math.hypot(...light);
+    const dot=Math.max(-1,Math.min(1,(n[0]*light[0]+n[1]*light[1]+n[2]*light[2])/ll));
+    const k=.86+.14*Math.max(0,dot);
+    const b=[127,188,197];
+    return"rgb("+Math.round(b[0]*k)+","+Math.round(b[1]*k)+","+Math.round(b[2]*k)+")";
+  }
+
+  function polygon(points,fill,stroke){
+    if(!points.length)return;
+    ctx.beginPath();
+    ctx.moveTo(points[0][0],points[0][1]);
+    for(let i=1;i<points.length;i++)ctx.lineTo(points[i][0],points[i][1]);
+    ctx.closePath();
+    ctx.fillStyle=fill;ctx.fill();
+    if(stroke){
+      ctx.save();
+      ctx.strokeStyle=stroke;
+      ctx.lineWidth=1.7;
+      ctx.lineJoin="round";
+      ctx.lineCap="round";
+      ctx.miterLimit=2;
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  function mesh(vertices,faces,w,h,stroke){
+    const rv=vertices.map(rotatePoint);
+    const center=rv.reduce((acc,p)=>[acc[0]+p[0],acc[1]+p[1],acc[2]+p[2]],[0,0,0]).map(v=>v/rv.length);
+    const cameraZ=7.2;
+    const fs=faces.map(ids=>{
+      const p3=ids.map(i=>rv[i]);
+      const fc=p3.reduce((acc,p)=>[acc[0]+p[0],acc[1]+p[1],acc[2]+p[2]],[0,0,0]).map(v=>v/p3.length);
+      let n=normal(p3[0],p3[1],p3[2]);
+      const outward=[fc[0]-center[0],fc[1]-center[1],fc[2]-center[2]];
+      if(n[0]*outward[0]+n[1]*outward[1]+n[2]*outward[2]<0)n=[-n[0],-n[1],-n[2]];
+      const toCamera=[-fc[0],-fc[1],cameraZ-fc[2]];
+      const visible=n[0]*toCamera[0]+n[1]*toCamera[1]+n[2]*toCamera[2]>1e-7;
+      const depth=p3.reduce((a,p)=>a+p[2],0)/p3.length;
+      return{ids,p3,depth,n,visible};
+    }).filter(f=>f.visible).sort((a,b)=>a.depth-b.depth);
+
+    fs.forEach(f=>{
+      const outline=(stroke||f.ids.length>4)?"rgba(32,38,43,.82)":null;
+      polygon(f.p3.map(p=>project(p,w,h)),shade(f.n),outline);
+    });
+  }
+
+  function regularPrism(n,r,h,w,hh,stroke=true){
+    const v=[],faces=[];
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2+Math.PI/n;
+      v.push([Math.cos(a)*r,-h/2,Math.sin(a)*r]);
+    }
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2+Math.PI/n;
+      v.push([Math.cos(a)*r,h/2,Math.sin(a)*r]);
+    }
+    faces.push([...Array(n).keys()].reverse());
+    faces.push([...Array(n).keys()].map(i=>i+n));
+    for(let i=0;i<n;i++){
+      const j=(i+1)%n;
+      faces.push([i,j,j+n,i+n]);
+    }
+    mesh(v,faces,w,hh,stroke);
+  }
+
+  function pyramid(n,r,h,w,hh){
+    const v=[],faces=[];
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2+Math.PI/n;
+      v.push([Math.cos(a)*r,-h/2,Math.sin(a)*r]);
+    }
+    v.push([0,h/2,0]);
+    const apex=n;
+    faces.push([...Array(n).keys()].reverse());
+    for(let i=0;i<n;i++)faces.push([i,(i+1)%n,apex]);
+    mesh(v,faces,w,hh,true);
+  }
+
+  function coneOrCylinder(kind,w,h){
+    const n=48,r=1.15,yb=-1.35,yt=1.35;
+    const v=[],faces=[];
+
+    if(kind==="cylinder"){
+      for(let i=0;i<n;i++){
+        const a=(i/n)*Math.PI*2;
+        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
+      }
+      for(let i=0;i<n;i++){
+        const a=(i/n)*Math.PI*2;
+        v.push([Math.cos(a)*r,yt,Math.sin(a)*r]);
+      }
+      faces.push([...Array(n).keys()].reverse());
+      faces.push([...Array(n).keys()].map(i=>i+n));
+      for(let i=0;i<n;i++){
+        const j=(i+1)%n;
+        faces.push([i,j,j+n,i+n]);
+      }
+    }else{
+      for(let i=0;i<n;i++){
+        const a=(i/n)*Math.PI*2;
+        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
+      }
+      v.push([0,yt,0]);
+      const apex=n;
+      faces.push([...Array(n).keys()].reverse());
+      for(let i=0;i<n;i++)faces.push([i,(i+1)%n,apex]);
+    }
+
+    mesh(v,faces,w,h,false);
+  }
+
+  function octa(w,h){
+    const v=[
+      [1.6,0,0],[-1.6,0,0],[0,1.6,0],[0,-1.6,0],[0,0,1.6],[0,0,-1.6]
+    ];
+    const f=[
+      [2,0,4],[2,4,1],[2,1,5],[2,5,0],
+      [3,4,0],[3,1,4],[3,5,1],[3,0,5]
+    ];
+    mesh(v,f,w,h,true);
+  }
+
+  function sphere(w,h){
+    const cx=w/2,cy=h/2;
+    const r=Math.min(w,h)*.26;
+    const g=ctx.createRadialGradient(cx-r*.32,cy-r*.35,r*.08,cx,cy,r);
+    g.addColorStop(0,"#B5DEE2");
+    g.addColorStop(.55,"#7FBCC5");
+    g.addColorStop(1,"#5B8D95");
+    ctx.beginPath();
+    ctx.arc(cx,cy,r,0,Math.PI*2);
+    ctx.fillStyle=g;
+    ctx.fill();
+  }
+
+  function render(){
+    const rect=container.getBoundingClientRect();
+    const cw=Math.max(240,rect.width);
+    const ch=Math.max(220,rect.height);
+    const tw=Math.round(cw*dpr),th=Math.round(ch*dpr);
+
+    if(canvas.width!==tw||canvas.height!==th){
+      canvas.width=tw;canvas.height=th;
+      canvas.style.width=cw+"px";canvas.style.height=ch+"px";
+    }
+
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,cw,ch);
+
+    const g=ctx.createLinearGradient(0,0,0,ch);
+    g.addColorStop(0,"#FBFDFD");
+    g.addColorStop(1,"#EEF5F6");
+    ctx.fillStyle=g;ctx.fillRect(0,0,cw,ch);
+
+    if(currentModel==="cube"){
+      const s=1.25;
+      mesh(
+        [[-s,-s,-s],[s,-s,-s],[s,s,-s],[-s,s,-s],
+         [-s,-s,s],[s,-s,s],[s,s,s],[-s,s,s]],
+        [[0,1,2,3],[4,7,6,5],[0,4,5,1],[3,2,6,7],[1,5,6,2],[0,3,7,4]],
+        cw,ch,true
+      );
+    }else if(currentModel==="prism6"){
+      regularPrism(6,1.22,2.75,cw,ch,true);
+    }else if(currentModel==="pyramid4"){
+      pyramid(4,1.40,2.75,cw,ch);
+    }else if(currentModel==="cylinder"){
+      coneOrCylinder("cylinder",cw,ch);
+    }else if(currentModel==="cone"){
+      coneOrCylinder("cone",cw,ch);
+    }else if(currentModel==="sphere"){
+      sphere(cw,ch);
+    }else if(currentModel==="octahedron"){
+      octa(cw,ch);
+    }
+  }
+
+  function rotate(dx,dy){
+    rotation.y+=dx;
+    rotation.x=clamp(rotation.x+dy,-Math.PI*.49,Math.PI*.49);
+    render();
+  }
+  function reset(){
+    rotation={...initialRotations[currentModel]};
+    render();
+  }
+  function setModel(kind){
+    currentModel=kind;
+    rotation={...initialRotations[kind]};
+    render();
+  }
+
+  function pd(e){
+    dragging=true;lastX=e.clientX;lastY=e.clientY;
+    if(canvas.setPointerCapture){
+      try{canvas.setPointerCapture(e.pointerId);}catch(_){}
+    }
+    safeFocus(container);
+  }
+  function pm(e){
+    if(!dragging)return;
+    const dx=e.clientX-lastX,dy=e.clientY-lastY;
+    lastX=e.clientX;lastY=e.clientY;
+    rotate(dx*.010,dy*.010);
+  }
+  function pu(e){
+    dragging=false;
+    if(e&&canvas.releasePointerCapture){
+      try{canvas.releasePointerCapture(e.pointerId);}catch(_){}
+    }
+  }
+  canvas.addEventListener("pointerdown",pd);
+  canvas.addEventListener("pointermove",pm);
+  canvas.addEventListener("pointerup",pu);
+  canvas.addEventListener("pointercancel",pu);
+
+  const keyHandler=function(e){
+    let used=true;
+    switch(e.key){
+      case"ArrowLeft":rotate(-.12,0);break;
+      case"ArrowRight":rotate(.12,0);break;
+      case"ArrowUp":rotate(0,-.12);break;
+      case"ArrowDown":rotate(0,.12);break;
+      case"r":
+      case"R":reset();break;
+      default:used=false;
+    }
+    if(used)e.preventDefault();
+  };
+  container.addEventListener("keydown",keyHandler);
+
+  let ro=null;
+  if("ResizeObserver" in window){
+    ro=new ResizeObserver(render);
+    ro.observe(container);
+  }
+
+  setModel(currentModel);
+
+  return{
+    setModel,rotate,reset,resize:render,
+    destroy:function(){
+      if(ro)ro.disconnect();
+      container.removeEventListener("keydown",keyHandler);
+      canvas.removeEventListener("pointerdown",pd);
+      canvas.removeEventListener("pointermove",pm);
+      canvas.removeEventListener("pointerup",pu);
+      canvas.removeEventListener("pointercancel",pu);
+      canvas.remove();
+    }
+  };
+}
+
+function createViewer(container,model){
+  const engine=createCanvasEngine(container,model);
+  activeViewers.push(engine);
+  return engine;
+}
+
+/* =========================================================
+   CONTROLES DE CADA VISOR
+   ========================================================= */
+function attachControls(container,engine){
+  const bar=document.querySelector('[data-controls-for="'+container.id+'"]');
+  if(!bar)return;
+
+  bar.innerHTML=
+    '<button class="arrow" type="button" data-dir="left" aria-label="Girar a la izquierda">←</button>'+
+    '<button class="arrow" type="button" data-dir="right" aria-label="Girar a la derecha">→</button>'+
+    '<button class="arrow" type="button" data-dir="up" aria-label="Girar hacia arriba">↑</button>'+
+    '<button class="arrow" type="button" data-dir="down" aria-label="Girar hacia abajo">↓</button>'+
+    '<button class="reset" type="button" data-reset>Vista inicial</button>';
+
+  bar.querySelector('[data-dir="left"]').onclick=()=>engine.rotate(-.14,0);
+  bar.querySelector('[data-dir="right"]').onclick=()=>engine.rotate(.14,0);
+  bar.querySelector('[data-dir="up"]').onclick=()=>engine.rotate(0,-.14);
+  bar.querySelector('[data-dir="down"]').onclick=()=>engine.rotate(0,.14);
+  bar.querySelector("[data-reset]").onclick=()=>engine.reset();
+}
+
+/* =========================================================
+   MINIATURAS
+   ========================================================= */
+function drawThumb(canvas,model){
+  const container=document.createElement("div");
+  container.style.position="fixed";
+  container.style.left="-9999px";
+  container.style.width="500px";
+  container.style.height="300px";
+  document.body.appendChild(container);
+
+  const engine=createCanvasEngine(container,model);
+  const src=container.querySelector("canvas");
+
+  setTimeout(function(){
+    const ctx=canvas.getContext("2d");
+    canvas.width=500;canvas.height=300;
+    ctx.drawImage(src,0,0,500,300);
+    engine.destroy();
+    container.remove();
+  },0);
+}
+
+document.querySelectorAll(".thumb").forEach(c=>drawThumb(c,c.dataset.thumb));
+
+/* =========================================================
+   PANTALLAS
+   ========================================================= */
+function initSingleFilter(){
+  const container=document.getElementById("singleViewer");
+  let engine=createViewer(container,"cube");
+  attachControls(container,engine);
+
+  const title=document.getElementById("singleViewerTitle");
+  const cards=[...document.querySelectorAll(".body-card")];
+
+  cards.forEach(card=>{
+    card.onclick=function(){
+      cards.forEach(c=>{
+        c.classList.remove("selected");
+        c.setAttribute("aria-pressed","false");
+      });
+      card.classList.add("selected");
+      card.setAttribute("aria-pressed","true");
+      title.textContent="Cuerpo "+card.dataset.code;
+      engine.setModel(card.dataset.model);
+    };
+  });
+}
+
+function initPair(idsModels){
+  idsModels.forEach(([id,model])=>{
+    const container=document.getElementById(id);
+    const engine=createViewer(container,model);
+    attachControls(container,engine);
+  });
+}
+
+const concepts={
+  polyhedron:{
+    name:"Poliedro",
+    model:"cube",
+    text:"Cuerpo geométrico formado solo por caras planas que son polígonos."
+  },
+  prism:{
+    name:"Prisma",
+    model:"prism6",
+    text:"Poliedro con dos bases poligonales de la misma forma y tamaño, y paralelas. Sus caras laterales son planas y unen los lados correspondientes de las bases."
+  },
+  pyramid:{
+    name:"Pirámide",
+    model:"pyramid4",
+    text:"Poliedro con una base poligonal. Sus caras laterales son triángulos que se encuentran en un mismo vértice."
+  },
+  cylinder:{
+    name:"Cilindro",
+    model:"cylinder",
+    text:"Tiene exactamente dos bases circulares, planas, de la misma forma y tamaño, y paralelas, además de una superficie lateral curva. No es un prisma porque no es un poliedro."
+  },
+  cone:{
+    name:"Cono",
+    model:"cone",
+    text:"Tiene una sola base circular, una superficie lateral curva y un vértice. No es una pirámide porque no es un poliedro."
+  },
+  sphere:{
+    name:"Esfera",
+    model:"sphere",
+    text:"Tiene una superficie curva. No tiene bases ni vértices."
+  },
+  regular:{
+    name:"Poliedro regular",
+    model:"cube",
+    text:"Todas sus caras son polígonos regulares de la misma forma y tamaño. En cada vértice se reúne la misma cantidad de caras y se organizan de la misma manera."
+  },
+  octahedron:{
+    name:"Octaedro · ejemplo guiado",
+    model:"octahedron",
+    text:"Sus ocho caras son triángulos equiláteros de la misma forma y tamaño. En cada vértice se unen cuatro caras. Revísalo solo cuando el docente lo indique, como ejemplo de poliedro regular."
+  }
+};
+
+function initFormal(){
+  const container=document.getElementById("formalViewer");
+  const engine=createViewer(container,"cube");
+  attachControls(container,engine);
+
+  const name=document.getElementById("conceptName");
+  const text=document.getElementById("conceptText");
+  const buttons=[...document.querySelectorAll(".concept-btn")];
+
+  buttons.forEach(btn=>{
+    btn.onclick=function(){
+      buttons.forEach(b=>{
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed","false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-pressed","true");
+      const c=concepts[btn.dataset.concept];
+      name.textContent=c.name;
+      text.textContent=c.text;
+      engine.setModel(c.model);
+    };
+  });
+}
+
+function initCubeCheck(){
+  const prism=document.getElementById("prismReason");
+  const regular=document.getElementById("regularReason");
+  const button=document.getElementById("checkCubeReasons");
+  const feedback=document.getElementById("cubeCheckFeedback");
+
+  if(!prism || !regular || !button || !feedback)return;
+
+  function clearState(){
+    prism.removeAttribute("aria-invalid");
+    regular.removeAttribute("aria-invalid");
+    feedback.classList.add("hidden");
+    feedback.classList.remove("success");
+    feedback.textContent="";
+    reportHeight();
+  }
+
+  prism.onchange=clearState;
+  regular.onchange=clearState;
+
+  button.onclick=function(){
+    const prismValue=prism.value;
+    const regularValue=regular.value;
+
+    feedback.classList.remove("hidden","success");
+
+    if(!prismValue || !regularValue){
+      prism.setAttribute("aria-invalid", prismValue ? "false" : "true");
+      regular.setAttribute("aria-invalid", regularValue ? "false" : "true");
+      feedback.textContent="Selecciona una opción en las dos frases antes de comprobar.";
+      reportHeight();
+      return;
+    }
+
+    const prismOK=prismValue==="prism-ok";
+    const regularOK=regularValue==="regular-ok";
+
+    prism.setAttribute("aria-invalid", prismOK ? "false" : "true");
+    regular.setAttribute("aria-invalid", regularOK ? "false" : "true");
+
+    if(prismOK && regularOK){
+      feedback.classList.add("success");
+      feedback.textContent="Correcto. Las dos propiedades justifican las dos clasificaciones del cubo.";
+    }else if(!prismOK && !regularOK){
+      feedback.textContent="Revisa las dos justificaciones y vuelve a comprobar.";
+    }else if(!prismOK){
+      feedback.textContent="Revisa la justificación de prisma y vuelve a comprobar.";
+    }else{
+      feedback.textContent="Revisa la justificación de poliedro regular y vuelve a comprobar.";
+    }
+
+    reportHeight();
+  };
+}
+
+function initCurrentScreen(){
+  if(currentScreen===0){
+    initSingleFilter();
+  }else if(currentScreen===1){
+    initPair([["viewerA2","cube"],["viewerB2","prism6"]]);
+  }else if(currentScreen===2){
+    initPair([["viewerB3","prism6"],["viewerD3","cylinder"]]);
+  }else if(currentScreen===3){
+    initPair([["viewerC4","pyramid4"],["viewerE4","cone"]]);
+  }else if(currentScreen===4){
+    initFormal();
+    initCubeCheck();
+  }
+}
+
+function reportHeight(){
+  try{
+    const app=document.querySelector(".app");
+    const bodyRect=document.body.getBoundingClientRect();
+    const appRect=app ? app.getBoundingClientRect() : null;
+
+    /* Altura real del contenido para evitar espacio gris sobrante. */
+    const contentHeight=Math.max(
+      1,
+      Math.ceil(appRect ? (appRect.bottom - bodyRect.top + 8) : (document.documentElement.scrollHeight||0))
+    );
+
+    const frame=window.frameElement;
+    if(frame){
+      frame.style.width="100%";
+      frame.style.maxWidth="none";
+      frame.style.display="block";
+      frame.style.border="0";
+      frame.setAttribute("width","100%");
+      frame.setAttribute("scrolling","no");
+      frame.style.height=contentHeight+"px";
+      frame.style.minHeight="0";
+      frame.setAttribute("height",String(contentHeight));
+    }
+
+    if(window.parent && window.parent!==window){
+      window.parent.postMessage({type:"S3_RESOURCE_HEIGHT",height:contentHeight},"*");
+    }
+  }catch(_){}
+}
+
+showScreen(0);
+
+if("ResizeObserver" in window){
+  const appObserver=new ResizeObserver(function(){
+    requestAnimationFrame(reportHeight);
+  });
+  appObserver.observe(document.querySelector(".app"));
+}
+
+setTimeout(reportHeight,100);
+setTimeout(reportHeight,500);
+})();
+</script>
+</body>
+</html>
