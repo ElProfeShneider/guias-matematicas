@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S5 · Exploración y construcción</title>
+<style>
+:root{
+  --grafito:#20262B;
+  --verde:#4B702F;
+  --naranja:#C96E2A;
+  --azul:#0F5F9B;
+  --azul-profundo:#0B4268;
+  --puente:#2B6A72;
+  --texto-sec:#46515A;
+  --borde:#CBD3D9;
+  --fondo:#FFFFFF;
+  --suave:#F5F8FA;
+  --suave-azul:#EDF5FA;
+  --suave-verde:#F3F7F0;
+  --resalte:#DCECF6;
+  --sombra:0 2px 10px rgba(32,38,43,.08);
+}
+*{box-sizing:border-box}
+html,body{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  background:transparent;
+  color:var(--grafito);
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+  overflow-y:auto;
+  min-height:0;
+}
+body{font-size:17px;line-height:1.45}
+.s5p2{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:10px 12px 18px;
+}
+h2,h3,p,ol{margin-top:0}
+h2{font-size:1.28rem;margin-bottom:8px;color:var(--azul-profundo)}
+h3{font-size:1.04rem;margin-bottom:7px;color:var(--grafito)}
+.card{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  background:#fff;
+  padding:12px 14px;
+  margin-bottom:12px;
+}
+.entrada{
+  border-left:5px solid var(--puente);
+  background:var(--suave);
+}
+.entrada p:last-child{margin-bottom:0}
+.aviso{
+  border-left:5px solid var(--naranja);
+  background:#FFF8F1;
+}
+.aviso p:last-child{margin-bottom:0}
+.modelos{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:12px 0 10px;
+}
+.modelo{
+  min-width:0;
+  border:1px solid var(--borde);
+  border-radius:12px;
+  background:var(--fondo);
+  box-shadow:var(--sombra);
+  padding:10px;
+}
+.modelo h3{text-align:center;margin-bottom:7px}
+.visor{
+  width:100%;
+  height:235px;
+  display:block;
+  border:1px solid #B9C4CC;
+  border-radius:9px;
+  background:#FAFBFC;
+  touch-action:none;
+  cursor:grab;
+  outline:none;
+}
+.visor:active{cursor:grabbing}
+.visor:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+.controles{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+button{
+  font:inherit;
+  border-radius:8px;
+  border:1px solid var(--azul-profundo);
+  padding:8px 12px;
+  cursor:pointer;
+}
+button:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+.secundario{background:#fff;color:var(--azul-profundo)}
+.secundario:hover{background:var(--suave-azul)}
+.principal{
+  background:var(--azul-profundo);
+  color:#fff;
+  font-weight:700;
+  min-width:150px;
+}
+.principal:hover{background:#083654}
+.principal:disabled{opacity:.65;cursor:default}
+.ayuda-modelos{
+  text-align:center;
+  color:var(--texto-sec);
+  font-size:.95rem;
+  margin:8px 0 12px;
+}
+.foco{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  background:#fff;
+  padding:13px 14px;
+  margin-bottom:10px;
+}
+.progreso{
+  color:var(--texto-sec);
+  font-size:.92rem;
+  margin-bottom:5px;
+}
+.pregunta{
+  font-size:1.04rem;
+  margin-bottom:7px;
+}
+.indicacion{
+  color:var(--texto-sec);
+  margin-bottom:0;
+}
+.nav-focos{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:10px;
+}
+.nav-focos .derecha{margin-left:auto}
+.estado-f3{
+  border-left:5px solid var(--puente);
+  background:var(--suave);
+}
+.lista-breve{margin:6px 0 8px;padding-left:24px}
+.lista-breve li{padding:2px 0}
+.comprobacion{
+  border-left:5px solid var(--verde);
+  background:var(--suave-verde);
+}
+.decision{
+  font-size:1.1rem;
+  margin-bottom:8px;
+}
+.formaliza-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:12px 0;
+}
+.familia{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  padding:10px;
+  background:#fff;
+}
+.familia h3{text-align:center;color:var(--azul-profundo)}
+.familia p{margin-bottom:6px}
+.familia .visor{height:220px}
+.nota-final{
+  background:var(--suave-azul);
+  border-left:5px solid var(--azul);
+}
+.nota-final p{margin-bottom:5px}
+.transicion{
+  margin-top:12px;
+  padding:11px 13px;
+  border-left:5px solid var(--verde);
+  background:var(--suave-verde);
+  border-radius:8px;
+}
+.transicion p{margin:0}
+.oculto{display:none!important}
+
+/* Protección de proporción al exportar desde eXeLearning. */
+.s5p2 > #estadoExploracion,
+.s5p2 > #estadoF3,
+.s5p2 > #estadoComprobacion{
+  width:100%;
+  max-width:1022px;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(max-width:760px){
+  body{font-size:16px}
+  .modelos,.formaliza-grid{grid-template-columns:1fr}
+  .visor{height:225px}
+  .nav-focos{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<main class="s5p2">
+
+  <section id="estadoExploracion">
+    <section class="card entrada" aria-label="Inicio de la exploración">
+      <p>En <strong>«Reto inicial»</strong> registraron una decisión en la guía. <strong>No la cambien.</strong></p>
+      <p>Ahora sigan cuatro pasos. Observen y giren los modelos cuando lo necesiten. Conversen en equipo antes de continuar.</p>
+    </section>
+
+    <section class="modelos" aria-label="Modelos geométricos para explorar">
+      <article class="modelo">
+        <h3>Modelo A</h3>
+        <canvas id="modeloA" class="visor" tabindex="0"
+          aria-label="Modelo A tridimensional. Arrastra para girarlo. Si usas teclado, utiliza las flechas."
+          aria-describedby="ayuda-giro"></canvas>
+        <div class="controles">
+          <button type="button" class="secundario" data-reset="modeloA">Volver a la vista inicial</button>
+        </div>
+      </article>
+
+      <article class="modelo">
+        <h3>Modelo B</h3>
+        <canvas id="modeloB" class="visor" tabindex="0"
+          aria-label="Modelo B tridimensional. Arrastra para girarlo. Si usas teclado, utiliza las flechas."
+          aria-describedby="ayuda-giro"></canvas>
+        <div class="controles">
+          <button type="button" class="secundario" data-reset="modeloB">Volver a la vista inicial</button>
+        </div>
+      </article>
+    </section>
+
+    <p class="ayuda-modelos" id="ayuda-giro">Arrastren los modelos para observarlos desde otras posiciones.</p>
+
+    <section class="foco" aria-live="polite">
+      <p class="progreso" id="progreso">Paso 1 de 4</p>
+      <p class="pregunta" id="preguntaFoco"></p>
+      <p class="indicacion" id="indicacionFoco"></p>
+
+      <div class="nav-focos">
+        <button type="button" id="anteriorFoco" class="secundario oculto">Anterior</button>
+        <button type="button" id="siguienteFoco" class="principal derecha">Continuar</button>
+      </div>
+    </section>
+  </section>
+
+  <section id="estadoF3" class="oculto">
+    <section class="card estado-f3" aria-labelledby="micro-revisa">
+      <h2 id="micro-revisa">Revisa tu decisión</h2>
+      <p>Conserven la respuesta de <strong>«Reto inicial»</strong> tal como está.</p>
+      <p>Ahora completen <strong>«Exploración y construcción»</strong> en la guía:</p>
+      <ol class="lista-breve">
+        <li>marquen <strong>Mantener, Ajustar o Corregir</strong>;</li>
+        <li>escriban una razón breve usando las propiedades que observaron.</li>
+      </ol>
+      <p>Cuando terminen ese apartado, pulsen <strong>Comprobar</strong>.</p>
+    </section>
+
+    <section class="modelos" aria-label="Modelos disponibles mientras revisan la decisión">
+      <article class="modelo">
+        <h3>Modelo A</h3>
+        <canvas id="modeloA2" class="visor" tabindex="0"
+          aria-label="Modelo A tridimensional. Arrastra para girarlo."></canvas>
+        <div class="controles">
+          <button type="button" class="secundario" data-reset="modeloA2">Volver a la vista inicial</button>
+        </div>
+      </article>
+      <article class="modelo">
+        <h3>Modelo B</h3>
+        <canvas id="modeloB2" class="visor" tabindex="0"
+          aria-label="Modelo B tridimensional. Arrastra para girarlo."></canvas>
+        <div class="controles">
+          <button type="button" class="secundario" data-reset="modeloB2">Volver a la vista inicial</button>
+        </div>
+      </article>
+    </section>
+
+    <div class="controles">
+      <button type="button" id="comprobar" class="principal">Comprobar</button>
+    </div>
+  </section>
+
+  <section id="estadoComprobacion" class="oculto">
+    <section class="card comprobacion" aria-labelledby="micro-comprueba">
+      <h2 id="micro-comprueba">Comprueba y organiza las ideas</h2>
+      <p class="decision">La decisión correcta es: <strong>Ajustar</strong>.</p>
+      <p>El informe eligió bien el Modelo A, pero la razón quedó incompleta.</p>
+      <p>Faltó indicar que las dos caras de siete lados <strong>están en planos paralelos</strong>.</p>
+    </section>
+
+    <section class="formaliza-grid" aria-label="Formalización de las familias geométricas">
+      <article class="familia">
+        <h3>Modelo A · Prisma</h3>
+        <canvas id="modeloAFinal" class="visor" tabindex="0"
+          aria-label="Prisma con sus bases señaladas. Arrastra para girarlo."></canvas>
+        <div class="controles">
+          <button type="button" class="secundario" data-reset="modeloAFinal">Volver a la vista inicial</button>
+        </div>
+        <p>Tiene dos bases poligonales con la misma forma y el mismo tamaño, ubicadas en planos paralelos.</p>
+        <p>Sus caras laterales unen los lados correspondientes de una base con los de la otra.</p>
+      </article>
+
+      <article class="familia">
+        <h3>Modelo B · Pirámide</h3>
+        <canvas id="modeloBFinal" class="visor" tabindex="0"
+          aria-label="Pirámide con su base señalada. Arrastra para girarla."></canvas>
+        <div class="controles">
+          <button type="button" class="secundario" data-reset="modeloBFinal">Volver a la vista inicial</button>
+        </div>
+        <p>Tiene una base poligonal. Sus caras laterales son triángulos que se unen en un mismo vértice.</p>
+      </article>
+    </section>
+
+    <section class="card nota-final">
+      <h3>Organiza las ideas</h3>
+      <p>Dos figuras con la misma forma y el mismo tamaño son <strong>congruentes</strong>.</p>
+      <p>En los poliedros, <strong>las bases también son caras</strong>.</p>
+      <p>Girar un cuerpo cambia cómo lo vemos, pero <strong>no cambia sus propiedades</strong>.</p>
+    </section>
+
+    <div class="controles">
+      <button type="button" id="terminarRevision" class="principal">Terminamos la revisión</button>
+    </div>
+
+    <section id="transicion" class="transicion oculto" aria-live="polite">
+      <p>Conserven la guía. Continúen con <strong>«Aplicación y argumentación»</strong> en el menú.</p>
+    </section>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  const N=7;
+  const R=1;
+  const L=2.4;
+
+  function P(x,y,z){return {x:x,y:y,z:z};}
+
+  function makeBase(x){
+    const out=[];
+    for(let k=0;k<N;k++){
+      const t=Math.PI/2 + 2*Math.PI*k/N;
+      out.push(P(x,Math.cos(t)*R,Math.sin(t)*R));
+    }
+    return out;
+  }
+
+  function createModelA(){
+    const left=makeBase(-L/2);
+    const right=makeBase(L/2);
+    const points=left.concat(right);
+    const faces=[];
+    faces.push([...Array(N).keys()].reverse());
+    faces.push([...Array(N).keys()].map(i=>N+i));
+    for(let k=0;k<N;k++){
+      const j=(k+1)%N;
+      faces.push([k,j,N+j,N+k]);
+    }
+    return {points,faces,baseFaces:[0,1]};
+  }
+
+  function createModelB(){
+    const points=makeBase(-L/2);
+    points.push(P(L/2,0,0));
+    const faces=[];
+    faces.push([...Array(N).keys()].reverse());
+    for(let k=0;k<N;k++){
+      const j=(k+1)%N;
+      faces.push([k,j,N]);
+    }
+    return {points,faces,baseFaces:[0]};
+  }
+
+  function rotatePoint(p,rx,ry,rz){
+    let x=p.x,y=p.y,z=p.z;
+
+    let c=Math.cos(rx),s=Math.sin(rx);
+    let y1=y*c-z*s,z1=y*s+z*c;
+    y=y1;z=z1;
+
+    c=Math.cos(ry);s=Math.sin(ry);
+    let x1=x*c+z*s,z2=-x*s+z*c;
+    x=x1;z=z2;
+
+    c=Math.cos(rz);s=Math.sin(rz);
+    let x2=x*c-y*s,y2=x*s+y*c;
+    x=x2;y=y2;
+
+    return P(x,y,z);
+  }
+
+  function sub(a,b){return P(a.x-b.x,a.y-b.y,a.z-b.z);}
+  function cross(a,b){
+    return P(
+      a.y*b.z-a.z*b.y,
+      a.z*b.x-a.x*b.z,
+      a.x*b.y-a.y*b.x
+    );
+  }
+
+  function normal(points,face,rx,ry,rz){
+    const a=rotatePoint(points[face[0]],rx,ry,rz);
+    const b=rotatePoint(points[face[1]],rx,ry,rz);
+    const c=rotatePoint(points[face[2]],rx,ry,rz);
+    return cross(sub(b,a),sub(c,a));
+  }
+
+  function centroid(points,face){
+    let x=0,y=0,z=0;
+    face.forEach(i=>{
+      x+=points[i].x;
+      y+=points[i].y;
+      z+=points[i].z;
+    });
+    return P(x/face.length,y/face.length,z/face.length);
+  }
+
+  function viewer(canvasId,geometry,initial,options){
+    options=options||{};
+    const canvas=document.getElementById(canvasId);
+    const ctx=canvas.getContext("2d");
+
+    let rx=initial.rx;
+    let ry=initial.ry;
+    let rz=initial.rz;
+    const start={...initial};
+    let dragging=false;
+    let lastX=0,lastY=0;
+
+    function resize(){
+      const rect=canvas.getBoundingClientRect();
+      const dpr=Math.min(window.devicePixelRatio||1,2);
+      canvas.width=Math.max(320,Math.round(rect.width*dpr));
+      canvas.height=Math.max(220,Math.round(rect.height*dpr));
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      draw();
+    }
+
+    function drawLabel(text,x,y){
+      ctx.font="700 13px Arial";
+      const padX=7;
+      const width=ctx.measureText(text).width + padX*2;
+      const height=24;
+      ctx.fillStyle="#FFFFFF";
+      ctx.strokeStyle="#0B4268";
+      ctx.lineWidth=1.2;
+      ctx.beginPath();
+      if(ctx.roundRect){
+        ctx.roundRect(x-width/2,y-height/2,width,height,7);
+      }else{
+        ctx.rect(x-width/2,y-height/2,width,height);
+      }
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle="#0B4268";
+      ctx.textAlign="center";
+      ctx.textBaseline="middle";
+      ctx.fillText(text,x,y+1);
+    }
+
+    function draw(){
+      const w=canvas.clientWidth;
+      const h=canvas.clientHeight;
+
+      ctx.clearRect(0,0,w,h);
+      ctx.fillStyle="#FAFBFC";
+      ctx.fillRect(0,0,w,h);
+
+      const scale=Math.min(w/4.25,h/2.85);
+
+      const transformed=geometry.points.map(p=>rotatePoint(p,rx,ry,rz));
+      const projected=transformed.map(p=>({
+        x:w/2+p.x*scale,
+        y:h/2-p.y*scale,
+        z:p.z
+      }));
+
+      const visible=[];
+
+      geometry.faces.forEach((face,index)=>{
+        const n=normal(geometry.points,face,rx,ry,rz);
+        if(n.z>0.015){
+          const depth=face.reduce((sum,i)=>sum+projected[i].z,0)/face.length;
+          visible.push({face,index,depth,nz:n.z});
+        }
+      });
+
+      visible.sort((a,b)=>a.depth-b.depth);
+
+      visible.forEach(item=>{
+        const face=item.face;
+        ctx.beginPath();
+        ctx.moveTo(projected[face[0]].x,projected[face[0]].y);
+        for(let j=1;j<face.length;j++){
+          ctx.lineTo(projected[face[j]].x,projected[face[j]].y);
+        }
+        ctx.closePath();
+
+        const isBase=options.highlightBases && geometry.baseFaces.includes(item.index);
+
+        if(isBase){
+          ctx.fillStyle="#DCECF6";
+        }else{
+          const mag=Math.hypot(item.nz,1);
+          const light=Math.max(218,Math.min(242,238-Math.round((item.nz/mag)*18)));
+          ctx.fillStyle=`rgb(${light},${light+2},${Math.min(248,light+5)})`;
+        }
+
+        ctx.fill();
+
+        ctx.strokeStyle=isBase ? "#0B4268" : "#3D4850";
+        ctx.lineWidth=isBase ? 2.4 : 1.55;
+        ctx.lineJoin="round";
+        ctx.stroke();
+
+        if(isBase && options.labelBases){
+          const c=centroid(geometry.points,face);
+          const pc=rotatePoint(c,rx,ry,rz);
+          drawLabel("Base",w/2+pc.x*scale,h/2-pc.y*scale);
+        }
+      });
+    }
+
+    function pointerDown(e){
+      dragging=true;
+      lastX=e.clientX;
+      lastY=e.clientY;
+      canvas.setPointerCapture(e.pointerId);
+      canvas.focus();
+    }
+
+    function pointerMove(e){
+      if(!dragging)return;
+      const dx=e.clientX-lastX;
+      const dy=e.clientY-lastY;
+      ry+=dx*0.0105;
+      rx+=dy*0.0105;
+      lastX=e.clientX;
+      lastY=e.clientY;
+      draw();
+    }
+
+    function pointerUp(e){
+      dragging=false;
+      if(canvas.hasPointerCapture && canvas.hasPointerCapture(e.pointerId)){
+        canvas.releasePointerCapture(e.pointerId);
+      }
+    }
+
+    canvas.addEventListener("pointerdown",pointerDown);
+    canvas.addEventListener("pointermove",pointerMove);
+    canvas.addEventListener("pointerup",pointerUp);
+    canvas.addEventListener("pointercancel",()=>{dragging=false;});
+
+    canvas.addEventListener("keydown",e=>{
+      const step=0.11;
+      let used=true;
+
+      if(e.key==="ArrowLeft")ry-=step;
+      else if(e.key==="ArrowRight")ry+=step;
+      else if(e.key==="ArrowUp")rx-=step;
+      else if(e.key==="ArrowDown")rx+=step;
+      else used=false;
+
+      if(used){
+        e.preventDefault();
+        draw();
+      }
+    });
+
+    const reset=document.querySelector('[data-reset="'+canvasId+'"]');
+    if(reset){
+      reset.addEventListener("click",()=>{
+        rx=start.rx;
+        ry=start.ry;
+        rz=start.rz;
+        draw();
+        canvas.focus();
+      });
+    }
+
+    if("ResizeObserver" in window){
+      new ResizeObserver(resize).observe(canvas);
+    }else{
+      window.addEventListener("resize",resize);
+    }
+
+    resize();
+    return {resize,draw};
+  }
+
+  const geometryA=createModelA();
+  const geometryB=createModelB();
+
+  const initialA={rx:0.27,ry:-0.74,rz:0.14};
+  const initialB={rx:0.27,ry:0.74,rz:-0.14};
+
+  const visorA=viewer("modeloA",geometryA,initialA,{});
+  const visorB=viewer("modeloB",geometryB,initialB,{});
+  const visorA2=viewer("modeloA2",geometryA,initialA,{});
+  const visorB2=viewer("modeloB2",geometryB,initialB,{});
+  const visorAFinal=viewer("modeloAFinal",geometryA,initialA,{highlightBases:true,labelBases:true});
+  const visorBFinal=viewer("modeloBFinal",geometryB,initialB,{highlightBases:true,labelBases:true});
+
+  const focos=[
+    {
+      pregunta:"Giren ambos modelos. ¿Cuántas caras de siete lados tiene cada uno?",
+      indicacion:"No escriban todavía."
+    },
+    {
+      pregunta:"En el Modelo A, comparen las dos caras de siete lados. ¿Tienen la misma forma y el mismo tamaño?",
+      indicacion:"Giren el Modelo A si necesitan observarlas desde otra posición."
+    },
+    {
+      pregunta:"Giren el Modelo A y observen esas dos caras desde varias posiciones. ¿Son paralelas?",
+      indicacion:""
+    },
+    {
+      pregunta:"En el Modelo B, observen las caras que no son la de siete lados. ¿Qué forma tienen? ¿Se unen en un mismo vértice?",
+      indicacion:""
+    }
+  ];
+
+  let focoActual=0;
+  const progreso=document.getElementById("progreso");
+  const pregunta=document.getElementById("preguntaFoco");
+  const indicacion=document.getElementById("indicacionFoco");
+  const anterior=document.getElementById("anteriorFoco");
+  const siguiente=document.getElementById("siguienteFoco");
+
+  function renderFoco(){
+    const f=focos[focoActual];
+    progreso.textContent="Paso "+(focoActual+1)+" de 4";
+    pregunta.textContent=f.pregunta;
+    indicacion.textContent=f.indicacion;
+    indicacion.classList.toggle("oculto",!f.indicacion);    anterior.classList.toggle("oculto",focoActual===0);
+    siguiente.textContent=focoActual===focos.length-1 ? "Ya observamos" : "Continuar";
+    reajustarDespuesDelCambio();
+  }
+
+  anterior.addEventListener("click",()=>{
+    if(focoActual>0){
+      focoActual--;
+      renderFoco();
+    }
+  });
+
+  siguiente.addEventListener("click",()=>{
+    if(focoActual<focos.length-1){
+      focoActual++;
+      renderFoco();
+    }else{
+      document.getElementById("estadoExploracion").classList.add("oculto");
+      document.getElementById("estadoF3").classList.remove("oculto");
+      requestAnimationFrame(()=>{
+        visorA2.resize();
+        visorB2.resize();
+        reajustarDespuesDelCambio();
+      });
+    }
+  });
+
+  document.getElementById("comprobar").addEventListener("click",()=>{
+    document.getElementById("estadoF3").classList.add("oculto");
+    document.getElementById("estadoComprobacion").classList.remove("oculto");
+    requestAnimationFrame(()=>{
+      visorAFinal.resize();
+      visorBFinal.resize();
+      reajustarDespuesDelCambio();
+    });
+  });
+
+  document.getElementById("terminarRevision").addEventListener("click",()=>{
+    const btn=document.getElementById("terminarRevision");
+    btn.disabled=true;
+    btn.textContent="Revisión terminada";
+    document.getElementById("transicion").classList.remove("oculto");
+    reajustarDespuesDelCambio();
+  });
+
+
+  /* =========================================================
+     AJUSTE DE COMPATIBILIDAD CON EXELEARNING EXPORTADO
+     - Mide la altura REAL del contenido visible.
+     - Fuerza ancho/alto del iframe incluso si la plantilla exportada
+       intenta aplicar una altura fija.
+     - Mantiene un respaldo por postMessage y vuelve a medir después
+       de los cambios de estado.
+     - No modifica contenido, geometría ni lógica pedagógica.
+     ========================================================= */
+  let __s5ApplyingFrameSize=false;
+  let __s5FrameObserver=null;
+
+  function ajustarAlturaIframe(){
+    try{
+      const contenido=document.querySelector(".s5p2");
+      if(!contenido)return;
+
+      const bodyRect=document.body.getBoundingClientRect();
+      const contentRect=contenido.getBoundingClientRect();
+      const alto=Math.max(
+        1,
+        Math.ceil(
+          Math.max(
+            contentRect.bottom-bodyRect.top,
+            contenido.scrollHeight||0,
+            document.body.scrollHeight||0
+          )+8
+        )
+      );
+
+      const frame=window.frameElement;
+      if(frame){
+        __s5ApplyingFrameSize=true;
+        frame.style.setProperty("width","100%","important");
+        frame.style.setProperty("max-width","none","important");
+        frame.style.setProperty("display","block","important");
+        frame.style.setProperty("border","0","important");
+        frame.style.setProperty("height",alto+"px","important");
+        frame.style.setProperty("min-height","0","important");
+        frame.style.setProperty("overflow","hidden","important");
+        frame.setAttribute("width","100%");
+        frame.setAttribute("height",String(alto));
+        frame.setAttribute("scrolling","no");
+        setTimeout(()=>{__s5ApplyingFrameSize=false;},0);
+
+        if(!__s5FrameObserver && "MutationObserver" in window){
+          __s5FrameObserver=new MutationObserver(()=>{
+            if(!__s5ApplyingFrameSize){
+              requestAnimationFrame(ajustarAlturaIframe);
+            }
+          });
+          __s5FrameObserver.observe(frame,{
+            attributes:true,
+            attributeFilter:["style","height","width"]
+          });
+        }
+      }
+
+      if(window.parent && window.parent!==window){
+        window.parent.postMessage({type:"S5_RESOURCE_HEIGHT",height:alto},"*");
+        /* Compatibilidad con el protocolo ya usado por S3. */
+        window.parent.postMessage({type:"S3_RESOURCE_HEIGHT",height:alto},"*");
+      }
+    }catch(_){ }
+  }
+
+  function reajustarDespuesDelCambio(){
+    requestAnimationFrame(()=>requestAnimationFrame(ajustarAlturaIframe));
+    setTimeout(ajustarAlturaIframe,60);
+    setTimeout(ajustarAlturaIframe,180);
+    setTimeout(ajustarAlturaIframe,500);
+    setTimeout(ajustarAlturaIframe,1000);
+  }
+
+
+  window.addEventListener("load",reajustarDespuesDelCambio);
+  window.addEventListener("resize",reajustarDespuesDelCambio,{passive:true});
+  window.addEventListener("orientationchange",reajustarDespuesDelCambio,{passive:true});
+
+  if("ResizeObserver" in window){
+    const obs=new ResizeObserver(()=>reajustarDespuesDelCambio());
+    obs.observe(document.querySelector(".s5p2"));
+  }
+
+  renderFoco();
+  if(document.readyState==="complete" || document.readyState==="interactive"){
+    reajustarDespuesDelCambio();
+  }
+
+})();
+</script>
+</body>
+</html>

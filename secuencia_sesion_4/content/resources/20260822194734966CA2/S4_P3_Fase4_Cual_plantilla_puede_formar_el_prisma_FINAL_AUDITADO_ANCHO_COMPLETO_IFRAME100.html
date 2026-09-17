@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S4 · Página 3 · Fase 4 · texto colaborativo depurado</title>
+<style>
+:root{
+  --ink:#20262B;
+  --text:#20262B;
+  --muted:#52606A;
+  --green:#4B702F;
+  --green-soft:#F4F7F2;
+  --blue:#0F5F9B;
+  --blue-soft:#E8F2F8;
+  --border:#C8D7E2;
+  --panel:#FFFFFF;
+  --bg:#F4F7F9;
+  --line:#242424;
+}
+*{box-sizing:border-box}
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background:transparent;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+}
+body{font-size:16px}
+.activity{
+  width:100%;
+  max-width:none;
+  height:100vh;
+  height:100dvh;
+  margin:0 auto;
+  padding:8px;
+  overflow:hidden;
+}
+.shell{
+  height:100%;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.progress{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:8px;
+  color:var(--muted);
+  font-size:13px;
+}
+.progress strong{color:var(--ink)}
+.dots{display:flex;gap:6px;align-items:center}
+.dot{width:9px;height:9px;border-radius:50%;background:#D8E2E9}
+.dot.on{background:var(--green)}
+.state{display:none}
+.state.active{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  min-height:0;
+}
+.instruction{
+  flex:0 0 auto;
+  margin:0 0 8px;
+  padding:9px 11px;
+  background:var(--green-soft);
+  border-left:5px solid var(--green);
+  border-radius:8px;
+  line-height:1.4;
+}
+.instruction p{margin:2px 0}
+.stage{
+  flex:1 1 auto;
+  min-height:0;
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+  overflow:hidden;
+}
+svg{display:block;width:100%;height:100%;background:#fff}
+.face{
+  stroke:var(--line);
+  stroke-width:1.35px;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.ref-face{
+  stroke:#555;
+  stroke-width:1.05px;
+  fill:#FAFAFA;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.opt{
+  font-family:"Arial Black",Arial,Helvetica,sans-serif;
+  font-size:.54px;
+  fill:#222;
+  text-anchor:middle;
+  dominant-baseline:middle;
+  paint-order:stroke;
+  stroke:#fff;
+  stroke-width:.12px;
+}
+.note{
+  font:700 .42px Arial,Helvetica,sans-serif;
+  fill:#555;
+  text-anchor:middle;
+}
+.feedback{
+  flex:0 0 auto;
+  display:block;
+  visibility:hidden;
+  opacity:0;
+  min-height:88px;
+  margin-top:8px;
+  padding:9px 11px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--bg);
+  line-height:1.42;
+  transition:opacity .30s ease;
+}
+.feedback.show{visibility:visible;opacity:1}
+.feedback p{margin:3px 0}
+.controls{
+  flex:0 0 auto;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:8px;
+}
+button{
+  min-width:155px;
+  min-height:46px;
+  padding:10px 22px;
+  border:2px solid var(--green);
+  border-radius:8px;
+  background:var(--green);
+  color:#fff;
+  font:700 16px Arial,Helvetica,sans-serif;
+  cursor:pointer;
+}
+button.secondary{
+  background:#fff;
+  color:var(--green);
+}
+button:hover{filter:brightness(.97)}
+button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+button:disabled{opacity:.55;cursor:default}
+.neutral{
+  flex:1 1 auto;
+  min-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+.neutral-card{
+  width:min(760px,100%);
+  padding:24px 26px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+}
+.neutral-card h2{
+  margin:0 0 16px;
+  font-family:"Arial Black",Arial,Helvetica,sans-serif;
+  font-size:20px;
+  text-align:center;
+  color:var(--ink);
+}
+.neutral-card p{
+  margin:9px 0;
+  line-height:1.45;
+}
+.neutral-card .quiet{
+  margin-top:18px;
+  padding-top:12px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+}
+@media(max-width:720px){
+  .activity{padding:6px}
+  .shell{padding:8px}
+  .instruction{font-size:15px}
+  .feedback{min-height:105px}
+  .neutral-card{padding:19px 18px}
+}
+</style>
+</head>
+<body>
+<main class="activity">
+<section class="shell" aria-label="Aplicación y argumentación con desarrollos planos">
+
+  <div class="progress" aria-live="polite">
+    <strong id="progressText">Aplicación · Plantillas</strong>
+    <div class="dots" aria-hidden="true">
+      <span class="dot on"></span><span class="dot"></span>
+    </div>
+  </div>
+
+  <section id="stateTemplates" class="state active">
+    <div class="instruction">
+      <p>Observen las plantillas A y B. Hablen entre ustedes y pónganse de acuerdo.</p>
+      <p>En 3. Plantillas de la guía, marquen A o B y escriban una razón breve.</p>
+      <p>Después, pulsen <strong>COMPROBAR</strong>.</p>
+    </div>
+
+    <div class="stage">
+      <svg id="scene" viewBox="-16 -9.4 32 18.8" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Prisma de referencia y dos plantillas A y B">
+        <g id="ref"></g>
+        <g id="left"></g>
+        <g id="right"></g>
+      </svg>
+    </div>
+
+    <div id="feedback" class="feedback" aria-live="polite">
+      <p>A puede formar el prisma. En B, dos caras laterales están unidas por sus lados largos. Para formar este prisma, las caras laterales vecinas deben unirse por sus lados cortos. Por eso B no puede formar el prisma.</p>
+      <p>Para que una plantilla forme un prisma, no basta con tener todas sus caras. También importa cómo están unidas y si al plegarlas pueden cerrar el cuerpo sin superponerse.</p>
+      <p>Si es necesario, corrijan 3. Plantillas en la guía.</p>
+    </div>
+
+    <div class="controls">
+      <button id="check" type="button">COMPROBAR</button>
+      <button id="repeat" type="button" class="secondary" hidden>REPETIR</button>
+      <button id="continue" type="button" hidden>CONTINUAR</button>
+    </div>
+  </section>
+
+  <section id="stateIndividual" class="state">
+    <div class="neutral">
+      <div class="neutral-card">
+        <h2>Actividad individual</h2>
+        <p>Entreguen la guía al docente.</p>
+        <p>Cuando reciban la actividad individual, déjenla boca abajo. Comiencen solo cuando el docente lo indique.</p>
+        <p>Trabajen solos durante 25 minutos. Respondan únicamente en la hoja.</p>
+        <p>Durante esta actividad, no consulten otras páginas del recurso digital.</p>
+        <p>Si no entienden una instrucción o no saben dónde responder, levanten la mano.</p>
+        <p class="quiet">Cuando terminen, revisen sus respuestas y dejen la hoja boca abajo.</p>
+      </div>
+    </div>
+  </section>
+
+</section>
+</main>
+
+<script>
+(()=>{
+"use strict";
+const NS="http://www.w3.org/2000/svg";
+const refG=document.getElementById("ref"),
+      leftG=document.getElementById("left"),
+      rightG=document.getElementById("right"),
+      scene=document.getElementById("scene"),
+      btnCheck=document.getElementById("check"),
+      btnRepeat=document.getElementById("repeat"),
+      btnContinue=document.getElementById("continue"),
+      feedback=document.getElementById("feedback");
+
+/* Ajuste dimensional exclusivo para eXeLearning:
+   el iframe padre ocupa todo el ancho disponible.
+   No modifica alturas, SVG, geometría, escalas ni lógica. */
+function syncIframeWidth(){
+  try{
+    const frame=window.frameElement;
+    if(!frame)return;
+    frame.style.width='100%';
+    frame.style.maxWidth='none';
+    frame.style.display='block';
+    frame.style.border='0';
+    frame.setAttribute('width','100%');
+    frame.setAttribute('scrolling','no');
+  }catch(e){}
+}
+window.addEventListener('load',syncIframeWidth);
+window.addEventListener('resize',syncIframeWidth,{passive:true});
+syncIframeWidth();
+
+const add=(a,b)=>a.map((x,i)=>x+b[i]),
+      sub=(a,b)=>a.map((x,i)=>x-b[i]),
+      mul=(a,s)=>a.map(x=>x*s),
+      dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0),
+      cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]],
+      norm=a=>Math.hypot(...a),
+      unit=a=>mul(a,1/norm(a)),
+      lerp=(a,b,t)=>a+(b-a)*t;
+
+function rot(p,a,b,ang){
+  const u=unit(sub(b,a)),x=sub(p,a),c=Math.cos(ang),s=Math.sin(ang);
+  return add(a,add(add(mul(x,c),mul(cross(u,x),s)),mul(u,dot(u,x)*(1-c))));
+}
+function smooth(x){x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)}
+function win(t,a,b){return smooth((t-a)/(b-a))}
+function centroid(ps){return ps.reduce((a,p)=>add(a,p),[0,0,0]).map(x=>x/ps.length)}
+
+const facesA={
+  S1:[[0,0,0],[5,0,0],[5,5,0],[0,5,0]],
+  R1:[[0,5,0],[5,5,0],[5,8,0],[0,8,0]],
+  R2:[[0,-3,0],[5,-3,0],[5,0,0],[0,0,0]],
+  R3:[[-3,0,0],[0,0,0],[0,5,0],[-3,5,0]],
+  R4:[[5,0,0],[8,0,0],[8,5,0],[5,5,0]],
+  S2:[[0,-8,0],[5,-8,0],[5,-3,0],[0,-3,0]]
+};
+const facesB=JSON.parse(JSON.stringify(facesA));
+facesB.R4=[[-6,0,0],[-3,0,0],[-3,5,0],[-6,5,0]];
+
+const fills={
+  S1:"#FBFBFB",S2:"#EDEDED",R1:"#F4F4F4",
+  R2:"#F7F7F7",R3:"#F1F1F1",R4:"#E7E7E7"
+};
+
+const cam=[9,12,16],target=[2.5,2.5,1.5],
+      forward=unit(sub(target,cam)),
+      right=unit(cross(forward,[0,0,1])),
+      up=unit(cross(right,forward));
+
+function proj(p){
+  const d=sub(p,target);
+  return [dot(d,right),-dot(d,up),dot(sub(p,cam),forward)];
+}
+function foldR1(p,s){return rot(p,[0,5,0],[5,5,0],Math.PI/2*s)}
+function foldR2(p,s){return rot(p,[0,0,0],[5,0,0],-Math.PI/2*s)}
+function foldR3(p,s){return rot(p,[0,0,0],[0,5,0],Math.PI/2*s)}
+function foldR4A(p,s){return rot(p,[5,0,0],[5,5,0],-Math.PI/2*s)}
+function foldS2(p,side,top){
+  let q=foldR2(p,side),
+      a=foldR2([0,-3,0],side),
+      b=foldR2([5,-3,0],side);
+  return rot(q,a,b,-Math.PI/2*top);
+}
+function foldR4B(p,side,own){
+  let q=foldR3(p,side),
+      a=foldR3([-3,0,0],side),
+      b=foldR3([-3,5,0],side);
+  return rot(q,a,b,Math.PI/2*own);
+}
+function pointsA(name,s){
+  const ps=facesA[name];
+  if(name==="R1")return ps.map(p=>foldR1(p,s.side));
+  if(name==="R2")return ps.map(p=>foldR2(p,s.side));
+  if(name==="R3")return ps.map(p=>foldR3(p,s.side));
+  if(name==="R4")return ps.map(p=>foldR4A(p,s.side));
+  if(name==="S2")return ps.map(p=>foldS2(p,s.side,s.top));
+  return ps.map(p=>p.slice());
+}
+function pointsB(name,s){
+  const ps=facesB[name];
+  if(name==="R1")return ps.map(p=>foldR1(p,s.side));
+  if(name==="R2")return ps.map(p=>foldR2(p,s.side));
+  if(name==="R3")return ps.map(p=>foldR3(p,s.side));
+  if(name==="R4")return ps.map(p=>foldR4B(p,s.side,s.own));
+  if(name==="S2")return ps.map(p=>foldR2(p,s.side));
+  return ps.map(p=>p.slice());
+}
+function poly(g,pts,fill,cls="face",opacity=1){
+  const e=document.createElementNS(NS,"polygon");
+  e.setAttribute("class",cls);
+  e.setAttribute("fill",fill);
+  e.setAttribute("opacity",opacity);
+  e.setAttribute("points",pts.map(p=>p.slice(0,2).join(",")).join(" "));
+  g.appendChild(e);
+}
+function txt(g,x,y,label,cls="opt",opacity=1){
+  const e=document.createElementNS(NS,"text");
+  e.setAttribute("class",cls);
+  e.setAttribute("x",x);
+  e.setAttribute("y",y);
+  e.setAttribute("opacity",opacity);
+  e.textContent=label;
+  g.appendChild(e);
+}
+function renderRef(){
+  refG.replaceChildren();
+  const V=[[0,0,0],[5,0,0],[5,5,0],[0,5,0],[0,0,3],[5,0,3],[5,5,3],[0,5,3]],
+        F=[[0,1,2,3],[4,5,6,7],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7]],
+        off=[0,-5.85],sc=.56;
+  const arr=F.map(idx=>({
+    ps:idx.map(i=>V[i]),
+    d:proj(centroid(idx.map(i=>V[i])))[2]
+  })).sort((a,b)=>b.d-a.d);
+  arr.forEach(it=>poly(refG,it.ps.map(proj).map(p=>[off[0]+p[0]*sc,off[1]+p[1]*sc]),"#FAFAFA","ref-face"));
+  txt(refG,0,-8.35,"Prisma de referencia","note");
+}
+function planarPanel(g,faces,center,label,opacity=1){
+  g.replaceChildren();
+  const all=Object.values(faces).flat(),
+        xs=all.map(p=>p[0]),ys=all.map(p=>p[1]),
+        cx=(Math.min(...xs)+Math.max(...xs))/2,
+        cy=(Math.min(...ys)+Math.max(...ys))/2,
+        sc=.68,rendered=[];
+  ["S1","R1","R2","R3","R4","S2"].forEach(n=>{
+    const pts=faces[n].map(p=>[center[0]+(p[0]-cx)*sc,center[1]-(p[1]-cy)*sc]);
+    rendered.push(...pts);
+    poly(g,pts,fills[n],"face",opacity);
+  });
+  const minY=Math.min(...rendered.map(p=>p[1]));
+  txt(g,center[0],minY-.62,"Plantilla "+label,"opt",opacity);
+}
+function renderFold(g,which,s,center,opacity=1){
+  g.replaceChildren();
+  const fn=which==="A"?pointsA:pointsB,
+        names=["S1","S2","R1","R2","R3","R4"],
+        arr=names.map(n=>({n,ps:fn(n,s),d:proj(centroid(fn(n,s)))[2]}))
+                 .sort((a,b)=>b.d-a.d),
+        sc=.75,rendered=[];
+  arr.forEach(it=>{
+    const pts=it.ps.map(proj).map(p=>[center[0]+p[0]*sc,center[1]+p[1]*sc]);
+    rendered.push(...pts);
+    poly(g,pts,fills[it.n],"face",opacity);
+  });
+  const minY=Math.min(...rendered.map(p=>p[1]));
+  txt(g,center[0],minY-.62,"Plantilla "+which,"opt",opacity);
+}
+
+function render(t){
+  renderRef();
+  const leftCenter=[-7.1,3.20],rightCenter=[7.1,3.20];
+
+  const fadeEnd=.10,animStart=.14;
+  if(t<fadeEnd){
+    const op=1-smooth(t/fadeEnd);
+    planarPanel(leftG,facesA,leftCenter,"A",op);
+    planarPanel(rightG,facesB,rightCenter,"B",op);
+    return;
+  }
+  if(t<animStart){
+    leftG.replaceChildren();
+    rightG.replaceChildren();
+    return;
+  }
+
+  const u=(t-animStart)/(1-animStart);
+  const appear=smooth(u/.06);
+
+  const aSide=win(u,.03,.38),
+        aTop=win(u,.31,.49);
+  renderFold(leftG,"A",{side:aSide,top:aTop},leftCenter,appear);
+
+  /* B se pliega después de A y se detiene cuando la incompatibilidad
+     de la unión ya es visible; no se fuerza una superposición completa. */
+  const bSide=win(u,.57,.79),
+        bOwn=.72*win(u,.79,.98);
+  renderFold(rightG,"B",{side:bSide,own:bOwn},rightCenter,appear);
+}
+
+let raf=null;
+function animate(){
+  btnCheck.hidden=true;
+  btnCheck.disabled=true;
+  btnRepeat.hidden=true;
+  btnContinue.hidden=true;
+  feedback.classList.remove("show");
+  const start=performance.now(),dur=5900;
+
+  function frame(now){
+    const q=Math.min(1,(now-start)/dur),
+          e=q<.5?2*q*q:1-Math.pow(-2*q+2,2)/2;
+    render(e);
+    if(q<1){
+      raf=requestAnimationFrame(frame);
+    }else{
+      raf=null;
+      setTimeout(()=>{
+        feedback.classList.add("show");
+        btnRepeat.hidden=false;
+        btnContinue.hidden=false;
+      },180);
+    }
+  }
+  raf=requestAnimationFrame(frame);
+}
+
+btnCheck.addEventListener("click",animate);
+
+btnRepeat.addEventListener("click",()=>{
+  if(raf)cancelAnimationFrame(raf);
+  feedback.classList.remove("show");
+  btnRepeat.hidden=true;
+  btnContinue.hidden=true;
+  render(0);
+  btnCheck.hidden=false;
+  btnCheck.disabled=false;
+});
+
+btnContinue.addEventListener("click",()=>{
+  document.getElementById("stateTemplates").classList.remove("active");
+  document.getElementById("stateIndividual").classList.add("active");
+  document.getElementById("progressText").textContent="";
+  const dots=document.querySelectorAll(".dot");
+  dots.forEach(d=>d.style.visibility="visible");
+  if(dots[0]) dots[0].classList.add("on");
+  if(dots[1]) dots[1].classList.add("on");
+});
+
+render(0);
+})();
+</script>
+</body>
+</html>

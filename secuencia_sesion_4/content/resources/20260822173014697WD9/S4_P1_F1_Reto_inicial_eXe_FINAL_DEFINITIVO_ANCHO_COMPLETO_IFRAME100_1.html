@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S4 · Página 1 · Fase 1 · Reto inicial · texto final depurado</title>
+<style>
+:root{
+  --ink:#20262B;
+  --text:#20262B;
+  --muted:#52606A;
+  --blue:#0F5F9B;
+  --blue-soft:#E8F2F8;
+  --green:#4B702F;
+  --green-soft:#F4F7F2;
+  --border:#C8D7E2;
+  --panel:#FFFFFF;
+  --bg:#F4F7F9;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  background:transparent;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+}
+body{font-size:16px}
+.activity{
+  width:100%;
+  max-width:none;
+  margin:0 auto;
+  padding:12px;
+}
+.shell{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+}
+.instruction{
+  margin:0 0 12px;
+  padding:10px 12px;
+  background:var(--green-soft);
+  border-left:5px solid var(--green);
+  border-radius:8px;
+  line-height:1.42;
+}
+.instruction strong{color:#111}
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.case{
+  position:relative;
+  min-height:330px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+  padding:42px 10px 12px;
+  overflow:hidden;
+}
+.case-head{
+  position:absolute;
+  top:10px;
+  left:12px;
+  right:12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.case-letter{
+  width:32px;
+  height:32px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--ink);
+  color:#fff;
+  font-family:"Arial Black",Arial,Helvetica,sans-serif;
+  font-size:16px;
+}
+.result{
+  display:none;
+  padding:5px 10px;
+  border:1px solid var(--blue);
+  border-radius:999px;
+  background:var(--blue-soft);
+  color:var(--ink);
+  font-weight:700;
+  font-size:14px;
+  white-space:nowrap;
+}
+.case.revealed .result{display:block}
+.figure{
+  width:100%;
+  height:270px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+.face{
+  stroke:#20262B;
+  stroke-width:1.7;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.edge{
+  stroke:#20262B;
+  stroke-width:1.7;
+  fill:none;
+  vector-effect:non-scaling-stroke;
+}
+.controls{
+  display:flex;
+  justify-content:center;
+  margin-top:12px;
+}
+button{
+  min-width:170px;
+  min-height:46px;
+  padding:10px 22px;
+  border:2px solid var(--green);
+  border-radius:8px;
+  background:var(--green);
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+}
+button:hover{filter:brightness(.96)}
+button:focus-visible{
+  outline:3px solid var(--blue);
+  outline-offset:3px;
+}
+.feedback{
+  display:none;
+  margin-top:12px;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--bg);
+  line-height:1.42;
+}
+.feedback.show{display:block}
+.feedback p{margin:3px 0}
+.feedback .next-step{
+  margin-top:8px;
+  color:var(--muted);
+}
+.term{
+  font-weight:700;
+  color:var(--ink);
+}
+@media(max-width:720px){
+  .activity{padding:8px}
+  .compare{grid-template-columns:1fr}
+  .case{min-height:300px}
+  .figure{height:240px}
+}
+</style>
+</head>
+<body>
+<main class="activity">
+  <section class="shell" aria-label="Reto inicial: vista y desarrollo plano">
+
+    <div id="instruction" class="instruction">
+      Ya observaron que un mismo cuerpo puede verse diferente cuando se gira. Ahora observen A y B. Hablen entre ustedes y pónganse de acuerdo sobre cuál muestra cómo se ve el cuerpo y cuál podría plegarse para formarlo.
+      Esta primera decisión es oral: no la escriban en la guía.
+      Cuando estén de acuerdo, pulsen <strong>COMPROBAR</strong>.
+    </div>
+
+    <div class="compare">
+
+      <article id="caseA" class="case" aria-label="Representación A">
+        <div class="case-head">
+          <span class="case-letter" aria-hidden="true">A</span>
+          <span class="result" aria-hidden="true">VISTA</span>
+        </div>
+
+        <div class="figure">
+          <svg viewBox="90 75 350 265" role="img" aria-label="Vista oblicua de un prisma triangular">
+            <!--
+              Prisma triangular representado mediante proyección oblicua:
+              - base anterior equilátera: A1(130,310), A2(130,190), A3(233.923,250)
+              - base posterior congruente: traslación (+155,-40)
+              Solo se dibujan las caras visibles y las aristas necesarias.
+            -->
+
+            <!-- Cara lateral visible 1 -->
+            <polygon class="face" fill="#EEF4F7"
+              points="130,190 233.923,250 388.923,210 285,150"/>
+
+            <!-- Cara lateral visible 2 -->
+            <polygon class="face" fill="#F6F8FA"
+              points="233.923,250 130,310 285,270 388.923,210"/>
+
+            <!-- Base anterior visible -->
+            <polygon class="face" fill="#DCE9EF"
+              points="130,310 130,190 233.923,250"/>
+
+            <!-- Aristas de la base posterior que delimitan las caras visibles -->
+            <line class="edge" x1="285" y1="150" x2="388.923" y2="210"/>
+            <line class="edge" x1="388.923" y1="210" x2="285" y2="270"/>
+
+            <!-- Aristas laterales visibles -->
+            <line class="edge" x1="130" y1="190" x2="285" y2="150"/>
+            <line class="edge" x1="233.923" y1="250" x2="388.923" y2="210"/>
+            <line class="edge" x1="130" y1="310" x2="285" y2="270"/>
+          </svg>
+        </div>
+      </article>
+
+      <article id="caseB" class="case" aria-label="Representación B">
+        <div class="case-head">
+          <span class="case-letter" aria-hidden="true">B</span>
+          <span class="result" aria-hidden="true">DESARROLLO PLANO</span>
+        </div>
+
+        <div class="figure">
+          <svg viewBox="530 60 360 320" role="img" aria-label="Desarrollo plano válido del mismo prisma triangular">
+            <!-- Tres rectángulos congruentes: caras laterales. -->
+            <rect class="face" fill="#F7F9FA" x="565" y="175" width="90" height="120"/>
+            <rect class="face" fill="#E8F2F8" x="655" y="175" width="90" height="120"/>
+            <rect class="face" fill="#F7F9FA" x="745" y="175" width="90" height="120"/>
+
+            <!-- Dos triángulos equiláteros congruentes: bases. -->
+            <polygon class="face" fill="#DCE9EF"
+              points="655,175 745,175 700,97.058"/>
+            <polygon class="face" fill="#DCE9EF"
+              points="655,295 745,295 700,372.942"/>
+          </svg>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="controls">
+      <button id="check" type="button" aria-controls="feedback" aria-expanded="false">COMPROBAR</button>
+    </div>
+
+    <div id="feedback" class="feedback" aria-live="polite">
+      <p><span class="term">Vista:</span> muestra cómo se ve un cuerpo desde una posición.</p>
+      <p><span class="term">Desarrollo plano:</span> muestra la superficie de un cuerpo extendida en el plano y permite analizar cómo puede formarse nuevamente.</p>
+      <p class="next-step">Cuando terminen, esperen la indicación del docente para continuar.</p>
+    </div>
+
+  </section>
+</main>
+
+<script>
+(()=>{
+  const btn=document.getElementById('check');
+  const a=document.getElementById('caseA');
+  const b=document.getElementById('caseB');
+  const feedback=document.getElementById('feedback');
+  const instruction=document.getElementById('instruction');
+  const results=document.querySelectorAll('.result');
+
+  let revealed=false;
+
+  /* Ajuste dimensional exclusivo para eXeLearning:
+     el recurso y su iframe ocupan todo el ancho disponible.
+     No modifica SVG, proporciones, geometría ni lógica interactiva. */
+  let resizeRaf=0;
+  function syncIframeSize(){
+    cancelAnimationFrame(resizeRaf);
+    resizeRaf=requestAnimationFrame(()=>{
+      try{
+        const frame=window.frameElement;
+        if(!frame)return;
+
+        frame.style.width='100%';
+        frame.style.maxWidth='none';
+        frame.style.display='block';
+        frame.style.border='0';
+        frame.setAttribute('width','100%');
+        frame.setAttribute('scrolling','no');
+
+        const content=document.querySelector('.activity');
+        const h=Math.max(
+          1,
+          Math.ceil((content ? content.getBoundingClientRect().bottom : document.documentElement.scrollHeight) + window.scrollY + 8)
+        );
+
+        frame.style.height=h+'px';
+        frame.style.minHeight='0';
+        frame.setAttribute('height',String(h));
+      }catch(e){}
+    });
+  }
+
+  window.addEventListener('load',syncIframeSize);
+  window.addEventListener('resize',syncIframeSize,{passive:true});
+
+  if('ResizeObserver' in window){
+    const ro=new ResizeObserver(()=>syncIframeSize());
+    const target=document.querySelector('.activity');
+    if(target)ro.observe(target);
+  }
+
+  btn.addEventListener('click',()=>{
+    revealed=!revealed;
+
+    a.classList.toggle('revealed',revealed);
+    b.classList.toggle('revealed',revealed);
+    feedback.classList.toggle('show',revealed);
+
+    results.forEach(el=>el.setAttribute('aria-hidden', revealed ? 'false' : 'true'));
+    btn.setAttribute('aria-expanded', revealed ? 'true' : 'false');
+    btn.textContent=revealed ? 'REPETIR' : 'COMPROBAR';
+
+    instruction.innerHTML=revealed
+      ? 'Comparen su decisión. A muestra una vista del cuerpo. B muestra un desarrollo plano del mismo cuerpo.'
+      : 'Ya observaron que un mismo cuerpo puede verse diferente cuando se gira. Ahora observen A y B. Hablen entre ustedes y pónganse de acuerdo sobre cuál muestra cómo se ve el cuerpo y cuál podría plegarse para formarlo. Esta primera decisión es oral: no la escriban en la guía. Cuando estén de acuerdo, pulsen <strong>COMPROBAR</strong>.';
+
+    syncIframeSize();
+  });
+
+  syncIframeSize();
+})();
+</script>
+</body>
+</html>

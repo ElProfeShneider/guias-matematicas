@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S4 · Página 2 · Fases 2–3 · texto colaborativo depurado</title>
+<style>
+:root{
+  --ink:#20262B; --text:#20262B; --muted:#52606A;
+  --blue:#0F5F9B; --blue-soft:#E8F2F8;
+  --green:#4B702F; --green-soft:#F4F7F2;
+  --border:#C8D7E2; --panel:#FFFFFF; --bg:#F4F7F9;
+  --line:#20262B;
+}
+*{box-sizing:border-box}
+html,body{width:100%;height:100%;margin:0;padding:0;overflow:hidden;background:transparent;font-family:Arial,Helvetica,sans-serif;color:var(--text)}
+body{font-size:16px}
+.activity{width:100%;max-width:none;height:100vh;height:100dvh;margin:0 auto;padding:8px;overflow:hidden}
+.shell{height:100%;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:10px;display:flex;flex-direction:column;overflow:hidden}
+.progress{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;color:var(--muted);font-size:13px}
+.progress strong{color:var(--ink)}
+.dots{display:flex;gap:6px;align-items:center}.dot{width:9px;height:9px;border-radius:50%;background:#D8E2E9}.dot.on{background:var(--green)}
+.state{display:none}.state.active{display:flex;flex-direction:column;flex:1;min-height:0}
+.instruction{flex:0 0 auto;margin:0 0 8px;padding:9px 11px;background:var(--green-soft);border-left:5px solid var(--green);border-radius:8px;line-height:1.38}
+.instruction p{margin:2px 0}.instruction strong{color:#111}
+.stage{width:100%;flex:1 1 auto;min-height:0;border:1px solid var(--border);border-radius:10px;background:#fff;overflow:hidden}
+svg{display:block;width:100%;height:100%;background:#fff}#prismSvg,#pyrSvg{transform-origin:center center;transform-box:fill-box;transition:transform .48s cubic-bezier(.22,.61,.36,1)}#prismSvg.feedback-zoom,#pyrSvg.feedback-zoom{transform:scale(.965)}
+.controls{flex:0 0 auto;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:8px}
+button{min-width:155px;min-height:46px;padding:10px 20px;border:2px solid var(--green);border-radius:8px;background:var(--green);color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;cursor:pointer}
+button.secondary{background:#fff;color:var(--green)}
+button:hover{filter:brightness(.97)}button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}button:disabled{opacity:.55;cursor:default}
+.feedback{flex:0 0 auto;display:none;margin-top:8px;padding:8px 11px;border:1px solid var(--border);border-radius:8px;background:var(--bg);line-height:1.42}.feedback.show{display:block}.feedback p{margin:3px 0}.feedback.reserve-space{display:block;visibility:hidden;opacity:0;min-height:48px;transition:opacity .28s ease}.feedback.reserve-space.show{visibility:visible;opacity:1}
+.legend{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:7px;padding:6px 8px 0;color:var(--muted);font-size:13px}.dash{display:inline-block;width:30px;border-top:2px dashed #111}
+.small-note{font-size:13px;color:var(--muted);margin-top:5px}
+.cyl-instruction{background:#F6F8F9;border-left-color:#6B7A86;margin:0;height:auto;flex:0 0 auto}.cyl-grid{display:flex;flex-direction:column;gap:8px;flex:1 1 auto;min-height:0;align-items:stretch}.cyl-visual{display:flex;flex-direction:column;flex:0 0 auto;min-width:0;min-height:0}.ggb-stage{display:block;min-height:0;background:#fff;flex:0 0 auto;overflow:hidden}
+.ggb-scale-viewport{position:relative;width:100%;height:360px;overflow:hidden;background:#fff}
+.ggb-scale-inner{position:absolute;left:0;top:0;width:1365px;height:600px;transform-origin:0 0;will-change:transform}
+.ggb-frame{display:block;width:1365px;height:600px;border:0;background:#fff}
+.source-note{flex:0 0 auto;margin:4px 2px 0;font-size:11px;color:var(--muted);text-align:right}
+html.cyl-mode,html.cyl-mode body{height:auto;min-height:0;overflow:visible}
+html.cyl-mode .activity{height:auto;min-height:0;max-width:none;overflow:visible}
+html.cyl-mode .shell{height:auto;min-height:0;overflow:visible}
+html.cyl-mode #stateCyl{display:flex;flex:none;min-height:0;overflow:visible}
+html.cyl-mode #stateCyl .cyl-grid{flex:none}
+.fallback{flex:0 0 auto;margin-top:8px;border:1px solid var(--border);border-radius:8px;background:#fff;overflow:hidden}
+.fallback summary{cursor:pointer;padding:8px 11px;background:var(--bg);font-size:14px;color:var(--ink);list-style-position:inside}
+.fallback summary:hover{background:#eef3f6}
+.fallback[open]{display:block;flex:0 0 auto;min-height:0}
+.fallback[open] summary{display:block}
+.fallback-body{display:none;min-height:0}
+.fallback[open] .fallback-body{display:block;height:360px;min-height:360px;padding:8px 8px 14px;overflow:hidden}
+.fallback-svg{display:block;width:100%;height:100%;min-height:0;background:#fff}
+#stateCyl.fallback-open .cyl-visual{display:none}
+.fallback-label{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#20262B;text-anchor:middle}
+.fallback-note{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#52606A;text-anchor:middle}
+/* Geometría común */
+.face{stroke:var(--line);stroke-width:1.35px;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.label{font-family:"Arial Black",Arial,Helvetica,sans-serif;fill:#000;text-anchor:middle;dominant-baseline:middle;pointer-events:none;paint-order:stroke;stroke:#fff;stroke-linejoin:round}
+.marker{fill:#fff;stroke:#111;stroke-width:1.5px;vector-effect:non-scaling-stroke}
+/* Prisma */
+
+.prism-cut{fill:none;stroke:#111;stroke-width:2px;stroke-dasharray:7 5;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.prism-cut-erase{fill:none;stroke:#fff;stroke-width:4.5px;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.prism-label{font-size:.58px;stroke-width:.13px}
+/* Pirámide */
+
+.pyr-label{font-size:.58px;stroke-width:.14px}.pyr-small{font-size:.46px;stroke-width:.11px}
+.divider{stroke:#D2D2D2;stroke-width:1.05px;vector-effect:non-scaling-stroke}.panel-title{font:700 .50px Arial,Helvetica,sans-serif;fill:#555;text-anchor:middle}
+/* Cilindro */
+
+.cyl-side{fill:#E9EEF1;stroke:#222;stroke-width:2;vector-effect:non-scaling-stroke}.cyl-base{fill:#fff;stroke:#222;stroke-width:2;vector-effect:non-scaling-stroke}.cyl-front{fill:none;stroke:#222;stroke-width:2;vector-effect:non-scaling-stroke}.cyl-back{fill:none;stroke:#777;stroke-width:1.7;stroke-dasharray:6 5;vector-effect:non-scaling-stroke}.cyl-rect{fill:#E9EEF1;stroke:#222;stroke-width:2;vector-effect:non-scaling-stroke}.cyl-arrow{fill:none;stroke:#555;stroke-width:2;vector-effect:non-scaling-stroke}.cyl-concl{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;fill:#111;text-anchor:middle}
+/* Esfera */
+
+.sphere{fill:#FAFAFA;stroke:#222;stroke-width:2;vector-effect:non-scaling-stroke}.sphere-curve{fill:none;stroke:#666;stroke-width:1.7;vector-effect:non-scaling-stroke}.sphere-concl{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;fill:#111;text-anchor:middle}
+/* Cierre */
+.close-box{padding:14px;border:1px solid var(--border);border-radius:10px;background:#fff}.close-box p{margin:7px 0;line-height:1.45}.qline{padding:9px 11px;background:var(--blue-soft);border-left:4px solid var(--blue);border-radius:7px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:820px){.activity{padding:6px}.shell{padding:8px}.instruction{font-size:15px}.sphere-concl,.cyl-concl{font-size:15px}.cyl-grid{gap:8px}.cyl-instruction{height:auto}.fallback[open] .fallback-body{height:320px;min-height:320px}}
+</style>
+</head>
+<body>
+<main class="activity">
+<section class="shell" aria-label="Exploración de cuerpos geométricos y sus desarrollos">
+  <div class="progress" aria-live="polite">
+    <strong id="progressText">Exploración · Prisma</strong>
+    <div class="dots" aria-hidden="true"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+  </div>
+
+  <!-- ESTADO 1: PRISMA -->
+  <section id="statePrism" class="state active">
+    <div class="instruction">
+      <p>Observen la cara A y las líneas discontinuas. Hablen entre ustedes y pónganse de acuerdo.</p>
+      <p>En 1. Prisma de la guía, marquen con una X una casilla: B o C. Después, pulsen <strong>COMPROBAR</strong>.</p>
+    </div>
+    <div id="prismStage" class="stage">
+      <svg id="prismSvg" viewBox="-6 -5 12 10" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Prisma rectangular con caras A, B y C; las líneas discontinuas indican aristas cortadas">
+        <g id="prismFaces"></g><g id="prismCuts"></g><g id="prismLabels"></g>
+      </svg>
+    </div>
+    <div id="prismLegend" class="legend"><span class="dash"></span><span>Línea discontinua: arista que se separará</span></div>
+    <div id="prismFeedback" class="feedback reserve-space" aria-live="polite"><p>Observen qué cara permanece unida a A en el desarrollo plano. Si es necesario, corrijan 1. Prisma en la guía.</p></div>
+    <div class="controls">
+      <button id="prismCheck" type="button">COMPROBAR</button>
+      <button id="prismRepeat" type="button" class="secondary" hidden>REPETIR</button>
+      <button id="prismNext" type="button" hidden>SIGUIENTE</button>
+    </div>
+  </section>
+
+  <!-- ESTADO 2: PIRÁMIDE -->
+  <section id="statePyr" class="state">
+    <div class="instruction">
+      <p>Observen las caras P y Q y el vértice M. La letra M marca el mismo vértice en el cuerpo y en el desarrollo plano. Hablen entre ustedes y pónganse de acuerdo.</p>
+      <p>En 2. Pirámide de la guía, marquen con una X una casilla: X o Y. Después, pulsen <strong>COMPROBAR</strong>.</p>
+    </div>
+    <div id="pyrStage" class="stage">
+      <svg id="pyrSvg" viewBox="-13 -7.8 26 15.6" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Pirámide cuadrangular con caras P y Q y desarrollo plano con opciones X e Y">
+        <g id="pyrStatic"></g><g id="pyrAnim"></g><g id="pyrLabels"></g>
+      </svg>
+    </div>
+    <div id="pyrFeedback" class="feedback reserve-space" aria-live="polite"><p>Observen dónde queda la cara P en el desarrollo plano. Si es necesario, corrijan 2. Pirámide en la guía.</p></div>
+    <div class="controls">
+      <button id="pyrCheck" type="button">COMPROBAR</button>
+      <button id="pyrRepeat" type="button" class="secondary" hidden>REPETIR</button>
+      <button id="pyrNext" type="button" hidden>SIGUIENTE</button>
+    </div>
+  </section>
+
+  <!-- ESTADO 3: CILINDRO -->
+  <section id="stateCyl" class="state">
+    <div class="cyl-grid">
+      <div class="instruction cyl-instruction">
+        <p>Observen el cilindro que aparece en el recurso digital.</p>
+        <p>Antes de mover la barra, conversen en equipo y pónganse de acuerdo sobre qué figuras creen que formarán su desarrollo plano. La decisión es oral: no la escriban en la guía.</p>
+        <p>Si necesitan verlo desde otra posición, toquen y arrastren dentro de la vista 3D para girarlo.</p>
+        <p>Luego, muevan lentamente la barra desde <strong>Cilindro</strong> hasta <strong>Desarrollo plano</strong>. Observen qué ocurre con las dos bases y con la superficie lateral.</p>
+        <p>Al terminar, pulsen <strong>CONTINUAR</strong>.</p>
+        <p class="small-note">Si el recurso no carga, abran la alternativa que aparece debajo.</p>
+      </div>
+
+      <div class="cyl-visual">
+        <div id="cylStage" class="stage ggb-stage">
+          <div id="ggbViewport" class="ggb-scale-viewport">
+            <div id="ggbScaleInner" class="ggb-scale-inner">
+              <iframe
+                id="ggbCylinder"
+                class="ggb-frame"
+                title="GeoGebra: desarrollo plano interactivo de un cilindro"
+                src="https://www.geogebra.org/material/iframe/id/c8st9vjp/width/1365/height/600/border/ffffff/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/true/ld/false/sdz/true/ctl/false"
+                width="1365"
+                height="600"
+                scrolling="no"
+                loading="eager"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="source-note">Recurso interactivo elaborado en GeoGebra para esta actividad.</div>
+      </div>
+    </div>
+
+    <details id="cylFallback" class="fallback">
+      <summary>Alternativa si GeoGebra no carga</summary>
+      <div class="fallback-body">
+        <svg class="fallback-svg" viewBox="0 0 960 360" role="img" aria-label="Alternativa local: cilindro y representación de su desarrollo plano">
+          <defs>
+            <marker id="fallbackArrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+              <polygon points="0 0,9 3.5,0 7" fill="#555"/>
+            </marker>
+          </defs>
+
+          <g transform="translate(-120,0)">
+            <path class="cyl-side" d="M250 70 L250 245 A70 22 0 0 0 390 245 L390 70 Z"/>
+            <ellipse class="cyl-base" cx="320" cy="70" rx="70" ry="22"/>
+            <path class="cyl-back" d="M250 245 A70 22 0 0 1 390 245"/>
+            <path class="cyl-front" d="M250 245 A70 22 0 0 0 390 245"/>
+          </g>
+
+          <path class="cyl-arrow" marker-end="url(#fallbackArrow)" d="M360 165 C410 135 452 135 498 163"/>
+
+          <g>
+            <rect class="cyl-rect" x="535" y="100" width="239" height="110"/>
+            <circle class="cyl-base" cx="654.5" cy="62" r="38"/>
+            <circle class="cyl-base" cx="654.5" cy="248" r="38"/>
+            <text class="fallback-label" x="654.5" y="318">Desarrollo plano</text>
+          </g>
+        </svg>
+      </div>
+    </details>
+
+    <div id="cylFeedback" class="feedback reserve-space" aria-live="polite">
+      <p>El desarrollo plano del cilindro está formado por dos círculos y una región rectangular. Los círculos corresponden a las bases y la región rectangular a la superficie lateral extendida.</p>
+    </div>
+
+    <div class="controls">
+      <button id="cylContinue" type="button">CONTINUAR</button>
+      <button id="cylNext" type="button" hidden>SIGUIENTE</button>
+    </div>
+  </section>
+
+  <!-- ESTADO 4: ESFERA -->
+  <section id="stateSphere" class="state">
+    <div class="instruction">
+      <p>Observen la esfera.</p>
+      <p>Hablen entre ustedes y pónganse de acuerdo: ¿puede extenderse toda su superficie sobre un plano sin deformarla? Esta decisión es oral: no la escriban en la guía.</p>
+      <p>Cuando estén de acuerdo, pulsen <strong>COMPROBAR</strong>.</p>
+    </div>
+    <div id="sphereStage" class="stage">
+      <svg viewBox="0 0 960 350" role="img" aria-label="Representación esquemática de una esfera">
+        <circle class="sphere" cx="480" cy="145" r="100"/>
+        <ellipse class="sphere-curve" cx="480" cy="145" rx="100" ry="32"/>
+        <ellipse class="sphere-curve" cx="480" cy="145" rx="36" ry="100"/>
+        <text id="sphereConcl" class="sphere-concl" x="480" y="302" opacity="0">No. La esfera no tiene un desarrollo plano exacto sin deformar su superficie.</text>
+      </svg>
+    </div>
+    <div id="sphereFeedback" class="feedback" aria-live="polite"><p>En el cilindro, la superficie lateral puede extenderse en el plano como una región rectangular. En la esfera, no es posible extender toda la superficie en el plano sin deformarla.</p></div>
+    <div class="controls">
+      <button id="sphereCheck" type="button">COMPROBAR</button>
+      <button id="sphereRepeat" type="button" class="secondary" hidden>REPETIR</button>
+      <button id="sphereNext" type="button" hidden>SIGUIENTE</button>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section id="stateClose" class="state">
+    <div class="close-box">
+      <p>Conversen brevemente en equipo. No escriban estas respuestas.</p>
+      <p class="qline">¿En todos los casos pudieron extender la superficie sobre el plano de la misma manera?</p>
+      <p class="qline">¿Qué observaron en las caras, las uniones o las superficies para tomar sus decisiones?</p>
+      <p>Cuando terminen, esperen la indicación del docente para continuar.</p>
+    </div>
+  </section>
+</section>
+</main>
+<script>
+(()=>{
+"use strict";
+const NS="http://www.w3.org/2000/svg";
+const states=["statePrism","statePyr","stateCyl","stateSphere","stateClose"];
+const ptexts=["Exploración · Prisma","Exploración · Pirámide","Exploración · Cilindro","Exploración · Esfera","Cierre de la exploración"];
+let current=0;
+function showState(i){
+  current=i;
+  states.forEach((id,k)=>document.getElementById(id).classList.toggle("active",k===i));
+  document.documentElement.classList.toggle("cyl-mode",i===2);
+  document.getElementById("progressText").textContent=ptexts[i];
+  document.querySelectorAll(".dot").forEach((d,k)=>{d.classList.toggle("on",i<4 && k<=i);d.style.visibility=i===4?"hidden":"visible";});
+  requestAnimationFrame(()=>{if(i===2)fitGeoGebra();syncHostHeight();});
+}
+
+
+/* Ajuste responsivo del GeoGebra y altura dinámica del HTML */
+const GGB_BASE_W=1365,GGB_BASE_H=600;
+let hostHeightRaf=0,lastHostHeight=0;
+function syncHostHeight(){
+  cancelAnimationFrame(hostHeightRaf);
+  hostHeightRaf=requestAnimationFrame(()=>{
+    const shell=document.querySelector('.shell');
+    if(!shell)return;
+    /* Se mide el contenido real, no la altura del viewport. Esto evita
+       el bucle de crecimiento cuando el archivo está dentro de un iframe. */
+    const r=shell.getBoundingClientRect();
+    const h=Math.max(1,Math.ceil(r.bottom + window.scrollY + 8));
+    if(Math.abs(h-lastHostHeight)<2)return;
+    lastHostHeight=h;
+    try{
+      const frame=window.frameElement;
+      if(frame){
+        /* Normalización dimensional del iframe en eXeLearning.
+           Solo afecta ancho/alto exterior; no modifica el recurso interno. */
+        frame.style.width='100%';
+        frame.style.maxWidth='none';
+        frame.style.display='block';
+        frame.style.border='0';
+        frame.setAttribute('width','100%');
+        frame.setAttribute('scrolling','no');
+
+        const current=parseFloat(frame.style.height)||frame.getBoundingClientRect().height||0;
+        if(Math.abs(current-h)>2){
+          frame.style.height=h+'px';
+          frame.style.minHeight='0';
+          frame.setAttribute('height',String(h));
+        }
+      }
+    }catch(e){}
+    try{window.parent.postMessage({type:'exe-content-height',height:h,source:'S4_P2_CILINDRO'},'*')}catch(e){}
+  });
+}
+function fitGeoGebra(){
+  const viewport=document.getElementById('ggbViewport');
+  const inner=document.getElementById('ggbScaleInner');
+  if(!viewport||!inner)return;
+  const available=Math.max(1,viewport.clientWidth);
+  const scale=Math.min(1,available/GGB_BASE_W);
+  inner.style.transform='scale('+scale+')';
+  viewport.style.height=Math.ceil(GGB_BASE_H*scale)+'px';
+  syncHostHeight();
+}
+window.addEventListener('resize',fitGeoGebra,{passive:true});
+if('ResizeObserver' in window){
+  let lastWidth=0;
+  const ro=new ResizeObserver(entries=>{
+    const w=Math.round(entries[0]?.contentRect?.width||0);
+    if(w && w!==lastWidth){lastWidth=w;fitGeoGebra();}
+  });
+  const target=document.getElementById('ggbViewport');
+  if(target)ro.observe(target);
+}
+
+/* Utilidades vectoriales */
+const add=(a,b)=>a.map((x,i)=>x+b[i]),sub=(a,b)=>a.map((x,i)=>x-b[i]),mul=(a,s)=>a.map(x=>x*s),dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]],norm=a=>Math.hypot(...a),unit=a=>mul(a,1/norm(a)),lerp=(a,b,t)=>a+(b-a)*t;
+function rot(p,a,b,ang){const u=unit(sub(b,a)),x=sub(p,a),c=Math.cos(ang),s=Math.sin(ang);return add(a,add(add(mul(x,c),mul(cross(u,x),s)),mul(u,dot(u,x)*(1-c))))}
+function smooth(x){x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)}function win(t,a,b){return smooth((t-a)/(b-a))}function centroid(ps){return ps.reduce((a,p)=>add(a,p),[0,0,0]).map(x=>x/ps.length)}
+function svgPoly(g,pts,fill,cls="face",opacity=1){const e=document.createElementNS(NS,"polygon");e.setAttribute("class",cls);e.setAttribute("fill",fill);e.setAttribute("opacity",opacity);e.setAttribute("points",pts.map(p=>p.slice(0,2).join(",")).join(" "));g.appendChild(e);return e}
+function svgText(g,x,y,txt,cls,opacity=1){const e=document.createElementNS(NS,"text");e.setAttribute("class",cls);e.setAttribute("x",x);e.setAttribute("y",y);e.setAttribute("opacity",opacity);e.textContent=txt;g.appendChild(e);return e}
+function svgCircle(g,x,y,r,opacity=1){const e=document.createElementNS(NS,"circle");e.setAttribute("class","marker");e.setAttribute("cx",x);e.setAttribute("cy",y);e.setAttribute("r",r);e.setAttribute("opacity",opacity);g.appendChild(e);return e}
+
+/* ---------------- PRISMA 6×4×3 ---------------- */
+const PV={V0:[0,0,0],V1:[6,0,0],V2:[6,4,0],V3:[0,4,0],V4:[0,0,3],V5:[6,0,3],V6:[6,4,3],V7:[0,4,3]};
+const PF={F0:{v:["V0","V1","V2","V3"],fill:"#fbfbfb"},A:{v:["V4","V5","V6","V7"],fill:"#e2e2e2"},B:{v:["V0","V1","V5","V4"],fill:"#f7f7f7"},Post:{v:["V3","V2","V6","V7"],fill:"#f1f1f1"},Left:{v:["V0","V3","V7","V4"],fill:"#f3f3f3"},C:{v:["V1","V2","V6","V5"],fill:"#ebebeb"}};
+const PCuts=[["V4","V5"],["V6","V7"],["V7","V4"],["V1","V5"],["V0","V4"],["V2","V6"]];
+const pCam=[10,-13,26],pTarget=[3,2,1.5],pFwd=unit(sub(pTarget,pCam)),pRight=unit(cross(pFwd,[0,0,1])),pUp=unit(cross(pRight,pFwd));
+function pOb(p){const d=sub(p,pTarget);return[dot(d,pRight),-dot(d,pUp),dot(sub(p,pCam),pFwd)]}
+function pFace(name,a){const base=PF[name].v.map(k=>PV[k].slice());if(name==="B")return base.map(p=>rot(p,PV.V0,PV.V1,a.B));if(name==="Post")return base.map(p=>rot(p,PV.V3,PV.V2,a.Post));if(name==="Left")return base.map(p=>rot(p,PV.V0,PV.V3,a.Left));if(name==="C")return base.map(p=>rot(p,PV.V1,PV.V2,a.C));if(name==="A"){const parent=base.map(p=>rot(p,PV.V1,PV.V2,a.C)),h1=rot(PV.V5,PV.V1,PV.V2,a.C),h2=rot(PV.V6,PV.V1,PV.V2,a.C);return parent.map(p=>rot(p,h1,h2,a.A))}return base}
+function pAngles(t){return{C:Math.PI/2*win(t,.12,.43),A:Math.PI/2*win(t,.48,.64),B:Math.PI/2*win(t,.69,.83),Post:-Math.PI/2*win(t,.69,.83),Left:-Math.PI/2*win(t,.69,.83)}}
+function pView(t){return smooth((t-.86)/.14)}
+function pGeom(t){const a=pAngles(t),o={};Object.keys(PF).forEach(n=>o[n]=pFace(n,a));return o}
+function pProj(p,t){const o=pOb(p),q=pView(t),top=[p[0]-6,-(p[1]-2),p[2]];return[lerp(o[0],top[0],q),lerp(o[1],top[1],q),lerp(o[2],top[2],q)]}
+function pBounds(trans,fn){let mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity;Object.values(trans).forEach(ps=>ps.forEach(p=>{const q=fn(p);mnx=Math.min(mnx,q[0]);mny=Math.min(mny,q[1]);mxx=Math.max(mxx,q[0]);mxy=Math.max(mxy,q[1])}));return[mnx,mny,mxx,mxy]}
+function padBox(e,pr=.10,mw=0,mh=0){let[a,b,c,d]=e,cx=(a+c)/2,cy=(b+d)/2,w=Math.max(c-a,mw),h=Math.max(d-b,mh),pad=Math.max(w,h)*pr;return[cx-w/2-pad,cy-h/2-pad,w+2*pad,h+2*pad]}
+let PBOX=null;function prismBoxes(){let mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity;for(let i=0;i<=86;i++){const g=pGeom(i/100);Object.values(g).forEach(ps=>ps.forEach(p=>{const q=pOb(p);mnx=Math.min(mnx,q[0]);mny=Math.min(mny,q[1]);mxx=Math.max(mxx,q[0]);mxy=Math.max(mxy,q[1])}))}const b3=padBox([mnx,mny,mxx,mxy],.10,9,6.2),top=p=>[p[0]-6,-(p[1]-2),p[2]],bt=padBox(pBounds(pGeom(1),top),.10);return{b3,bt}}
+function prismRender(t){const svg=document.getElementById("prismSvg"),fg=document.getElementById("prismFaces"),cg=document.getElementById("prismCuts"),lg=document.getElementById("prismLabels"),g=pGeom(t),ordered=Object.keys(PF).map(n=>({n,d:pProj(centroid(g[n]),t)[2]})).sort((a,b)=>b.d-a.d);fg.replaceChildren();ordered.forEach(it=>svgPoly(fg,g[it.n].map(p=>pProj(p,t)),PF[it.n].fill));const op=1-win(t,0,.10);cg.replaceChildren();cg.setAttribute("opacity",op);document.getElementById("prismLegend").style.opacity=op;if(op>.001)PCuts.forEach(([a,b])=>{const p=pProj(PV[a],0),q=pProj(PV[b],0),er=document.createElementNS(NS,"line"),ln=document.createElementNS(NS,"line");er.setAttribute("class","prism-cut-erase");ln.setAttribute("class","prism-cut");[er,ln].forEach(e=>{e.setAttribute("x1",p[0]);e.setAttribute("y1",p[1]);e.setAttribute("x2",q[0]);e.setAttribute("y2",q[1]);cg.appendChild(e)})});lg.replaceChildren();["A","B","C"].forEach(n=>{const p=pProj(centroid(g[n]),t);svgText(lg,p[0],p[1],n,"label prism-label")});const q=pView(t),box=PBOX.b3.map((v,i)=>lerp(v,PBOX.bt[i],q));svg.setAttribute("viewBox",box.join(" "))}
+PBOX=prismBoxes();prismRender(0);
+let pRaf=null;function prismAnimate(){const btn=document.getElementById("prismCheck"),svg=document.getElementById("prismSvg"),fb=document.getElementById("prismFeedback");svg.classList.remove("feedback-zoom");fb.classList.remove("show");btn.hidden=true;btn.disabled=true;const st=performance.now();function fr(now){const q=Math.min(1,(now-st)/5200),e=q<.5?2*q*q:1-Math.pow(-2*q+2,2)/2;prismRender(e);if(q<1)pRaf=requestAnimationFrame(fr);else{btn.disabled=false;btn.hidden=true;setTimeout(()=>{svg.classList.add("feedback-zoom");fb.classList.add("show");document.getElementById("prismRepeat").hidden=false;document.getElementById("prismNext").hidden=false},180)}}pRaf=requestAnimationFrame(fr)}
+document.getElementById("prismCheck").onclick=prismAnimate;document.getElementById("prismRepeat").onclick=()=>{document.getElementById("prismRepeat").hidden=true;document.getElementById("prismNext").hidden=true;document.getElementById("prismFeedback").classList.remove("show");document.getElementById("prismSvg").classList.remove("feedback-zoom");prismRender(0);const btn=document.getElementById("prismCheck");btn.hidden=false;btn.disabled=false;btn.textContent="COMPROBAR"};document.getElementById("prismNext").onclick=()=>showState(1);
+
+/* ---------------- PIRÁMIDE CUADRANGULAR ---------------- */
+const H=Math.sqrt(17),PHI=Math.acos(-2/Math.sqrt(21)),BETA=Math.acos(4/21);const YV={v1:[-2,-2,0],v2:[2,-2,0],v3:[2,2,0],v4:[-2,2,0],apex:[0,0,H]};const YF={Base:{v:["v1","v2","v3","v4"],fill:"#fbfbfb"},P:{v:["v1","v2","apex"],fill:"#e4e4e4"},Q:{v:["v2","v3","apex"],fill:"#ececec"},R:{v:["v3","v4","apex"],fill:"#f3f3f3"},T:{v:["v4","v1","apex"],fill:"#f7f7f7"}};const yCam=[8,-11,16],yTarget=[0,0,1.6],yFwd=unit(sub(yTarget,yCam)),yRight=unit(cross(yFwd,[0,0,1])),yUp=unit(cross(yRight,yFwd));function yProj(p){const d=sub(p,yTarget);return[dot(d,yRight),-dot(d,yUp),dot(sub(p,yCam),yFwd)]}function yTop(p){return[p[0],-p[1],p[2]]}function tfQ(p,s){return rot(p,YV.v2,YV.v3,PHI*s)}function tfP(p,sq,sp){let q=tfQ(p,sq),a=tfQ(YV.v2,sq),b=tfQ(YV.apex,sq);return rot(q,a,b,BETA*sp)}function tfR(p,sq,sr){let q=tfQ(p,sq),a=tfQ(YV.v3,sq),b=tfQ(YV.apex,sq);return rot(q,a,b,-BETA*sr)}function tfT(p,sq,sr,st){let q=tfR(p,sq,sr),a=tfR(YV.v4,sq,sr),b=tfR(YV.apex,sq,sr);return rot(q,a,b,-BETA*st)}function yPts(n,s){return YF[n].v.map(k=>{const p=YV[k].slice();if(n==="Q")return tfQ(p,s.q);if(n==="P")return tfP(p,s.q,s.p);if(n==="R")return tfR(p,s.q,s.r);if(n==="T")return tfT(p,s.q,s.r,s.t);return p})}function yStages(t){return{q:win(t,.08,.36),p:win(t,.40,.58),r:win(t,.60,.79),t:win(t,.80,.97)}}function yMix(t){return smooth((t-.95)/.05)}
+const yStatic=document.getElementById("pyrStatic"),yAnim=document.getElementById("pyrAnim"),yLabels=document.getElementById("pyrLabels");
+function yNet(off=[6.15,1],sc=.70,op=1){const s={q:1,p:1,r:1,t:1};["Base","Q","P","R","T"].forEach(n=>svgPoly(yStatic,yPts(n,s).map(yTop).map(p=>[off[0]+p[0]*sc,off[1]+p[1]*sc]),YF[n].fill,"face",op));const qc=yTop(centroid(yPts("Q",s))),pc=yTop(centroid(yPts("P",s))),rc=yTop(centroid(yPts("R",s))),v=yTop(YV.v2);svgText(yStatic,off[0]+qc[0]*sc,off[1]+qc[1]*sc,"Q","label pyr-label",op);svgCircle(yStatic,off[0]+v[0]*sc,off[1]+v[1]*sc,.10,op);svgText(yStatic,off[0]+v[0]*sc-.38,off[1]+v[1]*sc+.40,"M","label pyr-small",op);const p3=yTop(yPts("P",s)[0]),r3=yTop(yPts("R",s)[1]),xp=[pc[0]+.40*(p3[0]-pc[0]),pc[1]+.40*(p3[1]-pc[1])],yp=[rc[0]+.40*(r3[0]-rc[0]),rc[1]+.40*(r3[1]-rc[1])];svgText(yStatic,off[0]+xp[0]*sc,off[1]+xp[1]*sc,"X","label pyr-label",op);svgText(yStatic,off[0]+yp[0]*sc,off[1]+yp[1]*sc,"Y","label pyr-label",op)}
+function yBody(off=[-6,1],sc=.95,op=1){const s={q:0,p:0,r:0,t:0},arr=["Base","T","R","Q","P"].map(n=>({n,ps:yPts(n,s),d:yProj(centroid(yPts(n,s)))[2]})).sort((a,b)=>b.d-a.d);arr.forEach(it=>svgPoly(yStatic,it.ps.map(yProj).map(p=>[off[0]+p[0]*sc,off[1]+p[1]*sc]),YF[it.n].fill,"face",op));["P","Q"].forEach(n=>{const c=yProj(centroid(yPts(n,s)));svgText(yStatic,off[0]+c[0]*sc,off[1]+c[1]*sc,n,"label pyr-label",op)});const v=yProj(YV.v2);svgCircle(yStatic,off[0]+v[0]*sc,off[1]+v[1]*sc,.11,op);svgText(yStatic,off[0]+v[0]*sc-.34,off[1]+v[1]*sc+.42,"M","label pyr-small",op)}
+function pyrRender(t){yStatic.replaceChildren();yAnim.replaceChildren();yLabels.replaceChildren();
+  const fadeEnd=.11, animStart=.145;
+  const staticFade=1-smooth(t/fadeEnd);
+
+  /* Vista inicial: cuerpo y desarrollo. Desaparece por completo primero. */
+  if(t<fadeEnd){
+    yBody([-6,1],.95,staticFade);
+    yNet([6.15,1],.70,staticFade);
+    const d=document.createElementNS(NS,"line");
+    d.setAttribute("class","divider");
+    d.setAttribute("x1","0");d.setAttribute("x2","0");
+    d.setAttribute("y1","-5.8");d.setAttribute("y2","5.8");
+    d.setAttribute("opacity",staticFade);
+    yStatic.appendChild(d);
+    svgText(yStatic,-6,-5.95,"CUERPO","panel-title",staticFade);
+    svgText(yStatic,6.15,-5.95,"DESARROLLO","panel-title",staticFade);
+  }
+
+  /* Pequeña pausa visual: no se superponen la vista inicial y la animación. */
+  if(t>=animStart){
+    const u=Math.max(0,Math.min(1,(t-animStart)/(1-animStart)));
+    const appear=smooth(u/.075);
+    const s=yStages(u),vm=yMix(u),all={};
+    Object.keys(YF).forEach(n=>all[n]=yPts(n,s));
+    const ord=Object.keys(YF).map(n=>({n,d:yProj(centroid(all[n]))[2]})).sort((a,b)=>b.d-a.d);
+
+    ord.forEach(it=>{
+      const pts=all[it.n].map(p=>{
+        const a=yProj(p),b=yTop(p);
+        return[lerp(a[0],b[0],vm),lerp(a[1],b[1],vm)]
+      });
+      svgPoly(yAnim,pts,YF[it.n].fill,"face",appear)
+    });
+
+    ["P","Q"].forEach(n=>{
+      const c=centroid(all[n]),a=yProj(c),b=yTop(c);
+      svgText(yLabels,lerp(a[0],b[0],vm),lerp(a[1],b[1],vm),n,"label pyr-label",appear)
+    });
+
+    const a=yProj(YV.v2),b=yTop(YV.v2),vx=lerp(a[0],b[0],vm),vy=lerp(a[1],b[1],vm);
+    svgCircle(yLabels,vx,vy,.11,appear);
+    svgText(yLabels,vx-.34,vy+.42,"M","label pyr-small",appear);
+
+    if(u>.965){
+      const f=smooth((u-.965)/.035),S={q:1,p:1,r:1,t:1},
+            pc=yTop(centroid(yPts("P",S))),rc=yTop(centroid(yPts("R",S))),
+            p3=yTop(yPts("P",S)[0]),r3=yTop(yPts("R",S)[1]);
+      svgText(yLabels,pc[0]+.40*(p3[0]-pc[0]),pc[1]+.40*(p3[1]-pc[1]),"X","label pyr-label",f);
+      svgText(yLabels,rc[0]+.40*(r3[0]-rc[0]),rc[1]+.40*(r3[1]-rc[1]),"Y","label pyr-label",f)
+    }
+  }
+}
+pyrRender(0);function pyrAnimate(){const btn=document.getElementById("pyrCheck"),svg=document.getElementById("pyrSvg"),fb=document.getElementById("pyrFeedback");svg.classList.remove("feedback-zoom");fb.classList.remove("show");btn.hidden=true;btn.disabled=true;const st=performance.now();function fr(now){const q=Math.min(1,(now-st)/6200),e=q<.5?2*q*q:1-Math.pow(-2*q+2,2)/2;pyrRender(e);if(q<1)requestAnimationFrame(fr);else{btn.disabled=false;btn.hidden=true;setTimeout(()=>{svg.classList.add("feedback-zoom");fb.classList.add("show");document.getElementById("pyrRepeat").hidden=false;document.getElementById("pyrNext").hidden=false},180)}}requestAnimationFrame(fr)}
+document.getElementById("pyrCheck").onclick=pyrAnimate;document.getElementById("pyrRepeat").onclick=()=>{document.getElementById("pyrRepeat").hidden=true;document.getElementById("pyrNext").hidden=true;document.getElementById("pyrFeedback").classList.remove("show");document.getElementById("pyrSvg").classList.remove("feedback-zoom");pyrRender(0);const btn=document.getElementById("pyrCheck");btn.hidden=false;btn.disabled=false;btn.textContent="COMPROBAR"};document.getElementById("pyrNext").onclick=()=>showState(2);
+
+/* ---------------- CILINDRO ---------------- */
+const cylFallback=document.getElementById("cylFallback"),
+      cylState=document.getElementById("stateCyl"),
+      cylFeedback=document.getElementById("cylFeedback"),
+      cylContinue=document.getElementById("cylContinue"),
+      cylNext=document.getElementById("cylNext");
+
+cylFallback.addEventListener("toggle",()=>{
+  cylState.classList.toggle("fallback-open",cylFallback.open);
+  requestAnimationFrame(()=>{
+    fitGeoGebra();
+    requestAnimationFrame(syncHostHeight);
+  });
+});
+
+cylContinue.onclick=()=>{
+  cylFeedback.classList.add("show");
+  cylContinue.hidden=true;
+  cylNext.hidden=false;
+  syncHostHeight();
+};
+
+cylNext.onclick=()=>showState(3);
+
+/* ---------------- ESFERA ---------------- */
+const sph=document.getElementById("sphereConcl");document.getElementById("sphereCheck").onclick=()=>{sph.setAttribute("opacity","1");document.getElementById("sphereCheck").hidden=true;document.getElementById("sphereRepeat").hidden=false;document.getElementById("sphereNext").hidden=false;document.getElementById("sphereFeedback").classList.add("show")};document.getElementById("sphereRepeat").onclick=()=>{sph.setAttribute("opacity","0");document.getElementById("sphereFeedback").classList.remove("show");document.getElementById("sphereRepeat").hidden=true;document.getElementById("sphereNext").hidden=true;document.getElementById("sphereCheck").hidden=false};document.getElementById("sphereNext").onclick=()=>showState(4);
+showState(0);
+})();
+</script>
+</body>
+</html>

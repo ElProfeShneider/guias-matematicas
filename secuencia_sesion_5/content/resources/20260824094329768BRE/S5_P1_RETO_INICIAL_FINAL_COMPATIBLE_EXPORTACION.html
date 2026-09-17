@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S5 · Reto inicial</title>
+<style>
+:root{
+  --grafito:#20262B;
+  --verde:#4B702F;
+  --naranja:#C96E2A;
+  --azul:#0F5F9B;
+  --azul-profundo:#0B4268;
+  --puente:#2B6A72;
+  --texto-sec:#46515A;
+  --borde:#CBD3D9;
+  --fondo:#FFFFFF;
+  --suave:#F5F8FA;
+  --suave-azul:#EDF5FA;
+  --sombra:0 2px 10px rgba(32,38,43,.08);
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  background:transparent;
+  overflow-x:hidden;
+  overflow-y:auto;
+  color:var(--grafito);
+  font-family:Arial,Helvetica,sans-serif;
+}
+html,body{width:100%;max-width:none;min-height:0}
+body{font-size:17px;line-height:1.45}
+.s5p1{width:100%;max-width:none;margin:0;padding:10px 12px 18px}
+h2,h3,p,ol{margin-top:0}
+h2{font-size:1.28rem;margin-bottom:8px;color:var(--azul-profundo)}
+h3{font-size:1.03rem;margin-bottom:7px;color:var(--grafito)}
+.contexto{
+  border-left:5px solid var(--puente);
+  background:var(--suave);
+  padding:12px 14px;
+  border-radius:8px;
+  margin-bottom:12px;
+}
+.contexto p{margin-bottom:0}
+.condiciones{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  padding:12px 14px 9px;
+  margin-bottom:12px;
+  background:var(--fondo);
+}
+.condiciones ol{margin:0;padding-left:25px}
+.condiciones li{padding:2px 0 4px 3px}
+.modelos{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:12px 0 8px;
+}
+.modelo{
+  min-width:0;
+  border:1px solid var(--borde);
+  border-radius:12px;
+  background:var(--fondo);
+  box-shadow:var(--sombra);
+  padding:10px;
+}
+.modelo h3{text-align:center;margin-bottom:7px}
+.visor{
+  width:100%;
+  height:235px;
+  display:block;
+  border:1px solid #B9C4CC;
+  border-radius:9px;
+  background:#FAFBFC;
+  touch-action:none;
+  cursor:grab;
+  outline:none;
+}
+.visor:active{cursor:grabbing}
+.visor:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+.controles{
+  display:flex;
+  justify-content:center;
+  margin-top:8px;
+}
+button{
+  font:inherit;
+  border-radius:8px;
+  border:1px solid var(--azul-profundo);
+  padding:8px 12px;
+  cursor:pointer;
+}
+button:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+.secundario{
+  background:#fff;
+  color:var(--azul-profundo);
+}
+.secundario:hover{background:var(--suave-azul)}
+.ayuda-modelos{
+  text-align:center;
+  color:var(--texto-sec);
+  font-size:.95rem;
+  margin:8px 0 13px;
+}
+.antes-informe{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  padding:12px 14px;
+  background:var(--fondo);
+  margin-top:10px;
+}
+.antes-informe p:last-child{margin-bottom:0}
+.informe{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  padding:12px 14px;
+  background:var(--suave);
+  margin:12px 0;
+}
+.informe p{margin:0}
+.cita{
+  margin-top:5px!important;
+  font-style:italic;
+}
+.consigna{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  padding:12px 14px;
+  background:var(--fondo);
+}
+.consigna ol{padding-left:25px;margin-bottom:9px}
+.consigna li{padding:2px 0 3px 3px}
+.ruta{margin:8px 0 0}
+.accion{
+  display:flex;
+  justify-content:center;
+  margin-top:13px;
+}
+.principal{
+  background:var(--azul-profundo);
+  color:#fff;
+  font-weight:700;
+  min-width:230px;
+}
+.principal:hover{background:#083654}
+.principal:disabled{
+  cursor:default;
+  opacity:.78;
+}
+.transicion{
+  margin-top:12px;
+  padding:11px 13px;
+  border-left:5px solid var(--verde);
+  background:#F3F7F0;
+  border-radius:8px;
+}
+.transicion p{margin:0}
+.oculto{display:none}
+
+/* Protección de proporción al exportar desde eXeLearning. */
+.s5p1 > .contexto,
+.s5p1 > .condiciones,
+.s5p1 > .modelos,
+.s5p1 > .ayuda-modelos,
+.s5p1 > .antes-informe,
+.s5p1 > #bloqueInforme,
+.s5p1 > .transicion{
+  width:100%;
+  max-width:1022px;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(max-width:760px){
+  body{font-size:16px}
+  .modelos{grid-template-columns:1fr}
+  .visor{height:225px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<main class="s5p1">
+
+  <section class="contexto" aria-labelledby="microtitulo">
+    <h2 id="microtitulo">Diseño para la feria</h2>
+    <p>Para la feria escolar se quiere construir un exhibidor. Antes de construirlo, comparen dos modelos geométricos para decidir cuál cumple el diseño.</p>
+  </section>
+
+  <section class="condiciones" aria-labelledby="cond-title">
+    <h3 id="cond-title">El modelo debe cumplir tres condiciones</h3>
+    <ol>
+      <li>Tener dos caras de siete lados.</li>
+      <li>Esas dos caras deben tener la misma forma y el mismo tamaño.</li>
+      <li>Esas dos caras deben estar en planos paralelos.</li>
+    </ol>
+  </section>
+
+  <section class="modelos" aria-label="Modelos geométricos">
+    <article class="modelo">
+      <h3>Modelo A</h3>
+      <canvas id="modeloA" class="visor" tabindex="0"
+        aria-label="Modelo A tridimensional. Arrastra para girarlo. Si usas teclado, utiliza las flechas."
+        aria-describedby="ayuda-giro"></canvas>
+      <div class="controles">
+        <button type="button" class="secundario" data-reset="modeloA">Volver a la vista inicial</button>
+      </div>
+    </article>
+
+    <article class="modelo">
+      <h3>Modelo B</h3>
+      <canvas id="modeloB" class="visor" tabindex="0"
+        aria-label="Modelo B tridimensional. Arrastra para girarlo. Si usas teclado, utiliza las flechas."
+        aria-describedby="ayuda-giro"></canvas>
+      <div class="controles">
+        <button type="button" class="secundario" data-reset="modeloB">Volver a la vista inicial</button>
+      </div>
+    </article>
+  </section>
+
+  <p class="ayuda-modelos" id="ayuda-giro">Arrastren los modelos para observarlos desde otras posiciones.</p>
+
+  <section id="antesInforme" class="antes-informe" aria-labelledby="antes-title">
+    <h3 id="antes-title">Primero comparen los modelos</h3>
+    <p>Observen y giren los dos modelos. Revisen en cada uno las tres condiciones.</p>
+    <p>Todavía no respondan en la guía. Cuando terminen de comparar, pulsen el botón.</p>
+    <div class="accion">
+      <button type="button" id="verInforme" class="principal" aria-expanded="false" aria-controls="bloqueInforme">Ver informe geométrico</button>
+    </div>
+  </section>
+
+  <div id="bloqueInforme" class="oculto">
+    <section class="informe" aria-labelledby="informe-title">
+      <h3 id="informe-title">Informe geométrico</h3>
+      <p class="cita">«El exhibidor puede modelarse mediante el Modelo A porque tiene dos caras de siete lados con la misma forma y el mismo tamaño».</p>
+    </section>
+
+    <section class="consigna" aria-labelledby="consigna-title">
+      <h3 id="consigna-title">Ahora revisen el informe</h3>
+      <ol>
+        <li>¿Eligió el modelo correcto?</li>
+        <li>¿La razón está completa para las tres condiciones?</li>
+      </ol>
+      <p class="ruta">Conversen en equipo y pónganse de acuerdo. En <strong>«Reto inicial»</strong> de la guía, marquen <strong>Mantener, Ajustar o Corregir</strong> y escriban una razón breve. Después, pulsen <strong>«Ya respondimos en la guía»</strong>.</p>
+    </section>
+
+    <div class="accion">
+      <button type="button" id="registrado" class="principal">Ya respondimos en la guía</button>
+    </div>
+  </div>
+
+  <section id="transicion" class="transicion oculto" aria-live="polite">
+    <p>No cambien esa respuesta. Continúen con <strong>«Exploración y construcción»</strong> en el menú.</p>
+  </section>
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  const N = 7;
+  const R = 1;
+  const L = 2.4;
+
+  function P(x,y,z){ return {x:x,y:y,z:z}; }
+
+  function makeBase(x){
+    const out=[];
+    for(let k=0;k<N;k++){
+      const t=Math.PI/2 + 2*Math.PI*k/N;
+      out.push(P(x, Math.cos(t)*R, Math.sin(t)*R));
+    }
+    return out;
+  }
+
+  function createModelA(){
+    const left=makeBase(-L/2);
+    const right=makeBase(L/2);
+    const points=left.concat(right);
+    const faces=[];
+    faces.push([...Array(N).keys()].reverse());
+    faces.push([...Array(N).keys()].map(i=>N+i));
+    for(let k=0;k<N;k++){
+      const j=(k+1)%N;
+      faces.push([k,j,N+j,N+k]);
+    }
+    return {points,faces};
+  }
+
+  function createModelB(){
+    const points=makeBase(-L/2);
+    points.push(P(L/2,0,0));
+    const faces=[];
+    faces.push([...Array(N).keys()].reverse());
+    for(let k=0;k<N;k++){
+      const j=(k+1)%N;
+      faces.push([k,j,N]);
+    }
+    return {points,faces};
+  }
+
+  function rotatePoint(p,rx,ry,rz){
+    let x=p.x, y=p.y, z=p.z;
+
+    let c=Math.cos(rx), s=Math.sin(rx);
+    let y1=y*c-z*s, z1=y*s+z*c;
+    y=y1; z=z1;
+
+    c=Math.cos(ry); s=Math.sin(ry);
+    let x1=x*c+z*s, z2=-x*s+z*c;
+    x=x1; z=z2;
+
+    c=Math.cos(rz); s=Math.sin(rz);
+    let x2=x*c-y*s, y2=x*s+y*c;
+    x=x2; y=y2;
+
+    return P(x,y,z);
+  }
+
+  function sub(a,b){
+    return P(a.x-b.x,a.y-b.y,a.z-b.z);
+  }
+
+  function cross(a,b){
+    return P(
+      a.y*b.z-a.z*b.y,
+      a.z*b.x-a.x*b.z,
+      a.x*b.y-a.y*b.x
+    );
+  }
+
+  function normal(points,face,rx,ry,rz){
+    const a=rotatePoint(points[face[0]],rx,ry,rz);
+    const b=rotatePoint(points[face[1]],rx,ry,rz);
+    const c=rotatePoint(points[face[2]],rx,ry,rz);
+    return cross(sub(b,a),sub(c,a));
+  }
+
+  function viewer(canvasId, geometry, initial){
+    const canvas=document.getElementById(canvasId);
+    const ctx=canvas.getContext("2d",{alpha:false});
+
+    let rx=initial.rx;
+    let ry=initial.ry;
+    let rz=initial.rz;
+    const start={...initial};
+
+    let dragging=false;
+    let lastX=0;
+    let lastY=0;
+
+    function resize(){
+      const rect=canvas.getBoundingClientRect();
+      const dpr=Math.min(window.devicePixelRatio||1,2);
+
+      canvas.width=Math.max(320,Math.round(rect.width*dpr));
+      canvas.height=Math.max(220,Math.round(rect.height*dpr));
+
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      draw();
+    }
+
+    function draw(){
+      const w=canvas.clientWidth;
+      const h=canvas.clientHeight;
+
+      ctx.fillStyle="#FAFBFC";
+      ctx.fillRect(0,0,w,h);
+
+      const scale=Math.min(w/4.25,h/2.85);
+
+      const transformed=geometry.points.map(p=>rotatePoint(p,rx,ry,rz));
+      const projected=transformed.map(p=>({
+        x:w/2+p.x*scale,
+        y:h/2-p.y*scale,
+        z:p.z
+      }));
+
+      const visible=[];
+
+      geometry.faces.forEach((face,index)=>{
+        const n=normal(geometry.points,face,rx,ry,rz);
+
+        if(n.z>0.015){
+          const depth=face.reduce((sum,i)=>sum+projected[i].z,0)/face.length;
+          visible.push({face,index,depth,nz:n.z});
+        }
+      });
+
+      visible.sort((a,b)=>a.depth-b.depth);
+
+      visible.forEach(item=>{
+        const face=item.face;
+
+        ctx.beginPath();
+        ctx.moveTo(projected[face[0]].x,projected[face[0]].y);
+
+        for(let j=1;j<face.length;j++){
+          ctx.lineTo(projected[face[j]].x,projected[face[j]].y);
+        }
+
+        ctx.closePath();
+
+        const mag=Math.hypot(item.nz,1);
+        const light=Math.max(
+          218,
+          Math.min(242,238-Math.round((item.nz/mag)*18))
+        );
+
+        ctx.fillStyle=`rgb(${light},${light+2},${Math.min(248,light+5)})`;
+        ctx.fill();
+
+        ctx.strokeStyle="#3D4850";
+        ctx.lineWidth=1.55;
+        ctx.lineJoin="round";
+        ctx.stroke();
+      });
+    }
+
+    function pointerDown(e){
+      dragging=true;
+      lastX=e.clientX;
+      lastY=e.clientY;
+      canvas.setPointerCapture(e.pointerId);
+      canvas.focus();
+    }
+
+    function pointerMove(e){
+      if(!dragging) return;
+
+      const dx=e.clientX-lastX;
+      const dy=e.clientY-lastY;
+
+      ry += dx*0.0105;
+      rx += dy*0.0105;
+
+      lastX=e.clientX;
+      lastY=e.clientY;
+
+      draw();
+    }
+
+    function pointerUp(e){
+      dragging=false;
+
+      if(canvas.hasPointerCapture && canvas.hasPointerCapture(e.pointerId)){
+        canvas.releasePointerCapture(e.pointerId);
+      }
+    }
+
+    canvas.addEventListener("pointerdown",pointerDown);
+    canvas.addEventListener("pointermove",pointerMove);
+    canvas.addEventListener("pointerup",pointerUp);
+    canvas.addEventListener("pointercancel",()=>{dragging=false;});
+
+    canvas.addEventListener("keydown",e=>{
+      const step=0.11;
+      let used=true;
+
+      if(e.key==="ArrowLeft") ry-=step;
+      else if(e.key==="ArrowRight") ry+=step;
+      else if(e.key==="ArrowUp") rx-=step;
+      else if(e.key==="ArrowDown") rx+=step;
+      else used=false;
+
+      if(used){
+        e.preventDefault();
+        draw();
+      }
+    });
+
+    const reset=document.querySelector('[data-reset="'+canvasId+'"]');
+
+    reset.addEventListener("click",()=>{
+      rx=start.rx;
+      ry=start.ry;
+      rz=start.rz;
+      draw();
+      canvas.focus();
+    });
+
+    if("ResizeObserver" in window){
+      new ResizeObserver(resize).observe(canvas);
+    }else{
+      window.addEventListener("resize",resize);
+    }
+
+    resize();
+  }
+
+  viewer("modeloA",createModelA(),{
+    rx:0.27,
+    ry:-0.74,
+    rz:0.14
+  });
+
+  viewer("modeloB",createModelB(),{
+    rx:0.27,
+    ry:0.74,
+    rz:-0.14
+  });
+
+  const verInforme=document.getElementById("verInforme");
+  const bloqueInforme=document.getElementById("bloqueInforme");
+  const registrado=document.getElementById("registrado");
+  const transicion=document.getElementById("transicion");
+
+
+  /* =========================================================
+     AJUSTE DE COMPATIBILIDAD CON EXELEARNING EXPORTADO
+     - Mide la altura REAL del contenido visible.
+     - Fuerza ancho/alto del iframe incluso si la plantilla exportada
+       intenta aplicar una altura fija.
+     - Mantiene un respaldo por postMessage y vuelve a medir después
+       de los cambios de estado.
+     - No modifica contenido, geometría ni lógica pedagógica.
+     ========================================================= */
+  let __s5ApplyingFrameSize=false;
+  let __s5FrameObserver=null;
+
+  function ajustarAlturaIframe(){
+    try{
+      const contenido=document.querySelector(".s5p1");
+      if(!contenido)return;
+
+      const bodyRect=document.body.getBoundingClientRect();
+      const contentRect=contenido.getBoundingClientRect();
+      const alto=Math.max(
+        1,
+        Math.ceil(
+          Math.max(
+            contentRect.bottom-bodyRect.top,
+            contenido.scrollHeight||0,
+            document.body.scrollHeight||0
+          )+8
+        )
+      );
+
+      const frame=window.frameElement;
+      if(frame){
+        __s5ApplyingFrameSize=true;
+        frame.style.setProperty("width","100%","important");
+        frame.style.setProperty("max-width","none","important");
+        frame.style.setProperty("display","block","important");
+        frame.style.setProperty("border","0","important");
+        frame.style.setProperty("height",alto+"px","important");
+        frame.style.setProperty("min-height","0","important");
+        frame.style.setProperty("overflow","hidden","important");
+        frame.setAttribute("width","100%");
+        frame.setAttribute("height",String(alto));
+        frame.setAttribute("scrolling","no");
+        setTimeout(()=>{__s5ApplyingFrameSize=false;},0);
+
+        if(!__s5FrameObserver && "MutationObserver" in window){
+          __s5FrameObserver=new MutationObserver(()=>{
+            if(!__s5ApplyingFrameSize){
+              requestAnimationFrame(ajustarAlturaIframe);
+            }
+          });
+          __s5FrameObserver.observe(frame,{
+            attributes:true,
+            attributeFilter:["style","height","width"]
+          });
+        }
+      }
+
+      if(window.parent && window.parent!==window){
+        window.parent.postMessage({type:"S5_RESOURCE_HEIGHT",height:alto},"*");
+        /* Compatibilidad con el protocolo ya usado por S3. */
+        window.parent.postMessage({type:"S3_RESOURCE_HEIGHT",height:alto},"*");
+      }
+    }catch(_){ }
+  }
+
+  function reajustarDespuesDelCambio(){
+    requestAnimationFrame(()=>requestAnimationFrame(ajustarAlturaIframe));
+    setTimeout(ajustarAlturaIframe,60);
+    setTimeout(ajustarAlturaIframe,180);
+    setTimeout(ajustarAlturaIframe,500);
+    setTimeout(ajustarAlturaIframe,1000);
+  }
+
+
+  verInforme.addEventListener("click",()=>{
+    verInforme.setAttribute("aria-expanded","true");
+    document.getElementById("antesInforme").classList.add("oculto");
+    bloqueInforme.classList.remove("oculto");
+    reajustarDespuesDelCambio();
+  });
+
+  registrado.addEventListener("click",()=>{
+    registrado.disabled=true;
+    registrado.textContent="Respuesta registrada en la guía";
+    transicion.classList.remove("oculto");
+    reajustarDespuesDelCambio();
+  });
+
+  // Ajuste inicial y actualización automática ante cambios de tamaño.
+  window.addEventListener("load",reajustarDespuesDelCambio);
+  window.addEventListener("resize",reajustarDespuesDelCambio,{passive:true});
+  window.addEventListener("orientationchange",reajustarDespuesDelCambio,{passive:true});
+
+  if("ResizeObserver" in window){
+    const observadorAltura=new ResizeObserver(()=>reajustarDespuesDelCambio());
+    observadorAltura.observe(document.querySelector(".s5p1"));
+  }
+  if(document.readyState==="complete" || document.readyState==="interactive"){
+    reajustarDespuesDelCambio();
+  }
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S5 · Cierre individual</title>
+<style>
+:root{
+  --grafito:#20262B;
+  --verde:#4B702F;
+  --naranja:#C96E2A;
+  --azul:#0F5F9B;
+  --azul-profundo:#0B4268;
+  --puente:#2B6A72;
+  --texto-sec:#46515A;
+  --borde:#CBD3D9;
+  --fondo:#FFFFFF;
+  --suave:#F5F8FA;
+  --suave-azul:#EDF5FA;
+  --suave-verde:#F3F7F0;
+}
+*{box-sizing:border-box}
+html,body{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  background:transparent;
+  color:var(--grafito);
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+  overflow-y:auto;
+  min-height:0;
+}
+body{
+  font-size:17px;
+  line-height:1.45;
+}
+.s5p4{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:10px 12px 18px;
+}
+h2,p,ol{margin-top:0}
+h2{
+  font-size:1.24rem;
+  margin-bottom:8px;
+  color:var(--azul-profundo);
+}
+.card{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  background:var(--fondo);
+  padding:14px 16px;
+  margin-bottom:12px;
+}
+.inicio{
+  border-left:5px solid var(--puente);
+  background:var(--suave);
+}
+.inicio p:last-child{margin-bottom:0}
+.pasos ol{
+  margin:0;
+  padding-left:25px;
+}
+.pasos li{
+  padding:4px 0 5px 3px;
+}
+.tiempo{
+  border-left:5px solid var(--azul);
+  background:var(--suave-azul);
+}
+.tiempo p{
+  margin-bottom:0;
+  font-size:1.05rem;
+}
+.cierre{
+  border-left:5px solid var(--verde);
+  background:var(--suave-verde);
+}
+.cierre p:last-child{margin-bottom:0}
+
+
+/* Protección de proporción al exportar desde eXeLearning. */
+.s5p4{
+  width:100%;
+  max-width:1022px;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(max-width:760px){
+  body{font-size:16px}
+  .s5p4{padding:8px 10px 16px}
+  .card{padding:12px 13px}
+}
+</style>
+</head>
+<body>
+<main class="s5p4">
+
+  <section class="card inicio" aria-label="Inicio del trabajo individual">
+    <p>La actividad en equipo terminó.</p>
+  </section>
+
+  <section class="card pasos" aria-label="Instrucciones para la actividad individual">
+    <p>Cuando el docente lo indique:</p>
+    <ol>
+      <li>voltea la hoja que recibiste;</li>
+      <li>resuelve la actividad de forma individual;</li>
+      <li>desde ese momento, no vuelvas a usar el computador ni consultes la guía que usaste en el trabajo en equipo;</li>
+      <li>revisa tu respuesta antes de entregarla.</li>
+    </ol>
+  </section>
+
+  <section class="card tiempo" aria-label="Tiempo disponible">
+    <p>Tienes <strong>4 minutos</strong>.</p>
+  </section>
+
+  <section class="card cierre" aria-label="Qué hacer al terminar">
+    <p>Cuando termines, deja la hoja boca abajo sobre tu mesa y espera la indicación del docente.</p>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+
+  /* =========================================================
+     AJUSTE DE COMPATIBILIDAD CON EXELEARNING EXPORTADO
+     - Mide la altura REAL del contenido visible.
+     - Fuerza ancho/alto del iframe incluso si la plantilla exportada
+       intenta aplicar una altura fija.
+     - Mantiene un respaldo por postMessage y vuelve a medir después
+       de los cambios de estado.
+     - No modifica contenido, geometría ni lógica pedagógica.
+     ========================================================= */
+  let __s5ApplyingFrameSize=false;
+  let __s5FrameObserver=null;
+
+  function ajustarAlturaIframe(){
+    try{
+      const contenido=document.querySelector(".s5p4");
+      if(!contenido)return;
+
+      const bodyRect=document.body.getBoundingClientRect();
+      const contentRect=contenido.getBoundingClientRect();
+      const alto=Math.max(
+        1,
+        Math.ceil(
+          Math.max(
+            contentRect.bottom-bodyRect.top,
+            contenido.scrollHeight||0,
+            document.body.scrollHeight||0
+          )+8
+        )
+      );
+
+      const frame=window.frameElement;
+      if(frame){
+        __s5ApplyingFrameSize=true;
+        frame.style.setProperty("width","100%","important");
+        frame.style.setProperty("max-width","none","important");
+        frame.style.setProperty("display","block","important");
+        frame.style.setProperty("border","0","important");
+        frame.style.setProperty("height",alto+"px","important");
+        frame.style.setProperty("min-height","0","important");
+        frame.style.setProperty("overflow","hidden","important");
+        frame.setAttribute("width","100%");
+        frame.setAttribute("height",String(alto));
+        frame.setAttribute("scrolling","no");
+        setTimeout(()=>{__s5ApplyingFrameSize=false;},0);
+
+        if(!__s5FrameObserver && "MutationObserver" in window){
+          __s5FrameObserver=new MutationObserver(()=>{
+            if(!__s5ApplyingFrameSize){
+              requestAnimationFrame(ajustarAlturaIframe);
+            }
+          });
+          __s5FrameObserver.observe(frame,{
+            attributes:true,
+            attributeFilter:["style","height","width"]
+          });
+        }
+      }
+
+      if(window.parent && window.parent!==window){
+        window.parent.postMessage({type:"S5_RESOURCE_HEIGHT",height:alto},"*");
+        /* Compatibilidad con el protocolo ya usado por S3. */
+        window.parent.postMessage({type:"S3_RESOURCE_HEIGHT",height:alto},"*");
+      }
+    }catch(_){ }
+  }
+
+  function reajustarDespuesDelCambio(){
+    requestAnimationFrame(()=>requestAnimationFrame(ajustarAlturaIframe));
+    setTimeout(ajustarAlturaIframe,60);
+    setTimeout(ajustarAlturaIframe,180);
+    setTimeout(ajustarAlturaIframe,500);
+    setTimeout(ajustarAlturaIframe,1000);
+  }
+
+
+  window.addEventListener("load",reajustarDespuesDelCambio);
+  window.addEventListener("resize",reajustarDespuesDelCambio,{passive:true});
+  window.addEventListener("orientationchange",reajustarDespuesDelCambio,{passive:true});
+
+  if("ResizeObserver" in window){
+    const obs=new ResizeObserver(()=>reajustarDespuesDelCambio());
+    obs.observe(document.querySelector(".s5p4"));
+  }
+  if(document.readyState==="complete" || document.readyState==="interactive"){
+    reajustarDespuesDelCambio();
+  }
+
+})();
+</script>
+</body>
+</html>

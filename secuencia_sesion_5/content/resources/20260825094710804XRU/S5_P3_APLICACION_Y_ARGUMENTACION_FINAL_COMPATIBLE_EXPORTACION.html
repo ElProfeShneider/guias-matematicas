@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S5 · Aplicación y argumentación</title>
+<style>
+:root{
+  --grafito:#20262B;
+  --verde:#4B702F;
+  --naranja:#C96E2A;
+  --azul:#0F5F9B;
+  --azul-profundo:#0B4268;
+  --puente:#2B6A72;
+  --texto-sec:#46515A;
+  --borde:#CBD3D9;
+  --fondo:#FFFFFF;
+  --suave:#F5F8FA;
+  --suave-azul:#EDF5FA;
+  --suave-verde:#F3F7F0;
+  --sombra:0 2px 10px rgba(32,38,43,.08);
+}
+*{box-sizing:border-box}
+html,body{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  background:transparent;
+  color:var(--grafito);
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+  overflow-y:auto;
+  min-height:0;
+}
+body{font-size:17px;line-height:1.45}
+.p3{width:100%;max-width:none;margin:0;padding:10px 12px 18px}
+h2,h3,p{margin-top:0}
+h2{font-size:1.24rem;margin-bottom:8px;color:var(--azul-profundo)}
+h3{font-size:1.04rem;margin-bottom:7px}
+.card{
+  border:1px solid var(--borde);
+  border-radius:10px;
+  background:#fff;
+  padding:12px 14px;
+  margin-bottom:12px;
+}
+.ruta{border-left:5px solid var(--puente);background:var(--suave)}
+.ruta p{margin-bottom:6px}
+.ruta p:last-child{margin-bottom:0}
+.estado{color:var(--texto-sec);font-size:.94rem;margin-bottom:6px}
+.caso-titulo{font-weight:700;font-size:1.10rem;margin-bottom:9px;color:var(--grafito)}
+.informe{
+  border-left:4px solid #64748B;
+  background:var(--suave);
+  padding:9px 11px;
+  border-radius:7px;
+  margin:10px 0;
+}
+.informe p{margin:0}
+.visual{margin:10px 0}
+.visor{
+  width:100%;
+  height:265px;
+  display:block;
+  border:1px solid #B9C4CC;
+  border-radius:9px;
+  background:#FAFBFC;
+  touch-action:none;
+  cursor:grab;
+  outline:none;
+}
+.visor:active{cursor:grabbing}
+.visor:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+.ayuda{color:var(--texto-sec);font-size:.95rem;margin-bottom:0;text-align:center}
+.guia{background:var(--suave-azul);border-left:5px solid var(--azul)}
+.guia p{margin-bottom:5px}
+.guia p:last-child{margin-bottom:0}
+.controles{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:11px;
+}
+button{
+  font:inherit;
+  border-radius:8px;
+  border:1px solid var(--azul-profundo);
+  padding:8px 12px;
+  cursor:pointer;
+}
+button:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+.primario{background:var(--azul-profundo);color:#fff;font-weight:700}
+.primario:hover{background:#083654}
+.secundario{background:#fff;color:var(--azul-profundo)}
+.secundario:hover{background:var(--suave-azul)}
+button:disabled{opacity:.62;cursor:default}
+.revision{border-left:5px solid var(--verde);background:var(--suave-verde)}
+.revision p{margin-bottom:6px}
+.revision p:last-child{margin-bottom:0}
+.neutral{
+  min-height:260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  border:1px solid var(--borde);
+  border-radius:10px;
+  background:var(--suave);
+  padding:24px;
+}
+.neutral p{margin-bottom:6px}
+.neutral p:last-child{margin-bottom:0}
+.oculto{display:none!important}
+
+/* Protección de proporción al exportar desde eXeLearning. */
+.p3 > #experiencia{
+  width:100%;
+  max-width:1022px;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(max-width:760px){
+  body{font-size:16px}
+  .visor{height:235px}
+}
+</style>
+</head>
+<body>
+<main class="p3">
+
+  <section id="experiencia">
+    <section class="card ruta">
+      <p>Trabajarán con dos casos.</p>
+      <p>En cada uno, observen el cuerpo, conversen en equipo y respondan primero en <strong>«Aplicación y argumentación»</strong> de la guía.</p>
+      <p>Después podrán comprobar.</p>
+    </section>
+
+    <section id="casoZona"></section>
+
+    <section id="neutral" class="neutral oculto" aria-live="polite">
+      <div>
+        <h2>Trabajo en equipo terminado</h2>
+        <p>Cierren la guía y déjenla sobre la mesa.</p>
+        <p>Esperen la indicación del docente.</p>
+      </div>
+    </section>
+  </section>
+
+</main>
+
+<script>
+(function(){
+"use strict";
+
+function V(x,y,z){return {x,y,z};}
+
+function regularBase(n,r,x){
+  const pts=[];
+  for(let k=0;k<n;k++){
+    const a=Math.PI/2+2*Math.PI*k/n;
+    pts.push(V(x,r*Math.cos(a),r*Math.sin(a)));
+  }
+  return pts;
+}
+
+function prism(n=6,r=1.05,L=2.35){
+  const left=regularBase(n,r,-L/2);
+  const right=regularBase(n,r,L/2);
+  const points=left.concat(right);
+  const faces=[];
+  faces.push([...Array(n).keys()].reverse());
+  faces.push([...Array(n).keys()].map(i=>n+i));
+  for(let k=0;k<n;k++){
+    const j=(k+1)%n;
+    faces.push([k,j,n+j,n+k]);
+  }
+  return {points,faces,baseFaces:[0,1],kind:"prism"};
+}
+
+function pyramid(n=6,r=1.05,L=2.35){
+  const points=regularBase(n,r,-L/2);
+  points.push(V(L/2,0,0));
+  const faces=[];
+  faces.push([...Array(n).keys()].reverse());
+  for(let k=0;k<n;k++){
+    const j=(k+1)%n;
+    faces.push([k,j,n]);
+  }
+  return {points,faces,baseFaces:[0],kind:"pyramid",apex:n};
+}
+
+function rot(p,rx,ry,rz){
+  let x=p.x,y=p.y,z=p.z;
+  let c=Math.cos(rx),s=Math.sin(rx);
+  let yy=y*c-z*s,zz=y*s+z*c;y=yy;z=zz;
+  c=Math.cos(ry);s=Math.sin(ry);
+  let xx=x*c+z*s,zz2=-x*s+z*c;x=xx;z=zz2;
+  c=Math.cos(rz);s=Math.sin(rz);
+  let xx2=x*c-y*s,yy2=x*s+y*c;x=xx2;y=yy2;
+  return V(x,y,z);
+}
+function sub(a,b){return V(a.x-b.x,a.y-b.y,a.z-b.z)}
+function cross(a,b){return V(a.y*b.z-a.z*b.y,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x)}
+function normal(points,face,rx,ry,rz){
+  const a=rot(points[face[0]],rx,ry,rz);
+  const b=rot(points[face[1]],rx,ry,rz);
+  const c=rot(points[face[2]],rx,ry,rz);
+  return cross(sub(b,a),sub(c,a));
+}
+function centroid(points,ids){
+  let x=0,y=0,z=0;
+  ids.forEach(i=>{x+=points[i].x;y+=points[i].y;z+=points[i].z});
+  return V(x/ids.length,y/ids.length,z/ids.length);
+}
+function edgeMid(points,a,b){
+  return V((points[a].x+points[b].x)/2,(points[a].y+points[b].y)/2,(points[a].z+points[b].z)/2);
+}
+
+const visores=[];
+
+function viewer(canvasId,geo,initial,opts={}){
+  const canvas=document.getElementById(canvasId);
+  if(!canvas)return null;
+  const ctx=canvas.getContext("2d");
+  let rx=initial.rx,ry=initial.ry,rz=initial.rz;
+  const start={...initial};
+  let dragging=false,lx=0,ly=0;
+
+  function resize(){
+    const r=canvas.getBoundingClientRect();
+    if(r.width<10||r.height<10)return;
+    const dpr=Math.min(window.devicePixelRatio||1,2);
+    canvas.width=Math.round(r.width*dpr);
+    canvas.height=Math.round(r.height*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    draw();
+  }
+
+  function project(p,w,h,scale){
+    const q=rot(p,rx,ry,rz);
+    return {x:w/2+q.x*scale,y:h/2-q.y*scale,z:q.z};
+  }
+
+  function label(text,x,y){
+    ctx.font="700 13px Arial";
+    const tw=ctx.measureText(text).width+14;
+    ctx.fillStyle="#fff";
+    ctx.strokeStyle="#0B4268";
+    ctx.lineWidth=1.2;
+    ctx.beginPath();
+    if(ctx.roundRect)ctx.roundRect(x-tw/2,y-12,tw,24,7);
+    else ctx.rect(x-tw/2,y-12,tw,24);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle="#0B4268";
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillText(text,x,y+1);
+  }
+
+  function draw(){
+    const w=canvas.clientWidth,h=canvas.clientHeight;
+    if(w<10||h<10)return;
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle="#FAFBFC";
+    ctx.fillRect(0,0,w,h);
+    const scale=Math.min(w/4.3,h/2.9);
+    const pp=geo.points.map(p=>project(p,w,h,scale));
+    const visible=[];
+
+    geo.faces.forEach((face,index)=>{
+      const n=normal(geo.points,face,rx,ry,rz);
+      if(n.z>0.012){
+        const depth=face.reduce((s,i)=>s+pp[i].z,0)/face.length;
+        visible.push({face,index,depth,nz:n.z});
+      }
+    });
+    visible.sort((a,b)=>a.depth-b.depth);
+
+    visible.forEach(item=>{
+      const f=item.face;
+      ctx.beginPath();
+      ctx.moveTo(pp[f[0]].x,pp[f[0]].y);
+      for(let i=1;i<f.length;i++)ctx.lineTo(pp[f[i]].x,pp[f[i]].y);
+      ctx.closePath();
+      ctx.fillStyle="#EEF2F5";
+      ctx.fill();
+      ctx.strokeStyle="#3D4850";
+      ctx.lineWidth=1.5;
+      ctx.lineJoin="round";
+      ctx.stroke();
+    });
+
+    if(opts.markers){
+      opts.markers.forEach(m=>{
+        let show=true;
+        if(Number.isInteger(m.faceIndex)){
+          const n=normal(geo.points,geo.faces[m.faceIndex],rx,ry,rz);
+          show=n.z>-0.015;
+        }
+        if(!show)return;
+        const p=project(m.pos,w,h,scale);
+        label(m.label,p.x,p.y);
+      });
+    }
+  }
+
+  canvas.addEventListener("pointerdown",e=>{
+    dragging=true;lx=e.clientX;ly=e.clientY;
+    canvas.setPointerCapture(e.pointerId);
+    canvas.focus();
+  });
+  canvas.addEventListener("pointermove",e=>{
+    if(!dragging)return;
+    ry+=(e.clientX-lx)*0.0105;
+    rx+=(e.clientY-ly)*0.0105;
+    lx=e.clientX;ly=e.clientY;
+    draw();
+  });
+  canvas.addEventListener("pointerup",e=>{
+    dragging=false;
+    if(canvas.hasPointerCapture&&canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);
+  });
+  canvas.addEventListener("pointercancel",()=>dragging=false);
+  canvas.addEventListener("keydown",e=>{
+    const step=.11;let used=true;
+    if(e.key==="ArrowLeft")ry-=step;
+    else if(e.key==="ArrowRight")ry+=step;
+    else if(e.key==="ArrowUp")rx-=step;
+    else if(e.key==="ArrowDown")rx+=step;
+    else used=false;
+    if(used){e.preventDefault();draw();}
+  });
+
+  const reset=document.querySelector('[data-reset="'+canvasId+'"]');
+  if(reset){
+    reset.addEventListener("click",()=>{
+      rx=start.rx;ry=start.ry;rz=start.rz;
+      draw();
+      canvas.focus();
+    });
+  }
+
+  if("ResizeObserver" in window)new ResizeObserver(resize).observe(canvas);
+  else window.addEventListener("resize",resize);
+
+  const api={resize,draw};
+  visores.push(api);
+  requestAnimationFrame(resize);
+  return api;
+}
+
+const CASOS=[
+  {
+    id:"A2",
+    nombre:"Elementos de una pirámide hexagonal",
+    tipo:"modelo",
+    geo:()=>pyramid(6,1.05,2.35),
+    initial:{rx:-1.30,ry:.30,rz:-.30},
+    preparar(geo){
+      return {
+        markers:[
+          {label:"A",pos:centroid(geo.points,geo.faces[0]),faceIndex:0},
+          {label:"B",pos:centroid(geo.points,geo.faces[3]),faceIndex:3},
+          {label:"C",pos:edgeMid(geo.points,1,6)},
+          {label:"D",pos:geo.points[6]}
+        ]
+      };
+    },
+    instruccion:"Giren el cuerpo y revisen las letras A–D.",
+    apoyo:"En el Caso 1 de «Aplicación y argumentación» de la guía, revisen los nombres propuestos. Mantengan los correctos y corrijan los que no correspondan.",
+    comprobacion:`
+      <p>A señala una <strong>base</strong>; B, una <strong>cara lateral</strong>; C, una <strong>arista</strong>; D, un <strong>vértice</strong>.</p>
+      <p>En un poliedro, una base también es una cara. Una arista es un segmento y un vértice es un punto.</p>`
+  },
+  {
+    id:"B1",
+    nombre:"Clasificación de un prisma triangular",
+    tipo:"modelo",
+    geo:()=>prism(3,1.10,2.35),
+    initial:{rx:.62,ry:-.52,rz:.72},
+    instruccion:"Observen el cuerpo y revisen el informe. Girarlo puede ayudarles a comprobar sus propiedades.",
+    informe:"«Este cuerpo es una pirámide porque tiene una cara triangular en la parte de arriba».",
+    apoyo:"En el Caso 2 de «Aplicación y argumentación» de la guía, marquen Mantener, Ajustar o Corregir y escriban una propiedad que justifique su decisión.",
+    comprobacion:`
+      <p>La clasificación debe <strong>corregirse</strong>.</p>
+      <p>El cuerpo tiene dos bases triangulares con la misma forma y el mismo tamaño, ubicadas en planos paralelos. Es un <strong>prisma</strong>.</p>
+      <p>La posición cambia cómo lo vemos, pero no cambia su familia.</p>`
+  }
+];
+
+let indice=0;
+
+function renderCaso(){
+  const caso=CASOS[indice];
+  const numero=indice+1;
+  const zona=document.getElementById("casoZona");
+
+  zona.innerHTML=`
+    <section class="card">
+      <p class="estado">Caso ${numero} de 2</p>
+      <p class="caso-titulo">${caso.instruccion}</p>
+      ${caso.informe?`<div class="informe"><p>${caso.informe}</p></div>`:""}
+      <div id="visualCaso" class="visual"></div>
+      <p class="ayuda">Pueden girar el cuerpo para observarlo desde otras posiciones.</p>
+    </section>
+
+    <section class="card guia">
+      <p>${caso.apoyo}</p>
+      <p><strong>Respondan en la guía antes de comprobar.</strong></p>
+    </section>
+
+    <div class="controles">
+      <button type="button" id="registro" class="primario">Ya respondimos en la guía</button>
+    </div>
+
+    <section id="revision" class="card revision oculto" aria-live="polite"></section>
+  `;
+
+  const visual=document.getElementById("visualCaso");
+  const canvas=document.createElement("canvas");
+  canvas.id="canvasCaso";
+  canvas.className="visor";
+  canvas.tabIndex=0;
+  canvas.setAttribute("aria-label","Cuerpo geométrico manipulable. Arrastra para girarlo. Si usas teclado, utiliza las flechas.");
+  visual.appendChild(canvas);
+
+  const controles=document.createElement("div");
+  controles.className="controles";
+  controles.innerHTML='<button type="button" class="secundario" data-reset="canvasCaso">Volver a la vista inicial</button>';
+  visual.appendChild(controles);
+
+  const geo=caso.geo();
+  const opts=caso.preparar?caso.preparar(geo):{};
+  viewer("canvasCaso",geo,caso.initial,opts);
+
+  document.getElementById("registro").addEventListener("click",()=>{
+    const b=document.getElementById("registro");
+    b.disabled=true;
+    b.textContent="Respuesta registrada en la guía";
+    mostrarComprobar(caso,numero);
+  });
+
+  requestAnimationFrame(()=>{
+    visores.forEach(v=>v.resize());
+    reajustarDespuesDelCambio();
+  });
+}
+
+function mostrarComprobar(caso,numero){
+  const rev=document.getElementById("revision");
+  rev.classList.remove("oculto");
+  rev.innerHTML=`
+    <p class="estado">Comprueben su decisión</p>
+    <p>Ahora pueden revisar la evidencia del caso.</p>
+    <div class="controles">
+      <button type="button" id="comprobarCaso" class="primario">Comprobar</button>
+    </div>
+  `;
+  document.getElementById("comprobarCaso").addEventListener("click",()=>mostrarFeedback(caso,numero));
+  reajustarDespuesDelCambio();
+}
+
+function mostrarFeedback(caso,numero){
+  const rev=document.getElementById("revision");
+  rev.innerHTML=`
+    <p class="estado">Después de comprobar</p>
+    ${caso.comprobacion}
+    <p>Vuelvan al Caso ${numero} de <strong>«Aplicación y argumentación»</strong> en la guía. Marquen <strong>Mantuvimos</strong> o <strong>Ajustamos</strong>.</p>
+    <p>Si ajustaron, escriban solamente el cambio.</p>
+    <div class="controles">
+      <button type="button" id="continuarCaso" class="primario">${numero===1?"Continuar al Caso 2":"Terminar los casos"}</button>
+    </div>
+  `;
+
+  document.getElementById("continuarCaso").addEventListener("click",()=>{
+    if(numero===1){
+      indice=1;
+      renderCaso();
+    }else{
+      document.getElementById("casoZona").replaceChildren();
+      document.getElementById("neutral").classList.remove("oculto");
+      reajustarDespuesDelCambio();
+    }
+  });
+
+  reajustarDespuesDelCambio();
+}
+
+
+  /* =========================================================
+     AJUSTE DE COMPATIBILIDAD CON EXELEARNING EXPORTADO
+     - Mide la altura REAL del contenido visible.
+     - Fuerza ancho/alto del iframe incluso si la plantilla exportada
+       intenta aplicar una altura fija.
+     - Mantiene un respaldo por postMessage y vuelve a medir después
+       de los cambios de estado.
+     - No modifica contenido, geometría ni lógica pedagógica.
+     ========================================================= */
+  let __s5ApplyingFrameSize=false;
+  let __s5FrameObserver=null;
+
+  function ajustarAlturaIframe(){
+    try{
+      const contenido=document.querySelector(".p3");
+      if(!contenido)return;
+
+      const bodyRect=document.body.getBoundingClientRect();
+      const contentRect=contenido.getBoundingClientRect();
+      const alto=Math.max(
+        1,
+        Math.ceil(
+          Math.max(
+            contentRect.bottom-bodyRect.top,
+            contenido.scrollHeight||0,
+            document.body.scrollHeight||0
+          )+8
+        )
+      );
+
+      const frame=window.frameElement;
+      if(frame){
+        __s5ApplyingFrameSize=true;
+        frame.style.setProperty("width","100%","important");
+        frame.style.setProperty("max-width","none","important");
+        frame.style.setProperty("display","block","important");
+        frame.style.setProperty("border","0","important");
+        frame.style.setProperty("height",alto+"px","important");
+        frame.style.setProperty("min-height","0","important");
+        frame.style.setProperty("overflow","hidden","important");
+        frame.setAttribute("width","100%");
+        frame.setAttribute("height",String(alto));
+        frame.setAttribute("scrolling","no");
+        setTimeout(()=>{__s5ApplyingFrameSize=false;},0);
+
+        if(!__s5FrameObserver && "MutationObserver" in window){
+          __s5FrameObserver=new MutationObserver(()=>{
+            if(!__s5ApplyingFrameSize){
+              requestAnimationFrame(ajustarAlturaIframe);
+            }
+          });
+          __s5FrameObserver.observe(frame,{
+            attributes:true,
+            attributeFilter:["style","height","width"]
+          });
+        }
+      }
+
+      if(window.parent && window.parent!==window){
+        window.parent.postMessage({type:"S5_RESOURCE_HEIGHT",height:alto},"*");
+        /* Compatibilidad con el protocolo ya usado por S3. */
+        window.parent.postMessage({type:"S3_RESOURCE_HEIGHT",height:alto},"*");
+      }
+    }catch(_){ }
+  }
+
+  function reajustarDespuesDelCambio(){
+    requestAnimationFrame(()=>requestAnimationFrame(ajustarAlturaIframe));
+    setTimeout(ajustarAlturaIframe,60);
+    setTimeout(ajustarAlturaIframe,180);
+    setTimeout(ajustarAlturaIframe,500);
+    setTimeout(ajustarAlturaIframe,1000);
+  }
+
+
+window.addEventListener("load",reajustarDespuesDelCambio);
+window.addEventListener("resize",reajustarDespuesDelCambio,{passive:true});
+window.addEventListener("orientationchange",reajustarDespuesDelCambio,{passive:true});
+if("ResizeObserver" in window){
+  const obs=new ResizeObserver(()=>reajustarDespuesDelCambio());
+  obs.observe(document.querySelector(".p3"));
+}
+
+renderCaso();
+  if(document.readyState==="complete" || document.readyState==="interactive"){
+    reajustarDespuesDelCambio();
+  }
+
+})();
+</script>
+</body>
+</html>
