@@ -1,0 +1,170 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sesión 6 · Aplica y comprueba</title><style>
+:root{
+  --grafito:#20262B;--verde:#4B702F;--naranja:#C96E2A;--azul:#0F5F9B;--azul-profundo:#0B4268;
+  --puente:#2B6A72;--geo:#7FBCC5;--geo-claro:#DCEFF2;--fondo:#F5F7F8;--blanco:#FFFFFF;
+  --borde:#D7DDE1;--texto:#20262B;--suave:#EEF2F4;--exito:#2F6B3C;--exito-fondo:#F1F7F2;
+  --alerta:#8A4B18;--alerta-fondo:#FFF8F1;--sombra:0 4px 14px rgba(32,38,43,.07);
+}
+*{box-sizing:border-box}
+html,body{width:100%;max-width:none;margin:0;padding:0;min-height:0;background:transparent;color:var(--texto);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden;overflow-y:auto}
+body{font-size:17px;line-height:1.42}
+button,input,select{font:inherit}
+button{appearance:none;border:1px solid #AEB9C0;background:#fff;color:var(--grafito);min-height:40px;border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer}
+button:hover{background:var(--suave)}
+button:focus-visible,input:focus-visible{outline:3px solid rgba(15,95,155,.28);outline-offset:2px}
+.primary{background:var(--verde);border-color:var(--verde);color:#fff}.primary:hover{background:var(--verde);filter:brightness(.95)}
+.secondary{border-color:var(--azul);color:var(--azul-profundo)}
+.hidden{display:none!important}
+.s6page{width:100%;max-width:1022px;margin:0 auto;padding:10px 12px 18px}
+.card{border:1px solid var(--borde);border-radius:11px;background:#fff;padding:12px 14px;margin-bottom:12px;box-shadow:var(--sombra)}
+.instruction{border-left:5px solid var(--verde);background:#F6F8F7}
+.note{border-left:5px solid var(--azul);background:#F2F7FA}
+.warn{border-left:5px solid var(--naranja);background:var(--alerta-fondo)}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;background:var(--grafito);color:white;border-radius:10px 10px 0 0;margin-bottom:0}
+.stage{font-family:"Arial Black",Arial,sans-serif;font-size:13pt;line-height:1.2}.counter{font-size:11pt;font-weight:700;white-space:nowrap}
+.feedback{padding:9px 11px;border-radius:8px;margin-top:10px;line-height:1.35}.feedback.success{background:var(--exito-fondo);border:1px solid #BCD4C1;color:var(--exito)}.feedback.review{background:var(--alerta-fondo);border:1px solid #E7C9AC;color:var(--alerta)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:10px}
+.small{font-size:.92rem;color:#58656C}
+@media(max-width:650px){body{font-size:16px}.s6page{padding:7px 7px 14px}.card{padding:10px 11px}}
+
+.assign{display:grid;grid-template-columns:minmax(180px,260px) auto;gap:8px;align-items:end;max-width:520px}.assign label{font-weight:700}.assign input{width:100%;min-height:42px;border:1px solid #AEB9C0;border-radius:8px;padding:6px 9px}.viewer-wrap{max-width:760px;margin:10px auto;border:1px solid var(--borde);border-radius:11px;overflow:hidden;background:#fff}.viewer-head{padding:8px 10px;background:#F2F5F6;font-weight:700;display:flex;justify-content:space-between;gap:10px}.viewer{height:320px;position:relative;outline:none;touch-action:none;background:#F7FAFB}.viewer canvas{display:block;width:100%;height:100%;touch-action:none}.controls{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:8px;border-top:1px solid var(--borde);background:#FAFBFB}.comparison{font-weight:700;padding:9px 11px;border-left:5px solid var(--azul);background:#F2F7FA;border-radius:8px;margin-top:10px}.answer-grid{display:grid;grid-template-columns:180px 1fr;gap:5px 10px}.result-title{font-weight:700;font-size:18px;margin-bottom:6px}.answer-grid div{padding:5px 0;border-bottom:1px solid #E5E9EC}@media(max-width:650px){.assign,.answer-grid{grid-template-columns:1fr}.viewer{height:270px}}
+</style></head><body><main class="s6page" aria-label="Aplica y comprueba de la Sesión 6">
+<section id="assignBox" class="card instruction">
+  <p style="margin:0 0 8px">Escriban el mismo número de equipo/estación que aparece en su guía.</p>
+  <div class="assign">
+    <label>Equipo/estación<input id="station" type="number" min="1" step="1" inputmode="numeric" placeholder="Ej. 4"></label>
+    <button class="primary" id="assignBtn" type="button">Ver cuerpo asignado</button>
+  </div>
+  <div id="assignFb" class="feedback review hidden" aria-live="polite"></div>
+</section>
+
+<section id="work" class="hidden">
+  <div class="card instruction">
+    <p style="margin:0 0 4px">Observen y giren el cuerpo asignado.</p>
+    <p style="margin:0 0 4px">En «Ficha geométrica» de la guía, completen todos los datos.</p>
+    <p style="margin:0">Después, pulsen «Ya completamos la ficha».</p>
+  </div>
+  <div class="viewer-wrap">
+    <div class="viewer-head"><span>Cuerpo asignado</span><span class="small" id="caseCode"></span></div>
+    <div class="viewer" id="viewer" tabindex="0" aria-label="Visor del cuerpo asignado"></div>
+    <div class="controls" id="controls"></div>
+  </div>
+  <div class="comparison" id="compare"></div>
+  <div class="actions" id="workActions">
+    <button class="secondary" id="reassign" type="button">Corregir número</button>
+    <button class="primary" id="ready" type="button">Ya completamos la ficha</button>
+  </div>
+</section>
+
+<section id="checkBox" class="card note hidden" aria-live="polite">
+  <p style="margin:0">La ficha ya quedó registrada. No la cambien antes de comprobar.</p>
+  <div class="actions"><button class="primary" id="check" type="button">Comprobar</button></div>
+</section>
+
+<section id="result" class="card hidden" aria-live="polite">
+  <div class="result-title">Ficha correcta</div>
+  <div class="answer-grid" id="answer"></div>
+  <div class="feedback success" style="margin-top:10px">
+    <p style="margin:0 0 4px">En la guía marquen <strong>Mantuvimos</strong> o <strong>Ajustamos</strong>.</p>
+    <p style="margin:0">Si ajustaron, escriban solo el cambio.</p>
+  </div>
+  <div class="actions"><span class="small">Cuando terminen, esperen la indicación del docente para «Actividad individual».</span></div>
+</section>
+</main><script>(function(){'use strict';
+const ROT={prism3:{x:-.55,y:-.55,z:0},prism6:{x:-.62,y:.22,z:0},pyramid5:{x:-.66,y:.20,z:0},cylinder:{x:.28,y:-.35,z:0},cone:{x:-.36,y:.28,z:0},sphere:{x:0,y:0,z:0}};
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function xLimits(kind){if(kind==='cone')return {min:-0.85,max:0.18}; if(kind==='cylinder')return {min:-0.85,max:0.45}; return {min:-Math.PI*.49,max:Math.PI*.49};}
+function modelPrism(n,r=1.15,h=2.5){const v=[],f=[];for(let i=0;i<n;i++){const a=(i/n)*Math.PI*2+Math.PI/n;v.push([Math.cos(a)*r,-h/2,Math.sin(a)*r]);}for(let i=0;i<n;i++){const a=(i/n)*Math.PI*2+Math.PI/n;v.push([Math.cos(a)*r,h/2,Math.sin(a)*r]);}f.push([...Array(n).keys()].reverse(),[...Array(n).keys()].map(i=>i+n));for(let i=0;i<n;i++){const j=(i+1)%n;f.push([i,j,j+n,i+n]);}return{points:v,faces:f};}
+function modelPyramid(n,r=1.22,h=2.6){const v=[],f=[];for(let i=0;i<n;i++){const a=(i/n)*Math.PI*2+Math.PI/n;v.push([Math.cos(a)*r,-h/2,Math.sin(a)*r]);}v.push([0,h/2,0]);f.push([...Array(n).keys()].reverse());for(let i=0;i<n;i++)f.push([i,(i+1)%n,n]);return{points:v,faces:f};}
+function modelCone(n=72,r=1.18,h=2.66){const v=[],f=[];for(let i=0;i<n;i++){const a=(i/n)*Math.PI*2;v.push([Math.cos(a)*r,-h/2,Math.sin(a)*r]);}v.push([0,h/2,0]);f.push([...Array(n).keys()].reverse());for(let i=0;i<n;i++)f.push([i,(i+1)%n,n]);return{points:v,faces:f};}
+function getModel(kind){if(kind==='prism3')return modelPrism(3);if(kind==='prism6')return modelPrism(6);if(kind==='pyramid5')return modelPyramid(5);if(kind==='cone')return modelCone(72);return null;}
+function createViewer(container,kind){
+  const canvas=document.createElement('canvas');canvas.setAttribute('aria-hidden','true');container.prepend(canvas);const ctx=canvas.getContext('2d');const dpr=Math.min(window.devicePixelRatio||1,1.5);let current=kind,rot={...(ROT[current]||{x:0,y:0,z:0})},drag=false,lx=0,ly=0,locked=false;
+  function rp(p){let[x,y,z]=p;let c=Math.cos(rot.x),s=Math.sin(rot.x);[y,z]=[y*c-z*s,y*s+z*c];c=Math.cos(rot.y);s=Math.sin(rot.y);[x,z]=[x*c+z*s,-x*s+z*c];c=Math.cos(rot.z);s=Math.sin(rot.z);return[x*c-y*s,x*s+y*c,z];}
+  function pr(p,w,h){const cam=7.2,fo=Math.min(w,h)*1.18,den=Math.max(1.6,cam-p[2]),sc=fo/den;return[w/2+p[0]*sc,h/2-p[1]*sc,p[2]];}
+  function normal(a,b,c){const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]],n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]],L=Math.hypot(...n)||1;return n.map(q=>q/L);}
+  function shade(n){const light=[.45,.7,.75],ll=Math.hypot(...light),dot=Math.max(0,n.reduce((s,q,i)=>s+q*light[i],0)/ll),k=.84+.16*dot,b=[127,188,197];return `rgb(${Math.round(b[0]*k)},${Math.round(b[1]*k)},${Math.round(b[2]*k)})`;}
+  function convexHull2(points){const pts=points.map(p=>[p[0],p[1]]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]);if(pts.length<=2)return pts;const cross=(o,a,b)=>(a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);const lo=[];for(const p of pts){while(lo.length>=2&&cross(lo[lo.length-2],lo[lo.length-1],p)<=0)lo.pop();lo.push(p);}const hi=[];for(let i=pts.length-1;i>=0;i--){const p=pts[i];while(hi.length>=2&&cross(hi[hi.length-2],hi[hi.length-1],p)<=0)hi.pop();hi.push(p);}lo.pop();hi.pop();return lo.concat(hi);}
+  function pathPolygon(pts){ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)ctx.lineTo(pts[i][0],pts[i][1]);ctx.closePath();}
+  function drawMesh(m,w,h){const rv=m.points.map(rp),center=rv.reduce((a,p)=>a.map((q,i)=>q+p[i]),[0,0,0]).map(q=>q/rv.length),cam=7.2;const fs=m.faces.map(ids=>{const p3=ids.map(i=>rv[i]),fc=p3.reduce((a,p)=>a.map((q,i)=>q+p[i]),[0,0,0]).map(q=>q/p3.length);let n=normal(p3[0],p3[1],p3[2]);const out=fc.map((q,i)=>q-center[i]);if(n.reduce((s,q,i)=>s+q*out[i],0)<0)n=n.map(q=>-q);const to=[-fc[0],-fc[1],cam-fc[2]],vis=n.reduce((s,q,i)=>s+q*to[i],0)>1e-7,depth=p3.reduce((s,p)=>s+p[2],0)/p3.length;return{p3,n,vis,depth};}).filter(x=>x.vis).sort((a,b)=>a.depth-b.depth);fs.forEach(f=>{const pts=f.p3.map(p=>pr(p,w,h));ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);pts.slice(1).forEach(q=>ctx.lineTo(q[0],q[1]));ctx.closePath();ctx.fillStyle=shade(f.n);ctx.fill();ctx.strokeStyle='rgba(40,72,79,.86)';ctx.lineWidth=1.8;ctx.lineJoin='round';ctx.stroke();});}
+  function drawCylinder(w,h){
+    const segments=96,r=1.17,yb=-1.36,yt=1.36,bottom=[],top=[];
+    for(let i=0;i<segments;i++){const a=i/segments*Math.PI*2;bottom.push(rp([Math.cos(a)*r,yb,Math.sin(a)*r]));top.push(rp([Math.cos(a)*r,yt,Math.sin(a)*r]));}
+    const pb=bottom.map(p=>pr(p,w,h)),pt=top.map(p=>pr(p,w,h)),hull=convexHull2(pb.concat(pt));
+    const grad=ctx.createLinearGradient(w*.35,0,w*.65,0);grad.addColorStop(0,'#78AFB8');grad.addColorStop(.5,'#BFE3E7');grad.addColorStop(1,'#78AFB8');
+    pathPolygon(hull);ctx.fillStyle=grad;ctx.fill();
+    const cameraZ=7.2,centers=[rp([0,yb,0]),rp([0,yt,0])],normals=[rp([0,-1,0]),rp([0,1,0])];
+    [[pb,centers[0],normals[0]],[pt,centers[1],normals[1]]].forEach(([ring,c,n])=>{const to=[-c[0],-c[1],cameraZ-c[2]],vis=n[0]*to[0]+n[1]*to[1]+n[2]*to[2]>0;if(vis){pathPolygon(ring);ctx.fillStyle='#CDE9EC';ctx.fill();ctx.strokeStyle='#28484F';ctx.lineWidth=1.8;ctx.lineJoin='round';ctx.stroke();}});
+    pathPolygon(hull);ctx.strokeStyle='#28484F';ctx.lineWidth=1.9;ctx.lineJoin='round';ctx.stroke();
+  }
+  function drawCone(w,h){
+    const segments=120,r=1.18,yb=-1.28,yt=1.38,base=[];
+    for(let i=0;i<segments;i++){const a=i/segments*Math.PI*2;base.push(rp([Math.cos(a)*r,yb,Math.sin(a)*r]));}
+    const apex=rp([0,yt,0]),bp=base.map(p=>pr(p,w,h)),ap=pr(apex,w,h),hull=convexHull2(bp.concat([ap]));
+    const grad=ctx.createLinearGradient(w*.38,0,w*.62,0);grad.addColorStop(0,'#6FA8B2');grad.addColorStop(.52,'#C4E5E9');grad.addColorStop(1,'#78AFB8');
+    pathPolygon(hull);ctx.fillStyle=grad;ctx.fill();
+    const center=rp([0,yb,0]),n=rp([0,-1,0]),to=[-center[0],-center[1],7.2-center[2]],baseVisible=n[0]*to[0]+n[1]*to[1]+n[2]*to[2]>0;
+    if(baseVisible){pathPolygon(bp);ctx.fillStyle='#CDE9EC';ctx.fill();ctx.strokeStyle='#28484F';ctx.lineWidth=1.8;ctx.lineJoin='round';ctx.stroke();}
+    pathPolygon(hull);ctx.strokeStyle='#28484F';ctx.lineWidth=1.9;ctx.lineJoin='round';ctx.stroke();
+  }
+  function drawSphere(w,h){const cx=w/2,cy=h/2,r=Math.min(w,h)*.27,g=ctx.createRadialGradient(cx-r*.35,cy-r*.38,r*.06,cx,cy,r);g.addColorStop(0,'#E6F4F6');g.addColorStop(.55,'#9ACDD4');g.addColorStop(1,'#628F97');ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();ctx.strokeStyle='#28484F';ctx.lineWidth=1.7;ctx.stroke();}
+  function render(){const r=container.getBoundingClientRect(),w=Math.max(240,r.width),h=Math.max(220,r.height),tw=Math.round(w*dpr),th=Math.round(h*dpr);if(canvas.width!==tw||canvas.height!==th){canvas.width=tw;canvas.height=th;canvas.style.width=w+'px';canvas.style.height=h+'px';}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'#FBFDFD');g.addColorStop(1,'#EEF5F6');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);if(current==='sphere')drawSphere(w,h);else if(current==='cylinder')drawCylinder(w,h);else if(current==='cone')drawCone(w,h);else drawMesh(getModel(current),w,h);}
+  function rotate(dx,dy){if(locked)return;rot.y+=dx;const lim=xLimits(current);rot.x=clamp(rot.x+dy,lim.min,lim.max);render();}
+  function reset(){if(locked)return;rot={...(ROT[current]||{x:0,y:0,z:0})};render();}
+  function lock(){locked=true;canvas.style.cursor='default';}
+  canvas.style.cursor='grab';canvas.addEventListener('pointerdown',e=>{if(locked)return;drag=true;lx=e.clientX;ly=e.clientY;canvas.style.cursor='grabbing';try{canvas.setPointerCapture(e.pointerId)}catch(_){}});canvas.addEventListener('pointermove',e=>{if(!drag||locked)return;const dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;rotate(dx*.01,dy*.01)});canvas.addEventListener('pointerup',()=>{drag=false;if(!locked)canvas.style.cursor='grab'});canvas.addEventListener('pointercancel',()=>{drag=false;if(!locked)canvas.style.cursor='grab'});
+  container.addEventListener('keydown',e=>{if(locked)return;let u=true;if(e.key==='ArrowLeft')rotate(-.12,0);else if(e.key==='ArrowRight')rotate(.12,0);else if(e.key==='ArrowUp')rotate(0,-.12);else if(e.key==='ArrowDown')rotate(0,.12);else if(e.key==='r'||e.key==='R')reset();else u=false;if(u)e.preventDefault();});
+  if('ResizeObserver' in window)new ResizeObserver(render).observe(container);render();return{rotate,reset,lock,resize:render};
+}
+function addControls(bar,viewer){bar.innerHTML='<button type="button" data-d="l" aria-label="Girar a la izquierda">←</button><button type="button" data-d="r" aria-label="Girar a la derecha">→</button><button type="button" data-d="u" aria-label="Girar hacia arriba">↑</button><button type="button" data-d="d" aria-label="Girar hacia abajo">↓</button><button type="button" data-reset>Vista inicial</button>';bar.querySelector('[data-d="l"]').onclick=()=>viewer.rotate(-.14,0);bar.querySelector('[data-d="r"]').onclick=()=>viewer.rotate(.14,0);bar.querySelector('[data-d="u"]').onclick=()=>viewer.rotate(0,-.14);bar.querySelector('[data-d="d"]').onclick=()=>viewer.rotate(0,.14);bar.querySelector('[data-reset]').onclick=()=>viewer.reset();}
+
+let stationNumber=null;
+const cases=[
+{code:'A',model:'prism3',name:'Prisma triangular',family:'Poliedro',bases:'2 bases triangulares',elements:'Bases · caras laterales planas · aristas · vértices',development:'Sí. En este prisma recto aparecen 2 triángulos y 3 rectángulos.',compare:'Pirámide triangular',difference:'El prisma tiene dos bases; la pirámide tiene una.'},
+{code:'B',model:'prism6',name:'Prisma hexagonal',family:'Poliedro',bases:'2 bases hexagonales',elements:'Bases · caras laterales planas · aristas · vértices',development:'Sí. En este prisma recto aparecen 2 hexágonos y 6 rectángulos.',compare:'Pirámide hexagonal',difference:'El prisma tiene dos bases; la pirámide tiene una.'},
+{code:'C',model:'pyramid5',name:'Pirámide pentagonal',family:'Poliedro',bases:'1 base pentagonal',elements:'Base · caras laterales planas · aristas · vértices',development:'Sí. Aparecen 1 pentágono y 5 triángulos.',compare:'Prisma pentagonal',difference:'La pirámide tiene una base; el prisma tiene dos.'},
+{code:'D',model:'cylinder',name:'Cilindro',family:'Cuerpo redondo',bases:'2 bases circulares',elements:'Bases · superficie curva',development:'Sí. Aparecen 2 círculos y 1 rectángulo.',compare:'Prisma hexagonal',difference:'El cilindro tiene superficie curva y bases circulares; el prisma tiene caras planas y bases poligonales.'},
+{code:'E',model:'cone',name:'Cono',family:'Cuerpo redondo',bases:'1 base circular',elements:'Base · superficie curva · vértice',development:'Sí. Aparecen 1 círculo y 1 sector circular.',compare:'Pirámide pentagonal',difference:'El cono tiene superficie curva y base circular; la pirámide tiene caras planas y base poligonal.'},
+{code:'F',model:'sphere',name:'Esfera',family:'Cuerpo redondo',bases:'No tiene bases',elements:'Superficie curva',development:'No tiene desarrollo plano exacto.',compare:'Cilindro',difference:'La esfera no tiene bases; el cilindro tiene dos bases circulares.'}
+];let current=null,viewer=null;
+function renderCase(c){current=c;document.getElementById('assignBox').classList.add('hidden');document.getElementById('work').classList.remove('hidden');document.getElementById('checkBox').classList.add('hidden');document.getElementById('result').classList.add('hidden');document.getElementById('workActions').classList.remove('hidden');document.getElementById('caseCode').textContent='Equipo/estación '+stationNumber;document.getElementById('compare').innerHTML='Compárenlo con <strong>'+c.compare+'</strong>. En la guía escriban una diferencia.';const host=document.getElementById('viewer');host.innerHTML='';document.getElementById('controls').innerHTML='';viewer=createViewer(host,c.model);addControls(document.getElementById('controls'),viewer);reajustarDespuesDelCambio();}
+document.getElementById('assignBtn').onclick=()=>{const raw=document.getElementById('station').value.trim(),n=Number(raw),fb=document.getElementById('assignFb');if(!Number.isInteger(n)||n<1){fb.classList.remove('hidden');fb.textContent='Escriban un número entero de equipo/estación, igual al de la guía.';reajustarDespuesDelCambio();return;}stationNumber=n;fb.classList.add('hidden');renderCase(cases[(n-1)%cases.length]);};
+document.getElementById('reassign').onclick=()=>{document.getElementById('work').classList.add('hidden');document.getElementById('checkBox').classList.add('hidden');document.getElementById('result').classList.add('hidden');document.getElementById('assignBox').classList.remove('hidden');reajustarDespuesDelCambio();};
+document.getElementById('ready').onclick=()=>{if(viewer)viewer.lock();document.querySelectorAll('#controls button').forEach(b=>b.disabled=true);document.getElementById('workActions').classList.add('hidden');document.getElementById('checkBox').classList.remove('hidden');document.getElementById('checkBox').scrollIntoView({block:'nearest',behavior:'smooth'});reajustarDespuesDelCambio();};
+document.getElementById('check').onclick=()=>{if(!current)return;document.getElementById('checkBox').classList.add('hidden');document.getElementById('result').classList.remove('hidden');document.getElementById('answer').innerHTML='<div><strong>Nombre</strong></div><div>'+current.name+'</div><div><strong>Familia</strong></div><div>'+current.family+'</div><div><strong>Bases</strong></div><div>'+current.bases+'</div><div><strong>Elementos</strong></div><div>'+current.elements+'</div><div><strong>Desarrollo plano</strong></div><div>'+current.development+'</div><div><strong>Diferencia posible</strong></div><div>'+current.difference+'</div>';document.getElementById('result').scrollIntoView({block:'nearest',behavior:'smooth'});reajustarDespuesDelCambio();};
+
+/* Compatibilidad con eXeLearning y sitio exportado. */
+let __applyingFrameSize=false;
+let __frameObserver=null;
+function ajustarAlturaIframe(){
+  try{
+    const contenido=document.querySelector('.s6page');
+    if(!contenido)return;
+    const bodyRect=document.body.getBoundingClientRect();
+    const contentRect=contenido.getBoundingClientRect();
+    const alto=Math.max(1,Math.ceil(Math.max(contentRect.bottom-bodyRect.top,contenido.scrollHeight||0,document.body.scrollHeight||0)+8));
+    const frame=window.frameElement;
+    if(frame){
+      __applyingFrameSize=true;
+      frame.style.setProperty('width','100%','important');
+      frame.style.setProperty('max-width','none','important');
+      frame.style.setProperty('display','block','important');
+      frame.style.setProperty('border','0','important');
+      frame.style.setProperty('height',alto+'px','important');
+      frame.style.setProperty('min-height','0','important');
+      frame.style.setProperty('overflow','hidden','important');
+      frame.setAttribute('width','100%');frame.setAttribute('height',String(alto));frame.setAttribute('scrolling','no');
+      setTimeout(()=>{__applyingFrameSize=false;},0);
+      if(!__frameObserver && 'MutationObserver' in window){
+        __frameObserver=new MutationObserver(()=>{if(!__applyingFrameSize)requestAnimationFrame(ajustarAlturaIframe);});
+        __frameObserver.observe(frame,{attributes:true,attributeFilter:['style','height','width']});
+      }
+    }
+    if(window.parent&&window.parent!==window){window.parent.postMessage({type:'S6_RESOURCE_HEIGHT',height:alto},'*');}
+  }catch(_){ }
+}
+function reajustarDespuesDelCambio(){[0,60,180,500,1000].forEach(ms=>setTimeout(ajustarAlturaIframe,ms));}
+if('ResizeObserver' in window){new ResizeObserver(()=>requestAnimationFrame(ajustarAlturaIframe)).observe(document.querySelector('.s6page'));}
+window.addEventListener('load',reajustarDespuesDelCambio);
+
+})();</script></body></html>

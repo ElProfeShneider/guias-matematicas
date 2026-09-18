@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sesión 6 · Analiza</title>
+<style>
+:root{--grafito:#20262B;--verde:#4B702F;--azul:#0F5F9B;--azul-profundo:#0B4268;--geo-claro:#DCEFF2;--geo-medio:#A8D6DC;--blanco:#FFF;--borde:#D7DDE1;--texto:#20262B;--suave:#EEF2F4;--exito:#2F6B3C;--exito-fondo:#F1F7F2;--alerta:#8A4B18;--alerta-fondo:#FFF8F1;--sombra:0 4px 14px rgba(32,38,43,.07)}
+*{box-sizing:border-box}
+html,body{width:100%;max-width:none;margin:0;padding:0;min-height:0;background:transparent;color:var(--texto);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden;overflow-y:auto}
+body{font-size:17px;line-height:1.42}
+button,input{font:inherit}
+button{appearance:none;border:1px solid #AEB9C0;background:#fff;color:var(--grafito);min-height:40px;border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer}
+button:hover{background:var(--suave)} button:focus-visible,input:focus-visible{outline:3px solid rgba(15,95,155,.28);outline-offset:2px}
+.primary{background:var(--verde);border-color:var(--verde);color:#fff} .primary:hover{background:var(--verde);filter:brightness(.95)}
+.secondary{border-color:var(--azul);color:var(--azul-profundo)} .hidden{display:none!important}
+.s6page{width:100%;max-width:1022px;margin:0 auto;padding:10px 12px 18px}
+.card{border:1px solid var(--borde);border-radius:11px;background:#fff;padding:12px 14px;margin-bottom:12px;box-shadow:var(--sombra)}
+.instruction{border-left:5px solid var(--verde);background:#F6F8F7} .note{border-left:5px solid var(--azul);background:#F2F7FA}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;background:var(--grafito);color:#fff;border-radius:10px 10px 0 0}
+.stage{font-size:13pt} .counter{font-size:11pt;font-weight:700;white-space:nowrap}
+.screen{display:none} .screen.active{display:block}
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+.model-card{border:1px solid var(--borde);border-radius:10px;background:#fff;overflow:hidden}
+.model-head{padding:7px 9px;background:#F2F5F6;font-weight:700}
+.model-visual{height:238px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#FBFDFD 0%,#EEF5F6 100%);padding:14px}
+.model-visual img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.model-visual svg{width:100%;height:100%;display:block}
+.actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:10px}
+.feedback{padding:9px 11px;border-radius:8px;margin-top:10px;line-height:1.4} .feedback.success{background:var(--exito-fondo);border:1px solid #BCD4C1;color:#244F2D} .feedback.review{background:var(--alerta-fondo);border:1px solid #E7C9AC;color:var(--alerta)}
+.answer-line{margin:3px 0} .small{font-size:.92rem;color:#58656C}
+.parts-wrap{max-width:760px;margin:10px auto 0;border:1px solid var(--borde);border-radius:10px;background:#fff;overflow:hidden}
+.parts-head{padding:7px 10px;background:#F2F5F6;font-weight:700}
+.parts-figure{display:flex;align-items:center;justify-content:center;background:#F8FAFB;padding:8px;min-height:390px}
+.parts-figure svg{width:min(100%,620px);height:auto;display:block}
+.dev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.dev-card{border:1px solid var(--borde);border-radius:10px;padding:10px;background:#fff;display:flex;flex-direction:column}
+.dev-title{font-weight:700;margin-bottom:6px}
+.option{display:block;border:1px solid #DDE3E6;border-radius:8px;padding:9px;margin:7px 0;cursor:pointer;background:#fff}
+.option:has(input:checked){border-color:var(--azul);background:#F2F7FA}
+.option-net{min-height:160px;display:grid;grid-template-rows:auto 1fr;align-items:center}
+.option-net .choice-text{display:flex;align-items:flex-start;gap:6px}
+.net{width:100%;height:112px;display:block;margin-top:5px}
+.sphere-options{display:grid;gap:7px;margin-top:8px}.sphere-options .option{margin:0;min-height:48px;display:flex;align-items:center}
+.quick-actions{max-width:700px;margin:10px auto 0}
+
+.teacher{border:1px solid var(--borde);background:#fff;padding:13px;border-radius:12px;box-shadow:var(--sombra)}
+.teacher-title{text-align:center;font-size:18pt;margin-bottom:2px} .teacher-command{text-align:center;font-weight:700;font-size:14pt;margin-bottom:12px}
+.map{display:grid;grid-template-columns:1fr 1fr;gap:10px} .family{border:1px solid var(--borde);border-radius:10px;padding:10px;background:#F8FAFB} .family h3{margin:0 0 6px;font-size:14pt} .mini{border-top:1px solid var(--borde);padding-top:7px;margin-top:7px} .mini-title{font-weight:700}
+.rules{margin-top:10px;padding:9px 11px;border-left:5px solid var(--azul);background:#F2F7FA;border-radius:8px} .rules p{margin:2px 0}
+.quick{max-width:700px;margin:0 auto} .qcard p{margin:8px 0} .quick label{display:block;padding:8px 10px;border:1px solid var(--borde);border-radius:8px;margin:7px 0;cursor:pointer} .quick label:has(input:checked){background:#F2F7FA;border-color:var(--azul)}
+.geo-hint{margin-top:8px;font-size:14px;color:#5B666E}
+.geo-view{width:100%;height:100%;display:block;touch-action:none;cursor:grab;background:transparent}.geo-view.dragging{cursor:grabbing}.geo-view[data-interactive="false"]{cursor:default}.model-visual.interactive{padding:0;background:transparent} .model-visual img{display:none}
+@media(max-width:760px){.grid4,.dev-grid,.map{grid-template-columns:1fr}.model-visual{height:220px}.parts-figure{min-height:330px}}
+@media(max-width:650px){body{font-size:16px}.s6page{padding:7px 7px 14px}.card{padding:10px 11px}.model-visual{height:205px}}
+</style>
+</head>
+<body>
+<main class="s6page" aria-label="Analiza de la Sesión 6">
+<div class="topbar"><div class="stage" id="stage">Nombre y familia</div><div class="counter" id="counter">1 de 5</div></div>
+
+<section class="screen active" data-s="0">
+  <div class="card instruction">
+    <p style="margin:0 0 4px">Observen los cuerpos A–D.</p>
+    <p style="margin:0 0 4px">En «1. Nombre y familia» de la guía, escriban el nombre de cada cuerpo y marquen su familia.</p>
+    <p style="margin:0">Pueden girar los cuerpos para observarlos mejor. Después, pulsen «Comprobar».</p>
+  </div>
+  <div class="grid4">
+    <div class="model-card"><div class="model-head">Cuerpo A</div><div class="model-visual interactive"><canvas class="geo-view" data-shape="pentagonalPrism" data-rx="-0.32" data-ry="0.55" tabindex="0" aria-label="Cuerpo A interactivo. Use las flechas del teclado para girarlo"></canvas></div></div>
+    <div class="model-card"><div class="model-head">Cuerpo B</div><div class="model-visual interactive"><canvas class="geo-view" data-shape="rectPyramid" data-rx="-0.55" data-ry="0.55" tabindex="0" aria-label="Cuerpo B interactivo. Use las flechas del teclado para girarlo"></canvas></div></div>
+    <div class="model-card"><div class="model-head">Cuerpo C</div><div class="model-visual interactive"><canvas class="geo-view" data-shape="cylinder" data-rx="0.28" data-ry="-0.35" data-interactive="true" tabindex="0" aria-label="Cuerpo C interactivo. Use las flechas del teclado para girarlo"></canvas></div></div>
+    <div class="model-card"><div class="model-head">Cuerpo D</div><div class="model-visual interactive"><canvas class="geo-view" data-shape="sphere" data-rx="-0.2" data-ry="0.2" tabindex="0" aria-label="Cuerpo D interactivo. Use las flechas del teclado para girarlo"></canvas></div></div>
+  </div>
+  <div class="actions"><button class="primary" id="checkNames" type="button">Comprobar</button></div>
+  <div id="fbNames" class="feedback success hidden" aria-live="polite">
+    <div class="answer-line">A = prisma pentagonal — poliedro.</div>
+    <div class="answer-line">B = pirámide de base rectangular — poliedro.</div>
+    <div class="answer-line">C = cilindro — cuerpo redondo.</div>
+    <div class="answer-line">D = esfera — cuerpo redondo.</div>
+    <div class="actions"><button class="primary" data-next type="button">Continuar</button></div>
+  </div>
+</section>
+
+<section class="screen" data-s="1">
+  <div class="card instruction">
+    <p style="margin:0 0 4px">Observen qué parte del prisma señala cada letra.</p>
+    <p style="margin:0 0 4px">En «2. Partes» de la guía, escriban el nombre de cada elemento y respondan si la base también es una cara.</p>
+    <p style="margin:0">Después, pulsen «Comprobar».</p>
+  </div>
+  <div class="parts-wrap">
+    <div class="parts-head">Prisma pentagonal</div>
+    <div class="parts-figure">
+      <svg viewBox="0 0 760 440" role="img" aria-label="Prisma pentagonal con una base, una cara lateral, una arista y un vértice señalados con A, B, C y D">
+        <defs>
+          <linearGradient id="pf1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E5F4F6"/><stop offset="1" stop-color="#B9DDE2"/></linearGradient>
+          <linearGradient id="pf2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#CBE3E7"/><stop offset="1" stop-color="#A8D6DC"/></linearGradient>
+        </defs>
+        <!-- Base superior pentagonal -->
+        <polygon points="380,50 465,100 438,180 322,180 295,100" fill="url(#pf1)" stroke="#355C66" stroke-width="3" stroke-linejoin="round"/>
+        <!-- Base inferior pentagonal -->
+        <polygon points="380,220 465,270 438,350 322,350 295,270" fill="#DCEFF2" stroke="#355C66" stroke-width="3" stroke-linejoin="round"/>
+        <!-- Caras laterales -->
+        <polygon points="380,50 465,100 465,270 380,220" fill="#B9DDE2" fill-opacity=".78" stroke="#355C66" stroke-width="2.5"/>
+        <polygon points="465,100 438,180 438,350 465,270" fill="#A8D6DC" fill-opacity=".82" stroke="#355C66" stroke-width="2.5"/>
+        <polygon points="438,180 322,180 322,350 438,350" fill="#DCEFF2" fill-opacity=".72" stroke="#355C66" stroke-width="2.5"/>
+        <polygon points="322,180 295,100 295,270 322,350" fill="#CBE3E7" fill-opacity=".75" stroke="#355C66" stroke-width="2.5"/>
+        <polygon points="295,100 380,50 380,220 295,270" fill="#D9EEF1" fill-opacity=".68" stroke="#355C66" stroke-width="2.5"/>
+        <!-- Aristas verticales reforzadas -->
+        <line x1="380" y1="50" x2="380" y2="220" stroke="#355C66" stroke-width="2.5"/>
+        <line x1="465" y1="100" x2="465" y2="270" stroke="#355C66" stroke-width="2.5"/>
+        <line x1="438" y1="180" x2="438" y2="350" stroke="#355C66" stroke-width="2.5"/>
+        <line x1="322" y1="180" x2="322" y2="350" stroke="#355C66" stroke-width="2.5"/>
+        <line x1="295" y1="100" x2="295" y2="270" stroke="#355C66" stroke-width="2.5"/>
+
+        <!-- A: base -->
+        <line x1="122" y1="356" x2="380" y2="305" stroke="#20262B" stroke-width="2.3"/>
+        <circle cx="380" cy="305" r="6" fill="#20262B"/>
+        <circle cx="92" cy="365" r="28" fill="#fff" stroke="#20262B" stroke-width="2.5"/>
+        <text x="92" y="374" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#20262B">A</text>
+
+        <!-- B: cara lateral -->
+        <line x1="642" y1="182" x2="451" y2="225" stroke="#20262B" stroke-width="2.3"/>
+        <circle cx="451" cy="225" r="6" fill="#20262B"/>
+        <circle cx="672" cy="176" r="28" fill="#fff" stroke="#20262B" stroke-width="2.5"/>
+        <text x="672" y="185" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#20262B">B</text>
+
+        <!-- C: arista -->
+        <line x1="136" y1="190" x2="322" y2="255" stroke="#20262B" stroke-width="2.3"/>
+        <circle cx="322" cy="255" r="6" fill="#20262B"/>
+        <circle cx="106" cy="178" r="28" fill="#fff" stroke="#20262B" stroke-width="2.5"/>
+        <text x="106" y="187" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#20262B">C</text>
+
+        <!-- D: vértice -->
+        <line x1="536" y1="54" x2="380" y2="50" stroke="#20262B" stroke-width="2.3"/>
+        <circle cx="380" cy="50" r="6" fill="#20262B"/>
+        <circle cx="566" cy="54" r="28" fill="#fff" stroke="#20262B" stroke-width="2.5"/>
+        <text x="566" y="63" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#20262B">D</text>
+      </svg>
+    </div>
+  </div>
+  <div class="actions"><button class="secondary" data-prev type="button">Anterior</button><button class="primary" id="checkParts" type="button">Comprobar</button></div>
+  <div id="fbParts" class="feedback success hidden" aria-live="polite">
+    <div class="answer-line">A = base.</div>
+    <div class="answer-line">B = cara lateral.</div>
+    <div class="answer-line">C = arista.</div>
+    <div class="answer-line">D = vértice.</div>
+    <div class="rule-line">La base también es una cara. No todas las caras son bases.</div>
+    <div class="actions"><button class="primary" data-next type="button">Continuar</button></div>
+  </div>
+</section>
+
+<section class="screen" data-s="2">
+  <div class="card instruction">
+    <p style="margin:0 0 4px">Cilindro y cono: marquen las figuras de su desarrollo plano.</p>
+    <p style="margin:0 0 4px">Esfera: respondan si tiene un desarrollo plano exacto.</p>
+    <p style="margin:0">Después, pulsen «Comprobar».</p>
+  </div>
+  <div class="dev-grid">
+    <div class="dev-card"><div class="dev-title">Cilindro</div>
+      <label class="option option-net">
+        <span class="choice-text"><input type="radio" name="cyl" value="a"> <span>2 círculos + 1 rectángulo</span></span>
+        <svg class="net" viewBox="0 0 240 112" role="img" aria-label="Dos círculos y un rectángulo"><circle cx="42" cy="56" r="22" fill="#A8D6DC" stroke="#28484F" stroke-width="2.2"/><rect x="78" y="31" width="84" height="50" fill="#DCEFF2" stroke="#28484F" stroke-width="2.2"/><circle cx="198" cy="56" r="22" fill="#A8D6DC" stroke="#28484F" stroke-width="2.2"/></svg>
+      </label>
+      <label class="option option-net">
+        <span class="choice-text"><input type="radio" name="cyl" value="b"> <span>1 círculo + 1 triángulo</span></span>
+        <svg class="net" viewBox="0 0 240 112" role="img" aria-label="Un círculo y un triángulo"><circle cx="58" cy="56" r="22" fill="#A8D6DC" stroke="#28484F" stroke-width="2.2"/><polygon points="142,80 186,32 218,80" fill="#DCEFF2" stroke="#28484F" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      </label>
+    </div>
+    <div class="dev-card"><div class="dev-title">Cono</div>
+      <label class="option option-net">
+        <span class="choice-text"><input type="radio" name="cone" value="a"> <span>1 círculo + 1 sector circular</span></span>
+        <svg class="net" viewBox="0 0 240 112" role="img" aria-label="Un círculo y un sector circular"><circle cx="50" cy="56" r="22" fill="#A8D6DC" stroke="#28484F" stroke-width="2.2"/><path d="M150 56 L164.4 16.5 A42 42 0 0 1 164.4 95.5 Z" fill="#DCEFF2" stroke="#28484F" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      </label>
+      <label class="option option-net">
+        <span class="choice-text"><input type="radio" name="cone" value="b"> <span>1 círculo + 1 rectángulo</span></span>
+        <svg class="net" viewBox="0 0 240 112" role="img" aria-label="Un círculo y un rectángulo"><circle cx="54" cy="56" r="22" fill="#A8D6DC" stroke="#28484F" stroke-width="2.2"/><rect x="126" y="31" width="78" height="50" fill="#DCEFF2" stroke="#28484F" stroke-width="2.2"/></svg>
+      </label>
+    </div>
+    <div class="dev-card"><div class="dev-title">Esfera</div>
+      <p style="margin:4px 0 8px">¿La esfera tiene un desarrollo plano exacto?</p>
+      <div class="sphere-options">
+        <label class="option"><input type="radio" name="sphere" value="yes"> Sí</label>
+        <label class="option"><input type="radio" name="sphere" value="no"> No</label>
+      </div>
+    </div>
+  </div>
+  <div class="actions"><button class="secondary" data-prev type="button">Anterior</button><button class="primary" id="checkDev" type="button">Comprobar</button></div>
+  <div id="fbDev" class="feedback hidden" aria-live="polite"></div>
+</section>
+
+<section class="screen" data-s="3">
+  <div class="teacher">
+    <div class="teacher-title">MOMENTO CON EL DOCENTE</div>
+    <div class="teacher-command">Dejen el mouse. Miren al frente.</div>
+    <div class="map">
+      <div class="family"><h3>POLIEDROS</h3><div>Solo tienen caras planas.</div><div>Sus caras son polígonos.</div><div>Tienen aristas y vértices.</div><div class="mini"><span class="mini-title">PRISMAS</span><br>2 bases poligonales de la misma forma y tamaño, en planos paralelos.</div><div class="mini"><span class="mini-title">PIRÁMIDES</span><br>1 base poligonal y caras laterales triangulares que llegan a un mismo vértice.</div></div>
+      <div class="family"><h3>CUERPOS REDONDOS</h3><div>Tienen superficie curva.</div><div class="mini"><span class="mini-title">CILINDRO</span><br>2 bases circulares planas, de la misma forma y tamaño, en planos paralelos, y superficie lateral curva.</div><div class="mini"><span class="mini-title">CONO</span><br>1 base circular, superficie lateral curva y un vértice.</div><div class="mini"><span class="mini-title">ESFERA</span><br>Superficie curva. No tiene bases, aristas ni vértices.</div></div>
+    </div>
+    <div class="rules"><p>La base de un prisma o una pirámide también es una cara.</p><p>El nombre de prismas y pirámides depende de la forma de la base.</p></div>
+    <div class="actions"><button class="primary" data-next type="button">Continuar cuando el docente lo indique</button></div>
+  </div>
+</section>
+
+<section class="screen" data-s="4">
+  <div class="card instruction"><p style="margin:0">Marquen una opción y pulsen «Comprobar».</p></div>
+  <div class="quick">
+    <div id="qbox"></div>
+    <div id="qfb" class="feedback hidden"></div>
+    <div class="actions quick-actions"><button class="secondary" data-prev type="button">Anterior</button><button class="primary" id="qcheck" type="button">Comprobar</button></div>
+  </div>
+</section>
+</main>
+<script>
+(function(){'use strict';
+const screens=[...document.querySelectorAll('.screen')];
+const stage=document.getElementById('stage');
+const counter=document.getElementById('counter');
+const names=['Nombre y familia','Partes','Desarrollos planos','Momento con el docente','Comprueba rápido'];
+let idx=0;
+function show(i){idx=Math.max(0,Math.min(i,screens.length-1));screens.forEach((s,j)=>s.classList.toggle('active',j===idx));stage.textContent=names[idx];counter.textContent=(idx+1)+' de '+screens.length;window.scrollTo({top:0,behavior:'auto'});if(idx===4)showQ();reajustarDespuesDelCambio();}
+document.addEventListener('click',e=>{if(e.target.closest('[data-next]'))show(idx+1);if(e.target.closest('[data-prev]'))show(idx-1);});
+
+function shade(hex, amt){
+  const n=parseInt(hex.slice(1),16); let r=(n>>16)+amt,g=((n>>8)&255)+amt,b=(n&255)+amt;
+  r=Math.max(0,Math.min(255,r)); g=Math.max(0,Math.min(255,g)); b=Math.max(0,Math.min(255,b));
+  return `rgb(${r},${g},${b})`;
+}
+function getShape(name){
+  const TAU=Math.PI*2;
+  if(name==='cube'){
+    const v=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
+    const f=[[0,1,2,3],[1,5,6,2],[4,0,3,7],[3,2,6,7],[4,5,1,0],[5,4,7,6]];
+    return {kind:'poly',v,f,scale:44};
+  }
+  if(name==='pentagonalPrism'){
+    const v=[]; const f=[]; const r=1.05, dz=.72;
+    for(let i=0;i<5;i++){ const a=-Math.PI/2 + i*TAU/5; v.push([r*Math.cos(a),r*Math.sin(a),-dz]); }
+    for(let i=0;i<5;i++){ const a=-Math.PI/2 + i*TAU/5; v.push([r*Math.cos(a),r*Math.sin(a),dz]); }
+    f.push([0,1,2,3,4]); f.push([5,6,7,8,9]);
+    for(let i=0;i<5;i++){ let j=(i+1)%5; f.push([i,j,j+5,i+5]); }
+    return {kind:'poly',v,f,scale:44};
+  }
+  if(name==='rectPyramid'){
+    const v=[[-1.15,-.7,-.75],[1.15,-.7,-.75],[1.15,-.7,.75],[-1.15,-.7,.75],[0,1.25,0]];
+    const f=[[0,1,2,3],[0,1,4],[1,2,4],[2,3,4],[3,0,4]];
+    return {kind:'poly',v,f,scale:44};
+  }
+  if(name==='cylinder') return {kind:'cylinder',scale:48};
+  if(name==='sphere') return {kind:'sphere',scale:58};
+}
+function rotatePt(p,rx,ry){
+  let [x,y,z]=p; const cy=Math.cos(ry),sy=Math.sin(ry),cx=Math.cos(rx),sx=Math.sin(rx);
+  let x1=x*cy+z*sy, z1=-x*sy+z*cy; let y1=y*cx-z1*sx, z2=y*sx+z1*cx; return [x1,y1,z2];
+}
+function project(p,w,h,dist,scale){
+  const [x,y,z]=p; const persp=dist/(dist-z); return [w/2+x*scale*persp,h/2-y*scale*persp,z,persp];
+}
+function faceNormal(a,b,c){
+  const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]], v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
+  return [u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+}
+function drawPoly(ctx,obj,rx,ry,w,h){
+  const colors=['#DCEFF2','#CBE3E7','#A8D6DC','#BFDDE2','#D9EEF1','#B3D5DB','#C8E6EA'];
+  const dist=5.8; const pts3=obj.v.map(p=>rotatePt(p,rx,ry)); const pts2=pts3.map(p=>project(p,w,h,dist,obj.scale));
+  const faces=obj.f.map((face,idx)=>{ const poly3=face.map(i=>pts3[i]); const poly2=face.map(i=>pts2[i]);
+    let n=faceNormal(poly3[0],poly3[1],poly3[2]); const nz=n[2]; const light=(n[0]*.35+n[1]*.55+n[2]*.75)/Math.hypot(...n);
+    const avgz=poly3.reduce((s,p)=>s+p[2],0)/poly3.length; return {poly2,avgz,nz,light,color:colors[idx%colors.length]}; })
+    .sort((a,b)=>a.avgz-b.avgz);
+  faces.forEach(F=>{ ctx.beginPath(); F.poly2.forEach(([x,y],i)=>{ if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); }); ctx.closePath(); const amt=Math.round(F.light*18 + (F.nz<0 ? -6: 10)); ctx.fillStyle=shade(F.color, amt); ctx.fill(); ctx.strokeStyle='#355C66'; ctx.lineWidth=2; ctx.lineJoin='round'; ctx.stroke(); });
+}
+function cylNormal(a,b,c){
+  const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]];
+  const v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
+  const n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+  const len=Math.hypot(n[0],n[1],n[2])||1;
+  return [n[0]/len,n[1]/len,n[2]/len];
+}
+function cylShade(n){
+  const light=[0.42,0.70,0.74];
+  const ll=Math.hypot(...light);
+  const dot=Math.max(-1,Math.min(1,(n[0]*light[0]+n[1]*light[1]+n[2]*light[2])/ll));
+  const factor=0.84+0.16*Math.max(0,dot);
+  const base=[127,188,197];
+  return `rgb(${Math.round(base[0]*factor)},${Math.round(base[1]*factor)},${Math.round(base[2]*factor)})`;
+}
+function cylProject(p,w,h){
+  const cameraZ=7.2;
+  const focal=Math.min(w,h)*1.18;
+  const denom=Math.max(1.6,cameraZ-p[2]);
+  const scale=focal/denom;
+  return [w/2+p[0]*scale,h/2-p[1]*scale];
+}
+function convexHull2(points){
+  const pts=points.map(p=>[p[0],p[1]]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+  if(pts.length<=2)return pts;
+  const cross=(o,a,b)=>(a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);
+  const lo=[];for(const p of pts){while(lo.length>=2&&cross(lo[lo.length-2],lo[lo.length-1],p)<=0)lo.pop();lo.push(p);}
+  const hi=[];for(let i=pts.length-1;i>=0;i--){const p=pts[i];while(hi.length>=2&&cross(hi[hi.length-2],hi[hi.length-1],p)<=0)hi.pop();hi.push(p);}
+  lo.pop();hi.pop();return lo.concat(hi);
+}
+function pathPolygon(ctx,pts){ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)ctx.lineTo(pts[i][0],pts[i][1]);ctx.closePath();}
+function drawCylinder(ctx,rx,ry,w,h){
+  const segments=96,radius=1.17,yBottom=-1.36,yTop=1.36;
+  const bottom=[],top=[];
+  for(let i=0;i<segments;i++){const a=i/segments*Math.PI*2;bottom.push(rotatePt([Math.cos(a)*radius,yBottom,Math.sin(a)*radius],rx,ry));top.push(rotatePt([Math.cos(a)*radius,yTop,Math.sin(a)*radius],rx,ry));}
+  const pb=bottom.map(p=>cylProject(p,w,h)),pt=top.map(p=>cylProject(p,w,h));
+  const hull=convexHull2(pb.concat(pt));
+  const grad=ctx.createLinearGradient(w*.35,0,w*.65,0);grad.addColorStop(0,'#79AFB8');grad.addColorStop(.5,'#BFE3E7');grad.addColorStop(1,'#79AFB8');
+  pathPolygon(ctx,hull);ctx.fillStyle=grad;ctx.fill();
+  const cameraZ=7.2;
+  const centers=[rotatePt([0,yBottom,0],rx,ry),rotatePt([0,yTop,0],rx,ry)];
+  const normals=[rotatePt([0,-1,0],rx,ry),rotatePt([0,1,0],rx,ry)];
+  [[pb,centers[0],normals[0]],[pt,centers[1],normals[1]]].forEach(([ring,c,n])=>{
+    const to=[-c[0],-c[1],cameraZ-c[2]];const vis=n[0]*to[0]+n[1]*to[1]+n[2]*to[2]>0;
+    if(vis){pathPolygon(ctx,ring);ctx.fillStyle='#CDE9EC';ctx.fill();ctx.strokeStyle='#28484F';ctx.lineWidth=1.8;ctx.lineJoin='round';ctx.stroke();}
+  });
+  pathPolygon(ctx,hull);ctx.strokeStyle='#28484F';ctx.lineWidth=1.9;ctx.lineJoin='round';ctx.stroke();
+}
+function drawSphere(ctx,rx,ry,w,h){
+  const cx=w/2, cy=h/2, r=Math.min(w,h)*0.27;
+  const hx=cx-r*(0.30+0.12*Math.sin(ry)), hy=cy-r*(0.35+0.10*Math.sin(rx));
+  const grad=ctx.createRadialGradient(hx,hy,r*0.08,cx,cy,r*1.15);
+  grad.addColorStop(0,'#EEF9FA'); grad.addColorStop(.46,'#B9DDE2'); grad.addColorStop(1,'#78AEB8');
+  ctx.fillStyle=grad; ctx.strokeStyle='#355C66'; ctx.lineWidth=2.3; ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2); ctx.fill(); ctx.stroke();
+}
+function makeBodyViewer(canvas,shape,options={}){
+  const ctx=canvas.getContext('2d'); const obj=getShape(shape); let rx=options.rx ?? -0.45, ry=options.ry ?? 0.7; const interactive=options.interactive!==false;
+  function render(){ const dpr=window.devicePixelRatio||1; const rect=canvas.getBoundingClientRect(); const w=Math.max(80,rect.width), h=Math.max(80,rect.height); canvas.width=Math.round(w*dpr); canvas.height=Math.round(h*dpr); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h); if(obj.kind==='sphere') drawSphere(ctx,rx,ry,w,h); else if(obj.kind==='cylinder') drawCylinder(ctx,rx,ry,w,h); else drawPoly(ctx,obj,rx,ry,w,h); }
+  if(interactive){ let dragging=false, px=0, py=0; const down=e=>{dragging=true; canvas.classList.add('dragging'); px=e.clientX; py=e.clientY; if(canvas.setPointerCapture) try{canvas.setPointerCapture(e.pointerId);}catch(_){}}; const move=e=>{ if(!dragging) return; const dx=e.clientX-px, dy=e.clientY-py; px=e.clientX; py=e.clientY; ry += dx*0.01; rx += dy*0.01; rx=Math.max(-0.95,Math.min(0.95,rx)); render(); }; const up=()=>{dragging=false; canvas.classList.remove('dragging');}; canvas.addEventListener('pointerdown',down); window.addEventListener('pointermove',move); window.addEventListener('pointerup',up); const key=e=>{let used=true;if(e.key==='ArrowLeft')ry-=0.12;else if(e.key==='ArrowRight')ry+=0.12;else if(e.key==='ArrowUp')rx=Math.max(-0.95,rx-0.12);else if(e.key==='ArrowDown')rx=Math.min(0.95,rx+0.12);else used=false;if(used){e.preventDefault();render();}}; canvas.addEventListener('keydown',key); }
+  new ResizeObserver(render).observe(canvas); render(); return {render};
+}
+
+document.querySelectorAll('.geo-view').forEach(cv=>makeBodyViewer(cv,cv.dataset.shape,{rx:parseFloat(cv.dataset.rx||'-0.45'),ry:parseFloat(cv.dataset.ry||'0.7'),interactive:cv.dataset.interactive!=='false'}));
+document.getElementById('checkNames').addEventListener('click',()=>{document.getElementById('fbNames').classList.remove('hidden');document.getElementById('checkNames').classList.add('hidden');reajustarDespuesDelCambio();});
+document.getElementById('checkParts').addEventListener('click',()=>{document.getElementById('fbParts').classList.remove('hidden');document.getElementById('checkParts').classList.add('hidden');reajustarDespuesDelCambio();});
+document.getElementById('checkDev').addEventListener('click',()=>{
+  const cy=document.querySelector('input[name="cyl"]:checked'),co=document.querySelector('input[name="cone"]:checked'),sp=document.querySelector('input[name="sphere"]:checked'),fb=document.getElementById('fbDev'),btn=document.getElementById('checkDev');
+  fb.classList.remove('hidden','success','review');
+  if(!cy||!co||!sp){fb.classList.add('review');fb.textContent='Respondan los tres casos antes de comprobar.';}
+  else if(cy.value==='a'&&co.value==='a'&&sp.value==='no'){
+    fb.classList.add('success');
+    fb.innerHTML='Cilindro: 2 círculos + 1 rectángulo.<br>Cono: 1 círculo + 1 sector circular.<br>Esfera: no tiene un desarrollo plano exacto.<div class="actions"><button class="primary" data-next type="button">Continuar</button></div>';
+    btn.classList.add('hidden');
+  }else{fb.classList.add('review');fb.textContent='Hay una o más respuestas por revisar. Observen las figuras y vuelvan a comprobar.';}
+  reajustarDespuesDelCambio();
+});
+const qs=[
+ {q:'Una base de un prisma también es una cara.',opts:[['Sí','yes'],['No','no']],ok:'yes',fb:'Sí. La base es una cara con una función especial.'},
+ {q:'Un cuerpo tiene dos bases pentagonales de la misma forma y tamaño, en planos paralelos. ¿Cómo se llama?',opts:[['Pirámide pentagonal','pyr'],['Prisma pentagonal','pri'],['Pentágono','pent']],ok:'pri',fb:'Prisma pentagonal. La forma de las bases determina el nombre del prisma.'},
+ {q:'¿Cuál no tiene bases, aristas ni vértices?',opts:[['Cilindro','cyl'],['Cono','cone'],['Esfera','sphere']],ok:'sphere',fb:'Esfera. Tiene superficie curva y no tiene bases, aristas ni vértices.'}
+];
+let qi=0;
+let qmode='check';
+function showQ(){
+  const q=qs[qi],box=document.getElementById('qbox'),fb=document.getElementById('qfb'),btn=document.getElementById('qcheck');
+  box.innerHTML='<div class="card qcard"><div class="small">Pregunta '+(qi+1)+' de '+qs.length+'</div><p>'+q.q+'</p>'+q.opts.map(o=>'<label><input type="radio" name="qq" value="'+o[1]+'"> '+o[0]+'</label>').join('')+'</div>';
+  fb.className='feedback hidden';fb.innerHTML='';
+  qmode='check';btn.textContent='Comprobar';btn.classList.remove('hidden');
+  reajustarDespuesDelCambio();
+}
+document.getElementById('qcheck').addEventListener('click',()=>{
+  const btn=document.getElementById('qcheck');
+  if(qmode==='next'){qi++;showQ();return;}
+  const sel=document.querySelector('input[name="qq"]:checked'),fb=document.getElementById('qfb'),q=qs[qi];
+  fb.classList.remove('hidden','success','review');
+  if(!sel){fb.classList.add('review');fb.textContent='Marquen una opción.';}
+  else if(sel.value===q.ok){
+    fb.classList.add('success');fb.textContent=q.fb;
+    document.querySelectorAll('input[name="qq"]').forEach(el=>el.disabled=true);
+    if(qi<qs.length-1){qmode='next';btn.textContent='Siguiente';}
+    else{btn.classList.add('hidden');fb.innerHTML=q.fb+'<div class="actions"><span class="small">Ahora abran «Aplica y comprueba» en el menú.</span></div>';}
+  }else{fb.classList.add('review');fb.textContent='Revisen la propiedad y vuelvan a intentar.';}
+  reajustarDespuesDelCambio();
+});
+
+let __applyingFrameSize=false;let __frameObserver=null;
+function ajustarAlturaIframe(){try{const contenido=document.querySelector('.s6page');if(!contenido)return;const bodyRect=document.body.getBoundingClientRect(),contentRect=contenido.getBoundingClientRect();const alto=Math.max(1,Math.ceil(Math.max(contentRect.bottom-bodyRect.top,contenido.scrollHeight||0,document.body.scrollHeight||0)+8));const frame=window.frameElement;if(frame){__applyingFrameSize=true;frame.style.setProperty('width','100%','important');frame.style.setProperty('max-width','none','important');frame.style.setProperty('display','block','important');frame.style.setProperty('border','0','important');frame.style.setProperty('height',alto+'px','important');frame.style.setProperty('min-height','0','important');frame.setAttribute('width','100%');frame.setAttribute('height',String(alto));frame.setAttribute('scrolling','no');setTimeout(()=>{__applyingFrameSize=false;},0);if(!__frameObserver&&'MutationObserver'in window){__frameObserver=new MutationObserver(()=>{if(!__applyingFrameSize)requestAnimationFrame(ajustarAlturaIframe);});__frameObserver.observe(frame,{attributes:true,attributeFilter:['style','height','width']});}}if(window.parent&&window.parent!==window)window.parent.postMessage({type:'S6_RESOURCE_HEIGHT',height:alto},'*');}catch(_){}}
+function reajustarDespuesDelCambio(){[0,60,180,500,1000].forEach(ms=>setTimeout(ajustarAlturaIframe,ms));}
+if('ResizeObserver'in window)new ResizeObserver(()=>requestAnimationFrame(ajustarAlturaIframe)).observe(document.querySelector('.s6page'));
+window.addEventListener('load',reajustarDespuesDelCambio);
+show(0);
+})();
+</script>
+</body>
+</html>

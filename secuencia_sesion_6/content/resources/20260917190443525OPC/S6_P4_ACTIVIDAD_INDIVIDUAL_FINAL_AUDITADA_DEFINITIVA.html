@@ -1,0 +1,64 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sesión 6 · Actividad individual</title><style>
+:root{
+  --grafito:#20262B;--verde:#4B702F;--naranja:#C96E2A;--azul:#0F5F9B;--azul-profundo:#0B4268;
+  --puente:#2B6A72;--geo:#7FBCC5;--geo-claro:#DCEFF2;--fondo:#F5F7F8;--blanco:#FFFFFF;
+  --borde:#D7DDE1;--texto:#20262B;--suave:#EEF2F4;--exito:#2F6B3C;--exito-fondo:#F1F7F2;
+  --alerta:#8A4B18;--alerta-fondo:#FFF8F1;--sombra:0 4px 14px rgba(32,38,43,.07);
+}
+*{box-sizing:border-box}
+html,body{width:100%;max-width:none;margin:0;padding:0;min-height:0;background:transparent;color:var(--texto);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden;overflow-y:auto}
+body{font-size:17px;line-height:1.42}
+button,input,select{font:inherit}
+button{appearance:none;border:1px solid #AEB9C0;background:#fff;color:var(--grafito);min-height:40px;border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer}
+button:hover{background:var(--suave)}
+button:focus-visible,input:focus-visible{outline:3px solid rgba(15,95,155,.28);outline-offset:2px}
+.primary{background:var(--verde);border-color:var(--verde);color:#fff}.primary:hover{background:var(--verde);filter:brightness(.95)}
+.secondary{border-color:var(--azul);color:var(--azul-profundo)}
+.hidden{display:none!important}
+.s6page{width:100%;max-width:1022px;margin:0 auto;padding:10px 12px 18px}
+.card{border:1px solid var(--borde);border-radius:11px;background:#fff;padding:12px 14px;margin-bottom:12px;box-shadow:var(--sombra)}
+.instruction{border-left:5px solid var(--verde);background:#F6F8F7}
+.warn{border-left:5px solid var(--naranja);background:var(--alerta-fondo)}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;background:var(--grafito);color:white;border-radius:10px 10px 0 0;margin-bottom:0}
+.stage{font-family:"Arial Black",Arial,sans-serif;font-size:13pt;line-height:1.2}.counter{font-size:11pt;font-weight:700;white-space:nowrap}
+.feedback{padding:9px 11px;border-radius:8px;margin-top:10px;line-height:1.35}.feedback.success{background:var(--exito-fondo);border:1px solid #BCD4C1;color:var(--exito)}.feedback.review{background:var(--alerta-fondo);border:1px solid #E7C9AC;color:var(--alerta)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:10px}
+.small{font-size:.92rem;color:#58656C}
+@media(max-width:650px){body{font-size:16px}.s6page{padding:7px 7px 14px}.card{padding:10px 11px}}
+
+.step-list{margin:0;padding-left:24px}.step-list li{padding:4px 0}
+</style></head><body><main class="s6page" aria-label="Actividad individual de la Sesión 6"><section class="card instruction"><strong>La actividad en equipo terminó.</strong></section><section class="card"><strong>Cuando el docente lo indique:</strong><ol class="step-list"><li>voltea la actividad individual;</li><li>trabaja solo;</li><li>no uses la guía ni el computador;</li><li>revisa tus respuestas y entrega la actividad al docente.</li></ol></section></main><script>(function(){'use strict';
+/* Compatibilidad con eXeLearning y sitio exportado. */
+let __applyingFrameSize=false;
+let __frameObserver=null;
+function ajustarAlturaIframe(){
+  try{
+    const contenido=document.querySelector('.s6page');
+    if(!contenido)return;
+    const bodyRect=document.body.getBoundingClientRect();
+    const contentRect=contenido.getBoundingClientRect();
+    const alto=Math.max(1,Math.ceil(Math.max(contentRect.bottom-bodyRect.top,contenido.scrollHeight||0,document.body.scrollHeight||0)+8));
+    const frame=window.frameElement;
+    if(frame){
+      __applyingFrameSize=true;
+      frame.style.setProperty('width','100%','important');
+      frame.style.setProperty('max-width','none','important');
+      frame.style.setProperty('display','block','important');
+      frame.style.setProperty('border','0','important');
+      frame.style.setProperty('height',alto+'px','important');
+      frame.style.setProperty('min-height','0','important');
+      frame.style.setProperty('overflow','hidden','important');
+      frame.setAttribute('width','100%');frame.setAttribute('height',String(alto));frame.setAttribute('scrolling','no');
+      setTimeout(()=>{__applyingFrameSize=false;},0);
+      if(!__frameObserver && 'MutationObserver' in window){
+        __frameObserver=new MutationObserver(()=>{if(!__applyingFrameSize)requestAnimationFrame(ajustarAlturaIframe);});
+        __frameObserver.observe(frame,{attributes:true,attributeFilter:['style','height','width']});
+      }
+    }
+    if(window.parent&&window.parent!==window){window.parent.postMessage({type:'S6_RESOURCE_HEIGHT',height:alto},'*');}
+  }catch(_){ }
+}
+function reajustarDespuesDelCambio(){[0,60,180,500,1000].forEach(ms=>setTimeout(ajustarAlturaIframe,ms));}
+if('ResizeObserver' in window){new ResizeObserver(()=>requestAnimationFrame(ajustarAlturaIframe)).observe(document.querySelector('.s6page'));}
+window.addEventListener('load',reajustarDespuesDelCambio);
+})();</script></body></html>
