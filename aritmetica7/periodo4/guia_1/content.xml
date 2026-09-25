@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ode><userPreferences><userPreference><key>theme</key><value>base</value></userPreference></userPreferences><odeResources><odeResource><key>odeVersionId</key><value>20260831143446ESAEBW</value></odeResource><odeResource><key>odeId</key><value>20260831134035FTRQLB</value></odeResource><odeResource><key>odeVersionName</key><value>0</value></odeResource><odeResource><key>isDownload</key><value>true</value></odeResource><odeResource><key>eXeVersion</key><value>v3.0.2</value></odeResource></odeResources><odeProperties><odeProperty><key>pp_title</key><value>Lenguaje algebraico</value></odeProperty><odeProperty><key>pp_subtitle</key><value>Del lenguaje natural al lenguaje algebraico y viceversa</value></odeProperty><odeProperty><key>pp_lang</key><value>es</value></odeProperty><odeProperty><key>pp_author</key><value>Shneider Becerra</value></odeProperty><odeProperty><key>license</key><value>creative commons: attribution - non commercial - share alike 4.0</value></odeProperty><odeProperty><key>pp_description</key><value>Guía de aprendizaje de grado séptimo orientada a comprender y transformar expresiones sencillas del lenguaje natural al lenguaje algebraico y viceversa, interpretando su significado en situaciones matemáticas y de contexto.</value></odeProperty><odeProperty><key>exportSource</key><value>true</value></odeProperty><odeProperty><key>pp_addExeLink</key><value>false</value></odeProperty><odeProperty><key>pp_addPagination</key><value>false</value></odeProperty><odeProperty><key>pp_addSearchBox</key><value>false</value></odeProperty><odeProperty><key>pp_addAccessibilityToolbar</key><value>true</value></odeProperty><odeProperty><key>pp_extraHeadContent</key><value/></odeProperty><odeProperty><key>footer</key><value/></odeProperty></odeProperties><odeNavStructures><odeNavStructure><odePageId>20260831143446FMWLJX</odePageId><odeParentPageId/><pageName>Guía de aprendizaje</pageName><odeNavStructureOrder>1</odeNavStructureOrder><odeNavStructureProperties><odeNavStructureProperty><key>titleNode</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>hidePageTitle</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>titleHtml</key><value/></odeNavStructureProperty><odeNavStructureProperty><key>editableInPage</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>titlePage</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>visibility</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>highlight</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>description</key><value/></odeNavStructureProperty></odeNavStructureProperties><odePagStructures><odePagStructure><odePageId>20260831143446FMWLJX</odePageId><odeBlockId>20260831143446IGWBTI</odeBlockId><blockName>7.°</blockName><iconName/><odePagStructureOrder>1</odePagStructureOrder><odePagStructureProperties><odePagStructureProperty><key>visibility</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>teacherOnly</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>allowToggle</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>minimized</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>identifier</key><value/></odePagStructureProperty><odePagStructureProperty><key>cssClass</key><value/></odePagStructureProperty></odePagStructureProperties><odeComponents><odeComponent><odePageId>20260831143446FMWLJX</odePageId><odeBlockId>20260831143446IGWBTI</odeBlockId><odeIdeviceId>20260831084944290TWD</odeIdeviceId><odeIdeviceTypeName>text</odeIdeviceTypeName><htmlView>&lt;div class="exe-text-template"&gt;&lt;div class="textIdeviceContent"&gt;
+            &lt;div class="exe-text-activity"&gt;
+                &lt;div&gt;&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;"&gt;EXPLORACIÓN&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;Un mismo procedimiento con números diferentes&lt;/h3&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;Observa las siguientes expresiones:&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 100%; box-sizing: border-box; text-align: center; margin: 12px 0 16px 0; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;p style="margin: 5px 0;"&gt;2 × 3 + 5&lt;/p&gt;
+&lt;p style="margin: 5px 0;"&gt;2 × 7 + 5&lt;/p&gt;
+&lt;p style="margin: 5px 0;"&gt;2 × 12 + 5&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;Las tres expresiones siguen la misma estructura.&lt;/p&gt;
+&lt;ol style="margin: 0 0 18px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;li style="margin-bottom: 10px;"&gt;¿Qué valor cambia en las tres expresiones y qué operaciones permanecen iguales? Coméntalo con un compañero.&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;★ ✎ REPRESENTA: Sin escoger un número específico, escribe una sola expresión que represente el mismo procedimiento para cualquier número. Puedes usar una letra o un símbolo en el lugar del valor que cambia.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;Un símbolo puede ocupar el lugar de un número&lt;/h3&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;Imagina que □ puede ocupar el lugar de cualquier número.&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 100%; box-sizing: border-box; text-align: center; margin: 12px 0 16px 0; font-family: Arial, sans-serif; font-size: 12pt;"&gt;□ + 6&lt;/div&gt;
+&lt;ol start="3" style="margin: 0 0 24px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;li style="margin-bottom: 10px;"&gt;Si reemplazas □ por 4, ¿qué operación obtienes y cuál es su resultado?&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;✎ ESCRIBE: Explica en una frase qué indica la expresión □ + 6 sin escoger un número específico.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 26px 0 18px 0;"&gt;ANALIZA&lt;/h2&gt;
+&lt;p style="margin: 0 0 16px 0;"&gt;Ahora utilizaremos la letra n para ocupar el lugar de un número. Observa con atención qué indica cada expresión.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;1. El orden cambia el significado&lt;/h3&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;Observa:&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 100%; box-sizing: border-box; margin: 10px 0 14px 0; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;p style="margin: 5px 0;"&gt;A. n − 5&lt;/p&gt;
+&lt;p style="margin: 5px 0;"&gt;B. 5 − n&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;Lee las frases:&lt;/p&gt;
+&lt;ul style="margin: 0 0 14px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;li style="margin-bottom: 6px;"&gt;A un número se le restan 5.&lt;/li&gt;
+&lt;li style="margin-bottom: 6px;"&gt;A 5 se le resta un número.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style="margin: 0 0 20px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;li style="margin-bottom: 10px;"&gt;★ ✎ RELACIONA: Escribe qué frase corresponde a cada expresión.&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;Reemplaza n por 8 y calcula las dos expresiones. ¿Obtienes el mismo resultado? Explica oralmente qué muestra esta comparación.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;2. Una misma operación puede organizarse de forma diferente&lt;/h3&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;Observa:&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 100%; box-sizing: border-box; margin: 10px 0 14px 0; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;p style="margin: 5px 0;"&gt;A. 2 × n + 3&lt;/p&gt;
+&lt;p style="margin: 5px 0;"&gt;B. 2 × (n + 3)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;Frase 1: Al doble de un número se le suman 3.&lt;/p&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;Frase 2: A un número se le suman 3 y después se duplica el resultado.&lt;/p&gt;
+&lt;ol start="3" style="margin: 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;li style="margin-bottom: 10px;"&gt;★ ✎ RELACIONA: Escribe qué expresión corresponde a cada frase.&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;✎ COMPRUEBA: Reemplaza n por 4 en las dos expresiones y calcula. ¿Los resultados son iguales o diferentes? Explica en una frase qué debes observar al pasar de una expresión escrita con palabras a una expresión matemática.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;"&gt;&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;
+&lt;p style="margin: 0 0 16px 0;"&gt;En ANALIZA comprobaste que una letra puede ocupar el lugar de un número y que el orden de las operaciones cambia el significado de una expresión. Ahora vas a organizar estas ideas mediante el lenguaje algebraico.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;1. ¿Qué es una expresión algebraica?&lt;/h3&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;El lenguaje natural comunica ideas matemáticas mediante palabras. El lenguaje algebraico representa esas ideas mediante números, letras y signos de operación.&lt;/p&gt;
+&lt;p style="margin: 12px 0 8px 0;"&gt;★ ✎ COPIA – Idea esencial&lt;/p&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;Una expresión algebraica combina números, letras y operaciones para representar cantidades o relaciones de manera general.&lt;/p&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;Observa la expresión:&lt;/p&gt;
+&lt;p style="margin: 8px 0 12px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;"&gt;3n + 7&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;n es la variable: representa un número que puede cambiar o cuyo valor aún no se conoce.&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;3 es el coeficiente: es el número que multiplica a la variable.&lt;/p&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;7 es el término constante: no contiene variable y su valor permanece fijo.&lt;/p&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;Cuando un número multiplica una letra, normalmente se omite el signo ×:&lt;/p&gt;
+&lt;p style="margin: 8px 0 16px 0; text-align: center; font-family: Arial, sans-serif; font-size: 12pt;"&gt;3 × n = 3n &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 5 × a = 5a&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;2. Algunas expresiones frecuentes&lt;/h3&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;Observa cómo una misma idea puede escribirse con palabras y mediante símbolos.&lt;/p&gt;
+&lt;table style="width: 100%; max-width: 100%; border-collapse: collapse; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; margin: 0 0 16px 0;"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="border: 1px solid #b8b8b8; padding: 8px; text-align: left; font-weight: bold;"&gt;Lenguaje natural&lt;/th&gt;
+&lt;th style="border: 1px solid #b8b8b8; padding: 8px; text-align: center; font-weight: bold;"&gt;Lenguaje algebraico&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px;"&gt;Un número aumentado en 5&lt;/td&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px; text-align: center;"&gt;n + 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px;"&gt;A un número se le restan 5&lt;/td&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px; text-align: center;"&gt;n − 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px;"&gt;A 5 se le resta un número&lt;/td&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px; text-align: center;"&gt;5 − n&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px;"&gt;El doble de un número&lt;/td&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px; text-align: center;"&gt;2n&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px;"&gt;El triple de un número&lt;/td&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px; text-align: center;"&gt;3n&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px;"&gt;La mitad de un número&lt;/td&gt;
+&lt;td style="border: 1px solid #b8b8b8; padding: 8px; text-align: center;"&gt;&lt;span style="display: inline-block; text-align: center; vertical-align: middle; line-height: 1.1;"&gt; &lt;span style="display: block; border-bottom: 1px solid #000; padding: 0 5px 2px 5px;"&gt;n&lt;/span&gt; &lt;span style="display: block; padding-top: 2px;"&gt;2&lt;/span&gt; &lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p style="margin: 0 0 16px 0;"&gt;Estas correspondencias ayudan a interpretar una frase, pero también debes respetar el orden de las operaciones.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;3. Del lenguaje natural al lenguaje algebraico&lt;/h3&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;★ ✎ COPIA – Procedimiento base&lt;/p&gt;
+&lt;ol style="margin: 0 0 14px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;li style="margin-bottom: 6px;"&gt;Representa con una letra el número que puede cambiar o que no se conoce.&lt;/li&gt;
+&lt;li style="margin-bottom: 6px;"&gt;Identifica las operaciones indicadas en la frase.&lt;/li&gt;
+&lt;li&gt;Escribe la expresión respetando el orden y la agrupación de las operaciones.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p style="margin: 14px 0 8px 0;"&gt;★ ✎ COPIA – Ejemplo esencial&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;Representa algebraicamente:&lt;/p&gt;
+&lt;p style="margin: 8px 0;"&gt;Al triple de un número se le suman 4.&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;Representamos el número con n.&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;Su triple es 3n y después se suman 4.&lt;/p&gt;
+&lt;p style="margin: 8px 0 14px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;"&gt;3n + 4&lt;/p&gt;
+&lt;p style="margin: 0 0 16px 0;"&gt;Verificación breve: representa oralmente “al doble de un número se le restan 6”.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;4. Del lenguaje algebraico al lenguaje natural&lt;/h3&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;★ ✎ COPIA – Procedimiento base&lt;/p&gt;
+&lt;ol style="margin: 0 0 14px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;
+&lt;li style="margin-bottom: 6px;"&gt;Identifica la variable.&lt;/li&gt;
+&lt;li style="margin-bottom: 6px;"&gt;Observa las operaciones y el orden en que aparecen.&lt;/li&gt;
+&lt;li&gt;Expresa con palabras la relación completa.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p style="margin: 14px 0 8px 0;"&gt;★ ✎ COPIA – Ejemplo esencial&lt;/p&gt;
+&lt;p style="margin: 8px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;"&gt;5n − 2&lt;/p&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;Esta expresión puede leerse: “Al quíntuple de un número se le restan 2”.&lt;/p&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;El orden y los paréntesis también cambian el significado:&lt;/p&gt;
+&lt;p style="margin: 6px 0;"&gt;2n + 3 → Al doble de un número se le suman 3.&lt;/p&gt;
+&lt;p style="margin: 6px 0 14px 0;"&gt;2(n + 3) → El doble de la suma de un número y 3.&lt;/p&gt;
+&lt;p style="margin: 0 0 18px 0;"&gt;Verificación breve: explica oralmente qué representa la expresión n + 8.&lt;/p&gt;
+&lt;p style="margin: 18px 0 0 0; padding-top: 12px; border-top: 1px solid #b8b8b8;"&gt;★ ✎ COPIA – Síntesis esencial: El lenguaje algebraico permite representar cantidades y relaciones mediante números, letras y operaciones. Para traducir correctamente una expresión, es necesario reconocer la variable y respetar el orden y la agrupación de las operaciones.&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;"&gt;&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;Aplica lo aprendido para representar ideas con lenguaje algebraico e interpretar expresiones escritas con símbolos.&lt;/p&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;✎ DESARROLLA: Escribe en tu cuaderno el número de cada actividad y tus respuestas. No necesitas copiar todos los enunciados.&lt;/p&gt;
+&lt;p style="margin: 0 0 18px 0;"&gt;★ Esencial: corresponde al aprendizaje fundamental de la guía.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;Actividad 1. Represento con lenguaje algebraico&lt;/h3&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;Usa la letra n para representar el número que puede cambiar.&lt;/p&gt;
+&lt;ol style="margin: 0 0 18px 0; padding-left: 28px; list-style-type: lower-alpha;"&gt;
+&lt;li style="margin-bottom: 8px;"&gt;★ La suma de un número y 7.&lt;/li&gt;
+&lt;li style="margin-bottom: 8px;"&gt;A un número se le restan 4.&lt;/li&gt;
+&lt;li style="margin-bottom: 8px;"&gt;★ A 12 se le resta un número.&lt;/li&gt;
+&lt;li style="margin-bottom: 8px;"&gt;El cuádruple de un número.&lt;/li&gt;
+&lt;li style="margin-bottom: 8px;"&gt;A la mitad de un número se le suman 3.&lt;/li&gt;
+&lt;li style="margin-bottom: 8px;"&gt;★ El doble de la suma de un número y 5.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;Actividad 2. Expreso con palabras&lt;/h3&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;Escribe una frase matemática que represente correctamente cada expresión.&lt;/p&gt;
+&lt;ol style="margin: 0 0 18px 0; padding-left: 28px; list-style-type: lower-alpha;"&gt;
+&lt;li style="margin-bottom: 10px;"&gt;★ 5n + 2&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;9 − n&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;★ 3(n + 4)&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 4px 2px 4px;"&gt;n&lt;/span&gt; &lt;span style="padding: 2px 4px 0 4px;"&gt;4&lt;/span&gt; &lt;/span&gt; − 1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;Actividad 3. Detecto y corrijo errores&lt;/h3&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;Lee cada caso. Indica el error y escribe la expresión correcta.&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; margin: 0 0 6px 0;"&gt;★ Caso 1&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;Frase: Al doble de un número se le suman 6.&lt;/p&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;Un estudiante escribió: 2(n + 6)&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; margin: 0 0 6px 0;"&gt;Caso 2&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;Frase: A 10 se le resta un número.&lt;/p&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;Un estudiante escribió: n − 10&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; margin: 0 0 6px 0;"&gt;Caso 3&lt;/p&gt;
+&lt;p style="margin: 0 0 6px 0;"&gt;Frase: La mitad de un número.&lt;/p&gt;
+&lt;p style="margin: 0 0 14px 0;"&gt;Un estudiante escribió: 2n&lt;/p&gt;
+&lt;p style="margin: 0 0 18px 0;"&gt;Escoge uno de los casos y explica en una frase por qué la expresión incorrecta cambia el significado de la frase original.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;"&gt;Actividad 4. Aplico el lenguaje algebraico&lt;/h3&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;En un juego de preguntas, cada respuesta correcta vale 4 puntos. Además, cada participante comienza con 3 puntos de bonificación.&lt;/p&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;Usa n para representar la cantidad de respuestas correctas.&lt;/p&gt;
+&lt;ol style="margin: 0 0 8px 0; padding-left: 28px;"&gt;
+&lt;li style="margin-bottom: 10px;"&gt;★ Escribe una expresión algebraica que represente el puntaje total de un participante.&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;Indica qué representan el 4, la letra n y el 3 dentro de la expresión.&lt;/li&gt;
+&lt;li style="margin-bottom: 10px;"&gt;Si un participante obtiene 5 respuestas correctas, reemplaza n por 5 y calcula su puntaje total.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id="eval-algebra-7-g1" style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;"&gt;&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;
+&lt;p style="margin: 0 0 10px 0;"&gt;Selecciona tu respuesta y pulsa el botón Revisar respuesta.&lt;/p&gt;
+&lt;p style="margin: 0 0 18px 0;"&gt;✎ EVALUACIÓN: escribe en tu cuaderno el número de cada pregunta y tu respuesta. Si te equivocas, registra la corrección después de revisar la retroalimentación.&lt;/p&gt;
+&lt;!-- PREGUNTA 1 --&gt;
+&lt;div class="alg-q" data-q="q1" data-type="single" data-answer="B" style="width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;★ Pregunta 1. Del lenguaje natural al algebraico&lt;/h3&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;¿Cuál expresión representa el triple de la suma de un número y 2?&lt;/p&gt;
+&lt;div style="display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q1" value="A" style="margin-right: 6px;"&gt; A. 3n + 2 &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q1" value="B" style="margin-right: 6px;"&gt; B. 3(n + 2) &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q1" value="C" style="margin-right: 6px;"&gt; C. n + 6 &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q1" value="D" style="margin-right: 6px;"&gt; D. 2(n + 3) &lt;/label&gt;&lt;/div&gt;
+&lt;button type="button" class="check-alg" style="margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;"&gt; Revisar respuesta &lt;/button&gt;
+&lt;div class="alg-feedback" role="status" aria-live="polite" style="margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- PREGUNTA 2 --&gt;
+&lt;div class="alg-q" data-q="q2" data-type="single" data-answer="D" style="width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;★ Pregunta 2. Del lenguaje algebraico al natural&lt;/h3&gt;
+&lt;p style="margin: 0 0 10px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;"&gt;8 − n&lt;/p&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;¿Cuál frase representa correctamente la expresión?&lt;/p&gt;
+&lt;div style="display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q2" value="A" style="margin-right: 6px;"&gt; A. A un número se le restan 8. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q2" value="B" style="margin-right: 6px;"&gt; B. El producto de 8 y un número. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q2" value="C" style="margin-right: 6px;"&gt; C. A un número se le suman 8. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q2" value="D" style="margin-right: 6px;"&gt; D. A 8 se le resta un número. &lt;/label&gt;&lt;/div&gt;
+&lt;button type="button" class="check-alg" style="margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;"&gt; Revisar respuesta &lt;/button&gt;
+&lt;div class="alg-feedback" role="status" aria-live="polite" style="margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- PREGUNTA 3 --&gt;
+&lt;div class="alg-q" data-q="q3" data-type="multi" data-answer="A,C" style="width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;Pregunta 3. Relaciono representaciones&lt;/h3&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;Selecciona las dos correspondencias correctas.&lt;/p&gt;
+&lt;div style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="checkbox" value="A" style="margin-right: 6px;"&gt; A. n − 4 representa: “A un número se le restan 4”. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="checkbox" value="B" style="margin-right: 6px;"&gt; B. 9 − n representa: “A un número se le restan 9”. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="checkbox" value="C" style="margin-right: 6px;"&gt; C. &lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 4px 2px 4px;"&gt;n&lt;/span&gt; &lt;span style="padding: 2px 4px 0 4px;"&gt;2&lt;/span&gt; &lt;/span&gt; + 2 representa: “A la mitad de un número se le suman 2”. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="checkbox" value="D" style="margin-right: 6px;"&gt; D. 3(n + 1) representa: “Al triple de un número se le suma 1”. &lt;/label&gt;&lt;/div&gt;
+&lt;button type="button" class="check-alg" style="margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;"&gt; Revisar respuesta &lt;/button&gt;
+&lt;div class="alg-feedback" role="status" aria-live="polite" style="margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- PREGUNTA 4 --&gt;
+&lt;div class="alg-q" data-q="q4" data-type="single" data-answer="C" style="width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;★ Pregunta 4. Analizo un error&lt;/h3&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;La frase dice:&lt;/p&gt;
+&lt;p style="margin: 0 0 8px 0;"&gt;El doble de la suma de un número y 6.&lt;/p&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;Un estudiante escribió: 2n + 6&lt;/p&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;¿Cuál explicación corrige el error?&lt;/p&gt;
+&lt;div style="display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q4" value="A" style="margin-right: 6px;"&gt; A. La expresión es correcta porque aparece el doble y se suma 6. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q4" value="B" style="margin-right: 6px;"&gt; B. Debe escribirse n + 12. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q4" value="C" style="margin-right: 6px;"&gt; C. Debe escribirse 2(n + 6), porque primero se agrupa la suma y después se toma su doble. &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q4" value="D" style="margin-right: 6px;"&gt; D. Debe escribirse 6(2 + n). &lt;/label&gt;&lt;/div&gt;
+&lt;button type="button" class="check-alg" style="margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;"&gt; Revisar respuesta &lt;/button&gt;
+&lt;div class="alg-feedback" role="status" aria-live="polite" style="margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- PREGUNTA 5 --&gt;
+&lt;div class="alg-q" data-q="q5" data-type="single" data-answer="A" style="width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;"&gt;Pregunta 5. Aplico el lenguaje algebraico&lt;/h3&gt;
+&lt;p style="margin: 0 0 12px 0;"&gt;En una actividad se organizan n mesas con 6 puestos en cada una y se agregan 2 sillas adicionales. ¿Qué expresión representa el total de puestos disponibles?&lt;/p&gt;
+&lt;div style="display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q5" value="A" style="margin-right: 6px;"&gt; A. 6n + 2 &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q5" value="B" style="margin-right: 6px;"&gt; B. 6(n + 2) &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q5" value="C" style="margin-right: 6px;"&gt; C. 2n + 6 &lt;/label&gt; &lt;label style="display: block; cursor: pointer;"&gt; &lt;input type="radio" name="alg-q5" value="D" style="margin-right: 6px;"&gt; D. n + 8 &lt;/label&gt;&lt;/div&gt;
+&lt;button type="button" class="check-alg" style="margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;"&gt; Revisar respuesta &lt;/button&gt;
+&lt;div class="alg-feedback" role="status" aria-live="polite" style="margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 28px 0 16px 0;"&gt;CIERRE REFLEXIVO&lt;/h2&gt;
+&lt;p style="margin: 0 0 20px 0;"&gt;★ ✎ RESPONDE: ¿Por qué el orden de las operaciones y los paréntesis son importantes al transformar una expresión entre lenguaje natural y lenguaje algebraico?&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 26px 0 10px 0;"&gt;REFERENCIAS BIBLIOGRÁFICAS&lt;/h3&gt;
+&lt;p style="margin: 0;"&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de asignatura de Aritmética 7°&lt;/em&gt;.&lt;/p&gt;
+&lt;script&gt;
+  (function () {
+
+    var currentScript = document.currentScript;
+    var root = currentScript ? currentScript.parentElement : document.getElementById("eval-algebra-7-g1");
+
+    if (!root) {
+      return;
+    }
+
+    var feedbackSingle = {
+      q1: {
+        A: "Revisa la agrupación. 3n + 2 toma primero el triple del número y después suma 2; la frase pide obtener el triple de toda la suma n + 2.",
+        B: "Correcto. Los paréntesis agrupan n + 2 y el factor 3 indica que se toma el triple de toda esa suma.",
+        C: "Revisa la operación. n + 6 no representa el triple de una cantidad.",
+        D: "Revisa el factor y los términos. 2(n + 3) representa el doble de otra suma."
+      },
+
+      q2: {
+        A: "Revisa el orden de la resta. Esta frase corresponde a n − 8.",
+        B: "Revisa la operación. 8 − n representa una resta, no una multiplicación.",
+        C: "Revisa el signo. La expresión 8 − n no representa una suma.",
+        D: "Correcto. En 8 − n, al número 8 se le resta el valor representado por n."
+      },
+
+      q4: {
+        A: "Revisa la frase. El doble debe aplicarse a toda la suma n + 6, no solamente a n.",
+        B: "Revisa la estructura. n + 12 no representa el doble de toda la suma.",
+        C: "Correcto. Los paréntesis agrupan n + 6 y después el factor 2 indica que se toma el doble de esa suma.",
+        D: "Revisa qué cantidad debe duplicarse. 6(2 + n) cambia la operación indicada en la frase."
+      },
+
+      q5: {
+        A: "Correcto. 6n representa los puestos de las n mesas y luego se agregan las 2 sillas adicionales.",
+        B: "Revisa los paréntesis. 6(n + 2) haría que las dos sillas adicionales también quedaran multiplicadas por 6.",
+        C: "Revisa qué cantidad se repite. Cada mesa tiene 6 puestos, por eso la cantidad asociada con n debe ser 6n.",
+        D: "Revisa la relación. Si existen n mesas con 6 puestos cada una, es necesario representar una multiplicación."
+      }
+    };
+
+
+    function sameSelections(selected, correct) {
+      if (selected.length !== correct.length) {
+        return false;
+      }
+
+      for (var i = 0; i &lt; correct.length; i++) {
+        if (selected.indexOf(correct[i]) === -1) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+
+    var questions = root.querySelectorAll(".alg-q");
+
+    Array.prototype.forEach.call(questions, function (question) {
+
+      var button = question.querySelector(".check-alg");
+      var feedbackBox = question.querySelector(".alg-feedback");
+      var qName = question.getAttribute("data-q");
+      var qType = question.getAttribute("data-type");
+
+      var inputs = question.querySelectorAll("input");
+
+      Array.prototype.forEach.call(inputs, function (input) {
+        input.addEventListener("change", function () {
+          feedbackBox.textContent = "";
+        });
+      });
+
+
+      button.addEventListener("click", function () {
+
+        if (qType === "single") {
+
+          var selected = question.querySelector("input[type='radio']:checked");
+
+          if (!selected) {
+            feedbackBox.textContent = "Selecciona una opción antes de revisar.";
+            return;
+          }
+
+          feedbackBox.textContent = feedbackSingle[qName][selected.value];
+          return;
+        }
+
+
+        if (qType === "multi") {
+
+          var checked = question.querySelectorAll("input[type='checkbox']:checked");
+          var selectedValues = [];
+
+          Array.prototype.forEach.call(checked, function (input) {
+            selectedValues.push(input.value);
+          });
+
+          if (selectedValues.length === 0) {
+            feedbackBox.textContent = "Selecciona las dos correspondencias que consideres correctas.";
+            return;
+          }
+
+          var correctValues = question.getAttribute("data-answer").split(",");
+
+          if (sameSelections(selectedValues, correctValues)) {
+            feedbackBox.textContent = "Correcto. A conserva el orden n − 4 y C representa la mitad de n seguida de la suma de 2.";
+            return;
+          }
+
+          var notes = [];
+
+          if (selectedValues.indexOf("B") !== -1) {
+            notes.push("En B, 9 − n significa que a 9 se le resta un número; el orden de la resta está invertido en la frase.");
+          }
+
+          if (selectedValues.indexOf("D") !== -1) {
+            notes.push("En D, 3(n + 1) representa el triple de toda la suma n + 1.");
+          }
+
+          if (selectedValues.indexOf("A") === -1) {
+            notes.push("Revisa A: n − 4 sí representa que a un número se le restan 4.");
+          }
+
+          if (selectedValues.indexOf("C") === -1) {
+            notes.push("Revisa C: la fracción n sobre 2 representa la mitad de n y después se suman 2.");
+          }
+
+          feedbackBox.textContent = notes.join(" ");
+        }
+
+      });
+
+    });
+
+  })();
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p class="clearfix"&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</htmlView><jsonProperties>{"ideviceId":"20260831084944290TWD","textInfoDurationInput":"","textInfoDurationTextInput":"Duración","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Agrupamiento","textTextarea":"&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;\"&gt;EXPLORACIÓN&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;Un mismo procedimiento con números diferentes&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;Observa las siguientes expresiones:&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 100%; box-sizing: border-box; text-align: center; margin: 12px 0 16px 0; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;p style=\"margin: 5px 0;\"&gt;2 × 3 + 5&lt;/p&gt;\n&lt;p style=\"margin: 5px 0;\"&gt;2 × 7 + 5&lt;/p&gt;\n&lt;p style=\"margin: 5px 0;\"&gt;2 × 12 + 5&lt;/p&gt;\n&lt;/div&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;Las tres expresiones siguen la misma estructura.&lt;/p&gt;\n&lt;ol style=\"margin: 0 0 18px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;¿Qué valor cambia en las tres expresiones y qué operaciones permanecen iguales? Coméntalo con un compañero.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;★ ✎ REPRESENTA: Sin escoger un número específico, escribe una sola expresión que represente el mismo procedimiento para cualquier número. Puedes usar una letra o un símbolo en el lugar del valor que cambia.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;Un símbolo puede ocupar el lugar de un número&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;Imagina que □ puede ocupar el lugar de cualquier número.&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 100%; box-sizing: border-box; text-align: center; margin: 12px 0 16px 0; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;□ + 6&lt;/div&gt;\n&lt;ol start=\"3\" style=\"margin: 0 0 24px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;Si reemplazas □ por 4, ¿qué operación obtienes y cuál es su resultado?&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;✎ ESCRIBE: Explica en una frase qué indica la expresión □ + 6 sin escoger un número específico.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 26px 0 18px 0;\"&gt;ANALIZA&lt;/h2&gt;\n&lt;p style=\"margin: 0 0 16px 0;\"&gt;Ahora utilizaremos la letra n para ocupar el lugar de un número. Observa con atención qué indica cada expresión.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;1. El orden cambia el significado&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;Observa:&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 100%; box-sizing: border-box; margin: 10px 0 14px 0; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;p style=\"margin: 5px 0;\"&gt;A. n − 5&lt;/p&gt;\n&lt;p style=\"margin: 5px 0;\"&gt;B. 5 − n&lt;/p&gt;\n&lt;/div&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;Lee las frases:&lt;/p&gt;\n&lt;ul style=\"margin: 0 0 14px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;li style=\"margin-bottom: 6px;\"&gt;A un número se le restan 5.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 6px;\"&gt;A 5 se le resta un número.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;ol style=\"margin: 0 0 20px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;★ ✎ RELACIONA: Escribe qué frase corresponde a cada expresión.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;Reemplaza n por 8 y calcula las dos expresiones. ¿Obtienes el mismo resultado? Explica oralmente qué muestra esta comparación.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;2. Una misma operación puede organizarse de forma diferente&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;Observa:&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 100%; box-sizing: border-box; margin: 10px 0 14px 0; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;p style=\"margin: 5px 0;\"&gt;A. 2 × n + 3&lt;/p&gt;\n&lt;p style=\"margin: 5px 0;\"&gt;B. 2 × (n + 3)&lt;/p&gt;\n&lt;/div&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;Frase 1: Al doble de un número se le suman 3.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;Frase 2: A un número se le suman 3 y después se duplica el resultado.&lt;/p&gt;\n&lt;ol start=\"3\" style=\"margin: 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;★ ✎ RELACIONA: Escribe qué expresión corresponde a cada frase.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;✎ COMPRUEBA: Reemplaza n por 4 en las dos expresiones y calcula. ¿Los resultados son iguales o diferentes? Explica en una frase qué debes observar al pasar de una expresión escrita con palabras a una expresión matemática.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;\"&gt;&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;\"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;\n&lt;p style=\"margin: 0 0 16px 0;\"&gt;En ANALIZA comprobaste que una letra puede ocupar el lugar de un número y que el orden de las operaciones cambia el significado de una expresión. Ahora vas a organizar estas ideas mediante el lenguaje algebraico.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;1. ¿Qué es una expresión algebraica?&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;El lenguaje natural comunica ideas matemáticas mediante palabras. El lenguaje algebraico representa esas ideas mediante números, letras y signos de operación.&lt;/p&gt;\n&lt;p style=\"margin: 12px 0 8px 0;\"&gt;★ ✎ COPIA – Idea esencial&lt;/p&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;Una expresión algebraica combina números, letras y operaciones para representar cantidades o relaciones de manera general.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;Observa la expresión:&lt;/p&gt;\n&lt;p style=\"margin: 8px 0 12px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;\"&gt;3n + 7&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;n es la variable: representa un número que puede cambiar o cuyo valor aún no se conoce.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;3 es el coeficiente: es el número que multiplica a la variable.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;7 es el término constante: no contiene variable y su valor permanece fijo.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;Cuando un número multiplica una letra, normalmente se omite el signo ×:&lt;/p&gt;\n&lt;p style=\"margin: 8px 0 16px 0; text-align: center; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;3 × n = 3n      5 × a = 5a&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;2. Algunas expresiones frecuentes&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;Observa cómo una misma idea puede escribirse con palabras y mediante símbolos.&lt;/p&gt;\n&lt;table style=\"width: 100%; max-width: 100%; border-collapse: collapse; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; margin: 0 0 16px 0;\"&gt;\n&lt;thead&gt;\n&lt;tr&gt;\n&lt;th style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: left; font-weight: bold;\"&gt;Lenguaje natural&lt;/th&gt;\n&lt;th style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: center; font-weight: bold;\"&gt;Lenguaje algebraico&lt;/th&gt;\n&lt;/tr&gt;\n&lt;/thead&gt;\n&lt;tbody&gt;\n&lt;tr&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px;\"&gt;Un número aumentado en 5&lt;/td&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: center;\"&gt;n + 5&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px;\"&gt;A un número se le restan 5&lt;/td&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: center;\"&gt;n − 5&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px;\"&gt;A 5 se le resta un número&lt;/td&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: center;\"&gt;5 − n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px;\"&gt;El doble de un número&lt;/td&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: center;\"&gt;2n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px;\"&gt;El triple de un número&lt;/td&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: center;\"&gt;3n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px;\"&gt;La mitad de un número&lt;/td&gt;\n&lt;td style=\"border: 1px solid #b8b8b8; padding: 8px; text-align: center;\"&gt;&lt;span style=\"display: inline-block; text-align: center; vertical-align: middle; line-height: 1.1;\"&gt; &lt;span style=\"display: block; border-bottom: 1px solid #000; padding: 0 5px 2px 5px;\"&gt;n&lt;/span&gt; &lt;span style=\"display: block; padding-top: 2px;\"&gt;2&lt;/span&gt; &lt;/span&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/tbody&gt;\n&lt;/table&gt;\n&lt;p style=\"margin: 0 0 16px 0;\"&gt;Estas correspondencias ayudan a interpretar una frase, pero también debes respetar el orden de las operaciones.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;3. Del lenguaje natural al lenguaje algebraico&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;★ ✎ COPIA – Procedimiento base&lt;/p&gt;\n&lt;ol style=\"margin: 0 0 14px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;li style=\"margin-bottom: 6px;\"&gt;Representa con una letra el número que puede cambiar o que no se conoce.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 6px;\"&gt;Identifica las operaciones indicadas en la frase.&lt;/li&gt;\n&lt;li&gt;Escribe la expresión respetando el orden y la agrupación de las operaciones.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p style=\"margin: 14px 0 8px 0;\"&gt;★ ✎ COPIA – Ejemplo esencial&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;Representa algebraicamente:&lt;/p&gt;\n&lt;p style=\"margin: 8px 0;\"&gt;Al triple de un número se le suman 4.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;Representamos el número con n.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;Su triple es 3n y después se suman 4.&lt;/p&gt;\n&lt;p style=\"margin: 8px 0 14px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;\"&gt;3n + 4&lt;/p&gt;\n&lt;p style=\"margin: 0 0 16px 0;\"&gt;Verificación breve: representa oralmente “al doble de un número se le restan 6”.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;4. Del lenguaje algebraico al lenguaje natural&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;★ ✎ COPIA – Procedimiento base&lt;/p&gt;\n&lt;ol style=\"margin: 0 0 14px 0; padding-left: 26px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;\n&lt;li style=\"margin-bottom: 6px;\"&gt;Identifica la variable.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 6px;\"&gt;Observa las operaciones y el orden en que aparecen.&lt;/li&gt;\n&lt;li&gt;Expresa con palabras la relación completa.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p style=\"margin: 14px 0 8px 0;\"&gt;★ ✎ COPIA – Ejemplo esencial&lt;/p&gt;\n&lt;p style=\"margin: 8px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;\"&gt;5n − 2&lt;/p&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;Esta expresión puede leerse: “Al quíntuple de un número se le restan 2”.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;El orden y los paréntesis también cambian el significado:&lt;/p&gt;\n&lt;p style=\"margin: 6px 0;\"&gt;2n + 3 → Al doble de un número se le suman 3.&lt;/p&gt;\n&lt;p style=\"margin: 6px 0 14px 0;\"&gt;2(n + 3) → El doble de la suma de un número y 3.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 18px 0;\"&gt;Verificación breve: explica oralmente qué representa la expresión n + 8.&lt;/p&gt;\n&lt;p style=\"margin: 18px 0 0 0; padding-top: 12px; border-top: 1px solid #b8b8b8;\"&gt;★ ✎ COPIA – Síntesis esencial: El lenguaje algebraico permite representar cantidades y relaciones mediante números, letras y operaciones. Para traducir correctamente una expresión, es necesario reconocer la variable y respetar el orden y la agrupación de las operaciones.&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;\"&gt;&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;\"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;Aplica lo aprendido para representar ideas con lenguaje algebraico e interpretar expresiones escritas con símbolos.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;✎ DESARROLLA: Escribe en tu cuaderno el número de cada actividad y tus respuestas. No necesitas copiar todos los enunciados.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 18px 0;\"&gt;★ Esencial: corresponde al aprendizaje fundamental de la guía.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;Actividad 1. Represento con lenguaje algebraico&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;Usa la letra n para representar el número que puede cambiar.&lt;/p&gt;\n&lt;ol style=\"margin: 0 0 18px 0; padding-left: 28px; list-style-type: lower-alpha;\"&gt;\n&lt;li style=\"margin-bottom: 8px;\"&gt;★ La suma de un número y 7.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 8px;\"&gt;A un número se le restan 4.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 8px;\"&gt;★ A 12 se le resta un número.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 8px;\"&gt;El cuádruple de un número.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 8px;\"&gt;A la mitad de un número se le suman 3.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 8px;\"&gt;★ El doble de la suma de un número y 5.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;Actividad 2. Expreso con palabras&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;Escribe una frase matemática que represente correctamente cada expresión.&lt;/p&gt;\n&lt;ol style=\"margin: 0 0 18px 0; padding-left: 28px; list-style-type: lower-alpha;\"&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;★ 5n + 2&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;9 − n&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;★ 3(n + 4)&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 4px 2px 4px;\"&gt;n&lt;/span&gt; &lt;span style=\"padding: 2px 4px 0 4px;\"&gt;4&lt;/span&gt; &lt;/span&gt; − 1&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;Actividad 3. Detecto y corrijo errores&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;Lee cada caso. Indica el error y escribe la expresión correcta.&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; margin: 0 0 6px 0;\"&gt;★ Caso 1&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;Frase: Al doble de un número se le suman 6.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;Un estudiante escribió: 2(n + 6)&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; margin: 0 0 6px 0;\"&gt;Caso 2&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;Frase: A 10 se le resta un número.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;Un estudiante escribió: n − 10&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; margin: 0 0 6px 0;\"&gt;Caso 3&lt;/p&gt;\n&lt;p style=\"margin: 0 0 6px 0;\"&gt;Frase: La mitad de un número.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 14px 0;\"&gt;Un estudiante escribió: 2n&lt;/p&gt;\n&lt;p style=\"margin: 0 0 18px 0;\"&gt;Escoge uno de los casos y explica en una frase por qué la expresión incorrecta cambia el significado de la frase original.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 18px 0 10px 0;\"&gt;Actividad 4. Aplico el lenguaje algebraico&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;En un juego de preguntas, cada respuesta correcta vale 4 puntos. Además, cada participante comienza con 3 puntos de bonificación.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;Usa n para representar la cantidad de respuestas correctas.&lt;/p&gt;\n&lt;ol style=\"margin: 0 0 8px 0; padding-left: 28px;\"&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;★ Escribe una expresión algebraica que represente el puntaje total de un participante.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;Indica qué representan el 4, la letra n y el 3 dentro de la expresión.&lt;/li&gt;\n&lt;li style=\"margin-bottom: 10px;\"&gt;Si un participante obtiene 5 respuestas correctas, reemplaza n por 5 y calcula su puntaje total.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;div id=\"eval-algebra-7-g1\" style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; overflow-wrap: break-word;\"&gt;&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 0 0 18px 0;\"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;\n&lt;p style=\"margin: 0 0 10px 0;\"&gt;Selecciona tu respuesta y pulsa el botón Revisar respuesta.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 18px 0;\"&gt;✎ EVALUACIÓN: escribe en tu cuaderno el número de cada pregunta y tu respuesta. Si te equivocas, registra la corrección después de revisar la retroalimentación.&lt;/p&gt;\n&lt;!-- PREGUNTA 1 --&gt;\n&lt;div class=\"alg-q\" data-q=\"q1\" data-type=\"single\" data-answer=\"B\" style=\"width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;★ Pregunta 1. Del lenguaje natural al algebraico&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;¿Cuál expresión representa el triple de la suma de un número y 2?&lt;/p&gt;\n&lt;div style=\"display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q1\" value=\"A\" style=\"margin-right: 6px;\" /&gt; A. 3n + 2 &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q1\" value=\"B\" style=\"margin-right: 6px;\" /&gt; B. 3(n + 2) &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q1\" value=\"C\" style=\"margin-right: 6px;\" /&gt; C. n + 6 &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q1\" value=\"D\" style=\"margin-right: 6px;\" /&gt; D. 2(n + 3) &lt;/label&gt;&lt;/div&gt;\n&lt;button type=\"button\" class=\"check-alg\" style=\"margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;div class=\"alg-feedback\" role=\"status\" aria-live=\"polite\" style=\"margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- PREGUNTA 2 --&gt;\n&lt;div class=\"alg-q\" data-q=\"q2\" data-type=\"single\" data-answer=\"D\" style=\"width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;★ Pregunta 2. Del lenguaje algebraico al natural&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 10px 0; text-align: center; font-family: Arial, sans-serif; font-size: 13pt;\"&gt;8 − n&lt;/p&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;¿Cuál frase representa correctamente la expresión?&lt;/p&gt;\n&lt;div style=\"display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q2\" value=\"A\" style=\"margin-right: 6px;\" /&gt; A. A un número se le restan 8. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q2\" value=\"B\" style=\"margin-right: 6px;\" /&gt; B. El producto de 8 y un número. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q2\" value=\"C\" style=\"margin-right: 6px;\" /&gt; C. A un número se le suman 8. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q2\" value=\"D\" style=\"margin-right: 6px;\" /&gt; D. A 8 se le resta un número. &lt;/label&gt;&lt;/div&gt;\n&lt;button type=\"button\" class=\"check-alg\" style=\"margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;div class=\"alg-feedback\" role=\"status\" aria-live=\"polite\" style=\"margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- PREGUNTA 3 --&gt;\n&lt;div class=\"alg-q\" data-q=\"q3\" data-type=\"multi\" data-answer=\"A,C\" style=\"width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;Pregunta 3. Relaciono representaciones&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;Selecciona las dos correspondencias correctas.&lt;/p&gt;\n&lt;div style=\"display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"checkbox\" value=\"A\" style=\"margin-right: 6px;\" /&gt; A. n − 4 representa: “A un número se le restan 4”. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"checkbox\" value=\"B\" style=\"margin-right: 6px;\" /&gt; B. 9 − n representa: “A un número se le restan 9”. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"checkbox\" value=\"C\" style=\"margin-right: 6px;\" /&gt; C. &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 4px 2px 4px;\"&gt;n&lt;/span&gt; &lt;span style=\"padding: 2px 4px 0 4px;\"&gt;2&lt;/span&gt; &lt;/span&gt; + 2 representa: “A la mitad de un número se le suman 2”. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"checkbox\" value=\"D\" style=\"margin-right: 6px;\" /&gt; D. 3(n + 1) representa: “Al triple de un número se le suma 1”. &lt;/label&gt;&lt;/div&gt;\n&lt;button type=\"button\" class=\"check-alg\" style=\"margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;div class=\"alg-feedback\" role=\"status\" aria-live=\"polite\" style=\"margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- PREGUNTA 4 --&gt;\n&lt;div class=\"alg-q\" data-q=\"q4\" data-type=\"single\" data-answer=\"C\" style=\"width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;★ Pregunta 4. Analizo un error&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;La frase dice:&lt;/p&gt;\n&lt;p style=\"margin: 0 0 8px 0;\"&gt;El doble de la suma de un número y 6.&lt;/p&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;Un estudiante escribió: 2n + 6&lt;/p&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;¿Cuál explicación corrige el error?&lt;/p&gt;\n&lt;div style=\"display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q4\" value=\"A\" style=\"margin-right: 6px;\" /&gt; A. La expresión es correcta porque aparece el doble y se suma 6. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q4\" value=\"B\" style=\"margin-right: 6px;\" /&gt; B. Debe escribirse n + 12. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q4\" value=\"C\" style=\"margin-right: 6px;\" /&gt; C. Debe escribirse 2(n + 6), porque primero se agrupa la suma y después se toma su doble. &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q4\" value=\"D\" style=\"margin-right: 6px;\" /&gt; D. Debe escribirse 6(2 + n). &lt;/label&gt;&lt;/div&gt;\n&lt;button type=\"button\" class=\"check-alg\" style=\"margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;div class=\"alg-feedback\" role=\"status\" aria-live=\"polite\" style=\"margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- PREGUNTA 5 --&gt;\n&lt;div class=\"alg-q\" data-q=\"q5\" data-type=\"single\" data-answer=\"A\" style=\"width: 100%; max-width: 100%; box-sizing: border-box; border-top: 1px solid #b8b8b8; padding: 16px 0;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 0 0 10px 0;\"&gt;Pregunta 5. Aplico el lenguaje algebraico&lt;/h3&gt;\n&lt;p style=\"margin: 0 0 12px 0;\"&gt;En una actividad se organizan n mesas con 6 puestos en cada una y se agregan 2 sillas adicionales. ¿Qué expresión representa el total de puestos disponibles?&lt;/p&gt;\n&lt;div style=\"display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q5\" value=\"A\" style=\"margin-right: 6px;\" /&gt; A. 6n + 2 &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q5\" value=\"B\" style=\"margin-right: 6px;\" /&gt; B. 6(n + 2) &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q5\" value=\"C\" style=\"margin-right: 6px;\" /&gt; C. 2n + 6 &lt;/label&gt; &lt;label style=\"display: block; cursor: pointer;\"&gt; &lt;input type=\"radio\" name=\"alg-q5\" value=\"D\" style=\"margin-right: 6px;\" /&gt; D. n + 8 &lt;/label&gt;&lt;/div&gt;\n&lt;button type=\"button\" class=\"check-alg\" style=\"margin-top: 14px; padding: 10px 14px; max-width: 100%; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; cursor: pointer;\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;div class=\"alg-feedback\" role=\"status\" aria-live=\"polite\" style=\"margin-top: 10px; font-family: Arial, sans-serif; font-size: 12pt;\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin: 28px 0 16px 0;\"&gt;CIERRE REFLEXIVO&lt;/h2&gt;\n&lt;p style=\"margin: 0 0 20px 0;\"&gt;★ ✎ RESPONDE: ¿Por qué el orden de las operaciones y los paréntesis son importantes al transformar una expresión entre lenguaje natural y lenguaje algebraico?&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin: 26px 0 10px 0;\"&gt;REFERENCIAS BIBLIOGRÁFICAS&lt;/h3&gt;\n&lt;p style=\"margin: 0;\"&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de asignatura de Aritmética 7°&lt;/em&gt;.&lt;/p&gt;\n&lt;script&gt;\n  (function () {\n\n    var currentScript = document.currentScript;\n    var root = currentScript ? currentScript.parentElement : document.getElementById(\"eval-algebra-7-g1\");\n\n    if (!root) {\n      return;\n    }\n\n    var feedbackSingle = {\n      q1: {\n        A: \"Revisa la agrupación. 3n + 2 toma primero el triple del número y después suma 2; la frase pide obtener el triple de toda la suma n + 2.\",\n        B: \"Correcto. Los paréntesis agrupan n + 2 y el factor 3 indica que se toma el triple de toda esa suma.\",\n        C: \"Revisa la operación. n + 6 no representa el triple de una cantidad.\",\n        D: \"Revisa el factor y los términos. 2(n + 3) representa el doble de otra suma.\"\n      },\n\n      q2: {\n        A: \"Revisa el orden de la resta. Esta frase corresponde a n − 8.\",\n        B: \"Revisa la operación. 8 − n representa una resta, no una multiplicación.\",\n        C: \"Revisa el signo. La expresión 8 − n no representa una suma.\",\n        D: \"Correcto. En 8 − n, al número 8 se le resta el valor representado por n.\"\n      },\n\n      q4: {\n        A: \"Revisa la frase. El doble debe aplicarse a toda la suma n + 6, no solamente a n.\",\n        B: \"Revisa la estructura. n + 12 no representa el doble de toda la suma.\",\n        C: \"Correcto. Los paréntesis agrupan n + 6 y después el factor 2 indica que se toma el doble de esa suma.\",\n        D: \"Revisa qué cantidad debe duplicarse. 6(2 + n) cambia la operación indicada en la frase.\"\n      },\n\n      q5: {\n        A: \"Correcto. 6n representa los puestos de las n mesas y luego se agregan las 2 sillas adicionales.\",\n        B: \"Revisa los paréntesis. 6(n + 2) haría que las dos sillas adicionales también quedaran multiplicadas por 6.\",\n        C: \"Revisa qué cantidad se repite. Cada mesa tiene 6 puestos, por eso la cantidad asociada con n debe ser 6n.\",\n        D: \"Revisa la relación. Si existen n mesas con 6 puestos cada una, es necesario representar una multiplicación.\"\n      }\n    };\n\n\n    function sameSelections(selected, correct) {\n      if (selected.length !== correct.length) {\n        return false;\n      }\n\n      for (var i = 0; i &lt; correct.length; i++) {\n        if (selected.indexOf(correct[i]) === -1) {\n          return false;\n        }\n      }\n\n      return true;\n    }\n\n\n    var questions = root.querySelectorAll(\".alg-q\");\n\n    Array.prototype.forEach.call(questions, function (question) {\n\n      var button = question.querySelector(\".check-alg\");\n      var feedbackBox = question.querySelector(\".alg-feedback\");\n      var qName = question.getAttribute(\"data-q\");\n      var qType = question.getAttribute(\"data-type\");\n\n      var inputs = question.querySelectorAll(\"input\");\n\n      Array.prototype.forEach.call(inputs, function (input) {\n        input.addEventListener(\"change\", function () {\n          feedbackBox.textContent = \"\";\n        });\n      });\n\n\n      button.addEventListener(\"click\", function () {\n\n        if (qType === \"single\") {\n\n          var selected = question.querySelector(\"input[type='radio']:checked\");\n\n          if (!selected) {\n            feedbackBox.textContent = \"Selecciona una opción antes de revisar.\";\n            return;\n          }\n\n          feedbackBox.textContent = feedbackSingle[qName][selected.value];\n          return;\n        }\n\n\n        if (qType === \"multi\") {\n\n          var checked = question.querySelectorAll(\"input[type='checkbox']:checked\");\n          var selectedValues = [];\n\n          Array.prototype.forEach.call(checked, function (input) {\n            selectedValues.push(input.value);\n          });\n\n          if (selectedValues.length === 0) {\n            feedbackBox.textContent = \"Selecciona las dos correspondencias que consideres correctas.\";\n            return;\n          }\n\n          var correctValues = question.getAttribute(\"data-answer\").split(\",\");\n\n          if (sameSelections(selectedValues, correctValues)) {\n            feedbackBox.textContent = \"Correcto. A conserva el orden n − 4 y C representa la mitad de n seguida de la suma de 2.\";\n            return;\n          }\n\n          var notes = [];\n\n          if (selectedValues.indexOf(\"B\") !== -1) {\n            notes.push(\"En B, 9 − n significa que a 9 se le resta un número; el orden de la resta está invertido en la frase.\");\n          }\n\n          if (selectedValues.indexOf(\"D\") !== -1) {\n            notes.push(\"En D, 3(n + 1) representa el triple de toda la suma n + 1.\");\n          }\n\n          if (selectedValues.indexOf(\"A\") === -1) {\n            notes.push(\"Revisa A: n − 4 sí representa que a un número se le restan 4.\");\n          }\n\n          if (selectedValues.indexOf(\"C\") === -1) {\n            notes.push(\"Revisa C: la fracción n sobre 2 representa la mitad de n y después se suman 2.\");\n          }\n\n          feedbackBox.textContent = notes.join(\" \");\n        }\n\n      });\n\n    });\n\n  })();\n  &lt;/script&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;","textFeedbackInput":"Mostrar retroalimentación","textFeedbackTextarea":""}</jsonProperties><odeComponentsOrder>1</odeComponentsOrder><odeComponentsProperties><odeComponentsProperty><key>visibility</key><value>true</value></odeComponentsProperty><odeComponentsProperty><key>teacherOnly</key><value>false</value></odeComponentsProperty><odeComponentsProperty><key>identifier</key><value/></odeComponentsProperty><odeComponentsProperty><key>cssClass</key><value/></odeComponentsProperty></odeComponentsProperties></odeComponent></odeComponents></odePagStructure></odePagStructures></odeNavStructure></odeNavStructures></ode>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ode><userPreferences><userPreference><key>theme</key><value>base</value></userPreference></userPreferences><odeResources><odeResource><key>odeVersionId</key><value>20260906204603RMHCCX</value></odeResource><odeResource><key>odeId</key><value>20260906203901JRMFDV</value></odeResource><odeResource><key>odeVersionName</key><value>0</value></odeResource><odeResource><key>isDownload</key><value>true</value></odeResource><odeResource><key>eXeVersion</key><value>v3.0.2</value></odeResource></odeResources><odeProperties><odeProperty><key>pp_title</key><value>Ecuaciones con estructura aditiva</value></odeProperty><odeProperty><key>pp_subtitle</key><value>Del lenguaje algebraico a la búsqueda de valores desconocidos</value></odeProperty><odeProperty><key>pp_lang</key><value>es</value></odeProperty><odeProperty><key>pp_author</key><value>Shneider Becerra</value></odeProperty><odeProperty><key>license</key><value>creative commons: attribution - non commercial - share alike 4.0</value></odeProperty><odeProperty><key>pp_description</key><value>Guía de aprendizaje para grado séptimo que retoma el lenguaje algebraico para comprender el significado de una ecuación, identificar valores desconocidos y resolver ecuaciones de estructura aditiva y situaciones problema asociadas.</value></odeProperty><odeProperty><key>exportSource</key><value>true</value></odeProperty><odeProperty><key>pp_addExeLink</key><value>false</value></odeProperty><odeProperty><key>pp_addPagination</key><value>false</value></odeProperty><odeProperty><key>pp_addSearchBox</key><value>false</value></odeProperty><odeProperty><key>pp_addAccessibilityToolbar</key><value>true</value></odeProperty><odeProperty><key>pp_extraHeadContent</key><value/></odeProperty><odeProperty><key>footer</key><value/></odeProperty></odeProperties><odeNavStructures><odeNavStructure><odePageId>20260906204603LRMKCP</odePageId><odeParentPageId/><pageName>Guía de aprendizaje</pageName><odeNavStructureOrder>1</odeNavStructureOrder><odeNavStructureProperties><odeNavStructureProperty><key>titleNode</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>hidePageTitle</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>titleHtml</key><value/></odeNavStructureProperty><odeNavStructureProperty><key>editableInPage</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>titlePage</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>visibility</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>highlight</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>description</key><value/></odeNavStructureProperty></odeNavStructureProperties><odePagStructures><odePagStructure><odePageId>20260906204603LRMKCP</odePageId><odeBlockId>20260906204603FZKRCZ</odeBlockId><blockName>7.°</blockName><iconName/><odePagStructureOrder>1</odePagStructureOrder><odePagStructureProperties><odePagStructureProperty><key>visibility</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>teacherOnly</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>allowToggle</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>minimized</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>identifier</key><value/></odePagStructureProperty><odePagStructureProperty><key>cssClass</key><value/></odePagStructureProperty></odePagStructureProperties><odeComponents><odeComponent><odePageId>20260906204603LRMKCP</odePageId><odeBlockId>20260906204603FZKRCZ</odeBlockId><odeIdeviceId>20260906140447052SPU</odeIdeviceId><odeIdeviceTypeName>text</odeIdeviceTypeName><htmlView>&lt;div class="exe-text-template"&gt;&lt;div class="textIdeviceContent"&gt;
+            &lt;div class="exe-text-activity"&gt;
+                &lt;div&gt;&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;EXPLORACIÓN&lt;/h2&gt;
+&lt;p&gt;En la guía anterior usaste una letra para representar un número que puede cambiar o cuyo valor no se conoce. Ahora observa:&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;n + 5&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;n + 5 = 12&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. Observo y comparo&lt;/h3&gt;
+&lt;p&gt;Comenta con un compañero: ¿qué elemento nuevo aparece en la segunda expresión?&lt;/p&gt;
+&lt;p&gt;Ahora prueba estos valores:&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;n = 5 &amp;nbsp;&amp;nbsp;&amp;nbsp; n = 7 &amp;nbsp;&amp;nbsp;&amp;nbsp; n = 9&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COMPRUEBA:&lt;/strong&gt; reemplaza n por cada valor en &lt;span style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;n + 5 = 12&lt;/span&gt;. Escribe cuál valor hace que los dos lados tengan el mismo resultado.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. Un valor que no conocemos&lt;/h3&gt;
+&lt;p&gt;En un juego de preguntas, un estudiante tenía una cantidad de puntos que no conocemos. Después ganó 8 puntos y terminó con 20 puntos.&lt;/p&gt;
+&lt;p&gt;Usa la letra n para representar los puntos que tenía al inicio.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ REPRESENTA:&lt;/strong&gt; completa:&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;n + ____ = ____&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESPONDE:&lt;/strong&gt; ¿cuántos puntos tenía al inicio? Escribe la operación que utilizaste para encontrarlo.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;ANALIZA&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. Comparo dos estrategias&lt;/h3&gt;
+&lt;p&gt;Se quiere encontrar el valor de n que hace correcta esta igualdad:&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;n + 6 = 15&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Estrategia A:&lt;/strong&gt; probar diferentes valores para n hasta encontrar uno que funcione.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Estrategia B:&lt;/strong&gt; calcular 15 − 6.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESPONDE:&lt;/strong&gt; ¿por qué la resta 15 − 6 permite encontrar directamente el valor que falta? Explica en una frase.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✎ COMPRUEBA:&lt;/strong&gt; reemplaza n por el valor encontrado en &lt;span style="font-family: Arial, sans-serif; font-size: 12pt;"&gt;n + 6 = 15&lt;/span&gt;. ¿Los dos lados tienen el mismo resultado?&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. Detecto y corrijo&lt;/h3&gt;
+&lt;p&gt;Un estudiante quiere encontrar el valor de n en:&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; text-align: center;"&gt;n − 4 = 11&lt;/p&gt;
+&lt;p&gt;Él afirma: “n = 7, porque 11 − 4 = 7”.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COMPRUEBA:&lt;/strong&gt; reemplaza n por 7. ¿Se obtiene 11 en el lado izquierdo?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ CORRIGE:&lt;/strong&gt; encuentra el valor de n que sí funciona y escribe la operación que utilizaste.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;
+&lt;p&gt;En los ejercicios anteriores buscaste números que hacen correcta una igualdad. Ahora vas a organizar esas ideas y aprender cómo resolver este tipo de situaciones.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;De una expresión a una ecuación&lt;/h3&gt;
+&lt;p&gt;En la guía anterior aprendiste que una letra puede representar un número. Observa la diferencia:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 5&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 5 = 12&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;n + 5&lt;/span&gt; es una expresión algebraica. En cambio, &lt;span&gt;n + 5 = 12&lt;/span&gt; establece una igualdad y necesitamos encontrar qué valor de &lt;span&gt;n&lt;/span&gt; hace que esa igualdad sea verdadera.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Idea esencial:&lt;/strong&gt; Una ecuación es una igualdad entre dos expresiones matemáticas en la que aparece una o más cantidades desconocidas. La letra que representa la cantidad que se desea encontrar se llama &lt;strong&gt;incógnita&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En esta guía trabajaremos ecuaciones con una sola incógnita.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Los miembros de una ecuación&lt;/h3&gt;
+&lt;p&gt;En una ecuación, las expresiones ubicadas a cada lado del signo igual se llaman &lt;strong&gt;miembros&lt;/strong&gt;.&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 6 = 15&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Primer miembro: n + 6&lt;/li&gt;
+&lt;li&gt;Segundo miembro: 15&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El signo &lt;strong&gt;=&lt;/strong&gt; indica que los dos miembros deben representar el mismo valor.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;¿Qué significa resolver una ecuación?&lt;/h3&gt;
+&lt;p&gt;Resolver una ecuación significa encontrar el valor de la incógnita que hace verdadera la igualdad.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Idea esencial:&lt;/strong&gt; La solución de una ecuación es el valor de la incógnita que, al reemplazarla, hace que los dos miembros tengan el mismo valor.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, en la igualdad trabajada anteriormente:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 5 = 12&lt;/p&gt;
+&lt;p&gt;Si &lt;span&gt;n = 7&lt;/span&gt;:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;7 + 5 = 12&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;12 = 12&lt;/p&gt;
+&lt;p&gt;Por lo tanto, &lt;span&gt;n = 7&lt;/span&gt; es solución de la ecuación.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Mantener la igualdad&lt;/h3&gt;
+&lt;p&gt;Para encontrar una incógnita podemos transformar una ecuación sin cambiar su solución.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Regla fundamental:&lt;/strong&gt; Si sumamos o restamos la misma cantidad en los dos miembros de una ecuación, la igualdad se conserva.&lt;/p&gt;
+&lt;p&gt;Para dejar sola la incógnita usamos la operación inversa:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La resta permite deshacer una suma.&lt;/li&gt;
+&lt;li&gt;La suma permite deshacer una resta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dejar sola la incógnita en uno de los miembros también se llama &lt;strong&gt;aislar la incógnita&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; margin: 18px auto; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; margin: 18px auto; box-sizing: border-box;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin-bottom: 8px;"&gt;Modelo de balanza: conservar la igualdad&lt;/h3&gt;
+&lt;p style="margin-top: 0;"&gt;Observa cómo una balanza en equilibrio permite representar los dos miembros de una ecuación.&lt;/p&gt;
+&lt;svg viewBox="0 0 960 800" width="100%" role="img" aria-labelledby="tituloBalanza descripcionBalanza" style="display: block; max-width: 900px; height: auto; margin: 0 auto;" xmlns="http://www.w3.org/2000/svg"&gt; 
+&lt;title id="tituloBalanza"&gt;Modelo de balanza para la ecuación n más 6 igual a 15&lt;/title&gt;
+&lt;desc id="descripcionBalanza"&gt; El primer momento representa la ecuación n más 6 igual a 15 mediante una balanza equilibrada. Después se restan 6 unidades en ambos miembros. El segundo momento muestra que se obtiene n igual a 9 y el equilibrio se mantiene. &lt;/desc&gt; &lt;!-- Fondo --&gt; &lt;rect x="10" y="10" width="940" height="780" rx="18" fill="#ffffff" stroke="#444444" stroke-width="2"&gt;&lt;/rect&gt; &lt;!-- Encabezado --&gt; &lt;text x="480" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#222222"&gt; Modelo de balanza para una ecuación &lt;/text&gt; &lt;text x="480" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#333333"&gt; Cada lado representa uno de los miembros. &lt;/text&gt; &lt;!-- MOMENTO 1 --&gt; &lt;text x="55" y="140" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#222222"&gt; 1. Ecuación inicial &lt;/text&gt; &lt;text x="480" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#155f52"&gt; n + 6 = 15 &lt;/text&gt; &lt;!-- Balanza 1 --&gt; &lt;line x1="230" y1="235" x2="730" y2="235" stroke="#333333" stroke-width="8" stroke-linecap="round"&gt;&lt;/line&gt; &lt;circle cx="480" cy="235" r="8" fill="#333333"&gt;&lt;/circle&gt; &lt;line x1="480" y1="235" x2="480" y2="345" stroke="#333333" stroke-width="8"&gt;&lt;/line&gt; &lt;polygon points="480,320 430,380 530,380" fill="#e5e5e5" stroke="#333333" stroke-width="4"&gt;&lt;/polygon&gt; &lt;line x1="405" y1="380" x2="555" y2="380" stroke="#333333" stroke-width="7" stroke-linecap="round"&gt;&lt;/line&gt; &lt;!-- Lado izquierdo --&gt; &lt;line x1="300" y1="235" x2="300" y2="275" stroke="#555555" stroke-width="4"&gt;&lt;/line&gt; &lt;rect x="215" y="275" width="170" height="68" rx="12" fill="#eef8f5" stroke="#155f52" stroke-width="3"&gt;&lt;/rect&gt; &lt;text x="300" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#222222"&gt; n + 6 &lt;/text&gt; &lt;!-- Lado derecho --&gt; &lt;line x1="660" y1="235" x2="660" y2="275" stroke="#555555" stroke-width="4"&gt;&lt;/line&gt; &lt;rect x="575" y="275" width="170" height="68" rx="12" fill="#eef8f5" stroke="#155f52" stroke-width="3"&gt;&lt;/rect&gt; &lt;text x="660" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#222222"&gt; 15 &lt;/text&gt; &lt;text x="300" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#444444"&gt; Primer miembro &lt;/text&gt; &lt;text x="660" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#444444"&gt; Segundo miembro &lt;/text&gt; &lt;!-- TRANSFORMACIÓN --&gt; &lt;rect x="105" y="415" width="750" height="95" rx="16" fill="#f3f3f3" stroke="#666666" stroke-width="2"&gt;&lt;/rect&gt; &lt;text x="480" y="449" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#222222"&gt; Restamos 6 en ambos miembros &lt;/text&gt; &lt;text x="480" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#155f52"&gt; n + 6 − 6 = 15 − 6 &lt;/text&gt; &lt;!-- Flecha --&gt; &lt;line x1="480" y1="513" x2="480" y2="545" stroke="#333333" stroke-width="4"&gt;&lt;/line&gt; &lt;polygon points="480,560 468,540 492,540" fill="#333333"&gt;&lt;/polygon&gt; &lt;!-- MOMENTO 2 --&gt; &lt;text x="55" y="595" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#222222"&gt; 2. La incógnita queda aislada &lt;/text&gt; &lt;text x="480" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#155f52"&gt; n = 9 &lt;/text&gt; &lt;!-- Balanza 2 --&gt; &lt;line x1="230" y1="675" x2="730" y2="675" stroke="#333333" stroke-width="8" stroke-linecap="round"&gt;&lt;/line&gt; &lt;circle cx="480" cy="675" r="8" fill="#333333"&gt;&lt;/circle&gt; &lt;line x1="480" y1="675" x2="480" y2="745" stroke="#333333" stroke-width="8"&gt;&lt;/line&gt; &lt;polygon points="480,720 445,765 515,765" fill="#e5e5e5" stroke="#333333" stroke-width="4"&gt;&lt;/polygon&gt; &lt;!-- Lado izquierdo --&gt; &lt;line x1="300" y1="675" x2="300" y2="705" stroke="#555555" stroke-width="4"&gt;&lt;/line&gt; &lt;rect x="225" y="705" width="150" height="55" rx="12" fill="#eef8f5" stroke="#155f52" stroke-width="3"&gt;&lt;/rect&gt; &lt;text x="300" y="741" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#222222"&gt; n &lt;/text&gt; &lt;!-- Lado derecho --&gt; &lt;line x1="660" y1="675" x2="660" y2="705" stroke="#555555" stroke-width="4"&gt;&lt;/line&gt; &lt;rect x="585" y="705" width="150" height="55" rx="12" fill="#eef8f5" stroke="#155f52" stroke-width="3"&gt;&lt;/rect&gt; &lt;text x="660" y="741" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#222222"&gt; 9 &lt;/text&gt; &lt;/svg&gt;
+&lt;p style="margin-top: 12px;"&gt;&lt;strong&gt;★ OBSERVA:&lt;/strong&gt; después de la transformación, la balanza continúa equilibrada y obtenemos &lt;span&gt;n = 9&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Ecuación con una suma&lt;/h3&gt;
+&lt;p&gt;Retomemos una igualdad analizada anteriormente:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 6 = 15&lt;/p&gt;
+&lt;p&gt;Como a &lt;span&gt;n&lt;/span&gt; se le suma 6, restamos 6 en los dos miembros:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 6 − 6 = 15 − 6&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n = 9&lt;/p&gt;
+&lt;p&gt;Comprobamos la solución en la ecuación inicial:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;9 + 6 = 15&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;15 = 15&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Ecuación con una resta&lt;/h3&gt;
+&lt;p&gt;Ahora retomemos el caso que corregiste en ANALIZA:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n − 4 = 11&lt;/p&gt;
+&lt;p&gt;Como a &lt;span&gt;n&lt;/span&gt; se le resta 4, sumamos 4 en los dos miembros:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n − 4 + 4 = 11 + 4&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n = 15&lt;/p&gt;
+&lt;p&gt;Comprobamos:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;15 − 4 = 11&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;11 = 11&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Ejemplos esenciales:&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 6 = 15 &amp;nbsp;→&amp;nbsp; n = 9&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n − 4 = 11 &amp;nbsp;→&amp;nbsp; n = 15&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Procedimiento base&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Procedimiento base:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Identifica la incógnita y la operación que la acompaña.&lt;/li&gt;
+&lt;li&gt;Usa la operación inversa en los dos miembros para aislar la incógnita.&lt;/li&gt;
+&lt;li&gt;Simplifica hasta encontrar el valor de la incógnita.&lt;/li&gt;
+&lt;li&gt;Comprueba la solución reemplazando el valor encontrado en la ecuación inicial.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;En las ecuaciones de estructura aditiva que estudiaremos aparecen formas como:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + a = b&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n − a = b&lt;/p&gt;
+&lt;p&gt;donde &lt;span&gt;n&lt;/span&gt; es la incógnita y &lt;span&gt;a&lt;/span&gt; y &lt;span&gt;b&lt;/span&gt; representan cantidades conocidas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✎ COMPLETA:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;a) Para aislar &lt;span&gt;n&lt;/span&gt; en &lt;span&gt;n + 8 = 13&lt;/span&gt;, debo __________ 8 en los dos miembros.&lt;/p&gt;
+&lt;p&gt;b) Para aislar &lt;span&gt;n&lt;/span&gt; en &lt;span&gt;n − 5 = 9&lt;/span&gt;, debo __________ 5 en los dos miembros.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;
+&lt;p&gt;Ahora vas a aplicar lo aprendido sobre ecuaciones de estructura aditiva. Resolverás ecuaciones, representarás situaciones y comprobarás si las soluciones obtenidas son correctas.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 1. Resuelvo y compruebo&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; encuentra el valor de &lt;span&gt;n&lt;/span&gt;. Muestra la operación que realizas en los dos miembros. En los ejercicios marcados con ★, comprueba la solución reemplazando el valor de &lt;span&gt;n&lt;/span&gt; en la ecuación inicial.&lt;/p&gt;
+&lt;p&gt;a) ★ &amp;nbsp; n + 8 = 21&lt;/p&gt;
+&lt;p&gt;b) ★ &amp;nbsp; n − 7 = 10&lt;/p&gt;
+&lt;p&gt;c) &amp;nbsp; n + 14 = 9&lt;/p&gt;
+&lt;p&gt;d) &amp;nbsp; n − 6 = −10&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 2. Del lenguaje cotidiano a la ecuación&lt;/h3&gt;
+&lt;p&gt;En la guía anterior aprendiste a representar cantidades mediante letras. Ahora usarás ese aprendizaje para escribir y resolver ecuaciones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✎ REPRESENTA Y RESUELVE:&lt;/strong&gt; en cada caso:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Representa el número desconocido con la letra &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Escribe la ecuación.&lt;/li&gt;
+&lt;li&gt;Resuélvela mostrando el procedimiento.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;a) ★ Un número aumentado en 9 es igual a 22.&lt;/p&gt;
+&lt;p&gt;b) ★ A un número se le restan 6 y se obtiene 15.&lt;/p&gt;
+&lt;p&gt;c) La suma de un número y 12 es igual a 7.&lt;/p&gt;
+&lt;p&gt;d) A un número se le restan 8 y se obtiene −3.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 3. Detecto y corrijo un error&lt;/h3&gt;
+&lt;p&gt;Camila intentó resolver la siguiente ecuación:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 5 = 17&lt;/p&gt;
+&lt;p&gt;Su procedimiento fue:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 5 − 5 = 17&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n = 17&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ ANALIZA Y CORRIGE:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Identifica el error del procedimiento.&lt;/li&gt;
+&lt;li&gt;Explica qué operación debe realizarse en los dos miembros para conservar la igualdad.&lt;/li&gt;
+&lt;li&gt;Corrige el procedimiento y encuentra el valor de &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Comprueba la solución en la ecuación inicial.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 4. Planteo y resuelvo situaciones&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; sigue estos pasos en cada situación:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Escribe qué representa &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Plantea la ecuación.&lt;/li&gt;
+&lt;li&gt;Resuélvela mostrando el procedimiento.&lt;/li&gt;
+&lt;li&gt;Escribe una respuesta final de acuerdo con la situación.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Situación A&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;★ En una competencia escolar, un equipo tenía cierta cantidad de puntos. Después obtuvo 9 puntos más y llegó a 24 puntos. ¿Cuántos puntos tenía antes?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Situación B&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En la mañana se registró una temperatura desconocida. Después disminuyó 5 °C y llegó a −2 °C. ¿Cuál era la temperatura inicial?&lt;/p&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 5. Anticipo antes de resolver&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ ANALIZA:&lt;/strong&gt; sin resolver completamente cada ecuación, escribe:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;La operación inversa que debes realizar en los dos miembros.&lt;/li&gt;
+&lt;li&gt;Si la solución será positiva o negativa.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;a) n + 9 = 4&lt;/p&gt;
+&lt;p&gt;b) n − 7 = −2&lt;/p&gt;
+&lt;p&gt;c) n + 6 = −10&lt;/p&gt;
+&lt;p&gt;d) n − 5 = −8&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 6. Completo un procedimiento&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ COMPLETA:&lt;/strong&gt; escribe los números que faltan para conservar la igualdad y encontrar la incógnita.&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;"&gt;Caso A&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 13 = 5&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 13 − 13 = 5 − ________&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n = ________&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;"&gt;Caso B&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n − 9 = −4&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n − 9 + ________ = −4 + 9&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n = ________&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 7. Compruebo soluciones&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ VERIFICA Y CORRIGE:&lt;/strong&gt; reemplaza el valor propuesto en cada ecuación. Escribe &lt;strong&gt;C&lt;/strong&gt; si hace verdadera la igualdad o &lt;strong&gt;I&lt;/strong&gt; si no la hace verdadera. Si escribes I, encuentra la solución correcta.&lt;/p&gt;
+&lt;p&gt;a) En &lt;span&gt;n + 7 = −3&lt;/span&gt;, se propone &lt;span&gt;n = −10&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;b) En &lt;span&gt;n − 6 = −11&lt;/span&gt;, se propone &lt;span&gt;n = −5&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;c) En &lt;span&gt;n + 12 = 5&lt;/span&gt;, se propone &lt;span&gt;n = 17&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;d) En &lt;span&gt;n − 8 = 4&lt;/span&gt;, se propone &lt;span&gt;n = −4&lt;/span&gt;.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 8. Construyo ecuaciones&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ CONSTRUYE Y COMPRUEBA:&lt;/strong&gt; completa o crea las ecuaciones según las condiciones dadas.&lt;/p&gt;
+&lt;p&gt;a) Una ecuación tiene la forma &lt;span&gt;n + 7 = b&lt;/span&gt; y su solución es &lt;span&gt;n = −4&lt;/span&gt;. Determina el valor de &lt;span&gt;b&lt;/span&gt; y escribe la ecuación completa.&lt;/p&gt;
+&lt;p&gt;b) Una ecuación tiene la forma &lt;span&gt;n − 6 = b&lt;/span&gt; y su solución es &lt;span&gt;n = 10&lt;/span&gt;. Determina el valor de &lt;span&gt;b&lt;/span&gt; y escribe la ecuación completa.&lt;/p&gt;
+&lt;p&gt;c) Crea una ecuación de la forma &lt;span&gt;n + a = b&lt;/span&gt; cuya solución sea un número entero negativo. Elige valores enteros para &lt;span&gt;a&lt;/span&gt; y &lt;span&gt;b&lt;/span&gt;, resuelve la ecuación y comprueba la solución.&lt;/p&gt;
+&lt;p&gt;d) Crea una ecuación de la forma &lt;span&gt;n − a = b&lt;/span&gt; cuya solución sea un número entero positivo. Elige valores enteros para &lt;span&gt;a&lt;/span&gt; y &lt;span&gt;b&lt;/span&gt;, resuelve la ecuación y comprueba la solución.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    #eval-ecuaciones-aditivas-g2 * {
+      box-sizing: border-box;
+    }
+
+    #eval-ecuaciones-aditivas-g2 .pregunta {
+      margin: 20px 0;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #999;
+    }
+
+    #eval-ecuaciones-aditivas-g2 .ecuacion {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      margin: 10px 0;
+    }
+
+    #eval-ecuaciones-aditivas-g2 .opcion {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    #eval-ecuaciones-aditivas-g2 button {
+      display: inline-block;
+      max-width: 100%;
+      margin-top: 10px;
+      padding: 9px 14px;
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      cursor: pointer;
+      white-space: normal;
+    }
+
+    #eval-ecuaciones-aditivas-g2 .retroalimentacion {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      #eval-ecuaciones-aditivas-g2 {
+        font-size: 12pt;
+      }
+
+      #eval-ecuaciones-aditivas-g2 button {
+        width: 100%;
+      }
+    }
+
+    @media print {
+      #eval-ecuaciones-aditivas-g2 button,
+      #eval-ecuaciones-aditivas-g2 .retroalimentacion {
+        display: none;
+      }
+    }
+  &lt;/style&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div id="eval-ecuaciones-aditivas-g2" style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;✎ EVALUACIÓN:&lt;/strong&gt; escribe en tu cuaderno el número de cada pregunta y la letra de la respuesta que elijas. En las preguntas marcadas con &lt;strong&gt;★ ✎ RESUELVE&lt;/strong&gt;, muestra también el procedimiento.&lt;/p&gt;
+&lt;p&gt;Responde primero en tu cuaderno. Después selecciona tu opción en la guía y pulsa &lt;strong&gt;Revisar respuesta&lt;/strong&gt;. Si encuentras un error, corrígelo antes de continuar.&lt;/p&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;★ Pregunta 1. Reconozco la solución de una ecuación&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;¿En cuál de las siguientes ecuaciones &lt;strong&gt;n = 6&lt;/strong&gt; es la solución?&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g2q1" value="A"&gt; A. n + 9 = 15 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q1" value="B"&gt; B. n − 9 = 15 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q1" value="C"&gt; C. n + 15 = 9 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q1" value="D"&gt; D. n − 6 = 9 &lt;/label&gt; &lt;button type="button" data-question="g2q1"&gt;Revisar respuesta&lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g2q1" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 2. Uso la operación inversa&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Encuentra la solución:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n − 7 = −2&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g2q2" value="A"&gt; A. n = −9 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q2" value="B"&gt; B. n = −5 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q2" value="C"&gt; C. n = 5 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q2" value="D"&gt; D. n = 9 &lt;/label&gt; &lt;button type="button" data-question="g2q2"&gt;Revisar respuesta&lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g2q2" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 3. Analizo y corrijo un procedimiento&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un estudiante comenzó a resolver así:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n + 9 = 4&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n + 9 − 9 = 4&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n = 4&lt;/p&gt;
+&lt;p&gt;¿Cuál es la corrección adecuada?&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g2q3" value="A"&gt; A. Restar 9 también en el segundo miembro; así se obtiene n = −5. &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q3" value="B"&gt; B. Sumar 9 únicamente al segundo miembro; así se obtiene n = 13. &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q3" value="C"&gt; C. No realizar ningún cambio porque n = 4 ya es la solución. &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q3" value="D"&gt; D. Cambiar directamente +9 por −9 y escribir n = −9. &lt;/label&gt; &lt;button type="button" data-question="g2q3"&gt;Revisar respuesta&lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g2q3" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 4. Del lenguaje cotidiano a la ecuación&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“A un número se le restan 6 y se obtiene −1”.&lt;/p&gt;
+&lt;p&gt;Si el número desconocido se representa con &lt;strong&gt;n&lt;/strong&gt;, ¿qué ecuación representa correctamente la situación?&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g2q4" value="A"&gt; A. n − 6 = −1 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q4" value="B"&gt; B. 6 − n = −1 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q4" value="C"&gt; C. n + 6 = −1 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q4" value="D"&gt; D. n − (−6) = −1 &lt;/label&gt; &lt;button type="button" data-question="g2q4"&gt;Revisar respuesta&lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g2q4" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 5. Aplico una ecuación en contexto&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Una temperatura inicial desconocida disminuyó 6 °C y llegó a −10 °C. ¿Cuál era la temperatura inicial?&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g2q5" value="A"&gt; A. −16 °C &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q5" value="B"&gt; B. −4 °C &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q5" value="C"&gt; C. 4 °C &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g2q5" value="D"&gt; D. 16 °C &lt;/label&gt; &lt;button type="button" data-question="g2q5"&gt;Revisar respuesta&lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g2q5" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: left;"&gt;&lt;span style="font-size: 12pt;"&gt;REFERENCIAS BIBLIOGRÁFICAS&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Ministerio de Educación Nacional. (2006). &lt;em&gt;Estándares básicos de competencias en matemáticas&lt;/em&gt;. MEN.&lt;/p&gt;
+&lt;p&gt;Ministerio de Educación Nacional. (2016). &lt;em&gt;Derechos básicos de aprendizaje (DBA) en matemáticas: grados 6° y 7°&lt;/em&gt;. MEN.&lt;/p&gt;
+&lt;p&gt;Ministerio de Educación Nacional. (2017). &lt;em&gt;Vamos a aprender Matemáticas 7. Libro del estudiante&lt;/em&gt;. MEN.&lt;/p&gt;
+&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de asignatura de Aritmética 7°&lt;/em&gt;. Cúcuta, Colombia.&lt;/p&gt;
+&lt;script&gt;
+    (function () {
+      const root = document.getElementById('eval-ecuaciones-aditivas-g2');
+      if (!root) return;
+
+      const mensajes = {
+        g2q1: {
+          A: 'Correcto. Al reemplazar n por 6 se obtiene 6 + 9 = 15. Los dos miembros tienen el mismo valor.',
+          B: 'Revisa mediante sustitución: 6 − 9 = −3, no 15.',
+          C: 'Revisa mediante sustitución: 6 + 15 = 21, no 9.',
+          D: 'Revisa mediante sustitución: 6 − 6 = 0, no 9.'
+        },
+
+        g2q2: {
+          A: 'Comprueba: −9 − 7 = −16. Por lo tanto, −9 no es solución.',
+          B: 'Comprueba: −5 − 7 = −12. Por lo tanto, −5 no es solución.',
+          C: 'Correcto. Al sumar 7 en los dos miembros se obtiene n = 5. Además, 5 − 7 = −2.',
+          D: 'Comprueba: 9 − 7 = 2, no −2.'
+        },
+
+        g2q3: {
+          A: 'Correcto. Para conservar la igualdad se resta 9 en los dos miembros: n + 9 − 9 = 4 − 9. Así, n = −5.',
+          B: 'Revisa la igualdad. No se puede realizar una operación únicamente en uno de los miembros.',
+          C: 'Comprueba n = 4: se obtiene 4 + 9 = 13, no 4. Por lo tanto, no es solución.',
+          D: 'No basta con cambiar un signo. La ecuación debe transformarse realizando la misma operación en ambos miembros.'
+        },
+
+        g2q4: {
+          A: 'Correcto. El número desconocido es n, se le restan 6 y el resultado es −1: n − 6 = −1.',
+          B: 'Revisa el orden. El enunciado dice que 6 se resta al número desconocido, no que el número se resta a 6.',
+          C: 'Revisa la operación indicada: el enunciado dice “se le restan 6”.',
+          D: 'Restar −6 equivale a sumar 6. Esa no es la operación descrita en la situación.'
+        },
+
+        g2q5: {
+          A: 'Comprueba: −16 − 6 = −22. Por lo tanto, −16 °C no es la temperatura inicial.',
+          B: 'Correcto. La situación se representa con n − 6 = −10. Al sumar 6 en ambos miembros se obtiene n = −4. Además, −4 − 6 = −10.',
+          C: 'Comprueba: 4 − 6 = −2, no −10.',
+          D: 'Comprueba: 16 − 6 = 10, no −10.'
+        }
+      };
+
+      const botones = root.querySelectorAll('button[data-question]');
+
+      botones.forEach(function (boton) {
+        boton.addEventListener('click', function () {
+          const pregunta = boton.getAttribute('data-question');
+          const seleccion = root.querySelector(
+            'input[name="' + pregunta + '"]:checked'
+          );
+          const salida = root.querySelector(
+            '[data-feedback="' + pregunta + '"]'
+          );
+
+          if (!seleccion) {
+            salida.textContent = 'Selecciona una opción antes de revisar.';
+            return;
+          }
+
+          salida.textContent = mensajes[pregunta][seleccion.value];
+        });
+      });
+    })();
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p class="clearfix"&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</htmlView><jsonProperties>{"ideviceId":"20260906140447052SPU","textInfoDurationInput":"","textInfoDurationTextInput":"Duración","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Agrupamiento","textTextarea":"&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;EXPLORACIÓN&lt;/h2&gt;\n&lt;p&gt;En la guía anterior usaste una letra para representar un número que puede cambiar o cuyo valor no se conoce. Ahora observa:&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;n + 5&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;n + 5 = 12&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. Observo y comparo&lt;/h3&gt;\n&lt;p&gt;Comenta con un compañero: ¿qué elemento nuevo aparece en la segunda expresión?&lt;/p&gt;\n&lt;p&gt;Ahora prueba estos valores:&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;n = 5     n = 7     n = 9&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COMPRUEBA:&lt;/strong&gt; reemplaza n por cada valor en &lt;span style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;n + 5 = 12&lt;/span&gt;. Escribe cuál valor hace que los dos lados tengan el mismo resultado.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. Un valor que no conocemos&lt;/h3&gt;\n&lt;p&gt;En un juego de preguntas, un estudiante tenía una cantidad de puntos que no conocemos. Después ganó 8 puntos y terminó con 20 puntos.&lt;/p&gt;\n&lt;p&gt;Usa la letra n para representar los puntos que tenía al inicio.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ REPRESENTA:&lt;/strong&gt; completa:&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;n + ____ = ____&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESPONDE:&lt;/strong&gt; ¿cuántos puntos tenía al inicio? Escribe la operación que utilizaste para encontrarlo.&lt;/p&gt;\n&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;ANALIZA&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. Comparo dos estrategias&lt;/h3&gt;\n&lt;p&gt;Se quiere encontrar el valor de n que hace correcta esta igualdad:&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;n + 6 = 15&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Estrategia A:&lt;/strong&gt; probar diferentes valores para n hasta encontrar uno que funcione.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Estrategia B:&lt;/strong&gt; calcular 15 − 6.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESPONDE:&lt;/strong&gt; ¿por qué la resta 15 − 6 permite encontrar directamente el valor que falta? Explica en una frase.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;✎ COMPRUEBA:&lt;/strong&gt; reemplaza n por el valor encontrado en &lt;span style=\"font-family: Arial, sans-serif; font-size: 12pt;\"&gt;n + 6 = 15&lt;/span&gt;. ¿Los dos lados tienen el mismo resultado?&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. Detecto y corrijo&lt;/h3&gt;\n&lt;p&gt;Un estudiante quiere encontrar el valor de n en:&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; text-align: center;\"&gt;n − 4 = 11&lt;/p&gt;\n&lt;p&gt;Él afirma: “n = 7, porque 11 − 4 = 7”.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COMPRUEBA:&lt;/strong&gt; reemplaza n por 7. ¿Se obtiene 11 en el lado izquierdo?&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ CORRIGE:&lt;/strong&gt; encuentra el valor de n que sí funciona y escribe la operación que utilizaste.&lt;/p&gt;\n&lt;hr /&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;\n&lt;p&gt;En los ejercicios anteriores buscaste números que hacen correcta una igualdad. Ahora vas a organizar esas ideas y aprender cómo resolver este tipo de situaciones.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;De una expresión a una ecuación&lt;/h3&gt;\n&lt;p&gt;En la guía anterior aprendiste que una letra puede representar un número. Observa la diferencia:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 5&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 5 = 12&lt;/p&gt;\n&lt;p&gt;&lt;span&gt;n + 5&lt;/span&gt; es una expresión algebraica. En cambio, &lt;span&gt;n + 5 = 12&lt;/span&gt; establece una igualdad y necesitamos encontrar qué valor de &lt;span&gt;n&lt;/span&gt; hace que esa igualdad sea verdadera.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Idea esencial:&lt;/strong&gt; Una ecuación es una igualdad entre dos expresiones matemáticas en la que aparece una o más cantidades desconocidas. La letra que representa la cantidad que se desea encontrar se llama &lt;strong&gt;incógnita&lt;/strong&gt;.&lt;/p&gt;\n&lt;p&gt;En esta guía trabajaremos ecuaciones con una sola incógnita.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Los miembros de una ecuación&lt;/h3&gt;\n&lt;p&gt;En una ecuación, las expresiones ubicadas a cada lado del signo igual se llaman &lt;strong&gt;miembros&lt;/strong&gt;.&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 6 = 15&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;Primer miembro: n + 6&lt;/li&gt;\n&lt;li&gt;Segundo miembro: 15&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;El signo &lt;strong&gt;=&lt;/strong&gt; indica que los dos miembros deben representar el mismo valor.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;¿Qué significa resolver una ecuación?&lt;/h3&gt;\n&lt;p&gt;Resolver una ecuación significa encontrar el valor de la incógnita que hace verdadera la igualdad.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Idea esencial:&lt;/strong&gt; La solución de una ecuación es el valor de la incógnita que, al reemplazarla, hace que los dos miembros tengan el mismo valor.&lt;/p&gt;\n&lt;p&gt;Por ejemplo, en la igualdad trabajada anteriormente:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 5 = 12&lt;/p&gt;\n&lt;p&gt;Si &lt;span&gt;n = 7&lt;/span&gt;:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;7 + 5 = 12&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;12 = 12&lt;/p&gt;\n&lt;p&gt;Por lo tanto, &lt;span&gt;n = 7&lt;/span&gt; es solución de la ecuación.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Mantener la igualdad&lt;/h3&gt;\n&lt;p&gt;Para encontrar una incógnita podemos transformar una ecuación sin cambiar su solución.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Regla fundamental:&lt;/strong&gt; Si sumamos o restamos la misma cantidad en los dos miembros de una ecuación, la igualdad se conserva.&lt;/p&gt;\n&lt;p&gt;Para dejar sola la incógnita usamos la operación inversa:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;La resta permite deshacer una suma.&lt;/li&gt;\n&lt;li&gt;La suma permite deshacer una resta.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;Dejar sola la incógnita en uno de los miembros también se llama &lt;strong&gt;aislar la incógnita&lt;/strong&gt;.&lt;/p&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; margin: 18px auto; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; margin: 18px auto; box-sizing: border-box;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin-bottom: 8px;\"&gt;Modelo de balanza: conservar la igualdad&lt;/h3&gt;\n&lt;p style=\"margin-top: 0;\"&gt;Observa cómo una balanza en equilibrio permite representar los dos miembros de una ecuación.&lt;/p&gt;\n&lt;svg viewbox=\"0 0 960 800\" width=\"100%\" role=\"img\" aria-labelledby=\"tituloBalanza descripcionBalanza\" style=\"display: block; max-width: 900px; height: auto; margin: 0 auto;\" xmlns=\"http://www.w3.org/2000/svg\"&gt; \n&lt;title id=\"tituloBalanza\"&gt;Modelo de balanza para la ecuación n más 6 igual a 15&lt;/title&gt;\n&lt;desc id=\"descripcionBalanza\"&gt; El primer momento representa la ecuación n más 6 igual a 15 mediante una balanza equilibrada. Después se restan 6 unidades en ambos miembros. El segundo momento muestra que se obtiene n igual a 9 y el equilibrio se mantiene. &lt;/desc&gt; &lt;!-- Fondo --&gt; &lt;rect x=\"10\" y=\"10\" width=\"940\" height=\"780\" rx=\"18\" fill=\"#ffffff\" stroke=\"#444444\" stroke-width=\"2\"&gt;&lt;/rect&gt; &lt;!-- Encabezado --&gt; &lt;text x=\"480\" y=\"55\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"28\" font-weight=\"700\" fill=\"#222222\"&gt; Modelo de balanza para una ecuación &lt;/text&gt; &lt;text x=\"480\" y=\"90\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"21\" fill=\"#333333\"&gt; Cada lado representa uno de los miembros. &lt;/text&gt; &lt;!-- MOMENTO 1 --&gt; &lt;text x=\"55\" y=\"140\" font-family=\"Arial, sans-serif\" font-size=\"23\" font-weight=\"700\" fill=\"#222222\"&gt; 1. Ecuación inicial &lt;/text&gt; &lt;text x=\"480\" y=\"180\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"31\" font-weight=\"700\" fill=\"#155f52\"&gt; n + 6 = 15 &lt;/text&gt; &lt;!-- Balanza 1 --&gt; &lt;line x1=\"230\" y1=\"235\" x2=\"730\" y2=\"235\" stroke=\"#333333\" stroke-width=\"8\" stroke-linecap=\"round\"&gt;&lt;/line&gt; &lt;circle cx=\"480\" cy=\"235\" r=\"8\" fill=\"#333333\"&gt;&lt;/circle&gt; &lt;line x1=\"480\" y1=\"235\" x2=\"480\" y2=\"345\" stroke=\"#333333\" stroke-width=\"8\"&gt;&lt;/line&gt; &lt;polygon points=\"480,320 430,380 530,380\" fill=\"#e5e5e5\" stroke=\"#333333\" stroke-width=\"4\"&gt;&lt;/polygon&gt; &lt;line x1=\"405\" y1=\"380\" x2=\"555\" y2=\"380\" stroke=\"#333333\" stroke-width=\"7\" stroke-linecap=\"round\"&gt;&lt;/line&gt; &lt;!-- Lado izquierdo --&gt; &lt;line x1=\"300\" y1=\"235\" x2=\"300\" y2=\"275\" stroke=\"#555555\" stroke-width=\"4\"&gt;&lt;/line&gt; &lt;rect x=\"215\" y=\"275\" width=\"170\" height=\"68\" rx=\"12\" fill=\"#eef8f5\" stroke=\"#155f52\" stroke-width=\"3\"&gt;&lt;/rect&gt; &lt;text x=\"300\" y=\"318\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"27\" font-weight=\"700\" fill=\"#222222\"&gt; n + 6 &lt;/text&gt; &lt;!-- Lado derecho --&gt; &lt;line x1=\"660\" y1=\"235\" x2=\"660\" y2=\"275\" stroke=\"#555555\" stroke-width=\"4\"&gt;&lt;/line&gt; &lt;rect x=\"575\" y=\"275\" width=\"170\" height=\"68\" rx=\"12\" fill=\"#eef8f5\" stroke=\"#155f52\" stroke-width=\"3\"&gt;&lt;/rect&gt; &lt;text x=\"660\" y=\"318\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"27\" font-weight=\"700\" fill=\"#222222\"&gt; 15 &lt;/text&gt; &lt;text x=\"300\" y=\"373\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"18\" fill=\"#444444\"&gt; Primer miembro &lt;/text&gt; &lt;text x=\"660\" y=\"373\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"18\" fill=\"#444444\"&gt; Segundo miembro &lt;/text&gt; &lt;!-- TRANSFORMACIÓN --&gt; &lt;rect x=\"105\" y=\"415\" width=\"750\" height=\"95\" rx=\"16\" fill=\"#f3f3f3\" stroke=\"#666666\" stroke-width=\"2\"&gt;&lt;/rect&gt; &lt;text x=\"480\" y=\"449\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"21\" font-weight=\"700\" fill=\"#222222\"&gt; Restamos 6 en ambos miembros &lt;/text&gt; &lt;text x=\"480\" y=\"488\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"28\" font-weight=\"700\" fill=\"#155f52\"&gt; n + 6 − 6 = 15 − 6 &lt;/text&gt; &lt;!-- Flecha --&gt; &lt;line x1=\"480\" y1=\"513\" x2=\"480\" y2=\"545\" stroke=\"#333333\" stroke-width=\"4\"&gt;&lt;/line&gt; &lt;polygon points=\"480,560 468,540 492,540\" fill=\"#333333\"&gt;&lt;/polygon&gt; &lt;!-- MOMENTO 2 --&gt; &lt;text x=\"55\" y=\"595\" font-family=\"Arial, sans-serif\" font-size=\"23\" font-weight=\"700\" fill=\"#222222\"&gt; 2. La incógnita queda aislada &lt;/text&gt; &lt;text x=\"480\" y=\"625\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"27\" font-weight=\"700\" fill=\"#155f52\"&gt; n = 9 &lt;/text&gt; &lt;!-- Balanza 2 --&gt; &lt;line x1=\"230\" y1=\"675\" x2=\"730\" y2=\"675\" stroke=\"#333333\" stroke-width=\"8\" stroke-linecap=\"round\"&gt;&lt;/line&gt; &lt;circle cx=\"480\" cy=\"675\" r=\"8\" fill=\"#333333\"&gt;&lt;/circle&gt; &lt;line x1=\"480\" y1=\"675\" x2=\"480\" y2=\"745\" stroke=\"#333333\" stroke-width=\"8\"&gt;&lt;/line&gt; &lt;polygon points=\"480,720 445,765 515,765\" fill=\"#e5e5e5\" stroke=\"#333333\" stroke-width=\"4\"&gt;&lt;/polygon&gt; &lt;!-- Lado izquierdo --&gt; &lt;line x1=\"300\" y1=\"675\" x2=\"300\" y2=\"705\" stroke=\"#555555\" stroke-width=\"4\"&gt;&lt;/line&gt; &lt;rect x=\"225\" y=\"705\" width=\"150\" height=\"55\" rx=\"12\" fill=\"#eef8f5\" stroke=\"#155f52\" stroke-width=\"3\"&gt;&lt;/rect&gt; &lt;text x=\"300\" y=\"741\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"28\" font-weight=\"700\" fill=\"#222222\"&gt; n &lt;/text&gt; &lt;!-- Lado derecho --&gt; &lt;line x1=\"660\" y1=\"675\" x2=\"660\" y2=\"705\" stroke=\"#555555\" stroke-width=\"4\"&gt;&lt;/line&gt; &lt;rect x=\"585\" y=\"705\" width=\"150\" height=\"55\" rx=\"12\" fill=\"#eef8f5\" stroke=\"#155f52\" stroke-width=\"3\"&gt;&lt;/rect&gt; &lt;text x=\"660\" y=\"741\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"28\" font-weight=\"700\" fill=\"#222222\"&gt; 9 &lt;/text&gt; &lt;/svg&gt;\n&lt;p style=\"margin-top: 12px;\"&gt;&lt;strong&gt;★ OBSERVA:&lt;/strong&gt; después de la transformación, la balanza continúa equilibrada y obtenemos &lt;span&gt;n = 9&lt;/span&gt;.&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Ecuación con una suma&lt;/h3&gt;\n&lt;p&gt;Retomemos una igualdad analizada anteriormente:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 6 = 15&lt;/p&gt;\n&lt;p&gt;Como a &lt;span&gt;n&lt;/span&gt; se le suma 6, restamos 6 en los dos miembros:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 6 − 6 = 15 − 6&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n = 9&lt;/p&gt;\n&lt;p&gt;Comprobamos la solución en la ecuación inicial:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;9 + 6 = 15&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;15 = 15&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Ecuación con una resta&lt;/h3&gt;\n&lt;p&gt;Ahora retomemos el caso que corregiste en ANALIZA:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n − 4 = 11&lt;/p&gt;\n&lt;p&gt;Como a &lt;span&gt;n&lt;/span&gt; se le resta 4, sumamos 4 en los dos miembros:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n − 4 + 4 = 11 + 4&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n = 15&lt;/p&gt;\n&lt;p&gt;Comprobamos:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;15 − 4 = 11&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;11 = 11&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Ejemplos esenciales:&lt;/strong&gt;&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 6 = 15  →  n = 9&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n − 4 = 11  →  n = 15&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Procedimiento base&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Procedimiento base:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Identifica la incógnita y la operación que la acompaña.&lt;/li&gt;\n&lt;li&gt;Usa la operación inversa en los dos miembros para aislar la incógnita.&lt;/li&gt;\n&lt;li&gt;Simplifica hasta encontrar el valor de la incógnita.&lt;/li&gt;\n&lt;li&gt;Comprueba la solución reemplazando el valor encontrado en la ecuación inicial.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;En las ecuaciones de estructura aditiva que estudiaremos aparecen formas como:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + a = b&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n − a = b&lt;/p&gt;\n&lt;p&gt;donde &lt;span&gt;n&lt;/span&gt; es la incógnita y &lt;span&gt;a&lt;/span&gt; y &lt;span&gt;b&lt;/span&gt; representan cantidades conocidas.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;✎ COMPLETA:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;a) Para aislar &lt;span&gt;n&lt;/span&gt; en &lt;span&gt;n + 8 = 13&lt;/span&gt;, debo __________ 8 en los dos miembros.&lt;/p&gt;\n&lt;p&gt;b) Para aislar &lt;span&gt;n&lt;/span&gt; en &lt;span&gt;n − 5 = 9&lt;/span&gt;, debo __________ 5 en los dos miembros.&lt;/p&gt;\n&lt;hr /&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;\n&lt;p&gt;Ahora vas a aplicar lo aprendido sobre ecuaciones de estructura aditiva. Resolverás ecuaciones, representarás situaciones y comprobarás si las soluciones obtenidas son correctas.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 1. Resuelvo y compruebo&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; encuentra el valor de &lt;span&gt;n&lt;/span&gt;. Muestra la operación que realizas en los dos miembros. En los ejercicios marcados con ★, comprueba la solución reemplazando el valor de &lt;span&gt;n&lt;/span&gt; en la ecuación inicial.&lt;/p&gt;\n&lt;p&gt;a) ★   n + 8 = 21&lt;/p&gt;\n&lt;p&gt;b) ★   n − 7 = 10&lt;/p&gt;\n&lt;p&gt;c)   n + 14 = 9&lt;/p&gt;\n&lt;p&gt;d)   n − 6 = −10&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 2. Del lenguaje cotidiano a la ecuación&lt;/h3&gt;\n&lt;p&gt;En la guía anterior aprendiste a representar cantidades mediante letras. Ahora usarás ese aprendizaje para escribir y resolver ecuaciones.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;✎ REPRESENTA Y RESUELVE:&lt;/strong&gt; en cada caso:&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Representa el número desconocido con la letra &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;\n&lt;li&gt;Escribe la ecuación.&lt;/li&gt;\n&lt;li&gt;Resuélvela mostrando el procedimiento.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;a) ★ Un número aumentado en 9 es igual a 22.&lt;/p&gt;\n&lt;p&gt;b) ★ A un número se le restan 6 y se obtiene 15.&lt;/p&gt;\n&lt;p&gt;c) La suma de un número y 12 es igual a 7.&lt;/p&gt;\n&lt;p&gt;d) A un número se le restan 8 y se obtiene −3.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 3. Detecto y corrijo un error&lt;/h3&gt;\n&lt;p&gt;Camila intentó resolver la siguiente ecuación:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 5 = 17&lt;/p&gt;\n&lt;p&gt;Su procedimiento fue:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 5 − 5 = 17&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n = 17&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ ANALIZA Y CORRIGE:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Identifica el error del procedimiento.&lt;/li&gt;\n&lt;li&gt;Explica qué operación debe realizarse en los dos miembros para conservar la igualdad.&lt;/li&gt;\n&lt;li&gt;Corrige el procedimiento y encuentra el valor de &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;\n&lt;li&gt;Comprueba la solución en la ecuación inicial.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 4. Planteo y resuelvo situaciones&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; sigue estos pasos en cada situación:&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Escribe qué representa &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;\n&lt;li&gt;Plantea la ecuación.&lt;/li&gt;\n&lt;li&gt;Resuélvela mostrando el procedimiento.&lt;/li&gt;\n&lt;li&gt;Escribe una respuesta final de acuerdo con la situación.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;&lt;strong&gt;Situación A&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;★ En una competencia escolar, un equipo tenía cierta cantidad de puntos. Después obtuvo 9 puntos más y llegó a 24 puntos. ¿Cuántos puntos tenía antes?&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Situación B&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;En la mañana se registró una temperatura desconocida. Después disminuyó 5 °C y llegó a −2 °C. ¿Cuál era la temperatura inicial?&lt;/p&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 5. Anticipo antes de resolver&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ ANALIZA:&lt;/strong&gt; sin resolver completamente cada ecuación, escribe:&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;La operación inversa que debes realizar en los dos miembros.&lt;/li&gt;\n&lt;li&gt;Si la solución será positiva o negativa.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;a) n + 9 = 4&lt;/p&gt;\n&lt;p&gt;b) n − 7 = −2&lt;/p&gt;\n&lt;p&gt;c) n + 6 = −10&lt;/p&gt;\n&lt;p&gt;d) n − 5 = −8&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 6. Completo un procedimiento&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ COMPLETA:&lt;/strong&gt; escribe los números que faltan para conservar la igualdad y encontrar la incógnita.&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;\"&gt;Caso A&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 13 = 5&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 13 − 13 = 5 − ________&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n = ________&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;\"&gt;Caso B&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n − 9 = −4&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n − 9 + ________ = −4 + 9&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n = ________&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 7. Compruebo soluciones&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ VERIFICA Y CORRIGE:&lt;/strong&gt; reemplaza el valor propuesto en cada ecuación. Escribe &lt;strong&gt;C&lt;/strong&gt; si hace verdadera la igualdad o &lt;strong&gt;I&lt;/strong&gt; si no la hace verdadera. Si escribes I, encuentra la solución correcta.&lt;/p&gt;\n&lt;p&gt;a) En &lt;span&gt;n + 7 = −3&lt;/span&gt;, se propone &lt;span&gt;n = −10&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;b) En &lt;span&gt;n − 6 = −11&lt;/span&gt;, se propone &lt;span&gt;n = −5&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;c) En &lt;span&gt;n + 12 = 5&lt;/span&gt;, se propone &lt;span&gt;n = 17&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;d) En &lt;span&gt;n − 8 = 4&lt;/span&gt;, se propone &lt;span&gt;n = −4&lt;/span&gt;.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 8. Construyo ecuaciones&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ CONSTRUYE Y COMPRUEBA:&lt;/strong&gt; completa o crea las ecuaciones según las condiciones dadas.&lt;/p&gt;\n&lt;p&gt;a) Una ecuación tiene la forma &lt;span&gt;n + 7 = b&lt;/span&gt; y su solución es &lt;span&gt;n = −4&lt;/span&gt;. Determina el valor de &lt;span&gt;b&lt;/span&gt; y escribe la ecuación completa.&lt;/p&gt;\n&lt;p&gt;b) Una ecuación tiene la forma &lt;span&gt;n − 6 = b&lt;/span&gt; y su solución es &lt;span&gt;n = 10&lt;/span&gt;. Determina el valor de &lt;span&gt;b&lt;/span&gt; y escribe la ecuación completa.&lt;/p&gt;\n&lt;p&gt;c) Crea una ecuación de la forma &lt;span&gt;n + a = b&lt;/span&gt; cuya solución sea un número entero negativo. Elige valores enteros para &lt;span&gt;a&lt;/span&gt; y &lt;span&gt;b&lt;/span&gt;, resuelve la ecuación y comprueba la solución.&lt;/p&gt;\n&lt;p&gt;d) Crea una ecuación de la forma &lt;span&gt;n − a = b&lt;/span&gt; cuya solución sea un número entero positivo. Elige valores enteros para &lt;span&gt;a&lt;/span&gt; y &lt;span&gt;b&lt;/span&gt;, resuelve la ecuación y comprueba la solución.&lt;/p&gt;\n&lt;/div&gt;\n&lt;hr /&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n    #eval-ecuaciones-aditivas-g2 * {\n      box-sizing: border-box;\n    }\n\n    #eval-ecuaciones-aditivas-g2 .pregunta {\n      margin: 20px 0;\n      padding-bottom: 18px;\n      border-bottom: 1px solid #999;\n    }\n\n    #eval-ecuaciones-aditivas-g2 .ecuacion {\n      text-align: center;\n      font-family: Arial, sans-serif;\n      font-size: 12pt;\n      margin: 10px 0;\n    }\n\n    #eval-ecuaciones-aditivas-g2 .opcion {\n      display: block;\n      width: 100%;\n      margin: 8px 0;\n      cursor: pointer;\n    }\n\n    #eval-ecuaciones-aditivas-g2 button {\n      display: inline-block;\n      max-width: 100%;\n      margin-top: 10px;\n      padding: 9px 14px;\n      font-family: Arial, sans-serif;\n      font-size: 12pt;\n      cursor: pointer;\n      white-space: normal;\n    }\n\n    #eval-ecuaciones-aditivas-g2 .retroalimentacion {\n      margin-top: 10px;\n    }\n\n    @media (max-width: 600px) {\n      #eval-ecuaciones-aditivas-g2 {\n        font-size: 12pt;\n      }\n\n      #eval-ecuaciones-aditivas-g2 button {\n        width: 100%;\n      }\n    }\n\n    @media print {\n      #eval-ecuaciones-aditivas-g2 button,\n      #eval-ecuaciones-aditivas-g2 .retroalimentacion {\n        display: none;\n      }\n    }\n  &lt;/style&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div id=\"eval-ecuaciones-aditivas-g2\" style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;✎ EVALUACIÓN:&lt;/strong&gt; escribe en tu cuaderno el número de cada pregunta y la letra de la respuesta que elijas. En las preguntas marcadas con &lt;strong&gt;★ ✎ RESUELVE&lt;/strong&gt;, muestra también el procedimiento.&lt;/p&gt;\n&lt;p&gt;Responde primero en tu cuaderno. Después selecciona tu opción en la guía y pulsa &lt;strong&gt;Revisar respuesta&lt;/strong&gt;. Si encuentras un error, corrígelo antes de continuar.&lt;/p&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;★ Pregunta 1. Reconozco la solución de una ecuación&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;¿En cuál de las siguientes ecuaciones &lt;strong&gt;n = 6&lt;/strong&gt; es la solución?&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q1\" value=\"A\" /&gt; A. n + 9 = 15 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q1\" value=\"B\" /&gt; B. n − 9 = 15 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q1\" value=\"C\" /&gt; C. n + 15 = 9 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q1\" value=\"D\" /&gt; D. n − 6 = 9 &lt;/label&gt; &lt;button type=\"button\" data-question=\"g2q1\"&gt;Revisar respuesta&lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g2q1\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 2. Uso la operación inversa&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Encuentra la solución:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n − 7 = −2&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q2\" value=\"A\" /&gt; A. n = −9 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q2\" value=\"B\" /&gt; B. n = −5 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q2\" value=\"C\" /&gt; C. n = 5 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q2\" value=\"D\" /&gt; D. n = 9 &lt;/label&gt; &lt;button type=\"button\" data-question=\"g2q2\"&gt;Revisar respuesta&lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g2q2\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 3. Analizo y corrijo un procedimiento&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Un estudiante comenzó a resolver así:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n + 9 = 4&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n + 9 − 9 = 4&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n = 4&lt;/p&gt;\n&lt;p&gt;¿Cuál es la corrección adecuada?&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q3\" value=\"A\" /&gt; A. Restar 9 también en el segundo miembro; así se obtiene n = −5. &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q3\" value=\"B\" /&gt; B. Sumar 9 únicamente al segundo miembro; así se obtiene n = 13. &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q3\" value=\"C\" /&gt; C. No realizar ningún cambio porque n = 4 ya es la solución. &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q3\" value=\"D\" /&gt; D. Cambiar directamente +9 por −9 y escribir n = −9. &lt;/label&gt; &lt;button type=\"button\" data-question=\"g2q3\"&gt;Revisar respuesta&lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g2q3\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 4. Del lenguaje cotidiano a la ecuación&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;“A un número se le restan 6 y se obtiene −1”.&lt;/p&gt;\n&lt;p&gt;Si el número desconocido se representa con &lt;strong&gt;n&lt;/strong&gt;, ¿qué ecuación representa correctamente la situación?&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q4\" value=\"A\" /&gt; A. n − 6 = −1 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q4\" value=\"B\" /&gt; B. 6 − n = −1 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q4\" value=\"C\" /&gt; C. n + 6 = −1 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q4\" value=\"D\" /&gt; D. n − (−6) = −1 &lt;/label&gt; &lt;button type=\"button\" data-question=\"g2q4\"&gt;Revisar respuesta&lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g2q4\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 5. Aplico una ecuación en contexto&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Una temperatura inicial desconocida disminuyó 6 °C y llegó a −10 °C. ¿Cuál era la temperatura inicial?&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q5\" value=\"A\" /&gt; A. −16 °C &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q5\" value=\"B\" /&gt; B. −4 °C &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q5\" value=\"C\" /&gt; C. 4 °C &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g2q5\" value=\"D\" /&gt; D. 16 °C &lt;/label&gt; &lt;button type=\"button\" data-question=\"g2q5\"&gt;Revisar respuesta&lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g2q5\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: left;\"&gt;&lt;span style=\"font-size: 12pt;\"&gt;REFERENCIAS BIBLIOGRÁFICAS&lt;/span&gt;&lt;/h2&gt;\n&lt;p&gt;Ministerio de Educación Nacional. (2006). &lt;em&gt;Estándares básicos de competencias en matemáticas&lt;/em&gt;. MEN.&lt;/p&gt;\n&lt;p&gt;Ministerio de Educación Nacional. (2016). &lt;em&gt;Derechos básicos de aprendizaje (DBA) en matemáticas: grados 6° y 7°&lt;/em&gt;. MEN.&lt;/p&gt;\n&lt;p&gt;Ministerio de Educación Nacional. (2017). &lt;em&gt;Vamos a aprender Matemáticas 7. Libro del estudiante&lt;/em&gt;. MEN.&lt;/p&gt;\n&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de asignatura de Aritmética 7°&lt;/em&gt;. Cúcuta, Colombia.&lt;/p&gt;\n&lt;script&gt;\n    (function () {\n      const root = document.getElementById('eval-ecuaciones-aditivas-g2');\n      if (!root) return;\n\n      const mensajes = {\n        g2q1: {\n          A: 'Correcto. Al reemplazar n por 6 se obtiene 6 + 9 = 15. Los dos miembros tienen el mismo valor.',\n          B: 'Revisa mediante sustitución: 6 − 9 = −3, no 15.',\n          C: 'Revisa mediante sustitución: 6 + 15 = 21, no 9.',\n          D: 'Revisa mediante sustitución: 6 − 6 = 0, no 9.'\n        },\n\n        g2q2: {\n          A: 'Comprueba: −9 − 7 = −16. Por lo tanto, −9 no es solución.',\n          B: 'Comprueba: −5 − 7 = −12. Por lo tanto, −5 no es solución.',\n          C: 'Correcto. Al sumar 7 en los dos miembros se obtiene n = 5. Además, 5 − 7 = −2.',\n          D: 'Comprueba: 9 − 7 = 2, no −2.'\n        },\n\n        g2q3: {\n          A: 'Correcto. Para conservar la igualdad se resta 9 en los dos miembros: n + 9 − 9 = 4 − 9. Así, n = −5.',\n          B: 'Revisa la igualdad. No se puede realizar una operación únicamente en uno de los miembros.',\n          C: 'Comprueba n = 4: se obtiene 4 + 9 = 13, no 4. Por lo tanto, no es solución.',\n          D: 'No basta con cambiar un signo. La ecuación debe transformarse realizando la misma operación en ambos miembros.'\n        },\n\n        g2q4: {\n          A: 'Correcto. El número desconocido es n, se le restan 6 y el resultado es −1: n − 6 = −1.',\n          B: 'Revisa el orden. El enunciado dice que 6 se resta al número desconocido, no que el número se resta a 6.',\n          C: 'Revisa la operación indicada: el enunciado dice “se le restan 6”.',\n          D: 'Restar −6 equivale a sumar 6. Esa no es la operación descrita en la situación.'\n        },\n\n        g2q5: {\n          A: 'Comprueba: −16 − 6 = −22. Por lo tanto, −16 °C no es la temperatura inicial.',\n          B: 'Correcto. La situación se representa con n − 6 = −10. Al sumar 6 en ambos miembros se obtiene n = −4. Además, −4 − 6 = −10.',\n          C: 'Comprueba: 4 − 6 = −2, no −10.',\n          D: 'Comprueba: 16 − 6 = 10, no −10.'\n        }\n      };\n\n      const botones = root.querySelectorAll('button[data-question]');\n\n      botones.forEach(function (boton) {\n        boton.addEventListener('click', function () {\n          const pregunta = boton.getAttribute('data-question');\n          const seleccion = root.querySelector(\n            'input[name=\"' + pregunta + '\"]:checked'\n          );\n          const salida = root.querySelector(\n            '[data-feedback=\"' + pregunta + '\"]'\n          );\n\n          if (!seleccion) {\n            salida.textContent = 'Selecciona una opción antes de revisar.';\n            return;\n          }\n\n          salida.textContent = mensajes[pregunta][seleccion.value];\n        });\n      });\n    })();\n  &lt;/script&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;","textFeedbackInput":"Mostrar retroalimentación","textFeedbackTextarea":""}</jsonProperties><odeComponentsOrder>1</odeComponentsOrder><odeComponentsProperties><odeComponentsProperty><key>visibility</key><value>true</value></odeComponentsProperty><odeComponentsProperty><key>teacherOnly</key><value>false</value></odeComponentsProperty><odeComponentsProperty><key>identifier</key><value/></odeComponentsProperty><odeComponentsProperty><key>cssClass</key><value/></odeComponentsProperty></odeComponentsProperties></odeComponent></odeComponents></odePagStructure></odePagStructures></odeNavStructure></odeNavStructures></ode>

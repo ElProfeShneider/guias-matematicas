@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ode><userPreferences><userPreference><key>theme</key><value>base</value></userPreference></userPreferences><odeResources><odeResource><key>odeVersionId</key><value>20260906220511JJVQMQ</value></odeResource><odeResource><key>odeId</key><value>20260906205717MPVMAD</value></odeResource><odeResource><key>odeVersionName</key><value>0</value></odeResource><odeResource><key>isDownload</key><value>true</value></odeResource><odeResource><key>eXeVersion</key><value>v3.0.2</value></odeResource></odeResources><odeProperties><odeProperty><key>pp_title</key><value>Ecuaciones con números racionales</value></odeProperty><odeProperty><key>pp_subtitle</key><value>Uso de números racionales para resolver y comprobar ecuaciones</value></odeProperty><odeProperty><key>pp_lang</key><value>es</value></odeProperty><odeProperty><key>pp_author</key><value>Shneider Alexis Becerra Pabón</value></odeProperty><odeProperty><key>license</key><value>creative commons: attribution - share alike 4.0</value></odeProperty><odeProperty><key>pp_description</key><value>Guía de aprendizaje para grado séptimo que da continuidad al estudio de las ecuaciones con estructura aditiva y multiplicativa y aborda la resolución de ecuaciones de una variable en las que intervienen números racionales, utilizando procedimientos adecuados para hallar y comprobar valores desconocidos.</value></odeProperty><odeProperty><key>exportSource</key><value>true</value></odeProperty><odeProperty><key>pp_addExeLink</key><value>true</value></odeProperty><odeProperty><key>pp_addPagination</key><value>false</value></odeProperty><odeProperty><key>pp_addSearchBox</key><value>false</value></odeProperty><odeProperty><key>pp_addAccessibilityToolbar</key><value>false</value></odeProperty><odeProperty><key>pp_extraHeadContent</key><value/></odeProperty><odeProperty><key>footer</key><value/></odeProperty></odeProperties><odeNavStructures><odeNavStructure><odePageId>20260906220512FKBQPN</odePageId><odeParentPageId/><pageName>Guía de aprendizaje</pageName><odeNavStructureOrder>1</odeNavStructureOrder><odeNavStructureProperties><odeNavStructureProperty><key>titleNode</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>hidePageTitle</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>titleHtml</key><value/></odeNavStructureProperty><odeNavStructureProperty><key>editableInPage</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>titlePage</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>visibility</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>highlight</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>description</key><value/></odeNavStructureProperty></odeNavStructureProperties><odePagStructures><odePagStructure><odePageId>20260906220512FKBQPN</odePageId><odeBlockId>20260906220512JZYOHT</odeBlockId><blockName>7.°</blockName><iconName/><odePagStructureOrder>1</odePagStructureOrder><odePagStructureProperties><odePagStructureProperty><key>visibility</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>teacherOnly</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>allowToggle</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>minimized</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>identifier</key><value/></odePagStructureProperty><odePagStructureProperty><key>cssClass</key><value/></odePagStructureProperty></odePagStructureProperties><odeComponents><odeComponent><odePageId>20260906220512FKBQPN</odePageId><odeBlockId>20260906220512JZYOHT</odeBlockId><odeIdeviceId>202609061605165468JU</odeIdeviceId><odeIdeviceTypeName>text</odeIdeviceTypeName><htmlView>&lt;div class="exe-text-template"&gt;&lt;div class="textIdeviceContent"&gt;
+            &lt;div class="exe-text-activity"&gt;
+                &lt;div&gt;&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;EXPLORACIÓN&lt;/h2&gt;
+&lt;p&gt;Ya sabes utilizar operaciones inversas para encontrar una incógnita. Ahora observa qué ocurre cuando en una ecuación aparecen fracciones o decimales.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. Uso lo que ya sé&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE:&lt;/strong&gt; encuentra el valor de &lt;span&gt;n&lt;/span&gt; en cada ecuación usando una estrategia que ya conozcas. Después comprueba la solución.&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;a) n + &lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 4px;"&gt;1&lt;/span&gt; &lt;span style="padding: 0 4px;"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 4px;"&gt;5&lt;/span&gt; &lt;span style="padding: 0 4px;"&gt;4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;b) &lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 4px;"&gt;1&lt;/span&gt; &lt;span style="padding: 0 4px;"&gt;2&lt;/span&gt; &lt;/span&gt; n = 3&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. Interpreto un coeficiente decimal&lt;/h3&gt;
+&lt;p&gt;Observa la ecuación:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;0,5n = 4&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✎ RESPONDE:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;¿Qué significa &lt;span&gt;0,5n&lt;/span&gt;?&lt;/li&gt;
+&lt;li&gt;Sin aplicar todavía un procedimiento formal, ¿qué valor de &lt;span&gt;n&lt;/span&gt; hace verdadera la igualdad?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;ANALIZA&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. Reconozco qué cambia y qué se mantiene&lt;/h3&gt;
+&lt;p&gt;Compara las dos ecuaciones:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + 4 = 7&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;n + &lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 4px;"&gt;3&lt;/span&gt; &lt;span style="padding: 0 4px;"&gt;4&lt;/span&gt; &lt;/span&gt; = &lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 4px;"&gt;7&lt;/span&gt; &lt;span style="padding: 0 4px;"&gt;4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✎ COMPARA:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;¿Qué operación se realiza con &lt;span&gt;n&lt;/span&gt; en las dos ecuaciones y qué operación inversa permite deshacerla?&lt;/li&gt;
+&lt;li&gt;¿Qué diferencia encuentras entre los números que aparecen en las dos ecuaciones?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. Analizo una estrategia incorrecta&lt;/h3&gt;
+&lt;p&gt;Para resolver &lt;span&gt;0,4n = 2,8&lt;/span&gt;, un estudiante afirma:&lt;/p&gt;
+&lt;p&gt;“Divido 2,8 entre 4 y obtengo &lt;span&gt;n = 0,7&lt;/span&gt;”.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ ANALIZA:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Sustituye &lt;span&gt;n = 0,7&lt;/span&gt; en la ecuación. ¿La igualdad se cumple?&lt;/li&gt;
+&lt;li&gt;¿Qué operación debe realizarse en los dos miembros para deshacer la multiplicación por &lt;span&gt;0,4&lt;/span&gt;?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;hr&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    #g4-racionales-conoce * {
+      box-sizing:border-box;
+    }
+
+    #g4-racionales-conoce .fraccion {
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      vertical-align:middle;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+      line-height:1.05;
+      margin:0 2px;
+    }
+
+    #g4-racionales-conoce .numerador {
+      border-bottom:1px solid currentColor;
+      padding:0 4px;
+    }
+
+    #g4-racionales-conoce .denominador {
+      padding:0 4px;
+    }
+
+    #g4-racionales-conoce .ecuacion {
+      text-align:center;
+      margin:10px 0;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+    }
+  &lt;/style&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;
+&lt;p&gt;En ANALIZA reconociste que para deshacer la multiplicación por &lt;span&gt;0,4&lt;/span&gt; es necesario trabajar con el número completo &lt;span&gt;0,4&lt;/span&gt;. Ahora aplicarás las operaciones inversas cuando en una ecuación intervienen fracciones o decimales.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Ecuaciones con números racionales&lt;/h3&gt;
+&lt;p&gt;En esta guía trabajaremos ecuaciones que contienen números racionales representados mediante fracciones o decimales. Estos pueden aparecer como cantidades que se suman o restan, o como coeficientes que multiplican la incógnita.&lt;/p&gt;
+&lt;p&gt;Cuando un número racional multiplica a la incógnita, ese número es su coeficiente. Por ejemplo, en &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt;n = 6, el coeficiente de &lt;span&gt;n&lt;/span&gt; es &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Idea esencial:&lt;/strong&gt; Las operaciones inversas estudiadas anteriormente también permiten resolver ecuaciones con números racionales. Para conservar la misma solución, debemos realizar la misma operación en los dos miembros de la ecuación. Si multiplicamos o dividimos, el número utilizado debe ser distinto de cero.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Cuando aparece una suma o una resta&lt;/h3&gt;
+&lt;p&gt;El procedimiento de las ecuaciones aditivas se mantiene aunque las cantidades sean fracciones o decimales.&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n + &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;5&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Restamos &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt; en los dos miembros:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;5&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt; − &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;5&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt; − &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;4&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;1&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Comprobación:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;1&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt; + &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;5&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Cuando el coeficiente es una fracción&lt;/h3&gt;
+&lt;p&gt;Dos números distintos de cero son recíprocos cuando su producto es &lt;span&gt;1&lt;/span&gt;. Por ejemplo, el recíproco de &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt; es &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;4&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;, porque su producto es &lt;span&gt;1&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Regla:&lt;/strong&gt; si la incógnita está multiplicada por una fracción distinta de cero, podemos multiplicar los dos miembros por el recíproco de esa fracción para aislarla.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Ejemplo esencial:&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt;n = 6&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;4&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt; × &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt;n = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;4&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt; × 6&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n = 8&lt;/p&gt;
+&lt;p&gt;Comprobación:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt; × 8 = 6&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Cuando se combinan dos operaciones&lt;/h3&gt;
+&lt;p&gt;Algunas ecuaciones combinan las estructuras aditiva y multiplicativa estudiadas anteriormente. Por ejemplo:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;an + b = c&lt;/p&gt;
+&lt;p&gt;En esta expresión, &lt;span&gt;a&lt;/span&gt;, &lt;span&gt;b&lt;/span&gt; y &lt;span&gt;c&lt;/span&gt; pueden ser números racionales y &lt;span&gt;a ≠ 0&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Procedimiento base:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Identifica el término que contiene la incógnita.&lt;/li&gt;
+&lt;li&gt;Deshaz primero la suma o la resta realizando la misma operación en los dos miembros.&lt;/li&gt;
+&lt;li&gt;Deshaz después la multiplicación realizando la operación inversa en los dos miembros.&lt;/li&gt;
+&lt;li&gt;Simplifica hasta dejar la incógnita aislada.&lt;/li&gt;
+&lt;li&gt;Comprueba la solución en la ecuación original.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Ejemplo esencial:&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,5n + 1,5 = 4&lt;/p&gt;
+&lt;p&gt;Primero restamos &lt;span&gt;1,5&lt;/span&gt; en los dos miembros:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,5n + 1,5 − 1,5 = 4 − 1,5&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,5n = 2,5&lt;/p&gt;
+&lt;p&gt;Después dividimos los dos miembros entre &lt;span&gt;0,5&lt;/span&gt;:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;0,5n&lt;/span&gt; &lt;span class="denominador"&gt;0,5&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2,5&lt;/span&gt; &lt;span class="denominador"&gt;0,5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n = 5&lt;/p&gt;
+&lt;p&gt;Comprobación:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,5 × 5 + 1,5 = 4&lt;/p&gt;
+&lt;p class="ecuacion"&gt;2,5 + 1,5 = 4&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Conexión con relaciones y patrones&lt;/h3&gt;
+&lt;p&gt;Una expresión de la forma &lt;span&gt;y = ax + b&lt;/span&gt; permite representar una relación entre dos cantidades. Si &lt;span&gt;x&lt;/span&gt; representa una posición, los valores obtenidos para &lt;span&gt;y&lt;/span&gt; pueden formar un patrón.&lt;/p&gt;
+&lt;p&gt;Observa:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;y = 0,5x + 1,5&lt;/p&gt;
+&lt;p&gt;Para &lt;span&gt;x = 1&lt;/span&gt;, &lt;span&gt;y = 2&lt;/span&gt;.&lt;br&gt;Para &lt;span&gt;x = 2&lt;/span&gt;, &lt;span&gt;y = 2,5&lt;/span&gt;.&lt;br&gt;Para &lt;span&gt;x = 3&lt;/span&gt;, &lt;span&gt;y = 3&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Cada vez que &lt;span&gt;x&lt;/span&gt; aumenta una unidad, &lt;span&gt;y&lt;/span&gt; aumenta &lt;span&gt;0,5&lt;/span&gt;. Si queremos saber para qué valor de &lt;span&gt;x&lt;/span&gt; se obtiene &lt;span&gt;y = 4&lt;/span&gt;, planteamos:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,5x + 1,5 = 4&lt;/p&gt;
+&lt;p class="ecuacion"&gt;x = 5&lt;/p&gt;
+&lt;p&gt;De esta manera, una ecuación también puede ayudarnos a encontrar una cantidad desconocida dentro de una relación o un patrón.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Verifico lo aprendido&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ COMPLETA:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;a) Para aislar &lt;span&gt;n&lt;/span&gt; en &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;5&lt;/span&gt; &lt;/span&gt;n = 6, puedo multiplicar los dos miembros por &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;______&lt;/span&gt; &lt;span class="denominador"&gt;______&lt;/span&gt; &lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;b) Para resolver &lt;span&gt;0,3n + 0,6 = 1,8&lt;/span&gt;, primero debo __________ &lt;span&gt;0,6&lt;/span&gt; en los dos miembros y después __________ entre &lt;span&gt;0,3&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;c) En la relación &lt;span&gt;y = 0,5x + 1,5&lt;/span&gt;, ¿qué valor toma &lt;span&gt;y&lt;/span&gt; cuando &lt;span&gt;x = 4&lt;/span&gt;?&lt;/p&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;hr&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    #g4-racionales-actividades * {
+      box-sizing:border-box;
+    }
+
+    #g4-racionales-actividades .fraccion {
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      vertical-align:middle;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+      line-height:1.05;
+      margin:0 2px;
+    }
+
+    #g4-racionales-actividades .numerador {
+      border-bottom:1px solid currentColor;
+      padding:0 4px;
+    }
+
+    #g4-racionales-actividades .denominador {
+      padding:0 4px;
+    }
+
+    #g4-racionales-actividades .ecuacion {
+      text-align:center;
+      margin:10px 0;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+    }
+  &lt;/style&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 1. Resuelvo ecuaciones con números racionales&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; encuentra el valor de &lt;span&gt;n&lt;/span&gt;. Muestra las operaciones realizadas en los dos miembros. Comprueba únicamente los ejercicios marcados con ★.&lt;/p&gt;
+&lt;p&gt;a) ★ &amp;nbsp; n + &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;5&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;7&lt;/span&gt; &lt;span class="denominador"&gt;5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;b) &amp;nbsp; n − 0,75 = 1,25&lt;/p&gt;
+&lt;p&gt;c) ★ &amp;nbsp; &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;n = 8&lt;/p&gt;
+&lt;p&gt;d) &amp;nbsp; 0,4n = −3,2&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 2. Resuelvo ecuaciones con dos operaciones&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; identifica qué operación debes deshacer primero. Después desarrolla el procedimiento hasta aislar la incógnita.&lt;/p&gt;
+&lt;p&gt;a) ★ &amp;nbsp; &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;n + &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;1&lt;/span&gt; &lt;span class="denominador"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;5&lt;/span&gt; &lt;span class="denominador"&gt;2&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;b) &amp;nbsp; 0,25n − 1,5 = 0,5&lt;/p&gt;
+&lt;p&gt;c) &amp;nbsp; &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt;n − &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;1&lt;/span&gt; &lt;span class="denominador"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;7&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 3. Analizo y corrijo un procedimiento&lt;/h3&gt;
+&lt;p&gt;Un estudiante intenta resolver:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;5&lt;/span&gt; &lt;/span&gt;n + 1 = 4&lt;/p&gt;
+&lt;p&gt;y escribe:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;5&lt;/span&gt; &lt;/span&gt;n = 3&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n = 3 × &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;5&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;9&lt;/span&gt; &lt;span class="denominador"&gt;5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ CORRIGE:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;¿El primer paso es correcto?&lt;/li&gt;
+&lt;li&gt;¿Qué error se cometió al intentar aislar &lt;span&gt;n&lt;/span&gt;?&lt;/li&gt;
+&lt;li&gt;Resuelve correctamente la ecuación y comprueba la solución.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 4. Planteo y resuelvo una situación&lt;/h3&gt;
+&lt;p&gt;Una base pesa &lt;span&gt;0,5 kg&lt;/span&gt;. Sobre ella se colocan varias piezas iguales de &lt;span&gt;0,75 kg&lt;/span&gt; cada una. El peso total es &lt;span&gt;5 kg&lt;/span&gt;. ¿Cuántas piezas se colocaron sobre la base?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE:&lt;/strong&gt; no copies el problema completo. Registra:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Qué representa &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;La ecuación que representa la situación.&lt;/li&gt;
+&lt;li&gt;El procedimiento.&lt;/li&gt;
+&lt;li&gt;La respuesta y su comprobación.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 5. Relaciono patrones y ecuaciones&lt;/h3&gt;
+&lt;p&gt;Observa la secuencia:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;1,75 &amp;nbsp;&amp;nbsp;&amp;nbsp; 2 &amp;nbsp;&amp;nbsp;&amp;nbsp; 2,25 &amp;nbsp;&amp;nbsp;&amp;nbsp; 2,5 &amp;nbsp;&amp;nbsp;&amp;nbsp; ...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✎ ANALIZA Y RESUELVE:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;a) Escribe los dos términos que siguen.&lt;/p&gt;
+&lt;p&gt;b) ¿Cuánto aumenta cada término con respecto al anterior?&lt;/p&gt;
+&lt;p&gt;c) Si &lt;span&gt;n&lt;/span&gt; representa la posición del término (&lt;span&gt;n = 1&lt;/span&gt; para el primer término), completa la regla:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;término en la posición n = 0,25n + ________&lt;/p&gt;
+&lt;p&gt;d) Usa la regla anterior para determinar el término que ocupa la posición 10.&lt;/p&gt;
+&lt;p&gt;La regla del patrón también puede escribirse como:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;y = 0,25x + 1,5&lt;/p&gt;
+&lt;p&gt;e) ¿Qué indica el número &lt;span&gt;0,25&lt;/span&gt; sobre el cambio de &lt;span&gt;y&lt;/span&gt; cuando &lt;span&gt;x&lt;/span&gt; aumenta una unidad?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE:&lt;/strong&gt; si &lt;span&gt;y = 5&lt;/span&gt;, ¿qué valor debe tomar &lt;span&gt;x&lt;/span&gt;? Plantea la ecuación y muestra el procedimiento.&lt;/p&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    #g4-racionales-actividades-adicionales * {
+      box-sizing:border-box;
+    }
+
+    #g4-racionales-actividades-adicionales .fraccion {
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      vertical-align:middle;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+      line-height:1.05;
+      margin:0 2px;
+    }
+
+    #g4-racionales-actividades-adicionales .numerador {
+      border-bottom:1px solid currentColor;
+      padding:0 4px;
+    }
+
+    #g4-racionales-actividades-adicionales .denominador {
+      padding:0 4px;
+    }
+
+    #g4-racionales-actividades-adicionales .ecuacion {
+      text-align:center;
+      margin:10px 0;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+    }
+  &lt;/style&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div id="g4-racionales-actividades-adicionales" style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 6. Ordeno el procedimiento&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ ORDENA:&lt;/strong&gt; escribe los números del 1 al 4 en los espacios para indicar el orden correcto de los pasos.&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;"&gt;Caso A&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,6n + 0,9 = 3,9&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; 0,6n = 3&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; n = 5&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; Restar 0,9 en los dos miembros.&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; Dividir los dos miembros entre 0,6.&lt;/p&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;"&gt;Caso B&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;n − &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;1&lt;/span&gt; &lt;span class="denominador"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;2&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;n = 2&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; n = 3&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; Sumar &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;1&lt;/span&gt; &lt;span class="denominador"&gt;2&lt;/span&gt; &lt;/span&gt; en los dos miembros.&lt;/p&gt;
+&lt;p&gt;____ &amp;nbsp; Multiplicar los dos miembros por &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;2&lt;/span&gt; &lt;/span&gt;.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 7. Relaciono ecuaciones con la misma solución&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ RESUELVE Y RELACIONA:&lt;/strong&gt; encuentra la solución de cada ecuación. Después forma dos parejas de ecuaciones que tengan la misma solución.&lt;/p&gt;
+&lt;p&gt;A. &amp;nbsp; n + 0,75 = 2,25&lt;/p&gt;
+&lt;p&gt;B. &amp;nbsp; 0,5n = 0,75&lt;/p&gt;
+&lt;p&gt;C. &amp;nbsp; &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;2&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;n + &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;1&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt; = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;5&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;D. &amp;nbsp; 0,25n + 0,5 = 1&lt;/p&gt;
+&lt;p&gt;Primera pareja: ________ y ________&lt;/p&gt;
+&lt;p&gt;Segunda pareja: ________ y ________&lt;/p&gt;
+&lt;p&gt;Comprueba una ecuación de cada pareja sustituyendo la solución encontrada.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 8. Construyo ecuaciones&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;✎ CONSTRUYE Y COMPRUEBA:&lt;/strong&gt; completa o crea las ecuaciones para que cumplan las condiciones indicadas.&lt;/p&gt;
+&lt;p&gt;a) Completa el número que falta para que la solución sea &lt;span&gt;n = 7&lt;/span&gt;.&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,5n + ________ = 5,5&lt;/p&gt;
+&lt;p&gt;b) Completa el número que falta para que la solución sea &lt;span&gt;n = 4&lt;/span&gt;.&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;3&lt;/span&gt; &lt;span class="denominador"&gt;4&lt;/span&gt; &lt;/span&gt;n − ________ = 2&lt;/p&gt;
+&lt;p&gt;c) Crea una ecuación de la forma &lt;span&gt;an + b = c&lt;/span&gt; cuya solución sea &lt;span&gt;n = −4&lt;/span&gt;. Utiliza al menos una fracción o un decimal y elige &lt;span&gt;a ≠ 0&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Resuelve la ecuación que creaste y comprueba la solución sustituyendo &lt;span&gt;n = −4&lt;/span&gt; en la ecuación original.&lt;/p&gt;
+&lt;p&gt;d) Escribe en lenguaje verbal la ecuación que creaste en el punto c).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;&lt;hr&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    #g4-racionales-evaluacion * {
+      box-sizing:border-box;
+    }
+
+    #g4-racionales-evaluacion .pregunta {
+      margin:20px 0;
+      padding-bottom:18px;
+      border-bottom:1px solid #999;
+    }
+
+    #g4-racionales-evaluacion .ecuacion {
+      text-align:center;
+      margin:10px 0;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+    }
+
+    #g4-racionales-evaluacion .fraccion {
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      vertical-align:middle;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+      line-height:1.05;
+      margin:0 2px;
+    }
+
+    #g4-racionales-evaluacion .numerador {
+      border-bottom:1px solid currentColor;
+      padding:0 4px;
+    }
+
+    #g4-racionales-evaluacion .denominador {
+      padding:0 4px;
+    }
+
+    #g4-racionales-evaluacion .opcion {
+      display:block;
+      width:100%;
+      margin:8px 0;
+      cursor:pointer;
+    }
+
+    #g4-racionales-evaluacion button {
+      display:inline-block;
+      max-width:100%;
+      margin-top:10px;
+      padding:9px 14px;
+      font-family:Arial, sans-serif;
+      font-size:12pt;
+      cursor:pointer;
+      white-space:normal;
+    }
+
+    #g4-racionales-evaluacion .retroalimentacion {
+      margin-top:10px;
+    }
+
+    @media (max-width:600px) {
+      #g4-racionales-evaluacion button {
+        width:100%;
+      }
+    }
+
+    @media print {
+      #g4-racionales-evaluacion button,
+      #g4-racionales-evaluacion .retroalimentacion {
+        display:none;
+      }
+    }
+  &lt;/style&gt;
+&lt;div style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div id="g4-racionales-conoce" style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div id="g4-racionales-actividades" style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;div id="g4-racionales-evaluacion" style="font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;✎ EVALUACIÓN:&lt;/strong&gt; responde primero en tu cuaderno. Escribe el número de la pregunta y la letra de la opción elegida. En las preguntas marcadas con &lt;strong&gt;★ ✎ RESUELVE&lt;/strong&gt;, muestra también el procedimiento.&lt;/p&gt;
+&lt;p&gt;Después selecciona tu respuesta y pulsa &lt;strong&gt;Revisar respuesta&lt;/strong&gt;. Si encuentras un error, corrígelo antes de continuar.&lt;/p&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 1. Coeficiente fraccionario&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;¿Cuál es la solución de la ecuación?&lt;/p&gt;
+&lt;p class="ecuacion"&gt;&lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;5&lt;/span&gt; &lt;span class="denominador"&gt;6&lt;/span&gt; &lt;/span&gt;n = −10&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g4q1" value="A"&gt; A. n = −12 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q1" value="B"&gt; B. n = −8 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q1" value="C"&gt; C. n = 12 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q1" value="D"&gt; D. n = &lt;span class="fraccion"&gt; &lt;span class="numerador"&gt;−25&lt;/span&gt; &lt;span class="denominador"&gt;3&lt;/span&gt; &lt;/span&gt; &lt;/label&gt; &lt;button type="button" data-question="g4q1"&gt; Revisar respuesta &lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g4q1" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 2. Ecuación con dos operaciones&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Encuentra el valor de &lt;span&gt;n&lt;/span&gt;:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,4n + 1,2 = 4,4&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g4q2" value="A"&gt; A. n = 8 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q2" value="B"&gt; B. n = 11 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q2" value="C"&gt; C. n = 14 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q2" value="D"&gt; D. n = 5 &lt;/label&gt; &lt;button type="button" data-question="g4q2"&gt; Revisar respuesta &lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g4q2" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 3. Analizo un error&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un estudiante intenta resolver:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,6n − 0,9 = 2,1&lt;/p&gt;
+&lt;p&gt;y realiza este procedimiento:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,6n = 2,1 − 0,9&lt;/p&gt;
+&lt;p class="ecuacion"&gt;0,6n = 1,2&lt;/p&gt;
+&lt;p class="ecuacion"&gt;n = 2&lt;/p&gt;
+&lt;p&gt;¿Cuál afirmación identifica correctamente el error?&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g4q3" value="A"&gt; A. Debía sumar 0,9 en los dos miembros; la solución correcta es n = 5. &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q3" value="B"&gt; B. Debía dividir primero 2,1 entre 0,6; la solución correcta es n = 3,5. &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q3" value="C"&gt; C. El procedimiento es correcto y la solución es n = 2. &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q3" value="D"&gt; D. Debía sumar 0,6 en los dos miembros antes de realizar cualquier otra operación. &lt;/label&gt; &lt;button type="button" data-question="g4q3"&gt; Revisar respuesta &lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g4q3" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 4. Modelo una situación&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un recorrido comienza con &lt;span&gt;1,2 km&lt;/span&gt; de calentamiento. Después se realizan varias vueltas de &lt;span&gt;0,6 km&lt;/span&gt; cada una. Al finalizar se han recorrido &lt;span&gt;4,8 km&lt;/span&gt; en total.&lt;/p&gt;
+&lt;p&gt;Si &lt;span&gt;n&lt;/span&gt; representa el número de vueltas, ¿cuántas vueltas se realizaron?&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g4q4" value="A"&gt; A. 4 vueltas &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q4" value="B"&gt; B. 6 vueltas &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q4" value="C"&gt; C. 8 vueltas &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q4" value="D"&gt; D. 10 vueltas &lt;/label&gt; &lt;button type="button" data-question="g4q4"&gt; Revisar respuesta &lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g4q4" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pregunta"&gt;
+&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 5. Relaciono un patrón con una ecuación&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Observa los primeros términos de un patrón:&lt;/p&gt;
+&lt;p class="ecuacion"&gt;1,2 &amp;nbsp;&amp;nbsp;&amp;nbsp; 1,7 &amp;nbsp;&amp;nbsp;&amp;nbsp; 2,2 &amp;nbsp;&amp;nbsp;&amp;nbsp; 2,7 &amp;nbsp;&amp;nbsp;&amp;nbsp; ...&lt;/p&gt;
+&lt;p&gt;Si &lt;span&gt;x&lt;/span&gt; representa la posición del término y &lt;span&gt;y&lt;/span&gt; representa su valor, ¿qué opción muestra la regla correcta y la posición en la que se obtiene &lt;span&gt;y = 5,2&lt;/span&gt;?&lt;/p&gt;
+&lt;label class="opcion"&gt; &lt;input type="radio" name="g4q5" value="A"&gt; A. y = 0,5x + 0,7; x = 9 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q5" value="B"&gt; B. y = 0,5x + 1,2; x = 8 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q5" value="C"&gt; C. y = 0,5x + 0,7; x = 10 &lt;/label&gt; &lt;label class="opcion"&gt; &lt;input type="radio" name="g4q5" value="D"&gt; D. y = 1,2x + 0,5; x = 4 &lt;/label&gt; &lt;button type="button" data-question="g4q5"&gt; Revisar respuesta &lt;/button&gt;
+&lt;p class="retroalimentacion" data-feedback="g4q5" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Referencias bibliográficas&lt;/h3&gt;
+&lt;p&gt;Ministerio de Educación Nacional. (2016). &lt;em&gt;Derechos básicos de aprendizaje en matemáticas: grados 6° y 7°&lt;/em&gt;. MEN.&lt;/p&gt;
+&lt;p&gt;Ministerio de Educación Nacional. (2017). &lt;em&gt;Vamos a aprender matemáticas 7°&lt;/em&gt;. Bogotá, Colombia: Ministerio de Educación Nacional.&lt;/p&gt;
+&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de asignatura de Aritmética 7°&lt;/em&gt;.&lt;/p&gt;
+&lt;script&gt;
+    (function () {
+
+      const root = document.getElementById('g4-racionales-evaluacion');
+      if (!root) return;
+
+      const mensajes = {
+
+        g4q1: {
+          A: 'Correcto. Multiplicar los dos miembros por seis quintos permite aislar n y obtener n = −12.',
+          B: 'Revisa la operación con el coeficiente cinco sextos. Comprueba el valor sustituyéndolo en la ecuación.',
+          C: 'Revisa el signo. Como el coeficiente es positivo y el resultado es negativo, n debe ser negativo.',
+          D: 'Ese resultado se obtiene al multiplicar por cinco sextos. Para aislar n debes usar el recíproco seis quintos.'
+        },
+
+        g4q2: {
+          A: 'Correcto. Restamos 1,2 en los dos miembros: 0,4n = 3,2. Después dividimos entre 0,4 y obtenemos n = 8.',
+          B: 'Este resultado aparece al dividir 4,4 entre 0,4 sin eliminar primero el término 1,2.',
+          C: 'Este resultado aparece al sumar 1,2 en lugar de restarlo. Primero debes deshacer la suma que acompaña al término 0,4n.',
+          D: 'Comprueba n = 5 en la ecuación original. El resultado del primer miembro no es 4,4.'
+        },
+
+        g4q3: {
+          A: 'Correcto. Para deshacer la resta de 0,9 se suma 0,9 en los dos miembros: 0,6n = 3. Luego dividimos entre 0,6 y obtenemos n = 5.',
+          B: 'Dividir 2,1 entre 0,6 ignora el término −0,9. Primero debes deshacer esa resta.',
+          C: 'Comprueba n = 2: 0,6 × 2 − 0,9 = 0,3, no 2,1.',
+          D: 'El número 0,6 es el coeficiente de n. La primera operación que debe deshacerse es la resta de 0,9.'
+        },
+
+        g4q4: {
+          A: 'Después del calentamiento faltan 3,6 km. Divide esa distancia entre 0,6 km por vuelta.',
+          B: 'Correcto. La situación se representa con 0,6n + 1,2 = 4,8. Entonces 0,6n = 3,6 y n = 6.',
+          C: 'Ocho resulta de dividir los 4,8 km totales entre 0,6 sin descontar los 1,2 km de calentamiento.',
+          D: 'Revisa primero cuánto falta por recorrer después de los 1,2 km iniciales.'
+        },
+
+        g4q5: {
+          A: 'Correcto. El patrón aumenta 0,5 en cada posición. La regla es y = 0,5x + 0,7 y, al resolver 0,5x + 0,7 = 5,2, se obtiene x = 9.',
+          B: 'Comprueba la regla usando x = 1. Debe producir el primer término, 1,2.',
+          C: 'La regla es correcta, pero al resolver la ecuación se obtiene x = 9, no x = 10.',
+          D: 'El coeficiente debe representar el aumento entre términos consecutivos. Ese aumento es 0,5.'
+        }
+
+      };
+
+      const botones = root.querySelectorAll('button[data-question]');
+
+      botones.forEach(function (boton) {
+
+        boton.addEventListener('click', function () {
+
+          const pregunta = boton.getAttribute('data-question');
+
+          const seleccion = root.querySelector(
+            'input[name="' + pregunta + '"]:checked'
+          );
+
+          const salida = root.querySelector(
+            '[data-feedback="' + pregunta + '"]'
+          );
+
+          if (!seleccion) {
+            salida.textContent = 'Selecciona una opción antes de revisar.';
+            return;
+          }
+
+          salida.textContent = mensajes[pregunta][seleccion.value];
+
+        });
+
+      });
+
+    })();
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p class="clearfix"&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</htmlView><jsonProperties>{"ideviceId":"202609061605165468JU","textInfoDurationInput":"","textInfoDurationTextInput":"Duración","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Agrupamiento","textTextarea":"&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;EXPLORACIÓN&lt;/h2&gt;\n&lt;p&gt;Ya sabes utilizar operaciones inversas para encontrar una incógnita. Ahora observa qué ocurre cuando en una ecuación aparecen fracciones o decimales.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. Uso lo que ya sé&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE:&lt;/strong&gt; encuentra el valor de &lt;span&gt;n&lt;/span&gt; en cada ecuación usando una estrategia que ya conozcas. Después comprueba la solución.&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;a) n + &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 4px;\"&gt;1&lt;/span&gt; &lt;span style=\"padding: 0 4px;\"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 4px;\"&gt;5&lt;/span&gt; &lt;span style=\"padding: 0 4px;\"&gt;4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;b) &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 4px;\"&gt;1&lt;/span&gt; &lt;span style=\"padding: 0 4px;\"&gt;2&lt;/span&gt; &lt;/span&gt; n = 3&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. Interpreto un coeficiente decimal&lt;/h3&gt;\n&lt;p&gt;Observa la ecuación:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;0,5n = 4&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;✎ RESPONDE:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;¿Qué significa &lt;span&gt;0,5n&lt;/span&gt;?&lt;/li&gt;\n&lt;li&gt;Sin aplicar todavía un procedimiento formal, ¿qué valor de &lt;span&gt;n&lt;/span&gt; hace verdadera la igualdad?&lt;/li&gt;\n&lt;/ol&gt;\n&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;ANALIZA&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. Reconozco qué cambia y qué se mantiene&lt;/h3&gt;\n&lt;p&gt;Compara las dos ecuaciones:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + 4 = 7&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;n + &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 4px;\"&gt;3&lt;/span&gt; &lt;span style=\"padding: 0 4px;\"&gt;4&lt;/span&gt; &lt;/span&gt; = &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 4px;\"&gt;7&lt;/span&gt; &lt;span style=\"padding: 0 4px;\"&gt;4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;✎ COMPARA:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;¿Qué operación se realiza con &lt;span&gt;n&lt;/span&gt; en las dos ecuaciones y qué operación inversa permite deshacerla?&lt;/li&gt;\n&lt;li&gt;¿Qué diferencia encuentras entre los números que aparecen en las dos ecuaciones?&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. Analizo una estrategia incorrecta&lt;/h3&gt;\n&lt;p&gt;Para resolver &lt;span&gt;0,4n = 2,8&lt;/span&gt;, un estudiante afirma:&lt;/p&gt;\n&lt;p&gt;“Divido 2,8 entre 4 y obtengo &lt;span&gt;n = 0,7&lt;/span&gt;”.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ ANALIZA:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Sustituye &lt;span&gt;n = 0,7&lt;/span&gt; en la ecuación. ¿La igualdad se cumple?&lt;/li&gt;\n&lt;li&gt;¿Qué operación debe realizarse en los dos miembros para deshacer la multiplicación por &lt;span&gt;0,4&lt;/span&gt;?&lt;/li&gt;\n&lt;/ol&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;hr /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n    #g4-racionales-conoce * {\n      box-sizing:border-box;\n    }\n\n    #g4-racionales-conoce .fraccion {\n      display:inline-flex;\n      flex-direction:column;\n      align-items:center;\n      justify-content:center;\n      vertical-align:middle;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n      line-height:1.05;\n      margin:0 2px;\n    }\n\n    #g4-racionales-conoce .numerador {\n      border-bottom:1px solid currentColor;\n      padding:0 4px;\n    }\n\n    #g4-racionales-conoce .denominador {\n      padding:0 4px;\n    }\n\n    #g4-racionales-conoce .ecuacion {\n      text-align:center;\n      margin:10px 0;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n    }\n  &lt;/style&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;\n&lt;p&gt;En ANALIZA reconociste que para deshacer la multiplicación por &lt;span&gt;0,4&lt;/span&gt; es necesario trabajar con el número completo &lt;span&gt;0,4&lt;/span&gt;. Ahora aplicarás las operaciones inversas cuando en una ecuación intervienen fracciones o decimales.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Ecuaciones con números racionales&lt;/h3&gt;\n&lt;p&gt;En esta guía trabajaremos ecuaciones que contienen números racionales representados mediante fracciones o decimales. Estos pueden aparecer como cantidades que se suman o restan, o como coeficientes que multiplican la incógnita.&lt;/p&gt;\n&lt;p&gt;Cuando un número racional multiplica a la incógnita, ese número es su coeficiente. Por ejemplo, en &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt;n = 6, el coeficiente de &lt;span&gt;n&lt;/span&gt; es &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Idea esencial:&lt;/strong&gt; Las operaciones inversas estudiadas anteriormente también permiten resolver ecuaciones con números racionales. Para conservar la misma solución, debemos realizar la misma operación en los dos miembros de la ecuación. Si multiplicamos o dividimos, el número utilizado debe ser distinto de cero.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Cuando aparece una suma o una resta&lt;/h3&gt;\n&lt;p&gt;El procedimiento de las ecuaciones aditivas se mantiene aunque las cantidades sean fracciones o decimales.&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n + &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;5&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;Restamos &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt; en los dos miembros:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;5&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt; − &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;5&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt; − &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;4&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;1&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;Comprobación:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;1&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt; + &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;5&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Cuando el coeficiente es una fracción&lt;/h3&gt;\n&lt;p&gt;Dos números distintos de cero son recíprocos cuando su producto es &lt;span&gt;1&lt;/span&gt;. Por ejemplo, el recíproco de &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt; es &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;4&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;, porque su producto es &lt;span&gt;1&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Regla:&lt;/strong&gt; si la incógnita está multiplicada por una fracción distinta de cero, podemos multiplicar los dos miembros por el recíproco de esa fracción para aislarla.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Ejemplo esencial:&lt;/strong&gt;&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt;n = 6&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;4&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt; × &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt;n = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;4&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt; × 6&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n = 8&lt;/p&gt;\n&lt;p&gt;Comprobación:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt; × 8 = 6&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Cuando se combinan dos operaciones&lt;/h3&gt;\n&lt;p&gt;Algunas ecuaciones combinan las estructuras aditiva y multiplicativa estudiadas anteriormente. Por ejemplo:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;an + b = c&lt;/p&gt;\n&lt;p&gt;En esta expresión, &lt;span&gt;a&lt;/span&gt;, &lt;span&gt;b&lt;/span&gt; y &lt;span&gt;c&lt;/span&gt; pueden ser números racionales y &lt;span&gt;a ≠ 0&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Procedimiento base:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Identifica el término que contiene la incógnita.&lt;/li&gt;\n&lt;li&gt;Deshaz primero la suma o la resta realizando la misma operación en los dos miembros.&lt;/li&gt;\n&lt;li&gt;Deshaz después la multiplicación realizando la operación inversa en los dos miembros.&lt;/li&gt;\n&lt;li&gt;Simplifica hasta dejar la incógnita aislada.&lt;/li&gt;\n&lt;li&gt;Comprueba la solución en la ecuación original.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ COPIA – Ejemplo esencial:&lt;/strong&gt;&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,5n + 1,5 = 4&lt;/p&gt;\n&lt;p&gt;Primero restamos &lt;span&gt;1,5&lt;/span&gt; en los dos miembros:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,5n + 1,5 − 1,5 = 4 − 1,5&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,5n = 2,5&lt;/p&gt;\n&lt;p&gt;Después dividimos los dos miembros entre &lt;span&gt;0,5&lt;/span&gt;:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;0,5n&lt;/span&gt; &lt;span class=\"denominador\"&gt;0,5&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2,5&lt;/span&gt; &lt;span class=\"denominador\"&gt;0,5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n = 5&lt;/p&gt;\n&lt;p&gt;Comprobación:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,5 × 5 + 1,5 = 4&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;2,5 + 1,5 = 4&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Conexión con relaciones y patrones&lt;/h3&gt;\n&lt;p&gt;Una expresión de la forma &lt;span&gt;y = ax + b&lt;/span&gt; permite representar una relación entre dos cantidades. Si &lt;span&gt;x&lt;/span&gt; representa una posición, los valores obtenidos para &lt;span&gt;y&lt;/span&gt; pueden formar un patrón.&lt;/p&gt;\n&lt;p&gt;Observa:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;y = 0,5x + 1,5&lt;/p&gt;\n&lt;p&gt;Para &lt;span&gt;x = 1&lt;/span&gt;, &lt;span&gt;y = 2&lt;/span&gt;.&lt;br /&gt;Para &lt;span&gt;x = 2&lt;/span&gt;, &lt;span&gt;y = 2,5&lt;/span&gt;.&lt;br /&gt;Para &lt;span&gt;x = 3&lt;/span&gt;, &lt;span&gt;y = 3&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;Cada vez que &lt;span&gt;x&lt;/span&gt; aumenta una unidad, &lt;span&gt;y&lt;/span&gt; aumenta &lt;span&gt;0,5&lt;/span&gt;. Si queremos saber para qué valor de &lt;span&gt;x&lt;/span&gt; se obtiene &lt;span&gt;y = 4&lt;/span&gt;, planteamos:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,5x + 1,5 = 4&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;x = 5&lt;/p&gt;\n&lt;p&gt;De esta manera, una ecuación también puede ayudarnos a encontrar una cantidad desconocida dentro de una relación o un patrón.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Verifico lo aprendido&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ COMPLETA:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;a) Para aislar &lt;span&gt;n&lt;/span&gt; en &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;5&lt;/span&gt; &lt;/span&gt;n = 6, puedo multiplicar los dos miembros por &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;______&lt;/span&gt; &lt;span class=\"denominador\"&gt;______&lt;/span&gt; &lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;b) Para resolver &lt;span&gt;0,3n + 0,6 = 1,8&lt;/span&gt;, primero debo __________ &lt;span&gt;0,6&lt;/span&gt; en los dos miembros y después __________ entre &lt;span&gt;0,3&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;c) En la relación &lt;span&gt;y = 0,5x + 1,5&lt;/span&gt;, ¿qué valor toma &lt;span&gt;y&lt;/span&gt; cuando &lt;span&gt;x = 4&lt;/span&gt;?&lt;/p&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;hr /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n    #g4-racionales-actividades * {\n      box-sizing:border-box;\n    }\n\n    #g4-racionales-actividades .fraccion {\n      display:inline-flex;\n      flex-direction:column;\n      align-items:center;\n      justify-content:center;\n      vertical-align:middle;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n      line-height:1.05;\n      margin:0 2px;\n    }\n\n    #g4-racionales-actividades .numerador {\n      border-bottom:1px solid currentColor;\n      padding:0 4px;\n    }\n\n    #g4-racionales-actividades .denominador {\n      padding:0 4px;\n    }\n\n    #g4-racionales-actividades .ecuacion {\n      text-align:center;\n      margin:10px 0;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n    }\n  &lt;/style&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 1. Resuelvo ecuaciones con números racionales&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; encuentra el valor de &lt;span&gt;n&lt;/span&gt;. Muestra las operaciones realizadas en los dos miembros. Comprueba únicamente los ejercicios marcados con ★.&lt;/p&gt;\n&lt;p&gt;a) ★   n + &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;5&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;7&lt;/span&gt; &lt;span class=\"denominador\"&gt;5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;b)   n − 0,75 = 1,25&lt;/p&gt;\n&lt;p&gt;c) ★   &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;n = 8&lt;/p&gt;\n&lt;p&gt;d)   0,4n = −3,2&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 2. Resuelvo ecuaciones con dos operaciones&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ RESUELVE:&lt;/strong&gt; identifica qué operación debes deshacer primero. Después desarrolla el procedimiento hasta aislar la incógnita.&lt;/p&gt;\n&lt;p&gt;a) ★   &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;n + &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;1&lt;/span&gt; &lt;span class=\"denominador\"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;5&lt;/span&gt; &lt;span class=\"denominador\"&gt;2&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;b)   0,25n − 1,5 = 0,5&lt;/p&gt;\n&lt;p&gt;c)   &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt;n − &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;1&lt;/span&gt; &lt;span class=\"denominador\"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;7&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 3. Analizo y corrijo un procedimiento&lt;/h3&gt;\n&lt;p&gt;Un estudiante intenta resolver:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;5&lt;/span&gt; &lt;/span&gt;n + 1 = 4&lt;/p&gt;\n&lt;p&gt;y escribe:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;5&lt;/span&gt; &lt;/span&gt;n = 3&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n = 3 × &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;5&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;9&lt;/span&gt; &lt;span class=\"denominador\"&gt;5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ CORRIGE:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;¿El primer paso es correcto?&lt;/li&gt;\n&lt;li&gt;¿Qué error se cometió al intentar aislar &lt;span&gt;n&lt;/span&gt;?&lt;/li&gt;\n&lt;li&gt;Resuelve correctamente la ecuación y comprueba la solución.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 4. Planteo y resuelvo una situación&lt;/h3&gt;\n&lt;p&gt;Una base pesa &lt;span&gt;0,5 kg&lt;/span&gt;. Sobre ella se colocan varias piezas iguales de &lt;span&gt;0,75 kg&lt;/span&gt; cada una. El peso total es &lt;span&gt;5 kg&lt;/span&gt;. ¿Cuántas piezas se colocaron sobre la base?&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE:&lt;/strong&gt; no copies el problema completo. Registra:&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Qué representa &lt;span&gt;n&lt;/span&gt;.&lt;/li&gt;\n&lt;li&gt;La ecuación que representa la situación.&lt;/li&gt;\n&lt;li&gt;El procedimiento.&lt;/li&gt;\n&lt;li&gt;La respuesta y su comprobación.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 5. Relaciono patrones y ecuaciones&lt;/h3&gt;\n&lt;p&gt;Observa la secuencia:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;1,75     2     2,25     2,5     ...&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;✎ ANALIZA Y RESUELVE:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;a) Escribe los dos términos que siguen.&lt;/p&gt;\n&lt;p&gt;b) ¿Cuánto aumenta cada término con respecto al anterior?&lt;/p&gt;\n&lt;p&gt;c) Si &lt;span&gt;n&lt;/span&gt; representa la posición del término (&lt;span&gt;n = 1&lt;/span&gt; para el primer término), completa la regla:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;término en la posición n = 0,25n + ________&lt;/p&gt;\n&lt;p&gt;d) Usa la regla anterior para determinar el término que ocupa la posición 10.&lt;/p&gt;\n&lt;p&gt;La regla del patrón también puede escribirse como:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;y = 0,25x + 1,5&lt;/p&gt;\n&lt;p&gt;e) ¿Qué indica el número &lt;span&gt;0,25&lt;/span&gt; sobre el cambio de &lt;span&gt;y&lt;/span&gt; cuando &lt;span&gt;x&lt;/span&gt; aumenta una unidad?&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE:&lt;/strong&gt; si &lt;span&gt;y = 5&lt;/span&gt;, ¿qué valor debe tomar &lt;span&gt;x&lt;/span&gt;? Plantea la ecuación y muestra el procedimiento.&lt;/p&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n    #g4-racionales-actividades-adicionales * {\n      box-sizing:border-box;\n    }\n\n    #g4-racionales-actividades-adicionales .fraccion {\n      display:inline-flex;\n      flex-direction:column;\n      align-items:center;\n      justify-content:center;\n      vertical-align:middle;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n      line-height:1.05;\n      margin:0 2px;\n    }\n\n    #g4-racionales-actividades-adicionales .numerador {\n      border-bottom:1px solid currentColor;\n      padding:0 4px;\n    }\n\n    #g4-racionales-actividades-adicionales .denominador {\n      padding:0 4px;\n    }\n\n    #g4-racionales-actividades-adicionales .ecuacion {\n      text-align:center;\n      margin:10px 0;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n    }\n  &lt;/style&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div id=\"g4-racionales-actividades-adicionales\" style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 6. Ordeno el procedimiento&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ ORDENA:&lt;/strong&gt; escribe los números del 1 al 4 en los espacios para indicar el orden correcto de los pasos.&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;\"&gt;Caso A&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,6n + 0,9 = 3,9&lt;/p&gt;\n&lt;p&gt;____   0,6n = 3&lt;/p&gt;\n&lt;p&gt;____   n = 5&lt;/p&gt;\n&lt;p&gt;____   Restar 0,9 en los dos miembros.&lt;/p&gt;\n&lt;p&gt;____   Dividir los dos miembros entre 0,6.&lt;/p&gt;\n&lt;p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold;\"&gt;Caso B&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;n − &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;1&lt;/span&gt; &lt;span class=\"denominador\"&gt;2&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;2&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;____   &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;n = 2&lt;/p&gt;\n&lt;p&gt;____   n = 3&lt;/p&gt;\n&lt;p&gt;____   Sumar &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;1&lt;/span&gt; &lt;span class=\"denominador\"&gt;2&lt;/span&gt; &lt;/span&gt; en los dos miembros.&lt;/p&gt;\n&lt;p&gt;____   Multiplicar los dos miembros por &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;2&lt;/span&gt; &lt;/span&gt;.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 7. Relaciono ecuaciones con la misma solución&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ RESUELVE Y RELACIONA:&lt;/strong&gt; encuentra la solución de cada ecuación. Después forma dos parejas de ecuaciones que tengan la misma solución.&lt;/p&gt;\n&lt;p&gt;A.   n + 0,75 = 2,25&lt;/p&gt;\n&lt;p&gt;B.   0,5n = 0,75&lt;/p&gt;\n&lt;p&gt;C.   &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;2&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;n + &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;1&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt; = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;5&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;D.   0,25n + 0,5 = 1&lt;/p&gt;\n&lt;p&gt;Primera pareja: ________ y ________&lt;/p&gt;\n&lt;p&gt;Segunda pareja: ________ y ________&lt;/p&gt;\n&lt;p&gt;Comprueba una ecuación de cada pareja sustituyendo la solución encontrada.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 8. Construyo ecuaciones&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;✎ CONSTRUYE Y COMPRUEBA:&lt;/strong&gt; completa o crea las ecuaciones para que cumplan las condiciones indicadas.&lt;/p&gt;\n&lt;p&gt;a) Completa el número que falta para que la solución sea &lt;span&gt;n = 7&lt;/span&gt;.&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,5n + ________ = 5,5&lt;/p&gt;\n&lt;p&gt;b) Completa el número que falta para que la solución sea &lt;span&gt;n = 4&lt;/span&gt;.&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;3&lt;/span&gt; &lt;span class=\"denominador\"&gt;4&lt;/span&gt; &lt;/span&gt;n − ________ = 2&lt;/p&gt;\n&lt;p&gt;c) Crea una ecuación de la forma &lt;span&gt;an + b = c&lt;/span&gt; cuya solución sea &lt;span&gt;n = −4&lt;/span&gt;. Utiliza al menos una fracción o un decimal y elige &lt;span&gt;a ≠ 0&lt;/span&gt;.&lt;/p&gt;\n&lt;p&gt;Resuelve la ecuación que creaste y comprueba la solución sustituyendo &lt;span&gt;n = −4&lt;/span&gt; en la ecuación original.&lt;/p&gt;\n&lt;p&gt;d) Escribe en lenguaje verbal la ecuación que creaste en el punto c).&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;&lt;hr /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n    #g4-racionales-evaluacion * {\n      box-sizing:border-box;\n    }\n\n    #g4-racionales-evaluacion .pregunta {\n      margin:20px 0;\n      padding-bottom:18px;\n      border-bottom:1px solid #999;\n    }\n\n    #g4-racionales-evaluacion .ecuacion {\n      text-align:center;\n      margin:10px 0;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n    }\n\n    #g4-racionales-evaluacion .fraccion {\n      display:inline-flex;\n      flex-direction:column;\n      align-items:center;\n      justify-content:center;\n      vertical-align:middle;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n      line-height:1.05;\n      margin:0 2px;\n    }\n\n    #g4-racionales-evaluacion .numerador {\n      border-bottom:1px solid currentColor;\n      padding:0 4px;\n    }\n\n    #g4-racionales-evaluacion .denominador {\n      padding:0 4px;\n    }\n\n    #g4-racionales-evaluacion .opcion {\n      display:block;\n      width:100%;\n      margin:8px 0;\n      cursor:pointer;\n    }\n\n    #g4-racionales-evaluacion button {\n      display:inline-block;\n      max-width:100%;\n      margin-top:10px;\n      padding:9px 14px;\n      font-family:Arial, sans-serif;\n      font-size:12pt;\n      cursor:pointer;\n      white-space:normal;\n    }\n\n    #g4-racionales-evaluacion .retroalimentacion {\n      margin-top:10px;\n    }\n\n    @media (max-width:600px) {\n      #g4-racionales-evaluacion button {\n        width:100%;\n      }\n    }\n\n    @media print {\n      #g4-racionales-evaluacion button,\n      #g4-racionales-evaluacion .retroalimentacion {\n        display:none;\n      }\n    }\n  &lt;/style&gt;\n&lt;div style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div id=\"g4-racionales-conoce\" style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div id=\"g4-racionales-actividades\" style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;div id=\"g4-racionales-evaluacion\" style=\"font-family: Arial, sans-serif; font-size: 12pt; line-height: 1.5; width: 100%; max-width: 100%; box-sizing: border-box;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;✎ EVALUACIÓN:&lt;/strong&gt; responde primero en tu cuaderno. Escribe el número de la pregunta y la letra de la opción elegida. En las preguntas marcadas con &lt;strong&gt;★ ✎ RESUELVE&lt;/strong&gt;, muestra también el procedimiento.&lt;/p&gt;\n&lt;p&gt;Después selecciona tu respuesta y pulsa &lt;strong&gt;Revisar respuesta&lt;/strong&gt;. Si encuentras un error, corrígelo antes de continuar.&lt;/p&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 1. Coeficiente fraccionario&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;¿Cuál es la solución de la ecuación?&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;&lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;5&lt;/span&gt; &lt;span class=\"denominador\"&gt;6&lt;/span&gt; &lt;/span&gt;n = −10&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q1\" value=\"A\" /&gt; A. n = −12 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q1\" value=\"B\" /&gt; B. n = −8 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q1\" value=\"C\" /&gt; C. n = 12 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q1\" value=\"D\" /&gt; D. n = &lt;span class=\"fraccion\"&gt; &lt;span class=\"numerador\"&gt;−25&lt;/span&gt; &lt;span class=\"denominador\"&gt;3&lt;/span&gt; &lt;/span&gt; &lt;/label&gt; &lt;button type=\"button\" data-question=\"g4q1\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g4q1\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 2. Ecuación con dos operaciones&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Encuentra el valor de &lt;span&gt;n&lt;/span&gt;:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,4n + 1,2 = 4,4&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q2\" value=\"A\" /&gt; A. n = 8 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q2\" value=\"B\" /&gt; B. n = 11 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q2\" value=\"C\" /&gt; C. n = 14 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q2\" value=\"D\" /&gt; D. n = 5 &lt;/label&gt; &lt;button type=\"button\" data-question=\"g4q2\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g4q2\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 3. Analizo un error&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Un estudiante intenta resolver:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,6n − 0,9 = 2,1&lt;/p&gt;\n&lt;p&gt;y realiza este procedimiento:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,6n = 2,1 − 0,9&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;0,6n = 1,2&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;n = 2&lt;/p&gt;\n&lt;p&gt;¿Cuál afirmación identifica correctamente el error?&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q3\" value=\"A\" /&gt; A. Debía sumar 0,9 en los dos miembros; la solución correcta es n = 5. &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q3\" value=\"B\" /&gt; B. Debía dividir primero 2,1 entre 0,6; la solución correcta es n = 3,5. &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q3\" value=\"C\" /&gt; C. El procedimiento es correcto y la solución es n = 2. &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q3\" value=\"D\" /&gt; D. Debía sumar 0,6 en los dos miembros antes de realizar cualquier otra operación. &lt;/label&gt; &lt;button type=\"button\" data-question=\"g4q3\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g4q3\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 4. Modelo una situación&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Un recorrido comienza con &lt;span&gt;1,2 km&lt;/span&gt; de calentamiento. Después se realizan varias vueltas de &lt;span&gt;0,6 km&lt;/span&gt; cada una. Al finalizar se han recorrido &lt;span&gt;4,8 km&lt;/span&gt; en total.&lt;/p&gt;\n&lt;p&gt;Si &lt;span&gt;n&lt;/span&gt; representa el número de vueltas, ¿cuántas vueltas se realizaron?&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q4\" value=\"A\" /&gt; A. 4 vueltas &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q4\" value=\"B\" /&gt; B. 6 vueltas &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q4\" value=\"C\" /&gt; C. 8 vueltas &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q4\" value=\"D\" /&gt; D. 10 vueltas &lt;/label&gt; &lt;button type=\"button\" data-question=\"g4q4\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g4q4\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"pregunta\"&gt;\n&lt;p&gt;&lt;strong&gt;★ ✎ RESUELVE – Pregunta 5. Relaciono un patrón con una ecuación&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Observa los primeros términos de un patrón:&lt;/p&gt;\n&lt;p class=\"ecuacion\"&gt;1,2     1,7     2,2     2,7     ...&lt;/p&gt;\n&lt;p&gt;Si &lt;span&gt;x&lt;/span&gt; representa la posición del término y &lt;span&gt;y&lt;/span&gt; representa su valor, ¿qué opción muestra la regla correcta y la posición en la que se obtiene &lt;span&gt;y = 5,2&lt;/span&gt;?&lt;/p&gt;\n&lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q5\" value=\"A\" /&gt; A. y = 0,5x + 0,7; x = 9 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q5\" value=\"B\" /&gt; B. y = 0,5x + 1,2; x = 8 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q5\" value=\"C\" /&gt; C. y = 0,5x + 0,7; x = 10 &lt;/label&gt; &lt;label class=\"opcion\"&gt; &lt;input type=\"radio\" name=\"g4q5\" value=\"D\" /&gt; D. y = 1,2x + 0,5; x = 4 &lt;/label&gt; &lt;button type=\"button\" data-question=\"g4q5\"&gt; Revisar respuesta &lt;/button&gt;\n&lt;p class=\"retroalimentacion\" data-feedback=\"g4q5\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;/div&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Referencias bibliográficas&lt;/h3&gt;\n&lt;p&gt;Ministerio de Educación Nacional. (2016). &lt;em&gt;Derechos básicos de aprendizaje en matemáticas: grados 6° y 7°&lt;/em&gt;. MEN.&lt;/p&gt;\n&lt;p&gt;Ministerio de Educación Nacional. (2017). &lt;em&gt;Vamos a aprender matemáticas 7°&lt;/em&gt;. Bogotá, Colombia: Ministerio de Educación Nacional.&lt;/p&gt;\n&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de asignatura de Aritmética 7°&lt;/em&gt;.&lt;/p&gt;\n&lt;script&gt;\n    (function () {\n\n      const root = document.getElementById('g4-racionales-evaluacion');\n      if (!root) return;\n\n      const mensajes = {\n\n        g4q1: {\n          A: 'Correcto. Multiplicar los dos miembros por seis quintos permite aislar n y obtener n = −12.',\n          B: 'Revisa la operación con el coeficiente cinco sextos. Comprueba el valor sustituyéndolo en la ecuación.',\n          C: 'Revisa el signo. Como el coeficiente es positivo y el resultado es negativo, n debe ser negativo.',\n          D: 'Ese resultado se obtiene al multiplicar por cinco sextos. Para aislar n debes usar el recíproco seis quintos.'\n        },\n\n        g4q2: {\n          A: 'Correcto. Restamos 1,2 en los dos miembros: 0,4n = 3,2. Después dividimos entre 0,4 y obtenemos n = 8.',\n          B: 'Este resultado aparece al dividir 4,4 entre 0,4 sin eliminar primero el término 1,2.',\n          C: 'Este resultado aparece al sumar 1,2 en lugar de restarlo. Primero debes deshacer la suma que acompaña al término 0,4n.',\n          D: 'Comprueba n = 5 en la ecuación original. El resultado del primer miembro no es 4,4.'\n        },\n\n        g4q3: {\n          A: 'Correcto. Para deshacer la resta de 0,9 se suma 0,9 en los dos miembros: 0,6n = 3. Luego dividimos entre 0,6 y obtenemos n = 5.',\n          B: 'Dividir 2,1 entre 0,6 ignora el término −0,9. Primero debes deshacer esa resta.',\n          C: 'Comprueba n = 2: 0,6 × 2 − 0,9 = 0,3, no 2,1.',\n          D: 'El número 0,6 es el coeficiente de n. La primera operación que debe deshacerse es la resta de 0,9.'\n        },\n\n        g4q4: {\n          A: 'Después del calentamiento faltan 3,6 km. Divide esa distancia entre 0,6 km por vuelta.',\n          B: 'Correcto. La situación se representa con 0,6n + 1,2 = 4,8. Entonces 0,6n = 3,6 y n = 6.',\n          C: 'Ocho resulta de dividir los 4,8 km totales entre 0,6 sin descontar los 1,2 km de calentamiento.',\n          D: 'Revisa primero cuánto falta por recorrer después de los 1,2 km iniciales.'\n        },\n\n        g4q5: {\n          A: 'Correcto. El patrón aumenta 0,5 en cada posición. La regla es y = 0,5x + 0,7 y, al resolver 0,5x + 0,7 = 5,2, se obtiene x = 9.',\n          B: 'Comprueba la regla usando x = 1. Debe producir el primer término, 1,2.',\n          C: 'La regla es correcta, pero al resolver la ecuación se obtiene x = 9, no x = 10.',\n          D: 'El coeficiente debe representar el aumento entre términos consecutivos. Ese aumento es 0,5.'\n        }\n\n      };\n\n      const botones = root.querySelectorAll('button[data-question]');\n\n      botones.forEach(function (boton) {\n\n        boton.addEventListener('click', function () {\n\n          const pregunta = boton.getAttribute('data-question');\n\n          const seleccion = root.querySelector(\n            'input[name=\"' + pregunta + '\"]:checked'\n          );\n\n          const salida = root.querySelector(\n            '[data-feedback=\"' + pregunta + '\"]'\n          );\n\n          if (!seleccion) {\n            salida.textContent = 'Selecciona una opción antes de revisar.';\n            return;\n          }\n\n          salida.textContent = mensajes[pregunta][seleccion.value];\n\n        });\n\n      });\n\n    })();\n  &lt;/script&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;","textFeedbackInput":"Mostrar retroalimentación","textFeedbackTextarea":""}</jsonProperties><odeComponentsOrder>1</odeComponentsOrder><odeComponentsProperties><odeComponentsProperty><key>visibility</key><value>true</value></odeComponentsProperty><odeComponentsProperty><key>teacherOnly</key><value>false</value></odeComponentsProperty><odeComponentsProperty><key>identifier</key><value/></odeComponentsProperty><odeComponentsProperty><key>cssClass</key><value/></odeComponentsProperty></odeComponentsProperties></odeComponent></odeComponents></odePagStructure></odePagStructures></odeNavStructure></odeNavStructures></ode>
