@@ -746,7 +746,7 @@ const initialRotations={
   cube:{x:0.44,y:-0.62,z:0},
   prism6:{x:0.61,y:-0.52,z:0},
   pyramid4:{x:0.35,y:0.79,z:0},
-  cylinder:{x:-0.26,y:-0.52,z:0},
+  cylinder:{x:0.38,y:-0.52,z:0},
   cone:{x:-0.35,y:0.52,z:0},
   sphere:{x:0,y:0,z:0},
   octahedron:{x:0.44,y:-0.62,z:0}
@@ -891,36 +891,88 @@ function createCanvasEngine(container,model){
   }
 
   function coneOrCylinder(kind,w,h){
-    const n=48,r=1.15,yb=-1.35,yt=1.35;
-    const v=[],faces=[];
-
+    // Las divisiones matemáticas construyen la curva, pero NO se dibujan como aristas.
+    // Todas las regiones laterales visibles se rellenan en una sola operación Canvas,
+    // para que no aparezcan franjas o costuras semejantes a caras de un prisma.
+    const n=128,r=1.15,yb=-1.35,yt=1.35;
+    const v=[];
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2;
+      v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
+    }
     if(kind==="cylinder"){
-      for(let i=0;i<n;i++){
-        const a=(i/n)*Math.PI*2;
-        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
-      }
       for(let i=0;i<n;i++){
         const a=(i/n)*Math.PI*2;
         v.push([Math.cos(a)*r,yt,Math.sin(a)*r]);
       }
-      faces.push([...Array(n).keys()].reverse());
-      faces.push([...Array(n).keys()].map(i=>i+n));
-      for(let i=0;i<n;i++){
-        const j=(i+1)%n;
-        faces.push([i,j,j+n,i+n]);
-      }
     }else{
-      for(let i=0;i<n;i++){
-        const a=(i/n)*Math.PI*2;
-        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
-      }
       v.push([0,yt,0]);
-      const apex=n;
-      faces.push([...Array(n).keys()].reverse());
-      for(let i=0;i<n;i++)faces.push([i,(i+1)%n,apex]);
+    }
+    const rv=v.map(rotatePoint);
+    const center=rv.reduce((a,p)=>[a[0]+p[0],a[1]+p[1],a[2]+p[2]],[0,0,0]).map(x=>x/rv.length);
+    const projected=rv.map(p=>project(p,w,h));
+    const cameraZ=7.2;
+    const visibleSides=[];
+    for(let i=0;i<n;i++){
+      const j=(i+1)%n;
+      const ids=kind==="cylinder"?[i,j,j+n,i+n]:[i,j,n];
+      const pts=ids.map(k=>rv[k]);
+      const fc=pts.reduce((a,p)=>[a[0]+p[0],a[1]+p[1],a[2]+p[2]],[0,0,0]).map(x=>x/pts.length);
+      let faceNormal=normal(pts[0],pts[1],pts[2]);
+      const outward=[fc[0]-center[0],fc[1]-center[1],fc[2]-center[2]];
+      if(faceNormal[0]*outward[0]+faceNormal[1]*outward[1]+faceNormal[2]*outward[2]<0)
+        faceNormal=faceNormal.map(x=>-x);
+      const toCamera=[-fc[0],-fc[1],cameraZ-fc[2]];
+      if(faceNormal[0]*toCamera[0]+faceNormal[1]*toCamera[1]+faceNormal[2]*toCamera[2]>1e-7)
+        visibleSides.push(ids.map(k=>projected[k]));
     }
 
-    mesh(v,faces,w,h,false);
+    if(visibleSides.length){
+      let minX=Infinity,maxX=-Infinity;
+      for(const side of visibleSides){
+        for(const p of side){minX=Math.min(minX,p[0]);maxX=Math.max(maxX,p[0]);}
+      }
+      const gradient=ctx.createLinearGradient(minX,0,Math.max(minX+1,maxX),0);
+      gradient.addColorStop(0,"#8CBFC7");
+      gradient.addColorStop(.48,"#78ADB6");
+      gradient.addColorStop(1,"#93C9CF");
+      ctx.beginPath();
+      for(const side of visibleSides){
+        ctx.moveTo(side[0][0],side[0][1]);
+        for(let j=1;j<side.length;j++)ctx.lineTo(side[j][0],side[j][1]);
+        ctx.closePath();
+      }
+      ctx.fillStyle=gradient;
+      ctx.fill();
+    }
+
+    // Las bases planas se dibujan únicamente si miran a la cámara.
+    // Su contorno separa base y superficie curva, no es una arista poligonal.
+    const bottom=rotatePoint([0,yb,0]);
+    const up=rotatePoint([0,1,0]);
+    const toCamera=[-bottom[0],-bottom[1],cameraZ-bottom[2]];
+    const showBottom=-(up[0]*toCamera[0]+up[1]*toCamera[1]+up[2]*toCamera[2])>1e-7;
+    const caps=[{start:0,show:showBottom,fill:"#9BCBD1"}];
+    if(kind==="cylinder"){
+      const top=rotatePoint([0,yt,0]);
+      const towards=[-top[0],-top[1],cameraZ-top[2]];
+      caps.push({start:n,show:(up[0]*towards[0]+up[1]*towards[1]+up[2]*towards[2]>1e-7),fill:"#A5D0D5"});
+    }
+    for(const cap of caps){
+      if(!cap.show)continue;
+      ctx.beginPath();
+      for(let i=0;i<n;i++){
+        const p=projected[cap.start+i];
+        if(i===0)ctx.moveTo(p[0],p[1]);
+        else ctx.lineTo(p[0],p[1]);
+      }
+      ctx.closePath();
+      ctx.fillStyle=cap.fill;
+      ctx.fill();
+      ctx.strokeStyle="#28484F";
+      ctx.lineWidth=1.4;
+      ctx.stroke();
+    }
   }
 
   function octa(w,h){

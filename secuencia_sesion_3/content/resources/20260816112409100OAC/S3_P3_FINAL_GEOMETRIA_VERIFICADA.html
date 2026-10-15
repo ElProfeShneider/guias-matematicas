@@ -292,16 +292,12 @@ button:focus-visible{
   background:#F4F8F1;
 }
 .body svg{
-  width:58px;
-  height:48px;
-  stroke:#28484F;
-  stroke-width:2;
-  fill:#A8D6DC;
-}
-.body svg.prism-icon{
-  width:70px;
+  width:76px;
   height:62px;
+  display:block;
+  flex:none;
 }
+/* Miniaturas SVG vectoriales con la misma geometría que los visores. */
 .body-name{
   font-size:10.5pt;
 }
@@ -659,67 +655,32 @@ button:focus-visible{
 
           <div class="body-grid">
             <button class="body" id="body-cylinder" data-body="Cilindro" type="button">
-              <svg viewBox="0 0 64 52" aria-hidden="true">
-                <ellipse cx="32" cy="11" rx="18" ry="7"></ellipse>
-                <path d="M14 11 V39"></path>
-                <path d="M50 11 V39"></path>
-                <path d="M14 39 C14 48 50 48 50 39"></path>
-                <path d="M14 39 C14 30 50 30 50 39" fill="none"></path>
-              </svg>
+              <svg class="map-geo-icon" viewBox="0 0 96 78" aria-hidden="true"><defs><linearGradient id="s3-map-cyl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#91C6CD"/><stop offset=".5" stop-color="#75AEB8"/><stop offset="1" stop-color="#A1D1D7"/></linearGradient></defs><path d="M25 20 L25 56 C25 72 71 72 71 56 L71 20 Z" fill="url(#s3-map-cyl)"/><path d="M25 56 C25 72 71 72 71 56" stroke="#294951" stroke-width="1.8" fill="none"/><ellipse cx="48" cy="20" rx="23" ry="8" fill="#ABD7DC" stroke="#294951" stroke-width="1.8"/><path d="M25 20 V56 M71 20 V56" stroke="#294951" stroke-width="1.8" fill="none"/></svg>
               <span class="body-name">Cilindro</span>
             </button>
 
             <button class="body" id="body-cube" data-body="Cubo" type="button">
-              <svg viewBox="0 0 64 52" aria-hidden="true">
-                <rect x="11" y="14" width="28" height="28"></rect>
-                <polygon points="24,6 52,6 52,34 39,42 39,14 11,14"></polygon>
-                <line x1="39" y1="14" x2="52" y2="6"></line>
-                <line x1="39" y1="42" x2="52" y2="34"></line>
-              </svg>
+              <svg class="map-geo-icon" viewBox="0 0 96 78" aria-hidden="true"><polygon points="41.36,12.95 74.43,8.00 52.09,22.64 14.69,25.74" fill="#B3DCE1" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/><polygon points="81.31,45.84 64.32,70.00 52.09,22.64 74.43,8.00" fill="#84BCC5" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/><polygon points="28.89,63.49 14.69,25.74 52.09,22.64 64.32,70.00" fill="#70ABB5" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/></svg>
               <span class="body-name">Cubo</span>
             </button>
 
             <button class="body" id="body-sphere" data-body="Esfera" type="button">
-              <svg viewBox="0 0 64 52" aria-hidden="true">
-                <circle cx="32" cy="26" r="20"></circle>
-                <path d="M20 16 C24 11 29 9 34 9" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".65"></path>
-              </svg>
+              <svg class="map-geo-icon" viewBox="0 0 96 78" aria-hidden="true"><defs><radialGradient id="s3-map-sphere" cx="30%" cy="26%" r="75%"><stop offset="0" stop-color="#BCE1E4"/><stop offset=".58" stop-color="#85BFC8"/><stop offset="1" stop-color="#5D98A3"/></radialGradient></defs><circle cx="48" cy="39" r="29" fill="url(#s3-map-sphere)" stroke="#294951" stroke-width="1.6"/></svg>
               <span class="body-name">Esfera</span>
             </button>
 
             <button class="body" id="body-prism6" data-body="Prisma hexagonal" type="button">
-              <svg class="prism-icon" viewBox="0 0 64 52" aria-hidden="true">
-                <!-- Prisma hexagonal en posición vertical, ampliado para mejorar la lectura visual -->
-                <polygon points="18,6 32,6 39,13 32,20 18,20 11,13"></polygon>
-                <polygon points="18,26 32,26 39,33 32,40 18,40 11,33"></polygon>
-                <!-- Aristas laterales correspondientes -->
-                <line x1="18" y1="6" x2="18" y2="26"></line>
-                <line x1="32" y1="6" x2="32" y2="26"></line>
-                <line x1="39" y1="13" x2="39" y2="33"></line>
-                <line x1="32" y1="20" x2="32" y2="40"></line>
-                <line x1="18" y1="20" x2="18" y2="40"></line>
-                <line x1="11" y1="13" x2="11" y2="33"></line>
-              </svg>
+              <svg class="map-geo-icon" viewBox="0 0 96 78" aria-hidden="true"><polygon points="48.35,70.00 38.33,60.82 21.41,23.83 30.98,28.95" fill="#B3DCE1" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/><polygon points="74.59,50.40 68.89,64.25 56.28,21.12 64.90,10.14" fill="#84BCC5" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/><polygon points="56.28,21.12 30.98,28.95 21.41,23.83 32.87,14.08 51.93,8.00 64.90,10.14" fill="#70ABB5" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/><polygon points="68.89,64.25 48.35,70.00 30.98,28.95 56.28,21.12" fill="#9ACBD2" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/></svg>
               <span class="body-name">Prisma hexagonal</span>
             </button>
 
             <button class="body" id="body-pyramid4" data-body="Pirámide cuadrangular" type="button">
-              <svg viewBox="0 0 64 52" aria-hidden="true">
-                <polygon points="12,35 32,44 53,34 33,27"></polygon>
-                <line x1="31" y1="6" x2="12" y2="35"></line>
-                <line x1="31" y1="6" x2="32" y2="44"></line>
-                <line x1="31" y1="6" x2="53" y2="34"></line>
-                <line x1="31" y1="6" x2="33" y2="27"></line>
-              </svg>
+              <svg class="map-geo-icon" viewBox="0 0 96 78" aria-hidden="true"><polygon points="72.75,63.28 46.02,70.00 60.94,8.00" fill="#B3DCE1" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/><polygon points="46.02,70.00 23.25,51.23 60.94,8.00" fill="#84BCC5" stroke="#294951" stroke-width="1.9" stroke-linejoin="round"/></svg>
               <span class="body-name">Pirámide cuadrangular</span>
             </button>
 
             <button class="body" id="body-cone" data-body="Cono" type="button">
-              <svg viewBox="0 0 64 52" aria-hidden="true">
-                <ellipse cx="32" cy="40" rx="18" ry="7"></ellipse>
-                <line x1="32" y1="6" x2="14" y2="40"></line>
-                <line x1="32" y1="6" x2="50" y2="40"></line>
-              </svg>
+              <svg class="map-geo-icon" viewBox="0 0 96 78" aria-hidden="true"><defs><linearGradient id="s3-map-cone" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8CC1C9"/><stop offset=".55" stop-color="#78ADB7"/><stop offset="1" stop-color="#A5D4D9"/></linearGradient></defs><path d="M48 8 L22 61 Q48 78 74 61 Z" fill="url(#s3-map-cone)"/><path d="M48 8 L22 61 M48 8 L74 61" stroke="#294951" stroke-width="1.8" fill="none"/><ellipse cx="48" cy="61" rx="26" ry="7.5" fill="#A7D2D8" stroke="#294951" stroke-width="1.8"/></svg>
               <span class="body-name">Cono</span>
             </button>
           </div>
@@ -795,7 +756,7 @@ const initialRotations={
   cube:{x:0.44,y:-0.62,z:0},
   prism6:{x:0.61,y:-0.52,z:0},
   pyramid4:{x:0.35,y:0.79,z:0},
-  cylinder:{x:-0.26,y:-0.52,z:0},
+  cylinder:{x:0.38,y:-0.52,z:0},
   cone:{x:-0.35,y:0.52,z:0},
   sphere:{x:0,y:0,z:0}
 };
@@ -921,34 +882,88 @@ function createCanvasEngine(container,model){
   }
 
   function coneOrCylinder(kind,w,h){
-    const n=48,r=1.15,yb=-1.35,yt=1.35;
-    const v=[],faces=[];
+    // Las divisiones matemáticas construyen la curva, pero NO se dibujan como aristas.
+    // Todas las regiones laterales visibles se rellenan en una sola operación Canvas,
+    // para que no aparezcan franjas o costuras semejantes a caras de un prisma.
+    const n=128,r=1.15,yb=-1.35,yt=1.35;
+    const v=[];
+    for(let i=0;i<n;i++){
+      const a=(i/n)*Math.PI*2;
+      v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
+    }
     if(kind==="cylinder"){
-      for(let i=0;i<n;i++){
-        const a=(i/n)*Math.PI*2;
-        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
-      }
       for(let i=0;i<n;i++){
         const a=(i/n)*Math.PI*2;
         v.push([Math.cos(a)*r,yt,Math.sin(a)*r]);
       }
-      faces.push([...Array(n).keys()].reverse());
-      faces.push([...Array(n).keys()].map(i=>i+n));
-      for(let i=0;i<n;i++){
-        const j=(i+1)%n;
-        faces.push([i,j,j+n,i+n]);
-      }
     }else{
-      for(let i=0;i<n;i++){
-        const a=(i/n)*Math.PI*2;
-        v.push([Math.cos(a)*r,yb,Math.sin(a)*r]);
-      }
       v.push([0,yt,0]);
-      const apex=n;
-      faces.push([...Array(n).keys()].reverse());
-      for(let i=0;i<n;i++)faces.push([i,(i+1)%n,apex]);
     }
-    mesh(v,faces,w,h,false);
+    const rv=v.map(rotatePoint);
+    const center=rv.reduce((a,p)=>[a[0]+p[0],a[1]+p[1],a[2]+p[2]],[0,0,0]).map(x=>x/rv.length);
+    const projected=rv.map(p=>project(p,w,h));
+    const cameraZ=7.2;
+    const visibleSides=[];
+    for(let i=0;i<n;i++){
+      const j=(i+1)%n;
+      const ids=kind==="cylinder"?[i,j,j+n,i+n]:[i,j,n];
+      const pts=ids.map(k=>rv[k]);
+      const fc=pts.reduce((a,p)=>[a[0]+p[0],a[1]+p[1],a[2]+p[2]],[0,0,0]).map(x=>x/pts.length);
+      let faceNormal=normal(pts[0],pts[1],pts[2]);
+      const outward=[fc[0]-center[0],fc[1]-center[1],fc[2]-center[2]];
+      if(faceNormal[0]*outward[0]+faceNormal[1]*outward[1]+faceNormal[2]*outward[2]<0)
+        faceNormal=faceNormal.map(x=>-x);
+      const toCamera=[-fc[0],-fc[1],cameraZ-fc[2]];
+      if(faceNormal[0]*toCamera[0]+faceNormal[1]*toCamera[1]+faceNormal[2]*toCamera[2]>1e-7)
+        visibleSides.push(ids.map(k=>projected[k]));
+    }
+
+    if(visibleSides.length){
+      let minX=Infinity,maxX=-Infinity;
+      for(const side of visibleSides){
+        for(const p of side){minX=Math.min(minX,p[0]);maxX=Math.max(maxX,p[0]);}
+      }
+      const gradient=ctx.createLinearGradient(minX,0,Math.max(minX+1,maxX),0);
+      gradient.addColorStop(0,"#8CBFC7");
+      gradient.addColorStop(.48,"#78ADB6");
+      gradient.addColorStop(1,"#93C9CF");
+      ctx.beginPath();
+      for(const side of visibleSides){
+        ctx.moveTo(side[0][0],side[0][1]);
+        for(let j=1;j<side.length;j++)ctx.lineTo(side[j][0],side[j][1]);
+        ctx.closePath();
+      }
+      ctx.fillStyle=gradient;
+      ctx.fill();
+    }
+
+    // Las bases planas se dibujan únicamente si miran a la cámara.
+    // Su contorno separa base y superficie curva, no es una arista poligonal.
+    const bottom=rotatePoint([0,yb,0]);
+    const up=rotatePoint([0,1,0]);
+    const toCamera=[-bottom[0],-bottom[1],cameraZ-bottom[2]];
+    const showBottom=-(up[0]*toCamera[0]+up[1]*toCamera[1]+up[2]*toCamera[2])>1e-7;
+    const caps=[{start:0,show:showBottom,fill:"#9BCBD1"}];
+    if(kind==="cylinder"){
+      const top=rotatePoint([0,yt,0]);
+      const towards=[-top[0],-top[1],cameraZ-top[2]];
+      caps.push({start:n,show:(up[0]*towards[0]+up[1]*towards[1]+up[2]*towards[2]>1e-7),fill:"#A5D0D5"});
+    }
+    for(const cap of caps){
+      if(!cap.show)continue;
+      ctx.beginPath();
+      for(let i=0;i<n;i++){
+        const p=projected[cap.start+i];
+        if(i===0)ctx.moveTo(p[0],p[1]);
+        else ctx.lineTo(p[0],p[1]);
+      }
+      ctx.closePath();
+      ctx.fillStyle=cap.fill;
+      ctx.fill();
+      ctx.strokeStyle="#28484F";
+      ctx.lineWidth=1.4;
+      ctx.stroke();
+    }
   }
 
   function sphere(w,h){
@@ -1351,18 +1366,22 @@ function reportHeight(){
       )
     );
 
-    const frame=window.frameElement;
-    if(frame){
-      frame.style.width="100%";
-      frame.style.maxWidth="none";
-      frame.style.display="block";
-      frame.style.border="0";
-      frame.setAttribute("width","100%");
-      frame.setAttribute("scrolling","no");
-      frame.style.height=contentHeight+"px";
-      frame.style.minHeight="0";
-      frame.setAttribute("height",String(contentHeight));
-    }
+    // El acceso directo al iframe puede estar restringido bajo file://.
+    // En ese caso, conservar la comunicación postMessage con eXeLearning.
+    try {
+      const frame=window.frameElement;
+      if(frame){
+        frame.style.width="100%";
+        frame.style.maxWidth="none";
+        frame.style.display="block";
+        frame.style.border="0";
+        frame.setAttribute("width","100%");
+        frame.setAttribute("scrolling","no");
+        frame.style.height=contentHeight+"px";
+        frame.style.minHeight="0";
+        frame.setAttribute("height",String(contentHeight));
+      }
+    }catch(_){}
 
     if(window.parent && window.parent!==window){
       window.parent.postMessage(

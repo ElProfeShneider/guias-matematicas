@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" id="exe-node-20260826140658TWWUAL">
+<html lang="es" id="exe-node-20260911130224JPRPGW">
 <head>
 <meta charset="utf-8">
 <meta name="generator" content="eXeLearning v3.0.2">
@@ -12,6 +12,12 @@
 <link rel="stylesheet" href="../content/css/base.css">
 <script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css">
 <link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<style>
+/* Ajuste localizado en «Analiza»: permite que los créditos sigan al recurso. */
+body.exe-web-site main.page { min-height: 0 !important; }
+.s3-resource-frame { width:100%; margin:0; padding:0; }
+.s3-resource-frame iframe { width:100%; display:block; border:0; }
+</style>
 </head>
 <body class="exe-export exe-web-site" lang="es">
 <script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li> <a href="../index.html" class="main-node no-ch">Exploración</a>
@@ -22,13 +28,13 @@
 </li>
 <li> <a href="../html/actividad-individual.html" class="no-ch">Actividad individual</a>
 </li>
-</ul></nav><main id="20260826140658TWWUAL" class="page"> <header id="header-20260826140658TWWUAL" class="main-header"> <div class="package-header">
+</ul></nav><main id="20260911130224JPRPGW" class="page"> <header id="header-20260911130224JPRPGW" class="main-header"> <div class="package-header">
 <h1 class="package-title">Familias geométricas: ¿en qué se parecen y en qué se diferencian?</h1>
 <p class="package-subtitle">Sesión 3 · Comparación y clasificación mediante propiedades geométricas.</p>
 </div>
-<div class="page-header"><h2 class="page-title sr-av">Analiza</h2></div></header><div id="page-content-20260826140658TWWUAL" class="page-content"> <article id="20260826140658YXSPPM" class="box"> <header class="box-head no-icon"> <h1 class="box-title">Compara y organiza las propiedades</h1></header><div class="box-content"> <div id="20260816112354236F22" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+<div class="page-header"><h2 class="page-title sr-av">Analiza</h2></div></header><div id="page-content-20260911130224JPRPGW" class="page-content"> <article id="20260911130224YNLXWM" class="box"> <header class="box-head no-icon"> <h1 class="box-title">Compara y organiza las propiedades</h1></header><div class="box-content"> <div id="20260816112354236F22" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
             <div class="exe-text-activity">
-                <div><p><iframe width="100%" height="800" src="../content/resources/20260816112354236F22/S3_P2_FINAL_GEOMETRIA_VERIFICADA.html"></iframe></p><p class="clearfix"></p></div>
+                <div><div class="s3-resource-frame"><iframe title="Sesión 3: compara y organiza las propiedades" width="100%" height="800" scrolling="no" style="display:block;width:100%;border:0;" src="../content/resources/20260816112354236F22/S3_P2_FINAL_GEOMETRIA_VERIFICADA.html"></iframe></div></div>
             </div></div></div></div>
 </div></article>
 </div></main><div class="nav-buttons"> <a href="../index.html" title="Anterior" class="nav-button nav-button-left"> <span>Anterior</span></a><a href="../html/aplica-y-comprueba.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
@@ -37,5 +43,28 @@
 </div>
 </div></footer>
 </div>
+<script>
+/* Altura dinámica de la actividad: segura en GitHub Pages y en file://. */
+(() => {
+  'use strict';
+  const frame = document.querySelector('iframe[src*="S3_P2_FINAL_GEOMETRIA_VERIFICADA.html"]');
+  if (!frame) return;
+  let previous = 0;
+  window.addEventListener('message', event => {
+    if (event.source !== frame.contentWindow || !event.data || event.data.type !== 'S3_RESOURCE_HEIGHT') return;
+    const h = Number(event.data.height);
+    if (!Number.isFinite(h) || h < 40 || h > 6000) return;
+    const height = Math.ceil(h) + 10;
+    if (Math.abs(height-previous) < 2) return;
+    previous = height;
+    frame.style.setProperty('height',height+'px','important');
+    frame.style.setProperty('width','100%','important');
+    frame.style.setProperty('border','0','important');
+    frame.style.setProperty('display','block','important');
+    frame.setAttribute('height',String(height));
+    frame.setAttribute('scrolling','no');
+  });
+})();
+</script>
 </body>
 </html>

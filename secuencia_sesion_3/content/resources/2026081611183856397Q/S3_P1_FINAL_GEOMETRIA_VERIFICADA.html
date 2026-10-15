@@ -370,7 +370,7 @@ const DPR=Math.min(window.devicePixelRatio||1,1.5);
 
 const initial={
   cube:{x:0.44,y:-0.62,z:0},
-  cylinder:{x:-0.26,y:-0.52,z:0}
+  cylinder:{x:0.38,y:-0.52,z:0}
 };
 
 let current="cube";
@@ -516,36 +516,88 @@ function drawCube(w,h){
 }
 
 function drawCylinder(w,h){
-  const segments=56;
+  // Representación didáctica de una superficie curva continua.
+  // El mallado solo aproxima la geometría y NO dibuja subdivisiones como aristas.
+  const segments=128;
   const radius=1.17;
   const yBottom=-1.36;
   const yTop=1.36;
-
   const vertices=[];
-  const faces=[];
 
   for(let i=0;i<segments;i++){
     const a=(i/segments)*Math.PI*2;
     vertices.push([Math.cos(a)*radius,yBottom,Math.sin(a)*radius]);
   }
-
   for(let i=0;i<segments;i++){
     const a=(i/segments)*Math.PI*2;
     vertices.push([Math.cos(a)*radius,yTop,Math.sin(a)*radius]);
   }
 
-  // Bases planas. El contorno visible surge de la propia silueta del sólido;
-  // no se agregan "aristas" circulares artificiales.
-  faces.push([...Array(segments).keys()].reverse());
-  faces.push([...Array(segments).keys()].map(i=>i+segments));
+  const rotated=vertices.map(rotatePoint);
+  const projected=rotated.map(p=>project(p,w,h));
+  const cameraZ=7.2;
 
-  // Superficie lateral aproximada con muchas caras estrechas y sin bordes dibujados.
+  // Seleccionar la mitad de superficie lateral que mira hacia el observador.
+  // Pintarla en una sola operación de Canvas evita costuras entre polígonos.
+  const visibleSides=[];
   for(let i=0;i<segments;i++){
     const j=(i+1)%segments;
-    faces.push([i,j,j+segments,i+segments]);
+    const ids=[i,j,j+segments,i+segments];
+    const pts3=ids.map(k=>rotated[k]);
+    const fc=pts3.reduce((a,p)=>[a[0]+p[0],a[1]+p[1],a[2]+p[2]],[0,0,0]).map(v=>v/4);
+    let n=normal(pts3[0],pts3[1],pts3[2]);
+    if(n[0]*fc[0]+n[1]*fc[1]+n[2]*fc[2]<0)n=n.map(v=>-v);
+    const toCamera=[-fc[0],-fc[1],cameraZ-fc[2]];
+    if(n[0]*toCamera[0]+n[1]*toCamera[1]+n[2]*toCamera[2]>1e-7){
+      visibleSides.push(ids.map(k=>projected[k]));
+    }
   }
 
-  drawMesh(vertices,faces,w,h,false);
+  if(visibleSides.length){
+    let minX=Infinity,maxX=-Infinity;
+    for(const quad of visibleSides){
+      for(const p of quad){minX=Math.min(minX,p[0]);maxX=Math.max(maxX,p[0]);}
+    }
+    const grad=ctx.createLinearGradient(minX,0,maxX||minX+1,0);
+    grad.addColorStop(0,"#8CBFC7");
+    grad.addColorStop(.48,"#78ADB6");
+    grad.addColorStop(1,"#93C9CF");
+    ctx.beginPath();
+    for(const quad of visibleSides){
+      ctx.moveTo(quad[0][0],quad[0][1]);
+      for(let i=1;i<quad.length;i++)ctx.lineTo(quad[i][0],quad[i][1]);
+      ctx.closePath();
+    }
+    ctx.fillStyle=grad;
+    ctx.fill();
+  }
+
+  // Las bases circulares solo se muestran cuando miran a la cámara.
+  // Su contorno es el límite entre base plana y superficie curva, no una arista poligonal.
+  const topAxis=rotatePoint([0,1,0]);
+  function capFacesCamera(y,sign){
+    const fc=rotatePoint([0,y,0]);
+    const n=topAxis.map(v=>sign*v);
+    return n[0]*(-fc[0])+n[1]*(-fc[1])+n[2]*(cameraZ-fc[2])>1e-7;
+  }
+  const capViews=[
+    {offset:0,visible:capFacesCamera(yBottom,-1),fill:"#9BCBD1"},
+    {offset:segments,visible:capFacesCamera(yTop,1),fill:"#A5D0D5"}
+  ];
+  for(const cap of capViews){
+    if(!cap.visible)continue;
+    const points=[];
+    for(let i=0;i<segments;i++)points.push(projected[i+cap.offset]);
+    ctx.beginPath();
+    ctx.moveTo(points[0][0],points[0][1]);
+    for(let i=1;i<points.length;i++)ctx.lineTo(points[i][0],points[i][1]);
+    ctx.closePath();
+    ctx.fillStyle=cap.fill;
+    ctx.fill();
+    ctx.strokeStyle="#28484F";
+    ctx.lineWidth=1.4;
+    ctx.stroke();
+  }
 }
 
 function render(){
