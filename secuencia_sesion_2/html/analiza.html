@@ -12,6 +12,15 @@
 <link rel="stylesheet" href="../content/css/base.css">
 <script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css">
 <link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<style>
+/* Solo «Analiza»: los créditos siguen al contenido, sin el espacio vacío del pie fijo. */
+.exe-web-site main.page { min-height: 0; }
+</style>
+<style>
+/* Sesión 2: evitar que la altura mínima del tema separe los créditos
+   de las actividades cuando el recurso queda corto o finaliza. */
+body.exe-web-site main.page { min-height: 0 !important; }
+</style>
 </head>
 <body class="exe-export exe-web-site" lang="es">
 <script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li> <a href="../index.html" class="main-node no-ch">Exploración</a>
@@ -38,5 +47,28 @@
 </div>
 </div></footer>
 </div>
+<script>
+/* Sesión 2 / Analiza: altura comunicada desde el recurso, compatible con exportación local y GitHub Pages. */
+(() => {
+  'use strict';
+  const frame = document.querySelector('iframe[src*="S2_PAGINA_2_FINAL_TEXTUAL_SEGURA.html"]');
+  if (!frame) return;
+  let lastHeight = 0;
+  window.addEventListener('message', event => {
+    if (event.source !== frame.contentWindow || !event.data || event.data.type !== 'S2_RESOURCE_HEIGHT') return;
+    const h = Number(event.data.height);
+    if (!Number.isFinite(h) || h < 40 || h > 5000) return;
+    const height = Math.ceil(h) + 10;
+    if (Math.abs(height - lastHeight) < 2) return;
+    lastHeight = height;
+    frame.style.setProperty('height', height + 'px', 'important');
+    frame.style.setProperty('width', '100%', 'important');
+    frame.style.setProperty('display', 'block', 'important');
+    frame.style.setProperty('border', '0', 'important');
+    frame.setAttribute('height', String(height));
+    frame.setAttribute('scrolling', 'no');
+  });
+})();
+</script>
 </body>
 </html>

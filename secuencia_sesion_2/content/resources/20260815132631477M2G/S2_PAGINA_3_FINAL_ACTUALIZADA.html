@@ -191,7 +191,7 @@ class RoundViewer{
 }
 const rv=new RoundViewer(document.getElementById('roundSvg'));
 function roundPartButtons(){const p=document.getElementById('roundParts');let data=[];if(rv.body==='cylinder')data=[['bases','Bases'],['curve','Superficie curva']];if(rv.body==='cone')data=[['base','Base'],['curve','Superficie curva'],['vertex','Vértice']];if(rv.body==='sphere')data=[['surface','Superficie curva']];p.innerHTML=data.map((x,i)=>`<button class="btn" data-rpart="${x[0]}" aria-pressed="${i===0}">${x[1]}</button>`).join('');p.querySelectorAll('[data-rpart]').forEach(b=>b.onclick=()=>{p.querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',String(z===b)));rv.action=b.dataset.rpart;if(rv.body==='cylinder')rv.pitch=(rv.action==='bases'?18:14)*D;if(rv.body==='cone')rv.pitch=(rv.action==='base'?-18:12)*D;rv.draw();updateRoundInfo()});rv.action=data[0][0];rv.draw();updateRoundInfo()}
-function updateRoundInfo(){let h='';if(rv.body==='cylinder')h='<strong>Cilindro</strong><div class="round-info"><span>2 bases circulares</span><span>1 superficie lateral curva</span><span>Sin vértices</span></div>';if(rv.body==='cone')h='<strong>Cono</strong><div class="round-info"><span>1 base circular</span><span>1 superficie lateral curva</span><span>1 vértice</span></div>';if(rv.body==='sphere')h='<strong>Esfera</strong><div class="round-info"><span>1 superficie curva</span><span>Sin bases, aristas ni vértices</span></div>';document.getElementById('roundInfo').innerHTML=h}
+function updateRoundInfo(){let h='';if(rv.body==='cylinder')h='<strong>Cilindro</strong><div class="round-info"><span>2 bases circulares</span><span>1 superficie lateral curva</span><span>Sin vértices</span></div>';if(rv.body==='cone')h='<strong>Cono</strong><div class="round-info"><span>1 base circular</span><span>1 superficie lateral curva</span><span>1 vértice</span></div>';if(rv.body==='sphere')h='<strong>Esfera</strong><div class="round-info"><span>1 superficie curva</span><span>Sin bases, aristas ni vértices</span></div>';document.getElementById('roundInfo').innerHTML=h;document.querySelector('#roundConcepts .compare2d').hidden=(rv.body==='sphere')}
 function updateRoundControls(){}
 document.querySelectorAll('[data-rbody]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-rbody]').forEach(z=>z.setAttribute('aria-pressed',String(z===b)));rv.setBody(b.dataset.rbody);roundPartButtons();updateRoundControls()});document.querySelectorAll('[data-rturn]').forEach(b=>b.onclick=()=>rv.turn(b.dataset.rturn));document.getElementById('roundReset').onclick=()=>{rv.defaultView();rv.draw()};roundPartButtons();updateRoundControls();
 
@@ -231,7 +231,7 @@ function measureHostHeight(){
   const rs=getComputedStyle(root), bs=getComputedStyle(body);
   const visualBottom=rr.bottom-br.top;
   const naturalBottom=(rr.top-br.top)+Math.max(rr.height,root.scrollHeight||0);
-  return Math.max(180,Math.ceil(Math.max(visualBottom,naturalBottom)+hostPx(rs.marginBottom)+hostPx(bs.paddingBottom)+4));
+  return Math.max(flowEls.final.hidden ? 180 : 60,Math.ceil(Math.max(visualBottom,naturalBottom)+hostPx(rs.marginBottom)+hostPx(bs.paddingBottom)+4));
 }
 function ensureHostParentRule(frame){
   try{

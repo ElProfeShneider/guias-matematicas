@@ -721,7 +721,7 @@ const q=[
  {model:'cube',view:[-30,18],sel:{type:'face',id:'front',label:'?'},text:'La región plana resaltada es una…',opts:['cara','arista','vértice'],ans:'cara',ok:'Correcto: es una cara.'},
  {model:'cube',view:[-30,18],sel:{type:'edge',e:[6,7],label:'?'},text:'El segmento resaltado es una…',opts:['cara','arista','vértice'],ans:'arista',ok:'Correcto: es una arista.'},
  {model:'pyr',view:[-28,17],sel:{type:'vertex',i:5,label:'?'},text:'El punto resaltado es un…',opts:['cara','arista','vértice'],ans:'vértice',ok:'Correcto: es un vértice.'},
- {model:'pyr',view:[-28,17],sel:{type:'face',id:'lat1',label:'?'},text:'En esta pirámide, la cara triangular resaltada es…',opts:['base','cara lateral'],ans:'cara lateral',ok:'Correcto: en esta pirámide es una cara lateral.'}
+ {model:'pyr',view:[-28,17],sel:{type:'face',id:'lat4',label:'?'},text:'En esta pirámide, la cara triangular resaltada es…',opts:['base','cara lateral'],ans:'cara lateral',ok:'Correcto: en esta pirámide es una cara lateral.'}
 ];let qi=0;const qv=new Viewer(document.getElementById('checkSvg'),cube,'dotsCheck');const qtext=document.getElementById('qtext'),qopts=document.getElementById('qopts'),qfb=document.getElementById('qfb'),qnum=document.getElementById('qnum'),next=document.getElementById('nextQ'),prog=document.getElementById('prog');
 function loadQ(){const x=q[qi];qv.model=x.model==='cube'?cube:pyr;qv.setView(...x.view);qv.sel=x.sel;qv.draw();qnum.textContent=`Pregunta ${qi+1} de ${q.length}`;qtext.textContent=x.text;qopts.innerHTML=x.opts.map(o=>`<button class="btn" data-o="${o}">${o.charAt(0).toUpperCase()+o.slice(1)}</button>`).join('');qfb.hidden=true;next.hidden=true;next.textContent=qi===q.length-1?'Terminar':'Siguiente';prog.textContent=`${qi} de ${q.length} completadas`;qopts.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>{if(b.dataset.o===x.ans){qopts.querySelectorAll('button').forEach(z=>z.disabled=true);qfb.className='feedback ok';qfb.textContent=x.ok;qfb.hidden=false;next.hidden=false;prog.textContent=`${qi+1} de ${q.length} completadas`}else{b.disabled=true;qfb.className='feedback bad';qfb.textContent='Revisen la parte resaltada e intenten otra vez.';qfb.hidden=false;next.hidden=true}})}
 next.onclick=()=>{if(qi<q.length-1){qi++;loadQ()}else{qnum.textContent='';qtext.textContent='Comprobación terminada.';qopts.innerHTML='';qfb.hidden=true;next.hidden=true;prog.textContent='4 de 4 completadas.';try{window.parent.postMessage({type:'S2_F3_COMPLETE'},'*')}catch(e){}}};loadQ();
@@ -745,7 +745,9 @@ function measureHostHeight(){
   const rs=getComputedStyle(root), bs=getComputedStyle(body);
   const visualBottom=rr.bottom-br.top;
   const naturalBottom=(rr.top-br.top)+Math.max(rr.height,root.scrollHeight||0);
-  return Math.max(180,Math.ceil(Math.max(visualBottom,naturalBottom)+hostPx(rs.marginBottom)+hostPx(bs.paddingBottom)+4));
+  // Al finalizar, no conservar el mínimo de 180 px reservado al visor interactivo.
+  const minHeight = done.hidden ? 180 : 60;
+  return Math.max(minHeight,Math.ceil(Math.max(visualBottom,naturalBottom)+hostPx(rs.marginBottom)+hostPx(bs.paddingBottom)+4));
 }
 function ensureHostParentRule(frame){
   try{

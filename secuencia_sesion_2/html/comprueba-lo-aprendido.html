@@ -12,6 +12,11 @@
 <link rel="stylesheet" href="../content/css/base.css">
 <script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css">
 <link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<style>
+/* Sesión 2: evitar que la altura mínima del tema separe los créditos
+   de las actividades cuando el recurso queda corto o finaliza. */
+body.exe-web-site main.page { min-height: 0 !important; }
+</style>
 </head>
 <body class="exe-export exe-web-site" lang="es">
 <script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li> <a href="../index.html" class="main-node no-ch">Exploración</a>
@@ -30,7 +35,7 @@
 <button class="box-toggle box-toggle-on" title="Ocultar/Mostrar contenido"> <span>Ocultar/Mostrar contenido</span></button></header><div class="box-content"> <div id="20260815132631477M2G" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
             <div class="exe-text-activity">
                 <div><p><iframe width="100%" height="850" src="../content/resources/20260815132631477M2G/S2_PAGINA_3_FINAL_ACTUALIZADA.html"></iframe></p>
-<p><br></p><p class="clearfix"></p></div>
+<p class="clearfix"></p></div>
             </div></div></div></div>
 </div></article>
 </div></main><div class="nav-buttons"> <a href="../html/analiza.html" title="Anterior" class="nav-button nav-button-left"> <span>Anterior</span></a><a href="../html/actividad-individual.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
@@ -39,5 +44,29 @@
 </div>
 </div></footer>
 </div>
+<script>
+/* Sesión 2 / Comprueba lo aprendido: altura comunicada desde el recurso,
+   tanto en la exportación local como en GitHub Pages. */
+(() => {
+  'use strict';
+  const frame = document.querySelector('iframe[src*="S2_PAGINA_3_FINAL_ACTUALIZADA.html"]');
+  if (!frame) return;
+  let lastHeight = 0;
+  window.addEventListener('message', event => {
+    if (event.source !== frame.contentWindow || !event.data || event.data.type !== 'S2_RESOURCE_HEIGHT') return;
+    const h = Number(event.data.height);
+    if (!Number.isFinite(h) || h < 40 || h > 5000) return;
+    const height = Math.ceil(h) + 10;
+    if (Math.abs(height - lastHeight) < 2) return;
+    lastHeight = height;
+    frame.style.setProperty('height', height + 'px', 'important');
+    frame.style.setProperty('width', '100%', 'important');
+    frame.style.setProperty('display', 'block', 'important');
+    frame.style.setProperty('border', '0', 'important');
+    frame.setAttribute('height', String(height));
+    frame.setAttribute('scrolling', 'no');
+  });
+})();
+</script>
 </body>
 </html>
