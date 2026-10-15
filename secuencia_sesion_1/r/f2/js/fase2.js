@@ -125,15 +125,21 @@ function createScene(container, kind, rotation, interactive = false) {
   const initial = { ...rotation };
   let rx = initial.x, ry = initial.y, rz = initial.z;
   let dragging = false, px = 0, py = 0, queued = false;
-  let resetAnimation = 0;
+  let resetAnimation = 0, renderFrame = 0;
+  let disposed = false;
 
   function render() {
-    if (queued) return;
+    if (disposed || queued) return;
     queued = true;
-    requestAnimationFrame(() => { renderer.render(scene, camera); queued = false; });
+    renderFrame = requestAnimationFrame(() => {
+      renderFrame = 0;
+      queued = false;
+      if (!disposed) renderer.render(scene, camera);
+    });
   }
   function apply() { group.rotation.set(rx, ry, rz); render(); }
   function resize() {
+    if (disposed) return;
     const width = Math.max(container.clientWidth, 1);
     const height = Math.max(container.clientHeight, 1);
     renderer.setSize(width, height, false);
@@ -154,6 +160,8 @@ function createScene(container, kind, rotation, interactive = false) {
     group.rotation.set(rx, ry, rz);
 
     // Render inmediato para evitar que una actualización pendiente oculte el cambio.
+    if (renderFrame) cancelAnimationFrame(renderFrame);
+    renderFrame = 0;
     queued = false;
     renderer.render(scene, camera);
 
@@ -193,13 +201,24 @@ function createScene(container, kind, rotation, interactive = false) {
   }
   const observer = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(resize) : null;
   if (observer) observer.observe(container); else window.addEventListener('resize', resize);
-  renderer.domElement.addEventListener('webglcontextlost', (e) => { e.preventDefault(); showFallback(container, kind); });
+  function onContextLost(e) {
+    e.preventDefault();
+    // Un visor ya sustituido no puede mostrar su contingencia sobre otro modelo.
+    if (disposed || !container.isConnected || !container.contains(renderer.domElement)) return;
+    if (container.id === 'main-viewer' && models[currentIndex]?.kind !== kind) return;
+    showFallback(container, kind);
+  }
+  renderer.domElement.addEventListener('webglcontextlost', onContextLost);
   apply(); resize();
 
   return {
     renderer, reset,
     dispose() {
+      if (disposed) return;
+      disposed = true;
       if (resetAnimation) cancelAnimationFrame(resetAnimation);
+      if (renderFrame) cancelAnimationFrame(renderFrame);
+      renderer.domElement.removeEventListener('webglcontextlost', onContextLost);
       observer?.disconnect();
       if (!observer) window.removeEventListener('resize', resize);
       if (interactive) {
@@ -210,7 +229,12 @@ function createScene(container, kind, rotation, interactive = false) {
         container.removeEventListener('keydown', keyDown);
       }
       geometry.dispose();
+      group.children[0].material.dispose();
+      edges.geometry.dispose();
+      edges.material.dispose();
       renderer.dispose();
+      // En Safari móvil el contexto no siempre se libera solo con dispose().
+      renderer.forceContextLoss?.();
       renderer.domElement.remove();
     }
   };
