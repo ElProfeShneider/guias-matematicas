@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-index">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v3.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<title>Representaciones y desarrollos planos de cuerpos geométricos</title>
+<meta name="description" content="Recurso digital de la sesión 4 orientado a fortalecer el razonamiento geométrico mediante la relación entre cuerpos tridimensionales y sus representaciones planas. Los estudiantes anticipan, comprueban y argumentan a partir de vistas, desarrollos planos, correspondencias y relaciones de adyacencia entre caras de prismas y pirámides. La sesión también contrasta el desarrollo de la superficie lateral del cilindro con la imposibilidad de obtener un desarrollo plano exacto de la esfera sin deformar su superficie, mediante recursos digitales y modelos físicos.">
+<script>document.querySelector("html").classList.add("js");</script><script src="libs/jquery/jquery.min.js"> </script><script src="libs/common_i18n.js"> </script><script src="libs/common.js"> </script><script src="libs/exe_export.js"> </script><script src="libs/bootstrap/bootstrap.bundle.min.js"> </script><script src="libs/exe_atools/exe_atools.js"> </script><link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="libs/exe_atools/exe_atools.css">
+<script src="idevices/text/text.js"> </script><link rel="stylesheet" href="idevices/text/text.css">
+<link rel="stylesheet" href="content/css/base.css">
+<script src="theme/style.js"> </script><link rel="stylesheet" href="theme/style.css">
+<link rel="icon" type="image/x-icon" href="libs/favicon.ico">
+</head>
+<body class="exe-export exe-web-site" lang="es">
+<script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li class="active"> <a href="index.html" class="active main-node no-ch">Exploración</a>
+</li>
+<li> <a href="html/analiza.html" class="no-ch">Analiza</a>
+</li>
+<li> <a href="html/aplica-y-comprueba.html" class="no-ch">Aplica y comprueba</a>
+</li>
+<li> <a href="html/cierre.html" class="no-ch">Cierre</a>
+</li>
+</ul></nav><main id="20260913152749ABBWSO" class="page"> <header id="header-20260913152749ABBWSO" class="main-header"> <div class="package-header">
+<h1 class="package-title">Representaciones y desarrollos planos de cuerpos geométricos</h1>
+<p class="package-subtitle">Sesión 4 · Representaciones y desarrollos planos de cuerpos geométricos</p>
+</div>
+<div class="page-header"><h2 class="page-title sr-av">Exploración</h2></div></header><div id="page-content-20260913152749ABBWSO" class="page-content"> <article id="20260913152749MIETWT" class="box"> <header class="box-head no-icon"> <h1 class="box-title">¿Vista o desarrollo plano?</h1></header><div class="box-content"> <div id="20260822173014697WD9" class="idevice_node text" data-idevice-path="idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p><iframe width="100%" height="600" scrolling="no" style="display:block;width:100%;border:0;" src="content/resources/20260822173014697WD9/S4_P1_F1_Reto_inicial_eXe_FINAL_DEFINITIVO_ANCHO_COMPLETO_IFRAME100_1.html"></iframe></p><p class="clearfix"></p></div>
+            </div></div></div></div>
+</div></article>
+</div></main><div class="nav-buttons"> <span class="nav-button nav-button-left" aria-hidden="true"> <span>Anterior</span></span><a href="html/analiza.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-nc-sa"> <p> <span class="license-label">Licencia: </span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="license">creative commons: attribution - non commercial - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+<script>
+/* Altura dinámica exclusiva del recurso de Exploración (Sesión 4). */
+(() => {
+  'use strict';
+  const frame = document.querySelector('iframe[src*="S4_P1_F1_Reto_inicial_eXe_FINAL_DEFINITIVO_ANCHO_COMPLETO_IFRAME100_1.html"]');
+  if (!frame) return;
+  let previous = 0;
+
+  window.addEventListener('message', event => {
+    if (event.source !== frame.contentWindow || !event.data || event.data.type !== 'S4_P1_RESOURCE_HEIGHT') return;
+    const h = Number(event.data.height);
+    if (!Number.isFinite(h) || h < 40 || h > 6000) return;
+    const height = Math.ceil(h) + 8;
+    if (Math.abs(height - previous) < 2) return;
+    previous = height;
+    frame.style.setProperty('height', height + 'px', 'important');
+    frame.style.setProperty('width', '100%', 'important');
+    frame.style.setProperty('border', '0', 'important');
+    frame.style.setProperty('display', 'block', 'important');
+    frame.setAttribute('height', String(height));
+    frame.setAttribute('scrolling', 'no');
+  });
+
+  /* Solicitud adicional si el recurso se carga antes que el listener. */
+  const requestHeight = () => {
+    try { frame.contentWindow.postMessage({type:'S4_P1_REQUEST_HEIGHT'}, '*'); } catch (_) {}
+  };
+  frame.addEventListener('load', requestHeight);
+  requestHeight();
+  window.addEventListener('load', requestHeight);
+})();
+</script>
+</body>
+</html>

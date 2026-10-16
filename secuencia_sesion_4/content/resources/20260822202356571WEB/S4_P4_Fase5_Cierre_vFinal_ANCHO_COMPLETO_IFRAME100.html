@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S4 · Página 4 · Fase 5 · Para cerrar</title>
+<style>
+:root{
+  --ink:#20262B;
+  --text:#20262B;
+  --muted:#52606A;
+  --green:#4B702F;
+  --green-soft:#F4F7F2;
+  --blue:#0F5F9B;
+  --blue-soft:#E8F2F8;
+  --border:#C8D7E2;
+  --panel:#FFFFFF;
+  --bg:#F6F8F9;
+}
+*{box-sizing:border-box}
+html,body{
+  width:100%;
+  height:auto;
+  min-height:0;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  overflow-y:visible;
+  background:transparent;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+}
+body{font-size:16px}
+.activity{
+  width:100%;
+  max-width:none;
+  height:auto;
+  min-height:0;
+  margin:0 auto;
+  padding:8px;
+  overflow:visible;
+}
+.shell{
+  height:auto;
+  min-height:0;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--panel);
+  padding:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+.card{
+  width:min(790px,100%);
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  padding:22px 24px;
+}
+.instruction{
+  margin:0 0 14px;
+  padding:10px 12px;
+  background:var(--green-soft);
+  border-left:5px solid var(--green);
+  border-radius:8px;
+  line-height:1.42;
+}
+.instruction p{margin:2px 0}
+.question{
+  margin:0 0 14px;
+  padding:14px 16px;
+  background:var(--blue-soft);
+  border-left:4px solid var(--blue);
+  border-radius:8px;
+  font-size:18px;
+  line-height:1.42;
+}
+.final-note{
+  margin-top:14px;
+  color:var(--muted);
+  line-height:1.4;
+}
+@media(max-width:720px){
+  .activity{padding:6px}
+  .shell{padding:10px}
+  .card{padding:18px 16px}
+  .question{font-size:16px}
+}
+</style>
+</head>
+<body>
+<main class="activity">
+  <section class="shell" aria-label="Cierre de la sesión">
+    <div class="card">
+
+      <div class="instruction">
+        <p>Conversen brevemente. No escriban esta respuesta.</p>
+      </div>
+
+      <div class="question">
+        ¿En qué se fijaron para saber si una plantilla podía formar el cuerpo?
+      </div>
+
+      <div class="final-note">
+        Esperen la indicación del docente.
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script>
+(() => {
+  'use strict';
+  const RESOURCE_HEIGHT='S4_P4_RESOURCE_HEIGHT';
+  const HEIGHT_REQUEST='S4_P4_REQUEST_HEIGHT';
+  let previousHeight=0;
+  let queued=false;
+
+  function measureHeight(){
+    const box=document.querySelector('.activity');
+    if(!box)return;
+    // Measure only actual content: scrollHeight of html/body can equal the
+    // iframe viewport and would prevent shrinking from its initial 300 px.
+    const height=Math.ceil(box.getBoundingClientRect().height);
+    if(!Number.isFinite(height) || height<40 || height>6000)return;
+    if(Math.abs(height-previousHeight)<2)return;
+    previousHeight=height;
+    // postMessage works even when file:// restricts frameElement access.
+    try{window.parent.postMessage({type:RESOURCE_HEIGHT,height},'*');}catch(_){}
+    // Best-effort direct adjustment when same-origin access is available.
+    try{
+      const frame=window.frameElement;
+      if(frame){
+        frame.style.width='100%';
+        frame.style.maxWidth='none';
+        frame.style.display='block';
+        frame.style.border='0';
+        frame.setAttribute('scrolling','no');
+      }
+    }catch(_){}
+  }
+  function queueHeight(){
+    if(queued)return;
+    queued=true;
+    requestAnimationFrame(()=>{queued=false;measureHeight();});
+  }
+  window.addEventListener('message',event=>{
+    if(event.source!==window.parent||!event.data||event.data.type!==HEIGHT_REQUEST)return;
+    previousHeight=0;
+    queueHeight();
+  });
+  window.addEventListener('load',queueHeight);
+  window.addEventListener('resize',queueHeight,{passive:true});
+  if(typeof ResizeObserver==='function'){
+    const observer=new ResizeObserver(queueHeight);
+    observer.observe(document.querySelector('.activity'));
+  }
+  queueHeight();
+})();
+</script>
+</body>
+</html>
