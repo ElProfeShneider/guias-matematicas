@@ -12,6 +12,37 @@
 <link rel="stylesheet" href="../content/css/base.css">
 <script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css">
 <link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<script>
+/* Sesión 5 · Página 2. Ajuste de altura limitado al iframe de esta página.
+   El recurso calcula la altura del contenido y la comunica por postMessage.
+   El receptor actúa también si el navegador restringe frameElement. */
+(function(){
+  "use strict";
+  var ultimoAlto=800;
+  function iframe(){return document.getElementById("s5-p2-iframe");}
+  function ajustar(alto){
+    var f=iframe();
+    if(!f || typeof alto!=="number" || !Number.isFinite(alto) || alto<100 || alto>6000)return;
+    ultimoAlto=Math.ceil(alto);
+    if(Math.abs(f.getBoundingClientRect().height-ultimoAlto)>1){
+      f.style.setProperty("height",ultimoAlto+"px","important");
+      f.setAttribute("height",String(ultimoAlto));
+    }
+  }
+  window.addEventListener("message",function(event){
+    var f=iframe();
+    if(!f || !f.contentWindow || event.source!==f.contentWindow)return;
+    var data=event.data;
+    if(!data || data.type!=="S5_RESOURCE_HEIGHT")return;
+    ajustar(data.height);
+  });
+  document.addEventListener("DOMContentLoaded",function(){
+    var f=iframe();
+    if(!f)return;
+    f.addEventListener("load",function(){ajustar(ultimoAlto);});
+  });
+})();
+</script>
 </head>
 <body class="exe-export exe-web-site" lang="es">
 <script>document.body.className+=" js"</script><div class="exe-content exe-export pre-js siteNav-hidden"> <nav id="siteNav"> <ul> <li> <a href="../index.html" class="main-node no-ch">Reto inicial</a>
@@ -28,7 +59,7 @@
 </div>
 <div class="page-header"><h2 class="page-title sr-av">Exploración y construcción</h2></div></header><div id="page-content-20260917134725LUMULH" class="page-content"> <article id="20260917134725CKGMXL" class="box"> <header class="box-head no-icon"> <h1 class="box-title">Observa propiedades y revisa tu decisión</h1></header><div class="box-content"> <div id="20260824103910345M3R" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json"><div class="exe-text-template"><div class="textIdeviceContent">
             <div class="exe-text-activity">
-                <div><p><iframe width="100%" height="800" src="../content/resources/20260824103910345M3R/S5_P2_EXPLORACION_Y_CONSTRUCCION_FINAL_COMPATIBLE_EXPORTACION.html"></iframe></p><p class="clearfix"></p></div>
+                <div><p><iframe id="s5-p2-iframe" title="Exploración y construcción de modelos geométricos" width="100%" height="800" scrolling="no" style="display:block;border:0;width:100%;max-width:none;overflow:hidden" src="../content/resources/20260824103910345M3R/S5_P2_EXPLORACION_Y_CONSTRUCCION_FINAL_COMPATIBLE_EXPORTACION.html"></iframe></p><p class="clearfix"></p></div>
             </div></div></div></div>
 </div></article>
 </div></main><div class="nav-buttons"> <a href="../index.html" title="Anterior" class="nav-button nav-button-left"> <span>Anterior</span></a><a href="../html/aplicacion-y-argumentacion.html" title="Siguiente" class="nav-button nav-button-right"> <span>Siguiente</span></a>
