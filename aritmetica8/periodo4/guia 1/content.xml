@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ode><userPreferences><userPreference><key>theme</key><value>base</value></userPreference></userPreferences><odeResources><odeResource><key>odeVersionId</key><value>20260831133546NTTDIY</value></odeResource><odeResource><key>odeId</key><value>20260831125724JEQRYW</value></odeResource><odeResource><key>odeVersionName</key><value>0</value></odeResource><odeResource><key>isDownload</key><value>true</value></odeResource><odeResource><key>eXeVersion</key><value>v3.0.2</value></odeResource></odeResources><odeProperties><odeProperty><key>pp_title</key><value>Fracciones algebraicas</value></odeProperty><odeProperty><key>pp_subtitle</key><value>Cocientes entre expresiones algebraicas y simplificación mediante factorización</value></odeProperty><odeProperty><key>pp_lang</key><value>es</value></odeProperty><odeProperty><key>pp_author</key><value>Shneider Becerra</value></odeProperty><odeProperty><key>license</key><value>creative commons: attribution - non commercial - share alike 4.0</value></odeProperty><odeProperty><key>pp_description</key><value>Guía de aprendizaje de Aritmética para grado 8° orientada al reconocimiento de las fracciones algebraicas como cocientes entre expresiones algebraicas y a su simplificación mediante los casos de factorización estudiados previamente.</value></odeProperty><odeProperty><key>exportSource</key><value>true</value></odeProperty><odeProperty><key>pp_addExeLink</key><value>false</value></odeProperty><odeProperty><key>pp_addPagination</key><value>false</value></odeProperty><odeProperty><key>pp_addSearchBox</key><value>false</value></odeProperty><odeProperty><key>pp_addAccessibilityToolbar</key><value>true</value></odeProperty><odeProperty><key>pp_extraHeadContent</key><value/></odeProperty><odeProperty><key>footer</key><value/></odeProperty></odeProperties><odeNavStructures><odeNavStructure><odePageId>20260831133546VVQJOJ</odePageId><odeParentPageId/><pageName>Guía de aprendizaje</pageName><odeNavStructureOrder>1</odeNavStructureOrder><odeNavStructureProperties><odeNavStructureProperty><key>titleNode</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>hidePageTitle</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>titleHtml</key><value/></odeNavStructureProperty><odeNavStructureProperty><key>editableInPage</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>titlePage</key><value>Guía de aprendizaje</value></odeNavStructureProperty><odeNavStructureProperty><key>visibility</key><value>true</value></odeNavStructureProperty><odeNavStructureProperty><key>highlight</key><value>false</value></odeNavStructureProperty><odeNavStructureProperty><key>description</key><value/></odeNavStructureProperty></odeNavStructureProperties><odePagStructures><odePagStructure><odePageId>20260831133546VVQJOJ</odePageId><odeBlockId>20260831133546GMQYHV</odeBlockId><blockName>8.°</blockName><iconName/><odePagStructureOrder>1</odePagStructureOrder><odePagStructureProperties><odePagStructureProperty><key>visibility</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>teacherOnly</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>allowToggle</key><value>true</value></odePagStructureProperty><odePagStructureProperty><key>minimized</key><value>false</value></odePagStructureProperty><odePagStructureProperty><key>identifier</key><value/></odePagStructureProperty><odePagStructureProperty><key>cssClass</key><value/></odePagStructureProperty></odePagStructureProperties><odeComponents><odeComponent><odePageId>20260831133546VVQJOJ</odePageId><odeBlockId>20260831133546GMQYHV</odeBlockId><odeIdeviceId>20260831080029996195</odeIdeviceId><odeIdeviceTypeName>text</odeIdeviceTypeName><htmlView>&lt;div class="exe-text-template"&gt;&lt;div class="textIdeviceContent"&gt;
+            &lt;div class="exe-text-activity"&gt;
+                &lt;div&gt;&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;EXPLORACIÓN&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. Observo distintos cocientes&lt;/h3&gt;
+&lt;p&gt;Observa las siguientes expresiones:&lt;/p&gt;
+&lt;div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 16px 0;"&gt;
+&lt;div style="text-align: center; min-width: 120px;"&gt;A.&amp;nbsp; &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;12&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;18&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;div style="text-align: center; min-width: 120px;"&gt;B.&amp;nbsp; &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;x + 3&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;5&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;div style="text-align: center; min-width: 120px;"&gt;C.&amp;nbsp; &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;2x&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 1&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Comenta oralmente: ¿qué operación representa la barra horizontal en las tres expresiones?&lt;/p&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;RESPONDE:&lt;/strong&gt; ¿en cuáles expresiones aparece una variable? Indica si está en el numerador, en el denominador o en ambos.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. Un valor que genera un problema&lt;/h3&gt;
+&lt;p&gt;Observa:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;x + 2&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;Sustituye solamente en el denominador:&lt;/p&gt;
+&lt;p&gt;x = 5 &amp;nbsp;&amp;nbsp; → &amp;nbsp;&amp;nbsp; x − 3 = ______&lt;/p&gt;
+&lt;p&gt;x = 3 &amp;nbsp;&amp;nbsp; → &amp;nbsp;&amp;nbsp; x − 3 = ______&lt;/p&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;RESPONDE:&lt;/strong&gt; ¿por qué x = 3 genera un problema para este cociente?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin-top: 28px;"&gt;ANALIZA&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. Distingo un factor de un término&lt;/h3&gt;
+&lt;p&gt;Compara:&lt;/p&gt;
+&lt;div style="display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; align-items: center; margin: 18px 0;"&gt;
+&lt;div style="text-align: center; min-width: 190px;"&gt;I.&amp;nbsp; &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;(x + 2)(x + 5)&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x + 2&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;div style="text-align: center; min-width: 190px;"&gt;II.&amp;nbsp; &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;(x + 2) + 5&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x + 2&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Observa que en I, x + 2 multiplica a otro factor. En II, x + 2 forma parte de una suma.&lt;/p&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;ANALIZA:&lt;/strong&gt; ¿en cuál expresión x + 2 es factor de todo el numerador y también aparece como factor en el denominador?&lt;/p&gt;
+&lt;p&gt;Comenta oralmente: ¿por qué no sería correcto eliminar x + 2 solamente porque aparece arriba y abajo?&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. La factorización permite reconocer factores&lt;/h3&gt;
+&lt;p&gt;Observa la expresión:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;Recuerda:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9 = (x − 3)(x + 3)&lt;/p&gt;
+&lt;p&gt;Entonces:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;(x − 3)(x + 3)&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;COMPLETA Y RESPONDE:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1. Después de reconocer el factor común x − 3, la expresión puede simplificarse a ____________________.&lt;/p&gt;
+&lt;p&gt;2. ¿Puede utilizarse x = 3 en la expresión original? Escribe una razón breve.&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;1. ¿Qué es una fracción algebraica?&lt;/h3&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;COPIA – Idea esencial:&lt;/strong&gt; Una fracción algebraica es un cociente indicado entre expresiones algebraicas. Se representa de la forma:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 8px;"&gt;A&lt;/span&gt; &lt;span style="padding: 0 8px;"&gt;B&lt;/span&gt; &lt;/span&gt; &amp;nbsp;&amp;nbsp; con &amp;nbsp;&amp;nbsp; B ≠ 0&lt;/div&gt;
+&lt;p&gt;A y B representan expresiones algebraicas. La expresión de arriba es el numerador y la de abajo es el denominador.&lt;/p&gt;
+&lt;p&gt;El numerador puede tomar el valor 0, pero el denominador nunca puede ser 0.&lt;/p&gt;
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;x + 4&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 2&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;El valor x = 2 no está permitido porque convierte el denominador en 0.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;2. ¿Cómo se simplifica?&lt;/h3&gt;
+&lt;p&gt;Simplificar una fracción algebraica significa escribirla de una forma equivalente más sencilla, conservando los valores que estaban permitidos en la expresión original.&lt;/p&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;COPIA – Procedimiento base:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style="padding-left: 24px;"&gt;
+&lt;li&gt;Identifica los valores que hacen cero el denominador original y exclúyelos.&lt;/li&gt;
+&lt;li&gt;Factoriza el numerador y el denominador cuando sea necesario.&lt;/li&gt;
+&lt;li&gt;Identifica los factores comunes.&lt;/li&gt;
+&lt;li&gt;Simplifica los factores comunes.&lt;/li&gt;
+&lt;li&gt;Conserva las restricciones de la fracción original.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Solo se simplifican factores comunes. No se eliminan términos que formen parte de una suma o una resta.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;3. Ejemplo esencial&lt;/h3&gt;
+&lt;p&gt;Observa cómo se simplifica:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;Primero se identifica la restricción:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;x − 3 = 0 &amp;nbsp; → &amp;nbsp; x = 3&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;Por tanto: x ≠ 3&lt;/p&gt;
+&lt;p&gt;Después se factoriza el numerador:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9 = (x − 3)(x + 3)&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;(x − 3)(x + 3)&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 3&lt;/span&gt; &lt;/span&gt; &amp;nbsp;=&amp;nbsp; x + 3&lt;/div&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;COPIA – Ejemplo esencial:&lt;/strong&gt;&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x − 3&lt;/span&gt; &lt;/span&gt; &amp;nbsp;=&amp;nbsp; x + 3, &amp;nbsp;&amp;nbsp; x ≠ 3&lt;/div&gt;
+&lt;p&gt;Aunque la expresión simplificada sea x + 3, el valor x = 3 continúa excluido porque no estaba permitido en la fracción original.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;4. Una idea que debes conservar&lt;/h3&gt;
+&lt;p style="text-align: center;"&gt;factorizar → reconocer factores comunes → simplificar&lt;/p&gt;
+&lt;p&gt;La factorización permite descubrir factores que no siempre son visibles en la expresión inicial.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;5. Verificación breve&lt;/h3&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;RESUELVE:&lt;/strong&gt; simplifica la siguiente fracción algebraica.&lt;/p&gt;
+&lt;div style="text-align: center; margin: 16px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 6px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; + 5x&lt;/span&gt; &lt;span style="padding: 0 6px;"&gt;x&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;1. Valor excluido: x ≠ ______&lt;/p&gt;
+&lt;p&gt;2. Factorización del numerador: x&lt;sup&gt;2&lt;/sup&gt; + 5x = ____________________&lt;/p&gt;
+&lt;p&gt;3. Expresión simplificada: ____________________&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;&lt;hr&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;
+&lt;p&gt;✎ &lt;strong&gt;RESUELVE EN TU CUADERNO:&lt;/strong&gt; no copies los enunciados completos. Registra el número del ejercicio, el procedimiento, la expresión simplificada y las restricciones cuando correspondan.&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 1. Identifico los valores excluidos&lt;/h3&gt;
+&lt;p&gt;Determina los valores de x que no pueden utilizarse. No simplifiques todavía.&lt;/p&gt;
+&lt;p&gt;1. &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;x + 5&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;x − 4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2. ★ &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;x + 1&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;x(x − 3)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;3. &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;x − 2&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;(x + 2)(x − 5)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 2. Simplifico factores visibles&lt;/h3&gt;
+&lt;p&gt;Identifica el factor común, simplifica y conserva las restricciones de la fracción original.&lt;/p&gt;
+&lt;p&gt;1. ★ &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;6x&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;9x&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2. &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;4(x + 3)&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;2(x + 3)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;3. ★ &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;(x − 5)(x + 2)&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;x − 5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 3. Factorizo antes de simplificar&lt;/h3&gt;
+&lt;p&gt;En cada ejercicio:&lt;/p&gt;
+&lt;ol style="padding-left: 24px;"&gt;
+&lt;li&gt;determina las restricciones;&lt;/li&gt;
+&lt;li&gt;factoriza cuando sea necesario;&lt;/li&gt;
+&lt;li&gt;identifica los factores comunes;&lt;/li&gt;
+&lt;li&gt;simplifica si es posible.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1. ★ &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 16&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;x − 4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2. &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; + 7x + 12&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;x + 5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Si después de factorizar no encuentras factores comunes, escribe: &lt;em&gt;no se puede simplificar&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;3. ★ &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;3x&lt;sup&gt;2&lt;/sup&gt; + 12x&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;3x&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;4. &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 25&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 10x + 25&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;"&gt;Actividad 4. Aplico y analizo&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;A. Una dimensión desconocida&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un panel rectangular tiene un área de x&lt;sup&gt;2&lt;/sup&gt; − 25 cm&lt;sup&gt;2&lt;/sup&gt; y uno de sus lados mide x − 5 cm. Para la situación se considera x &gt; 5.&lt;/p&gt;
+&lt;p&gt;★ ✎ &lt;strong&gt;RESUELVE:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style="padding-left: 24px;"&gt;
+&lt;li&gt;Representa la otra dimensión mediante un cociente.&lt;/li&gt;
+&lt;li&gt;Factoriza y simplifica.&lt;/li&gt;
+&lt;li&gt;Escribe la medida obtenida.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;B. Reviso un procedimiento&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un estudiante escribe:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 14px 0;"&gt;&lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;x + 4&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;x + 2&lt;/span&gt; &lt;/span&gt; &amp;nbsp;=&amp;nbsp; &lt;span style="display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;"&gt; &lt;span style="border-bottom: 1px solid currentColor; padding: 0 5px;"&gt;4&lt;/span&gt; &lt;span style="padding: 0 5px;"&gt;2&lt;/span&gt; &lt;/span&gt; &amp;nbsp;=&amp;nbsp; 2&lt;/div&gt;
+&lt;p&gt;✎ &lt;strong&gt;ANALIZA:&lt;/strong&gt; explica en una frase por qué el procedimiento es incorrecto e indica la restricción de la fracción original.&lt;/p&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0px auto; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;&lt;hr&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+#fa8_eval_g1 .fa-status{
+  border:1px solid #777;
+  padding:10px;
+  margin:14px 0;
+  box-sizing:border-box;
+}
+
+#fa8_eval_g1 .fa-q{
+  border:1px solid #aaa;
+  padding:14px;
+  margin:16px 0;
+  box-sizing:border-box;
+}
+
+#fa8_eval_g1 .fa-options{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:12px;
+}
+
+#fa8_eval_g1 .fa-opt{
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  text-align:left;
+  font-family:Arial, sans-serif;
+  font-size:12pt;
+  line-height:1.3;
+  background:#fff;
+  border:1px solid #777;
+  cursor:pointer;
+}
+
+#fa8_eval_g1 .fa-opt:hover{
+  background:#f3f3f3;
+}
+
+#fa8_eval_g1 .fa-opt:focus{
+  outline:3px solid #444;
+  outline-offset:2px;
+}
+
+#fa8_eval_g1 .fa-opt:disabled{
+  cursor:default;
+  opacity:0.82;
+}
+
+#fa8_eval_g1 .fa-feedback{
+  margin-top:12px;
+  padding:10px;
+  min-height:22px;
+  border-left:4px solid #777;
+  background:#f6f6f6;
+}
+
+#fa8_eval_g1 .fa-feedback[data-state="correct"]{
+  border-left-color:#26734d;
+}
+
+#fa8_eval_g1 .fa-feedback[data-state="incorrect"]{
+  border-left-color:#8b3a3a;
+}
+
+#fa8_eval_g1 .fa-reset{
+  padding:9px 14px;
+  font-family:Arial, sans-serif;
+  font-size:12pt;
+  cursor:pointer;
+}
+
+#fa8_eval_g1 .fa-frac{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  vertical-align:middle;
+  line-height:1.05;
+}
+
+#fa8_eval_g1 .fa-num{
+  border-bottom:1px solid currentColor;
+  padding:0 5px;
+}
+
+#fa8_eval_g1 .fa-den{
+  padding:0 5px;
+}
+
+@media (max-width:600px){
+  #fa8_eval_g1{
+    padding:6px;
+  }
+
+  #fa8_eval_g1 .fa-q{
+    padding:10px;
+  }
+}
+&lt;/style&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;
+&lt;div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;
+&lt;div id="fa8_eval_g1" style="width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;"&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;
+&lt;p&gt;✎ &lt;strong&gt;EVALUACIÓN:&lt;/strong&gt; responde primero cada pregunta en tu cuaderno y después selecciona una opción. Registra el procedimiento en las preguntas 3, 4 y 6. Si cometes un error, corrígelo después de leer la retroalimentación.&lt;/p&gt;
+&lt;div class="fa-status" aria-live="polite"&gt;Seguimiento formativo: Preguntas respondidas: 0 de 6. Respuestas correctas: 0.&lt;/div&gt;
+&lt;div class="fa-q"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 1. ★ Concepto esencial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;¿Cuál afirmación describe correctamente una fracción algebraica?&lt;/p&gt;
+&lt;div class="fa-options"&gt;&lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa. Una fracción algebraica no se define como una suma de términos."&gt; A. Es una suma que contiene por lo menos una variable. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa. Una ecuación contiene una igualdad; eso no define una fracción algebraica."&gt; B. Es una igualdad entre dos expresiones algebraicas. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="1" data-feedback="Correcto. Es un cociente indicado entre expresiones algebraicas y su denominador debe ser diferente de cero."&gt; C. Es un cociente indicado entre expresiones algebraicas cuyo denominador debe ser distinto de cero. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa. Un producto entre expresiones no constituye necesariamente una fracción algebraica."&gt; D. Es cualquier producto formado por dos expresiones algebraicas. &lt;/button&gt;&lt;/div&gt;
+&lt;div class="fa-feedback" aria-live="polite"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fa-q"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 2. ★ Valores excluidos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;¿Qué valores deben excluirse en la expresión?&lt;/p&gt;
+&lt;div style="text-align: center; margin: 12px 0; font-size: 13pt;"&gt;&lt;span class="fa-frac"&gt; &lt;span class="fa-num"&gt;x + 1&lt;/span&gt; &lt;span class="fa-den"&gt;x(x − 3)&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;div class="fa-options"&gt;&lt;button type="button" class="fa-opt" data-correct="1" data-feedback="Correcto. El denominador es cero cuando x = 0 o cuando x − 3 = 0, es decir, x = 3."&gt; A. x ≠ 0 y x ≠ 3 &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa los factores del denominador. El numerador x + 1 no determina las restricciones."&gt; B. x ≠ −1 y x ≠ 3 &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa el factor x − 3. Se anula cuando x = 3, no cuando x = −3."&gt; C. x ≠ 0 y x ≠ −3 &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Falta una restricción. El factor x también hace cero el denominador cuando x = 0."&gt; D. Solamente x ≠ 3 &lt;/button&gt;&lt;/div&gt;
+&lt;div class="fa-feedback" aria-live="polite"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fa-q"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 3. ★ Simplificación mediante factorización&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;¿Cuál es la simplificación correcta?&lt;/p&gt;
+&lt;div style="text-align: center; margin: 12px 0; font-size: 13pt;"&gt;&lt;span class="fa-frac"&gt; &lt;span class="fa-num"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 16&lt;/span&gt; &lt;span class="fa-den"&gt;x − 4&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;div class="fa-options"&gt;&lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa la diferencia de cuadrados: x² − 16 = (x − 4)(x + 4)."&gt; A. x − 4, con x ≠ −4 &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="La expresión x + 4 aparece al simplificar, pero debes conservar la restricción de la fracción original."&gt; B. x + 4, para cualquier número real &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa la factorización del numerador antes de simplificar."&gt; C. x&lt;sup&gt;2&lt;/sup&gt; − 4, con x ≠ 4 &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="1" data-feedback="Correcto. x² − 16 = (x − 4)(x + 4); se simplifica el factor común x − 4 y se conserva x ≠ 4."&gt; D. x + 4, con x ≠ 4 &lt;/button&gt;&lt;/div&gt;
+&lt;div class="fa-feedback" aria-live="polite"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fa-q"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 4. Decido si existe un factor común&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Analiza:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 12px 0; font-size: 13pt;"&gt;&lt;span class="fa-frac"&gt; &lt;span class="fa-num"&gt;x&lt;sup&gt;2&lt;/sup&gt; + 7x + 12&lt;/span&gt; &lt;span class="fa-den"&gt;x + 5&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;¿Cuál conclusión es correcta?&lt;/p&gt;
+&lt;div class="fa-options"&gt;&lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa. El numerador se factoriza como (x + 3)(x + 4), pero ninguno de esos factores es x + 5."&gt; A. Se simplifica a x + 4, con x ≠ −3. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="1" data-feedback="Correcto. El numerador es (x + 3)(x + 4) y no existen factores comunes con x + 5. La restricción es x ≠ −5."&gt; B. No tiene factores comunes que permitan simplificarla; x ≠ −5. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa la factorización completa del numerador y compárala con el denominador."&gt; C. Se simplifica a x + 3, con x ≠ −4. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Factorizar una expresión no garantiza que exista un factor común entre numerador y denominador."&gt; D. Se simplifica a 1, con x ≠ −5. &lt;/button&gt;&lt;/div&gt;
+&lt;div class="fa-feedback" aria-live="polite"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fa-q"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 5. Análisis de un error&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un estudiante escribe:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 12px 0; font-size: 13pt;"&gt;&lt;span class="fa-frac"&gt; &lt;span class="fa-num"&gt;x + 4&lt;/span&gt; &lt;span class="fa-den"&gt;x + 2&lt;/span&gt; &lt;/span&gt; &amp;nbsp;=&amp;nbsp; &lt;span class="fa-frac"&gt; &lt;span class="fa-num"&gt;4&lt;/span&gt; &lt;span class="fa-den"&gt;2&lt;/span&gt; &lt;/span&gt; &amp;nbsp;=&amp;nbsp; 2&lt;/div&gt;
+&lt;p&gt;¿Cuál análisis es correcto?&lt;/p&gt;
+&lt;div class="fa-options"&gt;&lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa. No puede utilizarse x/x como un factor común porque las x forman parte de sumas."&gt; A. Es correcto porque x dividido entre x es 1. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="El problema no ocurre solamente para x = −2. El procedimiento utilizado para simplificar es incorrecto."&gt; B. El procedimiento solo es incorrecto cuando x = −2. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="1" data-feedback="Correcto. Las x pertenecen a sumas y no constituyen factores comunes del numerador y el denominador. Además, x ≠ −2."&gt; C. Es incorrecto porque las x pertenecen a sumas y no son factores comunes; además, x ≠ −2. &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Excluir x = −2 no convierte en válida la eliminación de términos que pertenecen a una suma."&gt; D. Es correcto siempre que x ≠ −2. &lt;/button&gt;&lt;/div&gt;
+&lt;div class="fa-feedback" aria-live="polite"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fa-q"&gt;
+&lt;p&gt;&lt;strong&gt;Pregunta 6. ★ Aplicación&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un panel rectangular tiene un área de x&lt;sup&gt;2&lt;/sup&gt; − 25 cm&lt;sup&gt;2&lt;/sup&gt; y uno de sus lados mide x − 5 cm. Se considera x &gt; 5. ¿Cuál expresión representa la medida del otro lado?&lt;/p&gt;
+&lt;div class="fa-options"&gt;&lt;button type="button" class="fa-opt" data-correct="1" data-feedback="Correcto. x² − 25 = (x − 5)(x + 5); al dividir entre x − 5 se obtiene x + 5 cm."&gt; A. x + 5 cm &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Ese es el lado conocido. Debes dividir el área entre x − 5 y simplificar."&gt; B. x − 5 cm &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="Revisa la diferencia de cuadrados y simplifica antes de determinar la dimensión."&gt; C. x&lt;sup&gt;2&lt;/sup&gt; − 5 cm &lt;/button&gt; &lt;button type="button" class="fa-opt" data-correct="0" data-feedback="El cociente entre el área y el lado conocido no produce 2x. Factoriza primero x² − 25."&gt; D. 2x cm &lt;/button&gt;&lt;/div&gt;
+&lt;div class="fa-feedback" aria-live="polite"&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="fa-final" aria-live="polite"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;button type="button" class="fa-reset"&gt; Reiniciar evaluación &lt;/button&gt;
+&lt;h2 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin-top: 30px;"&gt;CIERRE REFLEXIVO&lt;/h2&gt;
+&lt;p&gt;✎ &lt;strong&gt;RESPONDE EN UNA FRASE:&lt;/strong&gt; antes de aceptar como correcta la simplificación de una fracción algebraica, ¿qué debes revisar en el denominador original y en los factores comunes?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 style="font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin-top: 28px;"&gt;REFERENCIAS BIBLIOGRÁFICAS&lt;/h3&gt;
+&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de área de Aritmética 8°&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de clase de Aritmética 8°: tercer periodo&lt;/em&gt;.&lt;/p&gt;
+&lt;script&gt;
+(function () {
+
+  const root = document.getElementById('fa8_eval_g1');
+  if (!root) return;
+
+  const questions = root.querySelectorAll('.fa-q');
+  const status = root.querySelector('.fa-status');
+  const finalMessage = root.querySelector('.fa-final');
+  const resetButton = root.querySelector('.fa-reset');
+
+  let answered = 0;
+  let correct = 0;
+  const total = questions.length;
+
+  function updateStatus() {
+
+    status.textContent =
+      'Seguimiento formativo: Preguntas respondidas: ' +
+      answered + ' de ' + total +
+      '. Respuestas correctas: ' + correct + '.';
+
+    if (answered === total) {
+
+      finalMessage.textContent =
+        'Evaluación completada. Revisa la retroalimentación y corrige en tu cuaderno los procedimientos que necesites ajustar.';
+
+    }
+
+  }
+
+  questions.forEach(function (question) {
+
+    const buttons = question.querySelectorAll('.fa-opt');
+    const feedback = question.querySelector('.fa-feedback');
+
+    buttons.forEach(function (button) {
+
+      button.addEventListener('click', function () {
+
+        if (question.getAttribute('data-done') === '1') return;
+
+        question.setAttribute('data-done', '1');
+        answered++;
+
+        const isCorrect =
+          button.getAttribute('data-correct') === '1';
+
+        if (isCorrect) {
+
+          correct++;
+          feedback.setAttribute('data-state', 'correct');
+
+        } else {
+
+          feedback.setAttribute('data-state', 'incorrect');
+
+        }
+
+        feedback.textContent =
+          button.getAttribute('data-feedback');
+
+        buttons.forEach(function (item) {
+          item.disabled = true;
+        });
+
+        updateStatus();
+
+      });
+
+    });
+
+  });
+
+
+  resetButton.addEventListener('click', function () {
+
+    answered = 0;
+    correct = 0;
+
+    questions.forEach(function (question) {
+
+      question.removeAttribute('data-done');
+
+      const feedback =
+        question.querySelector('.fa-feedback');
+
+      feedback.textContent = '';
+      feedback.removeAttribute('data-state');
+
+      question.querySelectorAll('.fa-opt')
+      .forEach(function (button) {
+        button.disabled = false;
+      });
+
+    });
+
+    finalMessage.textContent = '';
+
+    updateStatus();
+
+  });
+
+  updateStatus();
+
+})();
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p class="clearfix"&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</htmlView><jsonProperties>{"ideviceId":"20260831080029996195","textInfoDurationInput":"","textInfoDurationTextInput":"Duración","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Agrupamiento","textTextarea":"&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;EXPLORACIÓN&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. Observo distintos cocientes&lt;/h3&gt;\n&lt;p&gt;Observa las siguientes expresiones:&lt;/p&gt;\n&lt;div style=\"display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 16px 0;\"&gt;\n&lt;div style=\"text-align: center; min-width: 120px;\"&gt;A.  &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;12&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;18&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;div style=\"text-align: center; min-width: 120px;\"&gt;B.  &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;x + 3&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;5&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;div style=\"text-align: center; min-width: 120px;\"&gt;C.  &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;2x&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 1&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;p&gt;Comenta oralmente: ¿qué operación representa la barra horizontal en las tres expresiones?&lt;/p&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;RESPONDE:&lt;/strong&gt; ¿en cuáles expresiones aparece una variable? Indica si está en el numerador, en el denominador o en ambos.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. Un valor que genera un problema&lt;/h3&gt;\n&lt;p&gt;Observa:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;x + 2&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;p&gt;Sustituye solamente en el denominador:&lt;/p&gt;\n&lt;p&gt;x = 5    →    x − 3 = ______&lt;/p&gt;\n&lt;p&gt;x = 3    →    x − 3 = ______&lt;/p&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;RESPONDE:&lt;/strong&gt; ¿por qué x = 3 genera un problema para este cociente?&lt;/p&gt;\n&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin-top: 28px;\"&gt;ANALIZA&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. Distingo un factor de un término&lt;/h3&gt;\n&lt;p&gt;Compara:&lt;/p&gt;\n&lt;div style=\"display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; align-items: center; margin: 18px 0;\"&gt;\n&lt;div style=\"text-align: center; min-width: 190px;\"&gt;I.  &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;(x + 2)(x + 5)&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x + 2&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;div style=\"text-align: center; min-width: 190px;\"&gt;II.  &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;(x + 2) + 5&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x + 2&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;p&gt;Observa que en I, x + 2 multiplica a otro factor. En II, x + 2 forma parte de una suma.&lt;/p&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;ANALIZA:&lt;/strong&gt; ¿en cuál expresión x + 2 es factor de todo el numerador y también aparece como factor en el denominador?&lt;/p&gt;\n&lt;p&gt;Comenta oralmente: ¿por qué no sería correcto eliminar x + 2 solamente porque aparece arriba y abajo?&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. La factorización permite reconocer factores&lt;/h3&gt;\n&lt;p&gt;Observa la expresión:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;p&gt;Recuerda:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9 = (x − 3)(x + 3)&lt;/p&gt;\n&lt;p&gt;Entonces:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;(x − 3)(x + 3)&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;COMPLETA Y RESPONDE:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;1. Después de reconocer el factor común x − 3, la expresión puede simplificarse a ____________________.&lt;/p&gt;\n&lt;p&gt;2. ¿Puede utilizarse x = 3 en la expresión original? Escribe una razón breve.&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;CONOCE ALGO NUEVO&lt;/h2&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;1. ¿Qué es una fracción algebraica?&lt;/h3&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;COPIA – Idea esencial:&lt;/strong&gt; Una fracción algebraica es un cociente indicado entre expresiones algebraicas. Se representa de la forma:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 8px;\"&gt;A&lt;/span&gt; &lt;span style=\"padding: 0 8px;\"&gt;B&lt;/span&gt; &lt;/span&gt;    con    B ≠ 0&lt;/div&gt;\n&lt;p&gt;A y B representan expresiones algebraicas. La expresión de arriba es el numerador y la de abajo es el denominador.&lt;/p&gt;\n&lt;p&gt;El numerador puede tomar el valor 0, pero el denominador nunca puede ser 0.&lt;/p&gt;\n&lt;p&gt;Ejemplo:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;x + 4&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 2&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;p&gt;El valor x = 2 no está permitido porque convierte el denominador en 0.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;2. ¿Cómo se simplifica?&lt;/h3&gt;\n&lt;p&gt;Simplificar una fracción algebraica significa escribirla de una forma equivalente más sencilla, conservando los valores que estaban permitidos en la expresión original.&lt;/p&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;COPIA – Procedimiento base:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol style=\"padding-left: 24px;\"&gt;\n&lt;li&gt;Identifica los valores que hacen cero el denominador original y exclúyelos.&lt;/li&gt;\n&lt;li&gt;Factoriza el numerador y el denominador cuando sea necesario.&lt;/li&gt;\n&lt;li&gt;Identifica los factores comunes.&lt;/li&gt;\n&lt;li&gt;Simplifica los factores comunes.&lt;/li&gt;\n&lt;li&gt;Conserva las restricciones de la fracción original.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Solo se simplifican factores comunes. No se eliminan términos que formen parte de una suma o una resta.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;3. Ejemplo esencial&lt;/h3&gt;\n&lt;p&gt;Observa cómo se simplifica:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 3&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;p&gt;Primero se identifica la restricción:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;x − 3 = 0   →   x = 3&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;Por tanto: x ≠ 3&lt;/p&gt;\n&lt;p&gt;Después se factoriza el numerador:&lt;/p&gt;\n&lt;p style=\"text-align: center;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9 = (x − 3)(x + 3)&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;(x − 3)(x + 3)&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 3&lt;/span&gt; &lt;/span&gt;  =  x + 3&lt;/div&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;COPIA – Ejemplo esencial:&lt;/strong&gt;&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 9&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x − 3&lt;/span&gt; &lt;/span&gt;  =  x + 3,    x ≠ 3&lt;/div&gt;\n&lt;p&gt;Aunque la expresión simplificada sea x + 3, el valor x = 3 continúa excluido porque no estaba permitido en la fracción original.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;4. Una idea que debes conservar&lt;/h3&gt;\n&lt;p style=\"text-align: center;\"&gt;factorizar → reconocer factores comunes → simplificar&lt;/p&gt;\n&lt;p&gt;La factorización permite descubrir factores que no siempre son visibles en la expresión inicial.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;5. Verificación breve&lt;/h3&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;RESUELVE:&lt;/strong&gt; simplifica la siguiente fracción algebraica.&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 16px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; font-size: 13pt;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 6px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; + 5x&lt;/span&gt; &lt;span style=\"padding: 0 6px;\"&gt;x&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;p&gt;1. Valor excluido: x ≠ ______&lt;/p&gt;\n&lt;p&gt;2. Factorización del numerador: x&lt;sup&gt;2&lt;/sup&gt; + 5x = ____________________&lt;/p&gt;\n&lt;p&gt;3. Expresión simplificada: ____________________&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;&lt;hr /&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;ACTIVIDADES DE APRENDIZAJE&lt;/h2&gt;\n&lt;p&gt;✎ &lt;strong&gt;RESUELVE EN TU CUADERNO:&lt;/strong&gt; no copies los enunciados completos. Registra el número del ejercicio, el procedimiento, la expresión simplificada y las restricciones cuando correspondan.&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 1. Identifico los valores excluidos&lt;/h3&gt;\n&lt;p&gt;Determina los valores de x que no pueden utilizarse. No simplifiques todavía.&lt;/p&gt;\n&lt;p&gt;1. &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;x + 5&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;x − 4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;2. ★ &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;x + 1&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;x(x − 3)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;3. &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;x − 2&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;(x + 2)(x − 5)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 2. Simplifico factores visibles&lt;/h3&gt;\n&lt;p&gt;Identifica el factor común, simplifica y conserva las restricciones de la fracción original.&lt;/p&gt;\n&lt;p&gt;1. ★ &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;6x&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;9x&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;2. &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;4(x + 3)&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;2(x + 3)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;3. ★ &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;(x − 5)(x + 2)&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;x − 5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 3. Factorizo antes de simplificar&lt;/h3&gt;\n&lt;p&gt;En cada ejercicio:&lt;/p&gt;\n&lt;ol style=\"padding-left: 24px;\"&gt;\n&lt;li&gt;determina las restricciones;&lt;/li&gt;\n&lt;li&gt;factoriza cuando sea necesario;&lt;/li&gt;\n&lt;li&gt;identifica los factores comunes;&lt;/li&gt;\n&lt;li&gt;simplifica si es posible.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;1. ★ &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 16&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;x − 4&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;2. &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; + 7x + 12&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;x + 5&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;Si después de factorizar no encuentras factores comunes, escribe: &lt;em&gt;no se puede simplificar&lt;/em&gt;.&lt;/p&gt;\n&lt;p&gt;3. ★ &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;3x&lt;sup&gt;2&lt;/sup&gt; + 12x&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;3x&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;4. &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 25&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 10x + 25&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left;\"&gt;Actividad 4. Aplico y analizo&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;A. Una dimensión desconocida&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Un panel rectangular tiene un área de x&lt;sup&gt;2&lt;/sup&gt; − 25 cm&lt;sup&gt;2&lt;/sup&gt; y uno de sus lados mide x − 5 cm. Para la situación se considera x &gt; 5.&lt;/p&gt;\n&lt;p&gt;★ ✎ &lt;strong&gt;RESUELVE:&lt;/strong&gt;&lt;/p&gt;\n&lt;ol style=\"padding-left: 24px;\"&gt;\n&lt;li&gt;Representa la otra dimensión mediante un cociente.&lt;/li&gt;\n&lt;li&gt;Factoriza y simplifica.&lt;/li&gt;\n&lt;li&gt;Escribe la medida obtenida.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;&lt;strong&gt;B. Reviso un procedimiento&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Un estudiante escribe:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 14px 0;\"&gt;&lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;x + 4&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;x + 2&lt;/span&gt; &lt;/span&gt;  =  &lt;span style=\"display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05;\"&gt; &lt;span style=\"border-bottom: 1px solid currentColor; padding: 0 5px;\"&gt;4&lt;/span&gt; &lt;span style=\"padding: 0 5px;\"&gt;2&lt;/span&gt; &lt;/span&gt;  =  2&lt;/div&gt;\n&lt;p&gt;✎ &lt;strong&gt;ANALIZA:&lt;/strong&gt; explica en una frase por qué el procedimiento es incorrecto e indica la restricción de la fracción original.&lt;/p&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0px auto; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;&lt;hr /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;style&gt;\n#fa8_eval_g1 .fa-status{\n  border:1px solid #777;\n  padding:10px;\n  margin:14px 0;\n  box-sizing:border-box;\n}\n\n#fa8_eval_g1 .fa-q{\n  border:1px solid #aaa;\n  padding:14px;\n  margin:16px 0;\n  box-sizing:border-box;\n}\n\n#fa8_eval_g1 .fa-options{\n  display:flex;\n  flex-direction:column;\n  gap:8px;\n  margin-top:12px;\n}\n\n#fa8_eval_g1 .fa-opt{\n  width:100%;\n  padding:10px;\n  box-sizing:border-box;\n  text-align:left;\n  font-family:Arial, sans-serif;\n  font-size:12pt;\n  line-height:1.3;\n  background:#fff;\n  border:1px solid #777;\n  cursor:pointer;\n}\n\n#fa8_eval_g1 .fa-opt:hover{\n  background:#f3f3f3;\n}\n\n#fa8_eval_g1 .fa-opt:focus{\n  outline:3px solid #444;\n  outline-offset:2px;\n}\n\n#fa8_eval_g1 .fa-opt:disabled{\n  cursor:default;\n  opacity:0.82;\n}\n\n#fa8_eval_g1 .fa-feedback{\n  margin-top:12px;\n  padding:10px;\n  min-height:22px;\n  border-left:4px solid #777;\n  background:#f6f6f6;\n}\n\n#fa8_eval_g1 .fa-feedback[data-state=\"correct\"]{\n  border-left-color:#26734d;\n}\n\n#fa8_eval_g1 .fa-feedback[data-state=\"incorrect\"]{\n  border-left-color:#8b3a3a;\n}\n\n#fa8_eval_g1 .fa-reset{\n  padding:9px 14px;\n  font-family:Arial, sans-serif;\n  font-size:12pt;\n  cursor:pointer;\n}\n\n#fa8_eval_g1 .fa-frac{\n  display:inline-flex;\n  flex-direction:column;\n  align-items:center;\n  justify-content:center;\n  vertical-align:middle;\n  line-height:1.05;\n}\n\n#fa8_eval_g1 .fa-num{\n  border-bottom:1px solid currentColor;\n  padding:0 5px;\n}\n\n#fa8_eval_g1 .fa-den{\n  padding:0 5px;\n}\n\n@media (max-width:600px){\n  #fa8_eval_g1{\n    padding:6px;\n  }\n\n  #fa8_eval_g1 .fa-q{\n    padding:10px;\n  }\n}\n&lt;/style&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;\n&lt;div style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;\n&lt;div id=\"fa8_eval_g1\" style=\"width: 100%; max-width: 900px; margin: 0 auto; padding: 10px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12pt; overflow-wrap: break-word;\"&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center;\"&gt;EVALUACIÓN FORMATIVA INTERACTIVA DE REPASO&lt;/h2&gt;\n&lt;p&gt;✎ &lt;strong&gt;EVALUACIÓN:&lt;/strong&gt; responde primero cada pregunta en tu cuaderno y después selecciona una opción. Registra el procedimiento en las preguntas 3, 4 y 6. Si cometes un error, corrígelo después de leer la retroalimentación.&lt;/p&gt;\n&lt;div class=\"fa-status\" aria-live=\"polite\"&gt;Seguimiento formativo: Preguntas respondidas: 0 de 6. Respuestas correctas: 0.&lt;/div&gt;\n&lt;div class=\"fa-q\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 1. ★ Concepto esencial&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;¿Cuál afirmación describe correctamente una fracción algebraica?&lt;/p&gt;\n&lt;div class=\"fa-options\"&gt;&lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa. Una fracción algebraica no se define como una suma de términos.\"&gt; A. Es una suma que contiene por lo menos una variable. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa. Una ecuación contiene una igualdad; eso no define una fracción algebraica.\"&gt; B. Es una igualdad entre dos expresiones algebraicas. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"1\" data-feedback=\"Correcto. Es un cociente indicado entre expresiones algebraicas y su denominador debe ser diferente de cero.\"&gt; C. Es un cociente indicado entre expresiones algebraicas cuyo denominador debe ser distinto de cero. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa. Un producto entre expresiones no constituye necesariamente una fracción algebraica.\"&gt; D. Es cualquier producto formado por dos expresiones algebraicas. &lt;/button&gt;&lt;/div&gt;\n&lt;div class=\"fa-feedback\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"fa-q\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 2. ★ Valores excluidos&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;¿Qué valores deben excluirse en la expresión?&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 12px 0; font-size: 13pt;\"&gt;&lt;span class=\"fa-frac\"&gt; &lt;span class=\"fa-num\"&gt;x + 1&lt;/span&gt; &lt;span class=\"fa-den\"&gt;x(x − 3)&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;div class=\"fa-options\"&gt;&lt;button type=\"button\" class=\"fa-opt\" data-correct=\"1\" data-feedback=\"Correcto. El denominador es cero cuando x = 0 o cuando x − 3 = 0, es decir, x = 3.\"&gt; A. x ≠ 0 y x ≠ 3 &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa los factores del denominador. El numerador x + 1 no determina las restricciones.\"&gt; B. x ≠ −1 y x ≠ 3 &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa el factor x − 3. Se anula cuando x = 3, no cuando x = −3.\"&gt; C. x ≠ 0 y x ≠ −3 &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Falta una restricción. El factor x también hace cero el denominador cuando x = 0.\"&gt; D. Solamente x ≠ 3 &lt;/button&gt;&lt;/div&gt;\n&lt;div class=\"fa-feedback\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"fa-q\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 3. ★ Simplificación mediante factorización&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;¿Cuál es la simplificación correcta?&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 12px 0; font-size: 13pt;\"&gt;&lt;span class=\"fa-frac\"&gt; &lt;span class=\"fa-num\"&gt;x&lt;sup&gt;2&lt;/sup&gt; − 16&lt;/span&gt; &lt;span class=\"fa-den\"&gt;x − 4&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;div class=\"fa-options\"&gt;&lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa la diferencia de cuadrados: x² − 16 = (x − 4)(x + 4).\"&gt; A. x − 4, con x ≠ −4 &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"La expresión x + 4 aparece al simplificar, pero debes conservar la restricción de la fracción original.\"&gt; B. x + 4, para cualquier número real &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa la factorización del numerador antes de simplificar.\"&gt; C. x&lt;sup&gt;2&lt;/sup&gt; − 4, con x ≠ 4 &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"1\" data-feedback=\"Correcto. x² − 16 = (x − 4)(x + 4); se simplifica el factor común x − 4 y se conserva x ≠ 4.\"&gt; D. x + 4, con x ≠ 4 &lt;/button&gt;&lt;/div&gt;\n&lt;div class=\"fa-feedback\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"fa-q\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 4. Decido si existe un factor común&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Analiza:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 12px 0; font-size: 13pt;\"&gt;&lt;span class=\"fa-frac\"&gt; &lt;span class=\"fa-num\"&gt;x&lt;sup&gt;2&lt;/sup&gt; + 7x + 12&lt;/span&gt; &lt;span class=\"fa-den\"&gt;x + 5&lt;/span&gt; &lt;/span&gt;&lt;/div&gt;\n&lt;p&gt;¿Cuál conclusión es correcta?&lt;/p&gt;\n&lt;div class=\"fa-options\"&gt;&lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa. El numerador se factoriza como (x + 3)(x + 4), pero ninguno de esos factores es x + 5.\"&gt; A. Se simplifica a x + 4, con x ≠ −3. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"1\" data-feedback=\"Correcto. El numerador es (x + 3)(x + 4) y no existen factores comunes con x + 5. La restricción es x ≠ −5.\"&gt; B. No tiene factores comunes que permitan simplificarla; x ≠ −5. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa la factorización completa del numerador y compárala con el denominador.\"&gt; C. Se simplifica a x + 3, con x ≠ −4. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Factorizar una expresión no garantiza que exista un factor común entre numerador y denominador.\"&gt; D. Se simplifica a 1, con x ≠ −5. &lt;/button&gt;&lt;/div&gt;\n&lt;div class=\"fa-feedback\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"fa-q\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 5. Análisis de un error&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Un estudiante escribe:&lt;/p&gt;\n&lt;div style=\"text-align: center; margin: 12px 0; font-size: 13pt;\"&gt;&lt;span class=\"fa-frac\"&gt; &lt;span class=\"fa-num\"&gt;x + 4&lt;/span&gt; &lt;span class=\"fa-den\"&gt;x + 2&lt;/span&gt; &lt;/span&gt;  =  &lt;span class=\"fa-frac\"&gt; &lt;span class=\"fa-num\"&gt;4&lt;/span&gt; &lt;span class=\"fa-den\"&gt;2&lt;/span&gt; &lt;/span&gt;  =  2&lt;/div&gt;\n&lt;p&gt;¿Cuál análisis es correcto?&lt;/p&gt;\n&lt;div class=\"fa-options\"&gt;&lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa. No puede utilizarse x/x como un factor común porque las x forman parte de sumas.\"&gt; A. Es correcto porque x dividido entre x es 1. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"El problema no ocurre solamente para x = −2. El procedimiento utilizado para simplificar es incorrecto.\"&gt; B. El procedimiento solo es incorrecto cuando x = −2. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"1\" data-feedback=\"Correcto. Las x pertenecen a sumas y no constituyen factores comunes del numerador y el denominador. Además, x ≠ −2.\"&gt; C. Es incorrecto porque las x pertenecen a sumas y no son factores comunes; además, x ≠ −2. &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Excluir x = −2 no convierte en válida la eliminación de términos que pertenecen a una suma.\"&gt; D. Es correcto siempre que x ≠ −2. &lt;/button&gt;&lt;/div&gt;\n&lt;div class=\"fa-feedback\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"fa-q\"&gt;\n&lt;p&gt;&lt;strong&gt;Pregunta 6. ★ Aplicación&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Un panel rectangular tiene un área de x&lt;sup&gt;2&lt;/sup&gt; − 25 cm&lt;sup&gt;2&lt;/sup&gt; y uno de sus lados mide x − 5 cm. Se considera x &gt; 5. ¿Cuál expresión representa la medida del otro lado?&lt;/p&gt;\n&lt;div class=\"fa-options\"&gt;&lt;button type=\"button\" class=\"fa-opt\" data-correct=\"1\" data-feedback=\"Correcto. x² − 25 = (x − 5)(x + 5); al dividir entre x − 5 se obtiene x + 5 cm.\"&gt; A. x + 5 cm &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Ese es el lado conocido. Debes dividir el área entre x − 5 y simplificar.\"&gt; B. x − 5 cm &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"Revisa la diferencia de cuadrados y simplifica antes de determinar la dimensión.\"&gt; C. x&lt;sup&gt;2&lt;/sup&gt; − 5 cm &lt;/button&gt; &lt;button type=\"button\" class=\"fa-opt\" data-correct=\"0\" data-feedback=\"El cociente entre el área y el lado conocido no produce 2x. Factoriza primero x² − 25.\"&gt; D. 2x cm &lt;/button&gt;&lt;/div&gt;\n&lt;div class=\"fa-feedback\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;p class=\"fa-final\" aria-live=\"polite\"&gt;&lt;br /&gt;&lt;/p&gt;\n&lt;button type=\"button\" class=\"fa-reset\"&gt; Reiniciar evaluación &lt;/button&gt;\n&lt;h2 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 14pt; text-align: center; margin-top: 30px;\"&gt;CIERRE REFLEXIVO&lt;/h2&gt;\n&lt;p&gt;✎ &lt;strong&gt;RESPONDE EN UNA FRASE:&lt;/strong&gt; antes de aceptar como correcta la simplificación de una fracción algebraica, ¿qué debes revisar en el denominador original y en los factores comunes?&lt;/p&gt;\n&lt;hr /&gt;\n&lt;h3 style=\"font-family: 'Arial Black', Arial, sans-serif; font-size: 12pt; text-align: left; margin-top: 28px;\"&gt;REFERENCIAS BIBLIOGRÁFICAS&lt;/h3&gt;\n&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de área de Aritmética 8°&lt;/em&gt;.&lt;/p&gt;\n&lt;p&gt;Colegio Integrado Simón Bolívar. (2026). &lt;em&gt;Plan de clase de Aritmética 8°: tercer periodo&lt;/em&gt;.&lt;/p&gt;\n&lt;script&gt;\n(function () {\n\n  const root = document.getElementById('fa8_eval_g1');\n  if (!root) return;\n\n  const questions = root.querySelectorAll('.fa-q');\n  const status = root.querySelector('.fa-status');\n  const finalMessage = root.querySelector('.fa-final');\n  const resetButton = root.querySelector('.fa-reset');\n\n  let answered = 0;\n  let correct = 0;\n  const total = questions.length;\n\n  function updateStatus() {\n\n    status.textContent =\n      'Seguimiento formativo: Preguntas respondidas: ' +\n      answered + ' de ' + total +\n      '. Respuestas correctas: ' + correct + '.';\n\n    if (answered === total) {\n\n      finalMessage.textContent =\n        'Evaluación completada. Revisa la retroalimentación y corrige en tu cuaderno los procedimientos que necesites ajustar.';\n\n    }\n\n  }\n\n  questions.forEach(function (question) {\n\n    const buttons = question.querySelectorAll('.fa-opt');\n    const feedback = question.querySelector('.fa-feedback');\n\n    buttons.forEach(function (button) {\n\n      button.addEventListener('click', function () {\n\n        if (question.getAttribute('data-done') === '1') return;\n\n        question.setAttribute('data-done', '1');\n        answered++;\n\n        const isCorrect =\n          button.getAttribute('data-correct') === '1';\n\n        if (isCorrect) {\n\n          correct++;\n          feedback.setAttribute('data-state', 'correct');\n\n        } else {\n\n          feedback.setAttribute('data-state', 'incorrect');\n\n        }\n\n        feedback.textContent =\n          button.getAttribute('data-feedback');\n\n        buttons.forEach(function (item) {\n          item.disabled = true;\n        });\n\n        updateStatus();\n\n      });\n\n    });\n\n  });\n\n\n  resetButton.addEventListener('click', function () {\n\n    answered = 0;\n    correct = 0;\n\n    questions.forEach(function (question) {\n\n      question.removeAttribute('data-done');\n\n      const feedback =\n        question.querySelector('.fa-feedback');\n\n      feedback.textContent = '';\n      feedback.removeAttribute('data-state');\n\n      question.querySelectorAll('.fa-opt')\n      .forEach(function (button) {\n        button.disabled = false;\n      });\n\n    });\n\n    finalMessage.textContent = '';\n\n    updateStatus();\n\n  });\n\n  updateStatus();\n\n})();\n&lt;/script&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;","textFeedbackInput":"Mostrar retroalimentación","textFeedbackTextarea":""}</jsonProperties><odeComponentsOrder>1</odeComponentsOrder><odeComponentsProperties><odeComponentsProperty><key>visibility</key><value>true</value></odeComponentsProperty><odeComponentsProperty><key>teacherOnly</key><value>false</value></odeComponentsProperty><odeComponentsProperty><key>identifier</key><value/></odeComponentsProperty><odeComponentsProperty><key>cssClass</key><value/></odeComponentsProperty></odeComponentsProperties></odeComponent></odeComponents></odePagStructure></odePagStructures></odeNavStructure></odeNavStructures></ode>
