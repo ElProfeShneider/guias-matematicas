@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#123a36">
+<title>Laboratorio creativo | Colombia en formas | Artística 10°</title>
+<style>
+:root { --ink:#17322f; --muted:#596b66; --mint:#b8dac8; --brand:#176153; --brand-d:#104b43; --terracotta:#b85c45; --paper:#faf9f5; --white:#fff; --line:#dce4db; --bg:#edf2eb; --warn:#93442f; --ok:#256349; --shadow:0 18px 55px rgba(25,56,48,.08); }
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:radial-gradient(circle at 92% -8%,#d1e6da 0,transparent 37%),radial-gradient(circle at -10% 90%,#f3dfcf 0,transparent 35%),var(--bg);line-height:1.5;font-size:16px}
+button,input,textarea{font:inherit} button{cursor:pointer} .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.shell{max-width:990px;margin:auto;padding:16px 14px 42px}.masthead{position:relative;background:#173c36;color:white;border-radius:25px;padding:22px 21px 24px;overflow:hidden;box-shadow:var(--shadow)}
+.masthead::before{content:"";position:absolute;right:-66px;top:-68px;width:250px;height:250px;border:32px solid rgba(182,223,195,.12);border-radius:50%;pointer-events:none}.masthead::after{content:"";position:absolute;right:45px;bottom:-86px;width:140px;height:140px;border:22px solid rgba(240,185,115,.10);transform:rotate(35deg);pointer-events:none}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;color:#b9e3cd;text-transform:uppercase}.masthead h1{font-size:clamp(28px,6.8vw,43px);letter-spacing:-.035em;line-height:1.06;margin:9px 0 8px;max-width:560px}.masthead p{max-width:565px;margin:0;color:#e5efe6;font-size:14px}.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.meta span{font-size:12px;background:#ffffff19;border:1px solid #ffffff39;border-radius:50px;padding:5px 11px;font-weight:bold}
+.progress-panel{background:white;margin-top:12px;padding:15px 17px;border:1px solid var(--line);border-radius:17px;box-shadow:0 4px 20px #192f2810}.progress-row{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--muted);font-weight:bold}.progress-row strong{font-size:13px;color:var(--ink)}.progress-track{height:8px;border-radius:20px;overflow:hidden;background:#e7ede7;margin-top:10px}.progress-bar{height:100%;background:linear-gradient(90deg,#429379,#e3b46c);transition:width .35s;width:0}.stepdots{margin-top:12px;display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.stepdot{background:#ecf0ec;border:0;border-radius:8px;min-height:7px;padding:0}.stepdot.active{background:#176153}.stepdot.done{background:#82b89c}
+.card{border-radius:22px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);margin-top:14px;padding:clamp(17px,4.2vw,31px)}.section-kicker{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--terracotta);font-size:12px}.heading{font-size:clamp(24px,5.5vw,34px);line-height:1.15;letter-spacing:-.035em;margin:7px 0 10px}.lead{color:#476059;margin:0 0 18px;max-width:760px}.tip{border-left:4px solid #80ad99;border-radius:0 10px 10px 0;background:#f0f7f1;padding:12px 14px;font-size:14px;margin:15px 0}.tip strong{color:#205646}.time{display:inline-block;background:#eff3e7;border:1px solid #e0e5d9;font-weight:800;border-radius:30px;color:#53705d;font-size:11px;padding:5px 11px;margin-top:3px}.route-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:11px 0 16px}.choice{min-height:51px;padding:10px 8px;border:1.5px solid #d0dfd5;background:#f9fcf9;border-radius:12px;color:#26463c;font-weight:bold;transition:.15s;text-align:center}.choice.selected{border-color:#176153;background:#def0e4;box-shadow:inset 0 0 0 1px #176153}.choice:focus-visible,.btn:focus-visible,.quizopt:focus-visible,.symbolopt:focus-visible,.paletteopt:focus-visible{outline:3px solid #e6a36a;outline-offset:2px}
+.field{margin:14px 0}.field label,.field legend{display:block;color:#27473e;font-weight:bold;font-size:14px;margin:0 0 7px}.field .sub{font-size:12px;color:#597064;margin:-3px 0 6px}.field input,.field textarea{display:block;width:100%;min-height:48px;border-radius:11px;border:1.5px solid #cfdbd2;background:#fff;padding:11px 13px;color:#213d33;font-size:16px}.field textarea{min-height:86px;resize:vertical}.field input:focus,.field textarea:focus{border-color:#176153;outline:3px solid #cce9d6}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.reference-grid{display:grid;grid-template-columns:1fr;gap:2px}.refcard{padding:10px 14px 1px;background:#f9fbf8;border:1px solid #e5eee5;border-radius:14px;margin-bottom:9px}.ref-tag{font-size:11px;letter-spacing:.08em;font-weight:800;text-transform:uppercase;display:inline-block;border-radius:6px;background:#e4eee9;padding:4px 7px;color:#366459}
+.quiz{border:1px solid #dae7dc;background:#fcfdfa;border-radius:16px;padding:17px;margin:14px 0}.quiz h3{font-size:16px;margin:0 0 6px}.quiz .context{font-size:14px;color:#536b5f;margin:0 0 12px}.quiz-options{display:grid;gap:8px}.quizopt{min-height:44px;text-align:left;border-radius:9px;background:white;color:var(--ink);border:1px solid #ccdbd0;padding:11px 12px;font-weight:bold}.quizopt.selected{background:#e4f1eb;border-color:#398266}.quizopt.wrong{background:#fff1e9;border-color:#c97953}.feedback{margin:10px 0 0;border-radius:9px;padding:10px 12px;font-size:13px;font-weight:bold}.feedback.good{background:#eaf7ed;color:#205e40}.feedback.bad{background:#fff2e9;color:#8d472f}.mini-lesson{display:grid;gap:10px;grid-template-columns:repeat(3,minmax(0,1fr));margin:15px 0 19px}.mini-lesson div{border-radius:13px;border:1px solid #e4e9e1;background:#f8faf7;padding:13px 11px;font-size:13px;color:#5a6e5c}.mini-lesson strong{display:block;color:#234e41;margin-bottom:5px}
+.symbol-card{border:1px solid #dde8dd;border-radius:17px;background:#fbfcfa;margin:15px 0;padding:15px}.symbol-card h3{margin:0;font-size:17px}.symbol-card p{margin:3px 0 12px;color:#647b6d;font-size:13px}.symbols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.symbolopt{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:95px;border-radius:11px;border:1.5px solid #cfdbd0;background:white;color:#2f4f42;gap:7px;font-size:12px;font-weight:bold;padding:8px 3px}.symbolopt.selected{border-color:#176153;background:#e6f4ea;box-shadow:inset 0 0 0 1px #176153}.symbolopt svg{height:44px;width:44px}.symbol-card .field{margin:13px 0 0}
+.palettes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.paletteopt{min-height:85px;border:1.5px solid #d7ded7;border-radius:12px;padding:7px 6px 10px;background:white;color:#263f38}.paletteopt.selected{border:2px solid #176153;background:#eaf3eb}.swatches{display:flex;justify-content:center;margin:0 0 8px;gap:0}.swatches i{display:inline-block;width:22px;height:23px;border:1px solid #0001}.swatches i:first-child{border-radius:5px 0 0 5px}.swatches i:last-child{border-radius:0 5px 5px 0}.paletteopt span{font-size:11px;line-height:1.15;font-weight:bold;display:block}.pattern-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.poster-frame{background:#e7eae5;border:1px solid #d2e0d5;padding:11px;border-radius:14px;text-align:center}.poster-frame svg{width:100%;max-width:420px;height:auto;display:block;margin:auto;border-radius:6px;box-shadow:0 7px 25px #1e352f23}.poster-caption{font-size:12px;color:#576f62;margin-top:10px}.tools h3{font-size:17px;margin:4px 0 10px}.tools p{font-size:14px;color:#5e7167}.instruction{background:#f4f7f1;border:1px solid #e4eae0;border-radius:12px;padding:12px;font-size:13px;color:#496054;margin:12px 0}.btn{border:0;border-radius:12px;font-weight:bold;min-height:49px;padding:12px 18px;background:#176153;color:white}.btn:hover{filter:brightness(.96)}.btn:disabled{opacity:.5;cursor:not-allowed}.btn.secondary{background:#e7eee7;color:#285744;border:1px solid #c5d9cb}.btn.ghost{background:transparent;color:#235948;border:1px solid #afceba}.btn.block{display:block;width:100%;margin:10px 0}.action-row{display:flex;justify-content:space-between;gap:10px;align-items:center;border-top:1px solid #e9ede8;margin-top:22px;padding-top:20px}.errorbox{display:none;background:#fff0e8;border:1px solid #f2c8ad;color:#843f29;border-radius:12px;padding:12px 14px;font-weight:bold;font-size:13px;margin-top:14px}.errorbox.visible{display:block}.counter{text-align:right;color:#576f62;font-size:11px;margin:4px 2px 0}.criterion{display:flex;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid #e1e9e2;font-size:14px}.criterion input{accent-color:#176153;width:19px;height:19px;flex:none}.criterion:last-child{border-bottom:0}.final-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.complete{border:1px solid #b9dbc5;background:#eaf6ee;border-radius:14px;padding:17px;color:#1d5944;margin-top:17px}.complete h3{margin:0 0 5px}.complete p{margin:0;font-size:14px}.footer{margin:20px 0 0;padding:8px;text-align:center;color:#576f62;font-size:12px}.reset-area{margin:10px auto 0;text-align:center}.reset-area .btn{font-size:12px;min-height:42px;padding:8px 16px}.reset-area p{font-size:12px;color:#596b66;margin:7px auto;max-width:620px}.footer strong{color:#376154}.note{font-size:13px;color:#597065}.reduced{color:#576f62;font-size:12px}.copyfeedback{margin-top:8px;color:#24563d;font-size:13px;font-weight:bold;min-height:19px}
+
+.field select{display:block;width:100%;min-height:50px;border:1.5px solid #cfdbd2;border-radius:11px;background:#fff;color:#17322f;padding:10px;font:inherit;font-size:16px}
+.field select:focus{outline:3px solid #cce9d6;border-color:#176153}
+.modegroup{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:11px 0}
+.modes{font-size:14px;font-weight:bold;color:#27473e}
+.receipt-overlay{position:fixed;inset:0;z-index:1000;background:#e9eee8;display:flex;align-items:center;justify-content:center;padding:8px;overflow-y:auto}
+.receipt-overlay[hidden]{display:none!important}
+.receipt-card{width:min(100%,440px);max-height:calc(100dvh - 16px);overflow-y:auto;background:white;border:2px solid #176153;border-radius:16px;padding:16px;box-shadow:0 8px 30px #102d2240}
+.receipt-top{text-align:center;letter-spacing:.06em;font-weight:800;font-size:11px;color:#176153}
+.receipt-card h2{text-align:center;font-size:24px;line-height:1.1;margin:7px 0 4px}
+.receipt-score{text-align:center;font-size:47px;font-weight:900;color:#176153;line-height:1;margin:8px 0 3px}
+.receipt-score-sub{text-align:center;font-size:12px;font-weight:bold;color:#385c50;margin-bottom:12px}
+.receipt-info{background:#eff6ef;border-radius:10px;padding:10px 11px;font-size:13px;line-height:1.55;overflow-wrap:anywhere}
+.receipt-info strong{color:#173d34}
+.receipt-summary{display:grid;grid-template-columns:84px minmax(0,1fr);align-items:start;gap:8px}.receipt-mini{border:1px solid #d4e1d6;border-radius:7px;overflow:hidden}.receipt-mini svg{display:block;width:100%;height:auto}.receipt-summary .receipt-info{padding:7px 8px;font-size:12px;line-height:1.4}
+.receipt-row{display:flex;gap:6px;align-items:center;font-size:13px;border-bottom:1px solid #e5ece4;padding:7px 1px}
+.receipt-row:last-child{border-bottom:0}
+.receipt-tick{font-size:16px;color:#176153;font-weight:900;flex:none}
+.receipt-urgent{background:#173e36;color:white;border-radius:11px;margin-top:10px;padding:11px;text-align:center;font-size:14px;font-weight:800}
+.receipt-small{font-size:11px;line-height:1.3;margin:8px 0;color:#52665b;text-align:center}
+.receipt-close{margin-top:6px;width:100%;min-height:42px}
+@media(max-width:370px){.receipt-card{padding:11px}.receipt-card h2{font-size:21px}.receipt-score{font-size:40px}.receipt-info{font-size:12px}.receipt-row{font-size:12px}}
+
+@media(max-width:710px){.shell{padding:8px 9px 30px}.masthead{border-radius:17px;padding:21px 17px}.card{border-radius:17px}.mini-lesson{grid-template-columns:1fr}.mini-lesson div{padding:10px 13px}.editor-grid{grid-template-columns:1fr}.poster-frame{order:0}.tools{order:1}.route-options{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:1fr}.symbolopt{min-height:80px}.symbols{gap:5px}.palettes{gap:6px}.action-row .btn{flex:1;min-width:0;padding:11px 8px}.final-actions{grid-template-columns:1fr}.progress-panel{margin-top:9px}.palettes{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:370px){.symbols{grid-template-columns:repeat(2,minmax(0,1fr))}.action-row .btn{font-size:13px}.symbolopt{font-size:11px}.symbolopt svg{height:37px;width:37px}.stepdots{gap:3px}.route-options{gap:7px}}
+@media(prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{body{background:white}.masthead,.progress-panel,.action-row,.footer{display:none}.card{box-shadow:none;border:0}.poster-frame{width:100%}}
+</style>
+</head>
+<body>
+<div class="shell" id="appRoot">
+  <header class="masthead">
+    <div class="eyebrow">Educación Artística · Grado 10°</div>
+    <h1>Colombia en formas</h1>
+    <p>Elige tradiciones, crea un afiche y muestra tu resultado al docente.</p>
+    <div class="meta"><span>55 minutos</span><span>5 estaciones</span><span>Solo o en pareja</span><span>Sin internet</span></div>
+  </header>
+  <nav class="progress-panel" aria-label="Progreso de la actividad">
+    <div class="progress-row"><strong id="progressTitle">Estación 1 de 5</strong><span id="progressPercent">0 % completado</span></div>
+    <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="stepdots" id="stepDots" aria-hidden="true"><span class="stepdot active"></span><span class="stepdot"></span><span class="stepdot"></span><span class="stepdot"></span><span class="stepdot"></span></div>
+  </nav>
+  <main class="card" id="stepContent" tabindex="-1" aria-live="polite"></main>
+  <p class="footer">Colegio Integrado Simón Bolívar · Recurso de creación artística · <strong>Tu trabajo queda en este dispositivo. Al final debes mostrar el comprobante al docente.</strong></p>
+  <div class="reset-area"><button type="button" class="btn ghost" id="resetWork">Borrar mis respuestas y comenzar de nuevo</button><p>En celular compartido, borra tu trabajo después de mostrarlo al profe.</p></div>
+</div>
+<div class="receipt-overlay" id="receiptOverlay" hidden role="dialog" aria-modal="true" aria-label="Comprobante de actividad">
+  <div class="receipt-card" id="receiptCard"></div>
+</div>
+<script>
+(function(){
+'use strict';
+const REGIONS=['Caribe','Andina','Pacífica','Orinoquía','Amazonía','Insular'];
+const categories=[{key:'demo',short:'Demosófico',title:'Objeto y saber',description:'Objetos, artesanías y viviendas tradicionales.'},{key:'music',short:'Musical',title:'Música y sonido',description:'Músicas, cantos, ritmos e instrumentos.'},{key:'dance',short:'Coreográfico',title:'Danza y movimiento',description:'Bailes, pasos y movimientos.'}];
+const iconOptions={demo:[['trama','Trama'],['vasija','Vasija'],['casa','Arquitectura'],['sombrero','Objeto']],music:[['ondas','Ondas'],['tambor','Percusión'],['cuerdas','Cuerdas'],['notas','Notas']],dance:[['huellas','Pasos'],['giro','Giro'],['cinta','Vestuario'],['movimiento','Movimiento']]};
+const palettes=[{name:'Tierra y río',paper:'#FAF0E3',ink:'#173E37',accent:'#985136',light:'#DFEAD9',detail:'#79A89C'},{name:'Mar y sol',paper:'#EAF4F6',ink:'#164456',accent:'#995223',light:'#D3E7E9',detail:'#7EBDC2'},{name:'Bosque',paper:'#F1F3E7',ink:'#28473A',accent:'#874434',light:'#DFE7CE',detail:'#91AF80'},{name:'Atardecer',paper:'#FFF0E7',ink:'#5B3A58',accent:'#A14442',light:'#F3D9DB',detail:'#C59CB8'}];
+const quizzes=[
+ {question:'Una artesana crea una vasija siguiendo un saber tradicional. ¿Qué manifestación destaca ese objeto?',context:'No se pregunta por una danza ni por su acompañamiento sonoro.',choices:['Demosófica','Musical','Coreográfica'],answer:0,hint:'Piensa en la elaboración de objetos y los conocimientos que se transmiten entre generaciones.',ok:'Correcto. Aquí se representa principalmente un objeto y un saber tradicional.'},
+ {question:'Una fotografía muestra los pasos y giros de una pareja bailando cumbia. ¿Qué dimensión representa principalmente?',context:'La cumbia también tiene música; observa qué muestra la fotografía.',choices:['Musical','Coreográfica','Demosófica'],answer:1,hint:'La clave está en los pasos, posiciones y desplazamientos del cuerpo.',ok:'Exacto. Aunque la cumbia tiene dimensión musical, en esta imagen se destacan los movimientos de la danza.'},
+ {question:'Tu afiche quiere comunicar el sonido de un arpa llanera. ¿Qué recurso visual sería más claro?',context:'Ahora no clasificas: eliges una pista gráfica para comunicar una idea.',choices:['Unas ondas junto a las cuerdas','Una silueta de pies danzando','Una vasija sin relación con el arpa'],answer:0,hint:'Elige una figura que sugiera sonido o vibración y conserve relación con el instrumento.',ok:'Bien. Las ondas y las cuerdas ayudan a representar la dimensión musical del referente.'}
+];
+
+// Opciones regionales orientativas: no representan a todas las comunidades de cada región.
+const REFERENTES={
+ 'Caribe':{
+  demo:['Sombrero vueltiao (tejido zenú)','Mochila wayuu','Hamaca tejida tradicional'],
+  music:['Cumbia (música)','Vallenato tradicional','Bullerengue (música y canto)'],
+  dance:['Cumbia (baile)','Mapalé (baile)','Bullerengue (baile)']},
+ 'Andina':{
+  demo:['Cerámica de Ráquira','Ruana tradicional','Sombrero aguadeño'],
+  music:['Bambuco (música)','Pasillo colombiano','Guabina (música)'],
+  dance:['Sanjuanero huilense (baile)','Torbellino (baile)','Bambuco (baile)']},
+ 'Pacífica':{
+  demo:['Cestería en fibra de werregue (pueblo wounaan)','Vivienda palafítica tradicional','Canasto tejido artesanal'],
+  music:['Currulao (música)','Chirimía chocoana','Música de marimba del Pacífico sur'],
+  dance:['Currulao (baile)','Abozao (baile)','Juga (baile)']},
+ 'Orinoquía':{
+  demo:['Sombrero llanero','Chinchorro llanero','Cabresto de tradición llanera'],
+  music:['Joropo (música)','Pasaje llanero','Galerón llanero (música)'],
+  dance:['Joropo (baile)','Galerón llanero (baile)','Zapateo llanero']},
+ 'Amazonía':{
+  demo:['Maloca (vivienda comunitaria)','Cestería tradicional amazónica','Cerámica tradicional amazónica'],
+  music:['Cantos tradicionales del pueblo tikuna','Música tradicional con manguaré','Cantos tradicionales del pueblo bora'],
+  dance:['Danza tradicional del pueblo tikuna','Danza tradicional del pueblo bora','Danza tradicional del pueblo murui-muina']},
+ 'Insular':{
+  demo:['Casa tradicional isleña de madera','Artesanía isleña en coco','Tejidos de fibras vegetales del archipiélago'],
+  music:['Calipso isleño (música)','Mento isleño','Polca isleña (música)'],
+  dance:['Quadrille o cuadrilla isleña (baile)','Mazurca isleña (baile)','Schottische isleño (baile)']}
+};
+const STORE='colombia-en-formas-10-v3';
+const initial={mode:'solo',name:'',partner:'',course:'',region:'',refs:{demo:'',music:'',dance:''},quiz:[null,null,null],icons:{demo:'trama',music:'ondas',dance:'huellas'},reasons:{demo:'',music:'',dance:''},palette:0,pattern:'trazos',reviewed:false,reflection:'',teacherProof:false,lastStep:0,completed:false};
+let state=readStore();let step=(Number.isInteger(state.lastStep)&&state.lastStep>=0&&state.lastStep<=4)?state.lastStep:0;const target=document.getElementById('stepContent');
+function readStore(){try{const x=JSON.parse(localStorage.getItem(STORE)||'null');if(!x || typeof x!=='object')return structured();return {...structured(),...x,refs:{...initial.refs,...x.refs},icons:{...initial.icons,...x.icons},reasons:{...initial.reasons,...x.reasons},quiz:Array.isArray(x.quiz)?x.quiz.slice(0,3):[null,null,null]};}catch(e){return structured();}}
+function structured(){return JSON.parse(JSON.stringify(initial));}
+function remember(){try{localStorage.setItem(STORE,JSON.stringify(state))}catch(e){}}
+function enc(s){return String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
+function xml(s){return enc(s);}
+function txt(id){return document.getElementById(id)}
+function setError(text){const el=txt('errorBox');if(el){el.textContent=text;el.classList.toggle('visible',!!text);if(text)el.scrollIntoView({block:'nearest',behavior:'smooth'});}}
+function noteSaved(){state.lastStep=step;remember();}
+const svgIcons={
+ trama:'<rect x="21" y="21" width="58" height="58" rx="3"/><path d="M35 21V79M50 21V79M65 21V79M21 35H79M21 50H79M21 65H79"/><path d="M21 21 79 79M79 21 21 79" opacity=".55"/>',
+ vasija:'<path d="M32 24H68M39 24V35C39 41 29 45 29 57C29 71 39 81 50 81C61 81 71 71 71 57C71 45 61 41 61 35V24"/><path d="M35 52Q50 43 65 52M34 64Q50 73 66 64M43 24V17H57V24"/>',
+ casa:'<path d="M14 49 50 20 86 49M24 44V80H76V44M42 80V55H58V80M24 59H36M64 59H76"/><path d="M34 37Q50 30 66 37"/>',
+ sombrero:'<ellipse cx="50" cy="66" rx="41" ry="13"/><path d="M29 63 33 37Q50 25 67 37L71 63M33 46Q50 56 67 46M31 58Q50 70 69 58"/><path d="M43 33Q50 40 57 33"/>',
+ ondas:'<path d="M11 51Q21 32 31 51T51 51T71 51T91 51"/><path d="M11 68Q21 49 31 68T51 68T71 68T91 68"/><path d="M21 30Q31 11 41 30T61 30T81 30"/>',
+ tambor:'<ellipse cx="50" cy="31" rx="28" ry="13"/><path d="M22 31V71C22 78 35 84 50 84C65 84 78 78 78 71V31M22 71C36 82 64 82 78 71M22 38 38 77 50 38 62 77 78 38"/><path d="M20 18 32 6M80 18 68 6"/>',
+ cuerdas:'<path d="M23 78 64 13 77 78Z"/><path d="M34 61H72M40 52H69M47 42H66M53 33H64M23 78H77M32 78 64 13M43 78 64 13M54 78 64 13M65 78 64 13"/>',
+ notas:'<path d="M39 69V20L75 12V62M39 29 75 21"/><ellipse cx="29" cy="72" rx="10" ry="6" transform="rotate(-24 29 72)"/><ellipse cx="65" cy="64" rx="10" ry="6" transform="rotate(-24 65 64)"/><path d="M12 31Q19 24 25 31"/>',
+ huellas:'<ellipse cx="32" cy="61" rx="10" ry="20" transform="rotate(-24 32 61)"/><ellipse cx="66" cy="37" rx="10" ry="20" transform="rotate(23 66 37)"/><circle cx="18" cy="39" r="3"/><circle cx="26" cy="36" r="3"/><circle cx="35" cy="38" r="3"/><circle cx="65" cy="13" r="3"/><circle cx="75" cy="16" r="3"/><circle cx="82" cy="22" r="3"/>',
+ giro:'<path d="M79 45A30 30 0 1 0 68 75"/><path d="M63 53 80 45 82 63"/><path d="M29 56C38 42 49 43 52 29M40 70C46 59 58 58 68 62"/>',
+ cinta:'<path d="M19 26Q37 1 52 22T81 25Q70 41 50 44T26 70Q34 83 50 74T83 78"/><path d="M19 26Q36 33 40 47M26 70Q37 58 45 62"/>',
+ movimiento:'<circle cx="50" cy="20" r="8"/><path d="M50 30 39 49 62 61M39 49 22 58M49 31 69 39M62 61 80 82M62 61 44 81M17 77Q30 68 44 72"/>'
+};
+function iconSVG(which,size=56){return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">${svgIcons[which]||svgIcons.trama}</svg>`;}
+function title(kicker,title,lead,time){return `<div class="section-kicker">${kicker}</div><h2 class="heading">${title}</h2><p class="lead">${lead}</p><span class="time">Tiempo sugerido: ${time} min</span>`;}
+function nav(previous='Volver',next='Continuar'){return `<div id="errorBox" class="errorbox" role="alert"></div><div class="action-row"><button class="btn secondary" id="backBtn" type="button" ${step===0?'disabled':''}>${previous}</button><button class="btn" id="nextBtn" type="button">${next} →</button></div>`;}
+function stepOne(){
+ const duo=state.mode==='pareja';
+ return title('Estación 1 · Mi ruta','Elijo mis referentes','1. Escribe tu nombre. 2. Elige una región. 3. Escoge un referente de cada lista.',8)+
+ `<div class="modes">¿Cómo trabajas?</div><div class="modegroup"><button type="button" class="choice ${!duo?'selected':''}" data-mode="solo" aria-pressed="${!duo}">Yo solo</button><button type="button" class="choice ${duo?'selected':''}" data-mode="pareja" aria-pressed="${duo}">En pareja</button></div>
+ <div class="formgrid"><div class="field"><label for="studentName">${duo?'Estudiante 1':'Nombre y apellido'}</label><input maxlength="70" id="studentName" autocomplete="name" placeholder="Escribe tu nombre" value="${enc(state.name)}"></div>
+ ${duo?`<div class="field"><label for="partnerName">Estudiante 2</label><input maxlength="70" id="partnerName" placeholder="Nombre del compañero" value="${enc(state.partner)}"></div>`:''}
+ <div class="field"><label for="courseName">Curso</label><input maxlength="16" id="courseName" placeholder="Ej.: 10-01" value="${enc(state.course)}"></div></div>
+ <div class="field"><label>Elige una región</label><div class="route-options">${REGIONS.map(r=>`<button type="button" class="choice ${state.region===r?'selected':''}" data-region="${r}" aria-pressed="${state.region===r}">${r}</button>`).join('')}</div></div>
+ ${state.region?`<div class="reference-grid">${categories.map(c=>`<div class="refcard"><span class="ref-tag">${c.short}</span><div class="field"><label for="ref_${c.key}">Elige ${c.short.toLowerCase()}</label><p class="sub">${c.description}</p><select id="ref_${c.key}"><option value="">Toca para elegir</option>${REFERENTES[state.region][c.key].map(x=>`<option value="${enc(x)}" ${state.refs[c.key]===x?'selected':''}>${enc(x)}</option>`).join('')}</select></div></div>`).join('')}</div><p class="note">Cada región tiene muchas tradiciones. Estas son opciones para tu afiche.</p>`:'<div class="tip">Primero elige una región. Aparecerán las tres listas.</div>'}`+nav('Volver','Ir a los retos');
+}
+function stepTwo(){return title('Estación 2 · Tres retos','¿Qué representa cada imagen?','Toca una respuesta. Si te equivocas, inténtalo otra vez.',8)+quizzes.map((q,i)=>`<section class="quiz"><h3>Reto ${i+1}</h3><p class="context">${q.question}</p><div class="quiz-options">${q.choices.map((ch,j)=>`<button type="button" data-q="${i}" data-answer="${j}" class="quizopt ${state.quiz[i]===j?'selected':''} ${state.quiz[i]===j&&j!==q.answer?'wrong':''}" aria-pressed="${state.quiz[i]===j}">${String.fromCharCode(65+j)}. ${ch}</button>`).join('')}</div>${state.quiz[i]!==null?`<p class="feedback ${state.quiz[i]===q.answer?'good':'bad'}">${state.quiz[i]===q.answer?'¡Bien! Respuesta correcta.':q.hint+' Prueba otra opción.'}</p>`:''}</section>`).join('')+nav('Volver','Elegir símbolos');}
+function stepThree(){return title('Estación 3 · Mis símbolos','Elijo cómo dibujar cada referente','1. Toca un símbolo. 2. Escribe por qué lo elegiste. Hazlo en las tres partes.',12)+`<p class="note">Estos dibujos son ideas para diseñar, no símbolos oficiales de una región.</p>`+categories.map(c=>{const k=c.key;return `<section class="symbol-card"><h3>${c.short}: ${enc(state.refs[k])}</h3><div class="symbols">${iconOptions[k].map(([v,label])=>`<button type="button" class="symbolopt ${state.icons[k]===v?'selected':''}" data-icon-category="${k}" data-icon="${v}" aria-pressed="${state.icons[k]===v}">${iconSVG(v)}<span>${label}</span></button>`).join('')}</div><div class="field"><label for="why_${k}">¿Por qué elegiste ese dibujo?</label><textarea maxlength="130" rows="2" id="why_${k}" placeholder="Ej.: las ondas representan la música.">${enc(state.reasons[k])}</textarea><div class="counter" id="counter_${k}">${state.reasons[k].length}/130</div></div></section>`;}).join('')+nav('Volver','Diseñar afiche');}
+function stepFour(){return title('Estación 4 · Mi afiche','Pruebo colores y fondos','1. Elige colores. 2. Elige un fondo. 3. Revisa tu afiche.',20)+`<div class="editor-grid"><div><div class="poster-frame" id="posterFrame" aria-label="Vista previa de tu afiche"></div></div><div class="tools"><h3>Colores</h3><div class="palettes">${palettes.map((p,i)=>`<button type="button" class="paletteopt ${state.palette===i?'selected':''}" data-palette="${i}" aria-pressed="${state.palette===i}"><span class="swatches"><i style="background:${p.paper}"></i><i style="background:${p.ink}"></i><i style="background:${p.accent}"></i><i style="background:${p.light}"></i></span><span>${p.name}</span></button>`).join('')}</div><h3>Fondo</h3><div class="pattern-choices">${[['trazos','Trazos'],['puntos','Puntos'],['geometria','Geometría']].map(([v,l])=>`<button type="button" class="choice ${state.pattern===v?'selected':''}" data-pattern="${v}" aria-pressed="${state.pattern===v}">${l}</button>`).join('')}</div><button type="button" class="btn block" id="exportInEditor">Guardar mi afiche</button><p class="reduced">Si no se guarda, toma una captura del afiche.</p><div class="criterion"><input type="checkbox" id="reviewed" ${state.reviewed?'checked':''}><label for="reviewed">Revisé que los nombres y dibujos estén bien.</label></div></div></div>`+nav('Volver','Último paso');}
+function stepFive(){return title('Estación 5 · Cierre','Termino y muestro mi trabajo','Escribe una respuesta corta. Después muestra el comprobante al docente.',7)+`<div class="field"><label for="reflection">¿Qué símbolo elegiste y por qué ayuda a reconocer tu tradición?</label><textarea rows="3" id="reflection" maxlength="400" placeholder="Elegí... porque...">${enc(state.reflection)}</textarea><div class="counter" id="finalCounter">${state.reflection.length}/400</div></div><div class="criterion"><input type="checkbox" id="proof" ${state.teacherProof?'checked':''}><label for="proof">Entendí: debo mostrar el comprobante final al docente.</label></div><div class="tip"><strong>Obligatorio:</strong> toma una captura del comprobante o deja que el profe le tome una foto a tu celular. Si trabajaron en pareja, deben aparecer los dos nombres.</div><div id="completed"></div>`+nav('Volver','Ver comprobante');}
+function render(){target.innerHTML=[stepOne,stepTwo,stepThree,stepFour,stepFive][step]();updateProgress();bind();if(step===4&&state.completed){txt('completed').innerHTML='<div class="complete"><strong>Actividad terminada.</strong> <button type="button" class="btn secondary block" id="reopenReceipt">Mostrar mi comprobante</button></div>';txt('reopenReceipt').addEventListener('click',showReceipt);}updateHeight();}
+function bind(){
+ txt('backBtn').addEventListener('click',()=>{if(step>0){step--;noteSaved();render();toTop();}});
+ txt('nextBtn').addEventListener('click',()=>{const msg=checkStep(step);if(msg){setError(msg);return;}if(step<4){step++;noteSaved();render();toTop();}else{showCompletion();}});
+ if(step===0){
+  [['studentName','name'],['courseName','course'],['partnerName','partner']].forEach(([id,key])=>{const el=txt(id);if(el)el.addEventListener('input',e=>{state[key]=e.target.value;noteSaved();});});
+  document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.mode;state.completed=false;noteSaved();render();}));
+  document.querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>{if(state.region!==b.dataset.region){state.region=b.dataset.region;state.refs={demo:'',music:'',dance:''};state.reasons={demo:'',music:'',dance:''};state.completed=false;}noteSaved();render();}));
+  categories.forEach(c=>{const el=txt('ref_'+c.key);if(el)el.addEventListener('change',e=>{state.refs[c.key]=e.target.value;state.completed=false;noteSaved();});});
+ }
+ if(step===1)document.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{state.quiz[Number(b.dataset.q)]=Number(b.dataset.answer);state.completed=false;noteSaved();render();}));
+ if(step===2){document.querySelectorAll('[data-icon]').forEach(b=>b.addEventListener('click',()=>{state.icons[b.dataset.iconCategory]=b.dataset.icon;state.completed=false;noteSaved();render();}));categories.forEach(c=>txt('why_'+c.key).addEventListener('input',e=>{state.reasons[c.key]=e.target.value;state.completed=false;txt('counter_'+c.key).textContent=e.target.value.length+'/130';noteSaved();}));}
+ if(step===3){document.querySelectorAll('[data-palette]').forEach(b=>b.addEventListener('click',()=>{state.palette=Number(b.dataset.palette);state.completed=false;noteSaved();render();}));document.querySelectorAll('[data-pattern]').forEach(b=>b.addEventListener('click',()=>{state.pattern=b.dataset.pattern;state.completed=false;noteSaved();render();}));txt('reviewed').addEventListener('change',e=>{state.reviewed=e.target.checked;noteSaved();});txt('exportInEditor').addEventListener('click',exportPNG);txt('posterFrame').innerHTML=buildPoster();}
+ if(step===4){txt('reflection').addEventListener('input',e=>{state.reflection=e.target.value;state.completed=false;txt('finalCounter').textContent=e.target.value.length+'/400';noteSaved();});txt('proof').addEventListener('change',e=>{state.teacherProof=e.target.checked;noteSaved();});}
+}
+function checkStep(i){
+ if(i===0){if(state.name.trim().length<3)return'Escribe tu nombre.';if(state.mode==='pareja'&&state.partner.trim().length<3)return'Escribe el nombre de tu compañero.';if(state.mode==='pareja'&&state.partner.trim().toLowerCase()===state.name.trim().toLowerCase())return'Escribe los nombres de los dos estudiantes.';if(!state.course.trim())return'Escribe el curso.';if(!state.region)return'Elige una región.';for(const c of categories)if(!REFERENTES[state.region][c.key].includes(state.refs[c.key]))return'Elige tu referente '+c.short.toLowerCase()+'.';}
+ if(i===1&&quizzes.some((q,j)=>state.quiz[j]!==q.answer))return'Resuelve bien los tres retos para continuar.';
+ if(i===2){for(const c of categories)if(state.reasons[c.key].trim().length<12)return'Explica con una frase corta tu símbolo '+c.short.toLowerCase()+'.';}
+ if(i===3&&!state.reviewed)return'Marca la casilla después de revisar tu afiche.';
+ if(i===4){if(state.reflection.trim().length<30)return'Completa tu respuesta con una frase de al menos 30 caracteres.';if(!state.teacherProof)return'Marca que mostrarás el comprobante al docente.';}
+ return'';
+}
+function toTop(){try{document.getElementById('progressTitle').scrollIntoView({block:'start',behavior:'smooth'})}catch(e){window.scrollTo(0,0)}}
+function updateProgress(){const pct=state.completed&&step===4?100:Math.round(step*20);txt('progressTitle').textContent='Estación '+(step+1)+' de 5';txt('progressPercent').textContent=pct+' % del recorrido';txt('progressBar').style.width=pct+'%';txt('stepDots').innerHTML=Array.from({length:5},(_,i)=>`<span class="stepdot ${i===step?'active':i<step?'done':''}"></span>`).join('');}
+function showCompletion(){
+ state.completed=true;noteSaved();setError('');
+ txt('completed').innerHTML='<div class="complete"><strong>Actividad terminada.</strong> <button type="button" class="btn secondary block" id="reopenReceipt">Mostrar de nuevo mi comprobante</button></div>';
+ txt('reopenReceipt').addEventListener('click',showReceipt);
+ txt('progressBar').style.width='100%';txt('progressPercent').textContent='100 % completado';
+ showReceipt();updateHeight();
+}
+function showReceipt(){
+ const both=[state.name.trim(),...(state.mode==='pareja'?[state.partner.trim()]:[])].join(' y ');
+ const info=[['Estudiante(s)',both],['Curso',state.course],['Región',state.region],['Demosófico',state.refs.demo],['Musical',state.refs.music],['Coreográfico',state.refs.dance]];
+ txt('receiptCard').innerHTML=`<div class="receipt-top">ARTÍSTICA 10° · COLOMBIA EN FORMAS</div><h2>TRABAJO TERMINADO</h2><div class="receipt-score">5 / 5</div><div class="receipt-score-sub">PASOS COMPLETADOS · NO ES NOTA DEFINITIVA</div><div class="receipt-summary"><div class="receipt-mini">${buildPoster()}</div><div class="receipt-info">${info.map(([k,v])=>`<div><strong>${enc(k)}:</strong> ${enc(v)}</div>`).join('')}</div></div><div class="receipt-row"><span class="receipt-tick">✓</span>3 referentes seleccionados</div><div class="receipt-row"><span class="receipt-tick">✓</span>3 de 3 retos correctos</div><div class="receipt-row"><span class="receipt-tick">✓</span>3 símbolos explicados</div><div class="receipt-row"><span class="receipt-tick">✓</span>Afiche diseñado y revisado</div><div class="receipt-row"><span class="receipt-tick">✓</span>Reflexión escrita</div><div class="receipt-urgent">¡MUESTRA ESTA PANTALLA AL PROFE!<div style="font-size:12px;font-weight:normal;margin-top:4px">Captura de pantalla o foto del celular</div></div><p class="receipt-small">El docente revisa tu trabajo. Esta pantalla no se envía sola.</p><button type="button" class="btn secondary receipt-close" id="closeReceipt">Volver a la actividad</button>`;
+ const overlay=txt('receiptOverlay');
+ if(window.self!==window.top){overlay.style.position='relative';overlay.style.inset='auto';overlay.style.maxHeight='none';overlay.style.padding='8px';txt('receiptCard').style.maxHeight='none';}
+ overlay.hidden=false;
+ if(window.self!==window.top)overlay.scrollIntoView({block:'start',behavior:'smooth'});
+ txt('closeReceipt').addEventListener('click',()=>{txt('receiptOverlay').hidden=true;});
+ updateHeight();
+}
+function exportPNG(){const svg=buildPoster();const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));const img=new Image();img.onload=()=>{try{const c=document.createElement('canvas');c.width=1200;c.height=1650;const cx=c.getContext('2d');cx.fillStyle=palettes[state.palette].paper;cx.fillRect(0,0,c.width,c.height);cx.drawImage(img,0,0,c.width,c.height);c.toBlob(blob=>{if(!blob){fallbackSVG(svg);return;}const dl=URL.createObjectURL(blob);download(dl,'Colombia_en_formas_'+safeFile(state.region)+'_'+safeFile(state.name.slice(0,42))+'.png');setTimeout(()=>URL.revokeObjectURL(dl),15000);},'image/png');}catch(e){fallbackSVG(svg);}finally{URL.revokeObjectURL(url);}};img.onerror=()=>{URL.revokeObjectURL(url);fallbackSVG(svg)};img.src=url;}
+function fallbackSVG(svg){const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));download(url,'Colombia_en_formas_'+safeFile(state.region)+'_'+safeFile(state.name.slice(0,42))+'.svg');setTimeout(()=>URL.revokeObjectURL(url),15000);alert('Tu navegador no pudo crear el PNG. Se ofreció una versión SVG; también puedes hacer una captura del afiche.');}
+function safeFile(s){return String(s||'region').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9_-]/g,'_');}
+function download(url,name){const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();}
+function downloadSummary(){const content=summary();const url=URL.createObjectURL(new Blob([content],{type:'text/plain;charset=utf-8'}));download(url,'Ficha_Colombia_en_formas_'+safeFile(state.region)+'_'+safeFile(state.name.slice(0,42))+'.txt');setTimeout(()=>URL.revokeObjectURL(url),15000);const e=txt('copyFeedback');if(e)e.textContent='Se ofreció la descarga de tu ficha. Confirma que se guardó en el dispositivo.';}
+function summary(){return ['COLOMBIA EN FORMAS · FICHA DE ARTISTA','Nombre: '+state.name, ...(state.mode==='pareja'?['Compañero: '+state.partner]:[]),'Curso: '+state.course,'Región asignada: '+state.region,'',...categories.flatMap(c=>[c.short.toUpperCase(),'Referente: '+state.refs[c.key],'Pista visual: '+iconOptions[c.key].find(x=>x[0]===state.icons[c.key])[1],'Justificación: '+state.reasons[c.key],'']),'Paleta: '+palettes[state.palette].name,'Fondo: '+({trazos:'Trazos',puntos:'Puntos',geometria:'Geometría'}[state.pattern]),'','REFLEXIÓN FINAL',state.reflection,'','Evidencia complementaria: afiche diseñado en el laboratorio creativo.'].join('\n');}
+async function copySummary(){const s=summary();try{if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(s);}else{const ta=document.createElement('textarea');ta.value=s;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();if(!document.execCommand('copy'))throw new Error('Copiado no disponible');ta.remove();}txt('copyFeedback').textContent='Ficha copiada. Puedes pegarla en el medio indicado por tu docente.';}catch(e){const file=new Blob([s],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(file);download(url,'Ficha_Colombia_en_formas.txt');setTimeout(()=>URL.revokeObjectURL(url),15000);txt('copyFeedback').textContent='Se ofreció la ficha en archivo de texto porque no se pudo copiar.';}}
+function lines(s,max=24,limit=2){
+ const input=String(s??'').trim().replace(/\s+/g,' ')||'Sin registrar';const words=input.split(' ');const rows=[];let line='';
+ for(let word of words){
+  while(word.length>max){if(line){rows.push(line);line='';if(rows.length>=limit)break;}rows.push(word.slice(0,max-1)+'-');word=word.slice(max-1);if(rows.length>=limit)break;}
+  if(rows.length>=limit)break;
+  if(!word)continue;
+  if(!line){line=word;}else if((line+' '+word).length<=max){line+=' '+word;}else{rows.push(line);line=word;}
+  if(rows.length>=limit)break;
+ }
+ if(rows.length<limit&&line)rows.push(line);
+ let visible=rows.join(' ').replace(/- /g,'');
+ if(visible.replace(/…/g,'').length<input.length&&rows.length){rows[rows.length-1]=rows[rows.length-1].slice(0,max-1).trimEnd().replace(/[- ]+$/,'')+'…';}
+ return rows.slice(0,limit);
+}
+function svgText(str,x,y,lineMax=23,limit=2,sz=32,lh=38,color){return lines(str,lineMax,limit).map((t,i)=>`<text x="${x}" y="${y+i*lh}" font-family="Arial, Helvetica, sans-serif" font-size="${sz}" font-weight="bold" fill="${color}">${xml(t)}</text>`).join('');}
+function posterIcon(kind,x,y,c){return `<g transform="translate(${x},${y}) scale(1.03)" fill="none" stroke="${c}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">${svgIcons[kind]||svgIcons.trama}</g>`;}
+function buildPoster(){const p=palettes[state.palette]||palettes[0];const region=state.region||'MI REGIÓN';const name=(state.mode==='pareja'?(state.name+' y '+state.partner):state.name)||'Mi nombre';let decor='';if(state.pattern==='trazos'){decor='<path d="M570 20Q770 110 680 200T845 315M-30 750Q190 680 84 1000" stroke="'+p.detail+'" opacity=".25" stroke-width="15" fill="none"/>';}else if(state.pattern==='puntos'){decor=Array.from({length:26},(_,i)=>`<circle cx="${45+(i%7)*120}" cy="${60+Math.floor(i/7)*340}" r="${6+(i%4)*2}" fill="${p.accent}" opacity=".11"/>`).join('');}else{decor='<path d="M640 30 770 110 650 180ZM15 760 180 760 100 920ZM560 950 790 950 675 1060Z" stroke="'+p.accent+'" stroke-width="12" fill="none" opacity=".19"/>';}let content=`<rect width="800" height="1100" fill="${p.paper}"/>${decor}<rect x="0" y="0" width="800" height="16" fill="${p.accent}"/><text x="42" y="64" font-family="Arial,Helvetica,sans-serif" font-size="19" letter-spacing="3" font-weight="bold" fill="${p.ink}">ARTE · CULTURA · IDENTIDAD</text><text x="40" y="135" font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="900" letter-spacing="-2" fill="${p.ink}">COLOMBIA</text><text x="41" y="203" font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="900" letter-spacing="-2" fill="${p.ink}">EN FORMAS</text><rect x="40" y="226" width="720" height="58" rx="10" fill="${p.ink}"/><text x="60" y="266" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="bold" fill="${p.paper}">REGIÓN ${xml(String(region).toLocaleUpperCase('es-CO'))}</text>`;
+const ys=[305,535,765];categories.forEach((c,i)=>{const y=ys[i],ic=state.icons[c.key],expl=state.reasons[c.key]||'Una pista visual para esta tradición.';content+=`<rect x="40" y="${y}" width="720" height="210" rx="17" fill="${p.light}" stroke="${p.ink}" stroke-opacity=".16" stroke-width="2"/><rect x="56" y="${y+15}" width="145" height="177" rx="11" fill="${p.paper}"/><circle cx="128" cy="${y+102}" r="64" fill="${p.light}"/>${posterIcon(ic,77,y+50,p.ink)}<text x="228" y="${y+45}" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" letter-spacing="1.5" fill="${p.accent}">${xml(c.short.toLocaleUpperCase('es-CO'))}</text>${svgText(state.refs[c.key],228,y+89,27,2,30,36,p.ink)}${svgText(expl,229,y+161,41,2,17,23,p.ink)}`;});
+content+=`<path d="M41 1000H760" stroke="${p.accent}" stroke-width="4"/><text x="42" y="1032" font-family="Arial,Helvetica,sans-serif" font-size="17" letter-spacing="1" fill="${p.ink}">TRES MANIFESTACIONES · UNA COMPOSICIÓN</text>${svgText(name+' · '+state.course,42,1068,53,1,17,22,p.ink)}<text x="758" y="1072" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="${p.ink}">ARTÍSTICA 10°</text>`;
+return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1100" viewBox="0 0 800 1100" role="img" aria-label="Afiche Colombia en formas, región ${xml(region)}" preserveAspectRatio="xMidYMid meet">${content}</svg>`;}
+function updateHeight(){try{const height=Math.ceil(document.documentElement.scrollHeight+26);window.parent.postMessage({type:'COLOMBIA_EN_FORMAS_HEIGHT',height},'*');}catch(e){}}
+if(window.ResizeObserver){new ResizeObserver(()=>updateHeight()).observe(document.getElementById('appRoot'));}
+// Classroom privacy: explicit reset for devices used by several students.
+txt('resetWork').addEventListener('click',()=>{
+ if(!window.confirm('¿Ya mostraste tu comprobante al profe? Se borrará este trabajo del celular.'))return;
+ try{localStorage.removeItem(STORE);}catch(e){}
+ state=structured();step=0;txt('receiptOverlay').hidden=true;render();toTop();
+});
+render();
+})();
+</script>
+</body>
+</html>
