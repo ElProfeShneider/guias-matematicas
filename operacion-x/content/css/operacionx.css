@@ -1,0 +1,57 @@
+/* Operación X · marco ancho para el sitio exportado de eXeLearning.
+   Se carga después de theme/style.css. Hace que las misiones y las páginas usen todo el ancho de la pantalla. */
+
+/* Menú oculto desde el primer instante (el botón ☰ sigue funcionando) */
+html.ox-pre #siteNav{display:none}
+html.ox-pre .exe-web-site main.page,html.ox-pre .exe-web-site #siteFooter{padding-left:0}
+html.ox-pre .exe-web-site .exe-content{box-shadow:none}
+
+/* Sin límites de ancho */
+.exe-export .exe-content,
+.exe-web-site .main-header,
+.exe-web-site .page-content,
+.exe-web-site #siteFooterContent{max-width:none}
+.exe-web-site main.page{padding:0;min-height:0}
+body.siteNav-off main.page,body.siteNav-off #siteFooter{padding-left:0}
+.exe-web-site #siteFooter{padding-right:0;padding-left:0}
+.exe-web-site:not(.siteNav-off) main.page{padding-left:321px}
+.exe-web-site:not(.siteNav-off) #siteFooter{padding-left:321px}
+.exe-web-site #siteFooterContent{margin:0;border-radius:0;padding:5px 20px;font-size:12px;line-height:1.3}
+.exe-web-site #siteFooterContent p{margin:0}
+
+/* Cabecera de la página y título del recurso: siguen ahí para lectores de pantalla, pero no ocupan espacio */
+.exe-web-site .main-header,
+.exe-web-site .box-head{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.exe-web-site .page-content{margin:0;padding:0}
+.exe-web-site article.box{margin:0;border:0;border-radius:0;box-shadow:none;background:none}
+.exe-web-site .box-content{padding:0;border:0;background:none}
+.exe-web-site .page-content .box+.box{margin-top:0}
+.exe-web-site .idevice_node,.exe-web-site .exe-text-activity{margin:0;padding:0}
+.exe-web-site .exe-text-activity>div>p{margin:0}
+.exe-web-site .exe-text-activity p.clearfix,.exe-web-site .exe-text-activity>div>p:has(iframe)~p{display:none}
+.exe-web-site .exe-content{padding:0}
+
+/* Los recursos incrustados ocupan todo el ancho y se ajustan solos en alto */
+.exe-web-site iframe[src*="content/resources/"]{display:block;width:100%!important;max-width:none;border:0;margin:0;height:calc(100vh - 106px);min-height:420px;background:#102c34}
+.exe-web-site iframe[src*="CANDADO"]{height:auto;min-height:0;background:transparent}
+
+/* Desafío final (candado): panel oscuro de ancho completo, centrado y sin barra interna */
+.exe-web-site .candado-IDevice{background:#102c34;color:#fff;min-height:calc(100vh - 102px);display:flex;flex-direction:column;justify-content:center}
+.exe-web-site .candado-MainContainer{max-width:none;margin:0;width:100%}
+.exe-web-site .candado-GameContainer{width:min(1180px,100%);margin:0 auto;padding:12px clamp(14px,3vw,48px) 20px}
+.exe-web-site .candado-Instructiones,.exe-web-site .candado-FeedRetro{width:100%;padding:0;min-height:0;overflow:visible}
+.exe-web-site .candado-PTime{color:#fff;font-weight:800}
+.exe-web-site .candado-MainContainer .exeQuextIcons34-Time,.exe-web-site .candado-MainContainer .exeQuextIcons34-Minimize{filter:invert(1)}
+.exe-web-site .candado-SolutionDiv{margin-top:22px}
+.exe-web-site .candado-SolutionDiv label{color:#fff;font-size:20px}
+.exe-web-site .candado-Solution{height:54px;max-width:320px;font-size:26px;letter-spacing:.35em;background:#173b42;color:#fff;border:2px solid #34565d;border-radius:12px}
+.exe-web-site .candado-Solution:focus{border-color:#f7bb53;box-shadow:0 0 0 3px rgba(247,187,83,.35);outline:0}
+.exe-web-site .candado-SolutionDiv a{width:44px;height:44px}
+.exe-web-site .candado-MessageInfo p{color:#ffd9a0;font-size:18px}
+.exe-web-site .candado-LinkMaximize{color:#fff}
+
+/* El botón de plegar/desplegar del título oculto no debe quedar enfocable ni poder esconder el recurso */
+.exe-web-site .box-toggle{display:none}
+
+/* Páginas en línea */
+.exe-web-site .ox-page{display:block;width:100%;margin:0}
